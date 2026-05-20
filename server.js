@@ -19,7 +19,8 @@ const server = http.createServer((req, res) => {
   console.log(`${req.method} ${req.url}`);
   
   // Normalize URL path
-  let filePath = req.url === '/' ? '/index.html' : req.url;
+  const decodedUrl = decodeURIComponent(req.url);
+  let filePath = decodedUrl === '/' ? '/index.html' : decodedUrl;
   filePath = path.join(__dirname, filePath);
   
   // Security check - ensure path stays within project directory

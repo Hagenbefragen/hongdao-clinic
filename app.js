@@ -141,7 +141,41 @@ const translations = {
     "popup-title": "Exclusive Healing Offer",
     "popup-desc": "Embrace a gentle spiritual transformation. Apply today for our Endometriosis Programs or the Wudang Retreat and receive 10% off your initial clinical diagnosis session.",
     "popup-code-label": "Your Exclusive Application Code:",
-    "popup-cta": "Apply with Code"
+    "popup-cta": "Apply with Code",
+
+    // Fungal Medicine & Resources
+    "treatment-4-badge": "Mycology",
+    "treatment-4-title": "Fungal Medicine & Mycelial Regulation",
+    "treatment-4-desc": "Unblocking membranous pathways (膜络) using medical macrofungi (Poria, Reishi, Cordyceps). Supports regression of breast and thyroid nodules and regulates the vegetative nervous system.",
+    "nav-resources": "Resources",
+    "resources-tag": "Knowledge & Downloads",
+    "resources-title": "Clinic Manuals & Science",
+    "resources-subtitle": "Download official manuals of our clinical devices and deepen your understanding of our treatment systems.",
+    "wisdom-tag": "WeChat Wisdom & Clinical Practice",
+    "wisdom-title": "The Wisdom of Fungal Medicine: From Soil to Membrane",
+    "wisdom-text": "<p style=\"margin-bottom: 1rem;\">Beneath the earth lies a neural network – the 'Wood Wide Web'. Just like this planetary immune system, mushrooms work in our bodies through symbiosis and regulation. They connect with our '膜络' (membranous collaterals) to clear blockages, transform dampness, and resolve nodules (cysts, fibroids, thyroid nodules).</p><p>In our clinical practice, we combine these natural laws with modern care. Read the full scientific report by Dr. Zhang Hailing and Dr. Chen Kainan.</p>",
+    "wisdom-link": "Read Original Article (WeChat)",
+    "cases-title": "Clinical Case Studies",
+    "case-1": "<strong>Case 1 (Thyroid Nodules, 2.1cm):</strong> Complete symptom relief and nodule regression to 0.9cm after 3 months of Poria & Ganoderma therapy.",
+    "case-2": "<strong>Case 2 (Breast Hyperplasia & Anxiety):</strong> Dispersal of breast nodules (1.6cm) and relief of palpitations/insomnia through mycelial regulation.",
+    "download-program-brochure": "Download Retreat Book (PDF)",
+    "manuals-grid-title": "Medical Device Manuals & Brochures",
+    "pdf-1-title": "Spectrum Treatment Device 2.0",
+    "pdf-1-desc": "Detailed clinical manual on thermal spectrum light therapy for cellular rejuvenation and meridian warming.",
+    "pdf-2-title": "Pian-Stone Medium-Frequency Pot 2.0",
+    "pdf-2-desc": "Operation manual and applications of the warm Pian-stone electrotherapy device for meridian massage.",
+    "pdf-3-title": "Infrared Thermal Imaging 4.0",
+    "pdf-3-desc": "Guide to infrared thermographic diagnostics for visualizing inflammation and microcirculation patterns.",
+    "pdf-4-title": "铺灸 / Pu Jiu Moxibustion Manual 3.1",
+    "pdf-4-desc": "Clinical protocols for spine moxibustion (Pu Jiu) to expel deep body cold and nourish Yang vitality.",
+    "pdf-5-title": "Frequency Hyperthermia Cabin 3.5",
+    "pdf-5-desc": "Therapeutic manual for the clinical hyperthermia cabin, optimizing cellular detox and metabolic fire.",
+    "pdf-6-title": "Dao-Pilz-Retreat Program Guide",
+    "pdf-6-desc": "Full program details and daily schedules for the Daoist Mushroom Retreat in the Wudang Mountains.",
+    "pdf-download-btn": "Download PDF",
+    "treatment-1-badge": "Gynecology",
+    "treatment-2-badge": "Cell Therapy",
+    "treatment-3-badge": "Neurology"
   },
   de: {
     // Navigation
@@ -278,7 +312,41 @@ const translations = {
     "popup-title": "Exklusiver Rabattcode",
     "popup-desc": "Erhalten Sie eine sanfte, spirituelle Ermäßigung. Bewerben Sie sich noch heute für unsere Endometriose-Heilprogramme oder das Wudang-Retreat und erhalten Sie 10% Rabatt auf die erste Diagnose.",
     "popup-code-label": "Ihr persönlicher Rabattcode:",
-    "popup-cta": "Code anwenden & bewerben"
+    "popup-cta": "Code anwenden & bewerben",
+
+    // Fungal Medicine & Resources
+    "treatment-4-badge": "Pilzheilkunde",
+    "treatment-4-title": "Pilzheilkunde & Myzel-Regulation",
+    "treatment-4-desc": "Lösung von Blockaden in den Membranen (膜络) durch medizinale Großpilze (Poria, Reishi, Cordyceps) zur sanften Schrumpfung von Gewebeknoten und Regulation des Nervensystems.",
+    "nav-resources": "Handbücher",
+    "resources-tag": "Wissenschaft & Downloads",
+    "resources-title": "Klinik-Handbücher & Forschung",
+    "resources-subtitle": "Laden Sie offizielle Handbücher unserer Medizintechnik herunter und vertiefen Sie Ihr Wissen über unsere Behandlungssysteme.",
+    "wisdom-tag": "WeChat-Wissenschaft & Klinische Praxis",
+    "wisdom-title": "Die Weisheit der Pilzmedizin: Vom Erdboden zu den Membranen",
+    "wisdom-text": "<p style=\"margin-bottom: 1rem;\">Unter der Erde erstreckt sich ein neuronales Netzwerk – das „Wood Wide Web“. Genau wie dieses planetare Immunsystem arbeiten Pilze in unserem Körper durch Symbiose und Regulation. Sie verbinden sich mit unseren „膜络“ (membranösen Kollateralen), um Blockaden zu lösen, Feuchtigkeit zu transformieren und Knoten (Zysten, Myome, Schilddrüsenknoten) aufzulösen.</p><p>In unserer klinischen Praxis verbinden wir diese Naturgesetze mit moderner Begleitung. Lesen Sie die vollständige wissenschaftliche Ausarbeitung von Dr. Zhang Hailing und Dr. Chen Kainan.</p>",
+    "wisdom-link": "Original-Artikel lesen (WeChat)",
+    "cases-title": "Klinische Fallstudien",
+    "case-1": "<strong>Fall 1 (Schilddrüsenknoten, 2.1cm):</strong> Vollständige Symptomlinderung und Knotenschrumpfung auf 0.9cm nach 3 Monaten Therapie mit Poria & Reishi.",
+    "case-2": "<strong>Fall 2 (Brustdrüsen-Hyperplasie & Angst):</strong> Auflösung von Brustknoten (1.6cm) und Linderung von Herzklopfen/Schlaflosigkeit durch Myzel-Regulation.",
+    "download-program-brochure": "Retreat-Programmbuch herunterladen (PDF)",
+    "manuals-grid-title": "Medizinische Geräte-Handbücher & Broschüren",
+    "pdf-1-title": "Spektrum-Therapiegerät 2.0",
+    "pdf-1-desc": "Detailliertes Handbuch zur thermischen Spektrallicht-Therapie zur Entgiftung und Meridianstärkung.",
+    "pdf-2-title": "Pian-Stein Mittelfrequenz-Therapie",
+    "pdf-2-desc": "Bedienungsanleitung und Anwendungsbereiche des warmen Pian-Stein-Behälters zur Meridian-Massage.",
+    "pdf-3-title": "Infrarot-Thermografie 4.0",
+    "pdf-3-desc": "Broschüre zur thermischen Bildgebung und Diagnostik von Durchblutung und Entzündungsherden.",
+    "pdf-4-title": "铺灸 / Pu Jiu Handbuch 3.1",
+    "pdf-4-desc": "Klinische Richtlinien zur Rücken-Moxibustion zur Beseitigung tiefer Kälte und Stärkung des Yang.",
+    "pdf-5-title": "Frequenz-Hyperthermie-Kabine 3.5",
+    "pdf-5-desc": "Bedienung und therapeutischer Nutzen der Ganzkörper-Wärmekabine zur Entgiftung und Immun-Aktivierung.",
+    "pdf-6-title": "Dao-Pilz-Retreat Programm",
+    "pdf-6-desc": "Exklusive Broschüre zum Retreat „Awakening and Transforming the Life Force“ in den Wudang-Bergen.",
+    "pdf-download-btn": "PDF herunterladen",
+    "treatment-1-badge": "Gynäkologie",
+    "treatment-2-badge": "Zelltherapie",
+    "treatment-3-badge": "Neurologie"
   }
 };
 
@@ -398,7 +466,7 @@ function setLanguage(lang) {
       if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
         element.setAttribute("placeholder", translations[lang][key]);
       } else {
-        element.textContent = translations[lang][key];
+        element.innerHTML = translations[lang][key];
       }
     }
   });
