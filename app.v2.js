@@ -542,6 +542,49 @@ function updateEndometriosisDisplay() {
 let selectedDate = null;
 let selectedSlot = null;
 
+// Helper to check if user's timezone is CET/CEST
+function isTimezoneCET(tz) {
+  if (!tz) return false;
+  const cetTimezones = [
+    'Europe/Berlin', 'Europe/Paris', 'Europe/Vienna', 'Europe/Rome', 
+    'Europe/Madrid', 'Europe/Zurich', 'Europe/Amsterdam', 'Europe/Brussels',
+    'Europe/Stockholm', 'Europe/Oslo', 'Europe/Copenhagen', 'Europe/Warsaw',
+    'Europe/Prague', 'Europe/Budapest', 'Europe/Bratislava', 'Europe/Ljubljana',
+    'Europe/Zagreb', 'Europe/Sarajevo', 'Europe/Belgrade', 'Europe/Skopje',
+    'Europe/Tirana', 'Europe/Podgorica', 'Europe/Luxembourg', 'Europe/Monaco',
+    'Europe/Andorra', 'Europe/Vaduz', 'Europe/San_Marino', 'Europe/Vatican',
+    'Europe/Malta', 'Europe/Gibraltar', 'CET', 'CEST', 'MET', 'Europe/Busingen'
+  ];
+  return cetTimezones.includes(tz) || 
+         tz.startsWith('Europe/Berlin') || 
+         tz.startsWith('Europe/Paris') || 
+         tz.startsWith('Europe/Vienna') || 
+         tz.startsWith('Europe/Rome') || 
+         tz.startsWith('Europe/Zurich');
+}
+
+// Convert CST (Peking time, UTC+8) to CET/CEST on a specific date
+function getCETTime(dateString, slotString) {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (!isTimezoneCET(tz)) return null;
+
+    // dateString: YYYY-MM-DD
+    // slotString: HH:MM
+    const cstISO = `${dateString}T${slotString}:00+08:00`;
+    const date = new Date(cstISO);
+    if (isNaN(date.getTime())) return null;
+
+    // Format local time with short time zone name
+    const options = { hour: '2-digit', minute: '2-digit', timeZoneName: 'short', hour12: false };
+    const localFormatted = new Intl.DateTimeFormat(currentLang, options).format(date);
+    return localFormatted;
+  } catch (e) {
+    console.error("Error converting timezone", e);
+    return null;
+  }
+}
+
 function initBookingSlots() {
   const dateInput = document.getElementById("consultation-date");
   if (dateInput) {
@@ -608,15 +651,18 @@ function initBookingSlots() {
     const programText = programSelect ? programSelect.options[programSelect.selectedIndex].text : 'TCM General';
     const message = document.getElementById("consult-message").value || 'N/A';
 
+    const cetTime = getCETTime(selectedDate, selectedSlot);
+    const timeDisplay = cetTime ? `${selectedSlot} (CST) / ${cetTime}` : `${selectedSlot} (CST)`;
+
     if (method === 'email') {
       let mailSubject = "";
       let mailBody = "";
       if (currentLang === 'de') {
         mailSubject = `HongDao TCM Anmeldung - ${name}`;
-        mailBody = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n\n- Name: ${name}\n- E-Mail: ${email}\n- Telefon: ${phone}\n- Gewünschtes Programm: ${programText}\n- Datum: ${selectedDate}\n- Uhrzeit: ${selectedSlot} (Pekinger Ortszeit)\n\nAnmerkung/Beschwerden:\n${message}\n\nVielen Dank!`;
+        mailBody = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n\n- Name: ${name}\n- E-Mail: ${email}\n- Telefon: ${phone}\n- Gewünschtes Programm: ${programText}\n- Datum: ${selectedDate}\n- Uhrzeit: ${timeDisplay}\n\nAnmerkung/Beschwerden:\n${message}\n\nVielen Dank!`;
       } else {
         mailSubject = `HongDao TCM Consultation Booking - ${name}`;
-        mailBody = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Program: ${programText}\n- Date: ${selectedDate}\n- Time: ${selectedSlot} (CST)\n\nMessage/Symptoms:\n${message}\n\nThank you!`;
+        mailBody = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Program: ${programText}\n- Date: ${selectedDate}\n- Time: ${timeDisplay}\n\nMessage/Symptoms:\n${message}\n\nThank you!`;
       }
 
       const mailtoUrl = `mailto:nanjing.deng18@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
@@ -625,9 +671,9 @@ function initBookingSlots() {
       // WhatsApp
       let waText = "";
       if (currentLang === 'de') {
-        waText = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n- *Name*: ${name}\n- *E-Mail*: ${email}\n- *Telefon*: ${phone}\n- *Gewünschtes Programm*: ${programText}\n- *Datum*: ${selectedDate}\n- *Uhrzeit*: ${selectedSlot} (Pekinger Ortszeit)\n- *Anmerkung*: ${message}\n\nVielen Dank!`;
+        waText = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n- *Name*: ${name}\n- *E-Mail*: ${email}\n- *Telefon*: ${phone}\n- *Gewünschtes Programm*: ${programText}\n- *Datum*: ${selectedDate}\n- *Uhrzeit*: ${timeDisplay}\n- *Anmerkung*: ${message}\n\nVielen Dank!`;
       } else {
-        waText = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n- *Name*: ${name}\n- *Email*: ${email}\n- *Phone*: ${phone}\n- *Program*: ${programText}\n- *Date*: ${selectedDate}\n- *Time*: ${selectedSlot} (CST)\n- *Message*: ${message}\n\nThank you!`;
+        waText = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n- *Name*: ${name}\n- *Email*: ${email}\n- *Phone*: ${phone}\n- *Program*: ${programText}\n- *Date*: ${selectedDate}\n- *Time*: ${timeDisplay}\n- *Message*: ${message}\n\nThank you!`;
       }
 
       const encodedText = encodeURIComponent(waText);
@@ -687,6 +733,20 @@ function generateTimeSlots() {
     return;
   }
 
+  // Display automatic timezone conversion note if applicable
+  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  if (isTimezoneCET(tz)) {
+    const note = document.createElement("div");
+    note.style.gridColumn = "1 / -1";
+    note.style.fontSize = "0.85rem";
+    note.style.color = "var(--text-muted)";
+    note.style.marginBottom = "0.5rem";
+    note.textContent = currentLang === 'de'
+      ? `Zeiten automatisch in Ihre Ortszeit (${tz.split('/').pop().replace(/_/g, ' ')}) umgerechnet:`
+      : `Times automatically converted to your local time (${tz.split('/').pop().replace(/_/g, ' ')}):`;
+    slotsContainer.appendChild(note);
+  }
+
   // Consultation times: Chinese local time 14:00 - 20:00. Slots every 30 mins
   const slots = [
     "14:00", "14:30", "15:00", "15:30", "16:00", "16:30",
@@ -697,7 +757,21 @@ function generateTimeSlots() {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "slot-btn";
-    btn.textContent = `${slot} (CST)`;
+    
+    // Check if timezone is CET/CEST and format button content
+    const cetTime = getCETTime(selectedDate, slot);
+    if (cetTime) {
+      btn.style.display = "flex";
+      btn.style.flexDirection = "column";
+      btn.style.alignItems = "center";
+      btn.style.justifyContent = "center";
+      btn.style.padding = "0.4rem 0.2rem";
+      
+      btn.innerHTML = `<div>${slot} (CST)</div><div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.2rem; font-weight: normal;">${cetTime}</div>`;
+    } else {
+      btn.textContent = `${slot} (CST)`;
+    }
+
     btn.addEventListener("click", () => {
       // Unselect previous
       document.querySelectorAll(".slot-btn").forEach(b => b.classList.remove("selected"));
