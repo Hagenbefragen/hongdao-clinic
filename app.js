@@ -1,0 +1,678 @@
+// ==========================================
+// HONGDAO TCM CLINIC - APPLICATION LOGIC
+// Includes multilingual i18n, price calculator,
+// slot selector, modal controller & popups
+// ==========================================
+
+// Translation Dictionary (German & English)
+const translations = {
+  en: {
+    // Navigation
+    "nav-home": "Home",
+    "nav-about": "About & Masters",
+    "nav-treatments": "Treatments",
+    "nav-devices": "Technology",
+    "nav-programs": "Programs",
+    "nav-retreat": "Yunnan Retreat",
+    "nav-info": "Clinic Info",
+    "nav-apply": "Apply Now",
+
+    // Hero Section
+    "hero-tag": "Traditional Chinese Medicine meets Modern Technology",
+    "hero-title": "Sovereign Path to Deep Healing & Balance",
+    "hero-desc": "Experience profound physical and spiritual transformation through Master Xu Ruqi's 40-year lineage, custom herbal therapies, advanced clinical diagnostic devices, and restorative sound ceremonies.",
+    "hero-cta-apply": "Apply Now",
+    "hero-cta-more": "Explore Programs",
+
+    // Introduction / Philosophy
+    "intro-title": "Where Ancient Lineage Meets Modern Precision",
+    "intro-desc": "Our clinic combines time-honored Traditional Chinese Medicine (TCM) with cutting-edge medical technologies, specialized sound therapy, and food as medicine. We offer a refuge of healing for those facing hormonal imbalances (endometriosis), burnout, high stress, and general health challenges.",
+
+    // Masters & Team
+    "team-title": "Lineage Keepers & Specialized Healers",
+    "team-subtitle": "Meet our dedicated staff, bridging traditional practices and modern recovery.",
+    "master-xu-title": "Chief Physician & TCM Master",
+    "master-xu-desc": "Master Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases, providing personalized care for the modern soul.",
+    "visionary-deng-title": "Visionary, Voice Healer & Facilitator",
+    "visionary-deng-desc": "Deng Nanjing bridges Eastern philosophy and Western needs. She leads sacred sound healings, tea ceremonies, and translates Master Xu's diagnostic insights into German, English, and Italian. She spent her childhood in rural China, cultivating a deep connection to organic TCM living.",
+    "team-grid-title": "Our Specialized Team",
+    "doctor-1-name": "Dr. Adrianna Qiao (乔婧文)",
+    "doctor-1-spec": "Stem Cell Therapy, Nutritional Analysis, Infertility Treatment & Sexual Empowerment for Men & Women.",
+    "doctor-2-name": "Dr. Zhang Min (张敏)",
+    "doctor-2-spec": "Specialist in Gynecological Disorders, Hormonal Imbalances & Advanced Endometriosis Therapy.",
+    "doctor-3-name": "Dr. Chen Wei (陈伟)",
+    "doctor-3-spec": "Acupuncture Specialist, Chronic Pain Management, Burnout Therapy & Deep Nervous System Regulation.",
+    "doctor-sound-name": "Mingli Cheung",
+    "doctor-sound-spec": "Lead Sound Healer & Vibration Therapist, coordinating energy realignment and emotional release.",
+
+    // Specialized Treatments
+    "treatments-title": "Specialized Medical Fields",
+    "treatments-subtitle": "Tailored, highly focused healing strategies for targeted recovery.",
+    "treatment-1-title": "Endometriosis & Women's Health",
+    "treatment-1-desc": "Custom herbal pastes, womb massage, and acupressure to dissolve blood stagnation and relieve chronic pain.",
+    "treatment-2-title": "Stem Cell & Longevity",
+    "treatment-2-desc": "Dr. Adrianna Qiao integrates advanced stem cell therapies with TCM rejuvenation techniques for cellular health.",
+    "treatment-3-title": "Stress & Burnout Recovery",
+    "treatment-3-desc": "Holistic relief for high-pressure lifestyles using pulse-guided acupuncture and relaxing sound frequencies.",
+    
+    // Modern Devices
+    "devices-title": "Advanced Clinical Technology",
+    "devices-subtitle": "Traditional diagnostic wisdom validated by high-end modern devices.",
+    "device-1-name": "Infrared Thermal Imaging",
+    "device-1-desc": "Maps body inflammation, circulation blockages, and meridian temperature patterns.",
+    "device-2-name": "Bioresonance Frequency Scanner",
+    "device-2-desc": "Analyzes cell energy fields to identify allergies, environmental toxins, and organ weakness.",
+    "device-3-name": "Electro-Acupuncture Stimulator",
+    "device-3-desc": "Delivers gentle microcurrents to traditional acupuncture points to double healing speed.",
+
+    // Programs & Endometriosis calculator
+    "programs-title": "Healing Programs & Training",
+    "programs-subtitle": "From intensive teacher trainings to customized personal recovery retreats.",
+    
+    "retreat-10day-title": "10-Day Teacher Training & Retreat",
+    "retreat-10day-date": "October 10th - October 20th, 2026",
+    "retreat-10day-desc": "A complete immersion in TCM theory and practice. 5 days of clinical observation in Shenzhen under Master Xu, followed by 5 days of Daoist lifestyle integration in the Wudang Mountains. Limited to 12 participants.",
+    "retreat-10day-price": "From €3,900 (Early Bird)",
+    
+    "retreat-1day-title": "1-Day Shenzhen Local Programs",
+    "retreat-1day-desc": "Focused local masterclasses. Perfect for nearby practitioners wishing to experience direct clinic shadowing, pulse diagnostic introduction, and herbal kitchen preparation.",
+    "retreat-1day-price": "€250 per session",
+    
+    "endo-program-title": "Endometriosis Healing Program",
+    "endo-program-desc": "A dedicated, fully customizable program addressing uterine health, hormone balance, and pain relief. Features customized herbal formulas (which you can take home as powder or paste), womb massage, sound healing, and direct doctor guidance.",
+    "endo-select-duration": "Select Program Duration:",
+    "duration-1w": "1 Week",
+    "duration-2w": "2 Weeks",
+    "duration-4w": "4 Weeks",
+    "package-basic": "Outpatient (No Boarding)",
+    "package-premium": "Premium Retreat (With Luxury Hotel & TCM Kitchen)",
+    "endo-included-title": "What's Included:",
+    "endo-price-note": "*Note: Prices exclude individually prescribed customized herbal medicines to take home.",
+
+    // Yunnan Retreat
+    "yunnan-title": "Yunnan 3-Day Nature Extension",
+    "yunnan-subtitle": "A mystical transition from the city clinic into pristine mountain elements.",
+    "yunnan-desc-1": "Extend your clinical program with a 3-day spiritual retreat in Yunnan. After starting with 3-4 days of intensive diagnosis and detox treatments at our Shenzhen clinic, you travel directly into the mountains.",
+    "yunnan-desc-2": "Live together in a luxurious partner hotel nestled in nature, featuring a beautiful pool, organic mountain cuisine, mushroom foraging expeditions, local tea culture experiences, and ethnic minority musical heritage.",
+    "yunnan-hotel-info": "Partner Hotel: Yunnan Horizon Sanctuary - a high-end luxury mountain eco-retreat with traditional wood architecture and panoramic views.",
+
+    // Child Space
+    "child-title": "HongDao Child Space",
+    "child-desc": "We believe family healing involves the youngest. Our clinic hosts a beautiful internal Children's Space, providing peaceful activities, kids TCM nutrition guidance, and regular public and internal events for families to connect.",
+
+    // Clinic Info & FAQ
+    "info-title": "Practical Clinic Information",
+    "info-location-label": "Location & Access",
+    "info-location-desc": "HongDao TCM Clinic, Shenzhen Nanshan District. Easily reachable via metro and highway.",
+    "info-hours-label": "Opening Hours",
+    "info-hours-desc": "Monday - Saturday: 09:00 - 18:00 (Appointments Required)",
+    "info-payment-label": "Booking & Payment policy",
+    "info-payment-desc": "Online booking is immediately available. Please note your booking is officially confirmed only upon receipt of your personalized confirmation email. Existing payment methods will be securely processed.",
+    
+    "faq-title": "Frequently Asked Questions",
+    "faq-q1": "Are customized herbal medicines included in the program fee?",
+    "faq-a1": "No. The customized herbal prescriptions, available as easy-to-take powder or paste formulas to take home, are billed separately based on individual diagnostic needs.",
+    "faq-q2": "How is the Yunnan travel organized?",
+    "faq-a2": "Our team coordinates the train/flight transfers from Shenzhen. The program covers the local partner hotel stay, guiding, and specified activities.",
+    "faq-q3": "Can I bring my family?",
+    "faq-a3": "Yes. Our HongDao Child Space offers family-friendly support and special weekend activities for children while parents undergo therapies.",
+
+    // Contact
+    "contact-title": "Begin Your Healing Journey",
+    "contact-subtitle": "Contact us or apply directly for your customized program.",
+    "contact-free-consult": "Book a Free 15-Min Consultation",
+    "contact-free-desc": "Speak directly with Nanjing Deng to discuss your symptoms and select the ideal treatment path.",
+    "contact-label-name": "Full Name",
+    "contact-label-email": "Email Address",
+    "contact-label-phone": "Phone Number",
+    "contact-label-program": "Program of Interest",
+    "contact-label-date": "Select Consultation Date (Wed & Sat)",
+    "contact-label-slot": "Select Time Slot (Chinese Time 14:00 - 20:00)",
+    "contact-label-message": "Brief Medical History / Notes",
+    "contact-submit-btn": "Apply Now",
+    "contact-social-text": "Connect with us on Social Media for daily health tips, sound circles and tea recipes:",
+    "whatsapp-text": "Chat on WhatsApp",
+    "instagram-text": "Instagram: nanjing_tea.sound",
+
+    // Interactive Booking Toast/Confirm
+    "booking-success-toast": "Application submitted! Check your email inbox for confirmation.",
+    
+    // Marketing Popup
+    "popup-title": "Exclusive Healing Offer",
+    "popup-desc": "Embrace a gentle spiritual transformation. Apply today for our Endometriosis Programs or the Wudang Retreat and receive 10% off your initial clinical diagnosis session.",
+    "popup-code-label": "Your Exclusive Application Code:",
+    "popup-cta": "Apply with Code"
+  },
+  de: {
+    // Navigation
+    "nav-home": "Startseite",
+    "nav-about": "Über uns & Meister",
+    "nav-treatments": "Behandlungen",
+    "nav-devices": "Medizintechnik",
+    "nav-programs": "Programme",
+    "nav-retreat": "Yunnan-Retreat",
+    "nav-info": "Klinik-Info",
+    "nav-apply": "Jetzt bewerben",
+
+    // Hero Section
+    "hero-tag": "Traditionelle Chinesische Medizin trifft moderne Medizintechnik",
+    "hero-title": "Heilsame Wege zu tiefer Balance",
+    "hero-desc": "Erleben Sie tiefgreifende körperliche und spirituelle Transformation durch die 40-jährige TCM-Erfahrung von Meister Xu Ruqi, individuelle Kräutertherapien, modernste Diagnosegeräte und heilsame Klangzeremonien.",
+    "hero-cta-apply": "Jetzt bewerben",
+    "hero-cta-more": "Programme entdecken",
+
+    // Introduction / Philosophy
+    "intro-title": "Wo alte Tradition auf moderne Präzision trifft",
+    "intro-desc": "Unsere Klinik verbindet bewährte Traditionelle Chinesische Medizin (TCM) mit modernster Diagnosetechnologie, Klangtherapie und TCM-basierter Küche. Wir bieten einen sicheren Zufluchtsort für Menschen mit hormonellen Beschwerden (Endometriose), Burnout, chronischem Stress und allgemeinen gesundheitlichen Belastungen.",
+
+    // Masters & Team
+    "team-title": "Hüter der Tradition & Spezialisierte Heiler",
+    "team-subtitle": "Lernen Sie unser engagiertes Team kennen, das Brücken zwischen Tradition und moderner Genesung schlägt.",
+    "master-xu-title": "Chefarzt & TCM-Meister",
+    "master-xu-desc": "Meister Xu Ruqi verfügt über mehr als 40 Jahre Erfahrung in Pulsdiagnostik und klassischer Kräutermedizin. Als klinischer Experte an der Pekinger Universität für Chinesische Medizin ist er weltweit bekannt für die Behandlung schwerer chronischer Krankheiten, Tumoren und gynäkologischer Leiden.",
+    "visionary-deng-title": "Visionärin, Klangheilerin & Übersetzerin",
+    "visionary-deng-desc": "Deng Nanjing schlägt die Brücke zwischen östlicher Philosophie und westlichen Bedürfnissen. Sie leitet Klangheilungen sowie Teezeremonien und übersetzt die Diagnosen von Meister Xu ins Deutsche, Englische und Italienische. Sie wuchs im ländlichen China auf.",
+    "team-grid-title": "Unser spezialisiertes Team",
+    "doctor-1-name": "Dr. Adrianna Qiao (乔婧文)",
+    "doctor-1-spec": "Spezialisierung: Stammzelltherapie, Ernährungsanalyse, Infertilität/Unfruchtbarkeit & Sexual Empowerment für Frauen und Männer.",
+    "doctor-2-name": "Dr. Zhang Min (张敏)",
+    "doctor-2-spec": "Spezialistin für gynäkologische Erkrankungen, hormonelle Dysbalancen & Endometriose-Therapie.",
+    "doctor-3-name": "Dr. Chen Wei (陈伟)",
+    "doctor-3-spec": "Spezialist für Akupunktur, chronische Schmerztherapie, Burnout & vegetative Nervensystem-Regulation.",
+    "doctor-sound-name": "Mingli Cheung",
+    "doctor-sound-spec": "Klangheiler & Vibrationstherapeut, leitet die energetische Ausrichtung und emotionale Entlastung.",
+
+    // Specialized Treatments
+    "treatments-title": "Spezialisierte Fachbereiche",
+    "treatments-subtitle": "Maßgeschneiderte Behandlungsstrategien für Ihre gezielte Genesung.",
+    "treatment-1-title": "Endometriose & Frauengesundheit",
+    "treatment-1-desc": "Individuelle Kräuterpasten, Womb-Massage (Gebärmutter-Massage) und Akupressur zur Lösung von Stagnationen und Schmerzlinderung.",
+    "treatment-2-title": "Stammzellen & Langlebigkeit",
+    "treatment-2-desc": "Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Erneuerung.",
+    "treatment-3-title": "Stress & Burnout-Prävention",
+    "treatment-3-desc": "Ganzheitliche Entlastung bei hohem Leistungsdruck durch pulsgeführte Akupunktur und entspannende Klangfrequenzen.",
+
+    // Modern Devices
+    "devices-title": "Klinische Medizintechnik",
+    "devices-subtitle": "Traditionelle TCM-Diagnostik, präzisiert durch modernste klinische Geräte.",
+    "device-1-name": "Infrarot-Thermografie",
+    "device-1-desc": "Visualisiert Entzündungen, Durchblutungsstörungen und energetische Blockaden in den Meridianen.",
+    "device-2-name": "Bioresonanz-Frequenzscanner",
+    "device-2-desc": "Misst elektromagnetische Schwingungen der Zellen zur Erkennung von Belastungen, Toxinen und Organschwächen.",
+    "device-3-name": "Elektro-Akupunktur-Gerät",
+    "device-3-desc": "Unterstützt die klassische Nadelung durch sanfte Mikroströme zur Beschleunigung der Nervenregeneration.",
+
+    // Programs & Endometriosis calculator
+    "programs-title": "Heilungsprogramme & Kurse",
+    "programs-subtitle": "Vom intensiven Ausbildungskurs bis zum maßgeschneiderten Therapieprogramm.",
+    
+    "retreat-10day-title": "10-tägiges TCM-Training & Retreat",
+    "retreat-10day-date": "10. Oktober - 20. Oktober 2026",
+    "retreat-10day-desc": "Komplette Immersion in TCM-Theorie & Praxis. 5 Tage klinische Hospitation in Shenzhen unter Meister Xu, gefolgt von 5 Tagen taoistischer Lebensführung in den Wudang-Bergen. Maximal 12 Teilnehmer.",
+    "retreat-10day-price": "Ab €3.900,- (Frühbucher)",
+    
+    "retreat-1day-title": "1-tägige Programme (Shenzhen)",
+    "retreat-1day-desc": "Lokale Tageskurse vor Ort. Ideal für Praktizierende für klinische Hospitationen, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.",
+    "retreat-1day-price": "€250,- pro Tag",
+    
+    "endo-program-title": "Endometriose-Heilprogramm",
+    "endo-program-desc": "Ein spezialisiertes, 1-4 wöchiges Heilprogramm für Frauen, individuell anpassbar. Enthält Kräutermedizin (als Pulver oder Paste zum Mitnehmen), Womb-Massagen, Sound Healing, Ernährungsanalyse und langfristige Begleitung.",
+    "endo-select-duration": "Programmdauer wählen:",
+    "duration-1w": "1 Woche",
+    "duration-2w": "2 Wochen",
+    "duration-4w": "4 Wochen",
+    "package-basic": "Ohne Unterkunft & Verpflegung (Ambulant)",
+    "package-premium": "Premium (Inkl. Luxus-Boutique-Hotel & TCM-Küche)",
+    "endo-included-title": "Inklusive Leistungen:",
+    "endo-price-note": "*Hinweis: Alle Preise beinhalten keine individuell verschreibungspflichtige Kräutermedizin.",
+
+    // Yunnan Retreat
+    "yunnan-title": "3-tägiges Yunnan Natur-Retreat",
+    "yunnan-subtitle": "Ein heilsamer Übergang von der Stadtklinik in die unberührte Natur.",
+    "yunnan-desc-1": "Erweitern Sie Ihre Behandlung mit einem 3-tägigen Naturaufenthalt. Nach den ersten 3-4 Tagen Diagnose und Therapie in der Shenzhen-Klinik reisen Sie direkt in das malerische Yunnan.",
+    "yunnan-desc-2": "Erleben Sie Gemeinschaft beim Pilze sammeln, entdecken Sie Teekultur und Minderheitenbräuche. Sie wohnen in einem luxuriösen Berghotel mit Pool, naturnah gelegen, mit exzellenter traditioneller chinesischer Küche.",
+    "yunnan-hotel-info": "Partnerhotel: Yunnan Horizon Sanctuary - Luxuriöses Öko-Resort mit atemberaubendem Pool und traditioneller Holzbauweise inmitten der Berge.",
+
+    // Child Space
+    "child-title": "HongDao Kinderbereich",
+    "child-desc": "Heilung betrifft die ganze Familie. Unsere Klinik bietet einen hauseigenen Kinderbereich (Child Space) mit kindgerechten Beschäftigungen, TCM-Ernährungsberatung und regelmäßigen öffentlichen & internen Events.",
+
+    // Clinic Info & FAQ
+    "info-title": "Klinikinformationen & Buchungsrichtlinien",
+    "info-location-label": "Standort & Anfahrt",
+    "info-location-desc": "HongDao TCM-Klinik, Nanshan District, Shenzhen. Gut angebunden an Metro und Autobahn.",
+    "info-hours-label": "Öffnungszeiten",
+    "info-hours-desc": "Montag - Samstag: 09:00 - 18:00 Uhr (Nur nach Terminvereinbarung)",
+    "info-payment-label": "Buchung & Zahlungsablauf",
+    "info-payment-desc": "Eine Online-Zahlung ist sofort möglich. Die Buchung gilt jedoch erst nach Erhalt der Bestätigungs-E-Mail als offiziell bestätigt. Die bereits hinterlegte Zahlungsmethode wird verwendet.",
+    
+    "faq-title": "Häufig gestellte Fragen (FAQ)",
+    "faq-q1": "Sind die verschriebenen Kräuter im Preis inbegriffen?",
+    "faq-a1": "Nein. Individuell verschriebene Kräuterarzneien (die als Pulver oder Paste mit nach Hause genommen werden können) werden je nach Diagnose und Bedarf separat abgerechnet.",
+    "faq-q2": "Wie läuft der Transfer nach Yunnan ab?",
+    "faq-a2": "Unser Klinikteam organisiert den Transfer per Bahn/Flug. Unterkunft im Partnerhotel sowie Aktivitäten vor Ort sind im Buchungspreis des Retreats enthalten.",
+    "faq-q3": "Gibt es eine Kinderbetreuung vor Ort?",
+    "faq-a3": "Ja. Unser hauseigener Kinderbereich bietet altersgerechte Programme und veranstaltet regelmäßige Familien-Events.",
+
+    // Contact
+    "contact-title": "Beginnen Sie Ihren Weg zur Heilung",
+    "contact-subtitle": "Kontaktieren Sie uns oder bewerben Sie sich direkt für Ihr individuelles Heilprogramm.",
+    "contact-free-consult": "15-minütiges kostenloses Beratungsgespräch buchen",
+    "contact-free-desc": "Sprechen Sie direkt mit Nanjing Deng, um Ihre Beschwerden zu besprechen und das passende Programm zu finden.",
+    "contact-label-name": "Name",
+    "contact-label-email": "E-Mail-Adresse",
+    "contact-label-phone": "Telefonnummer",
+    "contact-label-program": "Gewünschtes Programm",
+    "contact-label-date": "Datum des Beratungsgesprächs (Mittwoch / Samstag)",
+    "contact-label-slot": "Uhrzeit wählen (Pekinger Ortszeit 14:00 - 20:00 Uhr)",
+    "contact-label-message": "Kurze Anmerkung zu Ihren Beschwerden",
+    "contact-submit-btn": "Jetzt bewerben",
+    "contact-social-text": "Folgen Sie uns in den sozialen Medien für Gesundheitstipps, Klangzirkel und Tee-Rituale:",
+    "whatsapp-text": "Über WhatsApp chatten",
+    "instagram-text": "Instagram: nanjing_tea.sound",
+
+    // Interactive Booking Toast/Confirm
+    "booking-success-toast": "Bewerbung erfolgreich gesendet! Eine Bestätigung wird an Ihre E-Mail gesendet.",
+    
+    // Marketing Popup
+    "popup-title": "Exklusiver Rabattcode",
+    "popup-desc": "Erhalten Sie eine sanfte, spirituelle Ermäßigung. Bewerben Sie sich noch heute für unsere Endometriose-Heilprogramme oder das Wudang-Retreat und erhalten Sie 10% Rabatt auf die erste Diagnose.",
+    "popup-code-label": "Ihr persönlicher Rabattcode:",
+    "popup-cta": "Code anwenden & bewerben"
+  }
+};
+
+// Endometriosis Program Pricing Data Matrix
+const endometriosisPricing = {
+  "1w": {
+    basic: 950,
+    premium: 1950,
+    features: {
+      en: [
+        "Initial pulse & tongue diagnosis with Master Xu",
+        "3 Acupuncture & moxibustion sessions",
+        "1 Specialized Womb-Massage session",
+        "1 Group Sound Healing & sound ceremony",
+        "TCM nutrition guideline and kitchen introduction",
+        "Take-home medicine instruction (powders/pastes)"
+      ],
+      de: [
+        "Erstdiagnose (Puls & Zunge) mit Meister Xu",
+        "3 Akupunktur- & Moxibustions-Sitzungen",
+        "1 Spezialisierte Womb-Massage (Gebärmutter-Massage)",
+        "1 Gruppen-Sound-Healing & Klangzeremonie",
+        "TCM-Ernährungsleitfaden & Küchen-Einführung",
+        "Einweisung für Kräuterpulver/-pasten für Zuhause"
+      ]
+    }
+  },
+  "2w": {
+    basic: 1750,
+    premium: 3500,
+    features: {
+      en: [
+        "Initial & mid-program checkup with Master Xu",
+        "6 Acupuncture & moxibustion sessions",
+        "2 Specialized Womb-Massage sessions",
+        "2 Group Sound Healing sessions & private alignment",
+        "Daily TCM-based herbal soups at clinic",
+        "Take-home medicine instruction + 3 months follow-up support"
+      ],
+      de: [
+        "Erst- & Zwischen-Diagnose durch Meister Xu",
+        "6 Akupunktur- & Moxibustions-Sitzungen",
+        "2 Spezialisierte Womb-Massagen (Gebärmutter-Massagen)",
+        "2 Gruppen-Sound-Healings & private Klangsitzung",
+        "Tägliche TCM-Kräutersuppen in der Klinik",
+        "Einweisung für Kräuter sowie 3 Monate Begleitung"
+      ]
+    }
+  },
+  "4w": {
+    basic: 3200,
+    premium: 6400,
+    features: {
+      en: [
+        "Weekly diagnostic checkups with Master Xu",
+        "12 Acupuncture & moxibustion sessions",
+        "4 Specialized Womb-Massage sessions",
+        "4 Sound Healing & meditation ceremonies",
+        "Daily TCM-based herbal kitchen meals at clinic",
+        "Comprehensive stem-cell therapy consultation integration",
+        "Take-home customized medicine preparation + 6 months follow-up support"
+      ],
+      de: [
+        "Wöchentliche Diagnostik und Anpassung durch Meister Xu",
+        "12 Akupunktur- & Moxibustions-Sitzungen",
+        "4 Spezialisierte Womb-Massagen",
+        "4 Sound-Healing- & Meditationszeremonien",
+        "Tägliche Mahlzeiten aus der TCM-Heilküche in der Klinik",
+        "Integration & Beratung zu Stammzellentherapie",
+        "Herstellung der Kräuterarznei + 6 Monate ärztliche Begleitung"
+      ]
+    }
+  }
+};
+
+// Global App State
+let currentLang = 'de'; // Default to German
+let selectedDuration = '2w'; // Default to 2 weeks
+let selectedTier = 'premium'; // Default to Premium Retreat
+
+// Init Functions
+document.addEventListener("DOMContentLoaded", () => {
+  initLanguage();
+  initEndometriosisCalculator();
+  initBookingSlots();
+  initFaq();
+  initNavbarScroll();
+  initMarketingPopup();
+  initBookingModal();
+});
+
+// 1. Language switcher logic
+function initLanguage() {
+  const deBtn = document.getElementById("lang-de");
+  const enBtn = document.getElementById("lang-en");
+  
+  if (deBtn && enBtn) {
+    deBtn.addEventListener("click", () => setLanguage('de'));
+    enBtn.addEventListener("click", () => setLanguage('en'));
+  }
+  
+  // Set initial language
+  setLanguage(currentLang);
+}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  
+  // Update toggle buttons active class
+  document.getElementById("lang-de").classList.toggle("active", lang === 'de');
+  document.getElementById("lang-en").classList.toggle("active", lang === 'en');
+  
+  // Translate static data-i18n elements
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    const key = element.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+        element.setAttribute("placeholder", translations[lang][key]);
+      } else {
+        element.textContent = translations[lang][key];
+      }
+    }
+  });
+
+  // Re-render components that are dynamic
+  updateEndometriosisDisplay();
+  updateDateSlotLabels();
+}
+
+// 2. Endometriosis Pricing Calculator Logic
+function initEndometriosisCalculator() {
+  // Duration buttons
+  const dur1w = document.getElementById("dur-1w");
+  const dur2w = document.getElementById("dur-2w");
+  const dur4w = document.getElementById("dur-4w");
+
+  // Tier buttons
+  const tierBasic = document.getElementById("tier-basic");
+  const tierPremium = document.getElementById("tier-premium");
+
+  if (dur1w && dur2w && dur4w && tierBasic && tierPremium) {
+    dur1w.addEventListener("click", () => { selectedDuration = '1w'; updateEndometriosisDisplay(); });
+    dur2w.addEventListener("click", () => { selectedDuration = '2w'; updateEndometriosisDisplay(); });
+    dur4w.addEventListener("click", () => { selectedDuration = '4w'; updateEndometriosisDisplay(); });
+
+    tierBasic.addEventListener("click", () => { selectedTier = 'basic'; updateEndometriosisDisplay(); });
+    tierPremium.addEventListener("click", () => { selectedTier = 'premium'; updateEndometriosisDisplay(); });
+  }
+}
+
+function updateEndometriosisDisplay() {
+  const amountEl = document.getElementById("endo-price-amount");
+  const descEl = document.getElementById("endo-price-period");
+  const featuresList = document.getElementById("endo-features-list");
+  
+  if (!amountEl || !featuresList) return;
+
+  // Update button active state
+  document.getElementById("dur-1w").classList.toggle("active", selectedDuration === '1w');
+  document.getElementById("dur-2w").classList.toggle("active", selectedDuration === '2w');
+  document.getElementById("dur-4w").classList.toggle("active", selectedDuration === '4w');
+
+  document.getElementById("tier-basic").classList.toggle("active", selectedTier === 'basic');
+  document.getElementById("tier-premium").classList.toggle("active", selectedTier === 'premium');
+
+  // Fetch prices & details
+  const currentData = endometriosisPricing[selectedDuration];
+  const price = selectedTier === 'basic' ? currentData.basic : currentData.premium;
+  
+  amountEl.textContent = `€${price},-`;
+  
+  const periodText = {
+    en: { "1w": "1 Week Program", "2w": "2 Weeks Program", "4w": "4 Weeks Program" },
+    de: { "1w": "1 Woche Programm", "2w": "2 Wochen Programm", "4w": "4 Wochen Programm" }
+  };
+  descEl.textContent = periodText[currentLang][selectedDuration];
+
+  // Render Features list
+  featuresList.innerHTML = "";
+  const features = currentData.features[currentLang];
+  features.forEach(feat => {
+    const li = document.createElement("li");
+    li.textContent = feat;
+    featuresList.appendChild(li);
+  });
+}
+
+// 3. Booking consultation Slots logic
+let selectedDate = null;
+let selectedSlot = null;
+
+function initBookingSlots() {
+  const dateInput = document.getElementById("consultation-date");
+  if (dateInput) {
+    dateInput.addEventListener("change", (e) => {
+      selectedDate = e.target.value;
+      generateTimeSlots();
+    });
+  }
+
+  // Bind Submit Consultation Form
+  const consultForm = document.getElementById("consultation-form");
+  if (consultForm) {
+    consultForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById("consult-name").value;
+      const email = document.getElementById("consult-email").value;
+      const phone = document.getElementById("consult-phone").value;
+      
+      if (!name || !email || !selectedDate || !selectedSlot) {
+        alert(currentLang === 'de' ? "Bitte füllen Sie alle erforderlichen Felder aus." : "Please fill out all required fields.");
+        return;
+      }
+
+      // Simulate sending email and payment flow
+      showBookingToast();
+      closeModal();
+      
+      // Reset form
+      consultForm.reset();
+      selectedDate = null;
+      selectedSlot = null;
+      document.getElementById("slots-container").innerHTML = "";
+    });
+  }
+}
+
+function updateDateSlotLabels() {
+  const dateInput = document.getElementById("consultation-date");
+  if (dateInput) {
+    // Standard validation
+  }
+}
+
+// Generate valid Wednesdays and Saturdays for slot picking
+function generateTimeSlots() {
+  const slotsContainer = document.getElementById("slots-container");
+  if (!slotsContainer) return;
+
+  slotsContainer.innerHTML = "";
+
+  if (!selectedDate) return;
+
+  const dateObj = new Date(selectedDate);
+  const day = dateObj.getDay(); // 3 = Wed, 6 = Sat
+
+  // Validate if Wednesday or Saturday
+  if (day !== 3 && day !== 6) {
+    const warning = document.createElement("div");
+    warning.style.color = "var(--terracotta)";
+    warning.style.gridColumn = "1 / -1";
+    warning.style.fontSize = "0.9rem";
+    warning.textContent = currentLang === 'de' 
+      ? "Bitte wählen Sie einen Mittwoch oder Samstag." 
+      : "Please select a Wednesday or Saturday.";
+    slotsContainer.appendChild(warning);
+    return;
+  }
+
+  // Consultation times: Chinese local time 14:00 - 20:00. Slots every 30 mins
+  const slots = [
+    "14:00", "14:30", "15:00", "15:30", "16:00", "16:30",
+    "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"
+  ];
+
+  slots.forEach(slot => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "slot-btn";
+    btn.textContent = `${slot} (CST)`;
+    btn.addEventListener("click", () => {
+      // Unselect previous
+      document.querySelectorAll(".slot-btn").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      selectedSlot = slot;
+    });
+    slotsContainer.appendChild(btn);
+  });
+}
+
+// 4. Modal Booking Window Control
+function initBookingModal() {
+  const overlay = document.getElementById("booking-modal-overlay");
+  const closeBtn = document.getElementById("booking-modal-close");
+  
+  // Close events
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (overlay) {
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeModal();
+    });
+  }
+
+  // Bind all "Apply Now" buttons
+  document.querySelectorAll(".apply-trigger").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+}
+
+function openModal() {
+  const overlay = document.getElementById("booking-modal-overlay");
+  if (overlay) {
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden"; // Disable scroll
+  }
+}
+
+function closeModal() {
+  const overlay = document.getElementById("booking-modal-overlay");
+  if (overlay) {
+    overlay.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+}
+
+// 5. Toast notification
+function showBookingToast() {
+  const toast = document.getElementById("toast");
+  if (!toast) return;
+
+  toast.textContent = translations[currentLang]["booking-success-toast"];
+  toast.classList.add("active");
+
+  setTimeout(() => {
+    toast.classList.remove("active");
+  }, 4000);
+}
+
+// 6. FAQs Collapsible Logic
+function initFaq() {
+  document.querySelectorAll(".faq-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+      // Close all
+      document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("active"));
+      // Toggle current
+      if (!isActive) {
+        item.classList.add("active");
+      }
+    });
+  });
+}
+
+// 7. Navbar scroll state
+function initNavbarScroll() {
+  const header = document.getElementById("header");
+  if (!header) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+}
+
+// 8. Marketing Popup logic
+function initMarketingPopup() {
+  const popup = document.getElementById("marketing-popup");
+  const closeBtn = document.getElementById("marketing-popup-close");
+  const applyBtn = document.getElementById("marketing-popup-cta");
+
+  if (!popup) return;
+
+  // Show popup after 2.5 seconds, if not dismissed in this session
+  if (!sessionStorage.getItem("hongdao-popup-dismissed")) {
+    setTimeout(() => {
+      popup.classList.add("active");
+    }, 2500);
+  }
+
+  const dismissPopup = () => {
+    popup.classList.remove("active");
+    sessionStorage.setItem("hongdao-popup-dismissed", "true");
+  };
+
+  if (closeBtn) closeBtn.addEventListener("click", dismissPopup);
+  if (applyBtn) {
+    applyBtn.addEventListener("click", () => {
+      dismissPopup();
+      openModal();
+      
+      // Auto fill a comment about discount
+      const messageField = document.getElementById("consult-message");
+      if (messageField) {
+        messageField.value = currentLang === 'de'
+          ? "Ich möchte den Rabattcode HONGDAO2026 für meine Buchung anwenden."
+          : "I would like to apply the HONGDAO2026 discount code to my booking.";
+      }
+    });
+  }
+}
