@@ -191,7 +191,8 @@ const translations = {
     "tech-device-4-long-desc": "Utilizes a broad electromagnetic wavelength spectrum to warm body tissues. Promotes peripheral microcirculation, supports cellular drainage, and alleviates chronic muscle stiffness.",
     "tech-device-5-title": "Localized Spectrum treatment radiator",
     "tech-device-5-long-desc": "Targeted spectrum radiation simulating natural body emission frequencies to stimulate tissue regeneration, local metabolism, and complement classical acupuncture treatments.",
-    "tech-device-1-long-desc": "Maps inflammatory patterns, microcirculation, and meridian heat distributions. Enables an objective, radiation-free tracking of chronic conditions and pain syndromes."
+    "tech-device-1-long-desc": "Maps inflammatory patterns, microcirculation, and meridian heat distributions. Enables an objective, radiation-free tracking of chronic conditions and pain syndromes.",
+    "download-brochure-btn": "Download Brochure (PDF)"
   },
   de: {
     // Navigation
@@ -376,7 +377,8 @@ const translations = {
     "tech-device-4-long-desc": "Nutzt ein breites elektromagnetisches Frequenzspektrum zur Erwärmung des Gewebes. Fördert die periphere Mikrozirkulation, unterstützt die zelluläre Ausleitung und lindert chronische Muskelverspannungen.",
     "tech-device-5-title": "Lokalisiertes Spektral-Bestrahlungsgerät",
     "tech-device-5-long-desc": "Gezielter Spektralstrahler zur lokalen Bestrahlung. Fördert die Geweberegeneration, regt lokale Stoffwechselprozesse an und wird komplementär zu Akupunktur- und Moxa-Sitzungen eingesetzt.",
-    "tech-device-1-long-desc": "Visualisiert Entzündungsmuster, Durchblutungsverhältnisse und temperaturverteilungen entlang der Meridiane. Ermöglicht eine objektive, strahlungsfreie Verlaufskontrolle chronischer Entzündungen und Schmerzsyndrome."
+    "tech-device-1-long-desc": "Visualisiert Entzündungsmuster, Durchblutungsverhältnisse und temperaturverteilungen entlang der Meridiane. Ermöglicht eine objektive, strahlungsfreie Verlaufskontrolle chronischer Entzündungen und Schmerzsyndrome.",
+    "download-brochure-btn": "Broschüre herunterladen (PDF)"
   }
 };
 
