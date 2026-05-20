@@ -747,8 +747,15 @@ function initBookingSlots() {
         mailBody = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Program: ${programText}\n- Date: ${selectedDate}\n- Time: ${timeDisplay}\n\nMessage/Symptoms:\n${message}\n\nThank you!`;
       }
 
-      const mailtoUrl = `mailto:nanjing.deng18@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
-      window.location.href = mailtoUrl;
+      openEmailDispatchModal(mailSubject, mailBody);
+      closeModal();
+      
+      // Reset form
+      if (form) form.reset();
+      selectedDate = null;
+      selectedSlot = null;
+      const slotsContainer = document.getElementById("slots-container");
+      if (slotsContainer) slotsContainer.innerHTML = "";
     } else {
       // WhatsApp
       let waText = "";
@@ -761,18 +768,18 @@ function initBookingSlots() {
       const encodedText = encodeURIComponent(waText);
       const waUrl = `https://wa.me/5219841408335?text=${encodedText}`;
       window.open(waUrl, '_blank');
-    }
 
-    // Show success toast on screen
-    showBookingToast();
-    closeModal();
-    
-    // Reset form
-    if (form) form.reset();
-    selectedDate = null;
-    selectedSlot = null;
-    const slotsContainer = document.getElementById("slots-container");
-    if (slotsContainer) slotsContainer.innerHTML = "";
+      // Show success toast on screen
+      showBookingToast();
+      closeModal();
+      
+      // Reset form
+      if (form) form.reset();
+      selectedDate = null;
+      selectedSlot = null;
+      const slotsContainer = document.getElementById("slots-container");
+      if (slotsContainer) slotsContainer.innerHTML = "";
+    }
   }
 
   if (submitEmailBtn) {
@@ -1084,3 +1091,92 @@ function initLightbox() {
     if (e.key === "ArrowRight") showImage(currentIndex + 1);
   });
 }
+
+function openEmailDispatchModal(mailSubject, mailBody) {
+  let oldModal = document.getElementById("email-dispatch-modal");
+  if (oldModal) oldModal.remove();
+
+  const modal = document.createElement("div");
+  modal.id = "email-dispatch-modal";
+  modal.className = "modal-overlay active";
+  modal.style.zIndex = "3000";
+
+  const recipient = "nanjing.deng18@gmail.com";
+
+  const isDe = currentLang === 'de';
+  const title = isDe ? "E-Mail vorbereitet!" : "Email Prepared!";
+  const subtitle = isDe ? "Bitte wählen Sie eine Option, um die Nachricht abzuschicken:" : "Please choose how you would like to send the message:";
+  const labelTo = isDe ? "An:" : "To:";
+  const labelSubject = isDe ? "Betreff:" : "Subject:";
+  const labelBody = isDe ? "Inhalt:" : "Body:";
+  const btnGmail = isDe ? "✉️ Über Gmail (Webmail) senden" : "✉️ Send via Gmail (Webmail)";
+  const btnOutlook = isDe ? "💻 Über Outlook (Webmail) senden" : "💻 Send via Outlook (Webmail)";
+  const btnMailto = isDe ? "📱 Mit Standard-Mail-App öffnen" : "📱 Open with Default Mail App";
+  const btnCopy = isDe ? "📋 Kopieren & manuell senden" : "📋 Copy & Send Manually";
+  const copySuccess = isDe ? "✓ Kopiert!" : "✓ Copied!";
+
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+  const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${recipient}&subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+  const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+  modal.innerHTML = `
+    <div class="modal-window" style="max-width: 550px; border-radius: var(--border-radius); overflow: hidden; background-color: var(--bg-cream-light);">
+      <div class="modal-header" style="background-color: var(--terracotta); color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; margin: 0; color: white;">${title}</h3>
+        <button class="modal-close" onclick="closeEmailDispatchModal()" style="font-size: 2rem; background: none; border: none; color: white; cursor: pointer; line-height: 1;">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 2rem; display: flex; flex-direction: column; gap: 1.2rem;">
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">${subtitle}</p>
+        
+        <div style="background-color: var(--bg-cream-dark); padding: 1rem; border-radius: 8px; font-size: 0.85rem; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 0.4rem;">
+          <div><strong>${labelTo}</strong> <code>${recipient}</code></div>
+          <div><strong>${labelSubject}</strong> <span>${mailSubject}</span></div>
+          <div style="white-space: pre-wrap; max-height: 100px; overflow-y: auto; margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px solid rgba(0,0,0,0.08); color: var(--text-muted); line-height: 1.4;">${mailBody}</div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.4rem;">
+          <a href="${gmailUrl}" target="_blank" onclick="closeEmailDispatchModal()" class="btn btn-terracotta" style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; text-decoration: none; padding: 0.8rem; font-size: 0.95rem;">
+            ${btnGmail}
+          </a>
+          <a href="${outlookUrl}" target="_blank" onclick="closeEmailDispatchModal()" class="btn btn-outline" style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; text-decoration: none; padding: 0.8rem; font-size: 0.95rem; border: 2px solid var(--terracotta); border-radius: var(--border-radius); color: var(--terracotta); background: none; font-weight: 500;">
+            ${btnOutlook}
+          </a>
+          <a href="${mailtoUrl}" onclick="closeEmailDispatchModal()" class="btn btn-outline" style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; text-decoration: none; padding: 0.8rem; font-size: 0.95rem; border: 2px solid var(--text-muted); border-radius: var(--border-radius); color: var(--text-muted); background: none; font-weight: 500;">
+            ${btnMailto}
+          </a>
+          <button id="copy-mail-btn" class="btn btn-outline" style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.8rem; font-size: 0.95rem; border: 2px solid var(--jade-green); border-radius: var(--border-radius); color: var(--jade-green); background: none; font-weight: 500; cursor: pointer;">
+            ${btnCopy}
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+  document.body.style.overflow = "hidden";
+
+  const copyBtn = modal.querySelector("#copy-mail-btn");
+  copyBtn.addEventListener("click", () => {
+    const fullText = `An: ${recipient}\nBetreff: ${mailSubject}\n\n${mailBody}`;
+    navigator.clipboard.writeText(fullText).then(() => {
+      copyBtn.textContent = copySuccess;
+      copyBtn.style.backgroundColor = "rgba(141, 172, 142, 0.15)";
+      setTimeout(() => {
+        closeEmailDispatchModal();
+      }, 1500);
+    }).catch(err => {
+      console.error("Clipboard copy failed: ", err);
+    });
+  });
+}
+
+function closeEmailDispatchModal() {
+  const modal = document.getElementById("email-dispatch-modal");
+  if (modal) {
+    modal.remove();
+    document.body.style.overflow = "auto";
+  }
+}
+
+window.openEmailDispatchModal = openEmailDispatchModal;
+window.closeEmailDispatchModal = closeEmailDispatchModal;
