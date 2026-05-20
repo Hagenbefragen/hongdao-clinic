@@ -487,14 +487,32 @@ function initBookingSlots() {
       
       const name = document.getElementById("consult-name").value;
       const email = document.getElementById("consult-email").value;
-      const phone = document.getElementById("consult-phone").value;
+      const phone = document.getElementById("consult-phone").value || 'N/A';
+      const programSelect = document.getElementById("consult-program");
+      const programText = programSelect ? programSelect.options[programSelect.selectedIndex].text : 'TCM General';
+      const message = document.getElementById("consult-message").value || 'N/A';
       
       if (!name || !email || !selectedDate || !selectedSlot) {
         alert(currentLang === 'de' ? "Bitte füllen Sie alle erforderlichen Felder aus." : "Please fill out all required fields.");
         return;
       }
 
-      // Simulate sending email and payment flow
+      // Construct a highly structured, readable message
+      let waText = "";
+      if (currentLang === 'de') {
+        waText = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n- *Name*: ${name}\n- *E-Mail*: ${email}\n- *Telefon*: ${phone}\n- *Gewünschtes Programm*: ${programText}\n- *Datum*: ${selectedDate}\n- *Uhrzeit*: ${selectedSlot} (Pekinger Ortszeit)\n- *Anmerkung*: ${message}\n\nVielen Dank!`;
+      } else {
+        waText = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n- *Name*: ${name}\n- *Email*: ${email}\n- *Phone*: ${phone}\n- *Program*: ${programText}\n- *Date*: ${selectedDate}\n- *Time*: ${selectedSlot} (CST)\n- *Message*: ${message}\n\nThank you!`;
+      }
+
+      // Encode the text for URL
+      const encodedText = encodeURIComponent(waText);
+      const waUrl = `https://wa.me/13074343090?text=${encodedText}`;
+
+      // Open WhatsApp in a new tab
+      window.open(waUrl, '_blank');
+
+      // Show success toast on screen
       showBookingToast();
       closeModal();
       
