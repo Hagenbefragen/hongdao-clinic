@@ -14,6 +14,12 @@ This document provides a guided walkthrough of the newly developed website for t
 ![Interactive Endometriosis Pricing Calculator (4-Weeks Premium Selected)](./premium_4weeks.png)
 <!-- slide -->
 ![Consultation Scheduler & Success Toast Confirmation](./success_toast.png)
+<!-- slide -->
+![Specialized Treatments Grid showing 4 Columns including Fungal Medicine](./treatments_german.png)
+<!-- slide -->
+![Resources & Downloads Section (German Version)](./resources_german.png)
+<!-- slide -->
+![Resources & Downloads Section (English Version)](./resources_english.png)
 ````
 
 ---
@@ -37,3 +43,12 @@ This document provides a guided walkthrough of the newly developed website for t
 - **Constraint Checks:** Users are instructed to select Wednesdays or Saturdays for free consultations. Selecting any other day displays an error alert.
 - **Slot Allocation:** Selecting a valid day instantly generates a list of 12 booking slot buttons from 14:00 to 20:00 Chinese Standard Time.
 - **Confirmation Flow:** Submitting the form shows a successful confirmation toast notifying the user that a confirmation email will be sent automatically.
+
+### 5. Specialized Treatments & Fungal Medicine Grid
+- **4-Column Grid:** The specializations section has been updated from a 3-column layout to a 4-column layout to incorporate Fungal Medicine & Mycelial Regulation seamlessly.
+- **Mycelial Regulation Card:** Describes the biological/energetic unblocking of human membranes (膜络) using medical macrofungi (Reishi, Poria, Cordyceps) to shrink nodules/cysts, fully translated.
+
+### 6. Clinical Manuals & WeChat Wisdom Downloads
+- **WeChat Wisdom Panel:** Integrates translation-supported write-ups of clinical cases (thyroid/breast nodules) and the mycelial "Wood Wide Web" network philosophy from the WeChat wisdom articles.
+- **6 PDF Manuals Grid:** Houses download links for the 6 official clinic booklets.
+- **URL-Decoding Server Compatibility:** Fixed dynamic request routing in `server.js` using `decodeURIComponent` to fully support percent-encoded file paths for Chinese filenames.
