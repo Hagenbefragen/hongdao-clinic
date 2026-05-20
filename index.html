@@ -33,6 +33,7 @@
         <li><a href="#info" data-i18n="nav-info">Klinik-Info</a></li>
       </ul>
       <div class="nav-controls">
+        <button id="tech-modal-btn" class="btn btn-outline" style="padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem;" data-i18n="nav-tech-btn">TCM-Technologie</button>
         <div class="lang-switcher">
           <button id="lang-de" class="lang-btn active">DE</button>
           <button id="lang-en" class="lang-btn">EN</button>
@@ -750,6 +751,94 @@
             Ausfüllen auf Website
           </button>
         </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TCM Technology Modal -->
+  <div id="tech-modal" class="modal-overlay">
+    <div class="modal-window" style="max-width: 850px;">
+      <div class="modal-header" style="background-color: var(--jade-green);">
+        <h3 data-i18n="tech-modal-title">Klinische Medizintechnik & Therapieverfahren</h3>
+        <button id="tech-modal-close" class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 2.5rem; max-height: 80vh; overflow-y: auto;">
+        
+        <!-- Technology Cards Grid inside Modal -->
+        <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+          
+          <!-- Device 1: Thermography -->
+          <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; border-bottom: 1px solid rgba(0,0,0,0.08); padding-bottom: 2rem; align-items: center;">
+            <div style="border-radius: var(--border-radius); overflow: hidden; height: 180px; box-shadow: var(--shadow-subtle);">
+              <img src="images/tech_thermography_1779274387990.png" alt="Infrarot-Thermografie" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-1-name">Infrarot-Thermografie</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-1-long-desc">
+                Visualisiert Entzündungsmuster, Durchblutungsverhältnisse und Temperaturverteilungen entlang der Meridiane. Ermöglicht eine objektive, strahlungsfreie Verlaufskontrolle chronischer Entzündungen und Schmerzsyndrome.
+              </p>
+              <a href="documents/红外热成像宣传册4.0.pdf" download class="btn btn-outline" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="tech-download-manual">Handbuch herunterladen (PDF)</a>
+            </div>
+          </div>
+
+          <!-- Device 2: Bioresonance / Medium Frequency Electrotherapy -->
+          <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; border-bottom: 1px solid rgba(0,0,0,0.08); padding-bottom: 2rem; align-items: center;">
+            <div style="border-radius: var(--border-radius); overflow: hidden; height: 180px; box-shadow: var(--shadow-subtle);">
+              <img src="images/tech_bioresonance_1779274403035.png" alt="Bian Stone Frequenzscanner" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="tech-device-2-title">Bian-Stein Mittelfrequenz-Elektrotherapie</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-2-long-desc">
+                Verbindet Akupressur-Punkte mit gezielten Frequenzen zur Anregung des Zellstoffwechsels und zur Entlastung des Muskel-Skelett-Systems. Stimuliert blockierte Leitbahnen (Meridiane) mittels biologischer Frequenzen.
+              </p>
+              <a href="documents/砭壶中频电疗仪2.0.pdf" download class="btn btn-outline" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="tech-download-manual">Handbuch herunterladen (PDF)</a>
+            </div>
+          </div>
+
+          <!-- Device 3: Moxibustion (Pu Jiu) -->
+          <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; border-bottom: 1px solid rgba(0,0,0,0.08); padding-bottom: 2rem; align-items: center;">
+            <div style="border-radius: var(--border-radius); overflow: hidden; height: 180px; box-shadow: var(--shadow-subtle);">
+              <img src="images/tech_moxibustion_1779274453495.png" alt="Großflächen-Moxibustion" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="tech-device-3-title">Großflächen-Moxibustion (铺灸 - Pu Jiu)</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-3-long-desc">
+                Eine Wärmetherapie auf großen Körperflächen (wie dem Rücken), bei der Beifußkraut gezielt verbrannt wird, um Kälte aus den Leitbahnen zu vertreiben, die Yang-Energie zu stärken und das Immunsystem zu regulieren.
+              </p>
+              <a href="documents/铺灸-手册3.1.pdf" download class="btn btn-outline" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="tech-download-manual">Handbuch herunterladen (PDF)</a>
+            </div>
+          </div>
+
+          <!-- Device 4: Spectrum Thermal Cabin -->
+          <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; border-bottom: 1px solid rgba(0,0,0,0.08); padding-bottom: 2rem; align-items: center;">
+            <div style="border-radius: var(--border-radius); overflow: hidden; height: 180px; box-shadow: var(--shadow-subtle);">
+              <img src="images/tech_spectrum_1779274437024.png" alt="Spektral-Wärmekabine" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="tech-device-4-title">Ganzkörper-Spektralkabine</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-4-long-desc">
+                Nutzt ein breites elektromagnetisches Frequenzspektrum zur Erwärmung des Gewebes. Fördert die periphere Mikrozirkulation, unterstützt die zelluläre Ausleitung und lindert chronische Muskelverspannungen.
+              </p>
+              <a href="documents/频谱热疗舱3.5.pdf" download class="btn btn-outline" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="tech-download-manual">Handbuch herunterladen (PDF)</a>
+            </div>
+          </div>
+
+          <!-- Device 5: Spectrum treatment radiator -->
+          <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; align-items: center;">
+            <div style="border-radius: var(--border-radius); overflow: hidden; height: 180px; box-shadow: var(--shadow-subtle);">
+              <img src="images/tech_electroacupuncture_1779274420298.png" alt="Spektral-Bestrahlungsgerät" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="tech-device-5-title">Lokalisiertes Spektral-Bestrahlungsgerät</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-5-long-desc">
+                Gezielter Spektralstrahler zur lokalen Bestrahlung. Fördert die Geweberegeneration, regt lokale Stoffwechselprozesse an und wird komplementär zu Akupunktur- und Moxa-Sitzungen eingesetzt.
+              </p>
+              <a href="documents/光谱治疗仪手册2.0.pdf" download class="btn btn-outline" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="tech-download-manual">Handbuch herunterladen (PDF)</a>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
   </div>

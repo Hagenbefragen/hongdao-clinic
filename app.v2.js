@@ -179,7 +179,19 @@ const translations = {
     "pdf-download-btn": "Download PDF",
     "treatment-1-badge": "Gynecology",
     "treatment-2-badge": "Cell Therapy",
-    "treatment-3-badge": "Neurology"
+    "treatment-3-badge": "Neurology",
+    "nav-tech-btn": "TCM Technology",
+    "tech-modal-title": "Clinical Technology & Therapy Methods",
+    "tech-download-manual": "Download Manual (PDF)",
+    "tech-device-2-title": "Bian Stone Electro-Frequency Therapy",
+    "tech-device-2-long-desc": "Combines Bian stone physical properties with target electrical frequencies to stimulate cellular metabolism and relieve muscle-skeletal tension.",
+    "tech-device-3-title": "Large-Scale Moxibustion (Pu Jiu)",
+    "tech-device-3-long-desc": "A thermal therapy applied over large body zones (such as the back) burning mugwort to warm the meridians, boost Yang energy, and regulate immunological response.",
+    "tech-device-4-title": "Whole-Body Spectrum Cabin",
+    "tech-device-4-long-desc": "Utilizes a broad electromagnetic wavelength spectrum to warm body tissues. Promotes peripheral microcirculation, supports cellular drainage, and alleviates chronic muscle stiffness.",
+    "tech-device-5-title": "Localized Spectrum treatment radiator",
+    "tech-device-5-long-desc": "Targeted spectrum radiation simulating natural body emission frequencies to stimulate tissue regeneration, local metabolism, and complement classical acupuncture treatments.",
+    "tech-device-1-long-desc": "Maps inflammatory patterns, microcirculation, and meridian heat distributions. Enables an objective, radiation-free tracking of chronic conditions and pain syndromes."
   },
   de: {
     // Navigation
@@ -352,7 +364,19 @@ const translations = {
     "pdf-download-btn": "PDF herunterladen",
     "treatment-1-badge": "Gynäkologie",
     "treatment-2-badge": "Zelltherapie",
-    "treatment-3-badge": "Neurologie"
+    "treatment-3-badge": "Neurologie",
+    "nav-tech-btn": "TCM-Technologie",
+    "tech-modal-title": "Klinische Medizintechnik & Therapieverfahren",
+    "tech-download-manual": "Handbuch herunterladen (PDF)",
+    "tech-device-2-title": "Bian-Stein Mittelfrequenz-Elektrotherapie",
+    "tech-device-2-long-desc": "Verbindet Akupressur-Punkte mit gezielten Frequenzen zur Anregung des Zellstoffwechsels und zur Entlastung des Muskel-Skelett-Systems. Stimuliert blockierte Leitbahnen (Meridiane) mittels biologischer Frequenzen.",
+    "tech-device-3-title": "Großflächen-Moxibustion (铺灸 - Pu Jiu)",
+    "tech-device-3-long-desc": "Eine Wärmetherapie auf großen Körperflächen (wie dem Rücken), bei der Beifußkraut gezielt verbrannt wird, um Kälte aus den Leitbahnen zu vertreiben, die Yang-Energie zu stärken und das Immunsystem zu regulieren.",
+    "tech-device-4-title": "Ganzkörper-Spektralkabine",
+    "tech-device-4-long-desc": "Nutzt ein breites elektromagnetisches Frequenzspektrum zur Erwärmung des Gewebes. Fördert die periphere Mikrozirkulation, unterstützt die zelluläre Ausleitung und lindert chronische Muskelverspannungen.",
+    "tech-device-5-title": "Lokalisiertes Spektral-Bestrahlungsgerät",
+    "tech-device-5-long-desc": "Gezielter Spektralstrahler zur lokalen Bestrahlung. Fördert die Geweberegeneration, regt lokale Stoffwechselprozesse an und wird komplementär zu Akupunktur- und Moxa-Sitzungen eingesetzt.",
+    "tech-device-1-long-desc": "Visualisiert Entzündungsmuster, Durchblutungsverhältnisse und temperaturverteilungen entlang der Meridiane. Ermöglicht eine objektive, strahlungsfreie Verlaufskontrolle chronischer Entzündungen und Schmerzsyndrome."
   }
 };
 
@@ -442,6 +466,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbarScroll();
   initMarketingPopup();
   initBookingModal();
+  initTechModal();
 });
 
 // 1. Language switcher logic
@@ -897,6 +922,38 @@ function initMarketingPopup() {
           ? "Ich möchte den Rabattcode HONGDAO2026 für meine Buchung anwenden."
           : "I would like to apply the HONGDAO2026 discount code to my booking.";
       }
+    });
+  }
+}
+
+// 9. TCM Technology Modal Logic
+function initTechModal() {
+  const techBtn = document.getElementById("tech-modal-btn");
+  const techOverlay = document.getElementById("tech-modal");
+  const techCloseBtn = document.getElementById("tech-modal-close");
+
+  if (techBtn && techOverlay) {
+    techBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      techOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  }
+
+  const closeTechModal = () => {
+    if (techOverlay) {
+      techOverlay.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+  };
+
+  if (techCloseBtn) {
+    techCloseBtn.addEventListener("click", closeTechModal);
+  }
+
+  if (techOverlay) {
+    techOverlay.addEventListener("click", (e) => {
+      if (e.target === techOverlay) closeTechModal();
     });
   }
 }
