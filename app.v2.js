@@ -191,8 +191,27 @@ const translations = {
     "tech-device-4-long-desc": "Utilizes a broad electromagnetic wavelength spectrum to warm body tissues. Promotes peripheral microcirculation, supports cellular drainage, and alleviates chronic muscle stiffness.",
     "tech-device-5-title": "Localized Spectrum treatment radiator",
     "tech-device-5-long-desc": "Targeted spectrum radiation simulating natural body emission frequencies to stimulate tissue regeneration, local metabolism, and complement classical acupuncture treatments.",
-    "tech-device-1-long-desc": "Maps inflammatory patterns, microcirculation, and meridian heat distributions. Enables an objective, radiation-free tracking of chronic conditions and pain syndromes.",
-    "download-brochure-btn": "Download Brochure (PDF)"
+    "download-brochure-btn": "Download Brochure (PDF)",
+    "gallery-title": "Impressions from our last Retreat 2025",
+    "gallery-subtitle": "Photos and moments of group training, meditations, and nature experiences.",
+    "gallery-item-group-badge": "Group",
+    "gallery-item-group-title": "Retreat Group 2025",
+    "gallery-item-meditation-badge": "Meditation",
+    "gallery-item-meditation-title": "Sound Meditation",
+    "gallery-item-qigong-badge": "Qi Gong",
+    "gallery-item-qigong-title": "Morning Qi Gong",
+    "gallery-item-tea-badge": "Ceremony",
+    "gallery-item-tea-title": "Tea Ceremony",
+    "gallery-item-lecture-badge": "Lecture",
+    "gallery-item-lecture-title": "Pulse Diagnosis",
+    "gallery-item-nature-badge": "Nature",
+    "gallery-item-nature-title": "Hiking & Herbs",
+    "gallery-item-practice-badge": "Practice",
+    "gallery-item-practice-title": "Moxa Training",
+    "gallery-item-kitchen-badge": "Nutrition",
+    "gallery-item-kitchen-title": "Healing Kitchen",
+    "gallery-item-soundbath-badge": "Sound Bath",
+    "gallery-item-soundbath-title": "Nature Sound Bath"
   },
   de: {
     // Navigation
@@ -377,8 +396,27 @@ const translations = {
     "tech-device-4-long-desc": "Nutzt ein breites elektromagnetisches Frequenzspektrum zur Erwärmung des Gewebes. Fördert die periphere Mikrozirkulation, unterstützt die zelluläre Ausleitung und lindert chronische Muskelverspannungen.",
     "tech-device-5-title": "Lokalisiertes Spektral-Bestrahlungsgerät",
     "tech-device-5-long-desc": "Gezielter Spektralstrahler zur lokalen Bestrahlung. Fördert die Geweberegeneration, regt lokale Stoffwechselprozesse an und wird komplementär zu Akupunktur- und Moxa-Sitzungen eingesetzt.",
-    "tech-device-1-long-desc": "Visualisiert Entzündungsmuster, Durchblutungsverhältnisse und temperaturverteilungen entlang der Meridiane. Ermöglicht eine objektive, strahlungsfreie Verlaufskontrolle chronischer Entzündungen und Schmerzsyndrome.",
-    "download-brochure-btn": "Broschüre herunterladen (PDF)"
+    "download-brochure-btn": "Broschüre herunterladen (PDF)",
+    "gallery-title": "Impressionen aus unserem letzten Retreat 2025",
+    "gallery-subtitle": "Bilder und Momente des gemeinsamen Trainings, der Meditationen und Naturerfahrungen.",
+    "gallery-item-group-badge": "Gruppe",
+    "gallery-item-group-title": "Retreatgruppe 2025",
+    "gallery-item-meditation-badge": "Meditation",
+    "gallery-item-meditation-title": "Klangmeditation",
+    "gallery-item-qigong-badge": "Qi Gong",
+    "gallery-item-qigong-title": "Morgen Qi Gong",
+    "gallery-item-tea-badge": "Zeremonie",
+    "gallery-item-tea-title": "Tee-Zeremonie",
+    "gallery-item-lecture-badge": "Theorie",
+    "gallery-item-lecture-title": "Pulsdiagnose",
+    "gallery-item-nature-badge": "Natur",
+    "gallery-item-nature-title": "Wandern & Kräuter",
+    "gallery-item-practice-badge": "Praxis",
+    "gallery-item-practice-title": "Moxa-Training",
+    "gallery-item-kitchen-badge": "Ernährung",
+    "gallery-item-kitchen-title": "Heilküche",
+    "gallery-item-soundbath-badge": "Klangbad",
+    "gallery-item-soundbath-title": "Klangbad in Natur"
   }
 };
 
@@ -469,6 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMarketingPopup();
   initBookingModal();
   initTechModal();
+  initLightbox();
 });
 
 // 1. Language switcher logic
@@ -507,6 +546,20 @@ function setLanguage(lang) {
   // Re-render components that are dynamic
   updateEndometriosisDisplay();
   updateDateSlotLabels();
+
+  // Update active lightbox caption if active
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+  if (lightbox && lightbox.classList.contains("active") && lightboxImg && lightboxCaption) {
+    const src = lightboxImg.getAttribute("src");
+    const activeItem = document.querySelector(`.gallery-item[data-img="${src}"]`);
+    if (activeItem) {
+      lightboxCaption.textContent = lang === 'de'
+        ? activeItem.getAttribute("data-desc-de")
+        : activeItem.getAttribute("data-desc-en");
+    }
+  }
 }
 
 // 2. Endometriosis Pricing Calculator Logic
@@ -958,4 +1011,76 @@ function initTechModal() {
       if (e.target === techOverlay) closeTechModal();
     });
   }
+}
+
+// 10. Lightbox Gallery Controller
+function initLightbox() {
+  const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+  const closeBtn = document.getElementById("lightbox-close");
+  const prevBtn = document.getElementById("lightbox-prev");
+  const nextBtn = document.getElementById("lightbox-next");
+
+  if (!lightbox || galleryItems.length === 0) return;
+
+  let currentIndex = 0;
+
+  function showImage(index) {
+    if (index < 0) index = galleryItems.length - 1;
+    if (index >= galleryItems.length) index = 0;
+    currentIndex = index;
+
+    const item = galleryItems[currentIndex];
+    const imgSrc = item.getAttribute("data-img");
+    const captionText = currentLang === 'de' 
+      ? item.getAttribute("data-desc-de") 
+      : item.getAttribute("data-desc-en");
+
+    lightboxImg.src = imgSrc;
+    lightboxCaption.textContent = captionText;
+  }
+
+  galleryItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      showImage(index);
+      lightbox.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "auto";
+  };
+
+  if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showImage(currentIndex - 1);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showImage(currentIndex + 1);
+    });
+  }
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("active")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+    if (e.key === "ArrowRight") showImage(currentIndex + 1);
+  });
 }
