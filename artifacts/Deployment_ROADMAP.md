@@ -14,6 +14,12 @@
 
 ## Completed Tasks
 
+### Chunk 6: Timezone Conversion & Production Cache-Busting
+- Implemented automatic timezone detection for CET/CEST (Central European Time) users.
+- Added dynamic slot translation and labels showing local European time (e.g. `09:30 MESZ`) beneath the corresponding Pekinger Standard Time (CST).
+- Renamed assets to `app.v2.js` and `style.v2.css` in both files and inside `index.html` to fully bypass browser and GitHub Pages static caching, fixing button interactions and form validation.
+- Verified local and live production environment with browser subagent, confirming that the layout is responsive, styles render perfectly, and WhatsApp redirect URLs format correctly.
+
 ### Chunk 1: Project Setup & Design Foundations
 - Created `index.html` structure with semantic HTML5 elements.
 - Created `style.css` containing the color palette (Terracotta, Beige, Hellblau, Jadegrün), typography (Cormorant Garamond & Outfit), and layouts.
