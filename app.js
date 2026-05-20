@@ -556,17 +556,57 @@ function initBookingSlots() {
   const submitWhatsappBtn = document.getElementById("submit-whatsapp-btn");
 
   function processBooking(method) {
+    const form = document.getElementById("consultation-form");
+    const dateInput = document.getElementById("consultation-date");
+    
+    // 1. Perform native HTML5 validation (Name, Email required, formats, etc.)
+    if (form && !form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    
+    // 2. Custom validation for selected date (Wednesday or Saturday)
+    if (selectedDate) {
+      const dateObj = new Date(selectedDate);
+      const day = dateObj.getDay(); // 3 = Wed, 6 = Sat
+      
+      if (day !== 3 && day !== 6) {
+        if (dateInput) {
+          dateInput.setCustomValidity(currentLang === 'de' 
+            ? "Bitte wählen Sie einen Mittwoch oder Samstag." 
+            : "Please select a Wednesday or Saturday.");
+          form.reportValidity();
+          dateInput.setCustomValidity(""); // Reset
+        }
+        return;
+      }
+      
+      // 3. Custom validation for time slot selection
+      if (!selectedSlot) {
+        if (dateInput) {
+          dateInput.setCustomValidity(currentLang === 'de'
+            ? "Bitte wählen Sie eine Uhrzeit aus den verfügbaren Slots."
+            : "Please select a time slot from the available options.");
+          form.reportValidity();
+          dateInput.setCustomValidity(""); // Reset
+        }
+        return;
+      }
+    } else {
+      if (dateInput) {
+        dateInput.setCustomValidity(currentLang === 'de' ? "Bitte wählen Sie ein Datum." : "Please select a date.");
+        form.reportValidity();
+        dateInput.setCustomValidity("");
+      }
+      return;
+    }
+
     const name = document.getElementById("consult-name").value;
     const email = document.getElementById("consult-email").value;
     const phone = document.getElementById("consult-phone").value || 'N/A';
     const programSelect = document.getElementById("consult-program");
     const programText = programSelect ? programSelect.options[programSelect.selectedIndex].text : 'TCM General';
     const message = document.getElementById("consult-message").value || 'N/A';
-    
-    if (!name || !email || !selectedDate || !selectedSlot) {
-      alert(currentLang === 'de' ? "Bitte füllen Sie alle erforderlichen Felder aus." : "Please fill out all required fields.");
-      return;
-    }
 
     if (method === 'email') {
       let mailSubject = "";
@@ -600,8 +640,7 @@ function initBookingSlots() {
     closeModal();
     
     // Reset form
-    const consultForm = document.getElementById("consultation-form");
-    if (consultForm) consultForm.reset();
+    if (form) form.reset();
     selectedDate = null;
     selectedSlot = null;
     const slotsContainer = document.getElementById("slots-container");
