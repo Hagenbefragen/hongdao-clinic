@@ -19,29 +19,31 @@ const translations = {
 
     // Hero Section
     "hero-tag": "Traditional Chinese Medicine meets Modern Technology",
-    "hero-title": "Sovereign Path to Deep Healing & Balance",
-    "hero-desc": "Experience profound physical and spiritual transformation through Master Xu Ruqi's 40-year lineage, custom herbal therapies, advanced clinical diagnostic devices, and restorative sound ceremonies.",
+    "hero-title": "Traditional Chinese Medicine & Clinical Diagnostics",
+    "hero-desc": "Experience professional medical support led by TCM Master Xu Ruqi. We integrate classical herbal medicine and pulse diagnostics with modern clinical measurement methods for your health and recovery.",
     "hero-cta-apply": "Apply Now",
     "hero-cta-more": "Explore Programs",
 
     // Introduction / Philosophy
-    "intro-title": "Where Ancient Lineage Meets Modern Precision",
-    "intro-desc": "Our clinic combines time-honored Traditional Chinese Medicine (TCM) with cutting-edge medical technologies, specialized sound therapy, and food as medicine. We offer a refuge of healing for those facing hormonal imbalances (endometriosis), burnout, high stress, and general health challenges.",
+    "intro-title": "TCM Experience Meets Modern Diagnostics",
+    "intro-desc": "Our Shenzhen practice integrates decades of experience in pulse diagnostics and herbal therapy with clinical examination devices, supportive sound therapy, and nutritional guidance. We offer structured care for patients facing endometriosis, hormonal imbalances, chronic fatigue, and stress-related conditions.",
 
     // Masters & Team
     "team-title": "Lineage Keepers & Specialized Healers",
     "team-subtitle": "Meet our dedicated staff, bridging traditional practices and modern recovery.",
     "master-xu-title": "Chief Physician & TCM Master",
-    "master-xu-desc": "Master Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases, providing personalized care for the modern soul.",
-    "visionary-deng-title": "Visionary, Voice Healer & Facilitator",
-    "visionary-deng-desc": "Deng Nanjing bridges Eastern philosophy and Western needs. She leads sacred sound healings, tea ceremonies, and translates Master Xu's diagnostic insights into German, English, and Italian. She spent her childhood in rural China, cultivating a deep connection to organic TCM living.",
-    "team-grid-title": "Our Specialized Team",
+    "master-xu-desc": "Master Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases.",
+    "doctor-1-title": "Specialized Physician & Stem Cell Therapy",
     "doctor-1-name": "Dr. Adrianna Qiao (乔婧文)",
-    "doctor-1-spec": "Stem Cell Therapy, Nutritional Analysis, Infertility Treatment & Sexual Empowerment for Men & Women.",
+    "doctor-1-desc": "Dr. Adrianna Qiao integrates advanced stem cell therapies with TCM rejuvenation techniques for cellular health, fertility, and hormonal balance.",
+    "visionary-deng-title": "Translation, Sound Therapy & Patient Support",
+    "visionary-deng-desc": "Deng Nanjing translates Master Xu's consultations and diagnostic findings into German, English, and Italian. She also facilitates sound therapy sessions, tea ceremonies, and supports guests with all organizational needs during their stay.",
+    "visionary-deng-spec": "Translation, Sound Therapy & Patient Support",
+    "team-grid-title": "Our Specialized Team",
     "doctor-2-name": "Dr. Zhang Min (张敏)",
     "doctor-2-spec": "Specialist in Gynecological Disorders, Hormonal Imbalances & Advanced Endometriosis Therapy.",
     "doctor-3-name": "Dr. Chen Wei (陈伟)",
-    "doctor-3-spec": "Acupuncture Specialist, Chronic Pain Management, Burnout Therapy & Deep Nervous System Regulation.",
+    "doctor-3-spec": "Acupuncture Specialist, Chronic Pain Management, Burnout Therapy & Nervous System Regulation.",
     "doctor-sound-name": "Mingli Cheung",
     "doctor-sound-spec": "Lead Sound Healer & Vibration Therapist, coordinating energy realignment and emotional release.",
 
@@ -188,29 +190,29 @@ const translations = {
     "nav-programs": "Programme",
     "nav-retreat": "Yunnan-Retreat",
     "nav-info": "Klinik-Info",
-    "nav-apply": "Jetzt bewerben",
-
-    // Hero Section
+       // Hero Section
     "hero-tag": "Traditionelle Chinesische Medizin trifft moderne Medizintechnik",
-    "hero-title": "Heilsame Wege zu tiefer Balance",
-    "hero-desc": "Erleben Sie tiefgreifende körperliche und spirituelle Transformation durch die 40-jährige TCM-Erfahrung von Meister Xu Ruqi, individuelle Kräutertherapien, modernste Diagnosegeräte und heilsame Klangzeremonien.",
+    "hero-title": "Traditionelle Chinesische Medizin & Klinische Diagnostik",
+    "hero-desc": "Erfahren Sie wirksame Begleitung unter der Leitung von TCM-Meister Xu Ruqi. Wir verbinden die klassische Kräuterheilkunde und Pulsdiagnose mit modernen klinischen Messverfahren für Ihre Gesundheit und Regeneration.",
     "hero-cta-apply": "Jetzt bewerben",
     "hero-cta-more": "Programme entdecken",
 
     // Introduction / Philosophy
-    "intro-title": "Wo alte Tradition auf moderne Präzision trifft",
-    "intro-desc": "Unsere Klinik verbindet bewährte Traditionelle Chinesische Medizin (TCM) mit modernster Diagnosetechnologie, Klangtherapie und TCM-basierter Küche. Wir bieten einen sicheren Zufluchtsort für Menschen mit hormonellen Beschwerden (Endometriose), Burnout, chronischem Stress und allgemeinen gesundheitlichen Belastungen.",
+    "intro-title": "TCM-Erfahrung trifft auf moderne Medizintechnik",
+    "intro-desc": "Unsere Shenzhen-Praxis verbindet jahrzehntelange Erfahrung in der Pulsdiagnostik und Kräutertherapie mit klinischen Untersuchungsgeräten, begleitender Klangtherapie und Ernährungsberatung. Wir bieten eine strukturierte Betreuung für Patientinnen und Patienten mit Endometriose, hormonellen Störungen, Erschöpfungssyndrom und chronischem Stress.",
 
     // Masters & Team
     "team-title": "Hüter der Tradition & Spezialisierte Heiler",
     "team-subtitle": "Lernen Sie unser engagiertes Team kennen, das Brücken zwischen Tradition und moderner Genesung schlägt.",
     "master-xu-title": "Chefarzt & TCM-Meister",
     "master-xu-desc": "Meister Xu Ruqi verfügt über mehr als 40 Jahre Erfahrung in Pulsdiagnostik und klassischer Kräutermedizin. Als klinischer Experte an der Pekinger Universität für Chinesische Medizin ist er weltweit bekannt für die Behandlung schwerer chronischer Krankheiten, Tumoren und gynäkologischer Leiden.",
-    "visionary-deng-title": "Visionärin, Klangheilerin & Übersetzerin",
-    "visionary-deng-desc": "Deng Nanjing schlägt die Brücke zwischen östlicher Philosophie und westlichen Bedürfnissen. Sie leitet Klangheilungen sowie Teezeremonien und übersetzt die Diagnosen von Meister Xu ins Deutsche, Englische und Italienische. Sie wuchs im ländlichen China auf.",
-    "team-grid-title": "Unser spezialisiertes Team",
+    "doctor-1-title": "Spezialisierte Ärztin & Stammzelltherapie",
     "doctor-1-name": "Dr. Adrianna Qiao (乔婧文)",
-    "doctor-1-spec": "Spezialisierung: Stammzelltherapie, Ernährungsanalyse, Infertilität/Unfruchtbarkeit & Sexual Empowerment für Frauen und Männer.",
+    "doctor-1-desc": "Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.",
+    "visionary-deng-title": "Übersetzung, Klangbegleitung & Patientenbetreuung",
+    "visionary-deng-desc": "Deng Nanjing übersetzt die Konsultationen und Befunde von Meister Xu verlässlich ins Deutsche, Englische und Italienische. Begleitend leitet sie Klangsitzungen und Teezeremonien und unterstützt Sie bei allen organisatorischen Anliegen während Ihres Aufenthaltes.",
+    "visionary-deng-spec": "Übersetzung, Klangbegleitung & Patientenbetreuung.",
+    "team-grid-title": "Unser spezialisiertes Team",
     "doctor-2-name": "Dr. Zhang Min (张敏)",
     "doctor-2-spec": "Spezialistin für gynäkologische Erkrankungen, hormonelle Dysbalancen & Endometriose-Therapie.",
     "doctor-3-name": "Dr. Chen Wei (陈伟)",
@@ -226,7 +228,7 @@ const translations = {
     "treatment-2-title": "Stammzellen & Langlebigkeit",
     "treatment-2-desc": "Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Erneuerung.",
     "treatment-3-title": "Stress & Burnout-Prävention",
-    "treatment-3-desc": "Ganzheitliche Entlastung bei hohem Leistungsdruck durch pulsgeführte Akupunktur und entspannende Klangfrequenzen.",
+    "treatment-3-desc": "Ganzheitliche Begleitung bei Belastungszuständen durch pulsgeführte Akupunktur und begleitende Klangtherapie.",
 
     // Modern Devices
     "devices-title": "Klinische Medizintechnik",
@@ -236,7 +238,7 @@ const translations = {
     "device-2-name": "Bioresonanz-Frequenzscanner",
     "device-2-desc": "Misst elektromagnetische Schwingungen der Zellen zur Erkennung von Belastungen, Toxinen und Organschwächen.",
     "device-3-name": "Elektro-Akupunktur-Gerät",
-    "device-3-desc": "Unterstützt die klassische Nadelung durch sanfte Mikroströme zur Beschleunigung der Nervenregeneration.",
+    "device-3-desc": "Unterstützt die klassische Nadelung durch präzise Mikroströme zur Anregung der Nervenregeneration.",
 
     // Programs & Endometriosis calculator
     "programs-title": "Heilungsprogramme & Kurse",
