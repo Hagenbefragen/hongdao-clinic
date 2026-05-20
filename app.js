@@ -130,6 +130,8 @@ const translations = {
     "contact-label-slot": "Select Time Slot (Chinese Time 14:00 - 20:00)",
     "contact-label-message": "Brief Medical History / Notes",
     "contact-submit-btn": "Apply Now",
+    "contact-submit-email": "Apply via Email",
+    "contact-submit-whatsapp": "Apply via WhatsApp",
     "contact-social-text": "Connect with us on Social Media for daily health tips, sound circles and tea recipes:",
     "whatsapp-text": "Chat on WhatsApp",
     "instagram-text": "Instagram: nanjing_tea.sound",
@@ -301,6 +303,8 @@ const translations = {
     "contact-label-slot": "Uhrzeit wählen (Pekinger Ortszeit 14:00 - 20:00 Uhr)",
     "contact-label-message": "Kurze Anmerkung zu Ihren Beschwerden",
     "contact-submit-btn": "Jetzt bewerben",
+    "contact-submit-email": "Per E-Mail bewerben",
+    "contact-submit-whatsapp": "Per WhatsApp bewerben",
     "contact-social-text": "Folgen Sie uns in den sozialen Medien für Gesundheitstipps, Klangzirkel und Tee-Rituale:",
     "whatsapp-text": "Über WhatsApp chatten",
     "instagram-text": "Instagram: nanjing_tea.sound",
@@ -548,24 +552,37 @@ function initBookingSlots() {
   }
 
   // Bind Submit Consultation Form
-  const consultForm = document.getElementById("consultation-form");
-  if (consultForm) {
-    consultForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      
-      const name = document.getElementById("consult-name").value;
-      const email = document.getElementById("consult-email").value;
-      const phone = document.getElementById("consult-phone").value || 'N/A';
-      const programSelect = document.getElementById("consult-program");
-      const programText = programSelect ? programSelect.options[programSelect.selectedIndex].text : 'TCM General';
-      const message = document.getElementById("consult-message").value || 'N/A';
-      
-      if (!name || !email || !selectedDate || !selectedSlot) {
-        alert(currentLang === 'de' ? "Bitte füllen Sie alle erforderlichen Felder aus." : "Please fill out all required fields.");
-        return;
+  const submitEmailBtn = document.getElementById("submit-email-btn");
+  const submitWhatsappBtn = document.getElementById("submit-whatsapp-btn");
+
+  function processBooking(method) {
+    const name = document.getElementById("consult-name").value;
+    const email = document.getElementById("consult-email").value;
+    const phone = document.getElementById("consult-phone").value || 'N/A';
+    const programSelect = document.getElementById("consult-program");
+    const programText = programSelect ? programSelect.options[programSelect.selectedIndex].text : 'TCM General';
+    const message = document.getElementById("consult-message").value || 'N/A';
+    
+    if (!name || !email || !selectedDate || !selectedSlot) {
+      alert(currentLang === 'de' ? "Bitte füllen Sie alle erforderlichen Felder aus." : "Please fill out all required fields.");
+      return;
+    }
+
+    if (method === 'email') {
+      let mailSubject = "";
+      let mailBody = "";
+      if (currentLang === 'de') {
+        mailSubject = `HongDao TCM Anmeldung - ${name}`;
+        mailBody = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n\n- Name: ${name}\n- E-Mail: ${email}\n- Telefon: ${phone}\n- Gewünschtes Programm: ${programText}\n- Datum: ${selectedDate}\n- Uhrzeit: ${selectedSlot} (Pekinger Ortszeit)\n\nAnmerkung/Beschwerden:\n${message}\n\nVielen Dank!`;
+      } else {
+        mailSubject = `HongDao TCM Consultation Booking - ${name}`;
+        mailBody = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Program: ${programText}\n- Date: ${selectedDate}\n- Time: ${selectedSlot} (CST)\n\nMessage/Symptoms:\n${message}\n\nThank you!`;
       }
 
-      // Construct a highly structured, readable message
+      const mailtoUrl = `mailto:nanjing.deng18@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+      window.location.href = mailtoUrl;
+    } else {
+      // WhatsApp
       let waText = "";
       if (currentLang === 'de') {
         waText = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n- *Name*: ${name}\n- *E-Mail*: ${email}\n- *Telefon*: ${phone}\n- *Gewünschtes Programm*: ${programText}\n- *Datum*: ${selectedDate}\n- *Uhrzeit*: ${selectedSlot} (Pekinger Ortszeit)\n- *Anmerkung*: ${message}\n\nVielen Dank!`;
@@ -573,23 +590,29 @@ function initBookingSlots() {
         waText = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n- *Name*: ${name}\n- *Email*: ${email}\n- *Phone*: ${phone}\n- *Program*: ${programText}\n- *Date*: ${selectedDate}\n- *Time*: ${selectedSlot} (CST)\n- *Message*: ${message}\n\nThank you!`;
       }
 
-      // Encode the text for URL
       const encodedText = encodeURIComponent(waText);
-      const waUrl = `https://wa.me/13074343090?text=${encodedText}`;
-
-      // Open WhatsApp in a new tab
+      const waUrl = `https://wa.me/5219841408335?text=${encodedText}`;
       window.open(waUrl, '_blank');
+    }
 
-      // Show success toast on screen
-      showBookingToast();
-      closeModal();
-      
-      // Reset form
-      consultForm.reset();
-      selectedDate = null;
-      selectedSlot = null;
-      document.getElementById("slots-container").innerHTML = "";
-    });
+    // Show success toast on screen
+    showBookingToast();
+    closeModal();
+    
+    // Reset form
+    const consultForm = document.getElementById("consultation-form");
+    if (consultForm) consultForm.reset();
+    selectedDate = null;
+    selectedSlot = null;
+    const slotsContainer = document.getElementById("slots-container");
+    if (slotsContainer) slotsContainer.innerHTML = "";
+  }
+
+  if (submitEmailBtn) {
+    submitEmailBtn.addEventListener("click", () => processBooking('email'));
+  }
+  if (submitWhatsappBtn) {
+    submitWhatsappBtn.addEventListener("click", () => processBooking('whatsapp'));
   }
 }
 
