@@ -934,15 +934,22 @@ footer {
 }
 
 .social-btn {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(185, 92, 56, 0.08);
+  color: var(--terracotta);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition-smooth);
-  font-size: 1.2rem;
+}
+
+.social-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  display: block;
 }
 
 .social-btn:hover {
