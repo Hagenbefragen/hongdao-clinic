@@ -20,6 +20,8 @@ This document provides a guided walkthrough of the newly developed website for t
 ![Resources & Downloads Section (German Version)](./resources_german.png)
 <!-- slide -->
 ![Resources & Downloads Section (English Version)](./resources_english.png)
+<!-- slide -->
+![Dual Booking Submission Options (E-Mail and WhatsApp)](./english_contact_buttons.png)
 ````
 
 ---
@@ -42,7 +44,7 @@ This document provides a guided walkthrough of the newly developed website for t
 ### 4. Appointment Scheduler & Form Validation
 - **Constraint Checks:** Users are instructed to select Wednesdays or Saturdays for free consultations. Selecting any other day displays an error alert.
 - **Slot Allocation:** Selecting a valid day instantly generates a list of 12 booking slot buttons from 14:00 to 20:00 Chinese Standard Time.
-- **Confirmation Flow:** Submitting the form shows a successful confirmation toast notifying the user that a confirmation email will be sent automatically.
+- **Dual Frictionless Submission:** Applicants can choose to submit their booking request directly via **E-Mail** (pre-filling a message body to `nanjing.deng18@gmail.com`) or via **WhatsApp** (to `+52 1 984 140 8335`).
 
 ### 5. Specialized Treatments & Fungal Medicine Grid
 - **4-Column Grid:** The specializations section has been updated from a 3-column layout to a 4-column layout to incorporate Fungal Medicine & Mycelial Regulation seamlessly.
