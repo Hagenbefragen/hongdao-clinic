@@ -1214,6 +1214,184 @@ window.closeEmailDispatchModal = closeEmailDispatchModal;
 // WeChat Article Modal Content & Operations
 // ==========================================
 const articlesContent = {
+  xu: {
+    de: {
+      title: "Master Xu Ruqi – Chefarzt & Leitender TCM-Experte",
+      body: `
+        <p><strong>Master Xu Ruqi (徐汝奇)</strong> verfügt über mehr als 40 Jahre klinische Erfahrung in klassischer chinesischer Medizin und fortgeschrittener Pulsdiagnostik. Er gilt weltweit als herausragende Kapazität auf dem Gebiet der Behandlung schwerer chronischer Leiden.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete & Heilerfolge</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Gynäkologische Schmerzsyndrome</strong>: Herausragende Heilerfolge bei chronischer Endometriose, Schokoladenzysten (Endometriomen) und schwerer Dysmenorrhö allein durch pflanzliche Therapien.</li>
+          <li><strong>Onkologische Begleitung & Tumore</strong>: Ganzheitliche Unterstützung bei Krebserkrankungen, Linderung von Nebenwirkungen der Chemotherapie und Stabilisierung der Lebensenergie (Qi).</li>
+          <li><strong>Knoten- und Zystenauflösung</strong>: Erfolgreiche Rückbildung von Schilddrüsenknoten, Brustdrüsen-Hyperplasien und inneren Zysten mittels klassischer Rezepturen.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Akademische Lehre</h4>
+        <p style="margin-bottom: 1rem;">Ehemaliger leitender Dozent und klinischer Ausbilder an der renommierten <strong>Pekinger Universität für Chinesische Medizin (BUCM)</strong>. Er hat Generationen von TCM-Ärzten ausgebildet und leitet heute die pharmakologische Entwicklung im Hongdao-Zentrum.</p>
+      `
+    },
+    en: {
+      title: "Master Xu Ruqi – Chief Physician & Senior TCM Master",
+      body: `
+        <p><strong>Master Xu Ruqi (徐汝奇)</strong> has over 40 years of clinical experience in classical Chinese medicine and advanced pulse diagnostics. He is globally recognized as an authority in treating severe chronic and gynecological disorders.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Track Record</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Gynecological Pain Syndromes</strong>: High success rates in resolving severe endometriosis, chocolate cysts, and dysmenorrhea using purely customized herbal medicine.</li>
+          <li><strong>Oncology Support & Tumors</strong>: Integrative support for cancer patients, reducing chemo-induced toxicity, and boosting immune cell counts.</li>
+          <li><strong>Nodule & Cyst Regression</strong>: Proven clinical track record in shrinking thyroid nodules, breast hyperplasia, and ovarian cysts.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Academic Credentials</h4>
+        <p style="margin-bottom: 1rem;">Former senior lecturer and clinical director at the prestigious <strong>Beijing University of Chinese Medicine (BUCM)</strong>. He directs the pharmacological quality and compounding center at Hongdao.</p>
+      `
+    }
+  },
+  nanjing: {
+    de: {
+      title: "Deng Nanjing – Gründerin & Klangtherapeutin",
+      body: `
+        <p><strong>Deng Nanjing (邓楠景)</strong> ist die visionäre Gründerin des Lebensfluss Inner Retreats und des Hongdao-Zentrums. Sie verbindet authentische östliche Philosophie mit westlichen Konzepten der Stressregulation.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Heilungs- & Therapieansatz</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Akkreditierte Klangtherapie</strong>: Tiefenwirkung mittels nepalesischer Klangschalen, Frequenz-Gongs und Stimmgabeln zur Wiederherstellung der zellulären Harmonie.</li>
+          <li><strong>Vegetative Regulation</strong>: Neuromodulation und Vagusnerv-Stimulation bei Burnout, depressiven Verstimmungen und emotionalen Blockaden.</li>
+          <li><strong>Sensorische Kräuterpädagogik</strong>: Leitung von Teezeremonien und Kräuter-Malworkshops für Kinder und Familien zur Stärkung der emotionalen Wahrnehmung.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Ausbildung & Veröffentlichungen</h4>
+        <p style="margin-bottom: 1rem;">Zertifizierte internationale Klangtherapeutin und Meditationsleiterin. Sie hat mehrere erfolgreiche Artikel über die Resonanzfähigkeit von Körperflüssigkeiten und die Wirkung von 432-Hz-Frequenzen publiziert.</p>
+      `
+    },
+    en: {
+      title: "Deng Nanjing – Founder & International Sound Therapist",
+      body: `
+        <p><strong>Deng Nanjing (邓楠景)</strong> is the visionary founder of the Lebensfluss Inner Retreat and the Hongdao Center. She bridges classical Eastern healing arts with modern neuro-vibrational therapy.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Therapeutic Focus</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Vibrational Sound Therapy</strong>: Utilizing gongs, singing bowls, and tuning forks to induce cellular resonance and deep meditation.</li>
+          <li><strong>Autonomic Balance</strong>: Regulating the vagus nerve to alleviate chronic anxiety, depression, and adrenal exhaustion.</li>
+          <li><strong>Parent-Child Sensory Workshops</strong>: Creative direction of tea ceremonies and botanical painting classes to nurture emotional mindfulness.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Background</h4>
+        <p style="margin-bottom: 1rem;">Certified Sound Healing Practitioner and Tea Master. She is dedicated to translating ancient vibrational principles into accessible modern therapies.</p>
+      `
+    }
+  },
+  zhang: {
+    de: {
+      title: "Dr. Zhang Min – Spezialistin für Gynäkologie & Akupunktur",
+      body: `
+        <p><strong>Dr. Zhang Min (张敏)</strong> ist eine erfahrene TCM-Ärztin mit über 15 Jahren klinischer Praxis in der Gynäkologie und gynäkologischen Endokrinologie.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Schwerpunkte</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Hormonelle Balance</strong>: Erfolgreiche Regulierung bei unregelmäßigem Zyklus, Amenorrhö und Wechseljahresbeschwerden.</li>
+          <li><strong>Endometriose & Fruchtbarkeit</strong>: Kombination aus gezielter Akupunktur und wärmenden Kräuterwickeln zur Schmerzlinderung und Förderung des Kinderwunsches.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinischer Weg</h4>
+        <p style="margin-bottom: 1rem;">Studium an der Guangzhou Universität für TCM. Sie leitete langjährig gynäkologische TCM-Forschungsprojekte zur natürlichen Empfängnishilfe.</p>
+      `
+    },
+    en: {
+      title: "Dr. Zhang Min – Specialist in Gynecology & Acupuncture",
+      body: `
+        <p><strong>Dr. Zhang Min (张敏)</strong> is a veteran TCM physician with 15+ years of clinical specialization in natural gynecology and endocrinology.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Hormonal Regulation</strong>: Restoring cycle regularity, treating amenorrhea, and reducing menopause discomfort.</li>
+          <li><strong>Endometriosis & Fertility</strong>: Applying specialized abdominal acupuncture and herbal moxibustion to dissolve blockages and boost natural conception.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Background</h4>
+        <p style="margin-bottom: 1rem;">Graduate of Guangzhou University of TCM, with numerous peer-reviewed studies on non-hormonal cycle regulation.</p>
+      `
+    }
+  },
+  chen: {
+    de: {
+      title: "Dr. Chen Wei – Experte für Neurologie & Akupunktur",
+      body: `
+        <p><strong>Dr. Chen Wei (陈伟)</strong> ist unser Spezialist für Akupunktur, Elektro-Akupunktur und die Wiederherstellung der vegetativen Nervenbalance.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Schwerpunkte</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Chronische Schmerztherapie</strong>: Linderung bei Migräne, Ischialgie, Bandscheibenvorfällen und myofaszialen Schmerzen.</li>
+          <li><strong>Burnout & Stressfolgen</strong>: Vegetative Regulation zur Absenkung des Sympathikus-Tonus und Linderung chronischer Schlafstörungen.</li>
+        </ul>
+      `
+    },
+    en: {
+      title: "Dr. Chen Wei – Expert in Neurological Acupuncture",
+      body: `
+        <p><strong>Dr. Chen Wei (陈伟)</strong> is our lead acupuncture expert specializing in neurological pain management and autonomic balance.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Chronic Pain Care</strong>: Treatment of severe migraines, sciatica, herniated discs, and structural back pain.</li>
+          <li><strong>Nervous System Recovery</strong>: Restoring parasympathetic balance for patients suffering from insomnia, anxiety, and adrenal exhaustion.</li>
+        </ul>
+      `
+    }
+  },
+  hailin: {
+    de: {
+      title: "Hailin Zhang – Leiter des Dekokt-Zentrums",
+      body: `
+        <p><strong>Hailin Zhang (张海林)</strong> leitet unser hochmodernes Dekokt-Zentrum und garantiert die authentische Weiterverarbeitung der Rohkräuter.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Verantwortungsbereich</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Dao Di Qualitätsprüfung</strong>: Identifikation und Qualitätskontrolle aller importierten biologischen Rohkräuter.</li>
+          <li><strong>Wissenschaftliche Extraktion</strong>: Überwachung der Kochzeiten und Temperatureinstellungen zur optimalen Wirkstofffreisetzung.</li>
+        </ul>
+      `
+    },
+    en: {
+      title: "Hailin Zhang – Head of Decoction Center",
+      body: `
+        <p><strong>Hailin Zhang (张海林)</strong> manages our state-of-the-art decoction facility, ensuring accurate and pristine herbal compounding.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Responsibilities</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Dao Di Herb Sourcing</strong>: Rigorous authentication of raw materials based on regional ecological origins.</li>
+          <li><strong>Extraction Precision</strong>: Controlling heat, pressure, and extraction duration to deliver pristine, sterile Ready-to-Drink packages.</li>
+        </ul>
+      `
+    }
+  },
+  cheung: {
+    de: {
+      title: "Mingli Cheung – Klangtherapeut & Meridianheiler",
+      body: `
+        <p><strong>Mingli Cheung</strong> ist ein erfahrener Meister der Klangtherapie und bringt energetische Blockaden durch physische Schwingung wieder ins Fließen.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Methoden</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Klangschalen-Massage</strong>: Lokale Platzierung von tibetischen Klangschalen auf Meridian-Punkten zur Freisetzung von Stagnationen.</li>
+          <li><strong>Gong-Bäder</strong>: Tiefe akustische Entspannung zur Linderung von Traumata und emotionalem Stress.</li>
+        </ul>
+      `
+    },
+    en: {
+      title: "Mingli Cheung – Sound Therapist & Meridian Healer",
+      body: `
+        <p><strong>Mingli Cheung</strong> is a practitioner of sound vibration therapies, using frequency tools to stimulate energy channels and dissolve physical blocks.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Modilities</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Singing Bowl Meridian Therapy</strong>: Placing authentic bowls on acupoints to release energy blockages.</li>
+          <li><strong>Acoustic Gong Journeys</strong>: Guiding patients through deep restorative soundscapes to soothe nervous tension.</li>
+        </ul>
+      `
+    }
+  },
   qiao: {
     de: {
       title: "Dr. Jingwen Qiao – Gynäkologie, Stoffwechsel & Schmerztherapie",
