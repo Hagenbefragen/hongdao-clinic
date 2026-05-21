@@ -211,7 +211,9 @@ const translations = {
     "gallery-item-kitchen-badge": "Nutrition",
     "gallery-item-kitchen-title": "Healing Kitchen",
     "gallery-item-soundbath-badge": "Sound Bath",
-    "gallery-item-soundbath-title": "Nature Sound Bath"
+    "gallery-item-soundbath-title": "Nature Sound Bath",
+    "btn-read-article": "Read Article",
+    "endo-read-approach": "Treatment Approach & Case Studies"
   },
   de: {
     // Navigation
@@ -416,7 +418,9 @@ const translations = {
     "gallery-item-kitchen-badge": "Ernährung",
     "gallery-item-kitchen-title": "Heilküche",
     "gallery-item-soundbath-badge": "Klangbad",
-    "gallery-item-soundbath-title": "Klangbad in Natur"
+    "gallery-item-soundbath-title": "Klangbad in Natur",
+    "btn-read-article": "Artikel lesen",
+    "endo-read-approach": "Behandlungsansatz & Fallbeispiele"
   }
 };
 
@@ -1180,3 +1184,248 @@ function closeEmailDispatchModal() {
 
 window.openEmailDispatchModal = openEmailDispatchModal;
 window.closeEmailDispatchModal = closeEmailDispatchModal;
+
+
+// ==========================================
+// WeChat Article Modal Content & Operations
+// ==========================================
+const articlesContent = {
+  endo: {
+    de: {
+      title: "Gebärmutter befreien: Ganzheitliche TCM-Therapie bei Endometriose",
+      body: `
+        <p><strong>Endometriose (Endometriosis)</strong> ist einer der schmerzhaftesten „stillen Killer“ in der Gynäkologie und betrifft weltweit etwa 10 % aller Frauen im gebärfähigen Alter. Wenn Endometriumzellen wie „verirrte Samen“ außerhalb der Gebärmutter wachsen, bluten sie bei jeder Periode mit, was zu Entzündungen, Verwachsungen und Schokoladenzysten (Endometriomen) führt.</p>
+        <p>Dies verursacht nicht nur chronische Beckenschmerzen und extrem schmerzhafte Regelschmerzen (VAS-Skala 8-9), sondern ist auch die Hauptursache für 30 % bis 50 % aller Fälle von unerfülltem Kinderwunsch. In der westlichen Medizin werden meist Hormone unterdrückt oder Gewebe operativ entfernt, manchmal sogar ganze Organe.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Der ganzheitliche Ansatz: 温阳消瘀 (Yang wärmen & Stagnation auflösen)</h4>
+        <p>Dr. Adrianna Qiao (M.Sc. Zellbiologie und TCM-Ärztin) erklärt, dass die biologische Mikroumgebung im Becken entscheidend ist. In der klassischen TCM ist die Hauptursache <strong>„寒凝血瘀“ (Kälte-Kondensation und Blutstagnation)</strong> im Unterleib. Das Becken verhält sich wie ein feuchter, kalter Boden ohne Sonne. Daher ist unser Behandlungsziel <strong>„温阳化瘀“</strong> – den Unterleib von innen heraus zu erwärmen, die Durchblutung anzuregen und die blockierten Leitbahnen zu befreien. So erzielen wir hervorragende Ergebnisse rein mit Naturheilkunde.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Unsere Therapieverfahren</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Guanyuan-Becken-Moxibustion (铺灸 - Pu Jiu)</strong>: Spezielle therapeutische Boxen (JD3030) mit frischem Ingwer-Mus und wärmenden Kräutern auf den Punkten Guanyuan, Qihai und Zigong. Die tiefe Wärme regt die Durchblutung an und löst Verwachsungen im Becken.</li>
+          <li><strong>Klassische Kräuterheilkunde</strong>: Individuelle Rezepturen (wie <em>Shaofu Zhuyu Tang</em>) fördern die Blutzirkulation und helfen, Verhärtungen abzubauen.</li>
+          <li><strong>Bian-Stein Elektrotherapie</strong>: Löst Verspannungen der Gebärmuttermuskulatur und lindert Krämpfe.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Fallbeispiele</h4>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem;">
+          <p><strong>Fall 1 (Schokoladenzyste & Infertilität)</strong>: Eine 29-jährige Patientin mit Kinderwunsch litt unter einer 4,2 cm großen Schokoladenzyste am linken Eierstock und extremen Regenschmerzen (VAS 9, starke Schmerzmittel). Nach 3 Monaten kombinierter Pu-Jiu-Therapie und Kräutereinnahme schrumpfte die Zyste auf 1,5 cm, die Schmerzen verschwanden vollständig (VAS 1, ohne Medikamente).</p>
+        </div>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px;">
+          <p><strong>Fall 2 (Adenomyose & Schwangerschaft)</strong>: Eine 34-jährige Patientin mit primärer Infertilität seit 4 Jahren litt an einer stark vergrößerten Gebärmutter infolge von Adenomyose. Durch gezielte Erwärmung und Zyklustherapie verkleinerte sich die Gebärmutter, die Blutungen normalisierten sich, und im 5. Behandlungsmonat wurde sie natürlich schwanger.</p>
+        </div>
+      `
+    },
+    en: {
+      title: "Nourishing Yang & Dissolving Stagnation: High-Tech TCM Care for Endometriosis",
+      body: `
+        <p><strong>Endometriosis</strong> is one of the most challenging conditions in gynecology, affecting about 10% of women of childbearing age globally. When endometrial cells grow outside the uterine cavity, they bleed with each monthly cycle, causing chronic inflammation, tissue adhesions, and chocolate cysts (endometriomas).</p>
+        <p>This does not only lead to severe dysmenorrhea (VAS pain scale 8-9) and chronic pelvic pain, but is also a leading cause of infertility (30% to 50% of cases). In Western medicine, hormones are often suppressed or surgery is performed, sometimes removing entire organs.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">The Integrative Approach: Warming Yang & Dissolving Stagnation</h4>
+        <p>Dr. Adrianna Qiao explains that the pelvic microenvironment supports these cells. In classical TCM, the root cause is <strong>"Cold Condensation and Blood Stagnation" (寒凝血瘀)</strong> in the lower burner. The pelvic cavity acts like cold, damp soil lacking sunlight. Our therapy focus is <strong>"Warming Yang and Dissolving Stagnation" (温阳化瘀)</strong> – using deep thermal penetration and herbs to dissolve blockages and restore tissue mobility.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Our Therapy System</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Guanyuan Pelvic Moxibustion (Pu Jiu)</strong>: Physical heating boxes (JD3030) burning pure moxa over ginger paste and circulation herbs on acupuncture points (Guanyuan, Qihai, Zigong).</li>
+          <li><strong>Classical Formulas</strong>: Individually tailored herbal preparations (such as <em>Shaofu Zhuyu Tang</em>) designed to warm the womb and clear stagnation.</li>
+          <li><strong>Bian-Stone Electrotherapy</strong>: Uses warm physical stone therapy combined with electro-stimulation to soothe uterine muscle spasm.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Case Studies</h4>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem;">
+          <p><strong>Case 1 (Chocolate Cyst & Pain Resolution)</strong>: A 29-year-old female, 2 years infertility, presenting with a 4.2cm ovarian chocolate cyst and severe pain (VAS 9, relying on pain medication). After 3 months of pelvic moxibustion and herbal pastes, the cyst reduced to 1.5cm, and pain was fully resolved (VAS 1).</p>
+        </div>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px;">
+          <p><strong>Case 2 (Adenomyosis & Successful Conception)</strong>: A 34-year-old female, 4 years primary infertility, diagnosed with adenomyosis and enlarged uterus. After 4 months of cycle therapy, uterine volume decreased, menstrual flow normalized, and she conceived naturally in the 5th month of treatment.</p>
+        </div>
+      `
+    }
+  },
+  child: {
+    de: {
+      title: "Die Fünf-Ton-Melodie-Elfen: Sound Healing & Kunst für Kinder",
+      body: `
+        <p>Ein kreatives und meditatives Gruppenangebot für Kinder zwischen 3 und 10 Jahren, geleitet von Deng Nanjing (Klangtherapeutin) und Dr. Qiao Jingwen (TCM-Ärztin). Wir verbinden heilsame Instrumente mit Malerei aus Kräuterpigmenten.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Die fünf Töne und die Organe</h4>
+        <p>Nach der TCM-Klanglehre korrespondieren die fünf traditionellen Tonskalen (角 Jue, 徵 Zhi, 宫 Gong, 商 Shang, 羽 Yu) mit den fünf Elementen und Organsystemen (Leber, Herz, Milz, Lunge, Niere). Durch das Spielen von Gongs, nepalesischen Klangschalen und Handpans harmonisieren wir die Emotionen der Kinder, fördern die Konzentration und bauen Schulstress ab.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Kräutermalerei</h4>
+        <p>Die Kinder malen mit selbst hergestellten Pigmenten aus traditionellen Heilkräutern (wie Indigo für Blau, Kurkuma für Gelb, Färberdistel für Rot). Dies vermittelt einen spielerischen, sensorischen Zugang zur Naturapotheke.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Kurs-Details</h4>
+        <ul class="feature-list">
+          <li><strong>Termine</strong>: 18. April um 10:00 Uhr & 19. April um 15:00 Uhr</li>
+          <li><strong>Zielgruppe</strong>: Kinder (3-10 Jahre) mit ihren Eltern</li>
+          <li><strong>Gruppengröße</strong>: Maximal 7 Familien pro Kurs</li>
+          <li><strong>Gebühr</strong>: 199 RMB (~25 €) inkl. aller Malutensilien und gesunder Kräutersnacks</li>
+        </ul>
+      `
+    },
+    en: {
+      title: "Five-Note Melody Elves: Sound Healing & Art for Kids",
+      body: `
+        <p>A playful, grounding group workshop designed for children aged 3-10, facilitated by sound therapist Deng Nanjing and Dr. Adrianna Qiao. We integrate therapeutic acoustic instruments with painting using organic herbal pigments.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">The Five Notes & Organ Networks</h4>
+        <p>Based on the TCM Five-Element music theory, each tone (Jue, Zhi, Gong, Shang, Yu) vibrates with a specific organ network (Liver, Heart, Spleen, Lung, Kidney). Playing instruments like German gongs, Nepalese singing bowls, and handpans helps kids ease nervous tension, improve cognitive focus, and release academic anxiety.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Herbal Art Painting</h4>
+        <p>Children create artwork using pigments extracted directly from raw TCM herbs (such as Indigo for blue, Turmeric for yellow, and Safflower for red), creating a sensory connection with nature's healing elements.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Event Schedule & Cost</h4>
+        <ul class="feature-list">
+          <li><strong>Schedule</strong>: April 18th at 10:00 AM & April 19th at 3:00 PM</li>
+          <li><strong>Target Group</strong>: Children (3-10 years) accompanied by parents</li>
+          <li><strong>Capacity</strong>: Limited to 7 families per session</li>
+          <li><strong>Fee</strong>: 199 RMB (~$25 USD) including art materials and organic herbal snacks</li>
+        </ul>
+      `
+    }
+  },
+  mushroom: {
+    de: {
+      title: "Die Weisheit der Pilzheilkunde: Das Wood Wide Web in unserem Körper",
+      body: `
+        <p>Unter der Erde erstreckt sich ein feines, weitreichendes Geflecht – das Myzel. Es verbindet Bäume, reguliert Nährstoffe und dient als neuronales Immunsystem des Waldes (bekannt als das „Wood Wide Web“). In der TCM arbeiten Vitalpilze ganz ähnlich in unserem Körper.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Vegetative Regulation & Knotenabbau</h4>
+        <p>Heilpilze (wie Reishi, Poria, Cordyceps) dringen tief in unsere feinen Membrangewebe (膜络 - Mo Luo) und Faszien ein. Sie wirken stark feuchtigkeitsausleitend, entzündungshemmend und harmonisieren das vegetative Nervensystem. In unserer Praxis setzen wir die Mykotherapie gezielt ein, um Gewebeverhärtungen (wie Zysten, Myome sowie Schilddrüsen- und Brustknoten) aufzulösen.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Fallstudien</h4>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem;">
+          <p><strong>Fall 1 (Schilddrüsenknoten, 2.1cm)</strong>: Eine 48-jährige Patientin mit tastbaren Schilddrüsenknoten und Schluckbeschwerden. Nach 3 Monaten gezielter Therapie mit Poria (Fuling) und Reishi (Lingzhi) bildete sich der Knoten auf 0.9cm zurück, die Beschwerden verschwanden vollständig.</p>
+        </div>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px;">
+          <p><strong>Fall 2 (Brustdrüsen-Hyperplasie & Angst)</strong>: Eine 38-jährige Patientin mit schmerzhaften Brustknoten (1.6cm) sowie ausgeprägter Unruhe und Schlaflosigkeit. Durch vegetative Regulation mit Pilzextrakten lösten sich die Knoten auf, das Herzklopfen verschwand und die Schlafqualität besserte sich dauerhaft.</p>
+        </div>
+      `
+    },
+    en: {
+      title: "The Wisdom of Fungal Medicine: Connecting the Wood Wide Web",
+      body: `
+        <p>Beneath the forest floor lies a vast mycelial network connecting plant life, distributing nutrients, and acting as the Earth's neural immune system. In Traditional Chinese Medicine, medicinal mushrooms perform a similar biological role inside the human body.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Vegetative Regulation & Nodule Resolution</h4>
+        <p>Medicinal mushrooms (like Reishi, Poria, and Cordyceps) target the body's membrane network (膜络 - Mo Luo), which corresponds to the fascial and lymphatic systems. They clear chronic dampness, regulate immune responses, and calm the autonomic nervous system. We utilize clinical mycology to systematically disperse benign nodules, cysts, fibroids, and breast/thyroid hyperplasia.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Case Studies</h4>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem;">
+          <p><strong>Case 1 (Thyroid Nodule Regression)</strong>: A 48-year-old female presenting with a 2.1cm thyroid nodule and throat tightness. After a 3-month course of customized Poria & Ganoderma therapy, the nodule shrank to 0.9cm, resolving all clinical symptoms.</p>
+        </div>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px;">
+          <p><strong>Case 2 (Breast Hyperplasia & Insomnia)</strong>: A 38-year-old female presenting with painful breast nodules (1.6cm), palpitations, and anxiety-induced insomnia. Mycological regulation successfully dissolved the nodules and restored deep, restful sleep.</p>
+        </div>
+      `
+    }
+  },
+  nervous: {
+    de: {
+      title: "Klangheilung im Mikrokosmos: Neuro-Regulation über Schwingungen",
+      body: `
+        <p>Der menschliche Körper vibriert ständig (Herzschlag, Atmung, Gehirnwellen, zelluläre Vibration). Chronischer Stress, Traumata und Erschöpfung stören diese biologischen Frequenzen. Die Klangtherapie nutzt physikalische Gesetze, um das System wieder in Einklang zu bringen.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Die drei wissenschaftlichen Pfade der Klangheilung</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Physikalische Resonanz</strong>: Da der Körper zu ca. 70 % aus Wasser besteht, wandern die Schallwellen der tibetischen Klangschalen tief in das Gewebe und führen dort eine sanfte zelluläre Mikromassage durch.</li>
+          <li><strong>Brainwave Entrainment (Gehirnwellen-Mitnahme)</strong>: Die beruhigenden Frequenzen regen das Gehirn an, von aktiven Beta-Wellen in entspannte Alpha- und Theta-Wellen (Zustand tiefer Meditation und Selbstheilung) zu wechseln.</li>
+          <li><strong>Neuromodulation & Vagus-Nerv</strong>: Die Vibrationen stimulieren den Vagus-Nerv, senken die Herzfrequenz und aktivieren den Parasympathikus (Ruhe- und Verdauungssystem).</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TCM-Prinzip: Nieren-Essenz und Klang</h4>
+        <p>Nach der TCM „steuern die Nieren das Wasser und öffnen sich in den Ohren“. Klangtherapie nährt die Nieren-Essenz (Jing), beruhigt das Herz (Shen) und bringt das Wasser-Element des Körpers wieder zum Fließen. Dies führt zu einer tiefen, lang anhaltenden Erleichterung bei Burnout und chronischem Stress.</p>
+      `
+    },
+    en: {
+      title: "Sound Healing in the Human Microcosm: Vibrational Neuro-Regulation",
+      body: `
+        <p>The human body is in a state of continuous vibration (heartbeat, respiratory cycles, brainwaves, molecular movement). Stress and burnout disrupt these natural biological frequencies. Sound healing restores this equilibrium.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Three Scientific Pathways of Sound Healing</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Physical Resonance</strong>: Sound waves travel easily through water. Since the human body is ~70% water, singing bowl frequencies (such as 432 Hz) penetrate deep tissues, performing a gentle cellular massage.</li>
+          <li><strong>Brainwave Entrainment</strong>: Rhythmic audio frequencies guide brain activity from high-frequency Beta waves down to Alpha and Theta ranges, facilitating deep meditation and tissue repair.</li>
+          <li><strong>Vagal Stimulation</strong>: Acoustic vibrations stimulate the vagus nerve, immediately shifting the nervous system from a sympathetic (fight-or-flight) state into parasympathetic recovery.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TCM Principle: Kidney Jing & Water Element</h4>
+        <p>In TCM, the "Kidneys rule water and open to the ears." Sound healing directly nourishes Kidney Jing (vital essence), anchors the Heart Shen (spirit), and harmonizes the flow of fluids in the body, providing relief from chronic fatigue.</p>
+      `
+    }
+  }
+};
+
+function openArticleModal(articleId) {
+  const article = articlesContent[articleId];
+  if (!article) return;
+  
+  const lang = typeof currentLang !== 'undefined' ? currentLang : 'de';
+  const titleEl = document.getElementById("article-modal-title");
+  const bodyEl = document.getElementById("article-modal-body");
+  const articleModal = document.getElementById("article-modal");
+  
+  if (titleEl && bodyEl && articleModal && article[lang]) {
+    titleEl.innerHTML = article[lang].title;
+    bodyEl.innerHTML = article[lang].body;
+    articleModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function closeArticleModal() {
+  const articleModal = document.getElementById("article-modal");
+  if (articleModal) {
+    articleModal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+}
+
+// Bind events on load
+document.addEventListener("DOMContentLoaded", () => {
+  const articleModal = document.getElementById("article-modal");
+  const articleModalClose = document.getElementById("article-modal-close");
+  
+  if (articleModalClose) {
+    articleModalClose.addEventListener("click", closeArticleModal);
+  }
+  
+  if (articleModal) {
+    articleModal.addEventListener("click", (e) => {
+      if (e.target === articleModal) closeArticleModal();
+    });
+  }
+
+  // Bind to buttons
+  const bindArticleButtons = () => {
+    document.querySelectorAll(".read-article-btn").forEach(btn => {
+      // Remove any existing listener by cloning and replacing
+      const newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+      
+      newBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const articleId = newBtn.getAttribute("data-article");
+        if (articleId) {
+          openArticleModal(articleId);
+        }
+      });
+    });
+  };
+
+  bindArticleButtons();
+
+  // Watch for language changes to rebind if DOM structure changes
+  const originalSetLanguage = window.setLanguage;
+  if (originalSetLanguage) {
+    window.setLanguage = function(lang) {
+      originalSetLanguage(lang);
+      // Wait a tiny bit for translation scripts to finish DOM updates
+      setTimeout(bindArticleButtons, 50);
+    };
+  }
+});
+
+window.openArticleModal = openArticleModal;
+window.closeArticleModal = closeArticleModal;
