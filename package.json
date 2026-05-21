@@ -1,0 +1,16 @@
+{
+  "name": "hongdao-clinic-website",
+  "version": "2.0.0",
+  "description": "Hongdao Traditional TCM Clinic Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "whatsapp": "node whatsapp_listener.js"
+  },
+  "dependencies": {
+    "whatsapp-web.js": "^1.26.0",
+    "qrcode-terminal": "^0.12.0",
+    "qr-image": "^3.2.0"
+  }
+}

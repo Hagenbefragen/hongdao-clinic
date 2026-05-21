@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Sync Bridge — HongDao TCM Clinic</title>
+  <link rel="stylesheet" href="style.v2.css">
+  <style>
+    :root {
+      --glass-bg: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(185, 92, 56, 0.1);
+    }
+    
+    body {
+      background-color: var(--bg-cream-light);
+      padding: 2rem 5%;
+      min-height: 100vh;
+      font-family: var(--font-sans);
+    }
+
+    .dashboard-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--bg-cream-dark);
+      padding-bottom: 1.5rem;
+    }
+
+    .dashboard-title h1 {
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      font-family: var(--font-serif);
+    }
+
+    .dashboard-title p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 0.2rem;
+    }
+
+    .status-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 1.5rem 2rem;
+      box-shadow: var(--shadow-subtle);
+      border-left: 5px solid var(--hellblau);
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition-smooth);
+    }
+
+    .status-info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .status-indicator {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #E2E8F0;
+      position: relative;
+    }
+
+    .status-indicator.ready {
+      background-color: var(--jade-green);
+      box-shadow: 0 0 10px rgba(45, 90, 70, 0.4);
+    }
+
+    .status-indicator.qr {
+      background-color: #D69E2E;
+      box-shadow: 0 0 10px rgba(214, 158, 46, 0.4);
+    }
+
+    .status-indicator.disconnected {
+      background-color: var(--terracotta);
+      box-shadow: 0 0 10px rgba(185, 92, 56, 0.4);
+    }
+
+    .status-details h3 {
+      font-size: 1.2rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .status-details p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .qr-container {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-subtle);
+      text-align: center;
+      margin-bottom: 2rem;
+      display: none;
+    }
+
+    .qr-container.active {
+      display: block;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .qr-image {
+      max-width: 250px;
+      border: 1px solid var(--bg-cream-dark);
+      border-radius: 8px;
+      padding: 10px;
+      background: white;
+      margin: 1rem auto;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1.2fr;
+      gap: 2rem;
+    }
+
+    .inbox-section h2, .instructions-section h2 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--text-dark);
+    }
+
+    .inbox-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .message-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-subtle);
+      border: 1px solid rgba(0, 0, 0, 0.02);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .message-card.applied {
+      border-left: 4px solid var(--jade-green);
+      opacity: 0.8;
+    }
+
+    .message-card.ignored {
+      border-left: 4px solid #718096;
+      opacity: 0.6;
+    }
+
+    .message-card.pending {
+      border-left: 4px solid var(--terracotta);
+    }
+
+    .message-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .message-body {
+      font-size: 1rem;
+      color: var(--text-dark);
+      white-space: pre-wrap;
+      word-break: break-word;
+      line-height: 1.5;
+    }
+
+    .message-media {
+      margin-top: 1rem;
+      background: var(--bg-cream-dark);
+      border-radius: 8px;
+      padding: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .media-thumb {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .media-info {
+      flex: 1;
+      font-size: 0.85rem;
+    }
+
+    .media-path {
+      font-family: monospace;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 2px 5px;
+      border-radius: 3px;
+      word-break: break-all;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .message-actions {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+      border-top: 1px solid var(--bg-cream-dark);
+      padding-top: 0.8rem;
+    }
+
+    .action-btn {
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .instructions-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .instructions-card ol {
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .instructions-card li {
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 12px;
+      text-transform: uppercase;
+    }
+
+    .badge-pending {
+      background-color: var(--terracotta-light);
+      color: var(--terracotta);
+    }
+
+    .badge-applied {
+      background-color: var(--jade-light);
+      color: var(--jade-green);
+    }
+
+    .badge-ignored {
+      background-color: #EDF2F7;
+      color: #4A5568;
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--terracotta);
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-decoration: underline;
+      padding: 0;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-muted);
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="dashboard-title">
+        <h1>WhatsApp Sync Bridge</h1>
+        <p>Live Website Update Controller — HongDao TCM Clinic</p>
+      </div>
+      <a href="/" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;">View Website</a>
+    </header>
+
+    <!-- Status Panel -->
+    <div class="status-card" id="status-card">
+      <div class="status-info">
+        <div class="status-indicator disconnected" id="status-indicator"></div>
+        <div class="status-details">
+          <h3 id="status-text">Disconnected</h3>
+          <p id="status-message">Connecting to local server...</p>
+        </div>
+      </div>
+      <div id="status-timestamp" style="font-size: 0.8rem; color: var(--text-muted);">
+        Never updated
+      </div>
+    </div>
+
+    <!-- QR Code Scan Section -->
+    <div class="qr-container" id="qr-container">
+      <h2>Scan to Connect WhatsApp</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Open WhatsApp on your phone, go to Linked Devices, and scan this QR code.</p>
+      <img src="whatsapp_qr.png" alt="WhatsApp Login QR Code" class="qr-image" id="qr-img">
+      <p style="font-size: 0.8rem; color: var(--terracotta); margin-top: 0.5rem; font-style: italic;">The code regenerates automatically when needed.</p>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main-grid">
+      <!-- Inbox Timeline -->
+      <div class="inbox-column">
+        <h2>Live Message Inbox</h2>
+        <div class="inbox-list" id="inbox-list">
+          <div class="empty-state">
+            <p>Loading messages...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instruction Panel -->
+      <div class="instructions-column">
+        <h2>How to Use</h2>
+        <div class="instructions-card">
+          <p style="font-weight: 500; color: var(--text-dark);">Update your website directly from your phone:</p>
+          <ol>
+            <li><strong>Scan & Connect:</strong> If not connected, scan the QR code above.</li>
+            <li><strong>Send Prompts:</strong> Text any change requests to your WhatsApp (e.g. <em>"Change retreat title to Yunnan Forest Retreat"</em>).</li>
+            <li><strong>Send Images:</strong> Send images/photos. The bridge will download them directly into <code>images/whatsapp_imports/</code>.</li>
+            <li><strong>Agent Application:</strong> The AI coding agent (Antigravity) reads these requests automatically and modifies the website files for you.</li>
+          </ol>
+          <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted); background: var(--bg-cream-dark); padding: 0.8rem; border-radius: 6px;">
+            💬 <strong>Tip:</strong> You can mark messages as "Applied" or "Ignored" here to keep your queue organized.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentStatus = 'disconnected';
+    let lastInboxHash = '';
+
+    // Action execution (mark applied/ignored)
+    async function updateMessageStatus(id, action) {
+      try {
+        const response = await fetch('/api/whatsapp/action', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ id, action })
+        });
+        if (response.ok) {
+          fetchInbox();
+        }
+      } catch (err) {
+        console.error('Failed to update message status:', err);
+      }
+    }
+
+    // Helper to copy path to clipboard
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Copied local path to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+
+    // Pull connection status
+    async function checkStatus() {
+      try {
+        const response = await fetch('/api/whatsapp/status');
+        if (!response.ok) throw new Error('Network response not ok');
+        
+        const data = await response.json();
+        
+        // Update Status indicator
+        const indicator = document.getElementById('status-indicator');
+        const statusText = document.getElementById('status-text');
+        const statusMessage = document.getElementById('status-message');
+        const statusCard = document.getElementById('status-card');
+        const statusTimestamp = document.getElementById('status-timestamp');
+        
+        indicator.className = 'status-indicator ' + data.status;
+        statusText.innerText = data.status.charAt(0).toUpperCase() + data.status.slice(1);
+        statusMessage.innerText = data.message || 'Service active.';
+        statusTimestamp.innerText = 'Last checked: ' + new Date(data.updatedAt).toLocaleTimeString();
+
+        // Border feedback based on status
+        if (data.status === 'ready') {
+          statusCard.style.borderLeftColor = 'var(--jade-green)';
+        } else if (data.status === 'qr') {
+          statusCard.style.borderLeftColor = '#D69E2E';
+        } else {
+          statusCard.style.borderLeftColor = 'var(--terracotta)';
+        }
+
+        // Show/Hide QR Container
+        const qrContainer = document.getElementById('qr-container');
+        const qrImg = document.getElementById('qr-img');
+        if (data.status === 'qr') {
+          qrContainer.classList.add('active');
+          // Add a cache buster timestamp to ensure QR image refreshes
+          qrImg.src = 'whatsapp_qr.png?t=' + Date.now();
+        } else {
+          qrContainer.classList.remove('active');
+        }
+
+        currentStatus = data.status;
+      } catch (err) {
+        console.error('Error fetching status:', err);
+        document.getElementById('status-text').innerText = 'Offline';
+        document.getElementById('status-message').innerText = 'Cannot connect to development server.';
+        document.getElementById('status-indicator').className = 'status-indicator disconnected';
+        document.getElementById('status-card').style.borderLeftColor = 'var(--terracotta)';
+      }
+    }
+
+    // Fetch inbox messages
+    async function fetchInbox() {
+      try {
+        const response = await fetch('/api/whatsapp/inbox');
+        if (!response.ok) throw new Error('Network response not ok');
+        
+        const messages = await response.json();
+        
+        // Quick hash/length check to avoid redraw if nothing changed
+        const currentHash = JSON.stringify(messages);
+        if (currentHash === lastInboxHash) return;
+        lastInboxHash = currentHash;
+
+        const inboxList = document.getElementById('inbox-list');
+        
+        if (messages.length === 0) {
+          inboxList.innerHTML = `
+            <div class="empty-state">
+              <p>No messages received yet. Send a WhatsApp message to test!</p>
+            </div>
+          `;
+          return;
+        }
+
+        inboxList.innerHTML = '';
+        messages.forEach(msg => {
+          const card = document.createElement('div');
+          card.className = `message-card ${msg.status}`;
+          
+          let mediaHtml = '';
+          if (msg.hasMedia && msg.media) {
+            mediaHtml = `
+              <div class="message-media">
+                <img src="${msg.media.localPath}" class="media-thumb" alt="Sync Attachment" onerror="this.src='https://placehold.co/70x70?text=Image'">
+                <div class="media-info">
+                  <strong>Attachment:</strong> ${msg.media.filename}<br>
+                  Path: <span class="media-path">${msg.media.localPath}</span> 
+                  <button class="copy-btn" onclick="copyToClipboard('${msg.media.localPath}')">Copy</button>
+                </div>
+              </div>
+            `;
+          }
+
+          const localTime = new Date(msg.timestamp).toLocaleString();
+          const badgeClass = `badge badge-${msg.status}`;
+          
+          card.innerHTML = `
+            <div class="message-meta">
+              <span><strong>From:</strong> ${msg.from.split('@')[0]}</span>
+              <div>
+                <span class="${badgeClass}">${msg.status}</span>
+                <span style="margin-left: 10px;">${localTime}</span>
+              </div>
+            </div>
+            <div class="message-body">${escapeHtml(msg.body)}</div>
+            ${mediaHtml}
+            <div class="message-actions">
+              ${msg.status !== 'applied' ? `<button class="btn btn-jade action-btn" onclick="updateMessageStatus('${msg.id}', 'applied')">Mark Applied</button>` : ''}
+              ${msg.status !== 'ignored' ? `<button class="btn btn-outline action-btn" onclick="updateMessageStatus('${msg.id}', 'ignored')" style="border-color: #718096; color: #718096; margin-left: auto;">Ignore</button>` : ''}
+              ${msg.status !== 'pending' ? `<button class="btn btn-outline action-btn" onclick="updateMessageStatus('${msg.id}', 'pending')" style="border-color: var(--terracotta); color: var(--terracotta);">Re-open</button>` : ''}
+            </div>
+          `;
+          inboxList.appendChild(card);
+        });
+      } catch (err) {
+        console.error('Error fetching inbox:', err);
+      }
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // Polling setup
+    checkStatus();
+    fetchInbox();
+    setInterval(checkStatus, 2000);
+    setInterval(fetchInbox, 2000);
+  </script>
+</body>
+</html>

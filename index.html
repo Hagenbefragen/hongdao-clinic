@@ -993,7 +993,37 @@
       <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
   </div>
-
   <script src="app.v2.js"></script>
+
+  <!-- Dev Sync Widget -->
+  <script>
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      const devBadge = document.createElement('div');
+      devBadge.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 9999;
+        background: #B95C38;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 30px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 500;
+        box-shadow: 0 4px 15px rgba(185, 92, 56, 0.3);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+      `;
+      devBadge.innerHTML = '💬 WhatsApp Sync';
+      devBadge.onmouseover = () => devBadge.style.transform = 'translateY(-2px)';
+      devBadge.onmouseout = () => devBadge.style.transform = 'translateY(0)';
+      devBadge.onclick = () => window.open('/whatsapp_sync.html', '_blank');
+      document.body.appendChild(devBadge);
+    }
+  </script>
 </body>
 </html>
