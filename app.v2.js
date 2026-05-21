@@ -963,16 +963,22 @@ function initMarketingPopup() {
 
   if (!popup) return;
 
-  // Show popup after 2.5 seconds, if not dismissed in this session
-  if (!sessionStorage.getItem("hongdao-popup-dismissed")) {
-    setTimeout(() => {
+  // Show popup on exit intent (when mouse leaves the top of the viewport)
+  const handleExitIntent = (e) => {
+    if (e.clientY < 15) {
       popup.classList.add("active");
-    }, 2500);
+      document.removeEventListener("mouseleave", handleExitIntent);
+    }
+  };
+
+  if (!sessionStorage.getItem("hongdao-popup-dismissed")) {
+    document.addEventListener("mouseleave", handleExitIntent);
   }
 
   const dismissPopup = () => {
     popup.classList.remove("active");
     sessionStorage.setItem("hongdao-popup-dismissed", "true");
+    document.removeEventListener("mouseleave", handleExitIntent);
   };
 
   if (closeBtn) closeBtn.addEventListener("click", dismissPopup);
