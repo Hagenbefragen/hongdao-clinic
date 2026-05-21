@@ -34,7 +34,16 @@ const translations = {
     "master-xu-title": "Chief Physician & TCM Master",
     "master-xu-desc": "Master Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases.",
     "doctor-1-title": "Specialized Physician & Stem Cell Therapy",
-    "doctor-1-name": "Dr. Adrianna Qiao (乔婧文)",
+    "doctor-1-name": "Dr. Jingwen Qiao (乔建文)",
+    "doctor-1-desc": "Dr. Jingwen Qiao combines modern diagnostics with classical herbal medicine and pelvic moxibustion for pain and hormonal balance.",
+    "doctor-4-name": "Dr. Weina Guan (管蔚娜)",
+    "doctor-4-spec": "Licensed TCM Physician. Specialist in meridian detoxification, clinical acupuncture, and therapeutic massages.",
+    "doctor-5-name": "Hailin Zhang (张海林)",
+    "doctor-5-spec": "Head of Decoction Center. Specialist in traditional herbal extraction and quality control.",
+    "btn-read-bio": "Read Profile",
+    "decoction-subtitle": "In-House Herbal Craftsmanship",
+    "decoction-title": "Modern Decoction Center & Dao Di Herbs",
+    "decoction-desc": "<p style=\"margin-bottom: 1.5rem;\">We source exclusively high-quality <strong>Dao Di Herbs (道地藥材)</strong> from certified organic cultivation and soil-specific farming methods, grown in regions that offer the optimal climatic and energetic conditions for each native plant.</p><p>In our in-house Decoction Center, under the direct supervision of Master Xu, these herbs are individually extracted, precisely processed, and portion-packed into <strong>Ready-to-Drink decoctions</strong> that you can easily take home.</p>",
     "doctor-1-desc": "Dr. Adrianna Qiao integrates advanced stem cell therapies with TCM rejuvenation techniques for cellular health, fertility, and hormonal balance.",
     "visionary-deng-title": "Translation, Sound Therapy & Patient Support",
     "visionary-deng-desc": "Deng Nanjing translates Master Xu's consultations and diagnostic findings into German, English, and Italian. She also facilitates sound therapy sessions, tea ceremonies, and supports guests with all organizational needs during their stay.",
@@ -241,7 +250,16 @@ const translations = {
     "master-xu-title": "Chefarzt & TCM-Meister",
     "master-xu-desc": "Meister Xu Ruqi verfügt über mehr als 40 Jahre Erfahrung in Pulsdiagnostik und klassischer Kräutermedizin. Als klinischer Experte an der Pekinger Universität für Chinesische Medizin ist er weltweit bekannt für die Behandlung schwerer chronischer Krankheiten, Tumoren und gynäkologischer Leiden.",
     "doctor-1-title": "Spezialisierte Ärztin & Stammzelltherapie",
-    "doctor-1-name": "Dr. Adrianna Qiao (乔婧文)",
+    "doctor-1-name": "Dr. Jingwen Qiao (乔建文)",
+    "doctor-1-desc": "Dr. Jingwen Qiao verbindet moderne Diagnostik mit klassischer Kräuterheilkunde und Becken-Moxibustion bei Schmerz- und Hormonleiden.",
+    "doctor-4-name": "Dr. Weina Guan (管蔚娜)",
+    "doctor-4-spec": "Staatlich lizenzierte TCM-Ärztin. Spezialistin für Meridian-Entgiftung, Akupunktur und therapeutische Massagen.",
+    "doctor-5-name": "Hailin Zhang (张海林)",
+    "doctor-5-spec": "Leiter des Dekokt-Zentrums. Experte für traditionelle Kräuterzubereitung und Qualitätskontrolle.",
+    "btn-read-bio": "Profil lesen",
+    "decoction-subtitle": "Hauseigene Kräuter-Manufaktur",
+    "decoction-title": "Modernes Dekokt-Zentrum & Dao Di Kräuter",
+    "decoction-desc": "<p style=\"margin-bottom: 1.5rem;\">Wir beziehen ausschließlich hochwertige <strong>Dao Di Kräuter (道地藥材)</strong> aus kontrolliert biologischem Anbau und Soil-Technik aus den Herkunftsregionen, die für die jeweilige Pflanze die optimalen klimatischen und energetischen Bedingungen bieten.</p><p>In unserem hauseigenen Dekokt-Zentrum werden die Heilkräuter unter Aufsicht von Meister Xu individuell für Sie extrahiert, präzise verarbeitet und portioniert als <strong>gebrauchsfertige Kräuterdekokte (Ready-to-Drink)</strong> abgepackt, die Sie unkompliziert mit nach Hause nehmen können.</p>",
     "doctor-1-desc": "Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.",
     "visionary-deng-title": "Übersetzung, Klangbegleitung & Patientenbetreuung",
     "visionary-deng-desc": "Deng Nanjing übersetzt die Konsultationen und Befunde von Meister Xu verlässlich ins Deutsche, Englische und Italienische. Begleitend leitet sie Klangsitzungen und Teezeremonien und unterstützt Sie bei allen organisatorischen Anliegen während Ihres Aufenthaltes.",
@@ -1196,6 +1214,86 @@ window.closeEmailDispatchModal = closeEmailDispatchModal;
 // WeChat Article Modal Content & Operations
 // ==========================================
 const articlesContent = {
+  qiao: {
+    de: {
+      title: "Dr. Jingwen Qiao – Gynäkologie, Stoffwechsel & Schmerztherapie",
+      body: `
+        <p><strong>Dr. Jingwen (Adrianna) Qiao (乔建文)</strong> ist Co-Gründerin des Hongdao Zentrums für Kräuterausleitung und eine führende Expertin im Bereich der integrierten chinesischen Gynäkologie und der modernen myofaszialen Schmerztherapie.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete (Focus Areas)</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Stoffwechsel- & Metabolische Erkrankungen</strong>: Ganzheitliche Regulation bei Diabetes, Fettstoffwechselstörungen, Bluthochdruck und Fettleibigkeit.</li>
+          <li><strong>Hormonelle & Gynäkologische Leiden</strong>: Spezialisierte Behandlung von Endometriose, extremen Regelschmerzen (Dysmenorrhö), PCOS (Polycystisches Ovarialsyndrom), vorzeitiger Ovarialinsuffizienz und Brustdrüsen-Hyperplasie.</li>
+          <li><strong>Neurologische & Psychosomatische Störungen</strong>: Chronische Kopfschmerzen, Migräne, Angststörungen, Schlafstörungen und stressbedingte Erschöpfung.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Akademischer Hintergrund & Biografie</h4>
+        <p style="margin-bottom: 1rem;">Bachelor-Abschluss an der renommierten <strong>Fudan-Universität</strong> und staatlich geprüfte und lizenzierte TCM-Ärztin. Sie leitet die wissenschaftliche Rehabilitation am Hongdao TCM-Forschungszentrum.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Erfahrung & Forschung</h4>
+        <p style="margin-bottom: 1rem;">Mit über 10 Jahren praktischer Erfahrung hat Dr. Qiao das System der „Universal-Schmerztherapie“ (万向治痛法) mitentwickelt. Ihre wissenschaftliche Arbeit umfasst die Beteiligung an großen staatlichen Forschungsprojekten der chinesischen Regierung (wie <em>Science & Technology Innovation 2030</em>) sowie akademische Kooperationen und Vorträge an internationalen Spitzenuniversitäten wie Oxford und Harvard. Sie hat über 10 Fachaufsätze und Patente veröffentlicht.</p>
+      `
+    },
+    en: {
+      title: "Dr. Jingwen Qiao – Gynecology, Metabolism & Pain Therapy",
+      body: `
+        <p><strong>Dr. Jingwen (Adrianna) Qiao (乔建文)</strong> is a co-founder of the Hongdao External Therapy Center and a leading expert in integrated Chinese gynecology and modern myofascial pain management.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Focus Areas</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Metabolic Disorders</strong>: Comprehensive management of diabetes, hyperlipidemia, hypertension, and clinical obesity.</li>
+          <li><strong>Hormonal & Gynecological Diseases</strong>: Specializing in endometriosis care, severe dysmenorrhea, PCOS, premature ovarian failure, and breast hyperplasia.</li>
+          <li><strong>Neurological & Mood Disorders</strong>: Chronic migraines, anxiety, depression, insomnia, and burnout syndrome.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography & Education</h4>
+        <p style="margin-bottom: 1rem;">B.Sc. graduate from <strong>Fudan University</strong> and a licensed national TCM physician. She serves as the Chief Academic Leader at the Hongdao Medical Rehabilitation Center.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Experience & Research</h4>
+        <p style="margin-bottom: 1rem;">With over 10 years of clinical and academic experience, Dr. Qiao is the co-developer of the "Universal Pain Relief Method" (万向治痛法). She has spearheaded national research projects under the China State Key R&D Programs, presented her research at Harvard and Oxford, and holds over 10 published medical papers and patents.</p>
+      `
+    }
+  },
+  guan: {
+    de: {
+      title: "Dr. Weina Guan – Akupunktur & Faszientherapie",
+      body: `
+        <p><strong>Dr. Weina Guan (管蔚娜)</strong> ist stellvertretende Leiterin des Zentrums für technologiegestützte chinesische Medizin und Expertin für energetische Entgiftung und Meridian-Therapie.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete (Focus Areas)</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Urogenitale & Gynäkologische Leiden</strong>: Behandlung von chronischer Prostatitis, Inkontinenz, Blasenentzündungen, Menstruationsstörungen, Myomen und Zysten.</li>
+          <li><strong>Meridian-Entgiftung & Akupunktur</strong>: Anwendung traditioneller Reizverfahren (Akupunktur, Gua Sha, Moxa und Schröpfen) zur Ausleitung zellulärer Schlacken.</li>
+          <li><strong>Dermatologische TCM-Konzepte</strong>: Behandlung bei hartnäckiger Neurodermitis, chronischer Nesselsucht (Urtikaria), Ekzemen, Gürtelrose und Haarausfall.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Akademischer Hintergrund & Biografie</h4>
+        <p style="margin-bottom: 1rem;">Master-Abschluss der traditionellen chinesischen Medizin, lizenzierte Ärztin und staatlich geprüfte psychologische Beraterin.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Erfahrung & Spezialpraxis</h4>
+        <p style="margin-bottom: 1rem;">Dr. Guan verbindet klassische Heilverfahren mit moderner Laserakupunktur und technologiegestützter Gewichtsreduktion. Sie besitzt weitreichende Erfahrung in der Meridianlehre und der ganzheitlichen Burnout-Prävention.</p>
+      `
+    },
+    en: {
+      title: "Dr. Weina Guan – Acupuncture & Fascia Therapy",
+      body: `
+        <p><strong>Dr. Weina Guan (管蔚娜)</strong> is the Deputy Director of the Science & Technology TCM Management Center and an expert in deep meridian detoxification and vibrational acupuncture.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Focus Areas</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Urogenital & Gynecological Disorders</strong>: Chronic prostatitis, urinary urgency, incontinence, uterine fibroids, dysmenorrhea, and ovarian decline.</li>
+          <li><strong>Meridian Detoxification & Acupuncture</strong>: Rich clinical expertise in acupuncture, cupping, moxibustion, gua sha, and ear acupuncture to expel toxins.</li>
+          <li><strong>Dermatological Conditions</strong>: Eczema, urticaria, neurodermatitis, herpes zoster, and clinical hair loss.</li>
+        </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography & Education</h4>
+        <p style="margin-bottom: 1rem;">Master of Acupuncture, Licensed National Physician, and certified National Psychological Counselor.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Focus & Rejuvenation</h4>
+        <p style="margin-bottom: 1rem;">Dr. Guan specializes in combining standard meridian acupuncture with science-backed metabolic weight loss programs and advanced laser-acupoint therapy.</p>
+      `
+    }
+  },
   endo: {
     de: {
       title: "Gebärmutter befreien: Ganzheitliche TCM-Therapie bei Endometriose",

@@ -96,70 +96,133 @@
           </p>
         </div>
 
-        <div class="master-card" style="border-left-color: var(--hellblau-dark);">
-          <div class="avatar-wrapper">
-            <img src="images/dr_adrianna.png" alt="Dr. Adrianna Qiao">
+        <div class="master-card" style="border-left-color: var(--hellblau-dark); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="avatar-wrapper">
+              <img src="images/dr_jingwen.jpg" alt="Dr. Jingwen Qiao">
+            </div>
+            <span class="subtitle-serif" style="color: var(--hellblau-dark);" data-i18n="doctor-1-title">Spezialisierte Ärztin & Stammzelltherapie</span>
+            <h3 class="title-small" data-i18n="doctor-1-name">Dr. Jingwen Qiao (乔建文)</h3>
+            <p style="color: var(--text-muted); margin-top: 1rem;" data-i18n="doctor-1-desc">
+              Dr. Jingwen Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.
+            </p>
           </div>
-          <span class="subtitle-serif" style="color: var(--hellblau-dark);" data-i18n="doctor-1-title">Spezialisierte Ärztin & Stammzelltherapie</span>
-          <h3 class="title-small" data-i18n="doctor-1-name">Dr. Adrianna Qiao (乔婧文)</h3>
-          <p style="color: var(--text-muted); margin-top: 1rem;" data-i18n="doctor-1-desc">
-            Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.
-          </p>
+          <button class="btn btn-outline read-article-btn" data-article="qiao" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem;" data-i18n="btn-read-bio">Profil lesen</button>
         </div>
       </div>
 
       <!-- Other Specialized Doctors & Healers -->
       <h3 class="title-small" style="text-align: center; margin-bottom: 3rem;" data-i18n="team-grid-title">Unser spezialisiertes Team</h3>
-      <div class="grid-4">
+      <div class="grid-3">
         <!-- Deng Nanjing -->
-        <div class="card">
-          <div class="card-img-wrapper" style="height: 180px;">
-            <img src="images/nanjing_deng.png" alt="Deng Nanjing" class="card-img">
-          </div>
-          <div class="card-content" style="padding: 1.5rem;">
-            <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;">Deng Nanjing (邓楠景)</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="visionary-deng-spec">
-              Übersetzung, Klangbegleitung & Patientenbetreuung.
-            </p>
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0 0 1.5rem 0;">
+          <div>
+            <div class="card-img-wrapper" style="height: 180px;">
+              <img src="images/nanjing_deng.png" alt="Deng Nanjing" class="card-img">
+            </div>
+            <div class="card-content" style="padding: 1.5rem 1.5rem 0 1.5rem;">
+              <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;">Deng Nanjing (邓楠景)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="visionary-deng-spec">
+                Übersetzung, Klangbegleitung & Patientenbetreuung.
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Dr. Zhang Min -->
-        <div class="card">
-          <div class="card-img-wrapper" style="height: 180px;">
-            <img src="images/dr_zhang.png" alt="Dr. Zhang Min" class="card-img">
+        <!-- Dr. Weina Guan -->
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0 0 1.5rem 0;">
+          <div>
+            <div class="card-img-wrapper" style="height: 180px;">
+              <img src="images/dr_weina.jpg" alt="Dr. Weina Guan" class="card-img">
+            </div>
+            <div class="card-content" style="padding: 1.5rem 1.5rem 0 1.5rem;">
+              <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="doctor-4-name">Dr. Weina Guan (管蔚娜)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="doctor-4-spec">
+                Akupunkteurin, Massagen und Kosmetik Behandlungen.
+              </p>
+            </div>
           </div>
-          <div class="card-content" style="padding: 1.5rem;">
-            <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="doctor-2-name">Dr. Zhang Min (张敏)</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="doctor-2-spec">
-              Spezialistin für gynäkologische Erkrankungen, hormonelle Dysbalancen & Endometriose-Therapie.
-            </p>
+          <button class="btn btn-outline read-article-btn" data-article="guan" style="margin: 1rem 1.5rem 0 1.5rem; align-self: flex-start; padding: 0.3rem 0.8rem; font-size: 0.8rem;" data-i18n="btn-read-bio">Profil lesen</button>
+        </div>
+
+        <!-- Dr. Zhang Min -->
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0 0 1.5rem 0;">
+          <div>
+            <div class="card-img-wrapper" style="height: 180px;">
+              <img src="images/dr_zhang.png" alt="Dr. Zhang Min" class="card-img">
+            </div>
+            <div class="card-content" style="padding: 1.5rem 1.5rem 0 1.5rem;">
+              <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="doctor-2-name">Dr. Zhang Min (张敏)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="doctor-2-spec">
+                Spezialistin für gynäkologische Erkrankungen, hormonelle Dysbalancen & Endometriose-Therapie.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- Dr. Chen Wei -->
-        <div class="card">
-          <div class="card-img-wrapper" style="height: 180px;">
-            <img src="images/dr_chen.png" alt="Dr. Chen Wei" class="card-img">
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0 0 1.5rem 0;">
+          <div>
+            <div class="card-img-wrapper" style="height: 180px;">
+              <img src="images/dr_chen.png" alt="Dr. Chen Wei" class="card-img">
+            </div>
+            <div class="card-content" style="padding: 1.5rem 1.5rem 0 1.5rem;">
+              <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="doctor-3-name">Dr. Chen Wei (陈伟)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="doctor-3-spec">
+                Spezialist für Akupunktur, chronische Schmerztherapie, Burnout & vegetative Nervensystem-Regulation.
+              </p>
+            </div>
           </div>
-          <div class="card-content" style="padding: 1.5rem;">
-            <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="doctor-3-name">Dr. Chen Wei (陈伟)</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="doctor-3-spec">
-              Spezialist für Akupunktur, chronische Schmerztherapie, Burnout & vegetative Nervensystem-Regulation.
-            </p>
+        </div>
+
+        <!-- Hailin Zhang -->
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0 0 1.5rem 0;">
+          <div>
+            <div class="card-img-wrapper" style="height: 180px;">
+              <img src="images/hailin_zhang.jpg" alt="Hailin Zhang" class="card-img">
+            </div>
+            <div class="card-content" style="padding: 1.5rem 1.5rem 0 1.5rem;">
+              <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="doctor-5-name">Hailin Zhang (张海林)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="doctor-5-spec">
+                Leiter des Dekokt-Zentrums. Experte für traditionelle Kräuterzubereitung & Qualitätskontrolle.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- Mingli Cheung -->
-        <div class="card">
-          <div class="card-img-wrapper" style="height: 180px;">
-            <img src="images/mingli_cheung.png" alt="Mingli Cheung" class="card-img">
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0 0 1.5rem 0;">
+          <div>
+            <div class="card-img-wrapper" style="height: 180px;">
+              <img src="images/mingli_cheung.png" alt="Mingli Cheung" class="card-img">
+            </div>
+            <div class="card-content" style="padding: 1.5rem 1.5rem 0 1.5rem;">
+              <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="doctor-sound-name">Mingli Cheung</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="doctor-sound-spec">
+                Klangheiler & Vibrationstherapeut, leitet die energetische Ausrichtung und emotionale Entlastung.
+              </p>
+            </div>
           </div>
-          <div class="card-content" style="padding: 1.5rem;">
-            <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="doctor-sound-name">Mingli Cheung</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="doctor-sound-spec">
-              Klangheiler & Vibrationstherapeut, leitet die energetische Ausrichtung und emotionale Entlastung.
-            </p>
+        </div>
+      </div>
+
+      <!-- In-House Decoction Center -->
+      <div class="card" style="margin-top: 5rem; padding: 3rem; background: var(--card-bg); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+        <div class="grid-2" style="align-items: center; gap: 4rem;">
+          <div class="card-img-wrapper" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <img src="images/decoction_center.jpg" alt="Decoction Center" style="width: 100%; height: auto; display: block; object-fit: cover;">
+          </div>
+          <div>
+            <span class="subtitle-serif" style="color: var(--terracotta);" data-i18n="decoction-subtitle">Hauseigene Kräuter-Manufaktur</span>
+            <h2 class="title-medium" style="margin: 1rem 0; font-size: 2rem; line-height: 1.3;" data-i18n="decoction-title">Modernes Dekokt-Zentrum & Dao Di Kräuter</h2>
+            <div style="color: var(--text-muted); line-height: 1.8; font-size: 1.05rem;" data-i18n="decoction-desc">
+              <p style="margin-bottom: 1.5rem;">
+                Wir beziehen ausschließlich hochwertige <strong>Dao Di Kräuter (道地藥材)</strong> aus kontrolliert biologischem Anbau und Soil-Technik aus den Herkunftsregionen, die für die jeweilige Pflanze die optimalen klimatischen und energetischen Bedingungen bieten.
+              </p>
+              <p>
+                In unserem hauseigenen Dekokt-Zentrum werden die Heilkräuter unter Aufsicht von Meister Xu individuell für Sie extrahiert, präzise verarbeitet und portioniert als <strong>gebrauchsfertige Kräuterdekokte (Ready-to-Drink)</strong> abgepackt, die Sie unkompliziert mit nach Hause nehmen können.
+              </p>
+            </div>
           </div>
         </div>
       </div>
