@@ -920,6 +920,13 @@ function openModal() {
   if (overlay) {
     overlay.classList.add("active");
     document.body.style.overflow = "hidden"; // Disable scroll
+    
+    // Disable exit intent popup since they are booking
+    sessionStorage.setItem("hongdao-popup-dismissed", "true");
+    const popup = document.getElementById("marketing-popup");
+    if (popup) {
+      popup.classList.remove("active");
+    }
   }
 }
 
@@ -981,9 +988,33 @@ function initMarketingPopup() {
 
   if (!popup) return;
 
+  let hasInteracted = false;
+  let timeElapsed = false;
+
+  // Require at least 5 seconds of presence to prevent showing at the very beginning
+  setTimeout(() => {
+    timeElapsed = true;
+  }, 5000);
+
+  // Set hasInteracted on scroll, click, or keyboard input
+  const setInteracted = () => {
+    hasInteracted = true;
+    document.removeEventListener("scroll", setInteracted);
+    document.removeEventListener("click", setInteracted);
+    document.removeEventListener("keydown", setInteracted);
+  };
+
+  document.addEventListener("scroll", setInteracted);
+  document.addEventListener("click", setInteracted);
+  document.addEventListener("keydown", setInteracted);
+
   // Show popup on exit intent (when mouse leaves the top of the viewport)
   const handleExitIntent = (e) => {
-    if (e.clientY < 15) {
+    const isBookingActive = document.getElementById("booking-modal-overlay")?.classList.contains("active");
+    
+    // Only show if user has interacted, at least 5 seconds have passed,
+    // they haven't already dismissed it, and the booking modal is not active
+    if (e.clientY < 15 && hasInteracted && timeElapsed && !isBookingActive) {
       popup.classList.add("active");
       document.removeEventListener("mouseleave", handleExitIntent);
     }
