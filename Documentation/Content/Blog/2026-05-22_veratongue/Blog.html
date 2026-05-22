@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VeraTongue: A deep dive into sovereign, on-device Traditional Chinese Medicine tongue analysis powered by computer vision and the Maciocia topography mapping.">
+  <title>VeraTongue: Sovereign On-Device Tongue Analysis & Computer Vision</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap');
+    
+    :root {
+      --bg: #0d1b2a;
+      --surface: #132238;
+      --card: #1a2d45;
+      --border: #2a3f5f;
+      --text: #e8eaf0;
+      --muted: #8b9cb8;
+      --accent: #c5a547;
+      --amber: #d4a25c;
+      --pearl: #f0ede8;
+      --emerald: #0d6b3e;
+      --rose: #d4a0a0;
+      --crystal: #6aa5c7;
+      --gold-glow: 0 0 30px rgba(197,165,71,0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--pearl);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .meta a:hover {
+      text-decoration: underline;
+    }
+
+    .tldr-box {
+      background: linear-gradient(135deg, var(--surface), var(--card));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--gold-glow);
+    }
+
+    .tldr-box h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tldr-box p {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .hero-image-container {
+      margin-bottom: 2.5rem;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .hero-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .image-caption {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+      padding: 0.75rem;
+      background-color: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+
+    h2.section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.75rem;
+      color: var(--pearl);
+      margin: 2.5rem 0 1.25rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      font-weight: 300;
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--pearl);
+    }
+
+    abbr {
+      text-decoration: underline dotted var(--accent);
+      cursor: help;
+    }
+
+    .koan {
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--pearl);
+      background-color: var(--surface);
+      border-left: 3px solid var(--amber);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .koan .attr {
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      color: var(--muted);
+      display: block;
+      margin-top: 0.5rem;
+      text-align: right;
+    }
+
+    .agreement {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+
+    .agreement-header {
+      background-color: var(--card);
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .agreement-num {
+      background-color: var(--accent);
+      color: var(--bg);
+      font-weight: 800;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .agreement-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color: var(--pearl);
+      font-size: 1.1rem;
+    }
+
+    .agreement-body {
+      padding: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    .toltec {
+      color: var(--rose);
+      font-weight: 600;
+    }
+
+    .ai {
+      color: var(--crystal);
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: var(--card);
+      color: var(--pearl);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background-color: var(--surface);
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .visual-gallery {
+      margin: 2.5rem 0;
+    }
+
+    .gallery-item {
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .footer-image-container {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .footer-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .legal-notice {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: var(--muted);
+      border-top: 1px dotted var(--border);
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>VeraTongue: Sovereign On-Device Tongue Analysis & Computer Vision</h1>
+      <div class="meta">
+        Published: May 22, 2026 | Technology Analysis by <a href="https://destill.ai" target="_blank">DESTILL.ai</a>
+      </div>
+    </header>
+
+    <div class="tldr-box">
+      <h2>⚡ Executive Summary</h2>
+      <p>
+        VeraTongue implements a zero-cloud, 100% on-device biometric analysis engine that maps the surface of the human tongue to internal organ health states. By applying the classical <abbr title="Traditional Chinese Medicine">TCM</abbr> topography of Giovanni Maciocia through advanced localized computer vision (<abbr title="Theory of Inventive Problem Solving">TRIZ</abbr>-optimized canvas heuristics), the system bypasses cloud dependency and privacy leaks, delivering immediate, high-fidelity physiological feedback.
+      </p>
+    </div>
+
+    <div class="hero-image-container">
+      <img src="veratongue_hero.png" alt="VeraTongue Biometric Camera Interface and Health Indicators">
+      <div class="image-caption">VeraTongue's on-device scanning view: real-time camera grid alignment combined with localized biomarker indicators.</div>
+    </div>
+
+    <h2 class="section-title">Start with WHY: The Diagnostic Mirror in Your Pocket</h2>
+    <p>
+      For the average person on the street, tracking daily wellness is an exercise in guesswork. We wear smartbands to count our steps and measure our heart rate, but these metrics only scratch the surface of our metabolic and constitutional health. How do we know if our digestive system is struggling, if our body is chronically dehydrated, or if we are carrying systemic inflammation before symptoms arise?
+    </p>
+    <p>
+      For over two thousand years, Eastern medicine has utilized a natural diagnostic mirror: the human tongue. In <abbr title="Traditional Chinese Medicine">TCM</abbr>, the tongue body and its coating act as a visible dashboard of the internal organs. Because the tongue has an extremely rich vascular supply and is constantly bathed in saliva, changes in systemic circulation, hydration, and cellular turnover are immediately reflected on its surface.
+    </p>
+    <p>
+      <strong>VeraTongue</strong> translates this ancient diagnostic wisdom into modern digital reality. By turning your smartphone camera into a secure, private physiological scanner, it provides a direct window into your internal balance—completely locally, with zero data sent to external servers.
+    </p>
+
+    <div class="koan">
+      "The tongue does not lie. It is an external extension of the internal visceral environment, mapping hydration, blood stasis, and metabolic heat in real time."
+      <span class="attr">— Traditional Chinese Medicine Topography Principles</span>
+    </div>
+
+    <h2 class="section-title">Technological Foundation: The <code>tongue_analyst</code> Engine</h2>
+    <p>
+      At the heart of the system lies the <code>tongue_analyst</code> engine, which integrates classical organ mapping with rigid computer vision validations. The analysis is structured across three core layers: the 7 Image Quality Gates, the 9-Zone Topographical Map, and the 8 Diagnostic Dimensions.
+    </p>
+
+    <h3 style="margin: 1.5rem 0 1rem; color: var(--pearl);">1. The 7 Non-Negotiable Quality Gates</h3>
+    <p>
+      Clinical reliability is highly sensitive to input variables. To prevent false readings due to motion, poor illumination, or camera angle, the engine forces the user's input through 7 sequential quality filters before executing any diagnostic logic:
+    </p>
+
+    <div class="agreement">
+      <div class="agreement-header">
+        <div class="agreement-num">1</div>
+        <div class="agreement-title">Tongue Detection & Extension</div>
+      </div>
+      <div class="agreement-body">
+        <span class="toltec">Detection Gate:</span> Samples pixels in the guide overlay boundary to identify tongue-colored ranges (R &gt; G &times; 1.15 and R &gt; B &times; 1.15 for &ge;10% of pixels).<br><br>
+        <span class="ai">Extension Gate:</span> Ensures the tongue extends to fill at least 40% of the guide overlay height, confirming the Kidney area (root) is fully exposed.
+      </div>
+    </div>
+
+    <div class="agreement">
+      <div class="agreement-header">
+        <div class="agreement-num">2</div>
+        <div class="agreement-title">Optical & Environmental Calibration</div>
+      </div>
+      <div class="agreement-body">
+        <span class="toltec">Brightness Check:</span> Validates that average pixel brightness (Luminosity scale 0–255) is strictly between 45 and 220 to prevent overexposure or deep shadow.<br><br>
+        <span class="ai">White Balance Gate:</span> Verifies the ratio of Blue to Red channels (mean B / mean R must be between 0.5 and 1.5) to filter out colored ambient lighting, aligning the sensor with the <abbr title="Color Temperature Standard 6500 Kelvin">D65</abbr> daylight standard.
+      </div>
+    </div>
+
+    <div class="agreement">
+      <div class="agreement-header">
+        <div class="agreement-num">3</div>
+        <div class="agreement-title">Sensor Integrity & Obstruction</div>
+      </div>
+      <div class="agreement-body">
+        <span class="toltec">Resolution & Sharpness:</span> Rejects camera inputs below 640&times;480 pixels and uses grayscale Laplacian variance checks to block frames with motion blur (variance threshold &lt; 100).<br><br>
+        <span class="ai">Obstruction Check:</span> Scans the upper 15% of the frame to ensure lips, teeth, or fingers do not block the root of the tongue (triggering if &gt;80% skin-tone pixels are present in that region).
+      </div>
+    </div>
+
+    <h3 style="margin: 1.5rem 0 1rem; color: var(--pearl);">2. The Maciocia Tongue Map (9 Organ Zones)</h3>
+    <p>
+      Once the image passes all 7 gates, the canvas is mapped using coordinate divisions corresponding to Giovanni Maciocia's classical guidelines. The tongue bounding box is segmented into nine diagnostic zones:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Zone ID</th>
+          <th>Topographical Location</th>
+          <th>Associated Organ System</th>
+          <th>San Jiao Burner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Z1</strong></td>
+          <td>0–8% from tip</td>
+          <td>Heart (心)</td>
+          <td>Upper Burner</td>
+        </tr>
+        <tr>
+          <td><strong>Z2</strong></td>
+          <td>8–25% from tip</td>
+          <td>Lung (肺)</td>
+          <td>Upper Burner</td>
+        </tr>
+        <tr>
+          <td><strong>Z3-L</strong></td>
+          <td>Left side, 25–65%</td>
+          <td>Liver (肝)</td>
+          <td>Middle Burner</td>
+        </tr>
+        <tr>
+          <td><strong>Z3-R</strong></td>
+          <td>Right side, 25–65%</td>
+          <td>Gallbladder (胆)</td>
+          <td>Middle Burner</td>
+        </tr>
+        <tr>
+          <td><strong>Z4</strong></td>
+          <td>Center, 25–65%</td>
+          <td>Spleen & Stomach (脾胃)</td>
+          <td>Middle Burner</td>
+        </tr>
+        <tr>
+          <td><strong>Z5</strong></td>
+          <td>65–100% (root)</td>
+          <td>Kidney (肾)</td>
+          <td>Lower Burner</td>
+        </tr>
+        <tr>
+          <td><strong>Z6</strong></td>
+          <td>Deep root</td>
+          <td>Bladder & Intestines</td>
+          <td>Lower Burner</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin: 1.5rem 0 1rem; color: var(--pearl);">3. The 8 Diagnostic Dimensions</h3>
+    <p>
+      The local algorithm extracts features from each zone and maps them across 8 dimensional axes:
+    </p>
+    <ul>
+      <li><strong>Body Color:</strong> Analyzes blood flow and vascular density. Pale pink is healthy; pale indicates Qi or blood deficiency; red indicates heat; and purple represents blood stasis.</li>
+      <li><strong>Shape:</strong> Measures muscular tone and tissue volume. Swollen tongues point to dampness accumulation, while thin tongues suggest fluid or blood deficiency.</li>
+      <li><strong>Tooth Marks:</strong> Detects lateral scalloping caused by tongue swelling pressing against teeth, a key indicator of digestive deficiency.</li>
+      <li><strong>Coating:</strong> Evaluates oral flora and mucous buildup. A thin white coat is normal; thick yellow indicates internal heat; greasy/oily indicates damp-phlegm; and peeled spots indicate fluid depletion.</li>
+      <li><strong>Cracks & Fissures:</strong> Identifies structural changes. A deep vertical crack down the center indicates chronic stress or digestive fluid weakness.</li>
+      <li><strong>Sublingual Veins:</strong> Evaluates venous pressure and microcirculation. Distended, dark, or varicose veins under the tongue point to cardiovascular congestion or chronic blood stasis.</li>
+      <li><strong>Moisture:</strong> Measures salivary gland output. Dripping wet suggests poor fluid transport; dry points to hydration depletion or systemic heat.</li>
+      <li><strong>Movement & Tremor:</strong> Checks neuromotor stability. Tremors or deviation suggest internal wind or neurological strain.</li>
+    </ul>
+
+    <h2 class="section-title">Visual Evidence Gallery</h2>
+    <p>
+      Below is the diagnostic documentation illustrating the layout of the zones, the sequence of the image gates, and the user interface flow:
+    </p>
+
+    <div class="visual-gallery">
+      <div class="gallery-item">
+        <img src="veratongue_zones.png" alt="Maciocia Tongue Organ Mapping Diagram">
+        <div class="image-caption">Figure 1: The Maciocia organ-zone topography as segmented by the computer vision system.</div>
+      </div>
+      <div class="gallery-item">
+        <img src="veratongue_gates.png" alt="7 Non-Negotiable Quality Gates Infographic">
+        <div class="image-caption">Figure 2: Sequential verification of the 7 image quality gates before analysis execution.</div>
+      </div>
+      <div class="gallery-item">
+        <img src="veratongue_app_mockup.png" alt="VeraTongue On-Device User Interface Mockup">
+        <div class="image-caption">Figure 3: Clean, high-fidelity dark interface showing on-device analysis and real-time parameters.</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">TRIZ Contradictions Dissolved</h2>
+    <p>
+      Developing a high-performance clinical tool that runs entirely within consumer hardware presented multiple fundamental engineering trade-offs. The development team resolved these using the <abbr title="Theory of Inventive Problem Solving">TRIZ</abbr> framework:
+    </p>
+    <ol>
+      <li><strong>Clinical Accuracy vs. Consumer Camera Variability:</strong> Resolved via <em>Principle 35 (Parameter changes)</em>. By introducing the 7-gate validation system, the software rejects inconsistent, blurry, or badly illuminated images at the point of capture, maintaining a clean diagnostic input baseline.</li>
+      <li><strong>Deep Organ Mapping vs. Serverless Privacy:</strong> Resolved via <em>Principle 1 (Segmentation)</em>. The tongue's bounding box is segmented into dedicated canvases. These sub-canvases are processed locally in Lab color space using K-means clustering, keeping the raw biometric data inside the device's volatile memory.</li>
+      <li><strong>Scientific Integrity vs. Non-Medical Regulatory Constraints:</strong> Resolved via <em>Principle 17 (Another dimension)</em>. The generated output strictly separates traditional constitutional patterns from Western physiological indicators, making it an educational wellness tool rather than a regulated medical device.</li>
+    </ol>
+
+    <h2 class="section-title">Open Questions for the Community</h2>
+    <p>
+      As we refine the <code>tongue_analyst</code> framework, we invite practitioner and developer input on:
+    </p>
+    <ul>
+      <li>How does ambient lighting variability affect the sublingual vein classification, and can we improve calibration beyond standard red/blue ratios?</li>
+      <li>What are the most effective visual indicators for distinguishing constitutional cracks from temporary, stress-induced cracks?</li>
+    </ul>
+
+    <div class="footer-image-container">
+      <img src="veratongue_footer.png" alt="Sacred Geometry and Mycelium Network Visual Signature">
+      <div class="image-caption">Visual Signature: The integration of natural intelligence, crystalline structure, and organic harmony.</div>
+    </div>
+
+    <footer>
+      <p>Developed by <a href="https://destill.ai" target="_blank">DESTILL.ai</a> | Sovereign Health Mirror™</p>
+      <p>For IP licensing inquiries: <a href="mailto:IP@destill.ai">IP@destill.ai</a></p>
+      <p>Connect on LinkedIn: <a href="https://www.linkedin.com/in/hagen-befragen" target="_blank">Hagen Befragen</a> & <a href="https://www.linkedin.com/company/destill-ai" target="_blank">DESTILL.ai</a></p>
+      
+      <div class="legal-notice">
+        <strong>Vereinshinweis:</strong> Die angebotenen Wellness-Analysen und Programme erfolgen im Rahmen des gemeinnützigen Vereins <strong>Lebensfluss e.V.</strong> (ZVR-Zahl: 1758759096, Sitz in Österreich). Die erbrachten Analysen dienen der Gesundheitsförderung und stellen keine ärztliche Diagnostik oder Therapie dar. Die Teilnahme erfolgt auf Basis eines Kostenbeitrags der Vereinsmitglieder.
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
