@@ -1,6 +1,7 @@
 ---
 name: Bliss Design Mastery
 description: Award-winning UX/UI expert for sovereign, immersive, flow-state design. Systematically audits and beautifies every screen in the OHM Ecosystem.
+group: smart.design
 ---
 
 # 🌟 Bliss Design Mastery — OHM Sovereign UX Skill

@@ -1,6 +1,7 @@
 ---
 name: Crawler Verifier & Social Publisher
 description: Automates the loop of Content Creation -> Social Publishing -> Crawler Detection Verification.
+group: smart.backend
 ---
 
 # 🕸️ Crawler Verifier & Social Publisher Skill

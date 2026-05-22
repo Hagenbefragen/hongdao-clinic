@@ -1,6 +1,7 @@
 ---
 name: NestJS Architect
 description: Backend expert for Modular Monolith architecture, Dependency Injection, and Guards.
+group: smart.backend
 ---
 
 # 🦅 NestJS Architect Skill

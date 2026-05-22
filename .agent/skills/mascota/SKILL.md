@@ -1,6 +1,7 @@
 ---
 name: OHM Mascota
 description: Trigger and control the OHM mascota to guide users through the ecosystem (onboarding, claims, features).
+group: smart.frontend
 ---
 
 # OHM Mascota Skill

@@ -11,7 +11,7 @@ This workflow triggers the **Master Deployment Protocol**, which sequentially up
 3.  **Websites** (Marketing)
 4.  **Digital Twin** (AI Stack)
 
-**Target Server:** `188.245.235.51`
+**Target Server:** `78.46.219.101`
 
 **⚠️ Important**: This uses `deploy.ps1` which handles SSH correctly.  
 **Reference**: `.agent/workflows/ssh_commands.md` for SSH best practices.  
@@ -55,7 +55,7 @@ The post-receive hook runs `git checkout -f` which uses HEAD, so it checks out `
 
 ```bash
 # Check server's HEAD
-ssh root@188.245.235.51 "cat /root/git/ohm.git/HEAD"
+ssh root@78.46.219.101 "cat /root/git/ohm.git/HEAD"
 # Should say: ref: refs/heads/main
 # If it says: ref: refs/heads/master → PROBLEM!
 ```
@@ -63,7 +63,7 @@ ssh root@188.245.235.51 "cat /root/git/ohm.git/HEAD"
 ### The Fix
 
 ```bash
-ssh root@188.245.235.51 "git --git-dir=/root/git/ohm.git symbolic-ref HEAD refs/heads/main"
+ssh root@78.46.219.101 "git --git-dir=/root/git/ohm.git symbolic-ref HEAD refs/heads/main"
 ```
 
 ### Key Learnings

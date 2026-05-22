@@ -177,7 +177,7 @@ curl -s https://app.offlinehumanmode.com/livekit
 powershell -ExecutionPolicy Bypass -File .\deploy.ps1
 
 # ❌ BAD - WILL HANG FOREVER
-ssh root@188.245.235.51 "pm2 list"
+ssh root@78.46.219.101 "pm2 list"
 ```
 
 **📺 WebRTC/LiveKit Connection Bugs (BUG-148 Pattern):**

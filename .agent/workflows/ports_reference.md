@@ -6,7 +6,7 @@ description: Port Configuration Reference - SINGLE SOURCE OF TRUTH
 
 **THIS FILE IS READ-ONLY. DO NOT EDIT PORTS HERE.**
 
-For all port configurations, see: **`Documentation/INFRASTRUCTURE/PORTS.md`**
+For all port configurations, see: **`Documentation/SSOT/PORTS.md`** (moved from INFRASTRUCTURE/)
 
 ## Quick Reference (Per PORTS.md)
 
@@ -51,6 +51,7 @@ For all port configurations, see: **`Documentation/INFRASTRUCTURE/PORTS.md`**
 - **DT Postgres**: `5434` → `5432`
 - **DT Redis**: `6381` → `6379`
 - **Ollama**: `11434`
+- **NI Dashboard (serve)**: `5555` (local dev only — `npx serve . -l 5555` in `Documentation/VC-EXIT/`)
 
 ### Frontend Dev
 
@@ -123,5 +124,5 @@ nginx -t && systemctl reload nginx
 
 ---
 
-**Last Updated**: 2026-02-11 (Added Antigravity IDE port 8443)  
+**Last Updated**: 2026-02-22 (Added NI Dashboard serve port 5555)  
 **Maintained By**: Infrastructure Team

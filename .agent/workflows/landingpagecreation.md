@@ -4,6 +4,11 @@ description: Create stunning portal landing pages with SSO, onboarding, and refe
 
 # /landingpagecreation - Portal Landing Page Creator
 
+> **🧠 SKILLS AVAILABLE:** For audience-specific optimization, read the relevant pitch skill:
+> - **User Pitch** → `.agent/skills/user_pitch/SKILL.md` (consumer conversion, Cialdini's 6 principles)
+> - **Investor Pitch** → `.agent/skills/investor_pitch/SKILL.md` (TAM/SAM/SOM, fundraising)
+> - **Business Pitch** → `.agent/skills/business_pitch/SKILL.md` (enterprise TCO, compliance matrix)
+
 ## 1. 🎯 Overview
 
 **Name**: Landing Page Creation Workflow  
@@ -206,7 +211,7 @@ Follow `/featurerequest` workflow to track:
 
 **Every landing page MUST have HTTPS.** See `Documentation/INFRASTRUCTURE/SUBDOMAINS.md` for the single source of truth.
 
-1. **Verify DNS**: Ensure an A record exists for `[portal].offlinehumanmode.com → 188.245.235.51` in Hetzner DNS console.
+1. **Verify DNS**: Ensure an A record exists for `[portal].offlinehumanmode.com → 78.46.219.101` in Hetzner DNS console.
 
 2. **Update Nginx Config** (`nginx_offlinehumanmode.conf`):
    - Add `[portal].offlinehumanmode.com` to the portal server block (Section 2) — both the HTTPS block AND the HTTP→HTTPS redirect block.
@@ -215,15 +220,15 @@ Follow `/featurerequest` workflow to track:
 ```bash
 # turbo
 # SSH into server and expand the Let's Encrypt cert
-ssh root@188.245.235.51 "certbot certonly --nginx -d [portal].offlinehumanmode.com --expand --non-interactive --agree-tos"
+ssh root@78.46.219.101 "certbot certonly --nginx -d [portal].offlinehumanmode.com --expand --non-interactive --agree-tos"
 ```
 
 4. **Copy Nginx config to server and reload**:
 
 ```bash
 # turbo
-scp nginx_offlinehumanmode.conf root@188.245.235.51:/etc/nginx/sites-available/offlinehumanmode.conf
-ssh root@188.245.235.51 "nginx -t && systemctl reload nginx"
+scp nginx_offlinehumanmode.conf root@78.46.219.101:/etc/nginx/sites-available/offlinehumanmode.conf
+ssh root@78.46.219.101 "nginx -t && systemctl reload nginx"
 ```
 
 5. **Verify SSL**:

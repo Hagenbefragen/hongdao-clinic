@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚢 PDD Template — Process Description Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a28;
+            --bg-card-hover: #222236;
+            --border: #2a2a45;
+            --glass-bg: rgba(26, 26, 40, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #e8e8f0;
+            --text-secondary: #9595b0;
+            --text-muted: #6a6a85;
+            --accent-gold: #f0c040;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-orange: #f59e0b;
+            --accent-cyan: #06b6d4;
+            --accent-pink: #ec4899;
+            --glow-gold: 0 0 30px rgba(240, 192, 64, 0.15);
+            --glow-green: 0 0 20px rgba(16, 185, 129, 0.15);
+            --glow-red: 0 0 20px rgba(239, 68, 68, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            text-align: center;
+            padding: 2.5rem 2rem 1.5rem;
+            background: linear-gradient(180deg, #12121a 0%, var(--bg-primary) 100%);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+        }
+
+        .header .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .pdd-id {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--accent-purple);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* ── PROGRESS BAR ── */
+        .progress-section {
+            max-width: 900px;
+            margin: 1.5rem auto;
+            padding: 0 2rem;
+        }
+
+        .progress-bar-container {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 1.25rem 1.5rem;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .progress-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .progress-percent {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            transition: color 0.5s;
+        }
+
+        .progress-percent.complete {
+            color: var(--accent-green);
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+            border-radius: 4px;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .progress-fill.complete {
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+        }
+
+        .progress-stats {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .progress-stat {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .progress-stat span {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* ── CONTAINER ── */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        /* ── SECTION ── */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-icon {
+            font-size: 1.3rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .section-count {
+            margin-left: auto;
+            font-size: 0.7rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.12);
+            color: var(--accent-purple);
+            font-weight: 600;
+        }
+
+        /* ── PROCESS FLOW (Visual Chart) ── */
+        .process-flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            margin-bottom: 1.5rem;
+        }
+
+        .flow-node {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.9rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            user-select: none;
+            position: relative;
+        }
+
+        .flow-node:hover {
+            border-color: var(--accent-purple);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .flow-node.signed-off {
+            border-color: var(--accent-green);
+            background: rgba(16, 185, 129, 0.08);
+            color: var(--accent-green);
+        }
+
+        .flow-node.signed-off::after {
+            content: '✓';
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            width: 18px;
+            height: 18px;
+            background: var(--accent-green);
+            color: #000;
+            border-radius: 50%;
+            font-size: 0.6rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flow-node.failed {
+            border-color: var(--accent-red);
+            background: rgba(239, 68, 68, 0.08);
+            color: var(--accent-red);
+        }
+
+        .flow-node .node-num {
+            font-weight: 700;
+            font-size: 0.7rem;
+            color: var(--accent-gold);
+        }
+
+        .flow-node.signed-off .node-num {
+            color: var(--accent-green);
+        }
+
+        .flow-arrow {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .flow-decision {
+            border-radius: 0;
+            transform: rotate(0deg);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            padding: 0.6rem 1.2rem;
+            background: rgba(245, 158, 11, 0.1);
+            border: none;
+        }
+
+        /* ── STEP CARDS ── */
+        .step-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            padding: 1.25rem;
+            margin-bottom: 0.75rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .step-card:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            background: rgba(34, 34, 54, 0.7);
+        }
+
+        .step-card.signed-off {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.04);
+        }
+
+        .step-card.failed {
+            border-color: rgba(239, 68, 68, 0.3);
+            background: rgba(239, 68, 68, 0.04);
+        }
+
+        .step-top {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.1));
+            color: var(--accent-purple);
+            font-size: 0.8rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-card.signed-off .step-number {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(6, 182, 212, 0.1));
+            color: var(--accent-green);
+        }
+
+        .step-title-area {
+            flex: 1;
+        }
+
+        .step-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .step-actor {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 1px;
+        }
+
+        .step-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-field {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            padding: 0.6rem 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .step-field-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .step-field-value {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .step-actions {
+            display: flex;
+            gap: 0.5rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .sign-off-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 182, 212, 0.08));
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 8px;
+            color: var(--accent-green);
+            font-size: 0.78rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .sign-off-btn:hover {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.15));
+            border-color: var(--accent-green);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15);
+        }
+
+        .sign-off-btn:active {
+            transform: scale(0.97);
+        }
+
+        .sign-off-btn.signed {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: var(--accent-green);
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .flag-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 0.8rem;
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 8px;
+            color: var(--accent-red);
+            font-size: 0.78rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .flag-btn:hover {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: var(--accent-red);
+        }
+
+        /* ── CRITERIA SECTION ── */
+        .criteria-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            padding: 0.75rem 1rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all 0.25s;
+            user-select: none;
+        }
+
+        .criteria-item:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            background: rgba(34, 34, 54, 0.7);
+        }
+
+        .criteria-item.checked {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .criteria-checkbox {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+            transition: all 0.2s;
+            font-size: 0.7rem;
+        }
+
+        .criteria-item.checked .criteria-checkbox {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: #000;
+        }
+
+        .criteria-text {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            flex: 1;
+        }
+
+        .criteria-item.checked .criteria-text {
+            color: var(--accent-green);
+            text-decoration: line-through;
+            text-decoration-color: rgba(16, 185, 129, 0.4);
+        }
+
+        /* ── EDGE CASES ── */
+        .edge-case {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.6rem 0.8rem;
+            background: rgba(245, 158, 11, 0.05);
+            border: 1px solid rgba(245, 158, 11, 0.15);
+            border-radius: 8px;
+            margin-bottom: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .edge-icon {
+            flex-shrink: 0;
+        }
+
+        /* ── SIGN-OFF FOOTER ── */
+        .sign-off-section {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #12121a 0%, #1a1225 50%, #12121a 100%);
+            border-radius: 16px;
+            border: 1px solid rgba(240, 192, 64, 0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sign-off-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(240, 192, 64, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .sign-off-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-gold), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .sign-off-subtitle {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .master-sign-off-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 2.5rem;
+            background: linear-gradient(135deg, rgba(240, 192, 64, 0.15), rgba(245, 158, 11, 0.1));
+            border: 2px solid rgba(240, 192, 64, 0.3);
+            border-radius: 12px;
+            color: var(--accent-gold);
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: signOffPulse 2.5s ease-in-out infinite;
+        }
+
+        .master-sign-off-btn:hover {
+            background: linear-gradient(135deg, rgba(240, 192, 64, 0.25), rgba(245, 158, 11, 0.2));
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: var(--glow-gold), 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .master-sign-off-btn:active {
+            transform: scale(0.97);
+        }
+
+        .master-sign-off-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            animation: none;
+        }
+
+        .master-sign-off-btn.signed {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+            animation: none;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        @keyframes signOffPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(240, 192, 64, 0.1);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(240, 192, 64, 0.2);
+            }
+        }
+
+        .sign-off-timestamp {
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: none;
+        }
+
+        .sign-off-timestamp.visible {
+            display: block;
+        }
+
+        /* ── NOTES / EDITABLE ── */
+        .editable-area {
+            width: 100%;
+            min-height: 60px;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 0.82rem;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .editable-area:focus {
+            border-color: var(--accent-purple);
+        }
+
+        .editable-area::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .step-body {
+                grid-template-columns: 1fr;
+            }
+
+            .process-flow {
+                justify-content: center;
+            }
+
+            .container {
+                padding: 0 1rem 3rem;
+            }
+
+            .progress-section {
+                padding: 0 1rem;
+            }
+        }
+
+        /* ── TOAST ── */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 0.75rem 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--accent-green);
+            border-radius: 10px;
+            color: var(--accent-green);
+            font-size: 0.82rem;
+            font-weight: 600;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* ── EXPORT/COPY ── */
+        .toolbar {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+        }
+
+        .toolbar-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .toolbar-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="pdd-id">PDD-XXX</div>
+        <h1>🚢 Process Description Document</h1>
+        <div class="subtitle">"Human-Centric. Sovereignty-First. Sign off the WHAT — the Ship Engine handles the HOW."
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-section">
+        <div class="progress-bar-container">
+            <div class="progress-header">
+                <span class="progress-label">Process Sign-Off Progress</span>
+                <span class="progress-percent" id="progressPercent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+            <div class="progress-stats">
+                <div class="progress-stat">Steps: <span id="stepsCount">0/0</span></div>
+                <div class="progress-stat">Criteria: <span id="criteriaCount">0/0</span></div>
+                <div class="progress-stat">Status: <span id="statusLabel">Pending</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <button class="toolbar-btn" onclick="exportJSON()">📋 Export JSON</button>
+            <button class="toolbar-btn" onclick="resetAll()">🔄 Reset All</button>
+        </div>
+
+        <!-- SECTION: Process Flow Chart -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">🗺️</span>
+                <span class="section-title">Process Flow</span>
+                <span class="section-count" id="flowCount">0 / 0 signed</span>
+            </div>
+            <div class="process-flow" id="processFlow">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <!-- SECTION: Process Steps (Detail) -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📋</span>
+                <span class="section-title">Process Steps</span>
+                <span class="section-count" id="stepsLabel">0 steps</span>
+            </div>
+            <div id="stepsContainer">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <!-- SECTION: Acceptance Criteria -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">✅</span>
+                <span class="section-title">Acceptance Criteria</span>
+                <span class="section-count" id="criteriaLabel">0 / 0</span>
+            </div>
+            <div id="criteriaContainer">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <!-- SECTION: Edge Cases -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">🌊</span>
+                <span class="section-title">Edge Cases</span>
+            </div>
+            <div id="edgeCasesContainer">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <!-- SECTION: Notes -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📝</span>
+                <span class="section-title">Notes &amp; Instructions</span>
+            </div>
+            <textarea class="editable-area" id="notesArea"
+                placeholder="Add any special instructions, constraints, or context here..."></textarea>
+        </div>
+
+        <!-- MASTER SIGN-OFF -->
+        <div class="sign-off-section">
+            <div class="sign-off-title">🔐 Master Sign-Off</div>
+            <div class="sign-off-subtitle">Once all steps and criteria are confirmed, sign off to authorize the Ship
+                Engine to execute autonomously.</div>
+            <button class="master-sign-off-btn" id="masterSignOff" disabled onclick="masterSignOff()">
+                ✍️ Sign Off — Authorize Ship Engine
+            </button>
+            <div class="sign-off-timestamp" id="signOffTimestamp"></div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ═══════════════════════════════════════════════════════════════
+        //  PDD DATA MODEL — Edit this section to define your process
+        // ═══════════════════════════════════════════════════════════════
+
+        const PDD = {
+            id: "PDD-XXX",
+            title: "[Process Title]",
+            description: "[Brief description of what this process achieves]",
+
+            // Process Steps — the flow from user entry to completion
+            steps: [
+                {
+                    id: 1,
+                    title: "User lands on page",
+                    actor: "User",
+                    action: "Opens the URL or navigates to the entry point",
+                    successCriteria: "Page loads in <2s, correct layout, no errors",
+                    errorHandling: "Skeleton screen during load, retry on failure",
+                    signedOff: false
+                },
+                {
+                    id: 2,
+                    title: "User performs primary action",
+                    actor: "User",
+                    action: "Clicks the main CTA / fills the form",
+                    successCriteria: "Responsive feedback, validation in real-time",
+                    errorHandling: "Inline error messages, focus on first error",
+                    signedOff: false
+                },
+                {
+                    id: 3,
+                    title: "System processes request",
+                    actor: "System",
+                    action: "API call to backend, data validation",
+                    successCriteria: "API returns 200, data persisted",
+                    errorHandling: "Toast error with retry button, graceful fallback",
+                    signedOff: false
+                },
+                {
+                    id: 4,
+                    title: "User sees confirmation",
+                    actor: "User",
+                    action: "Success state displayed with next steps",
+                    successCriteria: "Confirmation message, correct data shown",
+                    errorHandling: "Support contact visible if something looks wrong",
+                    signedOff: false
+                }
+            ],
+
+            // Acceptance Criteria — the contract
+            criteria: [
+                { text: "Process completable in <3 minutes end-to-end", checked: false },
+                { text: "All touch targets ≥48px on mobile", checked: false },
+                { text: "Dark mode: all text readable on dark backgrounds", checked: false },
+                { text: "Error states show user-friendly messages (no stack traces)", checked: false },
+                { text: "Loading states for all async operations", checked: false },
+                { text: "Works on Chrome, Firefox, Safari, Mobile Safari", checked: false }
+            ],
+
+            // Edge Cases — what if scenarios
+            edgeCases: [
+                "What if the user has no internet connection?",
+                "What if the session expires mid-flow?",
+                "What if the user navigates back and forward?",
+                "What if the API returns a 500 error?"
+            ]
+        };
+
+        // ═══════════════════════════════════════════════════════════════
+        //  RENDER ENGINE — Don't edit below unless customizing
+        // ═══════════════════════════════════════════════════════════════
+
+        function render() {
+            renderFlow();
+            renderSteps();
+            renderCriteria();
+            renderEdgeCases();
+            updateProgress();
+            updatePddHeader();
+        }
+
+        function updatePddHeader() {
+            document.querySelector('.pdd-id').textContent = PDD.id;
+            document.title = `🚢 ${PDD.id}: ${PDD.title}`;
+        }
+
+        function renderFlow() {
+            const flow = document.getElementById('processFlow');
+            flow.innerHTML = '';
+            PDD.steps.forEach((step, i) => {
+                if (i > 0) {
+                    const arrow = document.createElement('span');
+                    arrow.className = 'flow-arrow';
+                    arrow.textContent = '→';
+                    flow.appendChild(arrow);
+                }
+                const node = document.createElement('div');
+                node.className = `flow-node ${step.signedOff ? 'signed-off' : ''}`;
+                node.innerHTML = `<span class="node-num">${step.id}</span> ${step.title}`;
+                node.onclick = () => {
+                    document.getElementById(`step-${step.id}`).scrollIntoView({ behavior: 'smooth', block: 'center' });
+                };
+                flow.appendChild(node);
+            });
+            const signed = PDD.steps.filter(s => s.signedOff).length;
+            document.getElementById('flowCount').textContent = `${signed} / ${PDD.steps.length} signed`;
+        }
+
+        function renderSteps() {
+            const container = document.getElementById('stepsContainer');
+            container.innerHTML = '';
+            PDD.steps.forEach(step => {
+                const card = document.createElement('div');
+                card.className = `step-card ${step.signedOff ? 'signed-off' : ''}`;
+                card.id = `step-${step.id}`;
+                card.innerHTML = `
+                    <div class="step-top">
+                        <div class="step-number">${step.id}</div>
+                        <div class="step-title-area">
+                            <div class="step-title">${step.title}</div>
+                            <div class="step-actor">Actor: ${step.actor}</div>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-field">
+                            <div class="step-field-label">Action</div>
+                            <div class="step-field-value">${step.action}</div>
+                        </div>
+                        <div class="step-field">
+                            <div class="step-field-label">Success Criteria</div>
+                            <div class="step-field-value">${step.successCriteria}</div>
+                        </div>
+                        <div class="step-field">
+                            <div class="step-field-label">Error Handling</div>
+                            <div class="step-field-value">${step.errorHandling}</div>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="sign-off-btn ${step.signedOff ? 'signed' : ''}" onclick="toggleStep(${step.id})">
+                            ${step.signedOff ? '✅ Signed Off' : '✍️ Sign Off Step'}
+                        </button>
+                        <button class="flag-btn" onclick="flagStep(${step.id})">🚩</button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            document.getElementById('stepsLabel').textContent = `${PDD.steps.length} steps`;
+        }
+
+        function renderCriteria() {
+            const container = document.getElementById('criteriaContainer');
+            container.innerHTML = '';
+            PDD.criteria.forEach((c, i) => {
+                const item = document.createElement('div');
+                item.className = `criteria-item ${c.checked ? 'checked' : ''}`;
+                item.innerHTML = `
+                    <div class="criteria-checkbox">${c.checked ? '✓' : ''}</div>
+                    <div class="criteria-text">${c.text}</div>
+                `;
+                item.onclick = () => {
+                    c.checked = !c.checked;
+                    render();
+                    showToast(c.checked ? '✅ Criterion confirmed' : '↩️ Criterion unchecked');
+                    saveState();
+                };
+                container.appendChild(item);
+            });
+            const checked = PDD.criteria.filter(c => c.checked).length;
+            document.getElementById('criteriaLabel').textContent = `${checked} / ${PDD.criteria.length}`;
+        }
+
+        function renderEdgeCases() {
+            const container = document.getElementById('edgeCasesContainer');
+            container.innerHTML = '';
+            PDD.edgeCases.forEach(ec => {
+                const div = document.createElement('div');
+                div.className = 'edge-case';
+                div.innerHTML = `<span class="edge-icon">⚡</span> ${ec}`;
+                container.appendChild(div);
+            });
+        }
+
+        function toggleStep(id) {
+            const step = PDD.steps.find(s => s.id === id);
+            step.signedOff = !step.signedOff;
+            render();
+            showToast(step.signedOff ? `✅ Step ${id} signed off` : `↩️ Step ${id} unsigned`);
+            saveState();
+        }
+
+        function flagStep(id) {
+            showToast(`🚩 Step ${id} flagged — add notes in the Notes section`);
+        }
+
+        function updateProgress() {
+            const stepsTotal = PDD.steps.length;
+            const stepsDone = PDD.steps.filter(s => s.signedOff).length;
+            const criteriaTotal = PDD.criteria.length;
+            const criteriaDone = PDD.criteria.filter(c => c.checked).length;
+
+            const total = stepsTotal + criteriaTotal;
+            const done = stepsDone + criteriaDone;
+            const percent = total ? Math.round((done / total) * 100) : 0;
+
+            document.getElementById('progressPercent').textContent = `${percent}%`;
+            document.getElementById('progressPercent').className = `progress-percent ${percent === 100 ? 'complete' : ''}`;
+            document.getElementById('progressFill').style.width = `${percent}%`;
+            document.getElementById('progressFill').className = `progress-fill ${percent === 100 ? 'complete' : ''}`;
+            document.getElementById('stepsCount').textContent = `${stepsDone}/${stepsTotal}`;
+            document.getElementById('criteriaCount').textContent = `${criteriaDone}/${criteriaTotal}`;
+
+            const masterBtn = document.getElementById('masterSignOff');
+            if (percent === 100) {
+                masterBtn.disabled = false;
+                document.getElementById('statusLabel').textContent = 'Ready for sign-off';
+                document.getElementById('statusLabel').style.color = 'var(--accent-green)';
+            } else {
+                masterBtn.disabled = true;
+                document.getElementById('statusLabel').textContent = `${percent}% complete`;
+                document.getElementById('statusLabel').style.color = '';
+            }
+        }
+
+        function masterSignOff() {
+            const btn = document.getElementById('masterSignOff');
+            btn.className = 'master-sign-off-btn signed';
+            btn.innerHTML = '✅ Signed Off — Ship Engine Authorized';
+
+            const ts = document.getElementById('signOffTimestamp');
+            const now = new Date();
+            ts.textContent = `Signed off on ${now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} at ${now.toLocaleTimeString()}`;
+            ts.className = 'sign-off-timestamp visible';
+
+            document.getElementById('statusLabel').textContent = '✅ SIGNED OFF';
+            showToast('🚢 PDD Signed Off — Ship Engine can now execute autonomously!');
+            saveState();
+        }
+
+        // ── Toast ──
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.className = 'toast show';
+            clearTimeout(t._timer);
+            t._timer = setTimeout(() => t.className = 'toast', 2500);
+        }
+
+        // ── Persistence (localStorage) ──
+        function saveState() {
+            const state = {
+                steps: PDD.steps.map(s => ({ id: s.id, signedOff: s.signedOff })),
+                criteria: PDD.criteria.map(c => ({ checked: c.checked })),
+                notes: document.getElementById('notesArea').value,
+                masterSignedOff: document.getElementById('masterSignOff').classList.contains('signed')
+            };
+            localStorage.setItem(`pdd-${PDD.id}`, JSON.stringify(state));
+        }
+
+        function loadState() {
+            const data = localStorage.getItem(`pdd-${PDD.id}`);
+            if (!data) return;
+            try {
+                const state = JSON.parse(data);
+                state.steps.forEach(s => {
+                    const step = PDD.steps.find(st => st.id === s.id);
+                    if (step) step.signedOff = s.signedOff;
+                });
+                state.criteria.forEach((c, i) => {
+                    if (PDD.criteria[i]) PDD.criteria[i].checked = c.checked;
+                });
+                if (state.notes) document.getElementById('notesArea').value = state.notes;
+                if (state.masterSignedOff) {
+                    setTimeout(() => masterSignOff(), 100);
+                }
+            } catch (e) { /* ignore corrupted state */ }
+        }
+
+        // ── Export ──
+        function exportJSON() {
+            const state = {
+                pdd: PDD.id,
+                title: PDD.title,
+                signedOff: document.getElementById('masterSignOff').classList.contains('signed'),
+                steps: PDD.steps.map(s => ({
+                    id: s.id,
+                    title: s.title,
+                    signedOff: s.signedOff
+                })),
+                criteria: PDD.criteria.map(c => ({
+                    text: c.text,
+                    checked: c.checked
+                })),
+                notes: document.getElementById('notesArea').value,
+                exportedAt: new Date().toISOString()
+            };
+            const json = JSON.stringify(state, null, 2);
+            navigator.clipboard.writeText(json).then(() => {
+                showToast('📋 PDD state copied to clipboard as JSON');
+            });
+        }
+
+        function resetAll() {
+            if (!confirm('Reset all sign-offs and criteria? This cannot be undone.')) return;
+            PDD.steps.forEach(s => s.signedOff = false);
+            PDD.criteria.forEach(c => c.checked = false);
+            document.getElementById('notesArea').value = '';
+            document.getElementById('masterSignOff').className = 'master-sign-off-btn';
+            document.getElementById('masterSignOff').innerHTML = '✍️ Sign Off — Authorize Ship Engine';
+            document.getElementById('masterSignOff').disabled = true;
+            document.getElementById('signOffTimestamp').className = 'sign-off-timestamp';
+            localStorage.removeItem(`pdd-${PDD.id}`);
+            render();
+            showToast('🔄 All sign-offs reset');
+        }
+
+        // ── INIT ──
+        document.getElementById('notesArea').addEventListener('input', saveState);
+        loadState();
+        render();
+    </script>
+</body>
+
+</html>

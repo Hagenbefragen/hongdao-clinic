@@ -4,6 +4,8 @@ description: Create comprehensive feature strategy documents using DT & AI Agent
 
 # /strategycreation - OHM Feature Strategy Workflow
 
+> **🧠 SKILL REQUIRED:** Before executing this workflow, read the **Strategy Architect** skill at `.agent/skills/strategy_architect/SKILL.md` for ELWMS component mapping, onion level classification, AI-first design patterns, and reuse identification protocol.
+
 **Philosophy:** "DT & AI Agent First" - Every new feature should consider how it integrates with the Digital Twin ecosystem and Clawdbot AI.
 
 // turbo-all

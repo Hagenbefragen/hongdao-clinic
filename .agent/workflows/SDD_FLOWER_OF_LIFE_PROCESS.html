@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 SDD Flower of Life — Interactive Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom/dist/panzoom.min.js"></script>
+    <style>
+        :root {
+            --bg: #030308;
+            --bg-glass: rgba(16, 16, 28, 0.4);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.2);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dark: #64748b;
+            --phi: #c084fc;
+            
+            --sense: #60a5fa;
+            --sense-glow: rgba(96, 165, 250, 0.15);
+            --dissolve: #f59e0b;
+            --dissolve-glow: rgba(245, 158, 11, 0.15);
+            --ship: #a78bfa;
+            --ship-glow: rgba(167, 139, 250, 0.15);
+            --sell: #34d399;
+            --sell-glow: rgba(52, 211, 153, 0.15);
+            --protect: #f87171;
+            --protect-glow: rgba(248, 113, 113, 0.15);
+            --measure: #38bdf8;
+            --measure-glow: rgba(56, 189, 248, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text-main); line-height: 1.5; overflow: hidden; }
+        
+        /* Grid Background Pattern */
+        .bg-pattern {
+            position: fixed; inset: 0; pointer-events: none; z-index: 0;
+            background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 100px 100px;
+            opacity: 0.3;
+        }
+
+        /* Top Bar */
+        .topbar {
+            position: fixed; top: 0; left: 0; right: 0; height: 72px; padding: 0 32px;
+            background: rgba(8, 8, 14, 0.8); backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; z-index: 100;
+        }
+        .topbar h1 {
+            font-size: 20px; font-weight: 800; background: linear-gradient(135deg, #f8fafc, #c084fc);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;
+        }
+        .controls { display: flex; gap: 12px; }
+        .btn {
+            background: var(--bg-glass); border: 1px solid var(--border); color: var(--text-main);
+            padding: 8px 16px; border-radius: 8px; font-weight: 600; font-size: 13px; cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--text-muted); }
+
+        /* Panzoom Canvas */
+        #canvas-wrapper {
+            position: absolute; top: 72px; left: 0; right: 0; bottom: 0; overflow: hidden; z-index: 10;
+        }
+        #canvas {
+            width: 8000px; height: 8000px; position: absolute; left: -4000px; top: -4000px;
+            transform-origin: 50% 50%;
+        }
+
+        /* Flower Graph Elements */
+        .center-node {
+            position: absolute; left: 4000px; top: 4000px; width: 400px; height: 400px;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, rgba(8,8,14,0.9), rgba(16,16,28,0.9)); border: 2px solid var(--phi);
+            border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            box-shadow: 0 0 60px rgba(192, 132, 252, 0.2), inset 0 0 40px rgba(192, 132, 252, 0.1);
+            z-index: 50;
+        }
+        .center-node h2 { font-size: 42px; font-weight: 900; color: var(--phi); }
+        .center-node p { font-size: 18px; color: var(--text-muted); text-align: center; margin-top: 12px; }
+
+        /* The Lines linking center out */
+        svg.connector-lines {
+            position: absolute; left: 0; top: 0; width: 8000px; height: 8000px; pointer-events: none; z-index: 20;
+        }
+        .line { stroke: var(--border); stroke-width: 4px; stroke-dasharray: 10, 10; }
+
+        /* Petal Card */
+        .petal-card {
+            position: absolute; width: 800px; background: rgba(8, 8, 14, 0.8);
+            border: 2px solid var(--border); border-radius: 24px; padding: 48px;
+            backdrop-filter: blur(24px); box-shadow: 0 20px 80px rgba(0,0,0,0.8);
+            transform: translate(-50%, -50%); display: flex; flex-direction: column; gap: 32px;
+            z-index: 40; transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .petal-header { display: flex; flex-direction: column; gap: 8px; border-bottom: 2px solid var(--border); padding-bottom: 24px; }
+        .petal-header h2 { font-size: 48px; font-weight: 900; letter-spacing: -1px; }
+        .petal-header .subtitle { font-size: 20px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+        .petal-header .desc { font-size: 18px; color: var(--text-main); line-height: 1.6; margin-top: 12px; }
+        
+        .petal-meta { display: flex; gap: 24px; align-items: center; margin-top: 16px; }
+        .badge { padding: 8px 16px; border-radius: 30px; font-size: 14px; font-weight: 700; border: 1px solid var(--border); background: rgba(255,255,255,0.03); }
+
+        /* Workflows Section */
+        .workflows { background: rgba(255,255,255,0.02); border-radius: 16px; padding: 24px; border: 1px solid var(--border); }
+        .workflows h3 { font-size: 16px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .workflow-tags { display: flex; flex-wrap: wrap; gap: 12px; }
+        .workflow-tag { background: rgba(192, 132, 252, 0.1); color: var(--phi); border: 1px solid rgba(192, 132, 252, 0.3); padding: 8px 16px; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; }
+
+        /* Skills List inside Petal */
+        .skills-container { display: flex; flex-direction: column; gap: 20px; }
+        .skills-container h3 { font-size: 22px; font-weight: 800; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+        
+        .skill-item {
+            background: rgba(255,255,255,0.015); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+            transition: all 0.2s; display: grid; grid-template-columns: 1fr; gap: 20px;
+        }
+        .skill-item:hover { background: rgba(255,255,255,0.04); border-color: var(--border-hover); }
+        .skill-header { display: flex; align-items: center; justify-content: space-between; }
+        .skill-header h4 { font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 12px; }
+        .skill-header h4::before { content: '⚡'; font-size: 14px; color: var(--text-muted); }
+        .skill-process { color: var(--text-muted); font-size: 16px; line-height: 1.5; }
+
+        .io-flow { display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: start; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; margin-top: 12px; border: 1px solid rgba(255,255,255,0.02); }
+        .io-col h5 { font-size: 13px; font-weight: 700; color: var(--text-dark); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px; }
+        .io-list { display: flex; flex-direction: column; gap: 8px; }
+        .io-pill { background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px; font-size: 14px; color: var(--text-main); }
+        .io-arrow { color: var(--text-dark); align-self: center; font-size: 24px; display: flex; flex-direction: column; justify-content: center; height: 100%; }
+        
+        /* Modal for specific details if needed */
+        #detail-modal {
+            position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(16px);
+            z-index: 1000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s;
+        }
+        .modal-content {
+            background: rgba(16,16,28,0.9); border: 1px solid var(--border); border-radius: 24px; padding: 48px;
+            width: 1000px; max-width: 90vw; max-height: 90vh; overflow-y: auto; position: relative;
+        }
+        .modal-close { position: absolute; top: 24px; right: 24px; background: none; border: none; color: var(--text-main); font-size: 24px; cursor: pointer; }
+
+    </style>
+</head>
+<body>
+
+<div class="bg-pattern"></div>
+
+<div class="topbar">
+    <h1>🌸 Flower of Life — Interactive SDD Explorer</h1>
+    <div class="controls">
+        <button class="btn" id="btn-zoom-in">Zoom In 🔍</button>
+        <button class="btn" id="btn-zoom-out">Zoom Out 🔍</button>
+        <button class="btn" id="btn-reset">Reset View 🎯</button>
+    </div>
+</div>
+
+<div id="canvas-wrapper">
+    <div id="canvas">
+        <!-- SVG connecting lines -->
+        <svg class="connector-lines" id="connector-lines"></svg>
+
+        <!-- Center Node -->
+        <div class="center-node">
+            <h2>○ AHNUNG</h2>
+            <p>Quantum Intuition Seed<br/>φ-Routing Engine</p>
+        </div>
+
+        <!-- Rendered Petals will be injected here via JS -->
+        <div id="petals-container"></div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script>
+const SDD_DATA = [
+    {
+        id: 'sense',
+        title: '🔭 SENSE',
+        subtitle: "12 o'clock · Outward",
+        color: 'var(--sense)', glow: 'var(--sense-glow)',
+        gate: 'PMF Score ≥ 6', flag: 'GO / PIVOT',
+        workflows: ['/petalSense', '/innovationSenseDiscovery', '/customerDiscovery'],
+        desc: 'Scan the field, map innovations, validate market fit, and discover blue ocean opportunities before building.',
+        conjugate: 'PROTECT (6 o\'clock)', angle: -90, // Top
+        skills: [
+            { name: 'horizon_scanner', process: 'Scans technology and market trends to find blue oceans.', inputs: ['Macro Trends', 'Competitor Radar'], outputs: ['Disruption Opportunities', 'Trend Report'] },
+            { name: 'disruption_scout', process: 'Identifies disruptive tech convergences and patentable combinations.', inputs: ['Trend Report'], outputs: ['Invention Candidates'] },
+            { name: 'need_detective', process: 'Evaluates real user needs, market size, and feasibility.', inputs: ['Invention Candidates'], outputs: ['Problem Statements', 'Feasibility Intel'] },
+            { name: 'market_fit_validator', process: 'Scores PMF readiness and finds real LinkedIn decision-makers.', inputs: ['Problem Statements'], outputs: ['PMF Score', 'Buyer Personas'] },
+            { name: 'competitive_radar', process: 'Monitors competitor patent filings and product launches.', inputs: ['Competitor Names'], outputs: ['Early Warning Radar', 'Competitor Maps'] },
+            { name: 'blind_spot_detector', process: 'Identifies what you are NOT measuring, seeing, or defending against.', inputs: ['Current Strategies'], outputs: ['Blind Spots Matrix', 'Correction Tasks'] }
+        ]
+    },
+    {
+        id: 'measure',
+        title: '🔬 MEASURE',
+        subtitle: "2 o'clock · Inward",
+        color: 'var(--measure)', glow: 'var(--measure-glow)',
+        gate: 'SDD Health & PDCA Cycles', flag: 'LEARN / ADJUST',
+        workflows: ['/petalMeasure', '/xpollination', '/audit_BP', '/bpcxpollinationspiderweb'],
+        desc: 'Observe, benchmark, learn, improve. Self-observing intelligence layer closing the feedback loop.',
+        conjugate: 'SELL (8 o\'clock)', angle: -30, // Top Right
+        skills: [
+            { name: 'sdd_health_monitor', process: 'Live tracking of skill invocation rates, routing accuracy, and workflow pipeline yield.', inputs: ['System Logs', 'Workflow States'], outputs: ['SDD Health Score', 'Health Dashboard'] },
+            { name: 'pdca_tracker', process: 'Logs what was planned versus done, checks feedback, and acts to close the learning loop.', inputs: ['Past Execution Data'], outputs: ['Phi-Weighted Learning Updates', 'PDCA Cycles'] },
+            { name: 'quality_gateway', process: 'Post-execution loop that routes failures back to the originating skill for improvement.', inputs: ['Skill Outputs'], outputs: ['Quality Verdicts', 'Rework Tokens'] },
+            { name: 'benchmark_architect', process: 'Designs self-improvement loops and evaluates dashboards (NIST AI 800 standards).', inputs: ['Feature Dashboards'], outputs: ['Benchmarking Blueprints'] },
+            { name: 'xpollination_analyst', process: 'Holistic cross-evaluation framework comparing solutions against BPC.', inputs: ['Solution Designs', 'BPC Metrcis'], outputs: ['Spider Web Visuals', 'BPC Scores'] },
+            { name: 'audit_master', process: '16-dimension BPC evaluator scoring systems against the OHM Diamond Standard.', inputs: ['System Repositories'], outputs: ['Audit Scores', 'Diamond Certification'] }
+        ]
+    },
+    {
+        id: 'ship',
+        title: '🚀 SHIP',
+        subtitle: "4 o'clock · Outward",
+        color: 'var(--ship)', glow: 'var(--ship-glow)',
+        gate: 'Patent Filed → GO', flag: 'BUILD / REWORK',
+        workflows: ['/petalShip', '/innovationSenseShip', '/ship_engine', '/patent', '/unittest'],
+        desc: 'Build, patent, register FEAT, mathematically verify, and document output via Autonomous Ship Engine.',
+        conjugate: 'DISSOLVE (10 o\'clock)', angle: 30, // Bottom Right
+        skills: [
+            { name: 'patent_claim_generator', process: 'Auto-generates USPTO-format independent and dependent patent claims.', inputs: ['TRIZ Dissolutions', 'Prior Art'], outputs: ['Filing-Ready Claim Sets'] },
+            { name: 'ship_engine', process: 'Autonomous development engine executing code implementation end-to-end.', inputs: ['Specifications', 'Process Docs'], outputs: ['Committed Code', 'Live Deployments'] },
+            { name: 'innovation_journal', process: 'Cryptographically evidence-backed timestamped invention logs.', inputs: ['Shipped Features'], outputs: ['Journal Entries'] },
+            { name: 'test_engineer', process: 'Generates comprehensive 6-category unit tests with mathematical verification.', inputs: ['Source Code'], outputs: ['Test Suites', 'Coverage Reports'] }
+        ]
+    },
+    {
+        id: 'protect',
+        title: '🛡️ PROTECT',
+        subtitle: "6 o'clock · Inward",
+        color: 'var(--protect)', glow: 'var(--protect-glow)',
+        gate: 'Score >= 80 + 0 P0s', flag: 'DEPLOY / HOLD',
+        workflows: ['/petalProtect', '/sovereignLaunch', '/security_audit', '/data_sovereignty_audit'],
+        desc: 'Secure, audit, comply, defend. Sovereign armor protecting every asset that ships to production.',
+        conjugate: 'SENSE (12 o\'clock)', angle: 90, // Bottom
+        skills: [
+            { name: 'security_audit', process: 'Analyzes Sovereign Architecture, Backend vulnerabilities, and Frontend leaks.', inputs: ['Source Code', 'Live App'], outputs: ['Security Report', 'P0 Defect List'] },
+            { name: 'data_sovereignty_audit', process: 'Scans for plaintext PII in DB, dead code, and un-wired services (interior audit).', inputs: ['Databases', 'App Source'], outputs: ['Sovereignty Score', 'Remediation Guide'] },
+            { name: 'launch_guardian', process: 'OWASP Top 10 pentesting and 100-point launch scoring.', inputs: ['Pre-Launch Environments'], outputs: ['Launch Score', 'Go/No-Go Decision'] },
+            { name: 'legal_compliance', process: 'Generates legally required pages (Impressum, DSGVO, AGB) accurately.', inputs: ['Site Context', 'Jurisdiction'], outputs: ['Legal HTML Pages'] },
+            { name: 'regulatory_navigator', process: 'Maps deep compliance frameworks (eIDAS, MiCA, DORA, NIS2).', inputs: ['Ops Plans', 'Tokens'], outputs: ['Regulatory Assessment'] },
+            { name: 'trust_architect', process: 'Implements radical transparency systems and founder authenticity protocols.', inputs: ['Marketing Narratives'], outputs: ['Trust Elements', 'Transparency Pages'] },
+            { name: 'legal_structure_audit', process: 'Holistic legal due diligence for non-profit to commercial subsidiary relationships.', inputs: ['Corporate Structures'], outputs: ['Liability Report', 'Corrective Acts'] }
+        ]
+    },
+    {
+        id: 'sell',
+        title: '🎯 SELL',
+        subtitle: "8 o'clock · Inward",
+        color: 'var(--sell)', glow: 'var(--sell-glow)',
+        gate: 'Revenue Path Clear', flag: 'GO / PIVOT',
+        workflows: ['/petalSell', '/revenueEngine', '/investorReady', '/contentBlitz', '/pricingOptimizer'],
+        desc: 'Price it, pitch it, orchestrate the funnel, convert users, and build viral product-led growth loops.',
+        conjugate: 'MEASURE (2 o\'clock)', angle: 150, // Bottom Left
+        skills: [
+            { name: 'strategic_advisor', process: 'Runs before Funnel Orchestrator to ensure initiatives serve OHM\'s edge.', inputs: ['Shipped Product'], outputs: ['Go/No-Go Call', 'Strategy Brief'] },
+            { name: 'pricing_optimizer', process: 'A/B tests frameworks, tiers, decoy effects, and XOM-to-EUR ratios.', inputs: ['Product Specs'], outputs: ['Pricing Strategy', 'Rate Tables'] },
+            { name: 'funnel_orchestrator', process: 'Chains skills into a complete CRM pipeline from Idea to Paid Invoice.', inputs: ['Pricing Strategy', 'Campaign Goals'], outputs: ['Sales Funnels', 'Automation Workflows'] },
+            { name: 'user_pitch', process: 'Deep persuasion system transforming landing pages into lifestyle funnels.', inputs: ['Feature Hooks'], outputs: ['B2C Pitch Copy', 'Landing Pages'] },
+            { name: 'business_pitch', process: 'Enterprise B2B sales framework with ROI and TCO focus.', inputs: ['Feature Hooks'], outputs: ['B2B Pitch Copy', 'Case Studies'] },
+            { name: 'investor_pitch', process: 'ROI-focused pitch transforming landing pages into TAM/SAM/SOM conversion engines.', inputs: ['Pitch Deck Needed'], outputs: ['Investor Pitch', 'Financial Projections'] },
+            { name: 'conversion_analyst', process: 'AIDA analysis, CTA testing matrices, and heatmap interpretations.', inputs: ['Funnels', 'Traffic'], outputs: ['Conversion Diagnostics'] },
+            { name: 'growth_hacker', process: 'Product-Led Growth (PLG) viral loop design and retention analysis.', inputs: ['Funnels'], outputs: ['Viral Hooks', 'Retention Hacks'] },
+            { name: 'content_alchemist', process: 'SEO-optimized content pipeline and topic clustering.', inputs: ['Pitch Themes'], outputs: ['Blog Posts', 'Social Media Copy'] },
+            { name: 'video_scriptwriter', process: 'Explainer videos, TikTok/Reels hooks, YouTube SEO scripts.', inputs: ['Pitches'], outputs: ['Video Scripts', 'Metadata'] }
+        ]
+    },
+    {
+        id: 'dissolve',
+        title: '⚡ DISSOLVE',
+        subtitle: "10 o'clock · Outward",
+        color: 'var(--dissolve)', glow: 'var(--dissolve-glow)',
+        gate: 'Survivability ≥ 70%', flag: 'GO / FIX',
+        workflows: ['/petalDissolve', '/innovationSenseDissolve', '/patent_fortress_auditor'],
+        desc: 'Find contradictions in ideas, dissolve them with TRIZ 40 Principles, and survive adversarial stress tests.',
+        conjugate: 'SHIP (4 o\'clock)', angle: 210, // Top Left
+        skills: [
+            { name: 'triz_whitespot', process: 'Applies 40 TRIZ Principles to dissolve trade-offs and map patentable whitespace.', inputs: ['Invention Candidates'], outputs: ['Contradiction Matrix', 'TRIZ Dissolutions'] },
+            { name: 'prior_art_research', process: 'Deep multi-jurisdiction prior art research across USPTO, EPO, WIPO.', inputs: ['TRIZ Dissolutions'], outputs: ['Prior Art Citations', 'IDS Data'] },
+            { name: 'devils_advocate', process: 'Adversarial intelligence that stress-tests ideas and features.', inputs: ['Proposed Strategies'], outputs: ['Survivability Score', 'Pre-Mortem Analysis'] },
+            { name: 'blind_spot_detector', process: 'Re-evaluates technical solutions for missed blind spots based on new logic.', inputs: ['TRIZ Dissolutions'], outputs: ['Updated Blind Spots'] }
+        ]
+    }
+];
+
+// UI Builders
+function buildIOColumn(title, items) {
+    return `
+        <div class="io-col">
+            <h5>${title}</h5>
+            <div class="io-list">
+                ${items.map(i => `<div class="io-pill">${i}</div>`).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function buildPetal(data) {
+    // Generate inner HTML for skills
+    const skillsHtml = data.skills.map(s => `
+        <div class="skill-item">
+            <div class="skill-header">
+                <h4 style="color: ${data.color}">${s.name}</h4>
+            </div>
+            <div class="skill-process">${s.process}</div>
+            <div class="io-flow">
+                ${buildIOColumn('Inputs 📥', s.inputs)}
+                <div class="io-arrow">→</div>
+                ${buildIOColumn('Outputs 📦', s.outputs)}
+            </div>
+        </div>
+    `).join('');
+
+    // Workflow tags
+    const workflowsHtml = data.workflows.map(w => `<div class="workflow-tag">${w}</div>`).join('');
+
+    return `
+        <div class="petal-card" id="petal-${data.id}" style="border-color: ${data.color}; box-shadow: 0 40px 100px ${data.glow}, inset 0 0 40px rgba(0,0,0,0.6);">
+            <div class="petal-header" style="border-bottom-color: ${data.color};">
+                <div style="display:flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="subtitle" style="color: ${data.color}">${data.subtitle}</div>
+                        <h2 style="color: ${data.color}">${data.title}</h2>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="badge" style="color: #fff; border-color: ${data.color}; background: ${data.color}20">Gate: ${data.gate}</span>
+                    </div>
+                </div>
+                <div class="desc">${data.desc}</div>
+                <div class="petal-meta">
+                    <span style="font-size: 14px; color: var(--text-muted);">🔗 Conjugate Partner: <strong style="color: var(--text-main);">${data.conjugate}</strong></span>
+                </div>
+            </div>
+            
+            <div class="workflows">
+                <h3>Summarizing Workflows</h3>
+                <div class="workflow-tags">${workflowsHtml}</div>
+            </div>
+
+            <div class="skills-container">
+                <h3 style="color: ${data.color}; border-bottom-color: ${data.color}40;">Internal Petal Processes (${data.skills.length} Skills)</h3>
+                ${skillsHtml}
+            </div>
+        </div>
+    `;
+}
+
+// Positioning logic
+const cx = 4000;
+const cy = 4000;
+const radius = 1800; // Distance of petals from center
+
+const container = document.getElementById('petals-container');
+const svg = document.getElementById('connector-lines');
+
+SDD_DATA.forEach(petal => {
+    // Calculate radians
+    const rad = (petal.angle - 90) * (Math.PI / 180); // -90 because 0 angle is x axis, we want 12 oclock via -90 deg logically standard
+    
+    // Position
+    const px = cx + radius * Math.cos(rad);
+    const py = cy + radius * Math.sin(rad);
+
+    // Draw connecting line
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', cx);
+    line.setAttribute('y1', cy);
+    line.setAttribute('x2', px);
+    line.setAttribute('y2', py);
+    line.setAttribute('class', 'line');
+    line.style.stroke = petal.color;
+    line.style.opacity = '0.3';
+    svg.appendChild(line);
+
+    // Inject HTML card
+    // We create a temporary wrapper to append to DOM
+    const div = document.createElement('div');
+    div.innerHTML = buildPetal(petal);
+    const cardNode = div.firstElementChild;
+    cardNode.style.left = px + 'px';
+    cardNode.style.top = py + 'px';
+    container.appendChild(cardNode);
+});
+
+// Initialize Panzoom
+const elem = document.getElementById('canvas');
+const panzoom = Panzoom(elem, {
+    maxScale: 2,
+    minScale: 0.05,
+    startScale: 0.15,
+    startX: -(cx - window.innerWidth/2),
+    startY: -(cy - window.innerHeight/2),
+    cursor: 'grab'
+});
+
+// Enable mouse wheel zooming
+elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+
+// Buttons
+document.getElementById('btn-zoom-in').addEventListener('click', panzoom.zoomIn);
+document.getElementById('btn-zoom-out').addEventListener('click', panzoom.zoomOut);
+document.getElementById('btn-reset').addEventListener('click', panzoom.reset);
+
+// Initial focus jump calculation helper
+panzoom.pan(window.innerWidth/2 - cx*0.15, window.innerHeight/2 - cy*0.15); // Hardcode logic to center properly on load with scale 0.15
+setTimeout(() => panzoom.pan(window.innerWidth/2 - cx*0.15, window.innerHeight/2 - cy*0.15), 50);
+</script>
+</body>
+</html>

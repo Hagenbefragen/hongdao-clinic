@@ -1,6 +1,7 @@
 ---
 name: Stream Room E2E Flow
 description: End-to-end skill to claim a stream room, invite friends with XOM/Trust, and verify the complete join flow.
+group: smart.frontend
 ---
 
 # Stream Room E2E Flow Skill

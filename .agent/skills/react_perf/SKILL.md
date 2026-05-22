@@ -1,6 +1,7 @@
 ---
 name: React Perfectionist
 description: Frontend expert for Performance, Hooks, and React Native/Web compatibility.
+group: smart.frontend
 ---
 
 # ⚛️ React Perfectionist Skill

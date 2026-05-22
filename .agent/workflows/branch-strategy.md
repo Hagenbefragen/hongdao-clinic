@@ -20,7 +20,7 @@ OHM uses a **single-branch model**. All work happens on `main`. No feature branc
 
 | Remote | URL | Purpose |
 |--------|-----|---------|
-| `sovereign` | `188.245.235.51:/root/git/ohm.git` | **Production** — triggers build |
+| `sovereign` | `78.46.219.101:/root/git/ohm.git` | **Production** — triggers build |
 | `origin` | `github.com/Hagenbefragen/OHM.git` | **Backup** — mirror only |
 
 ## 🚀 Deployment Flow

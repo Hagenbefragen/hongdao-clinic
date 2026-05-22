@@ -4,6 +4,8 @@ description: Generate comprehensive unit tests for any TypeScript module — pat
 
 # /unittest — Comprehensive Unit Test Generator
 
+> **🧠 SKILL REQUIRED:** Before executing this workflow, read the **Test Engineer** skill at `.agent/skills/test_engineer/SKILL.md` for the 6-category test design framework (Boundary, Happy, Mathematical, Roundtrip, Comparative, Property-Based), floating point precision rules, and synthetic data factory patterns.
+
 ## Purpose
 Generates a complete, production-grade unit test suite for any TypeScript module. Covers every exported function with edge cases, roundtrip verification, mathematical formula checks, and range validation. Inspired by the QFVC Patent Test Suite methodology.
 

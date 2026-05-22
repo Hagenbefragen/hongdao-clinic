@@ -8,7 +8,7 @@ This workflow deploys the Digital Twin AI stack:
 - **Backend** (API)
 - **Vector DB / Ollama / Piper**
 
-**Target Server:** `188.245.235.51`
+**Target Server:** `78.46.219.101`
 **Reference:** `Documentation/INFRASTRUCTURE/PORTS.md` (Verify DT service ports: 8003, 5434, 6381, 11434, 6333, 5000, 5060)
 
 // turbo-all

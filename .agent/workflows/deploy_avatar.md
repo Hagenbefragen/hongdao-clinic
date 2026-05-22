@@ -100,7 +100,7 @@ Open browser:
 
 ```powershell
 # ❌ BAD - WILL HANG
-ssh root@188.245.235.51 "docker-compose up -d"
+ssh root@78.46.219.101 "docker-compose up -d"
 ```
 
 **✅ ALWAYS use:**

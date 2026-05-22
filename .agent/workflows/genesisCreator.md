@@ -43,7 +43,7 @@ If you see ANY of these, it's a **BUG**:
 
 ```bash
 # SSH into production
-ssh -i "C:\ohm\ohm_deploy_key" root@188.245.235.51
+ssh -i "C:\ohm\ohm_deploy_key" root@78.46.219.101
 
 # Fix Genesis Creator in PostgreSQL
 docker exec ohm-postgres psql -U postgres -d ohm_db -c "

@@ -73,5 +73,5 @@ If ANY git command hangs for more than 30 seconds:
 - If the commit hangs, check if a large binary file is staged (use `git status` first)
 - Never stage `.zip`, `.tar.gz`, or `node_modules/` — add to `.gitignore`
 - If push to sovereign fails, DO NOT push to GitHub — fix sovereign first
-- The `sovereign` remote is: `root@188.245.235.51:/root/git/ohm.git`
+- The `sovereign` remote is: `root@78.46.219.101:/root/git/ohm.git`
 - The `origin` remote is: `https://github.com/Hagenbefragen/OHM.git`

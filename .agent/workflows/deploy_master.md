@@ -36,7 +36,7 @@ powershell -ExecutionPolicy Bypass -File ".\deploy_master.ps1"
 ### 2. Monitor Logs
 
 ```powershell
-ssh -i C:\OHM\ohm_deploy_key root@188.245.235.51 "pm2 logs --lines 50"
+ssh -i C:\OHM\ohm_deploy_key root@78.46.219.101 "pm2 logs --lines 50"
 ```
 
 ### 3. Verify All Services
@@ -68,4 +68,4 @@ git add -A ; git commit -m "deploy(master): v[X.Y.Z] - [description]"
 3. Website
 4. Digital Twin
 
-**Target Server:** `188.245.235.51`
+**Target Server:** `78.46.219.101`

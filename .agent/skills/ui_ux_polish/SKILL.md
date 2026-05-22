@@ -1,6 +1,7 @@
 ---
 name: UI/UX Polish
 description: Frontend design expert for Tailwind, Animation, and Accessibility.
+group: smart.frontend
 ---
 
 # 🎨 UI/UX Polish Skill

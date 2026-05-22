@@ -57,7 +57,7 @@ To view the dashboard on your local machine:
 1.  **Open a Terminal/PowerShell** on your local machine.
 2.  **Run the Tunnel Command** (Map remote port 19999 to local port 19999):
     ```powershell
-    ssh -L 19999:localhost:19999 -i "C:\ohm\ohm_deploy_key" root@188.245.235.51
+    ssh -L 19999:localhost:19999 -i "C:\ohm\ohm_deploy_key" root@78.46.219.101
     ```
 3.  **Open Browser:**
     Go to: `http://localhost:19999`

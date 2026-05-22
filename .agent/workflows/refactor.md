@@ -4,6 +4,8 @@ description: Safe, modular refactoring workflow for large monolithic components
 
 # /refactor - Safe Modular Refactoring Workflow
 
+> **🧠 SKILL REQUIRED:** Before executing this workflow, read the **Refactor Surgeon** skill at `.agent/skills/refactor_surgeon/SKILL.md` for complexity metrics, domain identification methodology, extraction patterns (hook, component, plugin), and safety protocol.
+
 **Philosophy:** "Measure twice, cut once. Refactor in small, testable increments."
 
 // turbo-all

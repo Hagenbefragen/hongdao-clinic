@@ -4,6 +4,8 @@ description: Legal Best Practice - Generate and publish all legally required pag
 
 # /legal_BP - Legal Best Practice Workflow
 
+> **🧠 SKILL REQUIRED:** Before executing this workflow, read the **Legal Compliance** skill at `.agent/skills/legal_compliance/SKILL.md` for Austrian/EU regulatory framework, GDPR structure, portal-specific terms taxonomy, and AI Act classification.
+
 **"Compliance is not optional. Get it right from Day 1."**
 
 // turbo-all

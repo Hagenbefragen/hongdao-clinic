@@ -1,6 +1,7 @@
 ---
 name: Security Audit (Strike First)
 description: Expert security analysis focusing on OHM's Sovereign Architecture, Backend vulnerabilities, and Frontend leaks.
+group: smart.security
 ---
 
 # 🛡️ Security Audit Skill (Strike First Protocol)

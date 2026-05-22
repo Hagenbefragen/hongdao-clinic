@@ -1,6 +1,7 @@
 ---
 name: Sovereign Data Guard
 description: Expert on OHM's Sovereign Identity, Data Vaults, and Crypto Encryption standards.
+group: smart.security
 ---
 
 # 🗝️ Sovereign Data Guard Skill

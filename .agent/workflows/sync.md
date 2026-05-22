@@ -112,4 +112,4 @@ This does:
 - Text-only brain is ~1.6MB and syncs in seconds
 - Knowledge Items sync via Git repo (`.agent/knowledge/`), Brain syncs via SCP directly
 - Uses SSH key: `c:\OHM\ohm_deploy_key`
-- Server path: `root@188.245.235.51:~/.gemini/antigravity/`
+- Server path: `root@78.46.219.101:~/.gemini/antigravity/`

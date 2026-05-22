@@ -1,6 +1,7 @@
 ---
 name: RunPod Deployer
 description: Automates RunPod custom endpoint setup for AI models with Docker build, push, and endpoint creation
+group: smart.devops
 ---
 
 # RunPod Deployer Skill

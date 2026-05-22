@@ -1,6 +1,7 @@
 ---
 name: Feature Tour Guide
 description: A specialized skill for conducting fast-paced, narrated automated feature tours of the application.
+group: smart.frontend
 ---
 
 # Feature Tour Guide Skill

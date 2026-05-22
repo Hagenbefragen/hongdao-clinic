@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚢 OHM Command Center — Need → Build → Ship</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: rgba(255, 255, 255, 0.04);
+            --bg-glass: rgba(255, 255, 255, 0.06);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(100, 180, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --text-muted: rgba(255, 255, 255, 0.35);
+            --accent: #64b4ff;
+            --accent2: #a78bfa;
+            --gold: #f5c842;
+            --green: #34d399;
+            --red: #f87171;
+            --orange: #fb923c;
+            --pink: #f472b6;
+            --cyan: #22d3ee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== AMBIENT BACKGROUND ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(100, 180, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(167, 139, 250, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(245, 200, 66, 0.03) 0%, transparent 60%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: relative;
+            z-index: 1;
+            padding: 24px 32px;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent), var(--accent2), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-glass);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .header-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent);
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 12px;
+            padding: 16px 32px;
+            background: rgba(10, 10, 15, 0.5);
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .stat-card {
+            flex: 1;
+            min-width: 140px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+
+        .stat-accent {
+            color: var(--accent);
+        }
+
+        .stat-gold {
+            color: var(--gold);
+        }
+
+        .stat-green {
+            color: var(--green);
+        }
+
+        .stat-orange {
+            color: var(--orange);
+        }
+
+        .stat-pink {
+            color: var(--pink);
+        }
+
+        .stat-cyan {
+            color: var(--cyan);
+        }
+
+        /* ===== TABS ===== */
+        .tabs {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 0;
+            padding: 0 32px;
+            background: rgba(10, 10, 15, 0.5);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab {
+            padding: 14px 20px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+            background: rgba(100, 180, 255, 0.05);
+        }
+
+        .tab-badge {
+            display: inline-block;
+            padding: 1px 6px;
+            border-radius: 10px;
+            background: var(--accent);
+            color: var(--bg-primary);
+            font-size: 0.65rem;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main {
+            position: relative;
+            z-index: 1;
+            padding: 24px 32px;
+        }
+
+        .panel {
+            display: none;
+        }
+
+        .panel.active {
+            display: block;
+        }
+
+        /* ===== NEED RADAR ===== */
+        .needs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+
+        .need-card {
+            padding: 20px;
+            border-radius: 14px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .need-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(100, 180, 255, 0.1);
+        }
+
+        .need-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .need-id {
+            font-size: 0.7rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .need-stage {
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .stage-detect {
+            background: rgba(100, 180, 255, 0.15);
+            color: var(--accent);
+        }
+
+        .stage-size {
+            background: rgba(167, 139, 250, 0.15);
+            color: var(--accent2);
+        }
+
+        .stage-scan {
+            background: rgba(34, 211, 238, 0.15);
+            color: var(--cyan);
+        }
+
+        .stage-feasible {
+            background: rgba(251, 146, 60, 0.15);
+            color: var(--orange);
+        }
+
+        .stage-business {
+            background: rgba(245, 200, 66, 0.15);
+            color: var(--gold);
+        }
+
+        .stage-contacts {
+            background: rgba(244, 114, 182, 0.15);
+            color: var(--pink);
+        }
+
+        .stage-loi {
+            background: rgba(52, 211, 153, 0.15);
+            color: var(--green);
+        }
+
+        .stage-offer {
+            background: linear-gradient(135deg, rgba(245, 200, 66, 0.2), rgba(52, 211, 153, 0.2));
+            color: var(--gold);
+        }
+
+        .stage-shipping {
+            background: linear-gradient(135deg, rgba(100, 180, 255, 0.2), rgba(167, 139, 250, 0.2));
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .need-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .need-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .need-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .need-meta-item {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .need-meta-item span {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .need-market {
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .need-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .need-btn {
+            flex: 1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-glass);
+            color: var(--text-primary);
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .need-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .need-btn.primary {
+            background: rgba(100, 180, 255, 0.15);
+            border-color: rgba(100, 180, 255, 0.3);
+            color: var(--accent);
+        }
+
+        .need-btn.primary:hover {
+            background: rgba(100, 180, 255, 0.25);
+        }
+
+        .need-btn.advance {
+            background: rgba(52, 211, 153, 0.15);
+            border-color: rgba(52, 211, 153, 0.3);
+            color: var(--green);
+        }
+
+        .need-btn.advance:hover {
+            background: rgba(52, 211, 153, 0.25);
+        }
+
+        /* ===== KANBAN ===== */
+        .kanban {
+            display: grid;
+            grid-template-columns: repeat(8, minmax(190px, 1fr));
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 16px;
+        }
+
+        .kanban-col {
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            min-height: 400px;
+        }
+
+        .kanban-col-header {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .kanban-count {
+            display: inline-block;
+            padding: 1px 6px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 0.65rem;
+        }
+
+        .kanban-item {
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            cursor: grab;
+            transition: all 0.2s;
+            font-size: 0.78rem;
+        }
+
+        .kanban-item:hover {
+            border-color: var(--accent);
+            background: rgba(100, 180, 255, 0.05);
+        }
+
+        .kanban-item-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .kanban-item-meta {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== BUSINESS DASHBOARD ===== */
+        .biz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 16px;
+        }
+
+        .biz-card {
+            padding: 20px;
+            border-radius: 14px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+        }
+
+        .biz-card h3 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chart-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .chart-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            width: 80px;
+            flex-shrink: 0;
+        }
+
+        .chart-track {
+            flex: 1;
+            height: 22px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .chart-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.6s ease-out;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            font-size: 0.65rem;
+            font-weight: 600;
+        }
+
+        .fill-blue {
+            background: linear-gradient(90deg, rgba(100, 180, 255, 0.6), rgba(100, 180, 255, 0.3));
+        }
+
+        .fill-purple {
+            background: linear-gradient(90deg, rgba(167, 139, 250, 0.6), rgba(167, 139, 250, 0.3));
+        }
+
+        .fill-gold {
+            background: linear-gradient(90deg, rgba(245, 200, 66, 0.6), rgba(245, 200, 66, 0.3));
+        }
+
+        .fill-green {
+            background: linear-gradient(90deg, rgba(52, 211, 153, 0.6), rgba(52, 211, 153, 0.3));
+        }
+
+        /* ===== USER FEEDBACK ===== */
+        .feedback-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .feedback-item {
+            padding: 14px 18px;
+            border-radius: 10px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .feedback-type {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .type-feature {
+            background: rgba(100, 180, 255, 0.15);
+        }
+
+        .type-bug {
+            background: rgba(248, 113, 113, 0.15);
+        }
+
+        .type-ux {
+            background: rgba(244, 114, 182, 0.15);
+        }
+
+        .type-business {
+            background: rgba(245, 200, 66, 0.15);
+        }
+
+        .feedback-content {
+            flex: 1;
+        }
+
+        .feedback-source {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .feedback-text {
+            font-size: 0.82rem;
+            margin-top: 4px;
+            line-height: 1.5;
+        }
+
+        .feedback-actions-bar {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        /* ===== SHIP STATUS ===== */
+        .ship-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 16px;
+        }
+
+        .ship-card {
+            padding: 20px;
+            border-radius: 14px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+        }
+
+        .ship-phases {
+            display: flex;
+            gap: 4px;
+            margin: 14px 0;
+        }
+
+        .ship-phase {
+            flex: 1;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s;
+        }
+
+        .ship-phase.done {
+            background: rgba(52, 211, 153, 0.2);
+            border-color: rgba(52, 211, 153, 0.3);
+            color: var(--green);
+        }
+
+        .ship-phase.active {
+            background: rgba(100, 180, 255, 0.2);
+            border-color: rgba(100, 180, 255, 0.4);
+            color: var(--accent);
+            animation: pulseBorder 2s infinite;
+        }
+
+        .ship-phase.pending {
+            opacity: 0.4;
+        }
+
+        @keyframes pulseBorder {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(100, 180, 255, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 0 4px rgba(100, 180, 255, 0.1);
+            }
+        }
+
+        /* ===== FORM (User Needs Tab) ===== */
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 32px;
+            border-radius: 16px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+        }
+
+        .form-container h2 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .form-container .form-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-secondary);
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(100, 180, 255, 0.04);
+        }
+
+        .form-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-select option {
+            background: var(--bg-secondary);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 25px rgba(100, 180, 255, 0.3);
+        }
+
+        /* ===== ADD NEED BTN ===== */
+        .add-need-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 100;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            border: none;
+            color: white;
+            font-size: 1.6rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(100, 180, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .add-need-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(100, 180, 255, 0.4);
+        }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 28px;
+            border-radius: 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .modal h2 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .modal-close {
+            float: right;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 24px;
+            border-radius: 10px;
+            z-index: 300;
+            background: rgba(52, 211, 153, 0.2);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            color: var(--green);
+            font-size: 0.85rem;
+            font-weight: 500;
+            opacity: 0;
+            transition: all 0.3s;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            opacity: 1;
+        }
+
+        /* ===== EMPTY STATE ===== */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header {
+                padding: 16px;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .stats-bar {
+                padding: 12px 16px;
+            }
+
+            .tabs {
+                padding: 0 16px;
+                overflow-x: auto;
+            }
+
+            .main {
+                padding: 16px;
+            }
+
+            .needs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .biz-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .kanban {
+                grid-template-columns: repeat(8, 250px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <div>
+                <h1>🚢 OHM Command Center</h1>
+                <div class="header-subtitle">Need → Research → Offer → Build → Ship → Feedback</div>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="header-btn" onclick="exportData()">📤 Export JSON</button>
+            <button class="header-btn" onclick="clearData()">🗑️ Reset</button>
+        </div>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stat-card">
+            <div class="stat-value stat-accent" id="stat-needs">0</div>
+            <div class="stat-label">Detected Needs</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value stat-gold" id="stat-pipeline">0</div>
+            <div class="stat-label">In Pipeline</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value stat-green" id="stat-offers">0</div>
+            <div class="stat-label">Active Offers</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value stat-orange" id="stat-shipping">0</div>
+            <div class="stat-label">Shipping</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value stat-pink" id="stat-feedback">0</div>
+            <div class="stat-label">Feedback Items</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value stat-cyan" id="stat-revenue">€0</div>
+            <div class="stat-label">Projected Revenue</div>
+        </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs">
+        <div class="tab active" data-tab="radar" onclick="switchTab('radar')">🎯 Need Radar</div>
+        <div class="tab" data-tab="pipeline" onclick="switchTab('pipeline')">📊 Pipeline</div>
+        <div class="tab" data-tab="business" onclick="switchTab('business')">💰 Business</div>
+        <div class="tab" data-tab="feedback" onclick="switchTab('feedback')">📬 Feedback <span class="tab-badge"
+                id="feedback-badge">0</span></div>
+        <div class="tab" data-tab="shipping" onclick="switchTab('shipping')">🚢 Ship Status</div>
+        <div class="tab" data-tab="submit" onclick="switchTab('submit')">📝 Submit Need</div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <!-- NEED RADAR PANEL -->
+        <div class="panel active" id="panel-radar">
+            <div class="needs-grid" id="needs-grid"></div>
+            <div class="empty-state" id="empty-radar" style="display:none">
+                <div class="empty-state-icon">🎯</div>
+                <p>No needs detected yet.<br>Click + to add one, or switch to "Submit Need" tab.</p>
+            </div>
+        </div>
+
+        <!-- PIPELINE PANEL -->
+        <div class="panel" id="panel-pipeline">
+            <div class="kanban" id="kanban-board"></div>
+        </div>
+
+        <!-- BUSINESS PANEL -->
+        <div class="panel" id="panel-business">
+            <div class="biz-grid" id="biz-grid"></div>
+        </div>
+
+        <!-- FEEDBACK PANEL -->
+        <div class="panel" id="panel-feedback">
+            <div class="feedback-list" id="feedback-list"></div>
+            <div class="empty-state" id="empty-feedback" style="display:none">
+                <div class="empty-state-icon">📬</div>
+                <p>No feedback received yet.<br>User feedback from SSO portals will appear here.</p>
+            </div>
+        </div>
+
+        <!-- SHIP STATUS PANEL -->
+        <div class="panel" id="panel-shipping">
+            <div class="ship-cards" id="ship-cards"></div>
+            <div class="empty-state" id="empty-shipping" style="display:none">
+                <div class="empty-state-icon">🚢</div>
+                <p>No active Ship Engine runs.<br>Needs must reach the "Offer" stage before shipping starts.</p>
+            </div>
+        </div>
+
+        <!-- SUBMIT NEED PANEL -->
+        <div class="panel" id="panel-submit">
+            <div class="form-container">
+                <h2>📝 Submit a Need</h2>
+                <p class="form-subtitle">Describe a real problem. We'll research, validate, and offer a solution.</p>
+                <form id="need-form" onsubmit="submitNeed(event)">
+                    <div class="form-group">
+                        <label class="form-label">What problem are you trying to solve? *</label>
+                        <textarea class="form-textarea" id="form-problem"
+                            placeholder="Describe the problem in your own words..." required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Industry / Use Case</label>
+                            <select class="form-select" id="form-industry">
+                                <option value="">Select...</option>
+                                <option value="B2B SaaS">B2B SaaS</option>
+                                <option value="Education">Education</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Legal">Legal</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Creative">Creative / Media</option>
+                                <option value="Wellness">Wellness / Coaching</option>
+                                <option value="Community">Community / Social</option>
+                                <option value="E-Commerce">E-Commerce</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Budget Range</label>
+                            <select class="form-select" id="form-budget">
+                                <option value="not-sure">Not sure yet</option>
+                                <option value="<5k">Under €5,000</option>
+                                <option value="5-15k">€5,000 - €15,000</option>
+                                <option value="15-50k">€15,000 - €50,000</option>
+                                <option value="50k+">€50,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Timeline</label>
+                            <select class="form-select" id="form-timeline">
+                                <option value="exploring">Just exploring</option>
+                                <option value="planned">Planned (next quarter)</option>
+                                <option value="urgent">Urgent (this month)</option>
+                                <option value="critical">Critical (ASAP)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Contact Email</label>
+                            <input class="form-input" type="email" id="form-email" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Business Process to Digitize (Optional)</label>
+                        <textarea class="form-textarea" id="form-process"
+                            placeholder="Describe the workflow or business process steps..."
+                            style="min-height:70px"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">🕵️ Submit for Need Detection</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADD NEED FAB -->
+    <button class="add-need-btn" onclick="openAddNeedModal()">+</button>
+
+    <!-- ADD NEED MODAL -->
+    <div class="modal-overlay" id="add-need-modal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>🎯 Add Detected Need</h2>
+            <form onsubmit="addNeedFromModal(event)">
+                <div class="form-group">
+                    <label class="form-label">Need Title *</label>
+                    <input class="form-input" id="modal-title" placeholder="e.g. Sovereign Email Hosting" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Problem Description *</label>
+                    <textarea class="form-textarea" id="modal-desc" placeholder="What problem does this solve?"
+                        required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Urgency</label>
+                        <select class="form-select" id="modal-urgency">
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                            <option value="Critical">Critical</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Market Size Estimate</label>
+                        <input class="form-input" id="modal-market" placeholder="e.g. €2M SAM">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Source / Evidence</label>
+                    <input class="form-input" id="modal-source"
+                        placeholder="e.g. 5 user requests, Reddit thread, industry report">
+                </div>
+                <button type="submit" class="form-submit">Add to Pipeline</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ===== DATA STORE =====
+        const STORAGE_KEY = 'ohm_command_center';
+        const STAGES = ['Detect', 'Size', 'Scan', 'Feasibility', 'Business Case', 'Contacts', 'LOI', 'Offer'];
+        const STAGE_CLASSES = ['stage-detect', 'stage-size', 'stage-scan', 'stage-feasible', 'stage-business', 'stage-contacts', 'stage-loi', 'stage-offer'];
+        const STAGE_EMOJIS = ['🔍', '📊', '🔭', '🔬', '💰', '📇', '📝', '📋'];
+
+        function loadData() {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (raw) return JSON.parse(raw);
+            return { needs: [], feedback: [], ships: [], nextId: 1 };
+        }
+
+        function saveData(data) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 2500);
+        }
+
+        // ===== TAB SWITCHING =====
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+            document.getElementById(`panel-${tabId}`).classList.add('active');
+        }
+
+        // ===== NEED RADAR =====
+        function renderNeeds() {
+            const data = loadData();
+            const grid = document.getElementById('needs-grid');
+            const empty = document.getElementById('empty-radar');
+
+            if (data.needs.length === 0) {
+                grid.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+            empty.style.display = 'none';
+
+            grid.innerHTML = data.needs.map(n => `
+            <div class="need-card">
+                <div class="need-header">
+                    <span class="need-id">NEED-${String(n.id).padStart(3, '0')}</span>
+                    <span class="need-stage ${STAGE_CLASSES[n.stage] || 'stage-detect'}">${STAGE_EMOJIS[n.stage]} ${STAGES[n.stage]}</span>
+                </div>
+                <div class="need-title">${escHtml(n.title)}</div>
+                <div class="need-desc">${escHtml(n.description).substring(0, 120)}${n.description.length > 120 ? '...' : ''}</div>
+                <div class="need-meta">
+                    <div class="need-meta-item">Urgency: <span>${n.urgency}</span></div>
+                    ${n.market ? `<div class="need-meta-item">Market: <span class="need-market">${escHtml(n.market)}</span></div>` : ''}
+                    ${n.source ? `<div class="need-meta-item">Source: <span>${escHtml(n.source)}</span></div>` : ''}
+                </div>
+                <div class="need-actions">
+                    ${n.stage < 7 ? `<button class="need-btn advance" onclick="advanceNeed(${n.id})">▶ Advance to ${STAGES[n.stage + 1]}</button>` : `<button class="need-btn advance" onclick="shipNeed(${n.id})">🚢 Ship It!</button>`}
+                    <button class="need-btn" onclick="removeNeed(${n.id})">🗑️</button>
+                </div>
+            </div>
+        `).join('');
+        }
+
+        function advanceNeed(id) {
+            const data = loadData();
+            const need = data.needs.find(n => n.id === id);
+            if (need && need.stage < 7) {
+                need.stage++;
+                saveData(data);
+                renderAll();
+                showToast(`NEED-${String(id).padStart(3, '0')} advanced to ${STAGES[need.stage]}`);
+            }
+        }
+
+        function shipNeed(id) {
+            const data = loadData();
+            const need = data.needs.find(n => n.id === id);
+            if (need) {
+                data.ships.push({
+                    id: need.id,
+                    title: need.title,
+                    startTime: new Date().toISOString(),
+                    phases: [
+                        { name: 'Implement', status: 'pending' },
+                        { name: 'Self-Heal', status: 'pending' },
+                        { name: 'Polish', status: 'pending' },
+                        { name: 'Validate', status: 'pending' },
+                        { name: 'Report', status: 'pending' },
+                        { name: 'Feedback', status: 'pending' }
+                    ],
+                    currentPhase: 0
+                });
+                need.stage = 8; // Mark as shipping
+                saveData(data);
+                renderAll();
+                showToast(`🚢 NEED-${String(id).padStart(3, '0')} sent to Ship Engine!`);
+            }
+        }
+
+        function removeNeed(id) {
+            const data = loadData();
+            data.needs = data.needs.filter(n => n.id !== id);
+            saveData(data);
+            renderAll();
+            showToast('Need removed');
+        }
+
+        // ===== KANBAN =====
+        function renderKanban() {
+            const data = loadData();
+            const board = document.getElementById('kanban-board');
+
+            board.innerHTML = STAGES.map((stage, idx) => {
+                const items = data.needs.filter(n => n.stage === idx);
+                return `
+                <div class="kanban-col">
+                    <div class="kanban-col-header">
+                        <span>${STAGE_EMOJIS[idx]} ${stage}</span>
+                        <span class="kanban-count">${items.length}</span>
+                    </div>
+                    ${items.map(n => `
+                        <div class="kanban-item" onclick="advanceNeed(${n.id})">
+                            <div class="kanban-item-title">${escHtml(n.title)}</div>
+                            <div class="kanban-item-meta">NEED-${String(n.id).padStart(3, '0')} · ${n.urgency}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            }).join('');
+        }
+
+        // ===== BUSINESS DASHBOARD =====
+        function renderBusiness() {
+            const data = loadData();
+            const grid = document.getElementById('biz-grid');
+
+            // Stage distribution
+            const stageCounts = STAGES.map((s, i) => data.needs.filter(n => n.stage === i).length);
+            const maxCount = Math.max(1, ...stageCounts);
+
+            // Revenue projection (mock based on needs in later stages)
+            const midStageNeeds = data.needs.filter(n => n.stage >= 4).length;
+            const lateStageNeeds = data.needs.filter(n => n.stage >= 6).length;
+            const projectedRevenue = midStageNeeds * 15000 + lateStageNeeds * 30000;
+
+            grid.innerHTML = `
+            <div class="biz-card">
+                <h3>📊 Pipeline Distribution</h3>
+                ${STAGES.map((s, i) => `
+                    <div class="chart-bar">
+                        <div class="chart-label">${s}</div>
+                        <div class="chart-track">
+                            <div class="chart-fill fill-blue" style="width: ${(stageCounts[i] / maxCount * 100)}%">${stageCounts[i] > 0 ? stageCounts[i] : ''}</div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="biz-card">
+                <h3>💰 Revenue Projection</h3>
+                <div class="chart-bar">
+                    <div class="chart-label">Year 1</div>
+                    <div class="chart-track">
+                        <div class="chart-fill fill-gold" style="width: ${Math.min(100, projectedRevenue / 1000)}%">€${projectedRevenue.toLocaleString()}</div>
+                    </div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Year 2</div>
+                    <div class="chart-track">
+                        <div class="chart-fill fill-green" style="width: ${Math.min(100, projectedRevenue * 2.5 / 1000)}%">€${(projectedRevenue * 2.5).toLocaleString()}</div>
+                    </div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Year 3</div>
+                    <div class="chart-track">
+                        <div class="chart-fill fill-purple" style="width: 100%">€${(projectedRevenue * 5).toLocaleString()}</div>
+                    </div>
+                </div>
+                <div style="margin-top:16px; font-size:0.75rem; color:var(--text-muted)">
+                    Based on ${midStageNeeds} mid-stage + ${lateStageNeeds} late-stage opportunities
+                </div>
+            </div>
+            <div class="biz-card">
+                <h3>📇 Contact Overview</h3>
+                <div class="chart-bar">
+                    <div class="chart-label">Hot Leads</div>
+                    <div class="chart-track"><div class="chart-fill fill-gold" style="width: ${lateStageNeeds * 30}%">${lateStageNeeds * 3}</div></div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Warm</div>
+                    <div class="chart-track"><div class="chart-fill fill-blue" style="width: ${midStageNeeds * 20}%">${midStageNeeds * 5}</div></div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Cold</div>
+                    <div class="chart-track"><div class="chart-fill fill-purple" style="width: ${data.needs.length * 10}%">${data.needs.length * 10}</div></div>
+                </div>
+            </div>
+            <div class="biz-card">
+                <h3>📝 LOI Status</h3>
+                <div class="chart-bar">
+                    <div class="chart-label">Signed</div>
+                    <div class="chart-track"><div class="chart-fill fill-green" style="width: ${data.needs.filter(n => n.stage >= 7).length * 25}%">${data.needs.filter(n => n.stage >= 7).length}</div></div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Pending</div>
+                    <div class="chart-track"><div class="chart-fill fill-gold" style="width: ${data.needs.filter(n => n.stage === 6).length * 25}%">${data.needs.filter(n => n.stage === 6).length}</div></div>
+                </div>
+                <div class="chart-bar">
+                    <div class="chart-label">Shipped</div>
+                    <div class="chart-track"><div class="chart-fill fill-blue" style="width: ${data.ships.length * 25}%">${data.ships.length}</div></div>
+                </div>
+            </div>
+        `;
+        }
+
+        // ===== FEEDBACK =====
+        function renderFeedback() {
+            const data = loadData();
+            const list = document.getElementById('feedback-list');
+            const empty = document.getElementById('empty-feedback');
+            const badge = document.getElementById('feedback-badge');
+
+            badge.textContent = data.feedback.length;
+
+            if (data.feedback.length === 0) {
+                list.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+            empty.style.display = 'none';
+
+            const typeMap = { feature: ['💡', 'type-feature'], bug: ['🐛', 'type-bug'], ux: ['🎨', 'type-ux'], business: ['💼', 'type-business'] };
+
+            list.innerHTML = data.feedback.map((f, i) => {
+                const [emoji, cls] = typeMap[f.type] || ['📬', 'type-feature'];
+                return `
+                <div class="feedback-item">
+                    <div class="feedback-type ${cls}">${emoji}</div>
+                    <div class="feedback-content">
+                        <div class="feedback-source">${escHtml(f.source || 'Portal Feedback')} · ${f.type.toUpperCase()} · ${new Date(f.date).toLocaleDateString()}</div>
+                        <div class="feedback-text">${escHtml(f.text)}</div>
+                        <div class="feedback-actions-bar">
+                            <button class="need-btn primary" onclick="feedbackToNeed(${i})">→ Create Need</button>
+                            <button class="need-btn" onclick="dismissFeedback(${i})">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            }).join('');
+        }
+
+        function feedbackToNeed(idx) {
+            const data = loadData();
+            const fb = data.feedback[idx];
+            if (fb) {
+                data.needs.push({
+                    id: data.nextId++,
+                    title: fb.text.substring(0, 60),
+                    description: fb.text,
+                    urgency: 'Medium',
+                    stage: 0,
+                    source: `Feedback: ${fb.source}`,
+                    market: '',
+                    createdAt: new Date().toISOString()
+                });
+                data.feedback.splice(idx, 1);
+                saveData(data);
+                renderAll();
+                showToast('Feedback converted to Need!');
+            }
+        }
+
+        function dismissFeedback(idx) {
+            const data = loadData();
+            data.feedback.splice(idx, 1);
+            saveData(data);
+            renderAll();
+        }
+
+        // ===== SHIP STATUS =====
+        function renderShips() {
+            const data = loadData();
+            const container = document.getElementById('ship-cards');
+            const empty = document.getElementById('empty-shipping');
+            const PHASES = ['Implement', 'Self-Heal', 'Polish', 'Validate', 'Report', 'Feedback'];
+
+            if (data.ships.length === 0) {
+                container.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+            empty.style.display = 'none';
+
+            container.innerHTML = data.ships.map(s => `
+            <div class="ship-card">
+                <div class="need-header">
+                    <span class="need-id">PDD-${String(s.id).padStart(3, '0')}</span>
+                    <span class="need-stage stage-shipping">🚢 Shipping</span>
+                </div>
+                <div class="need-title">${escHtml(s.title)}</div>
+                <div class="ship-phases">
+                    ${s.phases.map((p, i) => `
+                        <div class="ship-phase ${p.status}" title="${p.name}">
+                            ${p.status === 'done' ? '✅' : p.status === 'active' ? '⚡' : '○'} ${i + 1}
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="need-actions">
+                    <button class="need-btn primary" onclick="advanceShipPhase(${s.id})">▶ Advance Phase</button>
+                    <button class="need-btn" onclick="completeShip(${s.id})">✅ Complete</button>
+                </div>
+            </div>
+        `).join('');
+        }
+
+        function advanceShipPhase(id) {
+            const data = loadData();
+            const ship = data.ships.find(s => s.id === id);
+            if (ship) {
+                if (ship.currentPhase < ship.phases.length) {
+                    ship.phases[ship.currentPhase].status = 'done';
+                    ship.currentPhase++;
+                    if (ship.currentPhase < ship.phases.length) {
+                        ship.phases[ship.currentPhase].status = 'active';
+                    }
+                }
+                saveData(data);
+                renderAll();
+                showToast(`Phase ${ship.currentPhase} complete!`);
+            }
+        }
+
+        function completeShip(id) {
+            const data = loadData();
+            data.ships = data.ships.filter(s => s.id !== id);
+            saveData(data);
+            renderAll();
+            showToast('Ship complete! 🎉');
+        }
+
+        // ===== STATS =====
+        function updateStats() {
+            const data = loadData();
+            document.getElementById('stat-needs').textContent = data.needs.length;
+            document.getElementById('stat-pipeline').textContent = data.needs.filter(n => n.stage > 0 && n.stage < 7).length;
+            document.getElementById('stat-offers').textContent = data.needs.filter(n => n.stage >= 7).length;
+            document.getElementById('stat-shipping').textContent = data.ships.length;
+            document.getElementById('stat-feedback').textContent = data.feedback.length;
+            const rev = data.needs.filter(n => n.stage >= 4).length * 15000 + data.needs.filter(n => n.stage >= 6).length * 30000;
+            document.getElementById('stat-revenue').textContent = `€${rev.toLocaleString()}`;
+        }
+
+        // ===== FORM SUBMISSION =====
+        function submitNeed(e) {
+            e.preventDefault();
+            const data = loadData();
+            data.needs.push({
+                id: data.nextId++,
+                title: document.getElementById('form-problem').value.substring(0, 60),
+                description: document.getElementById('form-problem').value,
+                urgency: document.getElementById('form-timeline').value === 'critical' ? 'Critical' :
+                    document.getElementById('form-timeline').value === 'urgent' ? 'High' : 'Medium',
+                stage: 0,
+                source: 'User Submit',
+                market: '',
+                industry: document.getElementById('form-industry').value,
+                budget: document.getElementById('form-budget').value,
+                email: document.getElementById('form-email').value,
+                process: document.getElementById('form-process').value,
+                createdAt: new Date().toISOString()
+            });
+            saveData(data);
+            document.getElementById('need-form').reset();
+            renderAll();
+            switchTab('radar');
+            showToast('Need submitted! Now in Detection stage.');
+        }
+
+        // ===== MODAL =====
+        function openAddNeedModal() { document.getElementById('add-need-modal').classList.add('active'); }
+        function closeModal() { document.getElementById('add-need-modal').classList.remove('active'); }
+
+        function addNeedFromModal(e) {
+            e.preventDefault();
+            const data = loadData();
+            data.needs.push({
+                id: data.nextId++,
+                title: document.getElementById('modal-title').value,
+                description: document.getElementById('modal-desc').value,
+                urgency: document.getElementById('modal-urgency').value,
+                stage: 0,
+                source: document.getElementById('modal-source').value,
+                market: document.getElementById('modal-market').value,
+                createdAt: new Date().toISOString()
+            });
+            saveData(data);
+            closeModal();
+            renderAll();
+            showToast('Need added to pipeline!');
+            e.target.reset();
+        }
+
+        // ===== EXPORT / RESET =====
+        function exportData() {
+            const data = loadData();
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = `ohm_command_center_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            showToast('Data exported!');
+        }
+
+        function clearData() {
+            if (confirm('Reset all Command Center data? This cannot be undone.')) {
+                localStorage.removeItem(STORAGE_KEY);
+                renderAll();
+                showToast('All data cleared');
+            }
+        }
+
+        // ===== HELPERS =====
+        function escHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str || '';
+            return div.innerHTML;
+        }
+
+        function renderAll() {
+            renderNeeds();
+            renderKanban();
+            renderBusiness();
+            renderFeedback();
+            renderShips();
+            updateStats();
+        }
+
+        // ===== SEED DEMO DATA =====
+        function seedDemoData() {
+            const data = loadData();
+            if (data.needs.length > 0 || data.feedback.length > 0) return; // Don't seed if data exists
+
+            data.needs = [
+                { id: 1, title: 'Sovereign Email Hosting', description: 'Users want email that lives on their sovereign identity — no Google, no Microsoft. Full E2E encryption with PQC.', urgency: 'High', stage: 5, source: 'Portal feedback (12 users)', market: '€50M SAM', createdAt: '2026-02-15T10:00:00Z' },
+                { id: 2, title: 'AI-Powered Legal Document Generator', description: 'Small businesses need affordable legal docs (NDA, AGB, DPA) generated from templates with AI customization.', urgency: 'High', stage: 3, source: 'Interview with 3 founders', market: '€120M SAM', createdAt: '2026-02-14T08:00:00Z' },
+                { id: 3, title: 'Coaching Session Marketplace', description: 'Coaches want to list and sell 1:1 sessions directly through OHM with XOM payments and sovereign scheduling.', urgency: 'Medium', stage: 1, source: 'FEAT-094 research', market: '€30M SAM', createdAt: '2026-02-16T12:00:00Z' },
+                { id: 4, title: 'Decentralized File Storage', description: 'Replace Dropbox/Drive with sovereign file storage backed by IPFS and encrypted with user keys.', urgency: 'Low', stage: 0, source: 'Community request', market: '', createdAt: '2026-02-17T09:00:00Z' },
+                { id: 5, title: 'Hardware Security Key Integration', description: 'Support YubiKey / FIDO2 for login across all portals, enhancing PQC security posture.', urgency: 'Critical', stage: 6, source: 'Security audit recommendation', market: '€15M SAM', createdAt: '2026-02-13T14:00:00Z' }
+            ];
+            data.feedback = [
+                { type: 'feature', text: 'Would love to have a dark mode toggle that remembers my preference across all portals', source: 'echo.offlinehumanmode.com', date: '2026-02-17T14:30:00Z' },
+                { type: 'bug', text: 'Login redirect takes 3s on mobile Safari - feels broken', source: 'app.offlinehumanmode.com', date: '2026-02-17T11:00:00Z' },
+                { type: 'ux', text: 'The Trust Score visualization is confusing. Can you add tooltips explaining each dimension?', source: 'identity.offlinehumanmode.com', date: '2026-02-16T09:00:00Z' },
+                { type: 'business', text: 'We are a team of 50 and need sovereign video conferencing. Can OHM replace Zoom for us?', source: 'business inquiry', date: '2026-02-17T08:00:00Z' }
+            ];
+            data.ships = [
+                {
+                    id: 1, title: 'Sovereign Email Hosting',
+                    startTime: '2026-02-17T15:00:00Z',
+                    phases: [
+                        { name: 'Implement', status: 'done' },
+                        { name: 'Self-Heal', status: 'done' },
+                        { name: 'Polish', status: 'active' },
+                        { name: 'Validate', status: 'pending' },
+                        { name: 'Report', status: 'pending' },
+                        { name: 'Feedback', status: 'pending' }
+                    ],
+                    currentPhase: 2
+                }
+            ];
+            data.nextId = 6;
+            saveData(data);
+        }
+
+        // ===== INIT =====
+        seedDemoData();
+        renderAll();
+    </script>
+
+</body>
+
+</html>

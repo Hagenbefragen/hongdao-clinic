@@ -4,6 +4,8 @@ description: Master workflow for feature requests from ideation to production de
 
 # /featurerequest - Unified Feature Development Workflow
 
+> **🧠 SKILL AVAILABLE:** For the strategy phase, read the **Strategy Architect** skill at `.agent/skills/strategy_architect/SKILL.md` for ELWMS component mapping, onion levels, and reuse identification.
+
 **"Best of Best - From Idea to Bulletproof Deployment."**
 
 This master workflow manages the complete feature lifecycle:
@@ -17,9 +19,11 @@ This master workflow manages the complete feature lifecycle:
 
 ## 📁 Feature Locations
 
-- **Feature Tracker**: `.agent/features/FEATURE_REQUEST_TRACKER.md`
-- **Research Notes**: `.agent/features/research/FEAT-XXX_[name].md`
-- **Prototypes**: `.agent/features/prototypes/FEAT-XXX/`
+> 🔴 **CANONICAL LOCATION:** `c:\ohm\Documentation\features\research\FEAT-XXX_[topic]\`
+> ⛔ **DEPRECATED:** `.agent/features/research/` — NEVER create FEAT folders there!
+
+- **FEAT Number Counter**: `Documentation/features/research/FEAT_NUMBER_COUNTER.md` ← **READ THIS FIRST**
+- **Research Notes**: `Documentation/features/research/FEAT-XXX_[name]/`
 - **Implementation Plans**: `Documentation/Plans/FEAT-XXX_[name].md`
 - **Final Docs**: `Documentation/AS_BUILD/[Category]/FEAT-XXX_[name].md`
 
@@ -75,21 +79,27 @@ Check if:
 
 | Criteria                  | Max Points | Threshold |
 | ------------------------- | ---------- | --------- |
-| Maintenance (commit <6mo) | 10         | 6+        |
-| Popularity (>1000 stars)  | 10         | 6+        |
-| Bundle Size (<100KB gzip) | 10         | 6+        |
-| TypeScript Support        | 10         | 8+        |
-| Documentation Quality     | 10         | 6+        |
+| Maintenance (commit <6mo) | 10         | 8+        |
+| Popularity (>1000 stars)  | 10         | 8+        |
+| Bundle Size (<100KB gzip) | 10         | 8+        |
+| TypeScript Support        | 10         | 9+        |
+| Documentation Quality     | 10         | 8+        |
 | License (MIT/Apache)      | 10         | 10        |
-| Browser Compatibility     | 10         | 8+        |
-| Performance (60fps)       | 10         | 6+        |
+| Browser Compatibility     | 10         | 9+        |
+| Performance (60fps)       | 10         | 8+        |
 
-**Minimum Score: 50/80 to proceed**
+**Minimum Score: 70/80 to proceed**
 
 ### 2.2 Create Research Document
 
-```bash
-New-Item -Path ".agent/features/research/FEAT-XXX_[feature_name].md" -ItemType File
+**MANDATORY: Read FEAT_NUMBER_COUNTER.md first!**
+
+```powershell
+# 1. Check and reserve the next FEAT number
+Get-Content "c:\ohm\Documentation\features\research\FEAT_NUMBER_COUNTER.md" | Select-String "Next Available"
+# 2. Create the folder
+New-Item -Path "c:\ohm\Documentation\features\research\FEAT-XXX_[feature_name]" -ItemType Directory
+# 3. Update FEAT_NUMBER_COUNTER.md with the new entry
 ```
 
 **Include:**
@@ -186,6 +196,7 @@ If feature involves **video/streaming**:
 
 - [ ] **Monetization**: Need subscription tier? (`/admin_app`)
 - [ ] **Treasury**: Involves XOM? Link to `XomBankService` (No manual increments!)
+- [ ] **XOM Integrity**: Run `/xom_integrity` audit for any invite/payment/balance changes
 - [ ] **Legal**: Collects user data? Update `PrivacyPolicy.tsx`
 
 ### 6.2 Sovereign Ethics ("Soul Check")
@@ -200,9 +211,38 @@ If feature involves **video/streaming**:
 - [ ] **Best Practice**: No "MVP hacks" - Diamond Standard only
 - [ ] **Future-Proof**: Design for extensibility
 
+### 6.4 XPollination Decision Criteria (BPC Evaluation)
+
+> **Before ANY implementation, this is the ULTIMATE AUTHORITY.**
+
+- [ ] **Purpose Alignment:** Ensure the operational goal and purpose of the solution are unambiguously defined.
+- [ ] **Pure Improvement:** Must provide quantitative evidence that it improves one or more BPCs (Best Practice Criteria) without trade-offs.
+- [ ] **Zero Negative Impact:** Ensure no other BPCs are degraded.
+- [ ] **Trade-Off Resolution:** If a trade-off exists, run `@[/petalDissolve]` to dissolve it.
+
 ---
 
 ## 🛠️ Step 7: Implementation Phases
+
+### Phase 0: Token Budget Guard (FEAT-163) 🛡️
+
+Before generating ANY large output (HTML, patent docs, dashboards):
+
+```powershell
+# Check if output will exceed 16,384 token limit
+$src = Get-Item "[source-file]"
+if ($src.Length -gt 30KB) { Write-Host "🔴 USE SCRIPT (generate-*.cjs)" }
+```
+
+| Output Type                | Size Indicator | Action                                           |
+| -------------------------- | -------------- | ------------------------------------------------ |
+| HTML doc from >30KB source | 🔴             | Write a `generate-*.cjs` script, run via Node.js |
+| HTML doc from >30 claims   | 🔴             | Write a `generate-*.cjs` script, run via Node.js |
+| Code file >500 lines       | 🟡             | Chunk into 2-3 phases (scaffold → fill)          |
+| Report/doc <10KB           | 🟢             | Inline generation OK                             |
+
+> 🔥 **Cost of ignoring:** ~$3.22 per burn × estimated 100+ burns = **$322+ wasted**
+> Template: `scripts/generate-ni-extension-html.cjs`
 
 ### Phase 1: Core Functionality
 
@@ -236,7 +276,7 @@ If feature involves **video/streaming**:
 
 | Status         | Meaning                             | Location                    |
 | -------------- | ----------------------------------- | --------------------------- |
-| 🔄 Research    | Investigating libraries/feasibility | `.agent/features/research/` |
+| 🔄 Research    | Investigating libraries/feasibility | `Documentation/features/research/` |
 | 📋 Planning    | Architecture design                 | `Documentation/Plans/`      |
 | 🚧 In Progress | Active development                  | Feature Tracker             |
 | 🔍 Review      | All phases complete, awaiting audit | `Documentation/REVIEW/`     |
@@ -265,8 +305,13 @@ If feature involves **video/streaming**:
    - Autonomous testing of all UI flows
 
 4. **Documentation** (`/documentation`)
+
    - Save final spec to `Documentation/AS_BUILD/[Category]/`
    - Link in `Documentation/00_INDEX.md`
+
+5. **XOM Integrity** (`/xom_integrity`) _(if feature touches economy)_
+   - Run 4-phase audit: Frontend → Backend → E2E → Cross-Module
+   - Verify no silent capping, mock APIs, or arithmetic errors
 
 ---
 
@@ -322,6 +367,7 @@ Full workflow + Step 6 mandatory. Create dedicated Implementation Plan in `Docum
 - `/browsertest` - Autonomous testing
 - `/addtestcase` - Test case creation
 - `/documentation` - Documentation standards
+- `/xom_integrity` - XOM economy audit (auto-triggered for payment/invite features)
 
 ---
 

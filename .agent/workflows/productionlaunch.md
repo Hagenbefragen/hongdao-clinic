@@ -4,6 +4,8 @@ description: Production Launch Readiness — Security, Penetration Testing, Hack
 
 # /productionlaunch — OHM Production Launch Readiness & Security Audit
 
+> **🧠 SKILL REQUIRED:** Before executing this workflow, read the **Launch Guardian** skill at `.agent/skills/launch_guardian/SKILL.md` for OWASP Top 10:2025 vulnerability assessment, hacking simulation scenarios, and 100-point launch scoring.
+
 // turbo-all
 
 ## 🎯 Overview

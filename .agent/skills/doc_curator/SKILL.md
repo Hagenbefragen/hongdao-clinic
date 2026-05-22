@@ -1,6 +1,7 @@
 ---
 name: Doc Curator
 description: Documentation expert ensuring Knowledge Items (KIs) and Markdown docs stay in sync.
+group: smart.docs
 ---
 
 # 📚 Doc Curator Skill

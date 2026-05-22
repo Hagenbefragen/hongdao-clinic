@@ -1,6 +1,7 @@
 ---
 name: DB Optimizer
 description: Database expert for PostgreSQL indexing, TypeORM query optimization, and Redis caching.
+group: smart.backend
 ---
 
 # 🐘 DB Optimizer Skill

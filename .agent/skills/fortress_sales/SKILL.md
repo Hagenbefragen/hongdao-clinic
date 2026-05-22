@@ -1,6 +1,7 @@
 ---
 name: FORTRESS Sales Presenter
 description: Automated sales presentation skill for FORTRESS military-grade content protection. Features Browser-Native Voice (TTS) and Live Mock Data Injection.
+group: smart.frontend
 ---
 
 # 🛡️ FORTRESS Sales Presenter Skill (Pro Edition)

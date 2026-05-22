@@ -17,7 +17,7 @@ When creating a new portal, page, or feature that requires user authentication (
 
 ### 0a. DNS A Record
 
-- [ ] Add `A` record for `newportal.offlinehumanmode.com → 188.245.235.51` (TTL: 3600)
+- [ ] Add `A` record for `newportal.offlinehumanmode.com → 78.46.219.101` (TTL: 3600)
 
 ### 0b. Nginx Configuration
 
@@ -28,8 +28,43 @@ When creating a new portal, page, or feature that requires user authentication (
 
 ### 0c. SSL Certificate Expansion
 
-- [ ] Run `certbot --nginx --expand --non-interactive -d offlinehumanmode.com -d ... -d newportal.offlinehumanmode.com`
-- [ ] Verify: `openssl x509 -in /etc/letsencrypt/live/offlinehumanmode.com/cert.pem -noout -ext subjectAltName`
+> [!CAUTION] > **NEVER** run certbot with `--cert-name` and only a SINGLE `-d` flag!
+> This REPLACES the entire cert with ONLY that one domain, destroying ALL other subdomains!
+> **Incidents: Feb 18 + Feb 20, 2026** — ALL portals ERR_CERT_COMMON_NAME_INVALID
+
+- [ ] **Step 1**: Get the current domain list first:
+
+  ```bash
+  certbot certificates --cert-name offlinehumanmode.com-0002 | grep Domains:
+  ```
+
+- [ ] **Step 2**: Run with `--expand` and list **ALL existing domains + new one**:
+
+  ```bash
+  # ✅ CORRECT — --expand + ALL existing + new domain
+  certbot --nginx --cert-name offlinehumanmode.com-0002 --expand \
+    -d offlinehumanmode.com -d www.offlinehumanmode.com \
+    -d app.offlinehumanmode.com -d stream.offlinehumanmode.com \
+    -d [... COPY ALL DOMAINS FROM STEP 1 ...] \
+    -d newportal.offlinehumanmode.com \
+    --non-interactive
+
+  # ❌ FATAL — REPLACES cert with ONLY this domain!
+  # certbot --nginx --cert-name offlinehumanmode.com-0002 -d newportal.offlinehumanmode.com
+
+  # ❌ FATAL — creates NEW cert path, breaks symlinks!
+  # certbot --nginx -d newportal.offlinehumanmode.com
+  ```
+
+- [ ] Verify from local Windows (no SSH needed):
+  ```powershell
+  $tcp = New-Object System.Net.Sockets.TcpClient
+  $tcp.Connect('newportal.offlinehumanmode.com', 443)
+  $ssl = New-Object System.Net.Security.SslStream($tcp.GetStream(), $false, {$true})
+  $ssl.AuthenticateAsClient('newportal.offlinehumanmode.com')
+  Write-Host "Subject: $($ssl.RemoteCertificate.Subject)"  # Must show CN=offlinehumanmode.com
+  $ssl.Close(); $tcp.Close()
+  ```
 
 ### 0d. Portal Registry
 

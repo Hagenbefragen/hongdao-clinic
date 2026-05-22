@@ -119,8 +119,8 @@ export { myFeaturePlugin };
 cd frontend
 npm run build
 Compress-Archive -Path ./dist/* -DestinationPath ./frontend-dist.zip -Force
-scp -i C:\Users\Hagen\.ssh\ohm-clean-1 ./frontend-dist.zip root@188.245.235.51:/var/www/ohm/frontend/
-ssh -i C:\Users\Hagen\.ssh\ohm-clean-1 root@188.245.235.51 "cd /var/www/ohm/frontend && unzip -o frontend-dist.zip && rm frontend-dist.zip"
+scp -i C:\Users\Hagen\.ssh\ohm-clean-1 ./frontend-dist.zip root@78.46.219.101:/var/www/ohm/frontend/
+ssh -i C:\Users\Hagen\.ssh\ohm-clean-1 root@78.46.219.101 "cd /var/www/ohm/frontend && unzip -o frontend-dist.zip && rm frontend-dist.zip"
 ```
 
 ## Plugin Positions

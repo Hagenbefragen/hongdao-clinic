@@ -3,6 +3,8 @@ description: XPollination Holistic Best Practice Evaluation Framework
 ---
 # /xpollination - Holistic Best Practice Evaluation
 
+> **🧠 SKILL REQUIRED:** Before executing this workflow, read the **XPollination Analyst** skill at `.agent/skills/xpollination_analyst/SKILL.md` for hierarchical BPC design methodology, TÜV-rigor scoring standards, and spider web data architecture.
+
 **Purpose:** Conduct holistic Best Practice evaluations for any product/technology/use case, identifying Best Practice Solutions (BPS) against comprehensive Best Practice Criteria (BPC).
 
 ## Core Framework

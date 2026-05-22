@@ -1,6 +1,7 @@
 ---
 name: Solidity Guard
 description: Web3 Smart Contract expert for Polygon/EVM, focusing on Gas, Security and XOM Logic.
+group: smart.frontend
 ---
 
 # ⛓️ Solidity Guard Skill
