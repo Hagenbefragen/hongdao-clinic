@@ -10,23 +10,23 @@ const translations = {
     // Navigation
     "nav-home": "Home",
     "nav-about": "About & Masters",
-    "nav-treatments": "Treatments",
+    "nav-treatments": "Health Maintenance",
     "nav-devices": "Technology",
-    "nav-programs": "Programs",
+    "nav-programs": "Association Programs",
     "nav-retreat": "Yunnan Retreat",
     "nav-info": "Clinic Info",
-    "nav-apply": "Apply Now",
+    "nav-apply": "Register",
 
     // Hero Section
-    "hero-tag": "Traditional Chinese Medicine meets Modern Technology",
+    "hero-tag": "Traditional Chinese Medicine & Health Maintenance by Lebensfluss e.V.",
     "hero-title": "Traditional Chinese Medicine & Clinical Diagnostics",
-    "hero-desc": "Experience professional medical support led by TCM Master Xu Ruqi. We integrate classical herbal medicine and pulse diagnostics with modern clinical measurement methods for your health and recovery.",
-    "hero-cta-apply": "Apply Now",
+    "hero-desc": "Experience professional health maintenance led by TCM Master Xu Ruqi. Lebensfluss e.V. integrates classical herbal medicine and pulse diagnostics with modern measurement methods for your health and recovery.",
+    "hero-cta-apply": "Register Now",
     "hero-cta-more": "Explore Programs",
 
     // Introduction / Philosophy
     "intro-title": "TCM Experience Meets Modern Diagnostics",
-    "intro-desc": "Our Shenzhen practice integrates decades of experience in pulse diagnostics and herbal therapy with clinical examination devices, supportive sound therapy, and nutritional guidance. We offer structured care for patients facing endometriosis, hormonal imbalances, chronic fatigue, and stress-related conditions.",
+    "intro-desc": "Our health maintenance practice integrates decades of experience in pulse diagnostics and herbal therapy with modern wellness measurement devices, supportive sound therapy, and nutritional guidance. We offer structured care for members facing endometriosis, hormonal imbalances, chronic fatigue, and stress-related conditions.",
 
     // Masters & Team
     "team-title": "Lineage Keepers & Specialized Healers",
@@ -35,7 +35,7 @@ const translations = {
     "master-xu-desc": "Master Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases.",
     "doctor-1-title": "Specialized Physician & Stem Cell Therapy",
     "doctor-1-name": "Dr. Jingwen Qiao (乔建文)",
-    "doctor-1-desc": "Dr. Jingwen Qiao combines modern diagnostics with classical herbal medicine and pelvic moxibustion for pain and hormonal balance.",
+    "doctor-1-desc": "Dr. Adrianna Qiao integrates advanced cellular research with TCM health maintenance for cellular health.",
     "doctor-4-name": "Dr. Weina Guan (管蔚娜)",
     "doctor-4-spec": "Licensed TCM Physician. Specialist in meridian detoxification, clinical acupuncture, and therapeutic massages.",
     "doctor-5-name": "Hailin Zhang (张海林)",
@@ -44,7 +44,6 @@ const translations = {
     "decoction-subtitle": "In-House Herbal Craftsmanship",
     "decoction-title": "Modern Decoction Center & Dao Di Herbs",
     "decoction-desc": "<p style=\"margin-bottom: 1.5rem;\">We source exclusively high-quality <strong>Dao Di Herbs (道地藥材)</strong> from certified organic cultivation and soil-specific farming methods, grown in regions that offer the optimal climatic and energetic conditions for each native plant.</p><p>In our in-house Decoction Center, under the direct supervision of Master Xu, these herbs are individually extracted, precisely processed, and portion-packed into <strong>Ready-to-Drink decoctions</strong> that you can easily take home.</p>",
-    "doctor-1-desc": "Dr. Adrianna Qiao integrates advanced stem cell therapies with TCM rejuvenation techniques for cellular health, fertility, and hormonal balance.",
     "visionary-deng-title": "Translation, Sound Therapy & Patient Support",
     "visionary-deng-desc": "Deng Nanjing translates Master Xu's consultations and diagnostic findings into German, English, and Italian. She also facilitates sound therapy sessions, tea ceremonies, and supports guests with all organizational needs during their stay.",
     "visionary-deng-spec": "Translation, Sound Therapy & Patient Support",
@@ -57,17 +56,17 @@ const translations = {
     "doctor-sound-spec": "Lead Sound Healer & Vibration Therapist, coordinating energy realignment and emotional release.",
 
     // Specialized Treatments
-    "treatments-title": "Specialized Medical Fields",
-    "treatments-subtitle": "Tailored, highly focused healing strategies for targeted recovery.",
+    "treatments-title": "Health Maintenance Fields",
+    "treatments-subtitle": "Tailored, highly focused strategies for targeted recovery.",
     "treatment-1-title": "Endometriosis & Women's Health",
     "treatment-1-desc": "Custom herbal pastes, womb massage, and acupressure to dissolve blood stagnation and relieve chronic pain.",
     "treatment-2-title": "Stem Cell & Longevity",
-    "treatment-2-desc": "Dr. Adrianna Qiao integrates advanced stem cell therapies with TCM rejuvenation techniques for cellular health.",
+    "treatment-2-desc": "Dr. Adrianna Qiao integrates advanced cellular research with TCM health maintenance for cellular health.",
     "treatment-3-title": "Stress & Burnout Recovery",
     "treatment-3-desc": "Holistic relief for high-pressure lifestyles using pulse-guided acupuncture and relaxing sound frequencies.",
     
     // Modern Devices
-    "devices-title": "Advanced Clinical Technology",
+    "devices-title": "Advanced Health Maintenance Technology",
     "devices-subtitle": "Traditional diagnostic wisdom validated by high-end modern devices.",
     "device-1-name": "Infrared Thermal Imaging",
     "device-1-desc": "Maps body inflammation, circulation blockages, and meridian temperature patterns.",
@@ -77,28 +76,28 @@ const translations = {
     "device-3-desc": "Delivers gentle microcurrents to traditional acupuncture points to double healing speed.",
 
     // Programs & Endometriosis calculator
-    "programs-title": "Healing Programs & Training",
-    "programs-subtitle": "From intensive teacher trainings to customized personal recovery retreats.",
+    "programs-title": "Association Health Programs & Training",
+    "programs-subtitle": "From intensive training courses to customized personal health maintenance retreats.",
     
     "retreat-10day-title": "10-Day Teacher Training & Retreat",
     "retreat-10day-date": "October 10th - October 20th, 2026",
-    "retreat-10day-desc": "A complete immersion in TCM theory and practice. 5 days of clinical observation in Shenzhen under Master Xu, followed by 5 days of Daoist lifestyle integration in the Wudang Mountains. Limited to 12 participants.",
-    "retreat-10day-price": "From €3,900 (Early Bird)",
+    "retreat-10day-desc": "A complete immersion in TCM theory and health maintenance. 5 days of clinical observation in Shenzhen under Master Xu, followed by 5 days of Daoist lifestyle integration in the Wudang Mountains. Limited to 12 participants.",
+    "retreat-10day-price": "€3,900 Cost Contribution (Early Bird)",
     
     "retreat-1day-title": "1-Day Shenzhen Local Programs",
-    "retreat-1day-desc": "Focused local masterclasses. Perfect for nearby practitioners wishing to experience direct clinic shadowing, pulse diagnostic introduction, and herbal kitchen preparation.",
-    "retreat-1day-price": "€250 per session",
+    "retreat-1day-desc": "Focused local masterclasses. Perfect for nearby association members wishing to experience direct practice observation, pulse diagnostic introduction, and herbal kitchen preparation.",
+    "retreat-1day-price": "€250 Cost Contribution per day",
     
-    "endo-program-title": "Endometriosis Healing Program",
-    "endo-program-desc": "A dedicated, fully customizable program addressing uterine health, hormone balance, and pain relief. Features customized herbal formulas (which you can take home as powder or paste), womb massage, sound healing, and direct doctor guidance.",
+    "endo-program-title": "Endometriosis Health Maintenance Program",
+    "endo-program-desc": "A dedicated, fully customizable association program addressing uterine health, hormone balance, and pain relief. Features customized herbal formulas, womb massage, sound healing, and direct guidance.",
     "endo-select-duration": "Select Program Duration:",
     "duration-1w": "1 Week",
     "duration-2w": "2 Weeks",
     "duration-4w": "4 Weeks",
     "package-basic": "Outpatient (No Boarding)",
-    "package-premium": "Premium Retreat (With Luxury Hotel & TCM Kitchen)",
+    "package-premium": "Premium Retreat (With Partner Hotel & TCM Kitchen)",
     "endo-included-title": "What's Included:",
-    "endo-price-note": "*Note: Prices exclude individually prescribed customized herbal medicines to take home.",
+    "endo-price-note": "*Note: Cost contributions exclude individually prescribed customized herbal medicines.",
 
     // Yunnan Retreat
     "yunnan-title": "Yunnan 3-Day Nature Extension",
@@ -117,22 +116,22 @@ const translations = {
     "info-location-desc": "HongDao TCM Clinic, Shenzhen Nanshan District. Easily reachable via metro and highway.",
     "info-hours-label": "Opening Hours",
     "info-hours-desc": "Monday - Saturday: 09:00 - 18:00 (Appointments Required)",
-    "info-payment-label": "Booking & Payment policy",
-    "info-payment-desc": "Online booking is immediately available. Please note your booking is officially confirmed only upon receipt of your personalized confirmation email. Existing payment methods will be securely processed.",
+    "info-payment-label": "Registration & Cost Contribution Policy",
+    "info-payment-desc": "Online registration is available. Please note your registration is officially confirmed only upon receipt of your personalized confirmation email. All contributions go directly toward covering the costs of the association's health maintenance programs.",
     
     "faq-title": "Frequently Asked Questions",
-    "faq-q1": "Are customized herbal medicines included in the program fee?",
-    "faq-a1": "No. The customized herbal prescriptions, available as easy-to-take powder or paste formulas to take home, are billed separately based on individual diagnostic needs.",
+    "faq-q1": "Are customized herbal medicines included in the cost contribution?",
+    "faq-a1": "No. Individually prepared herbal formulas for home use are provided separately to compensate for the direct preparation costs according to diagnostic needs.",
     "faq-q2": "How is the Yunnan travel organized?",
-    "faq-a2": "Our team coordinates the train/flight transfers from Shenzhen. The program covers the local partner hotel stay, guiding, and specified activities.",
+    "faq-a2": "Our team coordinates transfer assistance. The program covers the local partner hotel stay, guidance, and specified activities.",
     "faq-q3": "Can I bring my family?",
     "faq-a3": "Yes. Our HongDao Child Space offers family-friendly support and special weekend activities for children while parents undergo therapies.",
 
     // Contact
     "contact-title": "Begin Your Healing Journey",
-    "contact-subtitle": "Contact us or apply directly for your customized program.",
-    "contact-free-consult": "Book a Free 15-Min Consultation",
-    "contact-free-desc": "Speak directly with Nanjing Deng to discuss your symptoms and select the ideal treatment path.",
+    "contact-subtitle": "Contact us or register directly for your customized program.",
+    "contact-free-consult": "Request a Free 15-Min Consultation",
+    "contact-free-desc": "Speak directly with Nanjing Deng to discuss your symptoms and select the ideal health maintenance path.",
     "contact-label-name": "Full Name",
     "contact-label-email": "Email Address",
     "contact-label-phone": "Phone Number",
@@ -140,21 +139,21 @@ const translations = {
     "contact-label-date": "Select Consultation Date (Wed & Sat)",
     "contact-label-slot": "Select Time Slot (Chinese Time 14:00 - 20:00)",
     "contact-label-message": "Brief Medical History / Notes",
-    "contact-submit-btn": "Apply Now",
-    "contact-submit-email": "Apply via Email",
-    "contact-submit-whatsapp": "Apply via WhatsApp",
+    "contact-submit-btn": "Register Now",
+    "contact-submit-email": "Register via Email",
+    "contact-submit-whatsapp": "Register via WhatsApp",
     "contact-social-text": "Connect with us on Social Media for daily health tips, sound circles and tea recipes:",
     "whatsapp-text": "Chat on WhatsApp",
     "instagram-text": "Instagram: nanjing_tea.sound",
 
     // Interactive Booking Toast/Confirm
-    "booking-success-toast": "Application submitted! Check your email inbox for confirmation.",
+    "booking-success-toast": "Registration submitted! Check your email inbox for confirmation.",
     
     // Marketing Popup
-    "popup-title": "Exclusive Healing Offer",
-    "popup-desc": "Embrace a gentle spiritual transformation. Apply today for our Endometriosis Programs or the Wudang Retreat and receive 10% off your initial clinical diagnosis session.",
-    "popup-code-label": "Your Exclusive Application Code:",
-    "popup-cta": "Apply with Code",
+    "popup-title": "Association Support Code",
+    "popup-desc": "Support our health maintenance initiatives. Register today for our Endometriosis Programs or the Wudang Retreat and receive a 10% reduction on the cost contribution for your initial consultation.",
+    "popup-code-label": "Your Registration Code:",
+    "popup-cta": "Register with Code",
 
     // Fungal Medicine & Resources
     "treatment-4-badge": "Mycology",
@@ -222,27 +221,31 @@ const translations = {
     "gallery-item-soundbath-badge": "Sound Bath",
     "gallery-item-soundbath-title": "Nature Sound Bath",
     "btn-read-article": "Read Article",
-    "endo-read-approach": "Treatment Approach & Case Studies"
+    "endo-read-approach": "Treatment Approach & Case Studies",
+    "footer-impressum": "Impressum / Legal Notice",
+    "footer-privacy": "Privacy Policy"
   },
   de: {
     // Navigation
     "nav-home": "Startseite",
     "nav-about": "Über uns & Meister",
-    "nav-treatments": "Behandlungen",
+    "nav-treatments": "Gesundheitspflege",
     "nav-devices": "Medizintechnik",
-    "nav-programs": "Programme",
+    "nav-programs": "Vereinsprogramme",
     "nav-retreat": "Yunnan-Retreat",
     "nav-info": "Klinik-Info",
-       // Hero Section
-    "hero-tag": "Traditionelle Chinesische Medizin trifft moderne Medizintechnik",
+    "nav-apply": "Anmelden",
+
+    // Hero Section
+    "hero-tag": "Traditionelle Chinesische Medizin & Gesundheitspflege durch Lebensfluss e.V.",
     "hero-title": "Traditionelle Chinesische Medizin & Klinische Diagnostik",
-    "hero-desc": "Erfahren Sie wirksame Begleitung unter der Leitung von TCM-Meister Xu Ruqi. Wir verbinden die klassische Kräuterheilkunde und Pulsdiagnose mit modernen klinischen Messverfahren für Ihre Gesundheit und Regeneration.",
-    "hero-cta-apply": "Jetzt bewerben",
-    "hero-cta-more": "Programme entdecken",
+    "hero-desc": "Erfahren Sie wirksame Begleitung unter der Leitung von TCM-Meister Xu Ruqi. Lebensfluss e.V. verbindet klassische Kräutermedizin und Pulsdiagnostik mit modernen Messverfahren für Ihre Regeneration.",
+    "hero-cta-apply": "Jetzt anmelden",
+    "hero-cta-more": "Vereinsprogramme entdecken",
 
     // Introduction / Philosophy
     "intro-title": "TCM-Erfahrung trifft auf moderne Medizintechnik",
-    "intro-desc": "Unsere Shenzhen-Praxis verbindet jahrzehntelange Erfahrung in der Pulsdiagnostik und Kräutertherapie mit klinischen Untersuchungsgeräten, begleitender Klangtherapie und Ernährungsberatung. Wir bieten eine strukturierte Betreuung für Patientinnen und Patienten mit Endometriose, hormonellen Störungen, Erschöpfungssyndrom und chronischem Stress.",
+    "intro-desc": "Unsere Praxis für Gesundheitspflege verbindet jahrzehntelange Erfahrung in der Pulsdiagnostik und Kräutertherapie mit modernen Messgeräten, begleitender Klangtherapie und Ernährungsberatung. Wir bieten strukturierte Begleitung für Vereinsmitglieder mit Endometriose, hormonellen Störungen, Erschöpfungssyndrom und Stress.",
 
     // Masters & Team
     "team-title": "Hüter der Tradition & Spezialisierte Heiler",
@@ -251,7 +254,7 @@ const translations = {
     "master-xu-desc": "Meister Xu Ruqi verfügt über mehr als 40 Jahre Erfahrung in Pulsdiagnostik und klassischer Kräutermedizin. Als klinischer Experte an der Pekinger Universität für Chinesische Medizin ist er weltweit bekannt für die Behandlung schwerer chronischer Krankheiten, Tumoren und gynäkologischer Leiden.",
     "doctor-1-title": "Spezialisierte Ärztin & Stammzelltherapie",
     "doctor-1-name": "Dr. Jingwen Qiao (乔建文)",
-    "doctor-1-desc": "Dr. Jingwen Qiao verbindet moderne Diagnostik mit klassischer Kräuterheilkunde und Becken-Moxibustion bei Schmerz- und Hormonleiden.",
+    "doctor-1-desc": "Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.",
     "doctor-4-name": "Dr. Weina Guan (管蔚娜)",
     "doctor-4-spec": "Staatlich lizenzierte TCM-Ärztin. Spezialistin für Meridian-Entgiftung, Akupunktur und therapeutische Massagen.",
     "doctor-5-name": "Hailin Zhang (张海林)",
@@ -260,7 +263,6 @@ const translations = {
     "decoction-subtitle": "Hauseigene Kräuter-Manufaktur",
     "decoction-title": "Modernes Dekokt-Zentrum & Dao Di Kräuter",
     "decoction-desc": "<p style=\"margin-bottom: 1.5rem;\">Wir beziehen ausschließlich hochwertige <strong>Dao Di Kräuter (道地藥材)</strong> aus kontrolliert biologischem Anbau und Soil-Technik aus den Herkunftsregionen, die für die jeweilige Pflanze die optimalen klimatischen und energetischen Bedingungen bieten.</p><p>In unserem hauseigenen Dekokt-Zentrum werden die Heilkräuter unter Aufsicht von Meister Xu individuell für Sie extrahiert, präzise verarbeitet und portioniert als <strong>gebrauchsfertige Kräuterdekokte (Ready-to-Drink)</strong> abgepackt, die Sie unkompliziert mit nach Hause nehmen können.</p>",
-    "doctor-1-desc": "Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.",
     "visionary-deng-title": "Übersetzung, Klangbegleitung & Patientenbetreuung",
     "visionary-deng-desc": "Deng Nanjing übersetzt die Konsultationen und Befunde von Meister Xu verlässlich ins Deutsche, Englische und Italienische. Begleitend leitet sie Klangsitzungen und Teezeremonien und unterstützt Sie bei allen organisatorischen Anliegen während Ihres Aufenthaltes.",
     "visionary-deng-spec": "Übersetzung, Klangbegleitung & Patientenbetreuung.",
@@ -273,8 +275,8 @@ const translations = {
     "doctor-sound-spec": "Klangheiler & Vibrationstherapeut, leitet die energetische Ausrichtung und emotionale Entlastung.",
 
     // Specialized Treatments
-    "treatments-title": "Spezialisierte Fachbereiche",
-    "treatments-subtitle": "Maßgeschneiderte Behandlungsstrategien für Ihre gezielte Genesung.",
+    "treatments-title": "Fachbereiche der Gesundheitspflege",
+    "treatments-subtitle": "Maßgeschneiderte Begleitung für Ihre gezielte Regeneration.",
     "treatment-1-title": "Endometriose & Frauengesundheit",
     "treatment-1-desc": "Individuelle Kräuterpasten, Womb-Massage (Gebärmutter-Massage) und Akupressur zur Lösung von Stagnationen und Schmerzlinderung.",
     "treatment-2-title": "Stammzellen & Langlebigkeit",
@@ -283,7 +285,7 @@ const translations = {
     "treatment-3-desc": "Ganzheitliche Begleitung bei Belastungszuständen durch pulsgeführte Akupunktur und begleitende Klangtherapie.",
 
     // Modern Devices
-    "devices-title": "Klinische Medizintechnik",
+    "devices-title": "Technologie zur Gesundheitspflege",
     "devices-subtitle": "Traditionelle TCM-Diagnostik, präzisiert durch modernste klinische Geräte.",
     "device-1-name": "Infrarot-Thermografie",
     "device-1-desc": "Visualisiert Entzündungen, Durchblutungsstörungen und energetische Blockaden in den Meridianen.",
@@ -293,28 +295,28 @@ const translations = {
     "device-3-desc": "Unterstützt die klassische Nadelung durch präzise Mikroströme zur Anregung der Nervenregeneration.",
 
     // Programs & Endometriosis calculator
-    "programs-title": "Heilungsprogramme & Kurse",
-    "programs-subtitle": "Vom intensiven Ausbildungskurs bis zum maßgeschneiderten Therapieprogramm.",
+    "programs-title": "Gesundheitsprogramme & Kurse des Vereins",
+    "programs-subtitle": "Vom intensiven Ausbildungskurs bis zum maßgeschneiderten Gesundheitspflege-Programm.",
     
     "retreat-10day-title": "10-tägiges TCM-Training & Retreat",
     "retreat-10day-date": "10. Oktober - 20. Oktober 2026",
-    "retreat-10day-desc": "Komplette Immersion in TCM-Theorie & Praxis. 5 Tage klinische Hospitation in Shenzhen unter Meister Xu, gefolgt von 5 Tagen taoistischer Lebensführung in den Wudang-Bergen. Maximal 12 Teilnehmer.",
-    "retreat-10day-price": "Ab €3.900,- (Frühbucher)",
+    "retreat-10day-desc": "Komplette Immersion in TCM-Theorie & Gesundheitspflege. 5 Tage Hospitation in Shenzhen unter Meister Xu, gefolgt von 5 Tagen taoistischer Lebensführung in den Wudang-Bergen. Maximal 12 Teilnehmer.",
+    "retreat-10day-price": "€3.900,- Kostenbeitrag (Frühbucher)",
     
     "retreat-1day-title": "1-tägige Programme (Shenzhen)",
-    "retreat-1day-desc": "Lokale Tageskurse vor Ort. Ideal für Praktizierende für klinische Hospitationen, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.",
-    "retreat-1day-price": "€250,- pro Tag",
+    "retreat-1day-desc": "Lokale Tageskurse vor Ort. Ideal für Vereinsmitglieder zur Hospitation, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.",
+    "retreat-1day-price": "€250,- Kostenbeitrag pro Tag",
     
-    "endo-program-title": "Endometriose-Heilprogramm",
-    "endo-program-desc": "Ein spezialisiertes, 1-4 wöchiges Heilprogramm für Frauen, individuell anpassbar. Enthält Kräutermedizin (als Pulver oder Paste zum Mitnehmen), Womb-Massagen, Sound Healing, Ernährungsanalyse und langfristige Begleitung.",
+    "endo-program-title": "Endometriose-Gesundheitspflegeprogramm",
+    "endo-program-desc": "Ein spezialisiertes, individuell anpassbares Gesundheitspflege-Programm für Frauen. Enthält Kräuterrezepturen, Womb-Massagen, Sound Healing, Ernährungsanalyse und Begleitung.",
     "endo-select-duration": "Programmdauer wählen:",
     "duration-1w": "1 Woche",
     "duration-2w": "2 Wochen",
     "duration-4w": "4 Wochen",
-    "package-basic": "Ohne Unterkunft & Verpflegung (Ambulant)",
-    "package-premium": "Premium (Inkl. Luxus-Boutique-Hotel & TCM-Küche)",
+    "package-basic": "Ambulant (ohne Unterkunft)",
+    "package-premium": "Premium (inkl. Partnerhotel & TCM-Küche)",
     "endo-included-title": "Inklusive Leistungen:",
-    "endo-price-note": "*Hinweis: Alle Preise beinhalten keine individuell verschreibungspflichtige Kräutermedizin.",
+    "endo-price-note": "*Hinweis: Die Kostenbeiträge beinhalten keine individuelle Kräutermedizin.",
 
     // Yunnan Retreat
     "yunnan-title": "3-tägiges Yunnan Natur-Retreat",
@@ -333,21 +335,21 @@ const translations = {
     "info-location-desc": "HongDao TCM-Klinik, Nanshan District, Shenzhen. Gut angebunden an Metro und Autobahn.",
     "info-hours-label": "Öffnungszeiten",
     "info-hours-desc": "Montag - Samstag: 09:00 - 18:00 Uhr (Nur nach Terminvereinbarung)",
-    "info-payment-label": "Buchung & Zahlungsablauf",
-    "info-payment-desc": "Eine Online-Zahlung ist sofort möglich. Die Buchung gilt jedoch erst nach Erhalt der Bestätigungs-E-Mail als offiziell bestätigt. Die bereits hinterlegte Zahlungsmethode wird verwendet.",
+    "info-payment-label": "Anmeldung & Kostenbeitrag",
+    "info-payment-desc": "Die Online-Anmeldung ist möglich. Die Anmeldung gilt erst nach Erhalt der Bestätigungs-E-Mail als offiziell bestätigt. Alle Kostenbeiträge fließen direkt in die Deckung der Aufwände für die Gesundheitspflege-Programme des Vereins.",
     
     "faq-title": "Häufig gestellte Fragen (FAQ)",
-    "faq-q1": "Sind die verschriebenen Kräuter im Preis inbegriffen?",
-    "faq-a1": "Nein. Individuell verschriebene Kräuterarzneien (die als Pulver oder Paste mit nach Hause genommen werden können) werden je nach Diagnose und Bedarf separat abgerechnet.",
+    "faq-q1": "Sind die verschriebenen Kräuter im Kostenbeitrag inbegriffen?",
+    "faq-a1": "Nein. Individuell verschriebene Kräuterarzneien (die als Pulver oder Paste mit nach Hause genommen werden können) werden je nach individuellem Aufwand und Bedarf separat bereitgestellt.",
     "faq-q2": "Wie läuft der Transfer nach Yunnan ab?",
-    "faq-a2": "Unser Klinikteam organisiert den Transfer per Bahn/Flug. Unterkunft im Partnerhotel sowie Aktivitäten vor Ort sind im Buchungspreis des Retreats enthalten.",
+    "faq-a2": "Unser Klinikteam organisiert den Transfer per Bahn/Flug. Unterkunft im Partnerhotel sowie Aktivitäten vor Ort sind im Kostenbeitrag des Retreats enthalten.",
     "faq-q3": "Gibt es eine Kinderbetreuung vor Ort?",
     "faq-a3": "Ja. Unser hauseigener Kinderbereich bietet altersgerechte Programme und veranstaltet regelmäßige Familien-Events.",
 
     // Contact
     "contact-title": "Beginnen Sie Ihren Weg zur Heilung",
     "contact-subtitle": "Kontaktieren Sie uns oder bewerben Sie sich direkt für Ihr individuelles Heilprogramm.",
-    "contact-free-consult": "15-minütiges kostenloses Beratungsgespräch buchen",
+    "contact-free-consult": "Kostenloses 15-minütiges Gespräch anfragen",
     "contact-free-desc": "Sprechen Sie direkt mit Nanjing Deng, um Ihre Beschwerden zu besprechen und das passende Programm zu finden.",
     "contact-label-name": "Name",
     "contact-label-email": "E-Mail-Adresse",
@@ -356,21 +358,21 @@ const translations = {
     "contact-label-date": "Datum des Beratungsgesprächs (Mittwoch / Samstag)",
     "contact-label-slot": "Uhrzeit wählen (Pekinger Ortszeit 14:00 - 20:00 Uhr)",
     "contact-label-message": "Kurze Anmerkung zu Ihren Beschwerden",
-    "contact-submit-btn": "Jetzt bewerben",
-    "contact-submit-email": "Per E-Mail bewerben",
-    "contact-submit-whatsapp": "Per WhatsApp bewerben",
+    "contact-submit-btn": "Jetzt anmelden",
+    "contact-submit-email": "Per E-Mail anmelden",
+    "contact-submit-whatsapp": "Per WhatsApp anmelden",
     "contact-social-text": "Folgen Sie uns in den sozialen Medien für Gesundheitstipps, Klangzirkel und Tee-Rituale:",
     "whatsapp-text": "Über WhatsApp chatten",
     "instagram-text": "Instagram: nanjing_tea.sound",
 
     // Interactive Booking Toast/Confirm
-    "booking-success-toast": "Bewerbung erfolgreich gesendet! Eine Bestätigung wird an Ihre E-Mail gesendet.",
+    "booking-success-toast": "Registrierung erfolgreich gesendet! Eine Bestätigung wird an Ihre E-Mail gesendet.",
     
     // Marketing Popup
-    "popup-title": "Exklusiver Rabattcode",
-    "popup-desc": "Erhalten Sie eine sanfte, spirituelle Ermäßigung. Bewerben Sie sich noch heute für unsere Endometriose-Heilprogramme oder das Wudang-Retreat und erhalten Sie 10% Rabatt auf die erste Diagnose.",
-    "popup-code-label": "Ihr persönlicher Rabattcode:",
-    "popup-cta": "Code anwenden & bewerben",
+    "popup-title": "Vereins-Unterstützung",
+    "popup-desc": "Unterstützen Sie unsere gesundheitspflegende Arbeit. Registrieren Sie sich heute für die Endometriose-Programme oder das Wudang-Retreat und erhalten Sie 10% Ermäßigung auf den Kostenbeitrag der Erstkonsultation.",
+    "popup-code-label": "Ihr Registrierungscode:",
+    "popup-cta": "Mit Code registrieren",
 
     // Fungal Medicine & Resources
     "treatment-4-badge": "Pilzheilkunde",
@@ -438,7 +440,9 @@ const translations = {
     "gallery-item-soundbath-badge": "Klangbad",
     "gallery-item-soundbath-title": "Klangbad in Natur",
     "btn-read-article": "Artikel lesen",
-    "endo-read-approach": "Behandlungsansatz & Fallbeispiele"
+    "endo-read-approach": "Behandlungsansatz & Fallbeispiele",
+    "footer-impressum": "Impressum",
+    "footer-privacy": "Datenschutz"
   }
 };
 
@@ -627,8 +631,8 @@ function updateEndometriosisDisplay() {
   amountEl.textContent = `€${price},-`;
   
   const periodText = {
-    en: { "1w": "1 Week Program", "2w": "2 Weeks Program", "4w": "4 Weeks Program" },
-    de: { "1w": "1 Woche Programm", "2w": "2 Wochen Programm", "4w": "4 Wochen Programm" }
+    en: { "1w": "1 Week Program (Cost Contribution)", "2w": "2 Weeks Program (Cost Contribution)", "4w": "4 Weeks Program (Cost Contribution)" },
+    de: { "1w": "1 Woche Programm (Kostenbeitrag)", "2w": "2 Wochen Programm (Kostenbeitrag)", "4w": "4 Wochen Programm (Kostenbeitrag)" }
   };
   descEl.textContent = periodText[currentLang][selectedDuration];
 
@@ -1245,6 +1249,120 @@ window.closeEmailDispatchModal = closeEmailDispatchModal;
 // WeChat Article Modal Content & Operations
 // ==========================================
 const articlesContent = {
+  impressum: {
+    de: {
+      title: "Impressum",
+      body: `
+        <p><strong>Lebensfluss e.V.</strong></p>
+        <p>Ein eingetragener Verein zur Förderung der Gesundheitspflege, der traditionellen chinesischen Medizin (TCM) und heilsamer Lebensweisen.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Vertretungsberechtigter Vorstand</h4>
+        <p>
+          Deng Nanjing (Vorsitzende)<br>
+          Master Xu Ruqi (Stellvertretender Vorsitzender)
+        </p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Kontakt</h4>
+        <p>
+          E-Mail: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a><br>
+          Telefon/WhatsApp: +52 1 984 140 8335 (Deng Nanjing)
+        </p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Registereintragung</h4>
+        <p>
+          Lebensfluss e.V. befindet sich im Registrierungsprozess beim Vereinsregister.<br>
+          Die Vereinsarbeit dient gemeinnützigen Zwecken der Förderung des öffentlichen Gesundheitswesens und der Gesundheitspflege.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Haftungsausschluss</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">
+          Die angebotenen Gesundheitspflege-Programme und Beratungen dienen der Gesundheitsprävention und der Anregung der Selbstheilungskräfte des Körpers. Sie stellen keine medizinische Therapie oder Heilbehandlung im Sinne des Gesetzes dar und ersetzen nicht den Besuch bei einem zugelassenen Arzt oder Heilpraktiker.
+        </p>
+      `
+    },
+    en: {
+      title: "Impressum / Legal Notice",
+      body: `
+        <p><strong>Lebensfluss e.V.</strong></p>
+        <p>A registered association dedicated to the promotion of health maintenance, traditional Chinese medicine (TCM), and mindful lifestyles.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Authorized Representatives (Board of Directors)</h4>
+        <p>
+          Deng Nanjing (Chairperson)<br>
+          Master Xu Ruqi (Deputy Chairperson)
+        </p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Contact Information</h4>
+        <p>
+          Email: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a><br>
+          Phone/WhatsApp: +52 1 984 140 8335 (Deng Nanjing)
+        </p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Association Registration</h4>
+        <p>
+          Lebensfluss e.V. is currently in the registration process for the association register.<br>
+          The association operates on a non-profit basis to support public health maintenance and wellness initiatives.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Disclaimer</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">
+          The health maintenance programs, consultations, and vibrational therapies offered are intended for wellness support and self-care education. They do not constitute medical treatments or healing procedures under the law and are not a substitute for professional medical diagnostics, advice, or treatment by a licensed physician.
+        </p>
+      `
+    }
+  },
+  privacy: {
+    de: {
+      title: "Datenschutzerklärung",
+      body: `
+        <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Nachfolgend informieren wir Sie über die Verarbeitung Ihrer Daten im Rahmen unserer Vereinstätigkeiten und dieser Website.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">1. Verantwortliche Stelle</h4>
+        <p>
+          Lebensfluss e.V.<br>
+          E-Mail: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a>
+        </p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">2. Erfassung und Verarbeitung von Daten</h4>
+        <p>
+          Wenn Sie sich für eines unserer Gesundheitspflege-Programme registrieren oder uns kontaktieren, verarbeiten wir die von Ihnen freiwillig eingegebenen Daten (Name, E-Mail-Adresse, Telefonnummer, Anmerkungen zur Gesundheitshistorie sowie gewünschtes Datum und Uhrzeit).
+        </p>
+        <p>
+          Diese Daten dienen ausschließlich der Organisation der Gesundheitspflege-Sitzungen und der Betreuung im Rahmen der Vereinsmitgliedschaft. Medizinische Angaben werden streng vertraulich behandelt und nicht an unbefugte Dritte weitergegeben.
+        </p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">3. Ihre Rechte</h4>
+        <p>
+          Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Wenden Sie sich hierzu bitte an die oben angegebene E-Mail-Adresse.
+        </p>
+      `
+    },
+    en: {
+      title: "Privacy Policy",
+      body: `
+        <p>We take the protection of your personal data very seriously. Below we provide information on how your data is processed in connection with our association activities and this website.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">1. Controller / Responsible Party</h4>
+        <p>
+          Lebensfluss e.V.<br>
+          Email: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a>
+        </p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">2. Collection and Processing of Data</h4>
+        <p>
+          When you register for one of our health maintenance programs or contact us, we process the information you voluntarily submit (name, email address, phone number, medical history notes, and requested date/time).
+        </p>
+        <p>
+          This data is processed solely for organizing health maintenance sessions, facilitating program attendance, and managing association memberships. Any health-related information is kept strictly confidential and will never be shared with unauthorized third parties.
+        </p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">3. Your Rights</h4>
+        <p>
+          You have the right at any time to receive free information about your stored personal data, its origin, recipients, the purpose of data processing, and the right to request correction, blocking, or deletion of this data. To exercise these rights, please contact us at the email address provided above.
+        </p>
+      `
+    }
+  },
   xu: {
     de: {
       title: "Master Xu Ruqi – Chefarzt & Leitender TCM-Experte",
