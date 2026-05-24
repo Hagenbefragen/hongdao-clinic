@@ -4,259 +4,1046 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Eye Gazing Workbook: Der Weg zu tiefer Verbundenheit | OHM Eyegazing</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1a1a1a;--bg:#fafaf8;--accent:#0f172a;--blue:#2563eb;--gold:#d4af37;--border:#e2e2e0}
-body{font-family:'Inter',sans-serif;max-width:800px;margin:0 auto;padding:40px 24px;color:var(--ink);background:var(--bg);font-size:11pt;line-height:1.7}
-h1{font-size:1.8em;border-bottom:2px solid var(--ink);padding-bottom:12px;margin-top:0}
-h2{font-size:1.3em;font-weight:700;margin-top:40px;border-bottom:1px solid var(--border);padding-bottom:6px;color:var(--accent)}
-h3{font-size:1.1em;font-weight:600;margin-top:24px}
-p{margin-bottom: 16px;}
-ul, ol{margin-bottom: 16px; padding-left: 20px;}
-li{margin-bottom: 8px;}
-strong{font-weight: 700; color: var(--accent);}
-em{font-style: italic;}
-a{color: var(--blue); text-decoration: none;}
-a:hover{text-decoration: underline;}
-.meta{background:#f0f4ff; border-left:4px solid var(--blue); padding:14px 18px; margin-bottom:28px; font-size:0.9em; border-radius:4px;}
-hr{border:none; border-top:1px solid var(--border); margin:32px 0}
-@media print {
-  body { background: white; padding: 0; font-size: 10pt; color: black; }
-  .no-print { display: none; }
-  h1, h2 { page-break-after: avoid; }
-  p, li { page-break-inside: avoid; }
+:root {
+  --ink: #2a2721;
+  --bg: #f7f4eb;
+  --content-bg: #faf8f5;
+  --card-bg: #ffffff;
+  --accent: #bca080;
+  --accent-hover: #a38768;
+  --border: #e3ded5;
+  --light-text: #6e685e;
 }
-.no-print { margin-bottom: 20px; }
-.back-btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: white; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 0.9em;}
-.back-btn:hover { background: var(--ink); text-decoration: none; }
-.lang-toggle { display: inline-flex; background: #e2e8f0; border-radius: 6px; padding: 2px; margin-left:10px; vertical-align: middle;}
-.lang-toggle button { background: transparent; border: none; padding: 6px 12px; font-size: 0.85em; font-weight: 600; color: #64748b; border-radius: 4px; cursor: pointer; transition: all 0.2s;}
-.lang-toggle button.active { background: white; color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  background-color: var(--bg);
+  font-size: 11pt;
+  line-height: 1.7;
+  padding: 0 0 60px 0;
+}
+
+/* ── HEADER ── */
+.ohm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--border);
+  background: var(--content-bg);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.ohm-header-logo {
+  font-weight: 600;
+  color: var(--ink);
+}
+.ohm-header-title {
+  font-style: italic;
+  color: var(--light-text);
+}
+.ohm-header-meta {
+  font-size: 0.85em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.no-print {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  background: var(--content-bg);
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--ink);
+  color: var(--content-bg);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9em;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.back-btn:hover {
+  opacity: 0.9;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  background: #eae5da;
+  border-radius: 6px;
+  padding: 2px;
+}
+.lang-toggle button {
+  background: transparent;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--light-text);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.lang-toggle button.active {
+  background: white;
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* ── INTRO SECTION ── */
+.intro-section {
+  background: var(--content-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2em;
+  font-weight: 300;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  margin-top: 36px;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+p {
+  margin-bottom: 16px;
+  color: #44403c;
+}
+
+ul, ol {
+  margin-bottom: 20px;
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: #44403c;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ── PROGRESS BAR ── */
+.progress-container {
+  margin: 30px 0;
+  background: #eae5da;
+  border-radius: 8px;
+  height: 8px;
+  overflow: hidden;
+}
+.progress-bar {
+  background: var(--accent);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.85rem;
+  color: var(--light-text);
+  text-align: right;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+/* ── DAY JOURNAL CARDS ── */
+.day-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 36px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(42, 39, 33, 0.02);
+}
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+.day-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.day-time {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.prompt-group {
+  margin-bottom: 24px;
+}
+.prompt-text {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.journal-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background-color: var(--content-bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+.journal-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background-color: #fff;
+}
+
+.print-only-lines {
+  display: none;
+}
+
+/* ── FOOTER ── */
+.ohm-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  border-top: 1px solid var(--border);
+  background: var(--content-bg);
+  font-size: 0.8rem;
+  color: var(--light-text);
+  margin-top: 60px;
+}
+
+/* ── PRINT MEDIA RULES ── */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 10pt;
+    padding: 0;
+  }
+  .no-print, .ohm-header-meta, .lang-toggle {
+    display: none !important;
+  }
+  .ohm-header {
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+  }
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .intro-section {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .day-card {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 40px;
+    page-break-inside: avoid;
+    box-shadow: none;
+  }
+  .day-header {
+    border-bottom: 1px solid #000;
+  }
+  .journal-input {
+    display: none !important;
+  }
+  .print-only-lines {
+    display: block !important;
+    min-height: 120px;
+    margin-top: 10px;
+    background-image: linear-gradient(to bottom, transparent 29px, #ccc 30px);
+    background-size: 100% 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+  }
+  .ohm-footer {
+    border-top: 1px solid #000;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
-<div class="no-print" style="display:flex; align-items:center;">
-  <a href="Eyegazing_Hub.html" class="back-btn">← Hub</a>
-  <button onclick="window.print()" class="back-btn" style="background:var(--blue); border:none; cursor:pointer; margin-left:10px;">🖨️ Print</button>
+
+<header class="ohm-header">
+  <span class="ohm-header-logo">◯ ohm</span>
+  <span class="ohm-header-title">eye gazing journal</span>
+  <span class="ohm-header-meta">protocol 01</span>
+</header>
+
+<div class="container">
   
-  <div class="lang-toggle">
-    <button id="btn-de" class="active" onclick="setLang('de')">DE</button>
-    <button id="btn-en" onclick="setLang('en')">EN</button>
+  <div class="no-print">
+    <div class="btn-group">
+      <a href="Eyegazing_Hub.html" class="back-btn">← Hub</a>
+      <button onclick="window.print()" class="back-btn" style="background:var(--accent);">🖨️ Print / Save PDF</button>
+      <button onclick="resetJournal()" class="back-btn" style="background:#e07a5f;">🗑️ Clear Entries</button>
+    </div>
+    
+    <div class="lang-toggle">
+      <button id="btn-de" class="active" onclick="setLang('de')">DE</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
   </div>
+
+  <div class="progress-text no-print" id="progress-indicator">0 of 21 Days Completed</div>
+  <div class="progress-container no-print">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- GERMAN CONTENT                             -->
+  <!-- ========================================== -->
+  <div id="content-de">
+    <div class="intro-section">
+      <h1>The Eye Gazing Workbook: Der Weg zu tiefer Verbundenheit</h1>
+      <p>In einer Welt, in der wir ununterbrochen auf Bildschirme starren, ist der echte, ungeteilte Blick in die Augen eines anderen Menschen zu einer Seltenheit geworden. Eye Gazing ist eine Praxis der radikalen Präsenz, die uns erlaubt, unsere Alltagsmasken fallen zu lassen.</p>
+      <p>Dieses Workbook ist dein Begleiter für eine <strong>21-tägige Reise</strong>. Ob als Solo-Gazing vor dem Spiegel zur Stärkung der Selbstliebe oder mit einem Partner für tiefe Intimität – nimm dir jeden Tag ein paar Minuten Zeit, führe die Praxis aus und halte deine Erfahrungen anschließend hier fest.</p>
+      
+      <h2>Vorbereitung (Set & Setting)</h2>
+      <ul>
+        <li><strong>Raum:</strong> Wähle einen ruhigen Ort mit gedimmtem, warmem Licht (z.B. Kerzenschein).</li>
+        <li><strong>Musik:</strong> Leise Meditationsmusik (z.B. 432 Hz Solfeggio-Frequenzen) hilft dem Nervensystem, sich zu regulieren.</li>
+        <li><strong>Position:</strong> Setzt euch bequem gegenüber, sodass die Augen auf gleicher Höhe sind. Blinzeln ist jederzeit erlaubt.</li>
+      </ul>
+    </div>
+
+    <h2>Woche 1: Präsenz & Ankommen (3 Minuten täglich)</h2>
+    
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 1: Die erste Schwelle</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Was habe ich heute in meinem Körper gespürt, als die Stille eintrat?</p>
+        <textarea id="de-d1-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d1-p1"></div>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Was war der schwierigste Moment?</p>
+        <textarea id="de-d1-p2" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d1-p2"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 2: Der weiche Blick</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Konnte ich meinen Blick heute entspannen oder habe ich "gestarrt"?</p>
+        <textarea id="de-d2-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d2-p1"></div>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Welche Emotion habe ich im Gesicht meines Partners / in meinem Spiegelbild wahrgenommen?</p>
+        <textarea id="de-d2-p2" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d2-p2"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 3: Das Lächeln der Augen</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Wie hat es sich angefühlt, Dankbarkeit nur durch die Augen auszudrücken, ohne Worte?</p>
+        <textarea id="de-d3-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d3-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 4: Der Rhythmus des Atems</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Wie hat sich unser gemeinsamer Atemrhythmus angefühlt? Gab es Momente der Synchronisation?</p>
+        <textarea id="de-d4-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d4-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 5: Spiegel der Seele</span>
+        <span class="day-time">3 min (Solo Mirror Gazing)</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Welche Entdeckungen habe ich heute gemacht, als ich mir selbst im Spiegel tief in die Augen geblickt habe?</p>
+        <textarea id="de-d5-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d5-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 6: Die fließenden Gedanken</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Welche Urteile oder Gedanken tauchten heute auf, und wie bin ich damit umgegangen?</p>
+        <textarea id="de-d6-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d6-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 7: Reflexion Woche 1</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Welche subtilen Veränderungen bemerke ich in unserer täglichen Verbindung nach dieser ersten Woche?</p>
+        <textarea id="de-d7-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d7-p1"></div>
+      </div>
+    </div>
+
+    <h2>Woche 2: Die Tiefe & Verletzlichkeit (5 Minuten täglich)</h2>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 8: Den Schmerz sehen</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Welche unmaskierte Emotion (Müdigkeit, Anspannung, Weichheit) habe ich heute bei meinem Gegenüber wahrgenommen?</p>
+        <textarea id="de-d8-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d8-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 9: Kindheitsfunken</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Konnte ich das "innere Kind" in den Augen meines Partners erkennen? Wie hat das mein Gefühl von Mitgefühl beeinflusst?</p>
+        <textarea id="de-d9-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d9-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 10: Das ungesagte Danke</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Wofür bin ich meinem Partner / mir selbst in diesem Moment am tiefsten dankbar?</p>
+        <textarea id="de-d10-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d10-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 11: Schatten und Licht</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Gab es Momente des Widerstands oder Fluchtreflexes heute? Wie habe ich sie durchatmet?</p>
+        <textarea id="de-d11-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d11-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 12: Herzschlag-Resonanz</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Wie hat sich die Herzverbindung heute physisch in meinem Brustraum angefühlt?</p>
+        <textarea id="de-d12-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d12-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 13: Stille Stärke</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Welche Stärke liegt in unserer gemeinsamen Stille, wenn Worte nicht mehr nötig sind?</p>
+        <textarea id="de-d13-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d13-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 14: Reflexion Woche 2</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">In welchen Momenten fühlte ich mich in dieser Woche am verletzlichsten und gleichzeitig am sichersten?</p>
+        <textarea id="de-d14-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d14-p1"></div>
+      </div>
+    </div>
+
+    <h2>Woche 3: Die Seelenverbindung (10 Minuten täglich)</h2>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 15: Zeitlosigkeit</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Hat sich die Zeit während der heutigen Session eher gedehnt oder stark verkürzt?</p>
+        <textarea id="de-d15-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d15-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 16: Seelenporträt</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Wenn die Augen ein Tor sind: Welche "Landschaft" habe ich heute hinter den Augen meines Partners gesehen?</p>
+        <textarea id="de-d16-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d16-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 17: Bedingungslose Präsenz</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Wie leicht fiel es mir heute, mein Gegenüber bedingungslos so anzunehmen, wie er/sie ist?</p>
+        <textarea id="de-d17-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d17-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 18: Leidenschaft und Resonanz</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Welche energetische oder intime Spannung war heute spürbar? Wie sind wir damit umgegangen?</p>
+        <textarea id="de-d18-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d18-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 19: Das gemeinsame Band</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Welches gemeinsame unsichtbare Band zwischen uns ist mir heute besonders bewusst geworden?</p>
+        <textarea id="de-d19-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d19-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 20: Stille Weisheit</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Welche lautlose Weisheit oder Botschaft habe ich heute in der Stille empfangen?</p>
+        <textarea id="de-d20-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d20-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Tag 21: Die finale Feier</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Was hat sich in diesen 21 Tagen in unserer Verbindung am tiefsten verändert?</p>
+        <textarea id="de-d21-p1" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d21-p1"></div>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Wie führen wir diese Praxis ab heute in unserem Alltag fort?</p>
+        <textarea id="de-d21-p2" class="journal-input" placeholder="Schreibe deine Antwort hier..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-de-d21-p2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- ENGLISH CONTENT                            -->
+  <!-- ========================================== -->
+  <div id="content-en" style="display:none;">
+    <div class="intro-section">
+      <h1>The Eye Gazing Workbook: The Path to Deep Connection</h1>
+      <p>In a world where we constantly stare at screens, a genuine, undivided look into another person's eyes has become a rarity. Eye Gazing is a practice of radical presence, allowing us to drop our daily masks.</p>
+      <p>This workbook is your companion for a <strong>21-day journey</strong>. Whether used as Solo Gazing in front of a mirror to strengthen self-love or with a partner for deep intimacy – take a few minutes each day, perform the practice, and record your experiences here.</p>
+      
+      <h2>Preparation (Set & Setting)</h2>
+      <ul>
+        <li><strong>Space:</strong> Choose a quiet location with dim, warm lighting (e.g., candlelight).</li>
+        <li><strong>Music:</strong> Low meditation music (such as 432 Hz Solfeggio frequencies) helps the nervous system regulate itself.</li>
+        <li><strong>Position:</strong> Sit comfortably opposite each other, keeping your eyes at the same level. Blinking is always allowed.</li>
+      </ul>
+    </div>
+
+    <h2>Week 1: Presence & Arrival (3 minutes daily)</h2>
+    
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 1: The First Threshold</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What did I feel in my body today when the silence set in?</p>
+        <textarea id="en-d1-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d1-p1"></div>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What was the most challenging moment?</p>
+        <textarea id="en-d1-p2" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d1-p2"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 2: The Soft Look</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Was I able to relax my gaze today or did I "stare"?</p>
+        <textarea id="en-d2-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d2-p1"></div>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What emotion did I perceive on my partner's face / in my reflection?</p>
+        <textarea id="en-d2-p2" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d2-p2"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 3: The Smile of the Eyes</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">How did it feel to express gratitude solely through the eyes, without words?</p>
+        <textarea id="en-d3-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d3-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 4: The Rhythm of Breath</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">How did our shared breathing rhythm feel? Were there moments of synchronization?</p>
+        <textarea id="en-d4-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d4-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 5: Mirror of the Soul</span>
+        <span class="day-time">3 min (Solo Mirror Gazing)</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What discoveries did I make today when looking deeply into my own eyes in the mirror?</p>
+        <textarea id="en-d5-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d5-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 6: Flowing Thoughts</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What judgments or thoughts arose today, and how did I manage to let them pass by?</p>
+        <textarea id="en-d6-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d6-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 7: Week 1 Reflection</span>
+        <span class="day-time">3 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What subtle changes do I notice in our daily connection after this first week?</p>
+        <textarea id="en-d7-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d7-p1"></div>
+      </div>
+    </div>
+
+    <h2>Week 2: Vulnerability & Depth (5 minutes daily)</h2>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 8: Seeing the Pain</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What unmasked emotion (fatigue, tension, softness) did I perceive in my partner today?</p>
+        <textarea id="en-d8-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d8-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 9: Child's Spark</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Could I recognize the "inner child" in my partner's eyes? How did that affect my sense of compassion?</p>
+        <textarea id="en-d9-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d9-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 10: The Unsaid Thank You</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">For what am I most deeply grateful to my partner / myself in this moment?</p>
+        <textarea id="en-d10-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d10-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 11: Shadow and Light</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Were there moments of resistance or a desire to look away today? How did I breathe through them?</p>
+        <textarea id="en-d11-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d11-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 12: Heartbeat Resonance</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">How did the heart connection physically feel in my chest today?</p>
+        <textarea id="en-d12-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d12-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 13: Silent Strength</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What strength lies in our shared silence when words are no longer needed?</p>
+        <textarea id="en-d13-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d13-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 14: Week 2 Reflection</span>
+        <span class="day-time">5 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">In which moments did I feel most vulnerable and yet most secure this week?</p>
+        <textarea id="en-d14-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d14-p1"></div>
+      </div>
+    </div>
+
+    <h2>Week 3: The Soul Connection (10 minutes daily)</h2>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 15: Timelessness</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">Did time expand or compress during our 10-minute session today?</p>
+        <textarea id="en-d15-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d15-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 16: Soul Portrait</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">If the eyes are a gateway: What "landscape" did I see behind my partner's eyes today?</p>
+        <textarea id="en-d16-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d16-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 17: Unconditional Presence</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">How easy was it today to unconditionally accept my partner exactly as they are?</p>
+        <textarea id="en-d17-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d17-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 18: Passion and Resonance</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What energetic or intimate tension was palpable today? How did we sit with it?</p>
+        <textarea id="en-d18-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d18-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 19: The Shared Bond</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What shared invisible bond between us was I particularly aware of today?</p>
+        <textarea id="en-d19-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d19-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 20: Silent Wisdom</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What silent wisdom or message did I receive in the stillness today?</p>
+        <textarea id="en-d20-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d20-p1"></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-title">Day 21: The Final Celebration</span>
+        <span class="day-time">10 min</span>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">What has changed most deeply in our connection over these 21 days?</p>
+        <textarea id="en-d21-p1" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d21-p1"></div>
+      </div>
+      <div class="prompt-group">
+        <p class="prompt-text">How will we continue this practice in our everyday lives starting today?</p>
+        <textarea id="en-d21-p2" class="journal-input" placeholder="Write your response here..." oninput="syncAndSave(this)"></textarea>
+        <div class="print-only-lines" id="print-en-d21-p2"></div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<footer class="ohm-footer">
+  <span class="ohm-footer-left">designed for offline human connection</span>
+  <span class="ohm-footer-right">&copy; 2026 offline human mode</span>
+</footer>
 
 <script>
+// Language Switcher
+let currentLang = 'de';
+
 function setLang(lang) {
-    document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
-    document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
-    document.getElementById('btn-de').classList.toggle('active', lang === 'de');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  currentLang = lang;
+  document.getElementById('content-de').style.display = (lang === 'de') ? 'block' : 'none';
+  document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+  
+  document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  
+  updateProgress();
 }
-</script>
 
+// Auto-Save & Synchronize Fields (Dual-Language Sync)
+function syncAndSave(textarea) {
+  const id = textarea.id;
+  const val = textarea.value;
+  
+  // Save to LocalStorage
+  localStorage.setItem('ohm_eyegazing_' + id, val);
+  
+  // Update Print-Only text
+  const printDiv = document.getElementById('print-' + id);
+  if (printDiv) {
+    printDiv.innerText = val;
+  }
+  
+  // Cross-language sync logic (DE -> EN or EN -> DE value preservation if desired)
+  // For standard independent answers we keep them separate, but update progress based on active inputs.
+  updateProgress();
+}
 
-<div id="content-de" style="display:block;">
-  <h1>The Eye Gazing Workbook: Der Weg zu tiefer Verbundenheit</h1>
+function loadSaved() {
+  const inputs = document.querySelectorAll('.journal-input');
+  inputs.forEach(input => {
+    const savedVal = localStorage.getItem('ohm_eyegazing_' + input.id);
+    if (savedVal) {
+      input.value = savedVal;
+      const printDiv = document.getElementById('print-' + input.id);
+      if (printDiv) {
+        printDiv.innerText = savedVal;
+      }
+    }
+  });
+  updateProgress();
+}
 
-<h2>Inhaltsverzeichnis</h2>
-<ol>
-<li><a href="#einleitung" target="_blank">Einleitung: Die Magie des Augenkontakts</a></li>
-<li><a href="#wissenschaft" target="_blank">Die Wissenschaft hinter Soul Gazing</a></li>
-<li><a href="#vorbereitung" target="_blank">Vorbereitung: Set & Setting</a></li>
-<li><a href="#solo-gazing" target="_blank">Solo-Gazing: Begegnung mit dir selbst</a></li>
-<li><a href="#partner-gazing" target="_blank">Partner-Gazing: Brücken bauen</a></li>
-<li><a href="#journaling" target="_blank">Die 21-Tage Journaling Praxis</a></li>
-</ul>
+function updateProgress() {
+  // Count unique days completed (Days 1 to 21) based on any filled input for that day
+  let completedDays = 0;
+  
+  for (let d = 1; d <= 21; d++) {
+    let dayFilled = false;
+    if (currentLang === 'de') {
+      const p1 = localStorage.getItem('ohm_eyegazing_de-d' + d + '-p1');
+      const p2 = localStorage.getItem('ohm_eyegazing_de-d' + d + '-p2');
+      if ((p1 && p1.trim() !== '') || (p2 && p2.trim() !== '')) {
+        dayFilled = true;
+      }
+    } else {
+      const p1 = localStorage.getItem('ohm_eyegazing_en-d' + d + '-p1');
+      const p2 = localStorage.getItem('ohm_eyegazing_en-d' + d + '-p2');
+      if ((p1 && p1.trim() !== '') || (p2 && p2.trim() !== '')) {
+        dayFilled = true;
+      }
+    }
+    if (dayFilled) completedDays++;
+  }
+  
+  const percentage = (completedDays / 21) * 100;
+  document.getElementById('progress-bar').style.width = percentage + '%';
+  
+  const indicator = document.getElementById('progress-indicator');
+  if (currentLang === 'de') {
+    indicator.innerText = `${completedDays} von 21 Tagen abgeschlossen`;
+  } else {
+    indicator.innerText = `${completedDays} of 21 Days Completed`;
+  }
+}
 
-<hr>
-
-<p><a name="einleitung"></a></p>
-<h2>1. Einleitung: Die Magie des Augenkontakts</h2>
-<p>In einer Welt, in der wir ununterbrochen auf Bildschirme starren, ist der echte, ungeteilte Blick in die Augen eines anderen Menschen zu einer Seltenheit geworden. "Eye Gazing" (oder Soul Gazing) ist eine uralte Praxis, die uns zwingt, unsere Masken fallenzulassen. Es gibt kein Verstecken, keine rhetorischen Ausweichmanöver. Nur pure, radikale Präsenz. </p>
-
-<p>Dieses Workbook ist dein praktischer Begleiter. Egal, ob du die Praxis nutzt, um dich selbst im Spiegel besser kennenzulernen (Solo-Gazing) oder um die emotionale Distanz zu deinem Partner zu überwinden – hier findest du die Anleitung und den Raum zur Reflexion.</p>
-
-<hr>
-
-<p><a name="wissenschaft"></a></p>
-<h2>2. Die Wissenschaft hinter Soul Gazing</h2>
-<p>Eye Gazing ist nicht nur Esoterik; es ist pure Neurobiologie.</p>
-<ul>
-<li><strong>Oxytocin-Ausschüttung:</strong> Bekannt als das "Kuschelhormon", wird Oxytocin massiv ausgeschüttet, wenn wir jemandem tief in die Augen schauen. Es senkt Angstzustände und fördert Vertrauen.</li>
-<li><strong>Herzschlag-Synchronisation:</strong> Studien (z.B. der Universität Colorado) zeigen, dass sich Herzschlag und Atemrhythmus von Paaren synchronisieren, wenn sie sich bewusst ansehen.</li>
-<li><strong>Der Vagusnerv:</strong> Tiefer Augenkontakt stimuliert den vorderen Vagusnerv, was unserem Nervensystem das Signal gibt: "Du bist in Sicherheit."</li>
-</ul>
-
-<hr>
-
-<p><a name="vorbereitung"></a></p>
-<h2>3. Vorbereitung: Set & Setting</h2>
-<p>Erfolgreiches Eye Gazing braucht einen sicheren Raum (Container).</p>
-<ul>
-<li><strong>Licht:</strong> Indirektes, warmes Licht (Kerzen, kleine Lampen). Vermeide helles Deckenlicht.</li>
-<li><strong>Sitzposition:</strong> Setzt euch bequem gegenüber. Die Knie dürfen sich leicht berühren, müssen aber nicht.</li>
-<li><strong>Timer:</strong> Stellt euch einen Timer (beginnt mit 3 Minuten). Nutzt sanfte Meditationsmusik (Solfeggio Frequenzen wie 432 Hz), um nicht durch absolute Stille nervös zu werden.</li>
-<li><strong>Die Goldene Regel:</strong> Blinzeln ist erlaubt! Es geht nicht um einen Anstarr-Wettbewerb. Weinen ist okay, Lachen ist okay. Alles darf da sein.</li>
-</ul>
-
-<hr>
-
-<p><a name="solo-gazing"></a></p>
-<h2>4. Solo-Gazing: Begegnung mit dir selbst</h2>
-<p>Bevor wir uns anderen öffnen, müssen wir lernen, unseren eigenen Blick auszuhalten.</p>
-<ul>
-<li><strong>Praxis:</strong> Setze dich vor einen Spiegel. Atme dreimal tief ein und aus.</li>
-<li><strong>Fokus:</strong> Schau dir tief in dein linkes Auge (das traditionell als das "weibliche/empfangende" Auge gilt).</li>
-<li><strong>Beobachtung:</strong> Welcher innere Kritiker meldet sich? (z.B. "Ich sehe müde aus"). Lass die Gedanken vorbeiziehen und kehre zurück zur puren Präsenz.</li>
-</ul>
-
-<hr>
-
-<p><a name="partner-gazing"></a></p>
-<h2>5. Partner-Gazing: Brücken bauen</h2>
-<p>Die Königsdisziplin der Intimität.</p>
-<ul>
-<li><strong>Phase 1: Das Ankommen.</strong> Schließt beide kurz die Augen, atmet gemeinsam ein und aus. Öffnet die Augen.</li>
-<li><strong>Phase 2: Der weiche Blick.</strong> Fokussiert euch auf ein Auge eures Partners (meistens das linke) oder auf den Punkt genau zwischen den Augenbrauen, falls direkter Augenkontakt anfangs zu intensiv ist. Lasst den Blick "weich" werden, wie wenn man in die Ferne schaut.</li>
-<li><strong>Phase 3: Halten.</strong> Wenn Unbehagen aufkommt, atmet tief in den Bauch. Wenn der Partner lacht oder weint, bleibe der neutrale, liebevolle Anker.</li>
-</ul>
-
-<hr>
-
-<p><a name="journaling"></a></p>
-<h2>6. Die 21-Tage Journaling Praxis</h2>
-<p>Nutze diese Seiten, um deine Erfahrungen direkt nach dem Eye Gazing festzuhalten.</p>
-
-<p><strong>Tag 1: Die erste Schwelle (3 Minuten)</strong></p>
-<p><em> </em>Was habe ich heute in meinem Körper gespürt, als die Stille eintrat?*</p>
-<ul>
-<li>_________________________________________________________</li>
-<li>_________________________________________________________</li>
-</ul>
-<p><em> </em>Was war der schwierigste Moment?*</p>
-<ul>
-<li>_________________________________________________________</li>
-</ul>
-
-<p><strong>Tag 2: Der weiche Blick (3 Minuten)</strong></p>
-<p><em> </em>Konnte ich meinen Blick heute entspannen oder habe ich "gestarrt"?*</p>
-<ul>
-<li>_________________________________________________________</li>
-</ul>
-<p><em> </em>Welche Emotion habe ich im Gesicht meines Partners / in meinem Spiegelbild wahrgenommen?*</p>
-<ul>
-<li>_________________________________________________________</li>
-</ul>
-
-<p><em>(Hier folgen im vollständigen E-Book die Prompts für Tag 3 bis 21, fokussiert auf Themen wie Verletzlichkeit, Vergebung, innere Kind-Arbeit und sexuelle Resonanz).</em></p>
-
-<hr>
-<p><em>Ende des Drafts</em></p>
-
-</div>
-<div id="content-en" style="display:none;">
-  <h1>The Eye Gazing Workbook: The Path to Deep Connection</h1>
-
-<h2>Table of Contents</h2>
-<ol>
-<li><a href="#introduction" target="_blank">Introduction: The Magic of Eye Contact</a></li>
-<li><a href="#science" target="_blank">The Science Behind Soul Gazing</a></li>
-<li><a href="#preparation" target="_blank">Preparation: Set & Setting</a></li>
-<li><a href="#solo-gazing" target="_blank">Solo-Gazing: Encountering yourself</a></li>
-<li><a href="#partner-gazing" target="_blank">Partner gazing: building bridges</a></li>
-<li><a href="#journaling" target="_blank">The 21-Day Journaling Practice</a></li>
-</ul>
-
-<hr>
-
-<p><a name="introduction"></a></p>
-<h2>1. Introduction: The magic of eye contact</h2>
-<p>In a world where we constantly stare at screens, a real, unbroken look into another person's eyes has become a rarity. “Eye Gazing” (or Soul Gazing) is an ancient practice that forces us to drop our masks. There is no hiding, no rhetorical evasion. Just pure, radical presence.</p>
-
-<p>This workbook is your practical companion. Regardless of whether you use the practice to get to know yourself better in the mirror (solo gazing) or to overcome the emotional distance from your partner - here you will find the instructions and the space for reflection.</p>
-
-<hr>
-
-<p><a name="science"></a></p>
-<h2>2. The Science Behind Soul Gazing</h2>
-<p>Eye gazing is not just esotericism; it is pure neurobiology.</p>
-<ul>
-<li><strong>Oxytocin release:</strong> Known as the "cuddle hormone", oxytocin is released massively when we look deeply into someone's eyes. It reduces anxiety and promotes trust.</li>
-<li><strong>Heartbeat synchronization:</strong> Studies (e.g. from the University of Colorado) show that couples' heartbeat and breathing rhythm synchronize when they consciously look at each other.</li>
-<li><strong>The Vagus Nerve:</strong> Deep eye contact stimulates the anterior vagus nerve, which gives our nervous system the signal, "You are safe."</li>
-</ul>
-
-<hr>
-
-<p><a name="preparation"></a></p>
-<h2>3. Preparation: Set & Setting</h2>
-<p>Successful eye gazing requires a safe space (container).</p>
-<ul>
-<li><strong>Light:</strong> Indirect, warm light (candles, small lamps). Avoid bright overhead lights.</li>
-<li><strong>Sitting position:</strong> Sit comfortably opposite each other. The knees can touch each other slightly, but they don't have to.</li>
-<li><strong>Timer:</strong> Set a timer (starts at 3 minutes). Use gentle meditation music (Solfeggio frequencies like 432 Hz) to avoid becoming nervous due to absolute silence.</li>
-<li><strong>The Golden Rule:</strong> Blinking is allowed! It's not about a staring contest. Crying is okay, laughing is okay. Everything can be there.</li>
-</ul>
-
-<hr>
-
-<p><a name="solo-gazing"></a></p>
-<h2>4. Solo gazing: meeting yourself</h2>
-<p>Before we open ourselves to others, we must learn to hold our own gaze.</p>
-<ul>
-<li><strong>Practice:</strong> Sit in front of a mirror. Breathe in and out deeply three times.</li>
-<li><strong>Focus:</strong> Look deeply into your left eye (traditionally considered the "female/receiving" eye).</li>
-<li><strong>Observation:</strong> Which inner critic is speaking up? (e.g. “I look tired”). Let the thoughts pass and return to pure presence.</li>
-</ul>
-
-<hr>
-
-<p><a name="partner-gazing"></a></p>
-<h2>5. Partner Gazing: Building Bridges</h2>
-<p>The supreme discipline of intimacy.</p>
-<ul>
-<li><strong>Phase 1: Arriving.</strong> Close your eyes briefly and breathe in and out together. Opens your eyes.</li>
-<li><strong>Phase 2: The soft gaze.</strong> Focus on one of your partner's eyes (usually the left) or on the point right between the eyebrows if direct eye contact is too intense at first. Let your gaze become “soft,” as if you were looking into the distance.</li>
-<li><strong>Phase 3: Hold.</strong> If discomfort arises, breathe deeply into your stomach. If your partner laughs or cries, remain the neutral, loving anchor.</li>
-</ul>
-
-<hr>
-
-<p><a name="journaling"></a></p>
-<h2>6. The 21-Day Journaling Practice</h2>
-<p>Use these pages to record your experiences immediately after eye gazing.</p>
-
-<p><strong>Day 1: The first threshold (3 minutes)</strong></p>
-<p><em> </em>What did I feel in my body today when the silence came?*</p>
-<ul>
-<li>_______________________________________________________</li>
-<li>_______________________________________________________</li>
-</ul>
-<p><em> </em>What was the most difficult moment?*</p>
-<ul>
-<li>_______________________________________________________</li>
-</ul>
-
-<p><strong>Day 2: The Soft Look (3 minutes)</strong></p>
-<p><em> </em>Was I able to relax my gaze today or did I "stare"?*</p>
-<ul>
-<li>_______________________________________________________</li>
-</ul>
-<p><em> </em>What emotion did I perceive on my partner's face / in my reflection?*</p>
-<ul>
-<li>_______________________________________________________</li>
-</ul>
-
-<p><em>(Here are the prompts for days 3 to 21 in the full e-book, focusing on topics such as vulnerability, forgiveness, inner child work and sexual resonance).</em></p>
-
-<hr>
-<p><em>Ende des Drafts</em></p>
-
-</div>
+function resetJournal() {
+  const confirmMsg = currentLang === 'de' 
+    ? 'Möchtest du wirklich alle Einträge löschen? Dies kann nicht rückgängig gemacht werden.'
+    : 'Are you sure you want to clear all entries? This action cannot be undone.';
     
-<hr>
-<footer style="font-size:0.8em; color:#888; text-align:center;">
-  &copy; 2026 Destill.ai / OHM Eyegazing | Dokument für vertrauliche Zwecke
-</footer>
+  if (confirm(confirmMsg)) {
+    const inputs = document.querySelectorAll('.journal-input');
+    inputs.forEach(input => {
+      input.value = '';
+      localStorage.removeItem('ohm_eyegazing_' + input.id);
+      const printDiv = document.getElementById('print-' + input.id);
+      if (printDiv) {
+        printDiv.innerText = '';
+      }
+    });
+    updateProgress();
+  }
+}
+
+// Initial Load
+window.onload = loadSaved;
+</script>
 </body>
 </html>
