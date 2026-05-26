@@ -1405,64 +1405,108 @@ const articlesContent = {
     de: {
       title: "Professor Xu Ruqi – Chefarzt & Leitender TCM-Experte",
       body: `
-        <p><strong>Professor Xu Ruqi (徐汝奇)</strong> verfügt über mehr als 40 Jahre klinische Erfahrung in klassischer chinesischer Medizin und fortgeschrittener Pulsdiagnostik. Er gilt weltweit als herausragende Kapazität und renommierter Gelehrter der <em>Shanghan Lun (Abhandlung über Kälte-Krankheiten)</em>.</p>
+        <p style="margin-bottom: 1rem;"><strong>Fachabteilung:</strong> Traditionelle Chinesische Medizin (TCM)</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete & Kräuterbehandlung (Jingfang)</h4>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 500;">Behandlung mit klassischen TCM-Kräuterrezepturen bei:</p>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Onkologie & schwere chronische Krankheiten</strong>: Ganzheitliche Begleitung bei Krebserkrankungen und Tumoren, Linderung von Therapie-Nebenwirkungen und Stabilisierung des Qi.</li>
-          <li><strong>Herz-Kreislauf- & zerebrovaskuläre Leiden</strong>: Behandlung von koronarer Herzkrankheit, Bluthochdruck und Schlaganfall-Spätfolgen.</li>
-          <li><strong>Stoffwechsel- & Organerkrankungen</strong>: Therapie bei Diabetes sowie Leber-, Magen- und Nierenerkrankungen.</li>
-          <li><strong>Rheumatische & Autoimmun-Erkrankungen</strong>: Behandlung von rheumatoider Arthritis und Morbus Bechterew.</li>
-          <li><strong>Gynäkologische Schmerzsyndrome & Fortpflanzung</strong>: Ausgezeichnete Heilerfolge bei Endometriose, Schokoladenzysten (Endometriomen), Dysmenorrhö sowie männlicher und weiblicher Unfruchtbarkeit.</li>
+          <li>Tumoren und schwierigen/komplexen Erkrankungen</li>
+          <li>Herz-Kreislauf- und zerebrovaskulären Erkrankungen (wie koronare Herzkrankheit, Bluthochdruck und Schlaganfall-Spätfolgen)</li>
+          <li>Diabetes, Lebererkrankungen, Magenbeschwerden, Nierenerkrankungen und anderen stoffwechsel- und organbedingten Leiden</li>
+          <li>Rheumatischen und Autoimmunerkrankungen wie rheumatoide Arthritis und Morbus Bechterew</li>
+          <li>Fortpflanzungsstörungen einschließlich männlicher und weiblicher Unfruchtbarkeit</li>
         </ul>
-        <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted);">
-          <em>Konsultationsgebühren:</em> Vor-Ort-Termin: 600 RMB | Online-Konsultation: 300 RMB
-        </p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Akademische Lehre & Positionen</h4>
-        <p style="margin-bottom: 1rem;">Professor Xu ist klinischer Sonder-Experte der 3. Pekinger Universität für Chinesische Medizin und klinischer Mentor an der Qihuang-Akademie. Er leitet das Diagnose- und Behandlungszentrum für Onkologie und komplexe Krankheiten der Hong Dao TCM-Klinik.</p>
-        
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Konsultationsgebühren</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li>Vor-Ort-Konsultation: 600 RMB</li>
+          <li>Online-Konsultation: 300 RMB</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biografie</h4>
+        <p style="margin-bottom: 1rem;">Xu Ruqi ist ein renommierter Gelehrter der Shanghan Lun (Abhandlung über Kälte-Krankheiten).</p>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li>Klinischer Sonder-Experte der 3. Pekinger Universität für Chinesische Medizin</li>
+          <li>Klinischer Mentor an der Qihuang-Akademie</li>
+          <li>Leiter des Behandlungszentrums für Onkologie und komplexe Krankheiten der Hong Dao TCM-Klinik</li>
+        </ul>
+
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Wissenschaftliche Philosophie</h4>
-        <p style="margin-bottom: 1rem;">Er vertritt die Integration von klassischem Wissen und moderner Praxis sowie die Verschmelzung von chinesischer und westlicher Medizin (古今汇通·中西融合). Sein Behandlungsmodell stellt die pulsgestützte Syndromdifferenzierung („Ping Mai Bian Zheng“) und die Anwendung klassischer Rezepturen (经方) in den Mittelpunkt, um wissenschaftliche Dosis-Wirkungs-Beziehungen und Visualisierungen der Heilwirkung zu fördern.</p>
+        <p style="margin-bottom: 1rem;">Er befürwortet die Integration von alter und moderner Medizin sowie die Verschmelzung von chinesischer und westlicher Medizin. Er hat ein Diagnose- und Behandlungsmodell etabliert, das sich konzentriert auf:</p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li>Pulsgestützte Syndromdifferenzierung</li>
+          <li>Anwendung klassischer Kräuterrezepturen</li>
+        </ul>
+        <p style="margin-bottom: 0.5rem; font-weight: 500;">Seine Arbeit konzentriert sich darauf:</p>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li>Die wissenschaftlichen Prinzipien hinter klassischen TCM-Texten und Dosis-Wirkungs-Beziehungen von Kräuterrezepturen aufzudecken</li>
+          <li>Die Präzision von Diagnose und Behandlung zu fördern</li>
+          <li>Die Anwendung von Kräuterrezepturen zu standardisieren</li>
+          <li>Die Wirksamkeit der Behandlung messbarer und sichtbarer zu machen</li>
+        </ul>
 
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Wissenschaftliche Leistungen</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li>Begründer der Diagnose- und Therapiemethode „Ping Mai Bian Zheng“ (Ausgewogene Puls-Syndromdifferenzierung), welche offiziell in das Förderprogramm für High-Tech- und geeignete Technologien der Nationalen Administration für Traditionelle Chinesische Medizin aufgenommen wurde (Dokument-Nr. 15, Staatliche TCM-Administration, 2017).</li>
-          <li>Ausbildung und Betreuung von über 2.000 TCM-Ärztinnen und -Ärzten weltweit und Durchführung dutzender Pulsdiagnose-Seminare.</li>
-          <li>Dozent und Experte des „Internationalen Jingfang-Kurses“ an der Guangzhou Universität für Chinesische Medizin.</li>
-          <li>Autor des bekannten Werkes <strong>「悟道张仲景」(WU DAO ZHANG ZHONG JING)</strong> – „Den Weg von Zhang Zhongjing begreifen", das beschreibt, wie der legendäre Meister Zhang Zhongjing ihm zum ersten Mal im Traum erschien und ihm die Essenz der Shanghanlun-Lehre offenbarte.</li>
+          <li>Begründer der Diagnosemethode „Ping Mai Bian Zheng“ (Ausgewogene Puls-Syndromdifferenzierung), welche in das Projekt zur Förderung fortschrittlicher und geeigneter Technologien der Nationalen Administration für Traditionelle Chinesische Medizin aufgenommen wurde (2017)</li>
+          <li>Hat mehr als 2.000 TCM-Praktiker aus dem In- und Ausland ausgebildet</li>
+          <li>Organisierte dutzende „Ping Mai Bian Zheng“-Ausbildungsprogramme</li>
+          <li>Veranstaltete nationale akademische Konferenzen, einschließlich fortgeschrittener Seminare zur Anwendung klassischer Rezepturen und das China Herbal Formula Medicine Forum</li>
+          <li>Dozent für das Internationale Jingfang-Programm an der Guangzhou Universität für Chinesische Medizin</li>
+          <li>Autor des Buches <em>Zhang Zhongjing verstehen</em> (veröffentlicht vom China Traditional Chinese Medicine Press)</li>
         </ul>
       `
     },
     en: {
       title: "Professor Xu Ruqi – Chief Physician & Senior TCM Expert",
       body: `
-        <p><strong>Professor Xu Ruqi (徐汝奇)</strong> has over 40 years of clinical experience in classical Chinese medicine and advanced pulse diagnostics. He is globally recognized as an authority in treating severe chronic disorders and is a renowned Shanghan Lun scholar.</p>
+        <p style="margin-bottom: 1rem;"><strong>Department:</strong> Traditional Chinese Medicine (TCM)</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Classical Herbal (Jingfang) Treatment</h4>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 500;">Treatment with classical TCM herbal formulas for:</p>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Oncology & Severe Chronic Diseases</strong>: Integrative oncology support, reducing therapy side effects, and stabilizing Qi (vital energy).</li>
-          <li><strong>Cardiovascular & Cerebrovascular Diseases</strong>: Clinical management of coronary heart disease, hypertension, and post-stroke sequelae.</li>
-          <li><strong>Metabolic & Visceral Conditions</strong>: Treatment of diabetes, liver, stomach, and kidney diseases.</li>
-          <li><strong>Rheumatoid & Autoimmune Conditions</strong>: Specialized care for rheumatoid arthritis and ankylosing spondylitis.</li>
-          <li><strong>Gynecological Pain & Reproductive Health</strong>: Excellent outcomes in treating endometriosis, chocolate cysts, dysmenorrhea, and male/female infertility.</li>
+          <li>Tumors and difficult/complex diseases</li>
+          <li>Cardiovascular and cerebrovascular diseases (such as coronary heart disease, hypertension, and post-stroke sequelae)</li>
+          <li>Diabetes, liver disease, stomach disorders, kidney disease, and other metabolic and organ-related conditions</li>
+          <li>Rheumatic and autoimmune diseases such as rheumatoid arthritis and ankylosing spondylitis</li>
+          <li>Reproductive disorders including male and female infertility</li>
         </ul>
-        <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted);">
-          <em>Consultation Fees:</em> In-person visit: 600 RMB | Online consultation: 300 RMB
-        </p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Academic Credentials & Appointments</h4>
-        <p style="margin-bottom: 1rem;">Distinguished clinical expert of the 3rd Beijing University of Chinese Medicine (BUCM), clinical mentor at Qihuang Academy, and Director of the Oncology and Complex Diseases Diagnosis and Treatment Center at the Hong Dao TCM Clinic.</p>
-        
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Consultation Fees</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li>In-person consultation: 600 RMB</li>
+          <li>Online consultation: 300 RMB</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography</h4>
+        <p style="margin-bottom: 1rem;">Xu Ruqi is a renowned scholar of the Shanghan Lun (Treatise on Cold Damage Diseases).</p>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li>Clinical Distinguished Expert of the 3rd Beijing University of Chinese Medicine</li>
+          <li>Clinical Mentor at Qihuang College</li>
+          <li>Head of the Oncology and Difficult Diseases Treatment Center at Hong Dao TCM Clinic</li>
+        </ul>
+
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Academic Philosophy</h4>
-        <p style="margin-bottom: 1rem;">Advocates the integration of ancient wisdom and modern practice, and the fusion of Chinese and Western medicine (古今汇通·中西融合). He established a diagnostic and treatment model centered on pulse-based syndrome differentiation ("Ping Mai Bian Zheng") and classical formulas (Jingfang), aiming to verify the scientific dosage-effect relationship of classical herbs and visualize therapeutic outcomes.</p>
+        <p style="margin-bottom: 1rem;">He advocates the integration of ancient and modern medicine as well as the fusion of Chinese and Western medicine. He has established a diagnostic and treatment model centered on:</p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li>Pulse-based pattern differentiation</li>
+          <li>Application of classical herbal formulas</li>
+        </ul>
+        <p style="margin-bottom: 0.5rem; font-weight: 500;">His work focuses on:</p>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li>Revealing the scientific principles behind classical TCM texts and dosage-effect relationships of herbal formulas</li>
+          <li>Promoting precision diagnosis and treatment</li>
+          <li>Standardizing herbal formula application</li>
+          <li>Making treatment efficacy more measurable and visible</li>
+        </ul>
 
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Academic Achievements</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li>Founded the "Ping Mai Bian Zheng" (Balanced Pulse Syndrome Differentiation) diagnostic and treatment technique, which was officially included in the High-Tech Appropriate Technology Promotion Project of the National Administration of Traditional Chinese Medicine (Document No. 15, State Administration of TCM, 2017).</li>
-          <li>Trained and mentored over 2,000 Chinese medicine practitioners from China and abroad, conducting dozens of terms of the "Balanced Pulse Syndrome Differentiation Study Class".</li>
-          <li>Served as a teaching expert for the "International Classical Formula Class" at Guangzhou University of Chinese Medicine.</li>
-          <li>Author of <strong>「悟道张仲景」(WU DAO ZHANG ZHONG JING)</strong> – "Comprehending the Way of Zhang Zhongjing". The book describes how the legendary Master Zhang Zhongjing first appeared to him in a dream and revealed the essence of the Shanghanlun teachings.</li>
+          <li>Founded the “Ping Mai Bian Zheng” (Pulse Equilibrium Pattern Differentiation) diagnostic method, which was included in the National Administration of Traditional Chinese Medicine’s High-Tech Appropriate Technology Promotion Project (2017)</li>
+          <li>Has trained more than 2,000 TCM practitioners from China and abroad</li>
+          <li>Organized dozens of “Ping Mai Bian Zheng” training programs</li>
+          <li>Hosted national academic conferences including advanced seminars on classical formula application and the China Herbal Formula Medicine Forum</li>
+          <li>Lecturer for the International Classical Formula Program at Guangzhou University of Chinese Medicine</li>
+          <li>Author of the book <em>Understanding Zhang Zhongjing</em> (published by China Traditional Chinese Medicine Press)</li>
         </ul>
       `
     }
