@@ -16,9 +16,9 @@
   --text-dark: #2C2C2C;
   --text-muted: #5C5C5C;
   
-  --terracotta: #B95C38;
-  --terracotta-hover: #9E4929;
-  --terracotta-light: #F7EAE3;
+  --terracotta: #E65A28; /* Vibrant Cinnabar Orange */
+  --terracotta-hover: #C54316; /* Deep Vermilion/Orange-red */
+  --terracotta-light: #FCEDE7; /* Soft Cinnabar tint */
   
   --jade-green: #2D5A46;
   --jade-hover: #224334;
@@ -144,6 +144,56 @@ section {
 
 .blue-bg {
   background-color: var(--hellblau-sky);
+}
+
+/* Philosophy Visual & Bodhisattva Image */
+.philosophy-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bodhisattva-wrapper {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodhisattva-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 15px 35px rgba(230, 90, 40, 0.12));
+  transition: var(--transition-smooth);
+}
+
+.bodhisattva-img:hover {
+  transform: translateY(-5px) scale(1.02);
+  filter: drop-shadow(0 20px 40px rgba(230, 90, 40, 0.18));
+}
+
+.halo-effect {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(230, 90, 40, 0.1) 0%, rgba(230, 90, 40, 0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(230, 90, 40, 0.15);
+  animation: rotateHalo 40s linear infinite;
+}
+
+@keyframes rotateHalo {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /* Layout Utilities */
@@ -1074,6 +1124,14 @@ footer {
   }
   .hero h1 {
     font-size: 2.8rem;
+  }
+  .bodhisattva-wrapper {
+    width: 280px;
+    height: 360px;
+  }
+  .halo-effect {
+    width: 260px;
+    height: 260px;
   }
 }
 

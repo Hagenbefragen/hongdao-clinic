@@ -29,8 +29,9 @@ const translations = {
     "intro-desc": "<p style=\"margin-bottom: 1rem;\">The Hong Dao Clinic was founded by a team of renowned experts of the SHANGHANLUN 伤寒论 tradition of the ascended Master ZHANG Zhongjing 张仲景 and doctoral graduates of Fudan University, combining classical Chinese herbal formulas with modern technology and diagnostic methods.</p><p style=\"margin-bottom: 1rem;\">Under the guiding principle \u201cAncient Formulas as Foundation, Technology as Wings\u201d, the clinic unites research and teaching in an integrative concept serving people worldwide.</p><p>We offer individually tailored care and treatment plans for patients suffering from complex conditions such as autoimmune disorders, metabolic diseases like diabetes, endometriosis, hormonal imbalances, chronic fatigue, cancer, and infertility.</p>",
 
     // Masters & Team
-    "team-title": "Our Experts & Specialists",
-    "team-subtitle": "Meet our dedicated team bridging traditional practices and modern recovery.",
+    "team-tag": "Medical Lineage",
+    "team-title": "Traditional Heritage & Compassionate Healing",
+    "team-subtitle": "Meet our dedicated doctors and practitioners bridging classical Shanghanlun wisdom and modern recovery.",
     "master-xu-title": "Chief Physician & TCM Professor",
     "master-xu-desc": "Professor Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases.",
     "doctor-1-title": "Clinic Director & Stem Cell Therapy",
@@ -47,7 +48,7 @@ const translations = {
     "visionary-deng-title": "Heilpraktikerin, Qi Gong & Sound Therapy",
     "visionary-deng-desc": "Heilpraktikerin Deng Nanjing translates Professor Xu's consultations into German, English, Italian, Spanish, and Mandarin. She also leads Qi Gong sessions, 6 Healing Sounds practice, sound therapy, tea ceremonies, and supports guests with all organizational needs during their stay.",
     "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Sound Therapy & Patient Support. 5 Languages.",
-    "team-grid-title": "Our Specialized Team",
+    "team-grid-title": "Guardians of Ancient Wisdom & Specialized Clinicians",
     "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistant Physician",
     "doctor-3-spec": "Assistant Physician, specializing in acupuncture and clinical support under Professor Xu's guidance.",
     "doctor-sound-name": "Cheung Mingli",
@@ -256,8 +257,9 @@ const translations = {
     "intro-desc": "<p style=\"margin-bottom: 1rem;\">Die Hong Dao Klinik wurde von einem Team renommierter Experten der SHANGHANLUN 伤寒论 Lehre des aufgestiegenen Meisters ZHANG Zhongjings 张仲景 sowie Doktoranden der Fudan University gegründet und verbindet klassische chinesische Kräuterrezepturen mit moderner Technologie und Diagnostikverfahren.</p><p style=\"margin-bottom: 1rem;\">Unter dem Leitgedanken \u201eAlte Rezepturen als Fundament, Technologie als Flügel\u201c vereint die Klinik Forschung und Lehre in einem integrativen Konzept und dient Menschen weltweit.</p><p>Wir bieten individuell maßgeschneiderte Begleitung und Therapiepläne für Patient:innen an, die unter komplexen Erkrankungen wie Autoimmungeschehen, Stoffwechselerkrankungen wie Diabetes, Endometriose, hormonellen Störungen, Erschöpfungssyndrom, Krebs und Unfruchtbarkeit leiden.</p>",
 
     // Masters & Team
-    "team-title": "Unsere Experten & Spezialisten",
-    "team-subtitle": "Lernen Sie unser engagiertes Team kennen, das Brücken zwischen Tradition und moderner Genesung schlägt.",
+    "team-tag": "Traditionslinie",
+    "team-title": "Klassische Wurzeln & Ganzheitliche Zuwendung",
+    "team-subtitle": "Lernen Sie unser engagiertes Team kennen, das Brücken zwischen klassischer Shanghanlun-Lehre und moderner Genesung schlägt.",
     "master-xu-title": "Chefarzt & TCM-Professor",
     "master-xu-desc": "Professor Xu Ruqi verfügt über mehr als 40 Jahre Erfahrung in Pulsdiagnostik und klassischer Kräutermedizin. Als klinischer Experte an der Pekinger Universität für Chinesische Medizin ist er weltweit bekannt für die Behandlung schwerer chronischer Krankheiten, Tumoren und gynäkologischer Leiden.",
     "doctor-1-title": "Direktorin der Klinik & Stammzelltherapie",
@@ -274,7 +276,7 @@ const translations = {
     "visionary-deng-title": "Heilpraktikerin, Qi Gong & Klangbegleitung",
     "visionary-deng-desc": "Heilpraktikerin Deng Nanjing übersetzt die Konsultationen und Befunde von Professor Xu verlässlich ins Deutsche, Englische, Italienische, Spanische und Mandarin. Begleitend leitet sie Qi Gong, die 6 heilenden Klänge, Klangsitzungen und Teezeremonien und unterstützt Sie bei allen organisatorischen Anliegen während Ihres Aufenthaltes.",
     "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Klangbegleitung & Patientenbetreuung. 5 Sprachen.",
-    "team-grid-title": "Unser spezialisiertes Team",
+    "team-grid-title": "Bewahrer des Wissens & Klinische Experten",
     "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistenzarzt",
     "doctor-3-spec": "Assistenzarzt, spezialisiert auf Akupunktur und klinische Unterstützung unter Anleitung von Professor Xu.",
     "doctor-sound-name": "Cheung Mingli",
