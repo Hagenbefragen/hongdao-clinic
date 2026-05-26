@@ -18,42 +18,40 @@ const translations = {
     "nav-apply": "Register",
 
     // Hero Section
-    "hero-tag": "Traditional Chinese Medicine & Health Maintenance by Lebensfluss e.V.",
+    "hero-tag": "Traditional Chinese Medicine meets Modern Medical Technology",
     "hero-title": "Traditional Chinese Medicine & Clinical Diagnostics",
-    "hero-desc": "Experience professional health maintenance led by TCM Master Xu Ruqi. Lebensfluss e.V. integrates classical herbal medicine and pulse diagnostics with modern measurement methods for your health and recovery.",
+    "hero-desc": "Experience deep physical and spiritual transformation through the 40-year TCM expertise of Professor Xu Ruqi, individualized herbal therapies, cutting-edge diagnostic devices, and healing sound ceremonies.",
     "hero-cta-apply": "Register Now",
     "hero-cta-more": "Explore Programs",
 
     // Introduction / Philosophy
-    "intro-title": "TCM Experience Meets Modern Diagnostics",
-    "intro-desc": "Our health maintenance practice integrates decades of experience in pulse diagnostics and herbal therapy with modern wellness measurement devices, supportive sound therapy, and nutritional guidance. We offer structured care for members facing endometriosis, hormonal imbalances, chronic fatigue, and stress-related conditions.",
+    "intro-title": "Ancient Formulas as Foundation, Technology as Wings",
+    "intro-desc": "<p style=\"margin-bottom: 1rem;\">The Hong Dao Clinic was founded by a team of renowned experts of the SHANGHANLUN 伤寒论 tradition of the ascended Master ZHANG Zhongjing 张仲景 and doctoral graduates of Fudan University, combining classical Chinese herbal formulas with modern technology and diagnostic methods.</p><p style=\"margin-bottom: 1rem;\">Under the guiding principle \u201cAncient Formulas as Foundation, Technology as Wings\u201d, the clinic unites research and teaching in an integrative concept serving people worldwide.</p><p>We offer individually tailored care and treatment plans for patients suffering from complex conditions such as autoimmune disorders, metabolic diseases like diabetes, endometriosis, hormonal imbalances, chronic fatigue, cancer, and infertility.</p>",
 
     // Masters & Team
-    "team-title": "Lineage Keepers & Specialized Healers",
-    "team-subtitle": "Meet our dedicated staff, bridging traditional practices and modern recovery.",
-    "master-xu-title": "Chief Physician & TCM Master",
-    "master-xu-desc": "Master Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases.",
-    "doctor-1-title": "Specialized Physician & Stem Cell Therapy",
-    "doctor-1-name": "Dr. Jingwen Qiao (乔建文)",
-    "doctor-1-desc": "Dr. Adrianna Qiao integrates advanced cellular research with TCM health maintenance for cellular health.",
-    "doctor-4-name": "Dr. Weina Guan (管蔚娜)",
+    "team-title": "Our Experts & Specialists",
+    "team-subtitle": "Meet our dedicated team bridging traditional practices and modern recovery.",
+    "master-xu-title": "Chief Physician & TCM Professor",
+    "master-xu-desc": "Professor Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases.",
+    "doctor-1-title": "Clinic Director & Stem Cell Therapy",
+    "doctor-1-name": "Dr. Qiao Jingwen (乔靖文)",
+    "doctor-1-desc": "Dr. Qiao Jingwen is Director of the Hong Dao Clinic, combining cutting-edge stem cell therapy with TCM rejuvenation techniques for cellular health, fertility, and hormonal balance.",
+    "doctor-4-name": "Dr. Guan Weina (管蔚娜)",
     "doctor-4-spec": "Licensed TCM Physician. Specialist in meridian detoxification, clinical acupuncture, and therapeutic massages.",
-    "doctor-5-name": "Hailin Zhang (张海林)",
-    "doctor-5-spec": "Head of Decoction Center. Specialist in traditional herbal extraction and quality control.",
+    "doctor-5-name": "Dr. Zhang Hailin (张海林)",
+    "doctor-5-spec": "Head of Decoction Center. Expert in traditional herbal extraction and quality control.",
     "btn-read-bio": "Read Profile",
     "decoction-subtitle": "In-House Herbal Craftsmanship",
     "decoction-title": "Modern Decoction Center & Dao Di Herbs",
     "decoction-desc": "<p style=\"margin-bottom: 1.5rem;\">We source exclusively high-quality <strong>Dao Di Herbs (道地藥材)</strong> from certified organic cultivation and soil-specific farming methods, grown in regions that offer the optimal climatic and energetic conditions for each native plant.</p><p>In our in-house Decoction Center, under the direct supervision of Master Xu, these herbs are individually extracted, precisely processed, and portion-packed into <strong>Ready-to-Drink decoctions</strong> that you can easily take home.</p>",
-    "visionary-deng-title": "Translation, Sound Therapy & Patient Support",
-    "visionary-deng-desc": "Deng Nanjing translates Master Xu's consultations and diagnostic findings into German, English, and Italian. She also facilitates sound therapy sessions, tea ceremonies, and supports guests with all organizational needs during their stay.",
-    "visionary-deng-spec": "Translation, Sound Therapy & Patient Support",
+    "visionary-deng-title": "Heilpraktikerin, Qi Gong & Sound Therapy",
+    "visionary-deng-desc": "Heilpraktikerin Deng Nanjing translates Professor Xu's consultations into German, English, Italian, Spanish, and Mandarin. She also leads Qi Gong sessions, 6 Healing Sounds practice, sound therapy, tea ceremonies, and supports guests with all organizational needs during their stay.",
+    "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Sound Therapy & Patient Support. 5 Languages.",
     "team-grid-title": "Our Specialized Team",
-    "doctor-2-name": "Dr. Zhang Min (张敏)",
-    "doctor-2-spec": "Specialist in Gynecological Disorders, Hormonal Imbalances & Advanced Endometriosis Therapy.",
-    "doctor-3-name": "Dr. Chen Wei (陈伟)",
-    "doctor-3-spec": "Acupuncture Specialist, Chronic Pain Management, Burnout Therapy & Nervous System Regulation.",
-    "doctor-sound-name": "Mingli Cheung",
-    "doctor-sound-spec": "Lead Sound Healer & Vibration Therapist, coordinating energy realignment and emotional release.",
+    "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistant Physician",
+    "doctor-3-spec": "Assistant Physician, specializing in acupuncture and clinical support under Professor Xu's guidance.",
+    "doctor-sound-name": "Cheung Mingli",
+    "doctor-sound-spec": "Nomad, yoga teacher for children and adults, fan dance therapist & sound worker with 10+ years of international experience.",
 
     // Specialized Treatments
     "treatments-title": "Health Maintenance Fields",
@@ -83,10 +81,11 @@ const translations = {
     "retreat-10day-date": "October 10th - October 20th, 2026",
     "retreat-10day-desc": "A complete immersion in TCM theory and health maintenance. 5 days of clinical observation in Shenzhen under Master Xu, followed by 5 days of Daoist lifestyle integration in the Wudang Mountains. Limited to 12 participants.",
     "retreat-10day-price": "€3,900 Cost Contribution (Early Bird)",
+    "retreat-10day-wix-link": "Wix Details",
     
-    "retreat-1day-title": "1-Day Shenzhen Local Programs",
-    "retreat-1day-desc": "Focused local masterclasses. Perfect for nearby association members wishing to experience direct practice observation, pulse diagnostic introduction, and herbal kitchen preparation.",
-    "retreat-1day-price": "€250 Cost Contribution per day",
+    "retreat-1day-title": "1-3-5 Day TCM Clinical Training (Shenzhen)",
+    "retreat-1day-desc": "Focused clinical training and masterclasses in Shenzhen. Ideal for practitioners and association members wishing to experience direct clinical practice observation, pulse diagnosis introduction, and professional decoction preparation. Flexible attendance from 1 to 5 days.",
+    "retreat-1day-price": "€250 first day, €200 each additional day",
     
     "endo-program-title": "Endometriosis Health Maintenance Program",
     "endo-program-desc": "A dedicated, fully customizable association program addressing uterine health, hormone balance, and pain relief. Features customized herbal formulas, womb massage, sound healing, and direct guidance.",
@@ -107,13 +106,13 @@ const translations = {
     "yunnan-hotel-info": "Partner Hotel: Yunnan Horizon Sanctuary - a high-end luxury mountain eco-retreat with traditional wood architecture and panoramic views.",
 
     // Child Space
-    "child-title": "HongDao Child Space",
+    "child-title": "Hong Dao Child Space",
     "child-desc": "We believe family healing involves the youngest. Our clinic hosts a beautiful internal Children's Space, providing peaceful activities, kids TCM nutrition guidance, and regular public and internal events for families to connect.",
 
     // Clinic Info & FAQ
     "info-title": "Practical Clinic Information",
     "info-location-label": "Location & Access",
-    "info-location-desc": "HongDao TCM Clinic, Shenzhen Nanshan District. Easily reachable via metro and highway.",
+    "info-location-desc": "Hong Dao TCM Clinic, Shenzhen Nanshan District. Easily reachable via metro and highway.",
     "info-hours-label": "Opening Hours",
     "info-hours-desc": "Monday - Saturday: 09:00 - 18:00 (Appointments Required)",
     "info-payment-label": "Registration & Cost Contribution Policy",
@@ -125,7 +124,15 @@ const translations = {
     "faq-q2": "How is the Yunnan travel organized?",
     "faq-a2": "Our team coordinates transfer assistance. The program covers the local partner hotel stay, guidance, and specified activities.",
     "faq-q3": "Can I bring my family?",
-    "faq-a3": "Yes. Our HongDao Child Space offers family-friendly support and special weekend activities for children while parents undergo therapies.",
+    "faq-a3": "Yes. Our Hong Dao Child Space offers family-friendly support and special weekend activities for children while parents undergo therapies.",
+    "faq-q4": "Do I need a visa for China?",
+    "faq-a4": "Most EU citizens (incl. Germany, Austria, Switzerland) can enter China visa-free for up to 30 days since 2024. Please verify the current entry requirements for your country before departure.",
+    "faq-q5": "Which apps do I need in China?",
+    "faq-a5": "<strong>Install before departure:</strong><br>&#8226; <strong>WeChat</strong> &#8211; Communication (China's WhatsApp)<br>&#8226; <strong>Alipay</strong> &#8211; Payment (link your credit card!)<br>&#8226; <strong>Didi</strong> &#8211; Taxi booking<br>&#8226; <strong>AMap</strong> &#8211; Navigation<br>&#8226; <strong>VPN</strong> &#8211; e.g. Jamjams or Potatso Lite",
+    "faq-q6": "How does payment work on site?",
+    "faq-a6": "China is almost entirely cashless. Download <strong>Alipay</strong> and link your credit card (Visa/Mastercard). You can pay everywhere with it.",
+    "faq-q7": "What can I expect from a TCM treatment?",
+    "faq-a7": "Professor Xu creates an individual diagnosis via pulse diagnostics and tongue analysis. Treatment typically includes herbal formulas, acupuncture, and moxibustion. Initial improvements often appear after 1-2 weeks, sustainable changes after 4+ weeks.",
 
     // Contact
     "contact-title": "Begin Your Healing Journey",
@@ -201,6 +208,7 @@ const translations = {
     "tech-device-5-long-desc": "Targeted spectrum radiation simulating natural body emission frequencies to stimulate tissue regeneration, local metabolism, and complement classical acupuncture treatments.",
     "download-brochure-btn": "Download Brochure (PDF)",
     "gallery-title": "Impressions from our last Retreat 2025",
+    "gallery-more-btn": "More Photos",
     "gallery-subtitle": "Photos and moments of group training, meditations, and nature experiences.",
     "gallery-item-group-badge": "Group",
     "gallery-item-group-title": "Retreat Group 2025",
@@ -237,42 +245,40 @@ const translations = {
     "nav-apply": "Anmelden",
 
     // Hero Section
-    "hero-tag": "Traditionelle Chinesische Medizin & Gesundheitspflege durch Lebensfluss e.V.",
+    "hero-tag": "Traditionelle Chinesische Medizin trifft moderne Medizintechnik",
     "hero-title": "Traditionelle Chinesische Medizin & Klinische Diagnostik",
-    "hero-desc": "Erfahren Sie wirksame Begleitung unter der Leitung von TCM-Meister Xu Ruqi. Lebensfluss e.V. verbindet klassische Kräutermedizin und Pulsdiagnostik mit modernen Messverfahren für Ihre Regeneration.",
+    "hero-desc": "Erleben Sie tiefe körperliche und spirituelle Transformation durch die 40-jährige TCM-Erfahrung von Professor Xu Ruqi, individuelle Kräutertherapien, modernste Diagnosegeräte und heilsame Klangzeremonien.",
     "hero-cta-apply": "Jetzt anmelden",
-    "hero-cta-more": "Vereinsprogramme entdecken",
+    "hero-cta-more": "Programme entdecken",
 
     // Introduction / Philosophy
-    "intro-title": "TCM-Erfahrung trifft auf moderne Medizintechnik",
-    "intro-desc": "Unsere Praxis für Gesundheitspflege verbindet jahrzehntelange Erfahrung in der Pulsdiagnostik und Kräutertherapie mit modernen Messgeräten, begleitender Klangtherapie und Ernährungsberatung. Wir bieten strukturierte Begleitung für Vereinsmitglieder mit Endometriose, hormonellen Störungen, Erschöpfungssyndrom und Stress.",
+    "intro-title": "Alte Rezepturen als Fundament, Technologie als Flügel",
+    "intro-desc": "<p style=\"margin-bottom: 1rem;\">Die Hong Dao Klinik wurde von einem Team renommierter Experten der SHANGHANLUN 伤寒论 Lehre des aufgestiegenen Meisters ZHANG Zhongjings 张仲景 sowie Doktoranden der Fudan University gegründet und verbindet klassische chinesische Kräuterrezepturen mit moderner Technologie und Diagnostikverfahren.</p><p style=\"margin-bottom: 1rem;\">Unter dem Leitgedanken \u201eAlte Rezepturen als Fundament, Technologie als Flügel\u201c vereint die Klinik Forschung und Lehre in einem integrativen Konzept und dient Menschen weltweit.</p><p>Wir bieten individuell maßgeschneiderte Begleitung und Therapiepläne für Patient:innen an, die unter komplexen Erkrankungen wie Autoimmungeschehen, Stoffwechselerkrankungen wie Diabetes, Endometriose, hormonellen Störungen, Erschöpfungssyndrom, Krebs und Unfruchtbarkeit leiden.</p>",
 
     // Masters & Team
-    "team-title": "Hüter der Tradition & Spezialisierte Heiler",
+    "team-title": "Unsere Experten & Spezialisten",
     "team-subtitle": "Lernen Sie unser engagiertes Team kennen, das Brücken zwischen Tradition und moderner Genesung schlägt.",
-    "master-xu-title": "Chefarzt & TCM-Meister",
-    "master-xu-desc": "Meister Xu Ruqi verfügt über mehr als 40 Jahre Erfahrung in Pulsdiagnostik und klassischer Kräutermedizin. Als klinischer Experte an der Pekinger Universität für Chinesische Medizin ist er weltweit bekannt für die Behandlung schwerer chronischer Krankheiten, Tumoren und gynäkologischer Leiden.",
-    "doctor-1-title": "Spezialisierte Ärztin & Stammzelltherapie",
-    "doctor-1-name": "Dr. Jingwen Qiao (乔建文)",
-    "doctor-1-desc": "Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.",
-    "doctor-4-name": "Dr. Weina Guan (管蔚娜)",
+    "master-xu-title": "Chefarzt & TCM-Professor",
+    "master-xu-desc": "Professor Xu Ruqi verfügt über mehr als 40 Jahre Erfahrung in Pulsdiagnostik und klassischer Kräutermedizin. Als klinischer Experte an der Pekinger Universität für Chinesische Medizin ist er weltweit bekannt für die Behandlung schwerer chronischer Krankheiten, Tumoren und gynäkologischer Leiden.",
+    "doctor-1-title": "Direktorin der Klinik & Stammzelltherapie",
+    "doctor-1-name": "Dr. Qiao Jingwen (乔靖文)",
+    "doctor-1-desc": "Dr. Qiao Jingwen ist Direktorin der Hong Dao Klinik und kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.",
+    "doctor-4-name": "Dr. Guan Weina (管蔚娜)",
     "doctor-4-spec": "Staatlich lizenzierte TCM-Ärztin. Spezialistin für Meridian-Entgiftung, Akupunktur und therapeutische Massagen.",
-    "doctor-5-name": "Hailin Zhang (张海林)",
-    "doctor-5-spec": "Leiter des Dekokt-Zentrums. Experte für traditionelle Kräuterzubereitung und Qualitätskontrolle.",
+    "doctor-5-name": "Dr. Zhang Hailin (张海林)",
+    "doctor-5-spec": "Leiterin des Dekokt-Zentrums. Expertin für traditionelle Kräuterzubereitung und Qualitätskontrolle.",
     "btn-read-bio": "Profil lesen",
     "decoction-subtitle": "Hauseigene Kräuter-Manufaktur",
     "decoction-title": "Modernes Dekokt-Zentrum & Dao Di Kräuter",
     "decoction-desc": "<p style=\"margin-bottom: 1.5rem;\">Wir beziehen ausschließlich hochwertige <strong>Dao Di Kräuter (道地藥材)</strong> aus kontrolliert biologischem Anbau und Soil-Technik aus den Herkunftsregionen, die für die jeweilige Pflanze die optimalen klimatischen und energetischen Bedingungen bieten.</p><p>In unserem hauseigenen Dekokt-Zentrum werden die Heilkräuter unter Aufsicht von Meister Xu individuell für Sie extrahiert, präzise verarbeitet und portioniert als <strong>gebrauchsfertige Kräuterdekokte (Ready-to-Drink)</strong> abgepackt, die Sie unkompliziert mit nach Hause nehmen können.</p>",
-    "visionary-deng-title": "Übersetzung, Klangbegleitung & Patientenbetreuung",
-    "visionary-deng-desc": "Deng Nanjing übersetzt die Konsultationen und Befunde von Meister Xu verlässlich ins Deutsche, Englische und Italienische. Begleitend leitet sie Klangsitzungen und Teezeremonien und unterstützt Sie bei allen organisatorischen Anliegen während Ihres Aufenthaltes.",
-    "visionary-deng-spec": "Übersetzung, Klangbegleitung & Patientenbetreuung.",
+    "visionary-deng-title": "Heilpraktikerin, Qi Gong & Klangbegleitung",
+    "visionary-deng-desc": "Heilpraktikerin Deng Nanjing übersetzt die Konsultationen und Befunde von Professor Xu verlässlich ins Deutsche, Englische, Italienische, Spanische und Mandarin. Begleitend leitet sie Qi Gong, die 6 heilenden Klänge, Klangsitzungen und Teezeremonien und unterstützt Sie bei allen organisatorischen Anliegen während Ihres Aufenthaltes.",
+    "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Klangbegleitung & Patientenbetreuung. 5 Sprachen.",
     "team-grid-title": "Unser spezialisiertes Team",
-    "doctor-2-name": "Dr. Zhang Min (张敏)",
-    "doctor-2-spec": "Spezialistin für gynäkologische Erkrankungen, hormonelle Dysbalancen & Endometriose-Therapie.",
-    "doctor-3-name": "Dr. Chen Wei (陈伟)",
-    "doctor-3-spec": "Spezialist für Akupunktur, chronische Schmerztherapie, Burnout & vegetative Nervensystem-Regulation.",
-    "doctor-sound-name": "Mingli Cheung",
-    "doctor-sound-spec": "Klangheiler & Vibrationstherapeut, leitet die energetische Ausrichtung und emotionale Entlastung.",
+    "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistenzarzt",
+    "doctor-3-spec": "Assistenzarzt, spezialisiert auf Akupunktur und klinische Unterstützung unter Anleitung von Professor Xu.",
+    "doctor-sound-name": "Cheung Mingli",
+    "doctor-sound-spec": "Nomadin, Yogalehrerin für Kinder und Erwachsene, Fächer-Tanz-Therapeutin & Klangarbeiterin mit 10+ Jahren internationaler Erfahrung.",
 
     // Specialized Treatments
     "treatments-title": "Fachbereiche der Gesundheitspflege",
@@ -302,8 +308,9 @@ const translations = {
     "retreat-10day-date": "10. Oktober - 20. Oktober 2026",
     "retreat-10day-desc": "Komplette Immersion in TCM-Theorie & Gesundheitspflege. 5 Tage Hospitation in Shenzhen unter Meister Xu, gefolgt von 5 Tagen taoistischer Lebensführung in den Wudang-Bergen. Maximal 12 Teilnehmer.",
     "retreat-10day-price": "€3.900,- Kostenbeitrag (Frühbucher)",
+    "retreat-10day-wix-link": "Details auf Wix",
     
-    "retreat-1day-title": "1-tägige Programme (Shenzhen)",
+    "retreat-1day-title": "1-3-5-tägiges klinisches TCM-Training (Shenzhen)",
     "retreat-1day-desc": "Lokale Tageskurse vor Ort. Ideal für Vereinsmitglieder zur Hospitation, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.",
     "retreat-1day-price": "€250,- Kostenbeitrag pro Tag",
     
@@ -326,13 +333,13 @@ const translations = {
     "yunnan-hotel-info": "Partnerhotel: Yunnan Horizon Sanctuary - Luxuriöses Öko-Resort mit atemberaubendem Pool und traditioneller Holzbauweise inmitten der Berge.",
 
     // Child Space
-    "child-title": "HongDao Kinderbereich",
+    "child-title": "Hong Dao Kinderbereich",
     "child-desc": "Heilung betrifft die ganze Familie. Unsere Klinik bietet einen hauseigenen Kinderbereich (Child Space) mit kindgerechten Beschäftigungen, TCM-Ernährungsberatung und regelmäßigen öffentlichen & internen Events.",
 
     // Clinic Info & FAQ
     "info-title": "Klinikinformationen & Buchungsrichtlinien",
     "info-location-label": "Standort & Anfahrt",
-    "info-location-desc": "HongDao TCM-Klinik, Nanshan District, Shenzhen. Gut angebunden an Metro und Autobahn.",
+    "info-location-desc": "Hong Dao TCM-Klinik, Nanshan District, Shenzhen. Gut angebunden an Metro und Autobahn.",
     "info-hours-label": "Öffnungszeiten",
     "info-hours-desc": "Montag - Samstag: 09:00 - 18:00 Uhr (Nur nach Terminvereinbarung)",
     "info-payment-label": "Anmeldung & Kostenbeitrag",
@@ -345,6 +352,14 @@ const translations = {
     "faq-a2": "Unser Klinikteam organisiert den Transfer per Bahn/Flug. Unterkunft im Partnerhotel sowie Aktivitäten vor Ort sind im Kostenbeitrag des Retreats enthalten.",
     "faq-q3": "Gibt es eine Kinderbetreuung vor Ort?",
     "faq-a3": "Ja. Unser hauseigener Kinderbereich bietet altersgerechte Programme und veranstaltet regelmäßige Familien-Events.",
+    "faq-q4": "Brauche ich ein Visum für China?",
+    "faq-a4": "Die meisten EU-Bürger (inkl. Deutschland, Österreich, Schweiz) können seit 2024 visumfrei für bis zu 30 Tage nach China einreisen. Bitte prüfen Sie die aktuellen Einreisebestimmungen Ihres Landes vor Abreise.",
+    "faq-q5": "Welche Apps brauche ich in China?",
+    "faq-a5": "<strong>Vor Abreise installieren:</strong><br>&#8226; <strong>WeChat</strong> &#8211; Kommunikation (Chinas WhatsApp)<br>&#8226; <strong>Alipay</strong> &#8211; Bezahlen (Kreditkarte verknüpfen!)<br>&#8226; <strong>Didi</strong> &#8211; Taxi bestellen<br>&#8226; <strong>AMap</strong> &#8211; Navigation<br>&#8226; <strong>VPN</strong> &#8211; z.B. Jamjams oder Potatso Lite",
+    "faq-q6": "Wie funktioniert das Bezahlen vor Ort?",
+    "faq-a6": "In China wird fast ausschließlich bargeldlos bezahlt. Laden Sie <strong>Alipay</strong> herunter und verknüpfen Sie Ihre Kreditkarte (Visa/Mastercard). Damit können Sie überall bezahlen.",
+    "faq-q7": "Was kann ich von einer TCM-Behandlung erwarten?",
+    "faq-a7": "Professor Xu erstellt eine individuelle Diagnose über Pulsdiagnostik und Zungenanalyse. Die Behandlung umfasst Kräuterrezepturen, Akupunktur und Moxibustion. Erste Verbesserungen zeigen sich oft nach 1-2 Wochen, nachhaltige Veränderungen nach 4+ Wochen.",
 
     // Contact
     "contact-title": "Beginnen Sie Ihren Weg zur Heilung",
@@ -420,6 +435,7 @@ const translations = {
     "tech-device-5-long-desc": "Gezielter Spektralstrahler zur lokalen Bestrahlung. Fördert die Geweberegeneration, regt lokale Stoffwechselprozesse an und wird komplementär zu Akupunktur- und Moxa-Sitzungen eingesetzt.",
     "download-brochure-btn": "Broschüre herunterladen (PDF)",
     "gallery-title": "Impressionen aus unserem letzten Retreat 2025",
+    "gallery-more-btn": "Mehr Bilder",
     "gallery-subtitle": "Bilder und Momente des gemeinsamen Trainings, der Meditationen und Naturerfahrungen.",
     "gallery-item-group-badge": "Gruppe",
     "gallery-item-group-title": "Retreatgruppe 2025",
@@ -449,20 +465,22 @@ const translations = {
 // Endometriosis Program Pricing Data Matrix
 const endometriosisPricing = {
   "1w": {
-    basic: 950,
-    premium: 1950,
+    basic: 1750,
+    premium: 2500,
     features: {
       en: [
-        "Initial pulse & tongue diagnosis with Master Xu",
-        "3 Acupuncture & moxibustion sessions",
+        "Initial pulse & tongue diagnosis with Professor Xu",
+        "3 Acupuncture sessions",
+        "3 Moxibustion (Pu Jiu) sessions",
         "1 Specialized Womb-Massage session",
         "1 Group Sound Healing & sound ceremony",
         "TCM nutrition guideline and kitchen introduction",
         "Take-home medicine instruction (powders/pastes)"
       ],
       de: [
-        "Erstdiagnose (Puls & Zunge) mit Meister Xu",
-        "3 Akupunktur- & Moxibustions-Sitzungen",
+        "Erstdiagnose (Puls & Zunge) mit Professor Xu",
+        "3 Akupunktur-Sitzungen",
+        "3 Moxibustions-Sitzungen (Pu Jiu)",
         "1 Spezialisierte Womb-Massage (Gebärmutter-Massage)",
         "1 Gruppen-Sound-Healing & Klangzeremonie",
         "TCM-Ernährungsleitfaden & Küchen-Einführung",
@@ -471,45 +489,65 @@ const endometriosisPricing = {
     }
   },
   "2w": {
-    basic: 1750,
-    premium: 3500,
+    basic: 3500,
+    premium: 5000,
     features: {
       en: [
-        "Initial & mid-program checkup with Master Xu",
-        "6 Acupuncture & moxibustion sessions",
+        "Initial & mid-program checkup with Professor Xu",
+        "6 Acupuncture sessions",
+        "6 Moxibustion (Pu Jiu) sessions",
         "2 Specialized Womb-Massage sessions",
-        "2 Group Sound Healing sessions & private alignment",
+        "2 Group Sound Healing sessions",
+        "Daily Morning Qi Gong",
+        "1 Tea Ceremony",
+        "Evening Meditation sessions",
+        "Cultural program with ethnic minorities (from week 2)",
         "Daily TCM-based herbal soups at clinic",
         "Take-home medicine instruction + 3 months follow-up support"
       ],
       de: [
-        "Erst- & Zwischen-Diagnose durch Meister Xu",
-        "6 Akupunktur- & Moxibustions-Sitzungen",
+        "Erst- & Zwischen-Diagnose durch Professor Xu",
+        "6 Akupunktur-Sitzungen",
+        "6 Moxibustions-Sitzungen (Pu Jiu)",
         "2 Spezialisierte Womb-Massagen (Gebärmutter-Massagen)",
-        "2 Gruppen-Sound-Healings & private Klangsitzung",
+        "2 Gruppen-Sound-Healings",
+        "Tägliches Morgen-Qi Gong",
+        "1 Teezeremonie",
+        "Abendmeditation",
+        "Kulturprogramm mit ethnischen Minderheiten (ab Woche 2)",
         "Tägliche TCM-Kräutersuppen in der Klinik",
         "Einweisung für Kräuter sowie 3 Monate Begleitung"
       ]
     }
   },
   "4w": {
-    basic: 3200,
-    premium: 6400,
+    basic: 6200,
+    premium: 9000,
     features: {
       en: [
-        "Weekly diagnostic checkups with Master Xu",
-        "12 Acupuncture & moxibustion sessions",
+        "Weekly diagnostic checkups with Professor Xu",
+        "12 Acupuncture sessions",
+        "12 Moxibustion (Pu Jiu) sessions",
         "4 Specialized Womb-Massage sessions",
         "4 Sound Healing & meditation ceremonies",
+        "Daily Morning Qi Gong",
+        "2 Tea Ceremonies",
+        "Daily Evening Meditation",
+        "Cultural program with ethnic minorities",
         "Daily TCM-based herbal kitchen meals at clinic",
         "Comprehensive stem-cell therapy consultation integration",
         "Take-home customized medicine preparation + 6 months follow-up support"
       ],
       de: [
-        "Wöchentliche Diagnostik und Anpassung durch Meister Xu",
-        "12 Akupunktur- & Moxibustions-Sitzungen",
+        "Wöchentliche Diagnostik und Anpassung durch Professor Xu",
+        "12 Akupunktur-Sitzungen",
+        "12 Moxibustions-Sitzungen (Pu Jiu)",
         "4 Spezialisierte Womb-Massagen",
         "4 Sound-Healing- & Meditationszeremonien",
+        "Tägliches Morgen-Qi Gong",
+        "2 Teezeremonien",
+        "Tägliche Abendmeditation",
+        "Kulturprogramm mit ethnischen Minderheiten",
         "Tägliche Mahlzeiten aus der TCM-Heilküche in der Klinik",
         "Integration & Beratung zu Stammzellentherapie",
         "Herstellung der Kräuterarznei + 6 Monate ärztliche Begleitung"
@@ -766,10 +804,10 @@ function initBookingSlots() {
       let mailSubject = "";
       let mailBody = "";
       if (currentLang === 'de') {
-        mailSubject = `HongDao TCM Anmeldung - ${name}`;
+        mailSubject = `Hong Dao TCM Anmeldung - ${name}`;
         mailBody = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n\n- Name: ${name}\n- E-Mail: ${email}\n- Telefon: ${phone}\n- Gewünschtes Programm: ${programText}\n- Datum: ${selectedDate}\n- Uhrzeit: ${timeDisplay}\n\nAnmerkung/Beschwerden:\n${message}\n\nVielen Dank!`;
       } else {
-        mailSubject = `HongDao TCM Consultation Booking - ${name}`;
+        mailSubject = `Hong Dao TCM Consultation Booking - ${name}`;
         mailBody = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Program: ${programText}\n- Date: ${selectedDate}\n- Time: ${timeDisplay}\n\nMessage/Symptoms:\n${message}\n\nThank you!`;
       }
 
@@ -1365,135 +1403,137 @@ const articlesContent = {
   },
   xu: {
     de: {
-      title: "Master Xu Ruqi – Chefarzt & Leitender TCM-Experte",
+      title: "Professor Xu Ruqi – Chefarzt & Leitender TCM-Experte",
       body: `
-        <p><strong>Master Xu Ruqi (徐汝奇)</strong> verfügt über mehr als 40 Jahre klinische Erfahrung in klassischer chinesischer Medizin und fortgeschrittener Pulsdiagnostik. Er gilt weltweit als herausragende Kapazität auf dem Gebiet der Behandlung schwerer chronischer Leiden.</p>
+        <p><strong>Professor Xu Ruqi (徐汝奇)</strong> verfügt über mehr als 40 Jahre klinische Erfahrung in klassischer chinesischer Medizin und fortgeschrittener Pulsdiagnostik. Er gilt weltweit als herausragende Kapazität und renommierter Gelehrter der <em>Shanghan Lun (Abhandlung über Kälte-Krankheiten)</em>.</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete & Heilerfolge</h4>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete & Kräuterbehandlung (Jingfang)</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Gynäkologische Schmerzsyndrome</strong>: Herausragende Heilerfolge bei chronischer Endometriose, Schokoladenzysten (Endometriomen) und schwerer Dysmenorrhö allein durch pflanzliche Therapien.</li>
-          <li><strong>Onkologische Begleitung & Tumore</strong>: Ganzheitliche Unterstützung bei Krebserkrankungen, Linderung von Nebenwirkungen der Chemotherapie und Stabilisierung der Lebensenergie (Qi).</li>
-          <li><strong>Knoten- und Zystenauflösung</strong>: Erfolgreiche Rückbildung von Schilddrüsenknoten, Brustdrüsen-Hyperplasien und inneren Zysten mittels klassischer Rezepturen.</li>
+          <li><strong>Onkologie & schwere chronische Krankheiten</strong>: Ganzheitliche Begleitung bei Krebserkrankungen und Tumoren, Linderung von Therapie-Nebenwirkungen und Stabilisierung des Qi.</li>
+          <li><strong>Herz-Kreislauf- & zerebrovaskuläre Leiden</strong>: Behandlung von koronarer Herzkrankheit, Bluthochdruck und Schlaganfall-Spätfolgen.</li>
+          <li><strong>Stoffwechsel- & Organerkrankungen</strong>: Therapie bei Diabetes sowie Leber-, Magen- und Nierenerkrankungen.</li>
+          <li><strong>Rheumatische & Autoimmun-Erkrankungen</strong>: Behandlung von rheumatoider Arthritis und Morbus Bechterew.</li>
+          <li><strong>Gynäkologische Schmerzsyndrome & Fortpflanzung</strong>: Ausgezeichnete Heilerfolge bei Endometriose, Schokoladenzysten (Endometriomen), Dysmenorrhö sowie männlicher und weiblicher Unfruchtbarkeit.</li>
         </ul>
+        <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+          <em>Konsultationsgebühren:</em> Vor-Ort-Termin: 600 RMB | Online-Konsultation: 300 RMB
+        </p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Akademische Lehre</h4>
-        <p style="margin-bottom: 1rem;">Ehemaliger leitender Dozent und klinischer Ausbilder an der renommierten <strong>Pekinger Universität für Chinesische Medizin (BUCM)</strong>. Er hat Generationen von TCM-Ärzten ausgebildet und leitet heute die pharmakologische Entwicklung im Hongdao-Zentrum.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Akademische Lehre & Positionen</h4>
+        <p style="margin-bottom: 1rem;">Professor Xu ist klinischer Sonder-Experte der 3. Pekinger Universität für Chinesische Medizin und klinischer Mentor an der Qihuang-Akademie. Er leitet das Diagnose- und Behandlungszentrum für Onkologie und komplexe Krankheiten der Hong Dao TCM-Klinik.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Wissenschaftliche Philosophie</h4>
+        <p style="margin-bottom: 1rem;">Er vertritt die Integration von klassischem Wissen und moderner Praxis sowie die Verschmelzung von chinesischer und westlicher Medizin (古今汇通·中西融合). Sein Behandlungsmodell stellt die pulsgestützte Syndromdifferenzierung („Ping Mai Bian Zheng“) und die Anwendung klassischer Rezepturen (经方) in den Mittelpunkt, um wissenschaftliche Dosis-Wirkungs-Beziehungen und Visualisierungen der Heilwirkung zu fördern.</p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Wissenschaftliche Leistungen</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li>Begründer der Diagnose- und Therapiemethode „Ping Mai Bian Zheng“ (Ausgewogene Puls-Syndromdifferenzierung), welche offiziell in das Förderprogramm für High-Tech- und geeignete Technologien der Nationalen Administration für Traditionelle Chinesische Medizin aufgenommen wurde (Dokument-Nr. 15, Staatliche TCM-Administration, 2017).</li>
+          <li>Ausbildung und Betreuung von über 2.000 TCM-Ärztinnen und -Ärzten weltweit und Durchführung dutzender Pulsdiagnose-Seminare.</li>
+          <li>Dozent und Experte des „Internationalen Jingfang-Kurses“ an der Guangzhou Universität für Chinesische Medizin.</li>
+          <li>Autor des bekannten Werkes <strong>「悟道张仲景」(WU DAO ZHANG ZHONG JING)</strong> – „Den Weg von Zhang Zhongjing begreifen", das beschreibt, wie der legendäre Meister Zhang Zhongjing ihm zum ersten Mal im Traum erschien und ihm die Essenz der Shanghanlun-Lehre offenbarte.</li>
+        </ul>
       `
     },
     en: {
-      title: "Master Xu Ruqi – Chief Physician & Senior TCM Master",
+      title: "Professor Xu Ruqi – Chief Physician & Senior TCM Expert",
       body: `
-        <p><strong>Master Xu Ruqi (徐汝奇)</strong> has over 40 years of clinical experience in classical Chinese medicine and advanced pulse diagnostics. He is globally recognized as an authority in treating severe chronic and gynecological disorders.</p>
+        <p><strong>Professor Xu Ruqi (徐汝奇)</strong> has over 40 years of clinical experience in classical Chinese medicine and advanced pulse diagnostics. He is globally recognized as an authority in treating severe chronic disorders and is a renowned Shanghan Lun scholar.</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Track Record</h4>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Classical Herbal (Jingfang) Treatment</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Gynecological Pain Syndromes</strong>: High success rates in resolving severe endometriosis, chocolate cysts, and dysmenorrhea using purely customized herbal medicine.</li>
-          <li><strong>Oncology Support & Tumors</strong>: Integrative support for cancer patients, reducing chemo-induced toxicity, and boosting immune cell counts.</li>
-          <li><strong>Nodule & Cyst Regression</strong>: Proven clinical track record in shrinking thyroid nodules, breast hyperplasia, and ovarian cysts.</li>
+          <li><strong>Oncology & Severe Chronic Diseases</strong>: Integrative oncology support, reducing therapy side effects, and stabilizing Qi (vital energy).</li>
+          <li><strong>Cardiovascular & Cerebrovascular Diseases</strong>: Clinical management of coronary heart disease, hypertension, and post-stroke sequelae.</li>
+          <li><strong>Metabolic & Visceral Conditions</strong>: Treatment of diabetes, liver, stomach, and kidney diseases.</li>
+          <li><strong>Rheumatoid & Autoimmune Conditions</strong>: Specialized care for rheumatoid arthritis and ankylosing spondylitis.</li>
+          <li><strong>Gynecological Pain & Reproductive Health</strong>: Excellent outcomes in treating endometriosis, chocolate cysts, dysmenorrhea, and male/female infertility.</li>
         </ul>
+        <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+          <em>Consultation Fees:</em> In-person visit: 600 RMB | Online consultation: 300 RMB
+        </p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Academic Credentials</h4>
-        <p style="margin-bottom: 1rem;">Former senior lecturer and clinical director at the prestigious <strong>Beijing University of Chinese Medicine (BUCM)</strong>. He directs the pharmacological quality and compounding center at Hongdao.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Academic Credentials & Appointments</h4>
+        <p style="margin-bottom: 1rem;">Distinguished clinical expert of the 3rd Beijing University of Chinese Medicine (BUCM), clinical mentor at Qihuang Academy, and Director of the Oncology and Complex Diseases Diagnosis and Treatment Center at the Hong Dao TCM Clinic.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Academic Philosophy</h4>
+        <p style="margin-bottom: 1rem;">Advocates the integration of ancient wisdom and modern practice, and the fusion of Chinese and Western medicine (古今汇通·中西融合). He established a diagnostic and treatment model centered on pulse-based syndrome differentiation ("Ping Mai Bian Zheng") and classical formulas (Jingfang), aiming to verify the scientific dosage-effect relationship of classical herbs and visualize therapeutic outcomes.</p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Academic Achievements</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li>Founded the "Ping Mai Bian Zheng" (Balanced Pulse Syndrome Differentiation) diagnostic and treatment technique, which was officially included in the High-Tech Appropriate Technology Promotion Project of the National Administration of Traditional Chinese Medicine (Document No. 15, State Administration of TCM, 2017).</li>
+          <li>Trained and mentored over 2,000 Chinese medicine practitioners from China and abroad, conducting dozens of terms of the "Balanced Pulse Syndrome Differentiation Study Class".</li>
+          <li>Served as a teaching expert for the "International Classical Formula Class" at Guangzhou University of Chinese Medicine.</li>
+          <li>Author of <strong>「悟道张仲景」(WU DAO ZHANG ZHONG JING)</strong> – "Comprehending the Way of Zhang Zhongjing". The book describes how the legendary Master Zhang Zhongjing first appeared to him in a dream and revealed the essence of the Shanghanlun teachings.</li>
+        </ul>
       `
     }
   },
   nanjing: {
     de: {
-      title: "Deng Nanjing – Gründerin & Klangtherapeutin",
+      title: "Heilpraktikerin Deng Nanjing – Gründerin, Qi Gong & Klangtherapeutin",
       body: `
-        <p><strong>Deng Nanjing (邓楠景)</strong> ist die visionäre Gründerin des Lebensfluss Inner Retreats und des Hongdao-Zentrums. Sie verbindet authentische östliche Philosophie mit westlichen Konzepten der Stressregulation.</p>
+        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> ist die visionäre Gründerin des Lebensfluss Inner Retreats und des Hong Dao Zentrums. Als Mutter und Naturverbundene verbindet sie authentische östliche Philosophie mit westlichen Konzepten der Stressregulation.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Heilungs- & Therapieansatz</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
           <li><strong>Akkreditierte Klangtherapie</strong>: Tiefenwirkung mittels nepalesischer Klangschalen, Frequenz-Gongs und Stimmgabeln zur Wiederherstellung der zellulären Harmonie.</li>
+          <li><strong>Qi Gong & 6 Heilende Klänge</strong>: Tägliche Morgen-Praxis mit den Teilnehmern, Stimm-Befreiungsarbeit und Körper-Geist-Integration.</li>
           <li><strong>Vegetative Regulation</strong>: Neuromodulation und Vagusnerv-Stimulation bei Burnout, depressiven Verstimmungen und emotionalen Blockaden.</li>
           <li><strong>Sensorische Kräuterpädagogik</strong>: Leitung von Teezeremonien und Kräuter-Malworkshops für Kinder und Familien zur Stärkung der emotionalen Wahrnehmung.</li>
         </ul>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Ausbildung & Veröffentlichungen</h4>
-        <p style="margin-bottom: 1rem;">Zertifizierte internationale Klangtherapeutin und Meditationsleiterin. Sie hat mehrere erfolgreiche Artikel über die Resonanzfähigkeit von Körperflüssigkeiten und die Wirkung von 432-Hz-Frequenzen publiziert.</p>
+        <p style="margin-bottom: 1rem;">Zertifizierte internationale Klangtherapeutin, Heilpraktikerin und Meditationsleiterin. Sie spricht fünf Sprachen (Deutsch, Englisch, Italienisch, Spanisch, Mandarin). Langjährige Erfahrung mit indigenen Stämmen und natürlichen Heilweisen weltweit.</p>
       `
     },
     en: {
-      title: "Deng Nanjing – Founder & International Sound Therapist",
+      title: "Heilpraktikerin Deng Nanjing – Founder, Qi Gong & International Sound Therapist",
       body: `
-        <p><strong>Deng Nanjing (邓楠景)</strong> is the visionary founder of the Lebensfluss Inner Retreat and the Hongdao Center. She bridges classical Eastern healing arts with modern neuro-vibrational therapy.</p>
+        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> is the visionary founder of the Lebensfluss Inner Retreat and the Hong Dao Center. As a mother and nature advocate, she bridges classical Eastern healing arts with modern neuro-vibrational therapy.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Therapeutic Focus</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
           <li><strong>Vibrational Sound Therapy</strong>: Utilizing gongs, singing bowls, and tuning forks to induce cellular resonance and deep meditation.</li>
+          <li><strong>Qi Gong & 6 Healing Sounds</strong>: Daily morning practice with participants, voice liberation work, and body-mind integration.</li>
           <li><strong>Autonomic Balance</strong>: Regulating the vagus nerve to alleviate chronic anxiety, depression, and adrenal exhaustion.</li>
           <li><strong>Parent-Child Sensory Workshops</strong>: Creative direction of tea ceremonies and botanical painting classes to nurture emotional mindfulness.</li>
         </ul>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Background</h4>
-        <p style="margin-bottom: 1rem;">Certified Sound Healing Practitioner and Tea Master. She is dedicated to translating ancient vibrational principles into accessible modern therapies.</p>
-      `
-    }
-  },
-  zhang: {
-    de: {
-      title: "Dr. Zhang Min – Spezialistin für Gynäkologie & Akupunktur",
-      body: `
-        <p><strong>Dr. Zhang Min (张敏)</strong> ist eine erfahrene TCM-Ärztin mit über 15 Jahren klinischer Praxis in der Gynäkologie und gynäkologischen Endokrinologie.</p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Schwerpunkte</h4>
-        <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Hormonelle Balance</strong>: Erfolgreiche Regulierung bei unregelmäßigem Zyklus, Amenorrhö und Wechseljahresbeschwerden.</li>
-          <li><strong>Endometriose & Fruchtbarkeit</strong>: Kombination aus gezielter Akupunktur und wärmenden Kräuterwickeln zur Schmerzlinderung und Förderung des Kinderwunsches.</li>
-        </ul>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinischer Weg</h4>
-        <p style="margin-bottom: 1rem;">Studium an der Guangzhou Universität für TCM. Sie leitete langjährig gynäkologische TCM-Forschungsprojekte zur natürlichen Empfängnishilfe.</p>
-      `
-    },
-    en: {
-      title: "Dr. Zhang Min – Specialist in Gynecology & Acupuncture",
-      body: `
-        <p><strong>Dr. Zhang Min (张敏)</strong> is a veteran TCM physician with 15+ years of clinical specialization in natural gynecology and endocrinology.</p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties</h4>
-        <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Hormonal Regulation</strong>: Restoring cycle regularity, treating amenorrhea, and reducing menopause discomfort.</li>
-          <li><strong>Endometriosis & Fertility</strong>: Applying specialized abdominal acupuncture and herbal moxibustion to dissolve blockages and boost natural conception.</li>
-        </ul>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Background</h4>
-        <p style="margin-bottom: 1rem;">Graduate of Guangzhou University of TCM, with numerous peer-reviewed studies on non-hormonal cycle regulation.</p>
+        <p style="margin-bottom: 1rem;">Certified Sound Healing Practitioner, Heilpraktikerin, and Meditation Guide. She speaks five languages (German, English, Italian, Spanish, Mandarin) and has extensive experience with indigenous tribes and natural healing practices worldwide.</p>
       `
     }
   },
   chen: {
     de: {
-      title: "Dr. Chen Wei – Experte für Neurologie & Akupunktur",
+      title: "Dr. Chen Kainan – Assistenzarzt",
       body: `
-        <p><strong>Dr. Chen Wei (陈伟)</strong> ist unser Spezialist für Akupunktur, Elektro-Akupunktur und die Wiederherstellung der vegetativen Nervenbalance.</p>
+        <p><strong>Dr. Chen Kainan (陈凯南)</strong> ist Assistenzarzt an der Hong Dao Klinik und unterstützt Professor Xu bei der täglichen klinischen Arbeit.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Schwerpunkte</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Chronische Schmerztherapie</strong>: Linderung bei Migräne, Ischialgie, Bandscheibenvorfällen und myofaszialen Schmerzen.</li>
-          <li><strong>Burnout & Stressfolgen</strong>: Vegetative Regulation zur Absenkung des Sympathikus-Tonus und Linderung chronischer Schlafstörungen.</li>
+          <li><strong>Akupunktur</strong>: Durchführung von Akupunktursitzungen nach den Anweisungen von Professor Xu.</li>
+          <li><strong>Klinische Unterstützung</strong>: Patientenbetreuung, Vor- und Nachbereitung von Therapiesitzungen.</li>
         </ul>
       `
     },
     en: {
-      title: "Dr. Chen Wei – Expert in Neurological Acupuncture",
+      title: "Dr. Chen Kainan – Assistant Physician",
       body: `
-        <p><strong>Dr. Chen Wei (陈伟)</strong> is our lead acupuncture expert specializing in neurological pain management and autonomic balance.</p>
+        <p><strong>Dr. Chen Kainan (陈凯南)</strong> is an assistant physician at the Hong Dao Clinic, supporting Professor Xu in daily clinical operations.</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties</h4>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Focus Areas</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Chronic Pain Care</strong>: Treatment of severe migraines, sciatica, herniated discs, and structural back pain.</li>
-          <li><strong>Nervous System Recovery</strong>: Restoring parasympathetic balance for patients suffering from insomnia, anxiety, and adrenal exhaustion.</li>
+          <li><strong>Acupuncture</strong>: Performing acupuncture sessions under the direction of Professor Xu.</li>
+          <li><strong>Clinical Support</strong>: Patient care, preparation and follow-up for therapy sessions.</li>
         </ul>
       `
     }
   },
   hailin: {
     de: {
-      title: "Hailin Zhang – Leiter des Dekokt-Zentrums",
+      title: "Dr. Zhang Hailin – Leiterin des Dekokt-Zentrums",
       body: `
-        <p><strong>Hailin Zhang (张海林)</strong> leitet unser hochmodernes Dekokt-Zentrum und garantiert die authentische Weiterverarbeitung der Rohkräuter.</p>
+        <p><strong>Dr. Zhang Hailin (张海林)</strong> leitet unser hochmodernes Dekokt-Zentrum und garantiert die authentische Weiterverarbeitung der Rohkräuter.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Verantwortungsbereich</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1503,9 +1543,9 @@ const articlesContent = {
       `
     },
     en: {
-      title: "Hailin Zhang – Head of Decoction Center",
+      title: "Dr. Zhang Hailin – Head of Decoction Center",
       body: `
-        <p><strong>Hailin Zhang (张海林)</strong> manages our state-of-the-art decoction facility, ensuring accurate and pristine herbal compounding.</p>
+        <p><strong>Dr. Zhang Hailin (张海林)</strong> manages our state-of-the-art decoction facility, ensuring accurate and pristine herbal compounding.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Responsibilities</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1517,35 +1557,37 @@ const articlesContent = {
   },
   cheung: {
     de: {
-      title: "Mingli Cheung – Klangtherapeut & Meridianheiler",
+      title: "Cheung Mingli – Nomadin, Yogalehrerin & Klangarbeiterin",
       body: `
-        <p><strong>Mingli Cheung</strong> ist ein erfahrener Meister der Klangtherapie und bringt energetische Blockaden durch physische Schwingung wieder ins Fließen.</p>
+        <p><strong>Cheung Mingli</strong> ist eine Nomadin und Weltenbummlerin mit über 10 Jahren internationaler Erfahrung in Yoga, Fächer-Tanz-Therapie und Klangarbeit.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Methoden</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Klangschalen-Massage</strong>: Lokale Platzierung von tibetischen Klangschalen auf Meridian-Punkten zur Freisetzung von Stagnationen.</li>
-          <li><strong>Gong-Bäder</strong>: Tiefe akustische Entspannung zur Linderung von Traumata und emotionalem Stress.</li>
+          <li><strong>Yoga für Kinder & Erwachsene</strong>: Individuelle und Gruppensitzungen zur Körperwahrnehmung und inneren Balance.</li>
+          <li><strong>Fächer-Tanz-Therapie</strong>: Bewegungstherapie mit traditionellen Fächern zur emotionalen Entlastung und kreativen Selbstentfaltung.</li>
+          <li><strong>Klangarbeit</strong>: Klangschalen-Sitzungen und Gong-Bäder zur tiefen Entspannung und energetischen Harmonisierung.</li>
         </ul>
       `
     },
     en: {
-      title: "Mingli Cheung – Sound Therapist & Meridian Healer",
+      title: "Cheung Mingli – Nomad, Yoga Teacher & Sound Worker",
       body: `
-        <p><strong>Mingli Cheung</strong> is a practitioner of sound vibration therapies, using frequency tools to stimulate energy channels and dissolve physical blocks.</p>
+        <p><strong>Cheung Mingli</strong> is a nomad and world traveler with over 10 years of international experience in yoga, fan dance therapy, and sound work.</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Modilities</h4>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Modalities</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Singing Bowl Meridian Therapy</strong>: Placing authentic bowls on acupoints to release energy blockages.</li>
-          <li><strong>Acoustic Gong Journeys</strong>: Guiding patients through deep restorative soundscapes to soothe nervous tension.</li>
+          <li><strong>Yoga for Children & Adults</strong>: Individual and group sessions for body awareness and inner balance.</li>
+          <li><strong>Fan Dance Therapy</strong>: Movement therapy with traditional fans for emotional release and creative self-expression.</li>
+          <li><strong>Sound Work</strong>: Singing bowl sessions and gong baths for deep relaxation and energetic harmonization.</li>
         </ul>
       `
     }
   },
   qiao: {
     de: {
-      title: "Dr. Jingwen Qiao – Gynäkologie, Stoffwechsel & Schmerztherapie",
+      title: "Dr. Qiao Jingwen – Direktorin, Gynäkologie, Stoffwechsel & Schmerztherapie",
       body: `
-        <p><strong>Dr. Jingwen (Adrianna) Qiao (乔建文)</strong> ist Co-Gründerin des Hongdao Zentrums für Kräuterausleitung und eine führende Expertin im Bereich der integrierten chinesischen Gynäkologie und der modernen myofaszialen Schmerztherapie.</p>
+        <p><strong>Dr. Qiao Jingwen (乔靖文)</strong> ist Direktorin der Hong Dao Klinik, Co-Gründerin des Zentrums für Kräuterausleitung und eine führende Expertin im Bereich der integrierten chinesischen Gynäkologie und der modernen myofaszialen Schmerztherapie.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete (Focus Areas)</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1555,16 +1597,16 @@ const articlesContent = {
         </ul>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Akademischer Hintergrund & Biografie</h4>
-        <p style="margin-bottom: 1rem;">Bachelor-Abschluss an der renommierten <strong>Fudan-Universität</strong> und staatlich geprüfte und lizenzierte TCM-Ärztin. Sie leitet die wissenschaftliche Rehabilitation am Hongdao TCM-Forschungszentrum.</p>
+        <p style="margin-bottom: 1rem;">Bachelor-Abschluss an der renommierten <strong>Fudan-Universität</strong> und staatlich geprüfte und lizenzierte TCM-Ärztin. Sie leitet als Direktorin die Hong Dao Klinik und das wissenschaftliche Rehabilitationszentrum.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Erfahrung & Forschung</h4>
         <p style="margin-bottom: 1rem;">Mit über 10 Jahren praktischer Erfahrung hat Dr. Qiao das System der „Universal-Schmerztherapie“ (万向治痛法) mitentwickelt. Ihre wissenschaftliche Arbeit umfasst die Beteiligung an großen staatlichen Forschungsprojekten der chinesischen Regierung (wie <em>Science & Technology Innovation 2030</em>) sowie akademische Kooperationen und Vorträge an internationalen Spitzenuniversitäten wie Oxford und Harvard. Sie hat über 10 Fachaufsätze und Patente veröffentlicht.</p>
       `
     },
     en: {
-      title: "Dr. Jingwen Qiao – Gynecology, Metabolism & Pain Therapy",
+      title: "Dr. Qiao Jingwen – Clinic Director, Gynecology, Metabolism & Pain Therapy",
       body: `
-        <p><strong>Dr. Jingwen (Adrianna) Qiao (乔建文)</strong> is a co-founder of the Hongdao External Therapy Center and a leading expert in integrated Chinese gynecology and modern myofascial pain management.</p>
+        <p><strong>Dr. Qiao Jingwen (乔靖文)</strong> is the Director of the Hong Dao Clinic, co-founder of the External Therapy Center, and a leading expert in integrated Chinese gynecology and modern myofascial pain management.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Focus Areas</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1574,7 +1616,7 @@ const articlesContent = {
         </ul>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography & Education</h4>
-        <p style="margin-bottom: 1rem;">B.Sc. graduate from <strong>Fudan University</strong> and a licensed national TCM physician. She serves as the Chief Academic Leader at the Hongdao Medical Rehabilitation Center.</p>
+        <p style="margin-bottom: 1rem;">B.Sc. graduate from <strong>Fudan University</strong> and a licensed national TCM physician. She serves as Director of the Hong Dao Clinic and Chief Academic Leader at the Medical Rehabilitation Center.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Experience & Research</h4>
         <p style="margin-bottom: 1rem;">With over 10 years of clinical and academic experience, Dr. Qiao is the co-developer of the "Universal Pain Relief Method" (万向治痛法). She has spearheaded national research projects under the China State Key R&D Programs, presented her research at Harvard and Oxford, and holds over 10 published medical papers and patents.</p>
@@ -1583,9 +1625,9 @@ const articlesContent = {
   },
   guan: {
     de: {
-      title: "Dr. Weina Guan – Akupunktur & Faszientherapie",
+      title: "Dr. Guan Weina – Akupunktur & Faszientherapie",
       body: `
-        <p><strong>Dr. Weina Guan (管蔚娜)</strong> ist stellvertretende Leiterin des Zentrums für technologiegestützte chinesische Medizin und Expertin für energetische Entgiftung und Meridian-Therapie.</p>
+        <p><strong>Dr. Guan Weina (管蔚娜)</strong> ist stellvertretende Leiterin des Zentrums für technologiegestützte chinesische Medizin und Expertin für energetische Entgiftung und Meridian-Therapie.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete (Focus Areas)</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1602,9 +1644,9 @@ const articlesContent = {
       `
     },
     en: {
-      title: "Dr. Weina Guan – Acupuncture & Fascia Therapy",
+      title: "Dr. Guan Weina – Acupuncture & Fascia Therapy",
       body: `
-        <p><strong>Dr. Weina Guan (管蔚娜)</strong> is the Deputy Director of the Science & Technology TCM Management Center and an expert in deep meridian detoxification and vibrational acupuncture.</p>
+        <p><strong>Dr. Guan Weina (管蔚娜)</strong> is the Deputy Director of the Science & Technology TCM Management Center and an expert in deep meridian detoxification and vibrational acupuncture.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Focus Areas</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1784,7 +1826,179 @@ const articlesContent = {
         <p>In TCM, the "Kidneys rule water and open to the ears." Sound healing directly nourishes Kidney Jing (vital essence), anchors the Heart Shen (spirit), and harmonizes the flow of fluids in the body, providing relief from chronic fatigue.</p>
       `
     }
-  }
+  },
+  stemcell: {
+    de: {
+      title: "Stammzelltherapie & Langlebigkeit",
+      body: `
+        <p>Dr. Adrianna Qiao (Qiao Jingwen) leitet die Koordination und medizinische Beratung für integrative Stammzelltherapie und zelluläre Regeneration.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Rechtlicher Rahmen & Partnerklinik</h4>
+        <p>Nachdem Stammzelltherapien in China vorübergehend streng reguliert waren, sind diese hochentwickelten Behandlungen nun wieder in unserer staatlich lizenzierten Partnerklinik in <strong>Lecheng, Hainan</strong> (der medizinischen Sonderzone Chinas) in vollem Umfang zugelassen. Es können sich zerstörte Knieknorpel regenerieren und viele Autoimmunerkrankungen erfolgreich behandelt werden.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Diagnoseverfahren & Kostentransparenz</h4>
+        <p>Wir ermitteln den Bedarf und die Eignung stets in einem <strong>persönlichen Diagnoseverfahren</strong> vorab. Wir prüfen gemeinsam, welche Kombination am besten zum jeweiligen Krankheitsbild passt, und teilen Ihnen anschließend die Kosten der Behandlung (Kostenaufteilung) mit.</p>
+      `
+    },
+    en: {
+      title: "Stem Cell Therapy & Longevity",
+      body: `
+        <p>Dr. Adrianna Qiao (Qiao Jingwen) directs the coordination and medical consultation for integrative stem cell therapy and cellular regeneration.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Regulatory Framework & Partner Clinic</h4>
+        <p>Following strict regulation of stem cell therapies in China, these advanced cellular procedures are now fully approved and available at our licensed partner clinic in the <strong>Lecheng Medical Pilot Zone in Hainan</strong>. It can regenerate destroyed knee cartilage and successfully treat many autoimmune diseases.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Diagnosis & Cost Sharing</h4>
+        <p>Patient suitability is determined through an <strong>individual clinical diagnostic process</strong>. We analyze which specific cell type and protocol match your pathology, and provide a transparent breakdown of treatment costs and shared clinic fees.</p>
+      `
+    }
+  },
+  infrared: {
+    de: {
+      title: "Infrarot-Thermografie – Visualisierung des Energieflusses (Qi)",
+      body: `
+        <p>Die <strong>Infrarot-Thermografie</strong> ist ein hochmodernes, strahlungsfreies Diagnoseverfahren, das Infrarotstrahlungsintensitäten des menschlichen Körpers erfasst und visualisiert. In der TCM nutzen wir dieses Verfahren, um Temperaturunterschiede und damit verbundene Blockaden oder Entzündungen entlang der Meridiane sichtbar zu machen.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Funktionsweise & TCM-Integration</h4>
+        <p>Aus Sicht der TCM spiegeln Temperaturabweichungen den Zustand von Yin, Yang, Qi und Blut wider. Entzündungen zeigen sich als lokale Hitze-Muster (Yang-Fülle), während Durchblutungsstörungen oder Kälte-Stagnationen (Yin-Fülle / Qi-Mangel) als kalte Zonen dargestellt werden. Dies erlaubt eine präzise Lokalisierung von Störfeldern noch vor dem Auftreten struktureller Gewebeschäden.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Therapeutischer Nutzen</h4>
+        <ul class="feature-list">
+          <li>Objektive Erfolgskontrolle von Akupunktur- und Kräutertherapien durch Vorher-Nachher-Vergleich der Wärmebilder.</li>
+          <li>Lokalisierung von myofaszialen Triggerpunkten und versteckten Entzündungsherden im Körper.</li>
+          <li>100 % sicher, berührungslos und komplett strahlungsfrei – auch für sensible Patient:innen geeignet.</li>
+        </ul>
+      `
+    },
+    en: {
+      title: "Infrared Thermography – Visualizing the Flow of Qi",
+      body: `
+        <p><strong>Infrared Thermography</strong> is a state-of-the-art, radiation-free diagnostic imaging method that records and visualizes the body's natural thermal emissions. In TCM, we use this technology to map temperature gradients and detect energy blocks or inflammation along the meridian pathways.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">How it Works & TCM Integration</h4>
+        <p>In TCM, temperature variations reflect the balance of Yin, Yang, Qi, and Blood. Inflammatory processes appear as hot zones (excess Yang), whereas blood stagnation or cold blockages (excess Yin / Qi deficiency) show up as cold areas. This allows us to locate dysfunction in the meridian pathways before structural tissue damage occurs.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Benefits</h4>
+        <ul class="feature-list">
+          <li>Objective visualization of therapy progress via thermal baseline and follow-up comparisons.</li>
+          <li>Accurate identification of myofascial trigger points and hidden subclinical inflammation.</li>
+          <li>Completely safe, non-contact, and non-invasive – suitable for all patient groups.</li>
+        </ul>
+      `
+    }
+  },
+  bianstone: {
+    de: {
+      title: "Bian-Stein Mittelfrequenz-Therapie – Energetische Meridianregulation",
+      body: `
+        <p>Die <strong>Bian-Stein-Therapie</strong> kombiniert die therapeutischen Eigenschaften natürlicher Bian-Steine mit moderner Mittelfrequenz-Elektrotherapie. In der TCM wird Bian-Stein seit Jahrtausenden geschätzt, da er bei Erwärmung heilsame Ultraschallimpulse und Infrarotstrahlung aussendet.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Wirkungsweise</h4>
+        <p>Durch die Verbindung des Minerals mit sanften elektrischen Mittelfrequenzen dringen die Vibrationen tief in das Fasziengewebe ein. Dies regt den zellulären Stoffwechsel an, fördert den Abtransport von Entzündungsmediatoren und löst hartnäckige Muskelverspannungen.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Indikationsbereiche</h4>
+        <ul class="feature-list">
+          <li>Chronische Schmerzen des Bewegungsapparates (Rückenschmerzen, Gelenkarthrose).</li>
+          <li>Meridian-Blockaden zur Entstauung des lymphatischen und venösen Flusses.</li>
+          <li>Unterstützung der Regeneration bei Lähmungserscheinungen und Taubheitsgefühlen.</li>
+        </ul>
+      `
+    },
+    en: {
+      title: "Bian-Stone Electro-Frequency Therapy – Energetic Meridian Regulation",
+      body: `
+        <p><strong>Bian-Stone Therapy</strong> integrates the healing resonance of natural Bian stone with targeted medium-frequency electro-stimulation. Ancient TCM classics document Bian stone for its ability to generate high-frequency ultrasonic waves and far-infrared radiation when warmed.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Mechanisms of Action</h4>
+        <p>By pairing this therapeutic mineral with electrical currents, biological frequencies penetrate deep into the myofascial layers. This stimulates cellular ATP production, accelerates the drainage of metabolic waste, and releases chronic muscular spasms.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Key Indications</h4>
+        <ul class="feature-list">
+          <li>Chronic musculoskeletal conditions (lower back pain, osteoarthritis, joint stiffness).</li>
+          <li>Meridian stagnation affecting lymphatic circulation and cardiovascular return.</li>
+          <li>Nerve rehabilitation to restore micro-sensation and motor coordination.</li>
+        </ul>
+      `
+    }
+  },
+  pujiu: {
+    de: {
+      title: "Großflächen-Moxibustion (Pu Jiu) – Vertreibung tiefer Kälte",
+      body: `
+        <p>Die <strong>Rücken-Moxibustion (铺灸 - Pu Jiu)</strong> ist eines der kraftvollsten wärmetherapeutischen Verfahren der traditionellen chinesischen Medizin. Dabei wird eine Kräuterpaste und getrocknetes Beifußkraut (Moxa) großflächig entlang der Wirbelsäule (Du Mai / Lenkergefäß) verbrannt.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Das Prinzip des Du Mai</h4>
+        <p>Das Du Mai (Lenkergefäß) verläuft entlang der Wirbelsäule und wird in der TCM als „Meer aller Yang-Meridiane“ bezeichnet. Durch die intensive, tief eindringende Wärme von Pu Jiu wird das Yang im gesamten Körper gestärkt, das Immunsystem reguliert und chronische Kälte-Stagnation vertrieben.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Effekte</h4>
+        <ul class="feature-list">
+          <li>Tiefenwirksame Vertreibung von Feuchtigkeit und Kälte, ideal bei chronischem Rheuma, Arthrose und Kältegefühl.</li>
+          <li>Stärkung des Nieren-Yang bei chronischer Erschöpfung, Schwäche des Immunsystems und unerfülltem Kinderwunsch.</li>
+          <li>Hormonelle Balance und Schmerzlinderung bei gynäkologischen Leiden wie Endometriose.</li>
+        </ul>
+      `
+    },
+    en: {
+      title: "Large-Scale Spine Moxibustion (Pu Jiu) – Expelling Deep Cold",
+      body: `
+        <p><strong>Spine Moxibustion (铺灸 - Pu Jiu)</strong> is one of the most powerful warming therapies in classical TCM. Formulated herbal pastes and dry mugwort (moxa) are applied along the spine over the Du Mai (Governor Vessel) and gently burned.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">The Governor Vessel (Du Mai)</h4>
+        <p>The Du Mai meridian runs along the midline of the back and is considered the "Sea of Yang Meridians" in TCM. The deep, sustained thermal stimulation of Pu Jiu activates the body's defensive Qi (Wei Qi), raises metabolic fire, and clears deep constitutional cold.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Efficacy</h4>
+        <ul class="feature-list">
+          <li>Disperses wind-cold-dampness, providing relief in rheumatoid arthritis and joint degeneration.</li>
+          <li>Nourishes Kidney Yang to combat chronic fatigue, adrenal burnout, and low fertility markers.</li>
+          <li>Aids in regulating menstrual cycles and easing gynecological stagnation syndromes like endometriosis.</li>
+        </ul>
+      `
+    }
+  },
+  spectrumcabin: {
+    de: {
+      title: "Ganzkörper-Spektralkabine – Systemische Entgiftung",
+      body: `
+        <p>Die <strong>Ganzkörper-Spektralkabine</strong> ist eine moderne Weiterentwicklung der Infrarotsauna, die ein speziell auf die Zellemissionen abgestimmtes bio-elektromagnetisches Wellenspektrum nutzt.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biophysikalische Wirkung</h4>
+        <p>Die Frequenzen regen die Wassermoleküle im Gewebe zur Schwingung an, was zu einer tiefen Erwärmung führt. Dies beschleunigt die Mikrozirkulation, verbessert die Dehnbarkeit der Faszien und fördert die Ausleitung von Zellgiften und Schwermetallen über die Haut.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Einsatzbereiche in unserer Praxis</h4>
+        <ul class="feature-list">
+          <li>Unterstützung bei Entgiftungskuren und Fastenbegleitung.</li>
+          <li>Vegetative Entspannung des Nervensystems zur Stressreduktion.</li>
+          <li>Linderung von chronischen Muskelverspannungen und Schmerzzuständen.</li>
+        </ul>
+      `
+    },
+    en: {
+      title: "Whole-Body Spectrum Cabin – Systemic Cellular Detoxification",
+      body: `
+        <p>The <strong>Whole-Body Spectrum Cabin</strong> uses a broad bio-matched electromagnetic spectrum designed to match the body's natural thermal wavelengths, going beyond conventional infrared technology.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biophysical Mechanism</h4>
+        <p>These specialized wavelengths resonate with intracellular water molecules, generating heat deep within tissues. This thermal action improves capillary microcirculation, enhances fascial flexibility, and promotes sweat-induced excretion of cellular waste and heavy metals.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Key Benefits</h4>
+        <ul class="feature-list">
+          <li>Facilitates deep cellular cleansing and metabolic detoxification programs.</li>
+          <li>Restores balance to the autonomic nervous system, promoting deep sleep.</li>
+          <li>Relieves generalized body pain, chronic fatigue, and muscular stiffness.</li>
+        </ul>
+      `
+    }
+  },
+  spectrumradiator: {
+    de: {
+      title: "Lokalisiertes Spektral-Bestrahlungsgerät – Gezielte Geweberegeneration",
+      body: `
+        <p>Das <strong>Lokalisierte Spektral-Bestrahlungsgerät</strong> nutzt gezielte elektromagnetische Frequenzen, um lokale Entzündungsprozesse zu regulieren und die Selbstheilungskräfte des Gewebes anzuregen.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Kombination mit Akupunktur</h4>
+        <p>In unserer Praxis setzen wir das Gerät häufig zeitgleich mit Akupunkturnadeln ein. Die Wärme und Frequenzen erwärmen die Nadeln und leiten die Energie tief in die Akupunkturpunkte (Ashi-Punkte), wodurch die heilsame Wirkung verdoppelt wird.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Indikationsbereiche</h4>
+        <ul class="feature-list">
+          <li>Lokale Muskel- und Gelenkschmerzen (Halswirbelsäulen-Syndrom, Tennisarm).</li>
+          <li>Unterstützung der Wundheilung und Linderung chronischer Hautentzündungen.</li>
+          <li>Wärmebehandlung des Unterbauchs bei gynäkologischen Schmerzen.</li>
+        </ul>
+      `
+    },
+    en: {
+      title: "Localized Spectrum Radiator – Targeted Tissue Regeneration",
+      body: `
+        <p>The <strong>Localized Spectrum Radiator</strong> delivers target-focused electromagnetic wavelengths to soothe local inflammation and accelerate tissue recovery.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Integration with Acupuncture</h4>
+        <p>We often utilize this device in conjunction with traditional acupuncture. Wavelengths warm the needles to direct kinetic thermal energy deep into the points (Ashi points), amplifying the therapeutic benefit of needle stimulation.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Common Applications</h4>
+        <ul class="feature-list">
+          <li>Localized myofascial pain, joint inflammation, and back stiffness.</li>
+          <li>Supports dermal healing, helping clear localized rashes or scars.</li>
+          <li>Pelvic warmth therapy to relieve gynecological spasms and womb coldness.</li>
+        </ul>
+      `
+    }
+  },
 };
 
 function openArticleModal(articleId) {
@@ -1846,6 +2060,19 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   bindArticleButtons();
+
+  // Gallery More Button Logic
+  const galleryMoreBtn = document.getElementById("gallery-more-btn");
+  if (galleryMoreBtn) {
+    galleryMoreBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelectorAll(".gallery-item.hidden-item").forEach(item => {
+        item.style.display = "block";
+      });
+      galleryMoreBtn.style.display = "none";
+    });
+  }
+
 
   // Watch for language changes to rebind if DOM structure changes
   const originalSetLanguage = window.setLanguage;
