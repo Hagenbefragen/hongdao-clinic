@@ -12,7 +12,7 @@ const translations = {
     "nav-about": "About & Masters",
     "nav-treatments": "Health Maintenance",
     "nav-devices": "Technology",
-    "nav-programs": "Association Programs",
+    "nav-programs": "Programs",
     "nav-retreat": "Yunnan Retreat",
     "nav-info": "Clinic Info",
     "nav-apply": "Register",
@@ -74,7 +74,7 @@ const translations = {
     "device-3-desc": "Delivers gentle microcurrents to traditional acupuncture points to double healing speed.",
 
     // Programs & Endometriosis calculator
-    "programs-title": "Association Health Programs & Training",
+    "programs-title": "Health Programs & Training",
     "programs-subtitle": "From intensive training courses to customized personal health maintenance retreats.",
     
     "retreat-10day-title": "10-Day Teacher Training & Retreat",
@@ -84,11 +84,11 @@ const translations = {
     "retreat-10day-wix-link": "Wix Details",
     
     "retreat-1day-title": "1-3-5 Day TCM Clinical Training (Shenzhen)",
-    "retreat-1day-desc": "Focused clinical training and masterclasses in Shenzhen. Ideal for practitioners and association members wishing to experience direct clinical practice observation, pulse diagnosis introduction, and professional decoction preparation. Flexible attendance from 1 to 5 days.",
+    "retreat-1day-desc": "Focused clinical training and masterclasses in Shenzhen. Ideal for practitioners and health enthusiasts wishing to experience direct clinical practice observation, pulse diagnosis introduction, and professional decoction preparation. Flexible attendance from 1 to 5 days.",
     "retreat-1day-price": "€250 first day, €200 each additional day",
     
     "endo-program-title": "Endometriosis Health Maintenance Program",
-    "endo-program-desc": "A dedicated, fully customizable association program addressing uterine health, hormone balance, and pain relief. Features customized herbal formulas, womb massage, sound healing, and direct guidance.",
+    "endo-program-desc": "A dedicated, fully customizable program addressing uterine health, hormone balance, and pain relief. Features customized herbal formulas, womb massage, sound healing, and direct guidance.",
     "endo-select-duration": "Select Program Duration:",
     "duration-1w": "1 Week",
     "duration-2w": "2 Weeks",
@@ -116,7 +116,7 @@ const translations = {
     "info-hours-label": "Opening Hours",
     "info-hours-desc": "Monday - Saturday: 09:00 - 18:00 (Appointments Required)",
     "info-payment-label": "Registration & Cost Contribution Policy",
-    "info-payment-desc": "Online registration is available. Please note your registration is officially confirmed only upon receipt of your personalized confirmation email. All contributions go directly toward covering the costs of the association's health maintenance programs.",
+    "info-payment-desc": "Online registration is available. Please note your registration is officially confirmed only upon receipt of your personalized confirmation email. All contributions go directly toward covering the costs of the clinic's health programs.",
     
     "faq-title": "Frequently Asked Questions",
     "faq-q1": "Are customized herbal medicines included in the cost contribution?",
@@ -157,8 +157,8 @@ const translations = {
     "booking-success-toast": "Registration submitted! Check your email inbox for confirmation.",
     
     // Marketing Popup
-    "popup-title": "Association Support Code",
-    "popup-desc": "Support our health maintenance initiatives. Register today for our Endometriosis Programs or the Wudang Retreat and receive a 10% reduction on the cost contribution for your initial consultation.",
+    "popup-title": "Welcome Offer",
+    "popup-desc": "Register today for our Endometriosis Programs or the Wudang Retreat and receive a 10% reduction on the cost contribution for your initial consultation.",
     "popup-code-label": "Your Registration Code:",
     "popup-cta": "Register with Code",
 
@@ -239,7 +239,7 @@ const translations = {
     "nav-about": "Über uns & Meister",
     "nav-treatments": "Gesundheitspflege",
     "nav-devices": "Medizintechnik",
-    "nav-programs": "Vereinsprogramme",
+    "nav-programs": "Programme",
     "nav-retreat": "Yunnan-Retreat",
     "nav-info": "Klinik-Info",
     "nav-apply": "Anmelden",
@@ -301,7 +301,7 @@ const translations = {
     "device-3-desc": "Unterstützt die klassische Nadelung durch präzise Mikroströme zur Anregung der Nervenregeneration.",
 
     // Programs & Endometriosis calculator
-    "programs-title": "Gesundheitsprogramme & Kurse des Vereins",
+    "programs-title": "Gesundheitsprogramme & Kurse",
     "programs-subtitle": "Vom intensiven Ausbildungskurs bis zum maßgeschneiderten Gesundheitspflege-Programm.",
     
     "retreat-10day-title": "10-tägiges TCM-Training & Retreat",
@@ -311,7 +311,7 @@ const translations = {
     "retreat-10day-wix-link": "Details auf Wix",
     
     "retreat-1day-title": "1-3-5-tägiges klinisches TCM-Training (Shenzhen)",
-    "retreat-1day-desc": "Lokale Tageskurse vor Ort. Ideal für Vereinsmitglieder zur Hospitation, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.",
+    "retreat-1day-desc": "Lokale Tageskurse vor Ort. Ideal für Therapeuten und Interessierte zur Hospitation, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.",
     "retreat-1day-price": "€250,- Kostenbeitrag pro Tag",
     
     "endo-program-title": "Endometriose-Gesundheitspflegeprogramm",
@@ -343,7 +343,7 @@ const translations = {
     "info-hours-label": "Öffnungszeiten",
     "info-hours-desc": "Montag - Samstag: 09:00 - 18:00 Uhr (Nur nach Terminvereinbarung)",
     "info-payment-label": "Anmeldung & Kostenbeitrag",
-    "info-payment-desc": "Die Online-Anmeldung ist möglich. Die Anmeldung gilt erst nach Erhalt der Bestätigungs-E-Mail als offiziell bestätigt. Alle Kostenbeiträge fließen direkt in die Deckung der Aufwände für die Gesundheitspflege-Programme des Vereins.",
+    "info-payment-desc": "Die Online-Anmeldung ist möglich. Die Anmeldung gilt erst nach Erhalt der Bestätigungs-E-Mail als offiziell bestätigt. Alle Kostenbeiträge fließen direkt in die Deckung der Aufwände für die Gesundheitspflege-Programme der Klinik.",
     
     "faq-title": "Häufig gestellte Fragen (FAQ)",
     "faq-q1": "Sind die verschriebenen Kräuter im Kostenbeitrag inbegriffen?",
@@ -384,8 +384,8 @@ const translations = {
     "booking-success-toast": "Registrierung erfolgreich gesendet! Eine Bestätigung wird an Ihre E-Mail gesendet.",
     
     // Marketing Popup
-    "popup-title": "Vereins-Unterstützung",
-    "popup-desc": "Unterstützen Sie unsere gesundheitspflegende Arbeit. Registrieren Sie sich heute für die Endometriose-Programme oder das Wudang-Retreat und erhalten Sie 10% Ermäßigung auf den Kostenbeitrag der Erstkonsultation.",
+    "popup-title": "Willkommensangebot",
+    "popup-desc": "Registrieren Sie sich heute für die Endometriose-Programme oder das Wudang-Retreat und erhalten Sie 10% Ermäßigung auf den Kostenbeitrag der Erstkonsultation.",
     "popup-code-label": "Ihr Registrierungscode:",
     "popup-cta": "Mit Code registrieren",
 
@@ -1357,7 +1357,7 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">1. Verantwortliche Stelle</h4>
         <p>
-          Lebensfluss e.V.<br>
+          Hong Dao TCM Clinic / Lebensfluss e.V.<br>
           E-Mail: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a>
         </p>
         
@@ -1382,7 +1382,7 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">1. Controller / Responsible Party</h4>
         <p>
-          Lebensfluss e.V.<br>
+          Hong Dao TCM Clinic / Lebensfluss e.V.<br>
           Email: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a>
         </p>
         
@@ -1515,7 +1515,7 @@ const articlesContent = {
     de: {
       title: "Heilpraktikerin Deng Nanjing – Gründerin, Qi Gong & Klangtherapeutin",
       body: `
-        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> ist die visionäre Gründerin des Lebensfluss Inner Retreats und des Hong Dao Zentrums. Als Mutter und Naturverbundene verbindet sie authentische östliche Philosophie mit westlichen Konzepten der Stressregulation.</p>
+        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> ist die visionäre Gründerin des Hong Dao Inner Retreats und internationale Brücke zwischen der Klinik und Heilsuchenden weltweit. Als Mutter und Naturverbundene verbindet sie authentische östliche Philosophie mit westlichen Konzepten der Stressregulation.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Heilungs- & Therapieansatz</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1532,7 +1532,7 @@ const articlesContent = {
     en: {
       title: "Heilpraktikerin Deng Nanjing – Founder, Qi Gong & International Sound Therapist",
       body: `
-        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> is the visionary founder of the Lebensfluss Inner Retreat and the Hong Dao Center. As a mother and nature advocate, she bridges classical Eastern healing arts with modern neuro-vibrational therapy.</p>
+        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> is the visionary founder of the Hong Dao Inner Retreat and the international bridge between the clinic and health seekers worldwide. As a mother and nature advocate, she bridges classical Eastern healing arts with modern neuro-vibrational therapy.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Therapeutic Focus</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">

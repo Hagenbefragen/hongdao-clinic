@@ -278,6 +278,26 @@ header.scrolled {
   gap: 1.5rem;
 }
 
+.nav-tech-pill {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: var(--jade-light);
+  color: var(--jade-green);
+  border: 1px solid rgba(45, 90, 70, 0.15);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  transition: var(--transition-smooth);
+}
+
+.nav-tech-pill:hover {
+  background: var(--jade-green);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(45, 90, 70, 0.2);
+}
+
 /* Language Switcher */
 .lang-switcher {
   display: flex;
