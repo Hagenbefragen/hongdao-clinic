@@ -100,11 +100,11 @@ const translations = {
     "endo-price-note": "*Note: Cost contributions exclude individually prescribed customized herbal medicines.",
 
     // Yunnan Retreat
-    "yunnan-title": "Yunnan 3-Day Nature Extension",
+    "yunnan-title": "Mountain Retreats & Nature Extension",
     "yunnan-subtitle": "A mystical transition from the city clinic into pristine mountain elements.",
-    "yunnan-desc-1": "Extend your clinical program with a 3-day spiritual retreat in Yunnan. After starting with 3-4 days of intensive diagnosis and detox treatments at our Shenzhen clinic, you travel directly into the mountains.",
-    "yunnan-desc-2": "Live together in a luxurious partner hotel nestled in nature, featuring a beautiful pool, organic mountain cuisine, mushroom foraging expeditions, local tea culture experiences, and ethnic minority musical heritage.",
-    "yunnan-hotel-info": "Partner Hotel: Yunnan Horizon Sanctuary - a high-end luxury mountain eco-retreat with traditional wood architecture and panoramic views.",
+    "yunnan-desc-1": "Extend your clinical program with a nature retreat. Every treatment plan, training course, and retreat begins with intensive diagnosis and therapy at our Shenzhen clinic, after which you travel directly to China's pristine mountain sanctuaries.",
+    "yunnan-desc-2": "The second, immersive part always takes place in a beautiful location in the mountains of China. We have a traditional guesthouse operated by Daoist Master Yin Chen Zi and his wife in the Wudang Mountains, as well as accommodations in Wuyi Shan and Yunnan (Xishuangbanna).",
+    "yunnan-hotel-info": "Accommodations include: Traditional wood guesthouse in Wudang (Master Yin Chen Zi), scenic mountain lodging in Wuyi Shan, and the high-end luxury Yunnan Horizon Sanctuary eco-resort.",
 
     // Child Space
     "child-title": "Hong Dao Child Space",
@@ -328,11 +328,11 @@ const translations = {
     "endo-price-note": "*Hinweis: Die Kostenbeiträge beinhalten keine individuelle Kräutermedizin.",
 
     // Yunnan Retreat
-    "yunnan-title": "3-tägiges Yunnan Natur-Retreat",
+    "yunnan-title": "Berg-Retreats & Natur-Verlängerung",
     "yunnan-subtitle": "Ein heilsamer Übergang von der Stadtklinik in die unberührte Natur.",
-    "yunnan-desc-1": "Erweitern Sie Ihre Behandlung mit einem 3-tägigen Naturaufenthalt. Nach den ersten 3-4 Tagen Diagnose und Therapie in der Shenzhen-Klinik reisen Sie direkt in das malerische Yunnan.",
-    "yunnan-desc-2": "Erleben Sie Gemeinschaft beim Pilze sammeln, entdecken Sie Teekultur und Minderheitenbräuche. Sie wohnen in einem luxuriösen Berghotel mit Pool, naturnah gelegen, mit exzellenter traditioneller chinesischer Küche.",
-    "yunnan-hotel-info": "Partnerhotel: Yunnan Horizon Sanctuary - Luxuriöses Öko-Resort mit atemberaubendem Pool und traditioneller Holzbauweise inmitten der Berge.",
+    "yunnan-desc-1": "Erweitern Sie Ihr klinisches Programm mit einem Natur-Retreat. Jedes Behandlungsprogramm, jede Ausbildung und jedes Retreat beginnt mit intensiver Diagnose und Therapie in der Shenzhen-Klinik, bevor Sie direkt zu Chinas unberührten Bergheiligtümern reisen.",
+    "yunnan-desc-2": "Der zweite und vertiefende Teil findet immer an einem wunderschönen Ort in den Bergen Chinas statt. Wir nutzen ein traditionelles Gästehaus, betrieben vom taoistischen Meister Yin Chen Zi und seiner Frau in den Wudang-Bergen, sowie Unterkünfte in Wuyi Shan und Yunnan (Xishuangbanna).",
+    "yunnan-hotel-info": "Unterkünfte beinhalten: Traditionelles Gästehaus aus Holz in Wudang (Meister Yin Chen Zi), malerische Herbergen in Wuyi Shan sowie das luxuriöse Yunnan Horizon Sanctuary Öko-Resort.",
 
     // Child Space
     "child-title": "Hong Dao Kinderbereich",
