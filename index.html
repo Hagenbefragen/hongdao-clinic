@@ -33,6 +33,7 @@
         <li><a href="#programs" data-i18n="nav-programs">Programme</a></li>
         <li><a href="#retreat" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
         <li><a href="#info" data-i18n="nav-info">Klinik-Info</a></li>
+        <li class="mobile-only-cta"><a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a></li>
       </ul>
       <div class="nav-controls">
         <a href="#" id="tech-modal-btn" class="nav-tech-pill" data-i18n="nav-tech-btn" title="Medizintechnik-Übersicht">⚕ TCM-Technologie</a>
@@ -41,6 +42,11 @@
           <button id="lang-en" class="lang-btn">EN</button>
         </div>
         <a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a>
+        <button class="hamburger-menu" id="hamburger-btn" aria-label="Menü öffnen/schließen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -237,7 +243,7 @@
       </div>
 
       <div class="grid-4">
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: url('images/mountain_herbs_womb.jpg');">
           <div>
             <span class="treatment-badge" data-i18n="treatment-1-badge">Gynäkologie</span>
             <h3 class="title-small" style="margin-top: 1rem;" data-i18n="treatment-1-title">Endometriose & Frauengesundheit</h3>
@@ -248,7 +254,7 @@
           <button class="btn btn-outline read-article-btn" data-article="endo" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem;" data-i18n="btn-read-article">Artikel lesen</button>
         </div>
 
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: url('images/child_space.jpg');">
           <div>
             <span class="treatment-badge" data-i18n="treatment-2-badge">Zelltherapie</span>
             <h3 class="title-small" style="margin-top: 1rem;" data-i18n="treatment-2-title">Stammzellen & Langlebigkeit</h3>
@@ -259,7 +265,7 @@
           <button class="btn btn-outline read-article-btn" data-article="stemcell" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem;" data-i18n="btn-read-article">Artikel lesen</button>
         </div>
 
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: url('images/gallery_1.png');">
           <div>
             <span class="treatment-badge" data-i18n="treatment-3-badge">Neurologie</span>
             <h3 class="title-small" style="margin-top: 1rem;" data-i18n="treatment-3-title">Stress & Burnout-Prävention</h3>
@@ -270,7 +276,7 @@
           <button class="btn btn-outline read-article-btn" data-article="nervous" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem;" data-i18n="btn-read-article">Artikel lesen</button>
         </div>
 
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: url('images/gallery_3.png');">
           <div>
             <span class="treatment-badge" data-i18n="treatment-4-badge">Pilzheilkunde</span>
             <h3 class="title-small" style="margin-top: 1rem;" data-i18n="treatment-4-title">Pilzheilkunde & Myzel-Regulation</h3>
@@ -1180,6 +1186,38 @@
   </div>
 
   <script src="app.v2.js"></script>
+
+  <!-- Mobile Navigation Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger-btn');
+      const navLinks = document.querySelector('.nav-links');
+      
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navLinks.classList.toggle('active');
+          hamburger.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+          }
+        });
+        
+        // Close menu when link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+          });
+        });
+      }
+    });
+  </script>
 
   <!-- Dev Sync Widget -->
   <script>
