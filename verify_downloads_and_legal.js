@@ -17,6 +17,19 @@ async function runTests() {
   });
 
   const page = await browser.newPage();
+  // Disable cache to ensure fresh assets are tested
+  await page.setCacheEnabled(false);
+  
+  // Forward browser console logs and errors
+  page.on('console', msg => console.log('PAGE LOG:', msg.text()));
+  page.on('pageerror', err => console.log('PAGE ERROR:', err.message));
+  page.on('requestfailed', req => console.log('REQUEST FAILED:', req.url(), req.failure() ? req.failure().errorText : ''));
+  page.on('response', res => {
+    if (res.status() >= 400) {
+      console.log('HTTP ERROR:', res.status(), res.url());
+    }
+  });
+
   // Set viewport for consistent screenshots
   await page.setViewport({ width: 1280, height: 800 });
 
@@ -45,10 +58,19 @@ async function runTests() {
     console.log('Saved 01_hongdao_index.png');
 
     // Click Impressum link
+    let hasLLCInModal = false;
     const impressumBtn = await page.$('a[data-article="impressum"]');
     if (impressumBtn) {
       await impressumBtn.click();
       await sleep(1000); // Wait for modal animation
+      
+      hasLLCInModal = await page.evaluate(() => {
+        const modalBody = document.getElementById('article-modal-body');
+        console.log('MODAL BODY INNER TEXT:', modalBody ? modalBody.innerText : 'null');
+        return modalBody && modalBody.innerText.includes('Solvea Biosciences Laboratory LLC');
+      });
+      console.log('Is Solvea Biosciences Laboratory LLC in Impressum modal?', hasLLCInModal);
+
       await page.screenshot({ path: path.join(SCREENSHOT_DIR, '02_hongdao_impressum_modal.png') });
       console.log('Saved 02_hongdao_impressum_modal.png');
       
@@ -77,7 +99,7 @@ async function runTests() {
     results.push({
       page: 'HongDao Clinic Index',
       status: 'SUCCESS',
-      legalAligned: hasLebensflussIndex
+      legalAligned: hasLLCInModal
     });
 
     // ----------------------------------------------------

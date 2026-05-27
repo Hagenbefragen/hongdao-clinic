@@ -232,7 +232,8 @@ const translations = {
     "btn-read-article": "Read Article",
     "endo-read-approach": "Treatment Approach & Case Studies",
     "footer-impressum": "Impressum / Legal Notice",
-    "footer-privacy": "Privacy Policy"
+    "footer-privacy": "Privacy Policy",
+    "contact-wechat-wrapper": "<strong>WeChat:</strong> <a href=\"#\" class=\"read-article-btn\" data-article=\"wechat\" style=\"color: var(--terracotta); text-decoration: underline; font-weight: 500;\">Show QR Codes</a>"
   },
   de: {
     // Navigation
@@ -460,7 +461,8 @@ const translations = {
     "btn-read-article": "Artikel lesen",
     "endo-read-approach": "Behandlungsansatz & Fallbeispiele",
     "footer-impressum": "Impressum",
-    "footer-privacy": "Datenschutz"
+    "footer-privacy": "Datenschutz",
+    "contact-wechat-wrapper": "<strong>WeChat:</strong> <a href=\"#\" class=\"read-article-btn\" data-article=\"wechat\" style=\"color: var(--terracotta); text-decoration: underline; font-weight: 500;\">QR-Codes anzeigen</a>"
   }
 };
 
@@ -1293,25 +1295,18 @@ const articlesContent = {
     de: {
       title: "Impressum",
       body: `
-        <p><strong>Lebensfluss e.V.</strong></p>
-        <p>Ein eingetragener Verein zur Förderung der Gesundheitspflege, der traditionellen chinesischen Medizin (TCM) und heilsamer Lebensweisen.</p>
+        <p><strong>Solvea Biosciences Laboratory LLC</strong></p>
+        <p>Registered Office: 30 North Gould Street, Sheridan, WY 82801, USA</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Vertretungsberechtigter Vorstand</h4>
         <p>
-          Deng Nanjing (Vorsitzende)<br>
-          Master Xu Ruqi (Stellvertretender Vorsitzender)
+          Deng Nanjing
         </p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Kontakt</h4>
         <p>
-          E-Mail: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a><br>
+          E-Mail: <a href="mailto:nanjing.deng18@gmail.com" style="color: var(--terracotta); text-decoration: underline;">nanjing.deng18@gmail.com</a><br>
           Telefon/WhatsApp: +52 1 984 140 8335 (Deng Nanjing)
-        </p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Registereintragung</h4>
-        <p>
-          Lebensfluss e.V. befindet sich im Registrierungsprozess beim Vereinsregister.<br>
-          Die Vereinsarbeit dient gemeinnützigen Zwecken der Förderung des öffentlichen Gesundheitswesens und der Gesundheitspflege.
         </p>
 
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Haftungsausschluss</h4>
@@ -1323,25 +1318,18 @@ const articlesContent = {
     en: {
       title: "Impressum / Legal Notice",
       body: `
-        <p><strong>Lebensfluss e.V.</strong></p>
-        <p>A registered association dedicated to the promotion of health maintenance, traditional Chinese medicine (TCM), and mindful lifestyles.</p>
+        <p><strong>Solvea Biosciences Laboratory LLC</strong></p>
+        <p>Registered Office: 30 North Gould Street, Sheridan, WY 82801, USA</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Authorized Representatives (Board of Directors)</h4>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Represented by</h4>
         <p>
-          Deng Nanjing (Chairperson)<br>
-          Master Xu Ruqi (Deputy Chairperson)
+          Deng Nanjing
         </p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Contact Information</h4>
         <p>
-          Email: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a><br>
+          Email: <a href="mailto:nanjing.deng18@gmail.com" style="color: var(--terracotta); text-decoration: underline;">nanjing.deng18@gmail.com</a><br>
           Phone/WhatsApp: +52 1 984 140 8335 (Deng Nanjing)
-        </p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Association Registration</h4>
-        <p>
-          Lebensfluss e.V. is currently in the registration process for the association register.<br>
-          The association operates on a non-profit basis to support public health maintenance and wellness initiatives.
         </p>
 
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Disclaimer</h4>
@@ -1355,12 +1343,12 @@ const articlesContent = {
     de: {
       title: "Datenschutzerklärung",
       body: `
-        <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Nachfolgend informieren wir Sie über die Verarbeitung Ihrer Daten im Rahmen unserer Vereinstätigkeiten und dieser Website.</p>
+        <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Nachfolgend informieren wir Sie über die Verarbeitung Ihrer Daten im Rahmen unserer Tätigkeiten und dieser Website.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">1. Verantwortliche Stelle</h4>
         <p>
-          Hong Dao TCM Clinic / Lebensfluss e.V.<br>
-          E-Mail: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a>
+          Solvea Biosciences Laboratory LLC<br>
+          E-Mail: <a href="mailto:nanjing.deng18@gmail.com" style="color: var(--terracotta); text-decoration: underline;">nanjing.deng18@gmail.com</a>
         </p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">2. Erfassung und Verarbeitung von Daten</h4>
@@ -1368,7 +1356,7 @@ const articlesContent = {
           Wenn Sie sich für eines unserer Gesundheitspflege-Programme registrieren oder uns kontaktieren, verarbeiten wir die von Ihnen freiwillig eingegebenen Daten (Name, E-Mail-Adresse, Telefonnummer, Anmerkungen zur Gesundheitshistorie sowie gewünschtes Datum und Uhrzeit).
         </p>
         <p>
-          Diese Daten dienen ausschließlich der Organisation der Gesundheitspflege-Sitzungen und der Betreuung im Rahmen der Vereinsmitgliedschaft. Medizinische Angaben werden streng vertraulich behandelt und nicht an unbefugte Dritte weitergegeben.
+          Diese Daten dienen ausschließlich der Organisation der Gesundheitspflege-Sitzungen und der Betreuung. Medizinische Angaben werden streng vertraulich behandelt und nicht an unbefugte Dritte weitergegeben.
         </p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">3. Ihre Rechte</h4>
@@ -1380,12 +1368,12 @@ const articlesContent = {
     en: {
       title: "Privacy Policy",
       body: `
-        <p>We take the protection of your personal data very seriously. Below we provide information on how your data is processed in connection with our association activities and this website.</p>
+        <p>We take the protection of your personal data very seriously. Below we provide information on how your data is processed in connection with our activities and this website.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">1. Controller / Responsible Party</h4>
         <p>
-          Hong Dao TCM Clinic / Lebensfluss e.V.<br>
-          Email: <a href="mailto:Lebensfluss.ev@gmail.com" style="color: var(--terracotta); text-decoration: underline;">Lebensfluss.ev@gmail.com</a>
+          Solvea Biosciences Laboratory LLC<br>
+          Email: <a href="mailto:nanjing.deng18@gmail.com" style="color: var(--terracotta); text-decoration: underline;">nanjing.deng18@gmail.com</a>
         </p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">2. Collection and Processing of Data</h4>
@@ -1393,13 +1381,103 @@ const articlesContent = {
           When you register for one of our health maintenance programs or contact us, we process the information you voluntarily submit (name, email address, phone number, medical history notes, and requested date/time).
         </p>
         <p>
-          This data is processed solely for organizing health maintenance sessions, facilitating program attendance, and managing association memberships. Any health-related information is kept strictly confidential and will never be shared with unauthorized third parties.
+          This data is processed solely for organizing health maintenance sessions and facilitating program attendance. Any health-related information is kept strictly confidential and will never be shared with unauthorized third parties.
         </p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">3. Your Rights</h4>
         <p>
           You have the right at any time to receive free information about your stored personal data, its origin, recipients, the purpose of data processing, and the right to request correction, blocking, or deletion of this data. To exercise these rights, please contact us at the email address provided above.
         </p>
+      `
+    }
+  },
+  wechat: {
+    de: {
+      title: "WeChat Kontakt & Anmeldung",
+      body: `
+        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+          Scannen Sie einen der folgenden QR-Codes mit WeChat, um direkt mit uns in Kontakt zu treten oder sich für Behandlungen und das Retreat anzumelden. Alternativ können Sie auf den Code klicken oder tippen, um den Link direkt zu öffnen.
+        </p>
+        
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem;">
+          
+          <!-- Personal WeChat Card -->
+          <div style="flex: 1; min-width: 250px; max-width: 320px; background-color: var(--bg-cream-dark); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-subtle); display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h4 style="font-weight: 600; color: var(--terracotta); margin-bottom: 0.5rem;">Nanjing Deng</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; min-height: 48px;">
+              Persönlicher Kontakt für allgemeine Fragen, Beratung und Retreat-Vorbereitungen.
+            </p>
+            <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
+              <img src="images/wechat_personal.png" alt="WeChat Personal Contact QR Code" style="width: 180px; height: 180px; display: block;">
+            </a>
+            <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
+              <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
+                Link direkt öffnen
+              </a>
+            </p>
+          </div>
+          
+          <!-- Clinic Official Account Card -->
+          <div style="flex: 1; min-width: 250px; max-width: 320px; background-color: var(--bg-cream-dark); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-subtle); display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h4 style="font-weight: 600; color: var(--terracotta); margin-bottom: 0.5rem;">Hong Dao Clinic</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; min-height: 48px;">
+              Offizieller Service-Account für Klinik-Anmeldung, Terminverwaltung und Kräuterdekokt-Bestellungen.
+            </p>
+            <a href="https://weixin.qq.com/q/022Br2ArHVfrJ10000M07T" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
+              <img src="images/wechat_clinic.png" alt="WeChat Official Account QR Code" style="width: 180px; height: 180px; display: block;">
+            </a>
+            <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
+              <a href="https://weixin.qq.com/q/022Br2ArHVfrJ10000M07T" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
+                Link direkt öffnen
+              </a>
+            </p>
+          </div>
+          
+        </div>
+      `
+    },
+    en: {
+      title: "WeChat Contact & Registration",
+      body: `
+        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+          Scan one of the following QR codes with WeChat to contact us directly or to register for treatments and retreats. Alternatively, you can click or tap on the code to open the link directly.
+        </p>
+        
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem;">
+          
+          <!-- Personal WeChat Card -->
+          <div style="flex: 1; min-width: 250px; max-width: 320px; background-color: var(--bg-cream-dark); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-subtle); display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h4 style="font-weight: 600; color: var(--terracotta); margin-bottom: 0.5rem;">Nanjing Deng</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; min-height: 48px;">
+              Personal contact for general inquiries, consultation and retreat preparations.
+            </p>
+            <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
+              <img src="images/wechat_personal.png" alt="WeChat Personal Contact QR Code" style="width: 180px; height: 180px; display: block;">
+            </a>
+            <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
+              <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
+                Open Link Directly
+              </a>
+            </p>
+          </div>
+          
+          <!-- Clinic Official Account Card -->
+          <div style="flex: 1; min-width: 250px; max-width: 320px; background-color: var(--bg-cream-dark); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-subtle); display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h4 style="font-weight: 600; color: var(--terracotta); margin-bottom: 0.5rem;">Hong Dao Clinic</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; min-height: 48px;">
+              Official Service Account for clinic registration, appointment scheduling, and herbal decoction orders.
+            </p>
+            <a href="https://weixin.qq.com/q/022Br2ArHVfrJ10000M07T" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
+              <img src="images/wechat_clinic.png" alt="WeChat Official Account QR Code" style="width: 180px; height: 180px; display: block;">
+            </a>
+            <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
+              <a href="https://weixin.qq.com/q/022Br2ArHVfrJ10000M07T" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
+                Open Link Directly
+              </a>
+            </p>
+          </div>
+          
+        </div>
       `
     }
   },
@@ -1798,15 +1876,6 @@ const articlesContent = {
             <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Eczema, urticaria, neurodermatitis, herpes zoster, and clinical hair loss.</span>
           </li>
         </ul>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography & Education</h4>
-        <p style="margin-bottom: 1rem;">Master of Acupuncture, Licensed National Physician, and certified National Psychological Counselor.</p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Focus & Rejuvenation</h4>
-        <p style="margin-bottom: 1rem;">Dr. Guan specializes in combining standard meridian acupuncture with science-backed metabolic weight loss programs and advanced laser-acupoint therapy.</p>
-      `
-    }
-  },
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography & Education</h4>
         <p style="margin-bottom: 1rem;">Master of Acupuncture, Licensed National Physician, and certified National Psychological Counselor.</p>
