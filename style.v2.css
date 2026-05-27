@@ -1328,3 +1328,35 @@ footer {
     padding: 1.5rem !important;
   }
 }
+
+/* Dynamic Article Modal Content Stacking Fix */
+#article-modal-body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+}
+
+#article-modal-body ul.feature-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.2rem !important;
+  list-style: none !important;
+  margin: 1.5rem 0 !important;
+  padding-left: 0 !important;
+}
+
+#article-modal-body ul.feature-list li {
+  display: block !important;
+  position: relative !important;
+  padding-left: 1.8rem !important;
+  margin-bottom: 0 !important;
+}
+
+#article-modal-body ul.feature-list li::before {
+  content: '✓' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  color: var(--jade-green) !important;
+  font-weight: bold !important;
+}

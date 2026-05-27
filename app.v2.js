@@ -1405,7 +1405,7 @@ const articlesContent = {
   },
   xu: {
     de: {
-      title: "Professor Xu Ruqi – Chefarzt & Leitender TCM-Experte",
+      title: "PROFESSOR Xu Ruqi – Chefarzt & Leitender TCM-Experte",
       body: `
         <p style="margin-bottom: 1rem;"><strong>Fachabteilung:</strong> Traditionelle Chinesische Medizin (TCM)</p>
         
@@ -1417,12 +1417,6 @@ const articlesContent = {
           <li>Diabetes, Lebererkrankungen, Magenbeschwerden, Nierenerkrankungen und anderen stoffwechsel- und organbedingten Leiden</li>
           <li>Rheumatischen und Autoimmunerkrankungen wie rheumatoide Arthritis und Morbus Bechterew</li>
           <li>Fortpflanzungsstörungen einschließlich männlicher und weiblicher Unfruchtbarkeit</li>
-        </ul>
-
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Konsultationsgebühren</h4>
-        <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li>Vor-Ort-Konsultation: 600 RMB</li>
-          <li>Online-Konsultation: 300 RMB</li>
         </ul>
 
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biografie</h4>
@@ -1454,12 +1448,12 @@ const articlesContent = {
           <li>Organisierte dutzende „Ping Mai Bian Zheng“-Ausbildungsprogramme</li>
           <li>Veranstaltete nationale akademische Konferenzen, einschließlich fortgeschrittener Seminare zur Anwendung klassischer Rezepturen und das China Herbal Formula Medicine Forum</li>
           <li>Dozent für das Internationale Jingfang-Programm an der Guangzhou Universität für Chinesische Medizin</li>
-          <li>Autor des Buches <em>Zhang Zhongjing verstehen</em> (veröffentlicht vom China Traditional Chinese Medicine Press)</li>
+          <li>Autor des Buchs „WU DAO ZHANG ZHONG JING“ (auf deutsch: „Den Weg des Zhang Zhong Jing erkennen“). In diesem Buch beschreibt er, wie der Großmeister Zhang das erste Mal im Traum zu ihm kam, ihm die genauen Formeln im Traum mitteilte und seitdem an seiner Seite ist, um ihn in der Heilung von Tausenden von Menschen zu unterstützen (ein Zeichen dafür, dass er energetisch nach oben angebunden ist).</li>
         </ul>
       `
     },
     en: {
-      title: "Professor Xu Ruqi – Chief Physician & Senior TCM Expert",
+      title: "PROFESSOR Xu Ruqi – Chief Physician & Senior TCM Expert",
       body: `
         <p style="margin-bottom: 1rem;"><strong>Department:</strong> Traditional Chinese Medicine (TCM)</p>
         
@@ -1471,12 +1465,6 @@ const articlesContent = {
           <li>Diabetes, liver disease, stomach disorders, kidney disease, and other metabolic and organ-related conditions</li>
           <li>Rheumatic and autoimmune diseases such as rheumatoid arthritis and ankylosing spondylitis</li>
           <li>Reproductive disorders including male and female infertility</li>
-        </ul>
-
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Consultation Fees</h4>
-        <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li>In-person consultation: 600 RMB</li>
-          <li>Online consultation: 300 RMB</li>
         </ul>
 
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography</h4>
@@ -1508,7 +1496,7 @@ const articlesContent = {
           <li>Organized dozens of “Ping Mai Bian Zheng” training programs</li>
           <li>Hosted national academic conferences including advanced seminars on classical formula application and the China Herbal Formula Medicine Forum</li>
           <li>Lecturer for the International Classical Formula Program at Guangzhou University of Chinese Medicine</li>
-          <li>Author of the book <em>Understanding Zhang Zhongjing</em> (published by China Traditional Chinese Medicine Press)</li>
+          <li>Author of the book “WU DAO ZHANG ZHONG JING” (in English: “Recognizing the Way of Zhang Zhong Jing”). In this book, he describes how Grandmaster Zhang first came to him in a dream, communicated the exact formulas to him in the dream, and has been by his side ever since to support him in healing thousands of people (anchoring his spiritual connection to the lineage).</li>
         </ul>
       `
     }
@@ -1517,35 +1505,67 @@ const articlesContent = {
     de: {
       title: "Heilpraktikerin Deng Nanjing – Gründerin, Qi Gong & Klangtherapeutin",
       body: `
-        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> ist die visionäre Gründerin des Hong Dao Inner Retreats und internationale Brücke zwischen der Klinik und Heilsuchenden weltweit. Als Mutter und Naturverbundene verbindet sie authentische östliche Philosophie mit westlichen Konzepten der Stressregulation.</p>
+        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> ist die visionäre Gründerin des Hong Dao Inner Retreats und die internationale Brücke zwischen der Klinik und Heilsuchenden weltweit. Als Mutter engagiert sie sich leidenschaftlich für den Schutz einer natürlichen Umwelt, die das Wohlergehen von Frauen und Kindern in den Mittelpunkt stellt. Sie schlägt Brücken zwischen authentischer östlicher Lebenspflege und westlichen Wegen der Stressregulation.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Heilungs- & Therapieansatz</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Akkreditierte Klangtherapie</strong>: Tiefenwirkung mittels nepalesischer Klangschalen, Frequenz-Gongs und Stimmgabeln zur Wiederherstellung der zellulären Harmonie.</li>
-          <li><strong>Qi Gong & 6 Heilende Klänge</strong>: Tägliche Morgen-Praxis mit den Teilnehmern, Stimm-Befreiungsarbeit und Körper-Geist-Integration.</li>
-          <li><strong>Vegetative Regulation</strong>: Neuromodulation und Vagusnerv-Stimulation bei Burnout, depressiven Verstimmungen und emotionalen Blockaden.</li>
-          <li><strong>Sensorische Kräuterpädagogik</strong>: Leitung von Teezeremonien und Kräuter-Malworkshops für Kinder und Familien zur Stärkung der emotionalen Wahrnehmung.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Akkreditierte Klangtherapie</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Tiefenwirkung mittels nepalesischer Klangschalen, Frequenz-Gongs und Stimmgabeln zur Wiederherstellung der zellulären Harmonie.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Qi Gong & 6 Heilende Klänge</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Tägliche Morgen-Praxis mit den Teilnehmern zur Harmonisierung des Energieflusses durch akustische Resonanz und bewusste Bewegung.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Befreiung der Stimme & Seelische Klärung</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Gezielte Stimmarbeit zur emotionalen Befreiung, zum Lösen von Schuld- und Schamgefühlen und zur Entfaltung des wahren Potenzials.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Vegetative Regulation</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Neuromodulation und Vagusnerv-Stimulation bei Burnout, depressiven Verstimmungen und emotionalen Blockaden.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Sensorische Kräuterpädagogik</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Leitung von Teezeremonien und Kräuter-Malworkshops für Kinder und Familien zur Stärkung der emotionalen Wahrnehmung.</span>
+          </li>
         </ul>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Ausbildung & Veröffentlichungen</h4>
-        <p style="margin-bottom: 1rem;">Zertifizierte internationale Klangtherapeutin, Heilpraktikerin und Meditationsleiterin. Sie spricht fünf Sprachen (Deutsch, Englisch, Italienisch, Spanisch, Mandarin). Langjährige Erfahrung mit indigenen Stämmen und natürlichen Heilweisen weltweit.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Ausbildung & Lebensweg</h4>
+        <p style="margin-bottom: 1rem;">Sie ist zertifizierte Klangtherapeutin, Heilpraktikerin und Meditationsleiterin. Auf ihren Reisen hat sie mit indigenen Stämmen auf der ganzen Welt gelebt und von ihren natürlichen Heilweisen und tiefen Weisheiten gelernt. Sie spricht fließend fünf Sprachen: Deutsch, Englisch, Chinesisch, Italienisch und Spanisch.</p>
       `
     },
     en: {
       title: "Heilpraktikerin Deng Nanjing – Founder, Qi Gong & International Sound Therapist",
       body: `
-        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> is the visionary founder of the Hong Dao Inner Retreat and the international bridge between the clinic and health seekers worldwide. As a mother and nature advocate, she bridges classical Eastern healing arts with modern neuro-vibrational therapy.</p>
+        <p><strong>Heilpraktikerin Deng Nanjing (邓楠景)</strong> is the visionary founder of the Hong Dao Inner Retreat and the international bridge between the clinic and health seekers worldwide. As a mother, she is deeply committed to protecting a natural environment that puts the well-being of women and children at the center. She bridges classical Eastern healing arts with modern neuro-vibrational therapy.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Therapeutic Focus</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Vibrational Sound Therapy</strong>: Utilizing gongs, singing bowls, and tuning forks to induce cellular resonance and deep meditation.</li>
-          <li><strong>Qi Gong & 6 Healing Sounds</strong>: Daily morning practice with participants, voice liberation work, and body-mind integration.</li>
-          <li><strong>Autonomic Balance</strong>: Regulating the vagus nerve to alleviate chronic anxiety, depression, and adrenal exhaustion.</li>
-          <li><strong>Parent-Child Sensory Workshops</strong>: Creative direction of tea ceremonies and botanical painting classes to nurture emotional mindfulness.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Vibrational Sound Therapy</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Utilizing gongs, singing bowls, and tuning forks to induce cellular resonance and deep meditation.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Qi Gong & 6 Healing Sounds</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Daily morning practice with participants, integrating acoustics and movement to balance organ energies.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Voice Liberation & Emotional Release</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Specialized vocal and expression work for emotional release, overcoming guilt and shame, and expanding self-awareness.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Autonomic Balance</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Regulating the vagus nerve to alleviate chronic anxiety, depression, and adrenal exhaustion.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Parent-Child Sensory Workshops</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Creative direction of tea ceremonies and botanical painting classes to nurture emotional mindfulness.</span>
+          </li>
         </ul>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Background</h4>
-        <p style="margin-bottom: 1rem;">Certified Sound Healing Practitioner, Heilpraktikerin, and Meditation Guide. She speaks five languages (German, English, Italian, Spanish, Mandarin) and has extensive experience with indigenous tribes and natural healing practices worldwide.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Background & Experience</h4>
+        <p style="margin-bottom: 1rem;">Certified Sound Healing Practitioner, Heilpraktikerin, and Meditation Guide. She has lived with indigenous tribes all over the world, learning directly from their traditional natural healing methods. She speaks five languages: German, English, Chinese, Italian, and Spanish.</p>
       `
     }
   },
@@ -1557,8 +1577,14 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Schwerpunkte</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Akupunktur</strong>: Durchführung von Akupunktursitzungen nach den Anweisungen von Professor Xu.</li>
-          <li><strong>Klinische Unterstützung</strong>: Patientenbetreuung, Vor- und Nachbereitung von Therapiesitzungen.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Akupunktur</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Durchführung von Akupunktursitzungen nach den Anweisungen von Professor Xu.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Klinische Unterstützung</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Patientenbetreuung, Vor- und Nachbereitung von Therapiesitzungen sowie Koordination von Kräuterrezepturen.</span>
+          </li>
         </ul>
       `
     },
@@ -1569,8 +1595,14 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Focus Areas</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Acupuncture</strong>: Performing acupuncture sessions under the direction of Professor Xu.</li>
-          <li><strong>Clinical Support</strong>: Patient care, preparation and follow-up for therapy sessions.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Acupuncture</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Performing acupuncture sessions under the direct instruction of Professor Xu.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Clinical Support</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Patient care, preparation, and follow-up for therapy sessions, as well as coordinating herbal remedies.</span>
+          </li>
         </ul>
       `
     }
@@ -1583,8 +1615,14 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Verantwortungsbereich</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Dao Di Qualitätsprüfung</strong>: Identifikation und Qualitätskontrolle aller importierten biologischen Rohkräuter.</li>
-          <li><strong>Wissenschaftliche Extraktion</strong>: Überwachung der Kochzeiten und Temperatureinstellungen zur optimalen Wirkstofffreisetzung.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Dao Di Qualitätsprüfung</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Identifikation und Qualitätskontrolle aller importierten biologischen Rohkräuter.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Wissenschaftliche Extraktion</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Überwachung der Kochzeiten und Temperatureinstellungen zur optimalen Wirkstofffreisetzung.</span>
+          </li>
         </ul>
       `
     },
@@ -1595,8 +1633,14 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Responsibilities</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Dao Di Herb Sourcing</strong>: Rigorous authentication of raw materials based on regional ecological origins.</li>
-          <li><strong>Extraction Precision</strong>: Controlling heat, pressure, and extraction duration to deliver pristine, sterile Ready-to-Drink packages.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Dao Di Herb Sourcing</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Rigorous authentication of raw materials based on regional ecological origins.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Extraction Precision</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Controlling heat, pressure, and extraction duration to deliver pristine, sterile Ready-to-Drink packages.</span>
+          </li>
         </ul>
       `
     }
@@ -1605,26 +1649,44 @@ const articlesContent = {
     de: {
       title: "Cheung Mingli – Nomadin, Yogalehrerin & Klangarbeiterin",
       body: `
-        <p><strong>Cheung Mingli</strong> ist eine Nomadin und Weltenbummlerin mit über 10 Jahren internationaler Erfahrung in Yoga, Fächer-Tanz-Therapie und Klangarbeit.</p>
+        <p><strong>Cheung Mingli</strong> ist eine Nomadin und Weltenbummlerin mit über 10 Jahren internationaler Erfahrung. Sie integriert Klangtherapie, Bewegung, Atemarbeit und rituelle Praktiken, um die Regulierung des Nervensystems und das ganzheitliche Wohlbefinden in verschiedenen Gemeinschaften weltweit zu unterstützen.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Methoden</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Yoga für Kinder & Erwachsene</strong>: Individuelle und Gruppensitzungen zur Körperwahrnehmung und inneren Balance.</li>
-          <li><strong>Fächer-Tanz-Therapie</strong>: Bewegungstherapie mit traditionellen Fächern zur emotionalen Entlastung und kreativen Selbstentfaltung.</li>
-          <li><strong>Klangarbeit</strong>: Klangschalen-Sitzungen und Gong-Bäder zur tiefen Entspannung und energetischen Harmonisierung.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Yoga für Kinder & Erwachsene</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Individuelle und Gruppensitzungen zur Körperwahrnehmung und inneren Balance.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Fächer-Tanz-Therapie</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Bewegungstherapie mit traditionellen Fächern zur emotionalen Entlastung und kreativen Selbstentfaltung.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Klangarbeit</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Klangschalen-Sitzungen und Gong-Bäder zur tiefen Entspannung und energetischen Harmonisierung.</span>
+          </li>
         </ul>
       `
     },
     en: {
       title: "Cheung Mingli – Nomad, Yoga Teacher & Sound Worker",
       body: `
-        <p><strong>Cheung Mingli</strong> is a nomad and world traveler with over 10 years of international experience in yoga, fan dance therapy, and sound work.</p>
+        <p><strong>Cheung Mingli</strong> is a nomad and world traveler with over 10 years of international experience. Mingli integrates sound therapy, movement, breathwork and ritual practices to support nervous system regulation and holistic wellbeing across diverse communities worldwide.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Modalities</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Yoga for Children & Adults</strong>: Individual and group sessions for body awareness and inner balance.</li>
-          <li><strong>Fan Dance Therapy</strong>: Movement therapy with traditional fans for emotional release and creative self-expression.</li>
-          <li><strong>Sound Work</strong>: Singing bowl sessions and gong baths for deep relaxation and energetic harmonization.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Yoga for Children & Adults</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Individual and group sessions for body awareness and inner balance.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Fan Dance Therapy</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Movement therapy with traditional fans for emotional release and creative self-expression.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Sound Work</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Singing bowl sessions and gong baths for deep relaxation and energetic harmonization.</span>
+          </li>
         </ul>
       `
     }
@@ -1637,9 +1699,18 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete (Focus Areas)</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Stoffwechsel- & Metabolische Erkrankungen</strong>: Ganzheitliche Regulation bei Diabetes, Fettstoffwechselstörungen, Bluthochdruck und Fettleibigkeit.</li>
-          <li><strong>Hormonelle & Gynäkologische Leiden</strong>: Spezialisierte Behandlung von Endometriose, extremen Regelschmerzen (Dysmenorrhö), PCOS (Polycystisches Ovarialsyndrom), vorzeitiger Ovarialinsuffizienz und Brustdrüsen-Hyperplasie.</li>
-          <li><strong>Neurologische & Psychosomatische Störungen</strong>: Chronische Kopfschmerzen, Migräne, Angststörungen, Schlafstörungen und stressbedingte Erschöpfung.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Stoffwechsel- & Metabolische Erkrankungen</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Ganzheitliche Regulation bei Diabetes, Fettstoffwechselstörungen, Bluthochdruck und Fettleibigkeit.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Hormonelle & Gynäkologische Leiden</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Spezialisierte Behandlung von Endometriose, extremen Regelschmerzen (Dysmenorrhö), PCOS (Polycystisches Ovarialsyndrom), vorzeitiger Ovarialinsuffizienz und Brustdrüsen-Hyperplasie.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Neurologische & Psychosomatische Störungen</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Chronische Kopfschmerzen, Migräne, Angststörungen, Schlafstörungen und stressbedingte Erschöpfung.</span>
+          </li>
         </ul>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Akademischer Hintergrund & Biografie</h4>
@@ -1656,9 +1727,18 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Focus Areas</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Metabolic Disorders</strong>: Comprehensive management of diabetes, hyperlipidemia, hypertension, and clinical obesity.</li>
-          <li><strong>Hormonal & Gynecological Diseases</strong>: Specializing in endometriosis care, severe dysmenorrhea, PCOS, premature ovarian failure, and breast hyperplasia.</li>
-          <li><strong>Neurological & Mood Disorders</strong>: Chronic migraines, anxiety, depression, insomnia, and burnout syndrome.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Metabolic Disorders</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Comprehensive management of diabetes, hyperlipidemia, hypertension, and clinical obesity.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Hormonal & Gynecological Diseases</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Specializing in endometriosis care, severe dysmenorrhea, PCOS, premature ovarian failure, and breast hyperplasia.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Neurological & Mood Disorders</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Chronic migraines, anxiety, depression, insomnia, and burnout syndrome.</span>
+          </li>
         </ul>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography & Education</h4>
@@ -1673,13 +1753,22 @@ const articlesContent = {
     de: {
       title: "Dr. Guan Weina – Akupunktur & Faszientherapie",
       body: `
-        <p><strong>Dr. Guan Weina (管蔚娜)</strong> ist stellvertretende Leiterin des Zentrums für technologiegestützte chinesische Medizin und Expertin für energetische Entgiftung und Meridian-Therapie.</p>
+        <p><strong>Dr. Guan Weina (管蔚娜)</strong> ist stellvertretende Leiterin des Zentrums für technologiegestützte chinesische Medizin und eine führende Expertin für energetische Entgiftung und Meridian-Therapie.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete (Focus Areas)</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Urogenitale & Gynäkologische Leiden</strong>: Behandlung von chronischer Prostatitis, Inkontinenz, Blasenentzündungen, Menstruationsstörungen, Myomen und Zysten.</li>
-          <li><strong>Meridian-Entgiftung & Akupunktur</strong>: Anwendung traditioneller Reizverfahren (Akupunktur, Gua Sha, Moxa und Schröpfen) zur Ausleitung zellulärer Schlacken.</li>
-          <li><strong>Dermatologische TCM-Konzepte</strong>: Behandlung bei hartnäckiger Neurodermitis, chronischer Nesselsucht (Urtikaria), Ekzemen, Gürtelrose und Haarausfall.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Urogenitale & Gynäkologische Leiden</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Behandlung von chronischer Prostatitis, Inkontinenz, Blasenentzündungen, Menstruationsstörungen, Myomen und Zysten.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Meridian-Entgiftung & Akupunktur</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Anwendung traditioneller Reizverfahren (Akupunktur, Gua Sha, Moxa und Schröpfen) zur Ausleitung zellulärer Schlacken.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Dermatologische TCM-Konzepte</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Behandlung bei hartnäckiger Neurodermitis, chronischer Nesselsucht (Urtikaria), Ekzemen, Gürtelrose und Haarausfall.</span>
+          </li>
         </ul>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Akademischer Hintergrund & Biografie</h4>
@@ -1696,10 +1785,28 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Focus Areas</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Urogenital & Gynecological Disorders</strong>: Chronic prostatitis, urinary urgency, incontinence, uterine fibroids, dysmenorrhea, and ovarian decline.</li>
-          <li><strong>Meridian Detoxification & Acupuncture</strong>: Rich clinical expertise in acupuncture, cupping, moxibustion, gua sha, and ear acupuncture to expel toxins.</li>
-          <li><strong>Dermatological Conditions</strong>: Eczema, urticaria, neurodermatitis, herpes zoster, and clinical hair loss.</li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Urogenital & Gynecological Disorders</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Chronic prostatitis, urinary urgency, incontinence, uterine fibroids, dysmenorrhea, and ovarian decline.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Meridian Detoxification & Acupuncture</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Rich clinical expertise in acupuncture, cupping, moxibustion, gua sha, and ear acupuncture to expel toxins.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Dermatological Conditions</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Eczema, urticaria, neurodermatitis, herpes zoster, and clinical hair loss.</span>
+          </li>
         </ul>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography & Education</h4>
+        <p style="margin-bottom: 1rem;">Master of Acupuncture, Licensed National Physician, and certified National Psychological Counselor.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Focus & Rejuvenation</h4>
+        <p style="margin-bottom: 1rem;">Dr. Guan specializes in combining standard meridian acupuncture with science-backed metabolic weight loss programs and advanced laser-acupoint therapy.</p>
+      `
+    }
+  },
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biography & Education</h4>
         <p style="margin-bottom: 1rem;">Master of Acupuncture, Licensed National Physician, and certified National Psychological Counselor.</p>
