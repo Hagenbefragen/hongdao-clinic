@@ -16,56 +16,48 @@ async function runTest() {
   console.log("Taking full page screenshot...");
   await page.screenshot({ path: path.join(artifactDir, 'screenshot_full.png'), fullPage: true });
 
-  // Test QR codes modal (WeChat)
-  console.log("Looking for WeChat contact button...");
-  // Need to find the button that triggers the wechat modal.
-  // In index.html, there are buttons with classes or onclick events. Let's find any button that opens a modal.
-  // Or just execute the global function `openModal('wechatModal')` if it exists.
+  // Test TC-002: WeChat QR Code Modal
+  console.log("Testing TC-002: WeChat QR Code Modal...");
   try {
     await page.evaluate(() => {
-      if (typeof openModal === 'function') {
-        openModal('wechatModal');
-      } else {
-        // Fallback: try to click a button that contains WeChat
-        const buttons = Array.from(document.querySelectorAll('button, a'));
-        const wechatBtn = buttons.find(b => b.textContent.includes('WeChat'));
-        if (wechatBtn) wechatBtn.click();
-      }
+      const wechatLink = document.querySelector('a[data-article="wechat"]');
+      if (wechatLink) wechatLink.click();
     });
-    // Wait a bit for modal to animate
-    await new Promise(r => setTimeout(r, 500));
-    console.log("Taking modal screenshot...");
+    // Wait for the article modal to animate in and QR codes to load
+    await new Promise(r => setTimeout(r, 1500));
+    console.log("Taking WeChat modal screenshot...");
     await page.screenshot({ path: path.join(artifactDir, 'screenshot_wechat_modal.png') });
+    
+    // Close the modal to prepare for next test
+    await page.evaluate(() => {
+      const closeBtn = document.querySelector('#article-modal-close');
+      if (closeBtn) closeBtn.click();
+    });
+    await new Promise(r => setTimeout(r, 500));
   } catch (e) {
     console.error("Error opening wechat modal:", e);
   }
 
-  // Test WhatsApp
+  // Test TC-003: Apply Button Modal
+  console.log("Testing TC-003: Apply Button Modal...");
   try {
     await page.evaluate(() => {
-      if (typeof openModal === 'function') {
-        openModal('whatsappModal');
-      }
+      // Find the "Jetzt bewerben" button in the Hero
+      const applyBtn = document.querySelector('.hero .apply-trigger');
+      if (applyBtn) applyBtn.click();
     });
-    await new Promise(r => setTimeout(r, 500));
-    console.log("Taking whatsapp modal screenshot...");
-    await page.screenshot({ path: path.join(artifactDir, 'screenshot_whatsapp_modal.png') });
-  } catch (e) {
-    console.error("Error opening whatsapp modal:", e);
-  }
-
-  // Test "Profil lesen" modal
-  try {
+    await new Promise(r => setTimeout(r, 1000));
+    console.log("Taking apply modal screenshot...");
+    await page.screenshot({ path: path.join(artifactDir, 'screenshot_apply_modal.png') });
+    
+    // Close the modal
     await page.evaluate(() => {
-      if (typeof openModal === 'function') {
-        openModal('profileModal');
-      }
+      const closeBtn = document.querySelector('#booking-modal-close');
+      if (closeBtn) closeBtn.click();
     });
     await new Promise(r => setTimeout(r, 500));
-    console.log("Taking profile modal screenshot...");
-    await page.screenshot({ path: path.join(artifactDir, 'screenshot_profile_modal.png') });
   } catch (e) {
-    console.error("Error opening profile modal:", e);
+    console.error("Error opening apply modal:", e);
   }
 
   await browser.close();

@@ -15,49 +15,61 @@
 </head>
 <body>
 
-  <!-- Header Navigation -->
-  <header id="header">
-    <div class="navbar">
-      <a href="#home" class="logo">
-        <img src="images/logo_web.png" alt="宏道中医 Hong Dao Zhong Yi Logo" class="logo-img">
-        <div class="logo-text">
-          Hong Dao
-          <span class="logo-sub">TCM CLINIC · 宏道中医</span>
-        </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#home" data-i18n="nav-home">Startseite</a></li>
-        <li><a href="#about" data-i18n="nav-about">Über uns & Meister</a></li>
-        <li><a href="#treatments" data-i18n="nav-treatments">Behandlungen</a></li>
-        <li><a href="#devices" data-i18n="nav-devices">Medizintechnik</a></li>
-        <li><a href="#programs" data-i18n="nav-programs">Programme</a></li>
-        <li><a href="#retreat" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
-        <li><a href="#info" data-i18n="nav-info">Klinik-Info</a></li>
-        <li class="mobile-only-cta"><a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a></li>
-      </ul>
-      <div class="nav-controls">
-        <a href="#" id="tech-modal-btn" class="nav-tech-pill" data-i18n="nav-tech-btn" title="Medizintechnik-Übersicht">⚕ TCM-Technologie</a>
-        <div class="lang-switcher">
-          <button id="lang-de" class="lang-btn active">DE</button>
-          <button id="lang-en" class="lang-btn">EN</button>
-        </div>
-        <a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a>
-        <button class="hamburger-menu" id="hamburger-btn" aria-label="Menü öffnen/schließen">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
+  <!-- App Layout Wrapper -->
+  <div class="app-layout">
 
-  <!-- Hero Section -->
-  <section id="home" class="hero" style="background-image: url('images/hero_bg.png');">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <span class="hero-tag animate-fade-in" data-i18n="hero-tag">Traditionelle Chinesische Medizin trifft moderne Medizintechnik</span>
-      <h1 class="title-large animate-fade-in" data-i18n="hero-title">Heilsame Wege zu tiefer Balance</h1>
-      <p class="subtitle-serif animate-fade-in" data-i18n="hero-desc">Erleben Sie tiefe körperliche und spirituelle Transformation durch die 40-jährige TCM-Erfahrung von Professor Xu Ruqi, individuelle Kräutertherapien, modernste Diagnosegeräte und heilsame Klangzeremonien.</p>
+    <!-- Mobile Header (Visible only on small screens) -->
+    <div class="mobile-header">
+      <a href="#home" class="logo-mobile">
+        <img src="images/logo_web.png" alt="Hong Dao TCM Clinic" class="logo-img">
+      </a>
+      <button class="hamburger-menu" id="hamburger-btn" aria-label="Menü öffnen/schließen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation (Desktop) / Fullscreen Menu (Mobile) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <a href="#home" class="logo">
+          <img src="images/logo_web.png" alt="宏道中医 Hong Dao Zhong Yi Logo" class="logo-img">
+          <div class="logo-text">
+            Hong Dao
+            <span class="logo-sub">TCM CLINIC · 宏道中医</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link" data-i18n="nav-home">Startseite</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav-about">Über uns & Meister</a></li>
+          <li><a href="#treatments" class="nav-link" data-i18n="nav-treatments">Behandlungen</a></li>
+          <li><a href="#devices" class="nav-link" data-i18n="nav-devices">Medizintechnik</a></li>
+          <li><a href="#programs" class="nav-link" data-i18n="nav-programs">Programme</a></li>
+          <li><a href="#retreat" class="nav-link" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
+          <li><a href="#info" class="nav-link" data-i18n="nav-info">Klinik-Info</a></li>
+        </ul>
+        <div class="nav-controls">
+          <a href="#" id="tech-modal-btn" class="nav-tech-pill" data-i18n="nav-tech-btn" title="Medizintechnik-Übersicht">⚕ TCM-Technologie</a>
+          <div class="lang-switcher">
+            <button id="lang-de" class="lang-btn active">DE</button>
+            <button id="lang-en" class="lang-btn">EN</button>
+          </div>
+          <a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Hero Section -->
+      <section id="home" class="hero" style="background-image: url('images/hero_bg.png');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="hero-tag animate-fade-in" data-i18n="hero-tag">Traditionelle Chinesische Medizin trifft moderne Medizintechnik</span>
+          <h1 class="title-large animate-fade-in" data-i18n="hero-title">Heilsame Wege zu tiefer Balance</h1>
+          <p class="subtitle-serif animate-fade-in" data-i18n="hero-desc">Erleben Sie tiefe körperliche und spirituelle Transformation durch die 40-jährige TCM-Erfahrung von Professor Xu Ruqi, individuelle Kräutertherapien, modernste Diagnosegeräte und heilsame Klangzeremonien.</p>
       <div class="hero-buttons animate-fade-in">
         <a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="hero-cta-apply">Jetzt bewerben</a>
         <a href="#programs" class="btn btn-outline" data-i18n="hero-cta-more">Programme entdecken</a>
@@ -213,8 +225,8 @@
       <!-- In-House Decoction Center -->
       <div class="card" style="margin-top: 5rem; padding: 3rem; background: var(--card-bg); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
         <div class="grid-2" style="align-items: center; gap: 4rem;">
-          <div class="card-img-wrapper" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-            <img src="images/decoction_center.jpg" alt="Decoction Center" style="width: 100%; height: auto; display: block; object-fit: cover;">
+          <div class="card-img-wrapper" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); height: 350px;">
+            <img src="images/decoction_center_new.jpg" alt="Decoction Center" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: top;">
           </div>
           <div>
             <span class="subtitle-serif" style="color: var(--terracotta);" data-i18n="decoction-subtitle">Hauseigene Kräuter-Manufaktur</span>
@@ -243,48 +255,48 @@
       </div>
 
       <div class="grid-4">
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: url('images/mountain_herbs_womb.jpg');">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/new_img1.jpg'); background-size: cover; background-position: center; color: white; border: none;">
           <div>
-            <span class="treatment-badge" data-i18n="treatment-1-badge">Gynäkologie</span>
-            <h3 class="title-small" style="margin-top: 1rem;" data-i18n="treatment-1-title">Endometriose & Frauengesundheit</h3>
-            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.95rem;" data-i18n="treatment-1-desc">
+            <span class="treatment-badge" style="background: rgba(255,255,255,0.2); color: white;" data-i18n="treatment-1-badge">Gynäkologie</span>
+            <h3 class="title-small" style="margin-top: 1rem; color: white;" data-i18n="treatment-1-title">Endometriose & Frauengesundheit</h3>
+            <p style="color: rgba(255,255,255,0.9); margin-top: 1rem; font-size: 0.95rem;" data-i18n="treatment-1-desc">
               Individuelle Kräuterpasten, Womb-Massage (Gebärmutter-Massage) und Akupressur zur Lösung von Stagnationen und Schmerzlinderung.
             </p>
           </div>
-          <button class="btn btn-outline read-article-btn" data-article="endo" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem;" data-i18n="btn-read-article">Artikel lesen</button>
+          <button class="btn btn-outline read-article-btn" data-article="endo" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem; border-color: white; color: white;" data-i18n="btn-read-article">Artikel lesen</button>
         </div>
 
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: url('images/child_space.jpg');">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/new_img1.jpg'); background-size: cover; background-position: center; color: white; border: none;">
           <div>
-            <span class="treatment-badge" data-i18n="treatment-2-badge">Zelltherapie</span>
-            <h3 class="title-small" style="margin-top: 1rem;" data-i18n="treatment-2-title">Stammzellen & Langlebigkeit</h3>
-            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.95rem;" data-i18n="treatment-2-desc">
+            <span class="treatment-badge" style="background: rgba(255,255,255,0.2); color: white;" data-i18n="treatment-2-badge">Zelltherapie</span>
+            <h3 class="title-small" style="margin-top: 1rem; color: white;" data-i18n="treatment-2-title">Stammzellen & Langlebigkeit</h3>
+            <p style="color: rgba(255,255,255,0.9); margin-top: 1rem; font-size: 0.95rem;" data-i18n="treatment-2-desc">
               Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Erneuerung.
             </p>
           </div>
-          <button class="btn btn-outline read-article-btn" data-article="stemcell" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem;" data-i18n="btn-read-article">Artikel lesen</button>
+          <button class="btn btn-outline read-article-btn" data-article="stemcell" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem; border-color: white; color: white;" data-i18n="btn-read-article">Artikel lesen</button>
         </div>
 
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: url('images/gallery_1.png');">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/new_img1.jpg'); background-size: cover; background-position: center; color: white; border: none;">
           <div>
-            <span class="treatment-badge" data-i18n="treatment-3-badge">Neurologie</span>
-            <h3 class="title-small" style="margin-top: 1rem;" data-i18n="treatment-3-title">Stress & Burnout-Prävention</h3>
-            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.95rem;" data-i18n="treatment-3-desc">
+            <span class="treatment-badge" style="background: rgba(255,255,255,0.2); color: white;" data-i18n="treatment-3-badge">Neurologie</span>
+            <h3 class="title-small" style="margin-top: 1rem; color: white;" data-i18n="treatment-3-title">Stress & Burnout-Prävention</h3>
+            <p style="color: rgba(255,255,255,0.9); margin-top: 1rem; font-size: 0.95rem;" data-i18n="treatment-3-desc">
               Ganzheitliche Entlastung bei hohem Leistungsdruck durch pulsgeführte Akupunktur und entspannende Klangfrequenzen.
             </p>
           </div>
-          <button class="btn btn-outline read-article-btn" data-article="nervous" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem;" data-i18n="btn-read-article">Artikel lesen</button>
+          <button class="btn btn-outline read-article-btn" data-article="nervous" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem; border-color: white; color: white;" data-i18n="btn-read-article">Artikel lesen</button>
         </div>
 
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: url('images/gallery_3.png');">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/new_img1.jpg'); background-size: cover; background-position: center; color: white; border: none;">
           <div>
-            <span class="treatment-badge" data-i18n="treatment-4-badge">Pilzheilkunde</span>
-            <h3 class="title-small" style="margin-top: 1rem;" data-i18n="treatment-4-title">Pilzheilkunde & Myzel-Regulation</h3>
-            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.95rem;" data-i18n="treatment-4-desc">
+            <span class="treatment-badge" style="background: rgba(255,255,255,0.2); color: white;" data-i18n="treatment-4-badge">Pilzheilkunde</span>
+            <h3 class="title-small" style="margin-top: 1rem; color: white;" data-i18n="treatment-4-title">Pilzheilkunde & Myzel-Regulation</h3>
+            <p style="color: rgba(255,255,255,0.9); margin-top: 1rem; font-size: 0.95rem;" data-i18n="treatment-4-desc">
               Lösung von Blockaden in den Membranen (膜络) durch medizinale Großpilze zur sanften Schrumpfung von Gewebeknoten.
             </p>
           </div>
-          <button class="btn btn-outline read-article-btn" data-article="mushroom" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem;" data-i18n="btn-read-article">Artikel lesen</button>
+          <button class="btn btn-outline read-article-btn" data-article="mushroom" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem; border-color: white; color: white;" data-i18n="btn-read-article">Artikel lesen</button>
         </div>
       </div>
     </div>
@@ -1160,6 +1172,8 @@
       </div>
     </div>
   </div>
+  </main>
+</div>
 
     <!-- Lightbox Modal -->
   <div id="lightbox" class="lightbox-overlay">
@@ -1191,27 +1205,27 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const hamburger = document.getElementById('hamburger-btn');
-      const navLinks = document.querySelector('.nav-links');
+      const sidebar = document.getElementById('sidebar');
       
-      if (hamburger && navLinks) {
+      if (hamburger && sidebar) {
         hamburger.addEventListener('click', (e) => {
           e.stopPropagation();
-          navLinks.classList.toggle('active');
+          sidebar.classList.toggle('active');
           hamburger.classList.toggle('active');
         });
         
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
-          if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-            navLinks.classList.remove('active');
+          if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+            sidebar.classList.remove('active');
             hamburger.classList.remove('active');
           }
         });
         
         // Close menu when link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
+        sidebar.querySelectorAll('a').forEach(link => {
           link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+            sidebar.classList.remove('active');
             hamburger.classList.remove('active');
           });
         });
@@ -1226,7 +1240,7 @@
       devBadge.style.cssText = `
         position: fixed;
         bottom: 20px;
-        left: 20px;
+        right: 20px;
         z-index: 9999;
         background: #B95C38;
         color: white;
