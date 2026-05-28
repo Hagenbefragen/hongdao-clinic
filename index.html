@@ -255,7 +255,7 @@
       </div>
 
       <div class="grid-4">
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/new_img1.jpg'); background-size: cover; background-position: center; color: white; border: none;">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/mountain_herbs_womb.jpg'); background-size: cover; background-position: center; color: white; border: none;">
           <div>
             <span class="treatment-badge" style="background: rgba(255,255,255,0.2); color: white;" data-i18n="treatment-1-badge">Gynäkologie</span>
             <h3 class="title-small" style="margin-top: 1rem; color: white;" data-i18n="treatment-1-title">Endometriose & Frauengesundheit</h3>
@@ -266,7 +266,7 @@
           <button class="btn btn-outline read-article-btn" data-article="endo" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem; border-color: white; color: white;" data-i18n="btn-read-article">Artikel lesen</button>
         </div>
 
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/new_img1.jpg'); background-size: cover; background-position: center; color: white; border: none;">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/new_img2.png'); background-size: cover; background-position: center; color: white; border: none;">
           <div>
             <span class="treatment-badge" style="background: rgba(255,255,255,0.2); color: white;" data-i18n="treatment-2-badge">Zelltherapie</span>
             <h3 class="title-small" style="margin-top: 1rem; color: white;" data-i18n="treatment-2-title">Stammzellen & Langlebigkeit</h3>
@@ -277,7 +277,7 @@
           <button class="btn btn-outline read-article-btn" data-article="stemcell" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1rem; font-size: 0.85rem; border-color: white; color: white;" data-i18n="btn-read-article">Artikel lesen</button>
         </div>
 
-        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/new_img1.jpg'); background-size: cover; background-position: center; color: white; border: none;">
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/gallery_1.png'); background-size: cover; background-position: center; color: white; border: none;">
           <div>
             <span class="treatment-badge" style="background: rgba(255,255,255,0.2); color: white;" data-i18n="treatment-3-badge">Neurologie</span>
             <h3 class="title-small" style="margin-top: 1rem; color: white;" data-i18n="treatment-3-title">Stress & Burnout-Prävention</h3>
@@ -1233,35 +1233,5 @@
     });
   </script>
 
-  <!-- Dev Sync Widget -->
-  <script>
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-      const devBadge = document.createElement('div');
-      devBadge.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-        background: #B95C38;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 30px;
-        font-family: 'Outfit', sans-serif;
-        font-size: 0.8rem;
-        font-weight: 500;
-        box-shadow: 0 4px 15px rgba(185, 92, 56, 0.3);
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s ease;
-      `;
-      devBadge.innerHTML = '💬 WhatsApp Sync';
-      devBadge.onmouseover = () => devBadge.style.transform = 'translateY(-2px)';
-      devBadge.onmouseout = () => devBadge.style.transform = 'translateY(0)';
-      devBadge.onclick = () => window.open('/whatsapp_sync.html', '_blank');
-      document.body.appendChild(devBadge);
-    }
-  </script>
 </body>
 </html>

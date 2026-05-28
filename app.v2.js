@@ -1408,7 +1408,7 @@ const articlesContent = {
               Persönlicher Kontakt für allgemeine Fragen, Beratung und Retreat-Vorbereitungen.
             </p>
             <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fu.wechat.com%2FEKrXuMndtBkOgA4VDjFYiuY%3Fs%3D2" alt="WeChat Personal Contact QR Code" style="width: 180px; height: 180px; display: block;">
+              <img src="images/wechat_personal.png" alt="WeChat Personal Contact QR Code" style="width: 180px; height: 180px; display: block;">
             </a>
             <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
               <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
@@ -1424,7 +1424,7 @@ const articlesContent = {
               Offizieller Service-Account für Klinik-Anmeldung, Terminverwaltung und Kräuterdekokt-Bestellungen.
             </p>
             <a href="https://weixin.qq.com/q/022Br2ArHVfrJ10000M07T" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fweixin.qq.com%2Fq%2F022Br2ArHVfrJ10000M07T" alt="WeChat Official Account QR Code" style="width: 180px; height: 180px; display: block;">
+              <img src="images/wechat_clinic.png" alt="WeChat Official Account QR Code" style="width: 180px; height: 180px; display: block;">
             </a>
             <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
               <a href="https://weixin.qq.com/q/022Br2ArHVfrJ10000M07T" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
@@ -1452,7 +1452,7 @@ const articlesContent = {
               Personal contact for general inquiries, consultation and retreat preparations.
             </p>
             <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fu.wechat.com%2FEKrXuMndtBkOgA4VDjFYiuY%3Fs%3D2" alt="WeChat Personal Contact QR Code" style="width: 180px; height: 180px; display: block;">
+              <img src="images/wechat_personal.png" alt="WeChat Personal Contact QR Code" style="width: 180px; height: 180px; display: block;">
             </a>
             <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
               <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
@@ -1468,7 +1468,7 @@ const articlesContent = {
               Official Service Account for clinic registration, appointment scheduling, and herbal decoction orders.
             </p>
             <a href="https://weixin.qq.com/q/022Br2ArHVfrJ10000M07T" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fweixin.qq.com%2Fq%2F022Br2ArHVfrJ10000M07T" alt="WeChat Official Account QR Code" style="width: 180px; height: 180px; display: block;">
+              <img src="images/wechat_clinic.png" alt="WeChat Official Account QR Code" style="width: 180px; height: 180px; display: block;">
             </a>
             <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
               <a href="https://weixin.qq.com/q/022Br2ArHVfrJ10000M07T" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
