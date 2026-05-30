@@ -1546,9 +1546,7 @@ footer {
 
 /* Dynamic Article Modal Content Stacking Fix */
 #article-modal-body {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 1.5rem !important;
+  display: block !important;
 }
 
 #article-modal-body ul.feature-list {
@@ -1574,4 +1572,144 @@ footer {
   top: 0 !important;
   color: var(--jade-green) !important;
   font-weight: bold !important;
+}
+
+/* =========================================
+   ARTICLE MODAL — Tech Detail Article Styles
+   ========================================= */
+
+/* Ensure article modal window is large enough for rich content */
+#article-modal .modal-window {
+  max-width: 820px !important;
+  width: 95% !important;
+  max-height: 90vh !important;
+}
+
+#article-modal .modal-body {
+  max-height: calc(90vh - 80px) !important;
+  overflow-y: auto !important;
+  padding: 2rem 2.5rem !important;
+  background-color: var(--bg-cream-light) !important;
+}
+
+/* Tech Detail Article Container */
+.tech-detail-article {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: var(--text-dark);
+  line-height: 1.8;
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+.tech-detail-article p {
+  margin: 0 0 1rem 0;
+  line-height: 1.8;
+}
+
+.tech-detail-article h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  font-size: 1.1rem;
+}
+
+/* Intro lead paragraph — styled prominently */
+.tech-detail-article .intro-lead,
+.intro-lead {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  background: rgba(74, 123, 90, 0.06);
+  border-left: 4px solid var(--jade-green);
+  padding: 1rem 1.2rem;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Tech spec table */
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.tech-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  transition: background 0.15s ease;
+}
+
+.tech-table tr:last-child {
+  border-bottom: none;
+}
+
+.tech-table tr:hover {
+  background: rgba(74, 123, 90, 0.04);
+}
+
+.tech-table td {
+  padding: 0.65rem 1rem;
+  vertical-align: top;
+}
+
+.tech-table td:first-child {
+  font-weight: 600;
+  color: var(--text-dark);
+  width: 38%;
+  background: rgba(0,0,0,0.02);
+}
+
+.tech-table td:last-child {
+  color: var(--text-muted);
+}
+
+/* Nested lists inside feature-list */
+#article-modal-body ul.feature-list li ul {
+  list-style: none !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem !important;
+}
+
+#article-modal-body ul.feature-list li ul li {
+  padding-left: 1.5rem !important;
+}
+
+#article-modal-body ul.feature-list li ul li::before {
+  content: '→' !important;
+  color: var(--terracotta) !important;
+}
+
+/* Mobile: article modal */
+@media (max-width: 600px) {
+  #article-modal .modal-window {
+    width: 100% !important;
+    max-height: 95vh !important;
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    top: auto !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  #article-modal .modal-body {
+    padding: 1.2rem 1rem !important;
+    max-height: calc(95vh - 70px) !important;
+  }
+
+  .tech-detail-article .intro-lead,
+  .intro-lead {
+    font-size: 0.95rem;
+  }
+
+  .tech-table td:first-child {
+    width: 45%;
+  }
 }

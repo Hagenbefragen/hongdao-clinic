@@ -34,10 +34,10 @@
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-inner">
         <a href="#home" class="logo">
-          <img src="images/logo_web.png" alt="宏道中医 Hong Dao Zhong Yi Logo" class="logo-img">
+          <img src="images/logo_web.png" alt="弘道中医 Hong Dao Zhong Yi Logo" class="logo-img">
           <div class="logo-text">
             Hong Dao
-            <span class="logo-sub">TCM CLINIC · 宏道中医</span>
+            <span class="logo-sub">TCM CLINIC · 弘道中医</span>
           </div>
         </a>
         <ul class="nav-links">
@@ -308,30 +308,103 @@
         <p style="max-width: 600px; color: var(--text-muted);" data-i18n="devices-subtitle">Traditionelle TCM-Diagnostik, präzisiert durch modernste klinische Geräte.</p>
       </div>
 
-      <div class="grid-3">
-        <div class="card device-card">
-          <div class="device-icon-wrapper">🌡️</div>
-          <h3 class="title-small" data-i18n="device-1-name">Infrarot-Thermografie</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 1rem;" data-i18n="device-1-desc">
-            Visualisiert Entzündungen, Durchblutungsstörungen und energetische Blockaden in den Meridianen.
-          </p>
+      <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); justify-content: center; align-items: stretch; gap: 2.5rem;">
+        
+        <!-- Device 1: Infrared Body Scan -->
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
+          <div class="card-img-wrapper" style="height: 200px; overflow: hidden; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+            <img src="images/tech_thermography_1779274387990.png" alt="Infrared Body Scan" class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem;">
+            <div>
+              <h3 class="title-small" data-i18n="device-1-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Infrarot-Körperscan</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-1-desc">
+                Visualisiert Entzündungen, Durchblutungsverstörungen und energetische Meridianblockaden mittels HD-Thermografie.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--terracotta); font-weight: 500; margin-top: 1rem; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem;" data-i18n="device-1-uses">
+                Primäre Anwendung: Lenden- und Halswirbelsäule, Durchblutung, Entzündungsscreening, Stoffwechsel.
+              </p>
+            </div>
+            <button class="btn btn-outline read-article-btn" data-article="infrared" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+          </div>
         </div>
 
-        <div class="card device-card">
-          <div class="device-icon-wrapper">🧬</div>
-          <h3 class="title-small" data-i18n="device-2-name">Bioresonanz-Frequenzscanner</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 1rem;" data-i18n="device-2-desc">
-            Misst elektromagnetische Schwingungen der Zellen zur Erkennung von Belastungen, Toxinen und Organschwächen.
-          </p>
+        <!-- Device 2: Bian Hu Bioelectric Therapy -->
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
+          <div class="card-img-wrapper" style="height: 200px; overflow: hidden; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+            <img src="images/tech_bioresonance_1779274403035.png" alt="Bian Hu Bioelectric Therapy" class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem;">
+            <div>
+              <h3 class="title-small" data-i18n="device-2-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Bian-Hu Bioelektrizitäts-Therapie</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-2-desc">
+                Verbindet erwärmten Bian-Stein-Massage-Kopf mit bioelektrischer Mittelfrequenz-Regulation.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--terracotta); font-weight: 500; margin-top: 1rem; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem;" data-i18n="device-2-uses">
+                Primäre Anwendung: Schulterschmerzen, HWS-Syndrom, Bandscheibenvorfall, Magen-Darm-Störungen, Endometriose (PCOS/PMOS).
+              </p>
+            </div>
+            <button class="btn btn-outline read-article-btn" data-article="bianstone" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+          </div>
         </div>
 
-        <div class="card device-card">
-          <div class="device-icon-wrapper">⚡</div>
-          <h3 class="title-small" data-i18n="device-3-name">Elektro-Akupunktur-Gerät</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 1rem;" data-i18n="device-3-desc">
-            Unterstützt die klassische Nadelung durch sanfte Mikroströme zur Beschleunigung der Nervenregeneration.
-          </p>
+        <!-- Device 3: Herbal Thermal Moxibustion -->
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
+          <div class="card-img-wrapper" style="height: 200px; overflow: hidden; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+            <img src="images/tech_moxibustion_1779274453495.png" alt="Herbal Thermal Moxibustion" class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem;">
+            <div>
+              <h3 class="title-small" data-i18n="device-3-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Kräuter-Wärme-Moxibustion</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-3-desc">
+                Patentiertes, raucharmes Großflächen-Wärme-Moxibustion-System (Pu Jiu) für Wirbelsäule und Gelenke.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--terracotta); font-weight: 500; margin-top: 1rem; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem;" data-i18n="device-3-uses">
+                Primäre Anwendung: Regelschmerzen & kalte Gebärmutter, Lenden- & Knieschmerz, Unterleibsentzündungen, Wirbelsäule.
+              </p>
+            </div>
+            <button class="btn btn-outline read-article-btn" data-article="pujiu" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+          </div>
         </div>
+
+        <!-- Device 4: Thermal Metabolic Cabin -->
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
+          <div class="card-img-wrapper" style="height: 200px; overflow: hidden; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+            <img src="images/tech_spectrum_1779274437024.png" alt="Thermal Metabolic Cabin" class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem;">
+            <div>
+              <h3 class="title-small" data-i18n="device-4-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Thermo-Stoffwechselkabine</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-4-desc">
+                Ganzkörper-Spektralkabine mit Farbinfrarot, Sauerstoffanreicherung und negativen Ionen zur Zellreinigung.
+              </p>
+              <p style="font-size: 0.85rem; color: var(--terracotta); font-weight: 500; margin-top: 1rem; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem;" data-i18n="device-4-uses">
+                Primäre Anwendung: Sportliche Regeneration, Fortpflanzungsgesundheit, chronische Leiden, metabolische Entgiftung.
+              </p>
+            </div>
+            <button class="btn btn-outline read-article-btn" data-article="spectrumcabin" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+          </div>
+        </div>
+
+        <!-- Device 5: Micro-Photon Moxibustion -->
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
+          <div class="card-img-wrapper" style="height: 200px; overflow: hidden; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+            <img src="images/tech_electroacupuncture_1779274420298.png" alt="Micro-Photon Moxibustion" class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem;">
+            <div>
+              <h3 class="title-small" data-i18n="device-5-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Mikro-Photonen-Moxibustion</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-5-desc">
+                Lokalisiertes Spektral-Bestrahlungsgerät (560-1400 nm) zur tiefenwirksamen Entzündungshemmung (7-10 cm).
+              </p>
+              <p style="font-size: 0.85rem; color: var(--terracotta); font-weight: 500; margin-top: 1rem; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem;" data-i18n="device-5-uses">
+                Primäre Anwendung: Entzündungen & Schmerz, Gelenkschmerz, Hautregeneration, kosmetische Zwecke, Arthritis, Sportverletzungen.
+              </p>
+            </div>
+            <button class="btn btn-outline read-article-btn" data-article="spectrumradiator" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -349,7 +422,7 @@
       <div class="grid-3" style="margin-bottom: 5rem; align-items: stretch;">
         <!-- 1-day Shenzhen program -->
         <div class="card" style="display: flex; flex-direction: column;">
-          <div class="card-img-wrapper">
+          <div class="card-img-wrapper" style="height: 280px;">
             <img src="images/shenzhen_skyline.jpg" alt="Shenzhen City Skyline" class="card-img" style="object-fit: cover;">
           </div>
           <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
@@ -369,7 +442,7 @@
 
         <!-- 10-day training -->
         <div class="card" style="display: flex; flex-direction: column;">
-          <div class="card-img-wrapper">
+          <div class="card-img-wrapper" style="height: 280px;">
             <img src="images/tcm_training_vibe.jpg" alt="TCM Training Retreat Vibe" class="card-img" style="object-fit: cover;">
           </div>
           <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
@@ -383,7 +456,7 @@
             <div style="margin-top: 2rem; display: flex; gap: 0.5rem; justify-content: space-between; align-items: center; flex-wrap: wrap; width: 100%;">
               <span style="font-weight: 600; color: var(--terracotta);" data-i18n="retreat-10day-price">Ab €3.900,- (Frühbucher)</span>
               <div style="display: flex; gap: 0.5rem;">
-                <a href="https://hongdao-tcm.clinic" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; border-color: var(--terracotta); color: var(--terracotta);" data-i18n="retreat-10day-wix-link">Details auf Wix</a>
+                <a href="https://hongdao-tcm.clinic" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; border-color: var(--terracotta); color: var(--terracotta);" data-i18n="retreat-10day-wix-link">Details ansehen</a>
                 <a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Jetzt bewerben</a>
               </div>
             </div>
@@ -392,8 +465,8 @@
         
         <!-- Endometriose program card -->
         <div class="card" style="display: flex; flex-direction: column;">
-          <div class="card-img-wrapper">
-            <img src="images/mountain_herbs_womb.jpg" alt="Traditional Herbal Foraging for Women's Health & Womb Care" class="card-img" style="object-fit: cover;">
+          <div class="card-img-wrapper" style="height: 280px; background-color: #fcecdd; display: flex; align-items: center; justify-content: center;">
+            <img src="images/endo_cartoon.jpg" alt="Endometriosis Pathway" class="card-img" style="object-fit: contain; width: 100%; height: 100%;">
           </div>
           <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
@@ -406,14 +479,12 @@
             <div style="margin-top: 2rem; display: flex; gap: 0.5rem; justify-content: space-between; align-items: center; flex-wrap: wrap; width: 100%;">
               <span style="font-weight: 600; color: var(--terracotta);" data-i18n="endo-price">Kostenbeitrag auf Anfrage</span>
               <div style="display: flex; gap: 0.5rem;">
-                <a href="endometriosis.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; border-color: var(--terracotta); color: var(--terracotta);" data-i18n="retreat-10day-wix-link">Details ansehen</a>
+                <a href="endometriosis.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; border-color: var(--terracotta); color: var(--terracotta);" data-i18n="endo-details-link">Details ansehen</a>
                 <a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Jetzt bewerben</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
       </div>
     </div>
   </section>
@@ -454,6 +525,7 @@
             <span class="gallery-item-subtitle" data-i18n="gallery-item-lecture-badge">Theorie / Lecture</span>
             <h4 class="gallery-item-title" data-i18n="gallery-item-lecture-title">Pulsdiagnose</h4>
           </div>
+        </div>
         <div class="gallery-item" data-img="images/whatsapp_imports/nanjing/1779966395.jpeg">
             <img src="images/whatsapp_imports/nanjing/1779966395.jpeg" alt="Retreat Image 2">
             <div class="gallery-item-overlay">
@@ -818,7 +890,7 @@
             <p><strong>E-Mail:</strong> nanjing.deng18@gmail.com</p>
             <p><strong>Instagram:</strong> <a href="https://instagram.com/hongdao_tcm_clinic" target="_blank">@hongdao_tcm_clinic</a></p>
             <p style="margin-top: 1rem;"><strong>Klinikadresse:</strong><br>Hong Dao Klinik (鸿道中医)<br>Nanhai Dadao 1019, Nanshan District<br>Shenzhen, China<br><em>(20m vom Metro-Ausgang G der Station „Seaworld")</em></p>
-            <p><strong>Telefon:</strong> +86 182 9574 6343</p>
+            <p><strong>Telefon/WhatsApp:</strong> +52 984 140 8335</p>
             
             <div style="margin-top: 1.5rem; background: var(--bg-cream-light); padding: 1rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.05);">
               <p style="font-weight: 600; margin-bottom: 1rem;">Direkter Kontakt via WeChat</p>
@@ -966,7 +1038,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Hong Dao TCM Clinic (宏道中医). All rights reserved.</p>
+        <p>&copy; 2026 Hong Dao TCM Clinic (弘道中医). All rights reserved.</p>
         <div class="footer-bottom-links">
           <a href="#impressum" class="read-article-btn" data-article="impressum" data-i18n="footer-impressum">Impressum</a>
           <a href="#privacy" class="read-article-btn" data-article="privacy" data-i18n="footer-privacy">Datenschutz</a>
@@ -1037,7 +1109,7 @@
             </div>
             <div>
               <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-1-name">Infrarot-Thermografie</h4>
-              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-1-long-desc">
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="device-1-desc">
                 Visualisiert Entzündungsmuster, Durchblutungsverhältnisse und Temperaturverteilungen entlang der Meridiane. Ermöglicht eine objektive, strahlungsfreie Verlaufskontrolle chronischer Entzündungen und Schmerzsyndrome.
               </p>
               <button class="btn btn-outline read-article-btn" data-article="infrared" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="btn-read-article">Artikel lesen</button>
@@ -1050,8 +1122,8 @@
               <img src="images/tech_bioresonance_1779274403035.png" alt="Bian Stone Frequenzscanner" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div>
-              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="tech-device-2-title">Bian-Stein Mittelfrequenz-Elektrotherapie</h4>
-              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-2-long-desc">
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-2-name">Bian-Stein Mittelfrequenz-Elektrotherapie</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="device-2-desc">
                 Verbindet Akupressur-Punkte mit gezielten Frequenzen zur Anregung des Zellstoffwechsels und zur Entlastung des Muskel-Skelett-Systems. Stimuliert blockierte Leitbahnen (Meridiane) mittels biologischer Frequenzen.
               </p>
               <button class="btn btn-outline read-article-btn" data-article="bianstone" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="btn-read-article">Artikel lesen</button>
@@ -1064,8 +1136,8 @@
               <img src="images/tech_moxibustion_1779274453495.png" alt="Großflächen-Moxibustion" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div>
-              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="tech-device-3-title">Großflächen-Moxibustion (铺灸 - Pu Jiu)</h4>
-              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-3-long-desc">
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-3-name">Großflächen-Moxibustion (铺灸 - Pu Jiu)</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="device-3-desc">
                 Eine Wärmetherapie auf großen Körperflächen (wie dem Rücken), bei der Beifußkraut gezielt verbrannt wird, um Kälte aus den Leitbahnen zu vertreiben, die Yang-Energie zu stärken und das Immunsystem zu regulieren.
               </p>
               <button class="btn btn-outline read-article-btn" data-article="pujiu" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="btn-read-article">Artikel lesen</button>
@@ -1078,8 +1150,8 @@
               <img src="images/tech_spectrum_1779274437024.png" alt="Spektral-Wärmekabine" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div>
-              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="tech-device-4-title">Ganzkörper-Spektralkabine</h4>
-              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-4-long-desc">
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-4-name">Ganzkörper-Spektralkabine</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="device-4-desc">
                 Nutzt ein breites elektromagnetisches Frequenzspektrum zur Erwärmung des Gewebes. Fördert die periphere Mikrozirkulation, unterstützt die zelluläre Ausleitung und lindert chronische Muskelverspannungen.
               </p>
               <button class="btn btn-outline read-article-btn" data-article="spectrumcabin" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="btn-read-article">Artikel lesen</button>
@@ -1092,8 +1164,8 @@
               <img src="images/tech_electroacupuncture_1779274420298.png" alt="Spektral-Bestrahlungsgerät" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div>
-              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="tech-device-5-title">Lokalisiertes Spektral-Bestrahlungsgerät</h4>
-              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="tech-device-5-long-desc">
+              <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-5-name">Lokalisiertes Spektral-Bestrahlungsgerät</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="device-5-desc">
                 Gezielter Spektralstrahler zur lokalen Bestrahlung. Fördert die Geweberegeneration, regt lokale Stoffwechselprozesse an und wird komplementär zu Akupunktur- und Moxa-Sitzungen eingesetzt.
               </p>
               <button class="btn btn-outline read-article-btn" data-article="spectrumradiator" style="padding: 0.4rem 1.2rem; font-size: 0.8rem;" data-i18n="btn-read-article">Artikel lesen</button>
@@ -1121,12 +1193,12 @@
 
   <!-- Article Modal -->
   <div id="article-modal" class="modal-overlay">
-    <div class="modal-window" style="max-width: 800px;">
+    <div class="modal-window">
       <div class="modal-header" style="background-color: var(--terracotta); color: white; padding: 1.5rem 2.5rem; display: flex; justify-content: space-between; align-items: center;">
         <h3 id="article-modal-title" style="margin: 0; font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; color: white;">Article Title</h3>
         <button id="article-modal-close" class="modal-close" style="color: white; opacity: 0.8; background: none; border: none; font-size: 2rem; cursor: pointer;">&times;</button>
       </div>
-      <div id="article-modal-body" class="modal-body" style="padding: 2.5rem; max-height: 75vh; overflow-y: auto; color: var(--text-dark); line-height: 1.8; font-size: 1rem; background-color: var(--bg-cream-light);">
+      <div id="article-modal-body" class="modal-body">
         <!-- Dynamic content will be loaded here -->
       </div>
     </div>

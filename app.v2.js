@@ -67,12 +67,22 @@ const translations = {
     // Modern Devices
     "devices-title": "Advanced Health Maintenance Technology",
     "devices-subtitle": "Traditional diagnostic wisdom validated by high-end modern devices.",
-    "device-1-name": "Infrared Thermal Imaging",
-    "device-1-desc": "Maps body inflammation, circulation blockages, and meridian temperature patterns.",
-    "device-2-name": "Bioresonance Frequency Scanner",
-    "device-2-desc": "Analyzes cell energy fields to identify allergies, environmental toxins, and organ weakness.",
-    "device-3-name": "Electro-Acupuncture Stimulator",
-    "device-3-desc": "Delivers gentle microcurrents to traditional acupuncture points to double healing speed.",
+    "device-1-name": "Infrared Body Scan",
+    "device-1-desc": "Visualizes inflammation, circulation blockages, and energy paths using 5th gen HD thermal imaging.",
+    "device-1-uses": "Primary uses: Spine & neck disorders, metabolic health, inflammation tracking, blood circulation.",
+    "device-2-name": "Bian Hu Bioelectric Therapy",
+    "device-2-desc": "Combines heated Bian stone pot massage with low & medium frequency bioelectric regulation.",
+    "device-2-uses": "Primary uses: Shoulder pain, cervical vertebra, intervertebral disc herniation, gastrointestinal conditioning, endometriosis (PCOS/PMOS).",
+    "device-3-name": "Herbal Thermal Moxibustion",
+    "device-3-desc": "Patented down-burning moxibustion box for large-scale spine warming with ginger and herbs.",
+    "device-3-uses": "Primary uses: Cold womb & dysmenorrhea, cold waist & knees, gynecological inflammation, spine disorders.",
+    "device-4-name": "Thermal Metabolic Cabin",
+    "device-4-desc": "Whole-body spectrum cabin using far-infrared, oxygen enrichment, and negative ions for cellular health.",
+    "device-4-uses": "Primary uses: Athletic recovery, reproductive health, chronic disease conditioning, metabolic detox.",
+    "device-5-name": "Micro-Photon Moxibustion",
+    "device-5-desc": "Cantilever spectrum radiator emitting 560-1400nm wavelengths to penetrate 7-10cm deep into tissue.",
+    "device-5-uses": "Primary uses: Anti-inflammatory & pain relief, joint pain, post-burn skin repair, cosmetic treatments, arthritis, sports injuries.",
+    "endo-details-link": "View Details",
 
     // Programs & Endometriosis calculator
     "programs-title": "Health Programs & Training",
@@ -297,12 +307,22 @@ const translations = {
     // Modern Devices
     "devices-title": "Technologie zur Gesundheitspflege",
     "devices-subtitle": "Traditionelle TCM-Diagnostik, präzisiert durch modernste klinische Geräte.",
-    "device-1-name": "Infrarot-Thermografie",
-    "device-1-desc": "Visualisiert Entzündungen, Durchblutungsstörungen und energetische Blockaden in den Meridianen.",
-    "device-2-name": "Bioresonanz-Frequenzscanner",
-    "device-2-desc": "Misst elektromagnetische Schwingungen der Zellen zur Erkennung von Belastungen, Toxinen und Organschwächen.",
-    "device-3-name": "Elektro-Akupunktur-Gerät",
-    "device-3-desc": "Unterstützt die klassische Nadelung durch präzise Mikroströme zur Anregung der Nervenregeneration.",
+    "device-1-name": "Infrarot-Körperscan",
+    "device-1-desc": "Visualisiert Entzündungen, Durchblutungsverstörungen und energetische Meridianblockaden mittels HD-Thermografie.",
+    "device-1-uses": "Primäre Anwendung: Lenden- und Halswirbelsäule, Durchblutung, Entzündungsscreening, Stoffwechsel.",
+    "device-2-name": "Bian-Hu Bioelektrizitäts-Therapie",
+    "device-2-desc": "Verbindet erwärmten Bian-Stein-Massage-Kopf mit bioelektrischer Mittelfrequenz-Regulation.",
+    "device-2-uses": "Primäre Anwendung: Schulterschmerzen, HWS-Syndrom, Bandscheibenvorfall, Magen-Darm-Störungen, Endometriose (PCOS/PMOS).",
+    "device-3-name": "Kräuter-Wärme-Moxibustion",
+    "device-3-desc": "Patentiertes, raucharmes Großflächen-Wärme-Moxibustion-System (Pu Jiu) für Wirbelsäule und Gelenke.",
+    "device-3-uses": "Primäre Anwendung: Regelschmerzen & kalte Gebärmutter, Lenden- & Knieschmerz, Unterleibsentzündungen, Wirbelsäule.",
+    "device-4-name": "Thermo-Stoffwechselkabine",
+    "device-4-desc": "Ganzkörper-Spektralkabine mit Farbinfrarot, Sauerstoffanreicherung und negativen Ionen zur Zellreinigung.",
+    "device-4-uses": "Primäre Anwendung: Sportliche Regeneration, Fortpflanzungsgesundheit, chronische Leiden, metabolische Entgiftung.",
+    "device-5-name": "Mikro-Photonen-Moxibustion",
+    "device-5-desc": "Lokalisiertes Spektral-Bestrahlungsgerät (560-1400 nm) zur tiefenwirksamen Entzündungshemmung (7-10 cm).",
+    "device-5-uses": "Primäre Anwendung: Entzündungen & Schmerz, Gelenkschmerz, Hautregeneration, kosmetische Zwecke, Arthritis, Sportverletzungen.",
+    "endo-details-link": "Details ansehen",
 
     // Programs & Endometriosis calculator
     "programs-title": "Gesundheitsprogramme & Kurse",
@@ -2075,154 +2095,439 @@ const articlesContent = {
   },
   infrared: {
     de: {
-      title: "Infrarot-Thermografie – Visualisierung des Energieflusses (Qi)",
+      title: "Infrarot-Körperscan (Medizinische Infrarot-Thermographie)",
       body: `
-        <p>Die <strong>Infrarot-Thermografie</strong> ist ein hochmodernes, strahlungsfreies Diagnoseverfahren, das Infrarotstrahlungsintensitäten des menschlichen Körpers erfasst und visualisiert. In der TCM nutzen wir dieses Verfahren, um Temperaturunterschiede und damit verbundene Blockaden oder Entzündungen entlang der Meridiane sichtbar zu machen.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Funktionsweise & TCM-Integration</h4>
-        <p>Aus Sicht der TCM spiegeln Temperaturabweichungen den Zustand von Yin, Yang, Qi und Blut wider. Entzündungen zeigen sich als lokale Hitze-Muster (Yang-Fülle), während Durchblutungsstörungen oder Kälte-Stagnationen (Yin-Fülle / Qi-Mangel) als kalte Zonen dargestellt werden. Dies erlaubt eine präzise Lokalisierung von Störfeldern noch vor dem Auftreten struktureller Gewebeschäden.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Therapeutischer Nutzen</h4>
-        <ul class="feature-list">
-          <li>Objektive Erfolgskontrolle von Akupunktur- und Kräutertherapien durch Vorher-Nachher-Vergleich der Wärmebilder.</li>
-          <li>Lokalisierung von myofaszialen Triggerpunkten und versteckten Entzündungsherden im Körper.</li>
-          <li>100 % sicher, berührungslos und komplett strahlungsfrei – auch für sensible Patient:innen geeignet.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">Das <strong>Intelligente TMT-Infrarot-Körperscansystem (Medizinische Infrarot-Thermographie)</strong> ist ein hochmodernes, berührungsloses und komplett strahlungsfreies Diagnoseverfahren. Es erfasst und visualisiert die natürliche Infrarot-Wärmeabstrahlung des menschlichen Körpers mit höchster Präzision. In unserer Klinik nutzen wir diese funktionelle Bildgebung, um Entzündungen, Durchblutungsstörungen und energetische Blockaden entlang der Meridiane und Zang-Fu-Organe objektiv sichtbar zu machen.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Wirkprinzip & TCM-Integration</h4>
+          <p>Aus Sicht der TCM spiegeln Temperaturabweichungen den Zustand von Yin, Yang, Qi und Blut wider. Entzündliche Prozesse und Gewebestauungen zeigen sich als lokale Hitze-Muster (exzessives Yang / Hitze-Syndrom). Durchblutungsstörungen, chronisch-degenerative Prozesse oder energetische Blockaden (Qi-Mangel / Kälte-Stagnation) stellen sich hingegen als kalte Zonen dar. Dies ermöglicht es uns, thermische Anomalien und Störungen im Fluss des Qi zu lokalisieren, noch bevor strukturelle Gewebeschäden im MRT oder Röntgen sichtbar werden.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Anwendungsbereiche</h4>
+          <p>Der Infrarot-Körperscan wird gezielt für folgende Beschwerdebilder eingesetzt:</p>
+          <ul class="feature-list">
+            <li><strong>Lenden- und Halswirbelsäule:</strong> Präzise Lokalisierung von myofaszialen Triggerpunkten, Bandscheibenreizungen und muskulären Dysbalancen.</li>
+            <li><strong>Durchblutungsstörungen & Varizen:</strong> Visualisierung von venösen Stauungen, peripherer Mikrozirkulationsschwäche und Lymphödemen.</li>
+            <li><strong>Entzündungsscreening & Chronische Leiden:</strong> Früherkennung subklinischer Entzündungsherde, Gelenkarthritis, Schilddrüsenüberaktivität (Knötchen) oder Brustdrüsengewebeveränderungen (Hyperplasie).</li>
+            <li><strong>Stoffwechsel & TCM-Syndrome:</strong> Diagnose von Milz-Magen-Kälte (脾胃虚寒), Herz-Yang-Mangel (心阳虚), Hitze in den fünf Herzen (五心烦热), Feuchte-Hitze im Unterleib (下焦湿热), Leber-Yang-Aufstieg (肝阳上亢) und Leber-Qi-Stagnation (肝气郁结).</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Herausragende Medizintechnik (TMT-9000S Premium)</h4>
+          <p>Unser High-End-System <strong>TMT-9000S (Premium)</strong> zeichnet sich durch modernste technologische Standards aus:</p>
+          <ul class="feature-list">
+            <li><strong>5. Generation Infrarot-Detektor:</strong> Nutzt den neuesten ungekühlten HD-Infrarotsensor des französischen Marktführers ULIS mit einer effektiven Auflösung von 1024*768 Pixeln (ca. 786.000 Messpunkte). Dies ermöglicht eine 16-fache digitale Vergrößerung ohne Bildqualitätsverlust bei einem Aufnahmeabstand von 1,8 Metern.</li>
+            <li><strong>Lokaler KI-Diagnoseserver:</strong> Die Auswertung erfolgt über einen klinikinternen, isolierten KI-Server. Das schützt Ihre sensiblen medizinischen Daten zu 100 %, da keine Internetverbindung für die AI-gestützte Thermogramm-Analyse und Berichterstellung benötigt wird.</li>
+            <li><strong>Präzise 3D-Motorisierung:</strong> Die Kameraeinheit verfügt über ein dreidimensionales, elektrisches Bewegungssystem für stufenlose Höhenverstellung, Neigung und Schwenkung. Dadurch können Ganzkörper-Scans reproduzierbar und fehlerfrei durchgeführt werden.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TMT-Gerätefamilie in der Übersicht</h4>
+          <p>Das TMT-Portfolio umfasst neben dem <strong>TMT-9000S</strong> (Premium-Ausführung) auch das <strong>TMT-9000</strong> (Professional) und <strong>TMT-9000B</strong> (Praxis-Modell). Für den flexiblen klinischen Einsatz stehen das <strong>TMT-9000P</strong> (Mobiles Stativsystem) sowie das handliche <strong>TMT-7</strong> (tragbarer Infrarotscanner) zur Verfügung. Letzteres unterstützt kabellose Bildübertragungen und ist ideal für den mobilen Einsatz direkt am Behandlungsbett geeignet.</p>
+        </div>
       `
     },
     en: {
-      title: "Infrared Thermography – Visualizing the Flow of Qi",
+      title: "Infrared Body Scan (Medical Infrared Thermography)",
       body: `
-        <p><strong>Infrared Thermography</strong> is a state-of-the-art, radiation-free diagnostic imaging method that records and visualizes the body's natural thermal emissions. In TCM, we use this technology to map temperature gradients and detect energy blocks or inflammation along the meridian pathways.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">How it Works & TCM Integration</h4>
-        <p>In TCM, temperature variations reflect the balance of Yin, Yang, Qi, and Blood. Inflammatory processes appear as hot zones (excess Yang), whereas blood stagnation or cold blockages (excess Yin / Qi deficiency) show up as cold areas. This allows us to locate dysfunction in the meridian pathways before structural tissue damage occurs.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Benefits</h4>
-        <ul class="feature-list">
-          <li>Objective visualization of therapy progress via thermal baseline and follow-up comparisons.</li>
-          <li>Accurate identification of myofascial trigger points and hidden subclinical inflammation.</li>
-          <li>Completely safe, non-contact, and non-invasive – suitable for all patient groups.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">The <strong>Intelligent TMT Medical Infrared Body Scan (Medical Infrared Thermography)</strong> is a state-of-the-art, non-contact, and completely radiation-free functional imaging technology. It captures and visualizes the body's natural far-infrared thermal emissions. In our clinic, we use this technology to map microvascular blood flow and detect inflammation, circulation blockages, and energetic stagnation along the meridians and Zang-Fu organs.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">How it Works & TCM Integration</h4>
+          <p>In traditional Chinese medicine, temperature variations serve as a direct reflection of Yin, Yang, Qi, and Blood status. Inflammatory processes and local hyperthermia appear as hot zones (excessive Yang / Heat syndrome). Conversely, circulation failures, degenerated tissue, or structural energy blocks (Qi/Yang deficiency or Cold stagnation) manifest as cold areas. This allows us to locate microvascular thermal anomalies and imbalances in the flow of Qi before physical structural changes are detectable on X-ray or MRI.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Indications & Clinical Applications</h4>
+          <p>The Infrared Body Scan is utilized for the diagnosis and monitoring of various conditions:</p>
+          <ul class="feature-list">
+            <li><strong>Lumbar & Cervical Spine:</strong> Identifies nerve root compression, myofascial trigger points, localized muscle spasms, and structural misalignment.</li>
+            <li><strong>Circulation & Varicose Veins:</strong> Visualizes vascular stasis, deep venous pooling, and peripheral microcirculation deficits.</li>
+            <li><strong>Inflammation Screening:</strong> Safe, non-invasive assessment of subclinical arthritis, joint inflammation, thyroid nodules, or breast tissue hyperplasia.</li>
+            <li><strong>Metabolic & TCM Syndromes:</strong> Identifies Spleen-Stomach deficiency cold (脾胃虚寒), Heart Yang deficiency (心阳虚), Five Hearts Heat (五心烦热), Lower Jiao damp-heat (下焦湿热), Liver Yang rising (肝阳上亢), and Liver Qi stagnation (肝气郁结).</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Advanced Technology (TMT-9000S Premium)</h4>
+          <p>Our premium medical thermograph <strong>TMT-9000S (Premium)</strong> is engineered to meet the highest clinical specifications:</p>
+          <ul class="feature-list">
+            <li><strong>5th Gen HD Detector:</strong> Employs the latest uncooled infrared sensor from the French manufacturer ULIS, achieving an effective resolution of 1024*768 pixels (~786,000 thermal data points). It supports a lossless 16x digital zoom at a distance of 1.8 meters for precise anatomical mapping.</li>
+            <li><strong>Local AI Diagnostics Server:</strong> Features a private local network server to process imaging data. AI-assisted analysis and report generation run entirely offline, ensuring 100% patient data privacy.</li>
+            <li><strong>motorized 3D Camera Stand:</strong> Features automated height adjustment, panning, and tilting, allowing for rapid, reproducible full-body scans.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">System Models & Configurations</h4>
+          <p>The TMT medical thermography product line includes the <strong>TMT-9000S</strong> (Premium), <strong>TMT-9000</strong> (Professional), and <strong>TMT-9000B</strong> (Practical). For mobile clinical needs, we deploy the <strong>TMT-9000P</strong> (Mobile Cart System) and the highly portable <strong>TMT-7</strong> (handheld scanner), which features built-in wireless connectivity for real-time diagnostic imaging directly in the patient room.</p>
+        </div>
       `
     }
   },
   bianstone: {
     de: {
-      title: "Bian-Stein Mittelfrequenz-Therapie – Energetische Meridianregulation",
+      title: "Bian-Hu Bioelektrizitäts-Therapie (TMT-ZP-100)",
       body: `
-        <p>Die <strong>Bian-Stein-Therapie</strong> kombiniert die therapeutischen Eigenschaften natürlicher Bian-Steine mit moderner Mittelfrequenz-Elektrotherapie. In der TCM wird Bian-Stein seit Jahrtausenden geschätzt, da er bei Erwärmung heilsame Ultraschallimpulse und Infrarotstrahlung aussendet.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Wirkungsweise</h4>
-        <p>Durch die Verbindung des Minerals mit sanften elektrischen Mittelfrequenzen dringen die Vibrationen tief in das Fasziengewebe ein. Dies regt den zellulären Stoffwechsel an, fördert den Abtransport von Entzündungsmediatoren und löst hartnäckige Muskelverspannungen.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Indikationsbereiche</h4>
-        <ul class="feature-list">
-          <li>Chronische Schmerzen des Bewegungsapparates (Rückenschmerzen, Gelenkarthrose).</li>
-          <li>Meridian-Blockaden zur Entstauung des lymphatischen und venösen Flusses.</li>
-          <li>Unterstützung der Regeneration bei Lähmungserscheinungen und Taubheitsgefühlen.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">Die <strong>Bian-Hu Bioelektrizitäts-Therapie (Modell TMT-ZP-100)</strong> verbindet das jahrtausendealte Wissen der traditionellen chinesischen Steintherapie (砭石 - Bian Shi) mit moderner physikalischer Mittelfrequenz-Elektrotherapie. Durch das Zusammenspiel von biologischen Frequenzen und thermischer Energie dringen die therapeutischen Reize tief in die Gewebeschichten ein, regulieren das Nervensystem und lösen hartnäckige Blockaden.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Wirkmechanismus & Biophysik</h4>
+          <p>Das Gerät moduliert mittelfrequente (2,5 kHz und 4,5 kHz) und niederfrequente biologische Wechselströme. Diese dringen tief in Muskeln, Faszien, Nerven und Meridiane ein. Gleichzeitig emittieren die erhitzten Bian-Stein-Aufsätze natürliches Infrarotlicht und hochfrequente Ultraschallimpulse. Diese Kombination erweitert die Kapillargefäße, regt die ATP-Zellenergieproduktion an, beschleunigt den Lymphabfluss und baut Entzündungsmediatoren ab.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Schwerpunkte ( WhatsApp & E-Mail Vorgaben )</h4>
+          <p>Die Bian-Hu-Therapie wird primär bei folgenden Krankheitsbildern eingesetzt:</p>
+          <ul class="feature-list">
+            <li><strong>Schulterschmerzen & HWS-Syndrom:</strong> Löst tiefsitzende Muskelverspannungen, entlastet die Halswirbelsäule und lindert ausstrahlende Schmerzen.</li>
+            <li><strong>Bandscheibenvorfall:</strong> Reduziert die Nervenwurzelkompression, lindert Rückenschmerzen und fördert die Regeneration des Bindegewebes.</li>
+            <li><strong>Magen-Darm-Regulierung (Gastrointestinal):</strong> Reguliert die Peristaltik, hilft bei chronischer Verstopfung, Blähbauch und Reizdarmsyndrom durch sanfte Frequenzstimulation der Bauchorgane.</li>
+            <li><strong>Hormonelle Balance & Frauengesundheit:</strong> Spezifische Frequenzen unterstützen die Durchblutung des Beckenraums bei gynäkologischen Beschwerden wie <strong>Endometriose (PCOS/PMOS)</strong>.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Weitere medizinische & präventive Anwendungen</h4>
+          <p>Darüber hinaus eignet sich das System hervorragend bei Ischialgie, Prellungen, rheumatoider Arthritis, entzündlichen Beckenerkrankungen (Pelvic Inflammatory Disease) und Eileiterentzündungen (Adnexitis). Im Wellnessbereich wird es zur Meridianöffnung, zum raschen Laktatabbau nach dem Sport, zum Muskelaufbau (passive Kontraktion) und zur vegetativen Entspannung genutzt.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Einzigartige Geräteeigenschaften & Technologie</h4>
+          <ul class="feature-list">
+            <li><strong>Wechselbare Applikatoren:</strong>
+              <ul>
+                <li><strong>Beheizbare Bian-Stein-Therapie-Köpfe (砭石壶):</strong> Entwickelt für die dynamische Massage entlang von Meridianen und Muskelgruppen. Durch die Integration von Terahertz-Mischkristallen wird der Stromfluss sanft gepuffert. Dies verhindert unangenehme Nadelstiche oder schmerzhafte Muskelkrämpfe auf der Haut und ermöglicht eine tiefe, schmerzfreie Wirkung.</li>
+                <li><strong>Beheizbare Silikon-Plattenelektroden:</strong> Für die stationäre, punktuelle Behandlung von Akupunkturpunkten und für die Iontophorese (schmerzfreies Einbringen von Heilkräuterextrakten mittels Stroms).</li>
+              </ul>
+            </li>
+            <li><strong>Smart-Steuerung:</strong> Ausgestattet mit einem 21,5-Zoll-Touchscreen und intelligenter Sprachsteuerung für den freihändigen Betrieb während der Behandlung.</li>
+            <li><strong>43 Therapieprogramme:</strong> Bietet optimierte Stromformen (Sinuswelle für Massagegefühl, Exponentialwelle für Schröpfgefühl, Dreieckswelle für Akupunkturreiz) zur Anpassung an das Gewebe.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Technische Spezifikationen</h4>
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Modell</td><td style="padding: 0.5rem;">TMT-ZP-100</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Trägerfrequenzen</td><td style="padding: 0.5rem;">2,5 kHz und 4,5 kHz (Abweichung ±10%)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Modulationsfrequenz</td><td style="padding: 0.5rem;">0 Hz bis 150 Hz</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Max. Ausgangsstrom</td><td style="padding: 0.5rem;">&le; 80 mA (bei 500 Ohm Last)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Heiztemperatur</td><td style="padding: 0.5rem;">40 °C &plusmn; 5 °C (regelbar, zweistufiger Überhitzungsschutz)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Ausgänge</td><td style="padding: 0.5rem;">2 unabhängige Kanäle (Simultanbetrieb von Stein- und Plattenelektroden)</td></tr>
+          </table>
+        </div>
       `
     },
     en: {
-      title: "Bian-Stone Electro-Frequency Therapy – Energetic Meridian Regulation",
+      title: "Bian-Hu Bioelectric Therapy (TMT-ZP-100)",
       body: `
-        <p><strong>Bian-Stone Therapy</strong> integrates the healing resonance of natural Bian stone with targeted medium-frequency electro-stimulation. Ancient TCM classics document Bian stone for its ability to generate high-frequency ultrasonic waves and far-infrared radiation when warmed.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Mechanisms of Action</h4>
-        <p>By pairing this therapeutic mineral with electrical currents, biological frequencies penetrate deep into the myofascial layers. This stimulates cellular ATP production, accelerates the drainage of metabolic waste, and releases chronic muscular spasms.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Key Indications</h4>
-        <ul class="feature-list">
-          <li>Chronic musculoskeletal conditions (lower back pain, osteoarthritis, joint stiffness).</li>
-          <li>Meridian stagnation affecting lymphatic circulation and cardiovascular return.</li>
-          <li>Nerve rehabilitation to restore micro-sensation and motor coordination.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">The <strong>Bian-Hu Bioelectric Therapy (Model TMT-ZP-100)</strong> integrates the therapeutic properties of natural Bian stone (砭石) with advanced medium-frequency electrotherapy. By combining biological frequency waves with heated minerals, it delivers deep thermal and bioelectric currents to muscle fibers, fascial sheets, nerve endings, and meridian pathways, resolving chronic pain and systemic stagnation.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Mechanism & Biophysics</h4>
+          <p>This system modulates medium-frequency (2.5 kHz and 4.5 kHz) carrier waves with low-frequency biological impulses. When activated, the heated Bian stone treatment heads emit far-infrared energy and high-frequency ultrasonic waves. This bio-resonant action dilates capillary beds, accelerates cellular ATP synthesis, improves local microcirculation, and assists in the lymphatic drainage of inflammatory cytokines.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Specializations</h4>
+          <p>The Bian-Hu Bioelectric Therapy is primarily indicated for:</p>
+          <ul class="feature-list">
+            <li><strong>Shoulder Pain & Cervical Spine:</strong> Relaxes paraspinal muscles, relieves compression on cervical nerve roots, and increases range of motion.</li>
+            <li><strong>Intervertebral Disc Herniation:</strong> Promotes localized circulation to spinal tissues, reducing nerve inflammation and lower back pain.</li>
+            <li><strong>Gastrointestinal Conditioning:</strong> Restores healthy digestive motility, helping relieve chronic bloating, constipation, and IBS symptoms.</li>
+            <li><strong>Endometriosis & Gynecological Health:</strong> Supports microcirculation in the pelvic cavity, relieving spasms and regulating hormone stagnation in <strong>PCOS/PMOS and Endometriosis</strong>.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Further Applications</h4>
+          <p>This system is also highly effective for treating sciatica, musculoskeletal contusions, rheumatoid arthritis, pelvic inflammatory disease, and annexitis. For general health maintenance, it is used to clear meridians, accelerate lactic acid clearance, perform passive muscle contractions (body toning), and balance autonomic nervous activity.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Hardware Features & Technology</h4>
+          <ul class="feature-list">
+            <li><strong>Dual Treatment Modes:</strong>
+              <ul>
+                <li><strong>Heated Bian-Stone Pot Applicators (砭石电极):</strong> Designed for dynamic massage along meridian pathways. Formulated with terahertz crystals, the electrodes buffer the current flow, preventing uncomfortable electrical shocks and allowing deep, painless tissue penetration.</li>
+                <li><strong>Heated Silicone Pad Electrodes:</strong> Used for static acupoint stimulation and transdermal drug delivery (iontophoresis), facilitating rapid absorption of herbal extracts through the skin.</li>
+              </ul>
+            </li>
+            <li><strong>Smart Interface:</strong> Equipped with a 21.5-inch touch panel and automated voice control for hands-free clinical operation.</li>
+            <li><strong>43 Preset Prescriptions:</strong> Features multiple waveforms (Sine wave for massage feel, Index wave for cupping feel, and Triangle wave for focused acupuncture-like stimulation).</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Technical Parameters</h4>
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Model</td><td style="padding: 0.5rem;">TMT-ZP-100</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Carrier Frequencies</td><td style="padding: 0.5rem;">2.5 kHz and 4.5 kHz (&plusmn;10%)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Modulation Frequency</td><td style="padding: 0.5rem;">0 Hz to 150 Hz</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Max. Output Current</td><td style="padding: 0.5rem;">&le; 80 mA (at 500 &Omega; load)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Output Temperature</td><td style="padding: 0.5rem;">40 °C &plusmn; 5 °C (adjustable, dual over-temp protection)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Ports</td><td style="padding: 0.5rem;">2 independent channels (supporting concurrent pot/pad therapy)</td></tr>
+          </table>
+        </div>
       `
     }
   },
   pujiu: {
     de: {
-      title: "Großflächen-Moxibustion (Pu Jiu) – Vertreibung tiefer Kälte",
+      title: "Kräuter-Wärme-Moxibustion (Großflächen-Moxibustion – Pu Jiu)",
       body: `
-        <p>Die <strong>Rücken-Moxibustion (铺灸 - Pu Jiu)</strong> ist eines der kraftvollsten wärmetherapeutischen Verfahren der traditionellen chinesischen Medizin. Dabei wird eine Kräuterpaste und getrocknetes Beifußkraut (Moxa) großflächig entlang der Wirbelsäule (Du Mai / Lenkergefäß) verbrannt.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Das Prinzip des Du Mai</h4>
-        <p>Das Du Mai (Lenkergefäß) verläuft entlang der Wirbelsäule und wird in der TCM als „Meer aller Yang-Meridiane“ bezeichnet. Durch die intensive, tief eindringende Wärme von Pu Jiu wird das Yang im gesamten Körper gestärkt, das Immunsystem reguliert und chronische Kälte-Stagnation vertrieben.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Effekte</h4>
-        <ul class="feature-list">
-          <li>Tiefenwirksame Vertreibung von Feuchtigkeit und Kälte, ideal bei chronischem Rheuma, Arthrose und Kältegefühl.</li>
-          <li>Stärkung des Nieren-Yang bei chronischer Erschöpfung, Schwäche des Immunsystems und unerfülltem Kinderwunsch.</li>
-          <li>Hormonelle Balance und Schmerzlinderung bei gynäkologischen Leiden wie Endometriose.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">Die <strong>Kräuter-Wärme-Moxibustion (Großflächen-Moxibustion – Pu Jiu)</strong> vereint die traditionelle chinesische Moxa-Therapie (Rücken-Moxibustion, 铺灸) mit modernster Medizin- und Filtertechnologie. Durch das großflächige Verbrennen von reinem Beifußkraut (Moxa) über einer frischen Ingwerschicht (隔姜灸) und einer individuellen TCM-Kräuterpaste (隔药灸) wird dem Körper reine thermische Energie zugeführt, um tiefsitzende pathogenetische Kälte zu vertreiben.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Wirkprinzip: Die Kraft des Du Mai</h4>
+          <p>Das Du Mai (Lenkergefäß) verläuft entlang der Wirbelsäule und gilt in der TCM als das „Meer aller Yang-Meridiane“. Die thermische Energie des brennenden Beifußes in Kombination mit den ätherischen Ölen des Ingwers und der Heilkräuter dringt durch die Haut-, Fett- und Muskelschichten hindurch, um die tieferen Organe und das Knochensystem zu erreichen („穿经透骨“). Dies aktiviert das Abwehr-Qi (Wei Qi), stärkt das Nieren-Yang und stimuliert die körpereigene Abwehr.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Indikationsbereiche & Behandlungsschwerpunkte</h4>
+          <p>Die Pu-Jiu-Moxibustion wird vorrangig bei folgenden Indikationen angewendet:</p>
+          <ul class="feature-list">
+            <li><strong>Regelschmerzen & Kalte Gebärmutter (Dysmenorrhö):</strong> Löst Blut-Stagnationen (血瘀) im Unterleib, wärmt die Gebärmutter und reguliert den hormonellen Zyklus.</li>
+            <li><strong>Lenden- & Knieschmerz:</strong> Lindert chronische Gelenk- und Wirbelsäulenschmerzen, die durch Kälte und Feuchtigkeit (Wind-Kälte-Feuchtigkeit-Bi-Syndrome) verstärkt werden.</li>
+            <li><strong>Gynäkologische Entzündungen:</strong> Reguliert das Immunsystem und hemmt Entzündungsprozesse im Beckenbereich.</li>
+            <li><strong>Hals- und Lendenwirbelsäulen-Erkrankungen:</strong> Wirkt muskelentspannend und schmerzlindernd bei Arthrose, chronischer Erschöpfung und myofaszialen Schmerzen.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">10 Spezifische Behandlungsprotokolle</h4>
+          <p>In unserer Klinik wenden wir zehn bewährte, lokalisierte Moxibustionen an:</p>
+          <ul class="feature-list">
+            <li><strong>Körpervorderseite (正面五灸):</strong>
+              <ul>
+                <li><em>Ren Mai Balance-Moxibustion:</em> Reguliert das Yin-Gefäß, harmonisiert Qi und Blut.</li>
+                <li><em>Zhongwan Magen-Milz-Moxibustion:</em> Stärkt die Verdauung, leitet Feuchtigkeit aus.</li>
+                <li><em>Shenque Darm-Moxibustion:</em> Beseitigt Hitze-Feuchtigkeit im Darmbereich.</li>
+                <li><em>Guanyuan Becken-Moxibustion:</em> Stärkt das Nieren-Yang und wärmt die Gebärmutter.</li>
+                <li><em>Knie-Kälte-Moxibustion:</em> Vertreibt rheumatische Kälte und lindert Gelenkschmerz.</li>
+              </ul>
+            </li>
+            <li><strong>Körperrückseite (背面五灸):</strong>
+              <ul>
+                <li><em>Nacken-Schulter-Moxibustion:</em> Löst Wind-Kälte-Blockaden, hemmt Schmerzen.</li>
+                <li><em>Herz-Lungen-Moxibustion:</em> Unterstützt die Lungenbelüftung und beruhigt den Geist (Shen).</li>
+                <li><em>Lenden-Nieren-Moxibustion:</em> Stärkt die Nierenessenz und festigt den unteren Rücken.</li>
+                <li><em>Sacral Ba Liao Moxibustion (八髎):</em> Reguliert Menstruationsbeschwerden und fördert Beckendurchblutung.</li>
+                <li><em>Du Mai Lebensenergie-Moxibustion:</em> Stärkt die Lebenskraft und das fundamentale Yang.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Technologische Innovation (TMT-JY-68 & JD-3030)</h4>
+          <p>Die Behandlung erfolgt mittels unseres patentierten <strong>TMT-JY-68 Schwebearm-Moxibustionsgeräts</strong>:</p>
+          <ul class="feature-list">
+            <li><strong>Freischwebender Positionierungsarm:</strong> Hält die Applikatoren absolut stabil und berührungslos über dem Körper, um Verbrennungen auszuschließen.</li>
+            <li><strong>Dreifach-Kopf-Koppelung (JD-3030):</strong> Ermöglicht die simultane großflächige Erwärmung (jeder Kopf deckt 144 cm² ab).</li>
+            <li><strong>Integrierter Rauchfilter:</strong> Ein spezieller Drei-Stufen-Filter saugt Rauch und Gerüche direkt am Entstehungsort ab und filtert sie. So bleibt der Raum rauchfrei, während das Heilkraut seine volle Duftwirkung entfaltet.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Technische Parameter</h4>
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Medizinische Registrierung</td><td style="padding: 0.5rem;">湘械注准20222200971 (TMT-JY-68) / 湘械注准20222200970 (JD-3030)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Behandlungstemperatur</td><td style="padding: 0.5rem;">40 °C bis &lt; 70 °C (stufenlos regulierbar)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Heizfläche (einzeln)</td><td style="padding: 0.5rem;">144 cm²</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Brennzeit (Moxa)</td><td style="padding: 0.5rem;">&ge; 30 Minuten pro Moxa-Kartusche (&Phi; 80mm * 20mm)</td></tr>
+          </table>
+        </div>
       `
     },
     en: {
-      title: "Large-Scale Spine Moxibustion (Pu Jiu) – Expelling Deep Cold",
+      title: "Herbal Thermal Moxibustion (Large-Scale Spine Moxibustion – Pu Jiu)",
       body: `
-        <p><strong>Spine Moxibustion (铺灸 - Pu Jiu)</strong> is one of the most powerful warming therapies in classical TCM. Formulated herbal pastes and dry mugwort (moxa) are applied along the spine over the Du Mai (Governor Vessel) and gently burned.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">The Governor Vessel (Du Mai)</h4>
-        <p>The Du Mai meridian runs along the midline of the back and is considered the "Sea of Yang Meridians" in TCM. The deep, sustained thermal stimulation of Pu Jiu activates the body's defensive Qi (Wei Qi), raises metabolic fire, and clears deep constitutional cold.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Efficacy</h4>
-        <ul class="feature-list">
-          <li>Disperses wind-cold-dampness, providing relief in rheumatoid arthritis and joint degeneration.</li>
-          <li>Nourishes Kidney Yang to combat chronic fatigue, adrenal burnout, and low fertility markers.</li>
-          <li>Aids in regulating menstrual cycles and easing gynecological stagnation syndromes like endometriosis.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">The <strong>Herbal Thermal Moxibustion (Large-Scale Spine Moxibustion – Pu Jiu)</strong> is a powerful therapeutic fusion of classical Chinese warming therapy (铺灸 - Pu Jiu) and modern medical smoke filtration systems. By applying dry mugwort (moxa) wool over a layer of fresh ginger (隔姜灸) and customized TCM herbal pastes (隔药灸), it channels deep thermal energy into the body to disperse chronic constitutional cold and stagnation.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Mechanism: The Power of Du Mai</h4>
+          <p>The Governor Vessel (Du Mai) runs along the midline of the back and is considered the "Sea of Yang Meridians." The thermal energy from burning moxa, enriched by the volatile oils of ginger and selected herbs, penetrates deep through the dermal, fat, and myofascial layers to reach bones and inner organs ("穿经透骨"). This stimulation fortifies Kidney Yang, activates defensive energy (Wei Qi), and triggers systemic immune regulation.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Indications & Efficacy</h4>
+          <p>This treatment is highly effective for conditions associated with cold, stagnation, or Qi deficiency:</p>
+          <ul class="feature-list">
+            <li><strong>Cold Womb & Dysmenorrhea:</strong> Resolves pelvic blood stasis (血瘀), provides direct heat to the uterus, and reduces chronic menstrual cramps.</li>
+            <li><strong>Cold waist & Knees:</strong> Dispels Wind-Cold-Dampness from the joints, relieving pain associated with arthritic stiffness and skeletal wear.</li>
+            <li><strong>Gynecological Inflammation:</strong> Modulates immune markers to reduce chronic inflammation of the reproductive tract.</li>
+            <li><strong>Spinal & Musculoskeletal Diseases:</strong> Relaxes paraspinal musculature and targets degenerative disk pain.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">10 Targeted Moxibustion Protocols</h4>
+          <p>We perform ten specialized protocols based on the patient's pathology:</p>
+          <ul class="feature-list">
+            <li><strong>Frontal Applications (正面五灸):</strong>
+              <ul>
+                <li><em>Ren Mai Balance:</em> Regulates the Yin pathways, balancing Qi and Blood flow.</li>
+                <li><em>Zhongwan Spleen-Stomach:</em> Strengthens digestion and expels metabolic dampness.</li>
+                <li><em>Shenque Intestinal:</em> Relieves damp-heat in the gut, supporting microbiome balance.</li>
+                <li><em>Guanyuan Pelvis:</em> Warms the pelvic cavity and nourishes core essence.</li>
+                <li><em>Knee Cold-Dispelling:</em> Restores joint flexibility by expelling cold wind.</li>
+              </ul>
+            </li>
+            <li><strong>Dorsal Applications (背面五灸):</strong>
+              <ul>
+                <li><em>Neck-Shoulder:</em> Disperses cold blockages, easing tension and myofascial stiffness.</li>
+                <li><em>Heart-Lung:</em> Regulates chest Qi, soothing respiration and calming the mind (Shen).</li>
+                <li><em>Lumbar-Kidney:</em> Warms Kidney Yang, strengthening the lower back.</li>
+                <li><em>Sacral Ba Liao (八髎):</em> Stimulates uterine blood supply and regulates menstrual rhythm.</li>
+                <li><em>Du Mai Yuan Qi:</em> Invigorates the body's primary Yang energy and vitality.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Advanced Technology (TMT-JY-68 & JD-3030)</h4>
+          <p>The therapy is delivered via our patented <strong>TMT-JY-68 Self-Suspending Moxibustion Workstation</strong>:</p>
+          <ul class="feature-list">
+            <li><strong>Zero-Gravity Positioning Arm:</strong> Securely positions the treatment heads at an optimal, non-contact distance, completely preventing skin burns.</li>
+            <li><strong>Triple-Box Array (JD-3030):</strong> Connects up to three treatment boxes, covering a massive surface area (144 cm² per box) for deep metabolic warming.</li>
+            <li><strong>Self-Purifying Smoke Extraction:</strong> Built-in multi-stage filtration captures and filters smoke and odors at the source, keeping the treatment room fresh while preserving the herbal aroma of moxa.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Technical Parameters</h4>
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">FDA Registration</td><td style="padding: 0.5rem;">湘械注准20222200971 (TMT-JY-68) / 湘械注准20222200970 (JD-3030)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Treatment Temperature</td><td style="padding: 0.5rem;">40 °C to &lt; 70 °C (adjustable)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Heating Area</td><td style="padding: 0.5rem;">144 cm² per unit</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Moxa Cartridge Size</td><td style="padding: 0.5rem;">&Phi; 80mm * 20mm (burning time &ge; 30 min)</td></tr>
+          </table>
+        </div>
       `
     }
   },
   spectrumcabin: {
     de: {
-      title: "Ganzkörper-Spektralkabine – Systemische Entgiftung",
+      title: "Thermo-Stoffwechselkabine (TMT-RLC-2200)",
       body: `
-        <p>Die <strong>Ganzkörper-Spektralkabine</strong> ist eine moderne Weiterentwicklung der Infrarotsauna, die ein speziell auf die Zellemissionen abgestimmtes bio-elektromagnetisches Wellenspektrum nutzt.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biophysikalische Wirkung</h4>
-        <p>Die Frequenzen regen die Wassermoleküle im Gewebe zur Schwingung an, was zu einer tiefen Erwärmung führt. Dies beschleunigt die Mikrozirkulation, verbessert die Dehnbarkeit der Faszien und fördert die Ausleitung von Zellgiften und Schwermetallen über die Haut.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Einsatzbereiche in unserer Praxis</h4>
-        <ul class="feature-list">
-          <li>Unterstützung bei Entgiftungskuren und Fastenbegleitung.</li>
-          <li>Vegetative Entspannung des Nervensystems zur Stressreduktion.</li>
-          <li>Linderung von chronischen Muskelverspannungen und Schmerzzuständen.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">Die <strong>Thermo-Stoffwechselkabine (Modell TMT-RLC-2200)</strong> ist ein fortschrittliches System zur Ganzkörper-Frequenz- und Wärmetherapie. Im Gegensatz zu herkömmlichen Infrarotsaunen kombiniert dieses geschlossene Spektralsystem drei biophysikalische Heilfaktoren: Farbinfrarot-Spektralstrahlung, kontrollierte Sauerstoffanreicherung und oxidative negative Ionen, um eine tiefgreifende Entgiftung auf zellulärer Ebene anzuregen.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Die drei Säulen der Spektralheilung</h4>
+          <p>Die Kabine baut ein synergetisches Milieu auf, das die Mikrozirkulation und die zelluläre Entgiftung optimiert:</p>
+          <ul class="feature-list">
+            <li><strong>Farbinfrarot-Spektralenergie (4&mu;m - 20&mu;m):</strong> Diese Wellenlängen sind exakt auf das Schwingungsspektrum der menschlichen Körperzellen abgestimmt. Sie regen Wassermoleküle im Gewebe zur Resonanzschwingung an, was zu einer tiefen, gleichmäßigen Gewebeaufheizung führt. Dies steigert den lokalen Blutfluss um 114 % und erleichtert den Zellstoffwechsel.</li>
+            <li><strong>Sauerstoffangereichertes Milieu (O₂):</strong> Erhöht die Sauerstoffsättigung im Blut und unterstützt die mitochondriale Zellatmung. Dies steigert die Herz-Lungen-Toleranz und fördert die systemische Regeneration.</li>
+            <li><strong>Negativ-Ionen-Atmosphäre:</strong> Wirkt als starkes Antioxidans, das freie Radikale im Gewebe neutralisiert, oxidativen Stress reduziert und die zelluläre Selbstheilungsrate maximiert.</li>
+          </ul>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Anwendungen & Studienergebnisse ( E-Mail & WhatsApp Vorgaben )</h4>
+          <p>Die Kabine wird erfolgreich in folgenden therapeutischen Bereichen eingesetzt:</p>
+          <ul class="feature-list">
+            <li><strong>Sportliche Höchstleistung & Regeneration:</strong> Wird von <strong>olympischen Athleten</strong> in nationalen Trainingszentren (wie den Winterolympiade-Forschungszentren) genutzt, um Laktat rasch abzubauen, Muskelermüdung zu reduzieren und Sportverletzungen vorzubeugen.</li>
+            <li><strong>Fortpflanzungsgesundheit & Gynäkologie:</strong> Studien zeigen, dass Ganzkörperwärme (40-42 °C) die Hypothalamus-Hypophysen-Ovarial-Achse (HPO-Achse) anregt, die Follikelreifung unterstützt und hormonelle Schwankungen harmonisiert.李海霞-Professorin an der China Academy of Chinese Medical Sciences wies nach, dass thermischer Stress das zellschützende Hitzeschockprotein HSP70 um das 3,2-fache erhöht, was Keimzellen vor oxidativem Stress schützt. Dies liefert die biochemische Grundlage für die TCM-Formel „Nieren-Yang = Thermische Energie“.</li>
+            <li><strong>Regulierung chronischer Krankheiten:</strong> Zur Behandlung von Fibromyalgie (FM), degenerativer Arthritis und Stoffwechselstörungen. Eine 4-wöchige Studie (veröffentlicht im X-MOL Journal 2025) zeigte eine statistisch signifikante Linderung von Fibromyalgie-Schmerzen, die auf eine Abnahme von HSP90 und Zunahme von HSP40 zurückzuführen war.</li>
+            <li><strong>Gewichtsmanagement & Fettabbau:</strong> Eine bahnbrechende Arbeit in der Fachzeitschrift <em>Cell</em> (2022) belegte, dass lokale Hyperthermie über die HSF1-A2B1-Achse die Umwandlung von weißem in beiges Fett (米色脂肪褐变) anregt, was Übergewicht, Insulinresistenz und Fettleber wirksam entgegenwirkt.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Weitere medizinische Studien</h4>
+          <p>Japanische Forscher der Universität Okayama (2010) zeigten, dass eine tägliche 30-minütige Infrarot-Wärmetherapie bei Typ-2-Diabetikern nach nur zwei Wochen die Insulinsensitivität um 32 % steigerte und den Nüchternblutzucker um 18 % senkte. Zudem zeigte eine finnische Kohortenstudie, dass regelmäßige Wärmeanwendungen (4-7 Mal pro Woche) die Gefäßelastizität verbessern und den Blutfluss bei erektiler Dysfunktion (ED) sowie Prostatitis signifikant erhöhen.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Technische Parameter (TMT-RLC-2200)</h4>
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Medizinprodukt-Klasse</td><td style="padding: 0.5rem;">Klasse II (Reg.湘械注准20242090670)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Temperaturbereich</td><td style="padding: 0.5rem;">35 °C bis 45 °C (kontrolliert)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Wellenlänge (Infrarot)</td><td style="padding: 0.5rem;">4 &mu;m bis 20 &mu;m (Ferninfrarot)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Sicherheitsschutz</td><td style="padding: 0.5rem;">Graphitfaser-Abschirmung gegen Hautberührung, Übertemperatur-Abschaltung bei &gt;10% Sollwert</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Abmessungen</td><td style="padding: 0.5rem;">1090 mm &times; 820 mm &times; 1960 mm</td></tr>
+          </table>
+        </div>
       `
     },
     en: {
-      title: "Whole-Body Spectrum Cabin – Systemic Cellular Detoxification",
+      title: "Thermal Metabolic Cabin (TMT-RLC-2200)",
       body: `
-        <p>The <strong>Whole-Body Spectrum Cabin</strong> uses a broad bio-matched electromagnetic spectrum designed to match the body's natural thermal wavelengths, going beyond conventional infrared technology.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biophysical Mechanism</h4>
-        <p>These specialized wavelengths resonate with intracellular water molecules, generating heat deep within tissues. This thermal action improves capillary microcirculation, enhances fascial flexibility, and promotes sweat-induced excretion of cellular waste and heavy metals.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Key Benefits</h4>
-        <ul class="feature-list">
-          <li>Facilitates deep cellular cleansing and metabolic detoxification programs.</li>
-          <li>Restores balance to the autonomic nervous system, promoting deep sleep.</li>
-          <li>Relieves generalized body pain, chronic fatigue, and muscular stiffness.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">The <strong>Thermal Metabolic Cabin (Model TMT-RLC-2200)</strong> is an advanced medical-grade system for whole-body spectrum and hyperthermic therapy. Unlike conventional infrared saunas, this enclosed bio-chamber integrates far-infrared spectrum radiation, controlled oxygen enrichment, and negative air ions to trigger systemic cellular detoxification, metabolic restoration, and deep nervous system recovery.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">The Three Pillars of Bio-Resonant Healing</h4>
+          <p>The cabin establishes a synergetic environment designed to optimize cell function:</p>
+          <ul class="feature-list">
+            <li><strong>Far-Infrared Spectrum Energy (4&mu;m - 20&mu;m):</strong> Tuned precisely to the natural vibrational frequency of human cells. This causes intracellular water molecules to vibrate, heating tissue deeply and evenly. This process increases microvascular blood flow by 114%, promoting nutrient delivery and cellular waste clearance.</li>
+            <li><strong>Oxygen-Enriched Environment (O₂):</strong> Increases hemoglobin oxygen binding capacity, raising peripheral oxygen saturation. This supports mitochondrial cellular respiration, increases cardiopulmonary tolerance, and fuels metabolic recovery.</li>
+            <li><strong>Negative Ion Space:</strong> Serves as a systemic antioxidant that neutralizes free radicals, reduces cellular oxidative stress, and boosts tissue self-repair mechanisms.</li>
+          </ul>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Applications & Research Efficacy</h4>
+          <p>The Metabolic Cabin is utilized across several main medical areas:</p>
+          <ul class="feature-list">
+            <li><strong>Athletic Performance & Recovery:</strong> Actively utilized by <strong>olympic athletes</strong> in elite winter sports training bases. It accelerates lactate clearance, reduces post-exercise muscle soreness, and protects against overuse injuries.</li>
+            <li><strong>Reproductive Health & Gynecology:</strong> Studies show that moderate hyperthermia (40-42°C) stimulates the hypothalamic-pituitary-ovarian (HPO) axis, supporting follicular maturation and ovarian hormone balance. Professor Li Haixia's team (China Academy of Chinese Medical Sciences) demonstrated that heat stress increases the expression of protective Hsp70 by 3.2 times, safeguarding germ cells from oxidative damage. This provides a biochemical basis for the classical TCM model equating Kidney Yang with metabolic thermal energy.</li>
+            <li><strong>Chronic Disease Conditioning:</strong> Indicated for fibromyalgia, joint arthritis, and metabolic syndrome. A study in the journal <em>X-MOL</em> (2025) verified that a 4-week hyperthermia course significantly lowered fibromyalgia pain scores by regulating heat shock proteins (decreasing Hsp90 and increasing Hsp40 and Hsc70).</li>
+            <li><strong>Obesity & Weight Management:</strong> A landmark study published in <em>Cell</em> (2022) proved that local hyperthermia induces the browning of white adipose tissue via the HSF1-A2B1 transcription axis, effectively treating obesity, insulin resistance, and hepatic lipid accumulation.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Further Supporting Evidence</h4>
+          <p>Clinical studies at Okayama University (2010) showed that daily 30-minute far-infrared therapy improved insulin sensitivity by 32% and lowered fasting blood glucose by 18% in type 2 diabetes patients within two weeks. Additionally, a large cohort study in Finland demonstrated that regular sauna therapy (4-7 times/week) improves vascular endothelial function, lowering blood viscosity and relieving peripheral vascular disorders like prostatitis and erectile dysfunction.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Technical Parameters</h4>
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Medical Device Registration</td><td style="padding: 0.5rem;">Class II (湘械注准20242090670)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Temperature Range</td><td style="padding: 0.5rem;">35 °C to 45 °C</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Wavelength (Infrared)</td><td style="padding: 0.5rem;">4 &mu;m to 20 &mu;m</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Safety Isolation</td><td style="padding: 0.5rem;">Graphite fiber guard plates (preventing skin contact), automatic cut-off if temperature exceeds setpoint by 10%</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Dimensions</td><td style="padding: 0.5rem;">1090 mm &times; 820 mm &times; 1960 mm</td></tr>
+          </table>
+        </div>
       `
     }
   },
   spectrumradiator: {
     de: {
-      title: "Lokalisiertes Spektral-Bestrahlungsgerät – Gezielte Geweberegeneration",
+      title: "Mikro-Photonen-Moxibustion (Lokalisiertes Spektral-Bestrahlungsgerät)",
       body: `
-        <p>Das <strong>Lokalisierte Spektral-Bestrahlungsgerät</strong> nutzt gezielte elektromagnetische Frequenzen, um lokale Entzündungsprozesse zu regulieren und die Selbstheilungskräfte des Gewebes anzuregen.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Kombination mit Akupunktur</h4>
-        <p>In unserer Praxis setzen wir das Gerät häufig zeitgleich mit Akupunkturnadeln ein. Die Wärme und Frequenzen erwärmen die Nadeln und leiten die Energie tief in die Akupunkturpunkte (Ashi-Punkte), wodurch die heilsame Wirkung verdoppelt wird.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Indikationsbereiche</h4>
-        <ul class="feature-list">
-          <li>Lokale Muskel- und Gelenkschmerzen (Halswirbelsäulen-Syndrom, Tennisarm).</li>
-          <li>Unterstützung der Wundheilung und Linderung chronischer Hautentzündungen.</li>
-          <li>Wärmebehandlung des Unterbauchs bei gynäkologischen Schmerzen.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">Die <strong>Mikro-Photonen-Moxibustion (Modell TMT-WIRA-500A)</strong> ist ein hochentwickeltes medizinisches Lichttherapiesystem zur gezielten, berührungslosen Schmerzlinderung und Entzündungshemmung. Durch die patentierte Kombination eines Hochleistungs-Halogenleuchtmittels mit einem Festkörper-Filtersystem strahlt das Gerät ein biologisch hochwirksames Spektrum von 560 nm bis 1400 nm aus, das 7 bis 10 cm tief in das Gewebe eindringt.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Das Wirkprinzip der drei Spektralbänder</h4>
+          <p>Das breite Spektrum teilt sich in drei therapeutisch wirksame Frequenzbänder auf:</p>
+          <ul class="feature-list">
+            <li><strong>Tiefen-Entzündungshemmung (760 nm - 1400 nm):</strong> Dieser nahinfrarote Bereich dringt tief in Gewebe, Gelenke und Knorpel ein. Er fördert die Synthese von Albumin und Immunglobulinen, verbessert die Phagozytose (Zellreinigung) der Makrophagen und senkt die Konzentration entzündungsfördernder Zytokine. Dies führt zu einer intensiven, tiefenwirksamen Entzündungshemmung.</li>
+            <li><strong>Fokussierte Schmerzlinderung (810 nm):</strong> Dieser spezifische Wellenbereich hemmt die Ausschüttung von Serotonin (5-HT) im Gewebe und dämpft die überschießende Aktivität des sympathischen Nervensystems, was zu einer schnellen, spürbaren Schmerzlinderung führt.</li>
+            <li><strong>Zelluläre Regeneration (620 nm - 650 nm):</strong> Rotes sichtbares Licht stimuliert die mitochondriale Atmungskette und beschleunigt die Bildung und den Abbau von ATP. Dies regt den Zellstoffwechsel an, stimuliert die Gewebeneubildung (Granulation) und beschleunigt die Heilung von Wunden und Narben.</li>
+          </ul>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Anwendungen & Schwerpunkte</h4>
+          <p>Die Mikro-Photonen-Moxibustion ist klinisch erprobt bei folgenden Beschwerden:</p>
+          <ul class="feature-list">
+            <li><strong>Entzündungshemmung & Schmerzlinderung:</strong> Schnelle Linderung bei myofaszialen Schmerzsyndromen, Verspannungen im Bereich der Hals- und Lendenwirbelsäule sowie bei chronischen Kopfschmerzen.</li>
+            <li><strong>Gelenkschmerzen & Arthritis:</strong> Studien (z. B. im <em>International Journal of Molecular Sciences</em> 2022) zeigen, dass diese Strahlung die Entzündungspfade hemmt und Entzündungsfaktoren wie TNF-&alpha; und IL-6 um über 50 % senkt, was arthritische Gelenkschwellungen lindert.</li>
+            <li><strong>Hautregeneration & Wundheilung:</strong> Beschleunigt den Wundverschluss nach Operationen oder bei Verbrennungen (post burn skin repair) und regt das kosmetische Erscheinungsbild der Haut durch Kollagenaktivierung an.</li>
+            <li><strong>Sportverletzungen:</strong> Zur Regeneration bei Zerrungen, Sehnenentzündungen (wie Tennisarm) und stumpfen Traumata.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Integration mit Akupunktur</h4>
+          <p>In unserer klinischen Praxis kombinieren wir dieses System häufig mit der klassischen Akupunktur. Die Infrarotfrequenzen wärmen die gesetzten Nadeln auf und leiten die Energie über den Nadelkörper tief in die Akupunkturpunkte (Ashi-Punkte), wodurch die therapeutische Wirkung der Nadelung um ein Vielfaches verstärkt wird.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Ergonomie & Sicherheit</h4>
+          <p>Das System verfügt über einen dreidimensionalen, schwebend gelagerten Gelenkarm (自悬式机械臂) zur präzisen Ausrichtung über der Liege. Ein integrierter 26-cm-Abstandsbolzen garantiert stets den optimalen Abstand zur Haut. Bei Neigung oder versehentlichem Umstoßen schaltet ein Neigungssensor die Stromzufuhr sofort ab.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Technische Parameter</h4>
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Medizinische Registrierung</td><td style="padding: 0.5rem;">湘械注准20232090107 (TMT-WIRA-500A)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Wellenlängenbereich</td><td style="padding: 0.5rem;">560 nm bis 1400 nm</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Bestrahlungs-Intensität</td><td style="padding: 0.5rem;">480 mW/cm² (bei 16 cm Abstand) / 230 mW/cm² (bei 26 cm Abstand)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Leistungsaufnahme</td><td style="padding: 0.5rem;">600 W</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Gewicht / Mechanik</td><td style="padding: 0.5rem;">50 kg, Stativ mit lenkbaren Rollen und Schwebearm (30 - 150 cm Hubhöhe)</td></tr>
+          </table>
+        </div>
       `
     },
     en: {
-      title: "Localized Spectrum Radiator – Targeted Tissue Regeneration",
+      title: "Micro-Photon Moxibustion (Localized Spectrum Radiator)",
       body: `
-        <p>The <strong>Localized Spectrum Radiator</strong> delivers target-focused electromagnetic wavelengths to soothe local inflammation and accelerate tissue recovery.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Integration with Acupuncture</h4>
-        <p>We often utilize this device in conjunction with traditional acupuncture. Wavelengths warm the needles to direct kinetic thermal energy deep into the points (Ashi points), amplifying the therapeutic benefit of needle stimulation.</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Common Applications</h4>
-        <ul class="feature-list">
-          <li>Localized myofascial pain, joint inflammation, and back stiffness.</li>
-          <li>Supports dermal healing, helping clear localized rashes or scars.</li>
-          <li>Pelvic warmth therapy to relieve gynecological spasms and womb coldness.</li>
-        </ul>
+        <div class="tech-detail-article">
+          <p class="intro-lead">The <strong>Micro-Photon Moxibustion (Model TMT-WIRA-500A)</strong> is an advanced medical-grade deep spectrum therapy system. Using a high-output iodine-halogen light source coupled with a patented solid-state filtering system, it delivers a broad, therapeutic light spectrum (560 nm to 1400 nm) that penetrates subcutaneous tissue up to 7 to 10 cm deep to alleviate pain, reduce inflammation, and accelerate cellular recovery.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biophysical Mechanism of the Three Spectral Bands</h4>
+          <p>The emitted spectrum targets tissues via three distinct biophysical pathways:</p>
+          <ul class="feature-list">
+            <li><strong>Deep Anti-Inflammatory (760 nm - 1400 nm):</strong> This near-infrared band penetrates joints, fascia, and cartilage. It enhances the synthesis of albumin and immunoglobulins, stimulates macrophage phagocytosis, and suppresses inflammatory cytokines (such as TNF-&alpha; and IL-6), leading to deep tissue recovery.</li>
+            <li><strong>Targeted Analgesia (810 nm):</strong> Specifically lowers local serotonin (5-HT) levels and suppresses sympathetic nerve over-excitation, providing rapid, non-invasive pain relief.</li>
+            <li><strong>Cellular Regeneration (620 nm - 650 nm):</strong> Red visible wavelengths enhance mitochondrial oxygenation, accelerating the synthesis and decomposition of ATP. This activates cellular metabolism, promotes granulation tissue growth, and shortens wound and scar recovery cycles.</li>
+          </ul>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Applications & Target Pathologies</h4>
+          <p>The Micro-Photon Moxibustion system is highly effective for:</p>
+          <ul class="feature-list">
+            <li><strong>Anti-Inflammatory & Pain Relief:</strong> Rapidly treats acute myofascial strains, tension headaches, and localized spasms of the neck and back.</li>
+            <li><strong>Joint Pain & Arthritis:</strong> Clinical studies (including reports in the <em>International Journal of Molecular Sciences</em> 2022) prove that WIRA spectrum therapy reduces arthritic joint inflammation and downregulates inflammatory markers by over 50%.</li>
+            <li><strong>Post-Burn & Surgical Wound Healing:</strong> Speeds up tissue granulation and epidermal remodeling in post-burn skin repair and post-operative surgical incisions.</li>
+            <li><strong>Cosmetic & Dermatological Treatments:</strong> Stimulates dermal collagen production, helping clear chronic skin inflammation and improve scar tissue.</li>
+            <li><strong>Sports Injuries:</strong> Accelerates healing in muscle tears, tendonitis, ligament sprains, and joint contusions.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Synergy with Acupuncture</h4>
+          <p>In our clinic, we frequently combine this radiator with traditional acupuncture. The spectrum warms the needles, directing kinetic thermal energy deep into the points (Ashi points) to amplify the therapeutic benefits of the needle stimulation.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Ergonomic Positioning & Safety Features</h4>
+          <p>Features a patented self-suspending mechanical arm (Hubway 30cm-150cm) and a 3D rotating head to target any area of the body while the patient is comfortably lying down. A built-in 26 cm distance rod ensures safe application, and an automatic tilt-sensor cuts off power if the unit is knocked over.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Technical Parameters</h4>
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Medical Registration</td><td style="padding: 0.5rem;">湘械注准20232090107 (TMT-WIRA-500A)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Wavelength Range</td><td style="padding: 0.5rem;">560 nm to 1400 nm</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Optical Power Density</td><td style="padding: 0.5rem;">480 mW/cm² (at 16 cm) / 230 mW/cm² (at 26 cm)</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Power Consumption</td><td style="padding: 0.5rem;">600 W</td></tr>
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);"><td style="padding: 0.5rem; font-weight: 600;">Weight / Mechanics</td><td style="padding: 0.5rem;">50 kg, mobile stand with locking casters and articulating mechanical arm</td></tr>
+          </table>
+        </div>
       `
     }
-  },
+  }
 };
 
 function openArticleModal(articleId) {
