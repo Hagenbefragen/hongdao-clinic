@@ -2595,8 +2595,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (galleryMoreBtn) {
     galleryMoreBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      document.querySelectorAll(".gallery-item.hidden-item").forEach(item => {
+      const hiddenItems = Array.from(document.querySelectorAll(".gallery-item.hidden-item"));
+      hiddenItems.forEach((item, index) => {
         item.style.display = "block";
+        setTimeout(() => {
+          item.classList.add("revealed");
+        }, index * 40); // 40ms stagger delay per item
       });
       galleryMoreBtn.style.display = "none";
     });

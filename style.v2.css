@@ -1357,6 +1357,26 @@ footer {
   letter-spacing: 0.05em;
 }
 
+/* Staggered Fade-In for revealed gallery items */
+@keyframes galleryFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item.hidden-item {
+  opacity: 0;
+}
+
+.gallery-item.hidden-item.revealed {
+  animation: galleryFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* Lightbox Overlay */
 .lightbox-overlay {
   position: fixed;
