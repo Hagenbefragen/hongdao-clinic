@@ -30,7 +30,7 @@ const translations = {
 
     // Masters & Team
     "team-tag": "Medical Lineage",
-    "team-title": "Traditional Heritage & Compassionate Healing",
+    "team-title": "Guardians of Ancient Wisdom & Specialized Clinicians",
     "team-subtitle": "Meet our dedicated doctors and practitioners bridging classical Shanghanlun wisdom and modern recovery.",
     "master-xu-title": "Chief Physician & TCM Professor",
     "master-xu-desc": "Professor Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases.",
@@ -48,7 +48,7 @@ const translations = {
     "visionary-deng-title": "Heilpraktikerin, Qi Gong & Sound Therapy",
     "visionary-deng-desc": "Heilpraktikerin Deng Nanjing translates Professor Xu's consultations into German, English, Italian, Spanish, and Mandarin. She also leads Qi Gong sessions, 6 Healing Sounds practice, sound therapy, tea ceremonies, and supports guests with all organizational needs during their stay.",
     "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Sound Therapy & Patient Support. 5 Languages.",
-    "team-grid-title": "Guardians of Ancient Wisdom & Specialized Clinicians",
+    "team-grid-title": "Our Specialized Team",
     "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistant Physician",
     "doctor-3-spec": "Assistant Physician, specializing in acupuncture and clinical support under Professor Xu's guidance.",
     "doctor-sound-name": "Cheung Mingli",
@@ -82,7 +82,7 @@ const translations = {
     "retreat-10day-date": "October 10th - October 20th, 2026",
     "retreat-10day-desc": "A complete immersion in TCM theory and health maintenance. 5 days of clinical observation in Shenzhen under Master Xu, followed by 5 days of Daoist lifestyle integration in the Wudang Mountains. Limited to 12 participants.",
     "retreat-10day-price": "€3,900 Cost Contribution (Early Bird)",
-    "retreat-10day-wix-link": "Details ansehen",
+    "retreat-10day-wix-link": "View Details",
     
     "retreat-1day-title": "1-3-5 Day TCM Clinical Training (Shenzhen)",
     "retreat-1day-desc": "Focused clinical training and masterclasses in Shenzhen. Ideal for practitioners and health enthusiasts wishing to experience direct clinical practice observation, pulse diagnosis introduction, and professional decoction preparation. Flexible attendance from 1 to 5 days.",
@@ -94,6 +94,7 @@ const translations = {
     "duration-1w": "1 Week",
     "duration-2w": "2 Weeks",
     "duration-4w": "4 Weeks",
+    "endo-price": "Price on request",
     "package-basic": "Outpatient (No Boarding)",
     "package-premium": "Premium Retreat (With Partner Hotel & TCM Kitchen)",
     "endo-included-title": "What's Included:",
@@ -323,6 +324,7 @@ const translations = {
     "duration-1w": "1 Woche",
     "duration-2w": "2 Wochen",
     "duration-4w": "4 Wochen",
+    "endo-price": "Kostenbeitrag auf Anfrage",
     "package-basic": "Ambulant (ohne Unterkunft)",
     "package-premium": "Premium (inkl. Partnerhotel & TCM-Küche)",
     "endo-included-title": "Inklusive Leistungen:",
