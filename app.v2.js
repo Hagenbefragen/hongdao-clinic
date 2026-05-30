@@ -313,7 +313,7 @@ const translations = {
     "retreat-10day-price": "€3.900,- Kostenbeitrag (Frühbucher)",
     "retreat-10day-wix-link": "Details auf Wix",
     
-    "retreat-1day-title": "1-3-5-tägiges klinisches TCM-Training (Shenzhen)",
+    "retreat-1day-title": "1- bis 5-tägiges klinisches TCM-Training (Shenzhen)",
     "retreat-1day-desc": "Lokale Tageskurse vor Ort. Ideal für Therapeuten und Interessierte zur Hospitation, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.",
     "retreat-1day-price": "€250,- Kostenbeitrag pro Tag",
     
@@ -1500,7 +1500,7 @@ const articlesContent = {
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Biografie</h4>
         <p style="margin-bottom: 1rem;">Xu Ruqi ist ein renommierter Gelehrter der Shanghan Lun (Abhandlung über Kälte-Krankheiten).</p>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li>Klinischer Sonder-Experte der 3. Pekinger Universität für Chinesische Medizin</li>
+          <li>Klinischer Sonder-Experte der Pekinger Universität für Chinesische Medizin</li>
           <li>Klinischer Mentor an der Qihuang-Akademie</li>
           <li>Leiter des Behandlungszentrums für Onkologie und komplexe Krankheiten der Hong Dao TCM-Klinik</li>
         </ul>
@@ -1904,7 +1904,7 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Fallbeispiele</h4>
         <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem;">
-          <p><strong>Fall 1 (Schokoladenzyste & Infertilität)</strong>: Eine 29-jährige Patientin mit Kinderwunsch litt unter einer 4,2 cm großen Schokoladenzyste am linken Eierstock und extremen Regenschmerzen (VAS 9, starke Schmerzmittel). Nach 3 Monaten kombinierter Pu-Jiu-Therapie und Kräutereinnahme schrumpfte die Zyste auf 1,5 cm, die Schmerzen verschwanden vollständig (VAS 1, ohne Medikamente).</p>
+          <p><strong>Fall 1 (Schokoladenzyste & Infertilität)</strong>: Eine 29-jährige Patientin mit Kinderwunsch litt unter einer 4,2 cm großen Schokoladenzyste am linken Eierstock und extremen Regelschmerzen (VAS 9, starke Schmerzmittel). Nach 3 Monaten kombinierter Pu-Jiu-Therapie und Kräutereinnahme schrumpfte die Zyste auf 1,5 cm, die Schmerzen verschwanden vollständig (VAS 1, ohne Medikamente).</p>
         </div>
         <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px;">
           <p><strong>Fall 2 (Adenomyose & Schwangerschaft)</strong>: Eine 34-jährige Patientin mit primärer Infertilität seit 4 Jahren litt an einer stark vergrößerten Gebärmutter infolge von Adenomyose. Durch gezielte Erwärmung und Zyklustherapie verkleinerte sich die Gebärmutter, die Blutungen normalisierten sich, und im 5. Behandlungsmonat wurde sie natürlich schwanger.</p>
@@ -1951,7 +1951,7 @@ const articlesContent = {
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Kurs-Details</h4>
         <ul class="feature-list">
-          <li><strong>Termine</strong>: 18. April um 10:00 Uhr & 19. April um 15:00 Uhr</li>
+          
           <li><strong>Zielgruppe</strong>: Kinder (3-10 Jahre) mit ihren Eltern</li>
           <li><strong>Gruppengröße</strong>: Maximal 7 Familien pro Kurs</li>
           <li><strong>Gebühr</strong>: 199 RMB (~25 €) inkl. aller Malutensilien und gesunder Kräutersnacks</li>

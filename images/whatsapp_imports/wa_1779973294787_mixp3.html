@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non-Disclosure Agreement — SYNYS Space & Exitstrategy LLC</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',system-ui,sans-serif;background:#fafafa;color:#1a1a1a;line-height:1.8;padding:40px;padding-bottom:100px;}
+    .document{max-width:850px;margin:80px auto 40px;padding:60px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,0.08);border-radius:8px}
+    h1{text-align:center;font-size:22px;font-weight:700;margin-bottom:4px;text-transform:uppercase;letter-spacing:2px}
+    h2{font-size:16px;font-weight:700;margin-top:28px;margin-bottom:10px;border-bottom:2px solid #14b8a6;padding-bottom:4px}
+    h3{font-size:15px;font-weight:700;margin-top:20px;margin-bottom:8px}
+    p{margin-bottom:12px;font-size:14px}
+    .center{text-align:center}
+    .subtitle{color:#666;font-size:14px;text-align:center;margin-bottom:32px}
+    ol{padding-left:24px;margin-bottom:16px}
+    ol li{margin-bottom:8px;font-size:14px}
+    .bold{font-weight:700}
+    
+    .toolbar{position:fixed;top:0;left:0;right:0;background:linear-gradient(135deg,#1e293b,#0f172a);color:#fff;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;z-index:1000;box-shadow:0 2px 12px rgba(0,0,0,0.15)}
+    .toolbar-title{font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;}
+    .toolbar button{padding:6px 14px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:#fff;font-size:12px;cursor:pointer;font-weight:600}
+    .toolbar button:hover{background:rgba(255,255,255,0.2)}
+
+    .signature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .signature-full {
+      grid-column: span 2;
+    }
+
+    /* ══════════ SOURCE LINKS ══════════ */
+    a.src-link {
+      color: var(--teal, #14b8a6);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(20, 184, 166, 0.3);
+      transition: all 0.2s;
+      font-weight: 600;
+    }
+    a.src-link:hover {
+      color: #5eead4;
+      border-bottom-color: #5eead4;
+      text-shadow: 0 0 8px rgba(20, 184, 166, 0.3);
+    }
+    a.src-link::after {
+      content: " ↗";
+      font-size: 0.55rem;
+      opacity: 0.5;
+    }
+    a.src-link:hover::after {
+      opacity: 1;
+    }
+
+    /* ══════════ ABBREVIATION TOOLTIPS ══════════ */
+    abbr[title] {
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(20, 184, 166, 0.5);
+      cursor: help;
+      position: relative;
+      color: inherit;
+    }
+    abbr[title]:hover {
+      border-bottom-color: var(--teal, #14b8a6);
+      color: var(--teal, #14b8a6);
+    }
+    abbr[title]:hover::after {
+      content: attr(title);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e293b;
+      color: #f0f4ff;
+      border: 1px solid rgba(20, 184, 166, 0.4);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.6rem;
+      font-style: normal;
+      font-weight: 400;
+      max-width: 400px;
+      white-space: normal;
+      z-index: 999;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+      line-height: 1.4;
+    }
+
+    /* ══════════ EDITABLE FIELDS ══════════ */
+    .editable {
+      background: #fffde7;
+      border-bottom: 2px dashed #f59e0b;
+      padding: 1px 6px;
+      cursor: text;
+      transition: all 0.2s;
+      border-radius: 2px;
+      min-width: 60px;
+      display: inline-block;
+    }
+    .editable:hover {
+      background: #fef3c7;
+      border-bottom-color: #d97706;
+    }
+    .editable:focus {
+      background: #fef9c3;
+      border-bottom-color: #b45309;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3);
+    }
+    .editable.filled {
+      background: #ecfdf5;
+      border-bottom-color: #10b981;
+    }
+
+    /* ══════════ SIGNATURE PAD ══════════ */
+    .sig-pad-section {
+      margin-top: 16px;
+      padding: 16px;
+      border: 2px solid #1e293b;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+    .sig-pad-section h4 {
+      margin: 0 0 8px 0;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1e293b;
+    }
+    .sig-pad-wrap {
+      position: relative;
+      border: 2px solid #cbd5e1;
+      border-radius: 6px;
+      background: #fff;
+      cursor: crosshair;
+      touch-action: none;
+      margin-bottom: 8px;
+    }
+    .sig-pad-wrap canvas {
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+    }
+    .sig-pad-wrap .sig-hint {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #bbb;
+      font-size: 14px;
+      pointer-events: none;
+      user-select: none;
+    }
+    .sig-pad-actions {
+      display: flex;
+      gap: 8px;
+    }
+    .sig-pad-actions button {
+      padding: 4px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      border: 1px solid #e2e8f0;
+      background: #fff;
+    }
+    .sig-pad-actions button:hover {
+      background: #f1f5f9;
+    }
+    .sig-pad-status {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+    .sig-pad-status.done {
+      color: #059669;
+      font-weight: 600;
+    }
+    .sig-print-img {
+      display: none;
+      max-width: 300px;
+    }
+
+    /* ══════════ EDIT BANNER ══════════ */
+    .edit-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #000;
+      padding: 12px 20px;
+      font-family: system-ui, sans-serif;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.2);
+    }
+    .edit-banner .progress {
+      font-weight: 700;
+    }
+
+    /* ══════════ LANGUAGE TOGGLE ══════════ */
+    body.lang-en .de { display: none !important; }
+    body.lang-de .en { display: none !important; }
+
+    .lang-toggle-btn {
+      background: #14b8a6 !important;
+      border-color: #0d9488 !important;
+      font-weight: 700 !important;
+      margin-right: 12px;
+    }
+    .lang-toggle-btn:hover {
+      background: #0d9488 !important;
+    }
+
+    /* ══════════ PRINT ══════════ */
+    @media print {
+      .toolbar, .edit-banner {
+        display: none !important;
+      }
+      .editable {
+        background: none !important;
+        border-bottom: none !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+      }
+      .sig-pad-section {
+        border: none;
+        padding: 0;
+        background: none;
+      }
+      .sig-pad-section h4 {
+        display: none;
+      }
+      .sig-pad-wrap {
+        border: none;
+        background: none;
+      }
+      .sig-pad-wrap .sig-hint {
+        display: none;
+      }
+      .sig-pad-actions {
+        display: none !important;
+      }
+      .sig-pad-status {
+        display: none !important;
+      }
+      .sig-print-img {
+        display: block !important;
+      }
+      body {
+        padding: 0;
+        background: #fff;
+      }
+      .document {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body class="lang-en">
+
+<div class="toolbar">
+  <span class="toolbar-title">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+    <span class="en">Mutual Non-Disclosure Agreement</span>
+    <span class="de">Geheimhaltungsvereinbarung (NDA)</span>
+  </span>
+  <div>
+    <button class="lang-toggle-btn" onclick="toggleLanguage()">🌐 EN / DE</button>
+    <button onclick="window.print()" style="margin-right: 8px;">🖨️ <span class="en">Print</span><span class="de">Drucken</span></button>
+    <button onclick="clearAllFields()" style="background:#dc2626;color:#fff;border-color:#b91c1c;">🗑️ <span class="en">Clear All</span><span class="de">Alles löschen</span></button>
+  </div>
+</div>
+
+<div class="document">
+  <h1 class="en">Mutual Non-Disclosure Agreement</h1>
+  <h1 class="de">Geheimhaltungsvereinbarung (NDA)</h1>
+  
+  <p class="subtitle en">Confidential Information Protection for Healing Retreat Space Project</p>
+  <p class="subtitle de">Schutz vertraulicher Informationen für das Projekt "Healing Retreat Space"</p>
+
+  <p class="en">This Mutual Non-Disclosure Agreement (this "<span class="bold">Agreement</span>") is entered into as of <span class="editable" contenteditable="true" data-field="ndaDate" data-placeholder="DD.MM.YYYY">DD.MM.YYYY</span>, by and between:</p>
+  <p class="de">Diese Geheimhaltungsvereinbarung (diese "<span class="bold">Vereinbarung</span>") wird am <span class="editable" contenteditable="true" data-field="ndaDate" data-placeholder="DD.MM.YYYY">DD.MM.YYYY</span> geschlossen zwischen:</p>
+
+  <p class="en"><span class="bold">Disclosing Party:</span> <span class="editable" contenteditable="true" data-field="synysCompany" data-placeholder="SYNYS Space">SYNYS Space</span>, operating under <a class="src-link" href="https://www.synysspace.eu/" target="_blank" rel="noopener">www.synysspace.eu</a>, with principal offices at <span class="editable" contenteditable="true" data-field="synysAddress" data-placeholder="[Address]">[Address]</span> (the "<span class="bold">Company</span>");</p>
+  <p class="de"><span class="bold">Offenlegende Partei:</span> <span class="editable" contenteditable="true" data-field="synysCompany" data-placeholder="SYNYS Space">SYNYS Space</span>, tätig unter <a class="src-link" href="https://www.synysspace.eu/" target="_blank" rel="noopener">www.synysspace.eu</a>, mit Hauptsitz in <span class="editable" contenteditable="true" data-field="synysAddress" data-placeholder="[Address]">[Address]</span> (die "<span class="bold">Gesellschaft</span>");</p>
+
+  <p class="en center">and</p>
+  <p class="de center">und</p>
+
+  <p class="en"><span class="bold">Receiving Party:</span> <span class="editable" contenteditable="true" data-field="exitstrategyCompany" data-placeholder="Exitstrategy LLC (in Gründung)">Exitstrategy LLC (in Gründung)</span>, with principal offices in Österreich (the "<span class="bold">Recipient</span>").</p>
+  <p class="de"><span class="bold">Empfangende Partei:</span> <span class="editable" contenteditable="true" data-field="exitstrategyCompany" data-placeholder="Exitstrategy LLC (in Gründung)">Exitstrategy LLC (in Gründung)</span>, mit Hauptsitz in Österreich (der "<span class="bold">Empfänger</span>").</p>
+
+  <h2 class="en">1. Purpose</h2>
+  <h2 class="de">1. Zweck</h2>
+  
+  <p class="en">The parties wish to evaluate a potential business relationship involving the exchange of sensitive operational, architectural, and strategic information regarding a <span class="bold">Healing Retreat Space</span> project (the "<span class="bold">Purpose</span>"). In connection with the Purpose, the Company may disclose Confidential Information to the Recipient.</p>
+  <p class="de">Die Parteien möchten eine mögliche Geschäftsbeziehung bewerten, die den Austausch sensibler operativer, architektonischer und strategischer Informationen bezüglich eines "<span class="bold">Healing Retreat Space</span>"-Projekts beinhaltet (der "<span class="bold">Zweck</span>"). In Verbindung mit diesem Zweck kann die Gesellschaft dem Empfänger vertrauliche Informationen offenlegen.</p>
+
+  <h2 class="en">2. Definition of Confidential Information</h2>
+  <h2 class="de">2. Definition von vertraulichen Informationen</h2>
+  
+  <p class="en">"<span class="bold">Confidential Information</span>" means any non-public information disclosed by either party, including but not limited to:</p>
+  <p class="de">"<span class="bold">Vertrauliche Informationen</span>" umfassen alle nicht-öffentlichen Informationen, die von einer der Parteien offengelegt werden, einschließlich, aber nicht beschränkt auf:</p>
+  
+  <ol class="en">
+    <li>Architectural concepts, retreat methodologies, and holistic operational frameworks;</li>
+    <li>Financial data, business plans, revenue projections, and partner lists;</li>
+    <li>Trade secrets, know-how, and proprietary healing methodologies;</li>
+    <li>All information clearly marked "Confidential" or that a reasonable person would understand to be confidential.</li>
+  </ol>
+  <ol class="de">
+    <li>Architektonische Konzepte, Retreat-Methoden und ganzheitliche operative Rahmenbedingungen;</li>
+    <li>Finanzdaten, Geschäftspläne, Umsatzprognosen und Partnerlisten;</li>
+    <li>Geschäftsgeheimnisse, Know-how und proprietäre Heilmethoden;</li>
+    <li>Alle Informationen, die eindeutig als "Vertraulich" gekennzeichnet sind oder die eine vernünftige Person als vertraulich verstehen würde.</li>
+  </ol>
+
+  <h2 class="en">3. Obligations</h2>
+  <h2 class="de">3. Verpflichtungen</h2>
+  
+  <p class="en">The Receiving Party agrees to:</p>
+  <p class="de">Die empfangende Partei stimmt zu:</p>
+  
+  <ol class="en">
+    <li><span class="bold">Non-Disclosure:</span> Not disclose Confidential Information to any third party without prior written consent;</li>
+    <li><span class="bold">Limited Use:</span> Use Confidential Information solely for the Purpose;</li>
+    <li><span class="bold">Standard of Care:</span> Protect Confidential Information with at least the same degree of care used to protect its own confidential information, but no less than reasonable care;</li>
+    <li><span class="bold">Limited Access:</span> Restrict access to employees, board members, and advisors who need to know and who are bound by confidentiality obligations.</li>
+  </ol>
+  <ol class="de">
+    <li><span class="bold">Geheimhaltung:</span> Vertrauliche Informationen ohne vorherige schriftliche Zustimmung nicht an Dritte weiterzugeben;</li>
+    <li><span class="bold">Eingeschränkte Nutzung:</span> Vertrauliche Informationen ausschließlich für den Zweck zu verwenden;</li>
+    <li><span class="bold">Sorgfaltsmaßstab:</span> Vertrauliche Informationen mit mindestens der gleichen Sorgfalt zu schützen, die sie zum Schutz ihrer eigenen vertraulichen Informationen anwendet, jedoch mindestens mit angemessener Sorgfalt;</li>
+    <li><span class="bold">Beschränkter Zugang:</span> Den Zugang auf Mitarbeiter, Vorstandsmitglieder und Berater zu beschränken, die diese Informationen benötigen und an Vertraulichkeitsverpflichtungen gebunden sind.</li>
+  </ol>
+
+  <h2 class="en">4. Exclusions</h2>
+  <h2 class="de">4. Ausnahmen</h2>
+  
+  <p class="en">Confidential Information does not include information that: (a) is or becomes publicly available; (b) was already known to the Receiving Party; (c) is independently developed; or (d) is rightfully obtained from a third party without restriction.</p>
+  <p class="de">Vertrauliche Informationen umfassen keine Informationen, die: (a) öffentlich zugänglich sind oder werden; (b) der empfangenden Partei bereits bekannt waren; (c) unabhängig entwickelt wurden; oder (d) rechtmäßig und ohne Einschränkungen von einem Dritten bezogen wurden.</p>
+
+  <h2 class="en">5. Term</h2>
+  <h2 class="de">5. Laufzeit</h2>
+  
+  <p class="en">This Agreement shall remain in effect for <span class="editable" contenteditable="true" data-field="termYears" data-placeholder="2">2</span> years from the date of execution. Obligations of confidentiality shall survive for <span class="editable" contenteditable="true" data-field="survivalYears" data-placeholder="5">5</span> years after disclosure.</p>
+  <p class="de">Diese Vereinbarung bleibt für <span class="editable" contenteditable="true" data-field="termYears" data-placeholder="2">2</span> Jahre ab Unterzeichnung in Kraft. Vertraulichkeitsverpflichtungen überdauern für <span class="editable" contenteditable="true" data-field="survivalYears" data-placeholder="5">5</span> Jahre nach der Offenlegung.</p>
+
+  <h2 class="en">6. Return of Materials</h2>
+  <h2 class="de">6. Rückgabe von Materialien</h2>
+  
+  <p class="en">Upon termination or request, the Receiving Party shall promptly return or destroy all Confidential Information and certify destruction in writing.</p>
+  <p class="de">Bei Beendigung oder auf Anfrage wird die empfangende Partei unverzüglich alle vertraulichen Informationen zurückgeben oder vernichten und die Vernichtung schriftlich bestätigen.</p>
+
+  <h2 class="en">7. Governing Law</h2>
+  <h2 class="de">7. Geltendes Recht</h2>
+  
+  <p class="en">This Agreement shall be governed by the laws of <span class="editable" contenteditable="true" data-field="govLaw" data-placeholder="Austria">Austria</span>, without regard to conflicts of law principles.</p>
+  <p class="de">Diese Vereinbarung unterliegt dem Recht von <span class="editable" contenteditable="true" data-field="govLaw" data-placeholder="Österreich">Österreich</span>, unter Ausschluss der Grundsätze des Kollisionsrechts.</p>
+
+  <h2 class="en">8. Signatures</h2>
+  <h2 class="de">8. Unterschriften</h2>
+  
+  <p class="en">IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.</p>
+  <p class="de">ZU URKUND DESSEN haben die Parteien diese Vereinbarung am oben genannten Datum unterzeichnet.</p>
+
+  <div class="signature-grid">
+    <!-- SYNYS Space Signers -->
+    <div class="signature-full">
+      <h3 class="en">Disclosing Party: SYNYS Space</h3>
+      <h3 class="de">Offenlegende Partei: SYNYS Space</h3>
+      <div class="sig-pad-section" style="max-width: 50%;">
+        <h4>✍️ <span class="en">Signer (SYNYS)</span><span class="de">Unterzeichner (SYNYS)</span></h4>
+        <p style="font-size:0.8rem;color:#64748b;margin:0 0 8px;">
+          Name: <span class="editable" contenteditable="true" data-field="synysSignerName" data-placeholder="First & Last Name">First & Last Name</span><br>
+          Title: <span class="editable" contenteditable="true" data-field="synysSignerTitle" data-placeholder="Founder / CEO">Founder / CEO</span>
+        </p>
+        <div class="sig-pad-wrap">
+          <canvas id="sigCanvas1" height="100"></canvas>
+          <div class="sig-hint" id="sigHint1">Hier unterschreiben ✍️</div>
+        </div>
+        <img class="sig-print-img" id="sigPrint1" alt="Signature" />
+        <div class="sig-pad-actions"><button onclick="clearSig(1)" style="color:#dc2626;">🗑️ Löschen</button></div>
+        <div class="sig-pad-status" id="sigStatus1">Noch nicht unterschrieben</div>
+      </div>
+    </div>
+
+    <!-- Exitstrategy LLC Signers -->
+    <div class="signature-full" style="border-top: 1px solid #e2e8f0; padding-top: 20px; margin-top: 10px;">
+      <h3 class="en">Receiving Party: Exitstrategy LLC (in Gründung)</h3>
+      <h3 class="de">Empfangende Partei: Exitstrategy LLC (in Gründung)</h3>
+    </div>
+
+    <div>
+      <div class="sig-pad-section">
+        <h4>✍️ Markus</h4>
+        <p style="font-size:0.8rem;color:#64748b;margin:0 0 8px;">
+          Name: <span class="editable" contenteditable="true" data-field="exitstrategySigner1Name" data-placeholder="Markus [Last Name]">Markus [Last Name]</span><br>
+          Title: <span class="editable" contenteditable="true" data-field="exitstrategySigner1Title" data-placeholder="Founding Member">Founding Member</span>
+        </p>
+        <div class="sig-pad-wrap">
+          <canvas id="sigCanvas2" height="100"></canvas>
+          <div class="sig-hint" id="sigHint2">Hier unterschreiben ✍️</div>
+        </div>
+        <img class="sig-print-img" id="sigPrint2" alt="Signature" />
+        <div class="sig-pad-actions"><button onclick="clearSig(2)" style="color:#dc2626;">🗑️ Löschen</button></div>
+        <div class="sig-pad-status" id="sigStatus2">Noch nicht unterschrieben</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sig-pad-section">
+        <h4>✍️ Marcel</h4>
+        <p style="font-size:0.8rem;color:#64748b;margin:0 0 8px;">
+          Name: <span class="editable" contenteditable="true" data-field="exitstrategySigner2Name" data-placeholder="Marcel [Last Name]">Marcel [Last Name]</span><br>
+          Title: <span class="editable" contenteditable="true" data-field="exitstrategySigner2Title" data-placeholder="Founding Member">Founding Member</span>
+        </p>
+        <div class="sig-pad-wrap">
+          <canvas id="sigCanvas3" height="100"></canvas>
+          <div class="sig-hint" id="sigHint3">Hier unterschreiben ✍️</div>
+        </div>
+        <img class="sig-print-img" id="sigPrint3" alt="Signature" />
+        <div class="sig-pad-actions"><button onclick="clearSig(3)" style="color:#dc2626;">🗑️ Löschen</button></div>
+        <div class="sig-pad-status" id="sigStatus3">Noch nicht unterschrieben</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sig-pad-section">
+        <h4>✍️ Hagen</h4>
+        <p style="font-size:0.8rem;color:#64748b;margin:0 0 8px;">
+          Name: <span class="editable" contenteditable="true" data-field="exitstrategySigner3Name" data-placeholder="Hagen Schmidt">Hagen Schmidt</span><br>
+          Title: <span class="editable" contenteditable="true" data-field="exitstrategySigner3Title" data-placeholder="Founding Member">Founding Member</span>
+        </p>
+        <div class="sig-pad-wrap">
+          <canvas id="sigCanvas4" height="100"></canvas>
+          <div class="sig-hint" id="sigHint4">Hier unterschreiben ✍️</div>
+        </div>
+        <img class="sig-print-img" id="sigPrint4" alt="Signature" />
+        <div class="sig-pad-actions"><button onclick="clearSig(4)" style="color:#dc2626;">🗑️ Löschen</button></div>
+        <div class="sig-pad-status" id="sigStatus4">Noch nicht unterschrieben</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sig-pad-section">
+        <h4>✍️ Michael</h4>
+        <p style="font-size:0.8rem;color:#64748b;margin:0 0 8px;">
+          Name: <span class="editable" contenteditable="true" data-field="exitstrategySigner4Name" data-placeholder="Michael Fuchs">Michael Fuchs</span><br>
+          Title: <span class="editable" contenteditable="true" data-field="exitstrategySigner4Title" data-placeholder="Founding Member">Founding Member</span>
+        </p>
+        <div class="sig-pad-wrap">
+          <canvas id="sigCanvas5" height="100"></canvas>
+          <div class="sig-hint" id="sigHint5">Hier unterschreiben ✍️</div>
+        </div>
+        <img class="sig-print-img" id="sigPrint5" alt="Signature" />
+        <div class="sig-pad-actions"><button onclick="clearSig(5)" style="color:#dc2626;">🗑️ Löschen</button></div>
+        <div class="sig-pad-status" id="sigStatus5">Noch nicht unterschrieben</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="page-break-before: always; margin-top: 60px;">
+    <h2 class="en">Appendix A: Identification Documents</h2>
+    <h2 class="de">Anhang A: Ausweisdokumente</h2>
+    <p class="en">The following identification documents are securely attached to verify the identities of the signing parties.</p>
+    <p class="de">Die folgenden Ausweisdokumente sind sicher angehängt, um die Identität der unterzeichnenden Parteien zu überprüfen.</p>
+    
+    <div style="text-align: center; margin-top: 30px;">
+      <img src="file:///C:/Users/Hagen/Downloads/38833FF26BA1D.UnigramPreview_g9c9v27vpyspw!App/5242456280461417606_121.jpg" alt="Passport Copy 1" style="max-width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);" />
+      <img src="file:///C:/Users/Hagen/Downloads/38833FF26BA1D.UnigramPreview_g9c9v27vpyspw!App/5803322354405412605_121.jpg" alt="Passport Copy 2" style="max-width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);" />
+      <img src="file:///C:/Users/Hagen/Downloads/38833FF26BA1D.UnigramPreview_g9c9v27vpyspw!App/5818715298150944500_121.jpg" alt="Passport Copy 3" style="max-width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);" />
+      <img src="file:///C:/Users/Hagen/.gemini/antigravity-ide/brain/bbec9e32-b9e0-49d5-89f0-94c221f5abae/media__1779967594633.jpg" alt="Michael Fuchs Passport" style="max-width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);" />
+    </div>
+  </div>
+</div>
+
+<div style="font-size: 11px; color: #94a3b8; text-align: center; max-width: 600px; margin: 0 auto; padding-bottom: 20px;">
+  <strong>Legal Note:</strong> This document is protected and structured using OHM Best Practice Standard for digital signatures. Impressum: Exitstrategy LLC (in Gründung). <abbr title="Datenschutz-Grundverordnung — EU General Data Protection Regulation">DSGVO</abbr>-konform: Signatures are stored locally on device only and printed directly.
+</div>
+
+<div class="edit-banner" id="editBanner">
+  <span class="en">✏️ <strong>Click yellow fields</strong> to enter data. Sign below. Then print.</span>
+  <span class="de">✏️ <strong>Gelbe Felder anklicken</strong> um Daten einzutragen. Unten unterschreiben. Dann drucken.</span>
+  <span class="progress" id="editProgress">0 / 0</span>
+</div>
+
+<script>
+  var SK = "nda_synys_exitstrategy_fields"; 
+  var SIG_KEYS = ["nda_synys_sig1", "nda_exitstrategy_sig1", "nda_exitstrategy_sig2", "nda_exitstrategy_sig3", "nda_exitstrategy_sig4"]; 
+  var SIG_COUNT = 5;
+
+  function toggleLanguage() {
+    var body = document.body;
+    if(body.classList.contains('lang-en')) {
+      body.classList.remove('lang-en');
+      body.classList.add('lang-de');
+    } else {
+      body.classList.remove('lang-de');
+      body.classList.add('lang-en');
+    }
+  }
+
+  function initEditables(){
+    var f = document.querySelectorAll('.editable');
+    var s = JSON.parse(localStorage.getItem(SK) || '{}');
+    f.forEach(function(el){
+      var k = el.getAttribute('data-field');
+      if(s[k]){
+        el.textContent = s[k];
+        el.classList.add('filled');
+      }
+      el.addEventListener('input',function(){
+        var v = el.textContent.trim();
+        s[k] = v;
+        localStorage.setItem(SK, JSON.stringify(s));
+        document.querySelectorAll('.editable[data-field="'+k+'"]').forEach(function(o){
+          if(o !== el){
+            o.textContent = v;
+            o.classList.toggle('filled', v.length > 0);
+          }
+        });
+        el.classList.toggle('filled', v.length > 0);
+        updateProgress();
+      });
+      el.addEventListener('focus',function(){
+        if(el.textContent === el.getAttribute('data-placeholder')) el.textContent = '';
+      });
+      el.addEventListener('blur',function(){
+        if(!el.textContent.trim()){
+          el.textContent = el.getAttribute('data-placeholder');
+          el.classList.remove('filled');
+          delete s[k];
+          localStorage.setItem(SK, JSON.stringify(s));
+        }
+        updateProgress();
+      });
+    });
+    updateProgress();
+  }
+
+  function updateProgress(){
+    var f = document.querySelectorAll('.editable');
+    var u = {};
+    f.forEach(function(x){ u[x.getAttribute('data-field')] = x; });
+    var k = Object.keys(u);
+    var c = k.filter(function(x){ return u[x].classList.contains('filled'); }).length;
+    var el = document.getElementById('editProgress');
+    var body = document.body;
+    var isDe = body.classList.contains('lang-de');
+    var text = isDe ? ' Felder ausgefüllt' : ' fields filled';
+    if(el) el.textContent = c + ' / ' + k.length + text;
+  }
+
+  function clearAllFields(){
+    var body = document.body;
+    var isDe = body.classList.contains('lang-de');
+    var msg = isDe ? 'Alle Felder und Unterschriften löschen?' : 'Clear all fields and signatures?';
+    if(!confirm(msg)) return;
+    localStorage.removeItem(SK);
+    SIG_KEYS.forEach(function(k){ localStorage.removeItem(k); });
+    document.querySelectorAll('.editable').forEach(function(el){
+      el.textContent = el.getAttribute('data-placeholder');
+      el.classList.remove('filled');
+    });
+    for(var i=1; i<=SIG_COUNT; i++) clearSig(i);
+    updateProgress();
+  }
+
+  function initSigPads(){
+    for(var i=1; i<=SIG_COUNT; i++) (function(idx){
+      var c = document.getElementById('sigCanvas'+idx);
+      if(!c) return;
+      var ctx = c.getContext('2d');
+      var d = false;
+      function resize(){
+        var r = c.parentElement.getBoundingClientRect();
+        c.width = r.width - 4;
+        c.height = 100;
+        loadSig(idx);
+      }
+      resize();
+      window.addEventListener('resize', resize);
+      function gp(e){
+        var r = c.getBoundingClientRect();
+        var t = e.touches ? e.touches[0] : e;
+        return {x: t.clientX - r.left, y: t.clientY - r.top};
+      }
+      c.addEventListener('mousedown', function(e){ d=true; ctx.beginPath(); var p=gp(e); ctx.moveTo(p.x,p.y); hideHint(idx); });
+      c.addEventListener('mousemove', function(e){ if(!d) return; var p=gp(e); ctx.lineTo(p.x,p.y); ctx.stroke(); });
+      c.addEventListener('mouseup', function(){ d=false; saveSig(idx); });
+      c.addEventListener('mouseleave', function(){ d=false; saveSig(idx); });
+      c.addEventListener('touchstart', function(e){ e.preventDefault(); d=true; ctx.beginPath(); var p=gp(e); ctx.moveTo(p.x,p.y); hideHint(idx); }, {passive:false});
+      c.addEventListener('touchmove', function(e){ e.preventDefault(); if(!d) return; var p=gp(e); ctx.lineTo(p.x,p.y); ctx.stroke(); }, {passive:false});
+      c.addEventListener('touchend', function(){ d=false; saveSig(idx); });
+      ctx.strokeStyle = '#000'; ctx.lineWidth = 2; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      loadSig(idx);
+    })(i);
+  }
+
+  function saveSig(i){
+    var c = document.getElementById('sigCanvas'+i);
+    var d = c.toDataURL();
+    localStorage.setItem(SIG_KEYS[i-1], d);
+    var p = document.getElementById('sigPrint'+i);
+    if(p) p.src = d;
+    var s = document.getElementById('sigStatus'+i);
+    if(s){ s.textContent = '✅'; s.className = 'sig-pad-status done'; }
+  }
+
+  function loadSig(i){
+    var d = localStorage.getItem(SIG_KEYS[i-1]);
+    if(d){
+      var c = document.getElementById('sigCanvas'+i);
+      var ctx = c.getContext('2d');
+      var img = new Image();
+      img.onload = function(){ ctx.drawImage(img,0,0); };
+      img.src = d;
+      hideHint(i);
+      var p = document.getElementById('sigPrint'+i);
+      if(p) p.src = d;
+      var s = document.getElementById('sigStatus'+i);
+      if(s){ s.textContent = '✅'; s.className = 'sig-pad-status done'; }
+    }
+  }
+
+  function clearSig(i){
+    var c = document.getElementById('sigCanvas'+i);
+    if(!c) return;
+    c.getContext('2d').clearRect(0,0,c.width,c.height);
+    localStorage.removeItem(SIG_KEYS[i-1]);
+    var h = document.getElementById('sigHint'+i);
+    if(h) h.style.display = '';
+    var s = document.getElementById('sigStatus'+i);
+    if(s){ s.textContent = ''; s.className = 'sig-pad-status'; }
+    var p = document.getElementById('sigPrint'+i);
+    if(p) p.src = '';
+  }
+
+  function hideHint(i){
+    var h = document.getElementById('sigHint'+i);
+    if(h) h.style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){ initEditables(); initSigPads(); });
+</script>
+</body>
+</html>

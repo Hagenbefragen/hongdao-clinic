@@ -1,5 +1,6 @@
 {
-  "status": "qr",
-  "updatedAt": "2026-05-27T07:02:49.670Z",
-  "message": "Scan the QR code in the console or dashboard."
+  "status": "ready",
+  "updatedAt": "2026-05-28T13:01:16.313Z",
+  "message": "Connected successfully!",
+  "phoneNumber": "4367687668115"
 }

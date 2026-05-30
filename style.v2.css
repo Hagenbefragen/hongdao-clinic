@@ -503,6 +503,9 @@ section {
 /* Cards & Hover Effects */
 .card {
   background-color: white;
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(251,249,246,0.9)), url('images/hero_bg.png');
+  background-size: cover;
+  background-position: center;
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow-subtle);

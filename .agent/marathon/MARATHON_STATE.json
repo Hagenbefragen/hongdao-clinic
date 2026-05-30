@@ -1,0 +1,29 @@
+{
+  "marathon_id": "M-2026-0528-0001",
+  "created": "2026-05-28T11:20:00Z",
+  "updated": "2026-05-28T11:20:00Z",
+  "goal": "Integrate today's requested changes from Nanjing via WhatsApp Bridge",
+  "workflow": "custom",
+  "status": "IN_PROGRESS",
+  "token_guard": {
+    "steps_completed": 0,
+    "estimated_token_usage": "medium",
+    "checkpoint_interval": 5,
+    "danger_zone_reached": false
+  },
+  "steps": [
+    {
+      "id": 1,
+      "name": "Sync WhatsApp and Extract Requests",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "id": 2,
+      "name": "Process and Integrate Nanjing Changes",
+      "status": "PENDING"
+    }
+  ],
+  "context_summary": "Starting marathon to fetch Nanjing's latest requested changes and assets via WhatsApp bridge, and integrate them one by one into the project.",
+  "files_modified": [],
+  "resume_instructions": "Check sync_nanjing_chat.js output and whatsapp_inbox.json. Proceed with integrating Nanjing's requests from the inbox."
+}
