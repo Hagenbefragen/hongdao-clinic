@@ -244,7 +244,24 @@ const translations = {
     "endo-read-approach": "Treatment Approach & Case Studies",
     "footer-impressum": "Impressum / Legal Notice",
     "footer-privacy": "Privacy Policy",
-    "contact-wechat-wrapper": "<strong>WeChat:</strong> <a href=\"#\" class=\"read-article-btn\" data-article=\"wechat\" style=\"color: var(--terracotta); text-decoration: underline; font-weight: 500;\">Show QR Codes</a>"
+    "contact-wechat-wrapper": "<strong>WeChat:</strong> <a href=\"#\" class=\"read-article-btn\" data-article=\"wechat\" style=\"color: var(--terracotta); text-decoration: underline; font-weight: 500;\">Show QR Codes</a>",
+    "endo-meta-title": "Hong Dao TCM Clinic | Endometriosis Program",
+    "endo-page-hero-tag": "Endometriosis Program",
+    "endo-page-title": "A Journey Back to Your Origin",
+    "endo-page-subtitle": "Holistic Support for Women with Endometriosis in China",
+    "endo-page-header": "Your body is not fighting against you.<br><span style=\"font-size: 1.5rem; color: var(--text-dark);\">Perhaps it is time to stop fighting against it.</span>",
+    "endo-page-intro": "<p>Come with us to China.</p><p>To the roots of a medicine that has understood the language of the female body for millennia.</p><p>To the misty mountains of Yunnan.</p><p>To peace, acceptance, sisterhood, and new hope.</p><p>And perhaps a step closer to your feminine essence.</p>",
+    "endo-page-body-1": "<p>Perhaps you have already come a long way.</p><p>Perhaps your pain has been suppressed with hormones, perhaps you have already undergone surgeries, or you have been told that further interventions are inevitable. Many women with endometriosis live for years between symptom management, uncertainty, and the feeling that their body is working against them.</p><p><strong>But what if your body is not your opponent?</strong></p><p>What if the pain, exhaustion, inflammation, and cycle complaints speak a language that wants to be understood?</p><p>In Traditional Chinese Medicine, we do not view endometriosis as an isolated disease, but as an expression of a deeper imbalance. Instead of suppressing symptoms, we ask: Why has the body fallen out of balance? What does it want to tell us? And how can we support it to return to its natural order?</p>",
+    "endo-page-quote": "<p style=\"margin-bottom: 1rem;\">In a time when more and more women are looking for natural and holistic paths, China opens the door to thousands of years of knowledge that does not view the female body as a problem/object, but as an intelligent system striving for balance.</p><p style=\"font-weight: 600;\">Where modern medicine often asks, \"What do we need to remove?\", Chinese Medicine asks, \"What do we need to nourish so that the body finds its way back to its natural order?\"</p>",
+    "endo-week1-title": "Week 1: The Shenzhen Clinic",
+    "endo-week1-desc": "<p>Our journey begins in Shenzhen, where we spend the first week in our experienced TCM clinic. Through comprehensive diagnostics, we create an individual treatment plan tailored to your personal history, complaints, and constitution.</p><p>We look not only at physical symptoms but also at nutrition, lifestyle, stress, emotional strain, and the deeper patterns that may have contributed to the condition. Together we develop a sustainable path that will continue to support you even after the journey.</p><p>During this first week, we already begin your individual herbal therapy. In addition, we utilize modern biomedical methods such as the BianHu Bio-Electric Resonance Massage and other supportive technologies that can help stimulate blood circulation, tissue nourishment, and the body's natural regulatory processes.</p>",
+    "endo-page-poetic": "<p>Chinese medicine speaks of 血海 (Xuè Hǎi) – the Sea of Blood, of 衝脈 (Chōng Mài) – the Sea of Femininity and Fertility, of 子宮 (Zǐ Gōng) – the Palace of the Child. The language alone shows a deeply rooted reverence for the female body.</p><div class=\"endo-poetic-highlight\"><p>The womb is not an organ to be fought against.<br><strong>It is a palace.</strong></p><p style=\"margin-top: 1rem;\">The cycle is not a problem.<br><strong>It is a rhythm.</strong></p><p style=\"margin-top: 1rem;\">Menstruation is not a tedious side effect.<br><strong>It is a message.</strong></p></div>",
+    "endo-week2-title": "Week 2: Deep Transformation in Yunnan",
+    "endo-week2-desc-1": "<p>After the first week, we travel together into the magical nature of Yunnan. Surrounded by misty mountains, ancient forests, and the peace of rural China, we spend our time in a beautiful 5-star hotel, far from the noise and hectic pace of everyday life.</p><p>Here begins the deeper healing journey.</p><p>In China, we experience not only the medicine but also the wisdom of a culture that is increasingly turning back to its traditional roots. Back to nature. Back to cycles. Back to the connection between human and earth.</p>",
+    "endo-week2-poetic": "This second phase of the journey is dedicated to Yin.<br>To nourishing.<br>To receiving.<br>To letting go.<br>To remembering.",
+    "endo-week2-desc-2": "<p>Many women with endometriosis have learned over years to fight, endure, and function. Here you can experience what it feels like to stop working against your body, and instead work with it.</p><p>Through sufficient sleep, deep relaxation, nourishing food, gentle movement, Qi Gong, breathwork, meditation, and plenty of time in nature, we create the conditions where recovery becomes possible in the first place.</p><p>We relearn what it means as a woman to live with the natural rhythms of life – with ebb and flow, activity and rest, Yang and Yin.</p><p>Throughout the entire journey, we continue the herbal therapy and observe together the changes on physical, emotional, and energetic levels. You will be carried and supported by an experienced team.</p>",
+    "endo-page-cta-text": "This journey is not a promise of healing.<br>It is an invitation.<br>An invitation to discover a different path.<br>A path based not on suppression, but on understanding.<br>Not on fighting, but on cooperation.<br>Not on separation, but on reconnection.<br><br>A journey back to your body.<br>Back to your femininity.<br>Back to your origin.",
+    "endo-page-cta-btn": "Schedule a Consultation"
   },
   de: {
     // Navigation
@@ -484,7 +501,24 @@ const translations = {
     "endo-read-approach": "Behandlungsansatz & Fallbeispiele",
     "footer-impressum": "Impressum",
     "footer-privacy": "Datenschutz",
-    "contact-wechat-wrapper": "<strong>WeChat:</strong> <a href=\"#\" class=\"read-article-btn\" data-article=\"wechat\" style=\"color: var(--terracotta); text-decoration: underline; font-weight: 500;\">QR-Codes anzeigen</a>"
+    "contact-wechat-wrapper": "<strong>WeChat:</strong> <a href=\"#\" class=\"read-article-btn\" data-article=\"wechat\" style=\"color: var(--terracotta); text-decoration: underline; font-weight: 500;\">QR-Codes anzeigen</a>",
+    "endo-meta-title": "Hong Dao TCM Clinic | Endometriose Programm",
+    "endo-page-hero-tag": "Endometriose Programm",
+    "endo-page-title": "Eine Reise zurück zu deinem Ursprung",
+    "endo-page-subtitle": "Ganzheitliche Begleitung für Frauen mit Endometriose in China",
+    "endo-page-header": "Dein Körper kämpft nicht gegen dich.<br><span style=\"font-size: 1.5rem; color: var(--text-dark);\">Vielleicht ist es an der Zeit, aufzuhören gegen ihn zu kämpfen.</span>",
+    "endo-page-intro": "<p>Komm mit uns nach China.</p><p>Zu den Wurzeln einer Medizin, die seit Jahrtausenden die Sprache des weiblichen Körpers versteht.</p><p>Zu den Nebelbergen Yunnans.</p><p>Zu Ruhe, Akzeptanz, Gemeinschaft als Frauen und neuer Hoffnung.</p><p>Und vielleicht ein Stück näher zu deiner weiblichen Essenz</p>",
+    "endo-page-body-1": "<p>Vielleicht hast du bereits einen langen Weg hinter dir.</p><p>Vielleicht wurden deine Schmerzen mit Hormonen unterdrückt, vielleicht hast du bereits Operationen hinter dir oder dir wurde gesagt, dass weitere Eingriffe unvermeidbar sind. Viele Frauen mit Endometriose leben jahrelang zwischen Symptombehandlung, Unsicherheit und dem Gefühl, dass ihr Körper gegen sie arbeitet.</p><p><strong>Doch was wäre, wenn dein Körper nicht dein Gegner ist?</strong></p><p>Was wäre, wenn die Schmerzen, Erschöpfung, Entzündungen und Zyklusbeschwerden eine Sprache sprechen, die verstanden werden möchte?</p><p>In der Traditionellen Chinesischen Medizin betrachten wir Endometriose nicht als isolierte Erkrankung, sondern als Ausdruck eines tieferen Ungleichgewichts. Statt Symptome zu unterdrücken, fragen wir: Warum ist der Körper aus seiner Balance geraten? Was möchte er uns mitteilen? Und wie können wir ihn dabei unterstützen, zu seiner natürlichen Ordnung zurückzufinden?</p>",
+    "endo-page-quote": "<p style=\"margin-bottom: 1rem;\">In einer Zeit, in der immer mehr Frauen nach natürlichen und ganzheitlichen Wegen suchen, öffnet uns China die Tür zu einem jahrtausendealten Wissen, das den weiblichen Körper nicht als Problem/Objekt betrachtet, sondern als intelligentes System, das nach Balance strebt.</p><p style=\"font-weight: 600;\">Wo die moderne Medizin oft fragt: „Was müssen wir entfernen?“, fragt die Chinesische Medizin: „Was müssen wir nähren, damit der Körper wieder in seine natürliche Ordnung findet?“</p>",
+    "endo-week1-title": "Woche 1: Die Klinik in Shenzhen",
+    "endo-week1-desc": "<p>Unsere Reise beginnt in Shenzhen, wo wir die erste Woche in einer erfahrenen TCM-Klinik verbringen. Durch eine umfassende Diagnostik erstellen wir einen individuellen Therapieplan, der auf deine persönliche Geschichte, deine Beschwerden und deine Konstitution abgestimmt ist.</p><p>Wir betrachten nicht nur die körperlichen Symptome, sondern auch Ernährung, Lebensstil, Stress, emotionale Belastungen und die tieferen Muster, die zu der Erkrankung beigetragen haben könnten. Gemeinsam entwickeln wir einen nachhaltigen Weg, der dich auch nach der Reise weiter begleiten kann.</p><p>Bereits in dieser ersten Woche beginnen wir mit deiner individuellen Kräutertherapie. Ergänzend nutzen wir moderne biomedizinische Verfahren wie die BianHu Bio-Medizinische Resonanz-Massage sowie weitere unterstützende Technologien, die dabei helfen können, Durchblutung, Gewebeversorgung und die natürlichen Regulationsprozesse des Körpers anzuregen.</p>",
+    "endo-page-poetic": "<p>Die Chinesische Medizin spricht von 血海 (Xuè Hǎi) – dem Meer des Blutes, von 衝脈 (Chōng Mài) – dem Meer der Weiblichkeit und Fruchtbarkeit, von 子宮 (Zǐ Gōng) – dem Palast des Kindes. Allein die Sprache zeigt eine tief verwurzelte Ehrfurcht vor dem weiblichen Körper.</p><div class=\"endo-poetic-highlight\"><p>Die Gebärmutter ist kein Organ, das bekämpft werden muss.<br><strong>Sie ist ein Palast.</strong></p><p style=\"margin-top: 1rem;\">Der Zyklus ist kein Problem.<br><strong>Er ist ein Rhythmus.</strong></p><p style=\"margin-top: 1rem;\">Die Menstruation ist kein lästiger Nebeneffekt.<br><strong>Sie ist eine Botschaft.</strong></p></div>",
+    "endo-week2-title": "Woche 2: Tiefe Transformation in Yunnan",
+    "endo-week2-desc-1": "<p>Nach der ersten Woche reisen wir gemeinsam in die magische Natur Yunnans. Umgeben von den Nebelbergen, uralten Wäldern und der Ruhe des ländlichen Chinas verbringen wir unsere Zeit in einem wunderschönen 5-Sterne-Hotel, fernab vom Lärm und der Hektik des Alltags.</p><p>Hier beginnt die tiefere Heilungsreise.</p><p>In China erleben wir nicht nur die Medizin, sondern auch die Weisheit einer Kultur, die sich zunehmend wieder auf ihre traditionellen Wurzeln besinnt. Zurück zur Natur. Zurück zu den Zyklen. Zurück zur Verbindung zwischen Mensch und Erde.</p>",
+    "endo-week2-poetic": "Diese zweite Phase der Reise ist dem Yin gewidmet.<br>Dem Nähren.<br>Dem Empfangen.<br>Dem Loslassen.<br>Dem Erinnern.",
+    "endo-week2-desc-2": "<p>Viele Frauen mit Endometriose haben über Jahre gelernt zu kämpfen, durchzuhalten und zu funktionieren. Hier darfst du erfahren, wie es sich anfühlt, nicht mehr gegen deinen Körper zu arbeiten, sondern mit ihm.</p><p>Durch ausreichend Schlaf, tiefgehende Entspannung, nährendes Essen, sanfte Bewegung, Qi Gong, Atemarbeit, Meditation und viel Zeit in der Natur schaffen wir die Bedingungen, in denen Regeneration überhaupt erst möglich wird.</p><p>Wir lernen wieder, was es bedeutet, als Frau mit den natürlichen Rhythmen des Lebens zu leben – mit Ebbe und Flut, Aktivität und Ruhe, Yang und Yin.</p><p>Während der gesamten Reise begleiten wir die Kräutertherapie weiter und beobachten gemeinsam die Veränderungen auf körperlicher, emotionaler und energetischer Ebene. Du wirst von einem erfahrenen Team getragen und unterstützt.</p>",
+    "endo-page-cta-text": "Diese Reise ist kein Versprechen auf Heilung.<br>Sie ist eine Einladung.<br>Eine Einladung, einen anderen Weg kennenzulernen.<br>Einen Weg, der nicht auf Unterdrückung basiert, sondern auf Verständnis.<br>Nicht auf Kampf, sondern auf Kooperation.<br>Nicht auf Trennung, sondern auf Rückverbindung.<br><br>Eine Reise zurück zu deinem Körper.<br>Zurück zu deiner Weiblichkeit.<br>Zurück zu deinem Ursprung.",
+    "endo-page-cta-btn": "Beratungsgespräch vereinbaren"
   }
 };
 
@@ -583,7 +617,7 @@ const endometriosisPricing = {
 };
 
 // Global App State
-let currentLang = 'de'; // Default to German
+let currentLang = localStorage.getItem('preferredLanguage') || 'de'; // Load persistent language or default to German
 let selectedDuration = '2w'; // Default to 2 weeks
 let selectedTier = 'premium'; // Default to Premium Retreat
 
@@ -616,10 +650,13 @@ function initLanguage() {
 
 function setLanguage(lang) {
   currentLang = lang;
+  localStorage.setItem('preferredLanguage', lang);
   
   // Update toggle buttons active class
-  document.getElementById("lang-de").classList.toggle("active", lang === 'de');
-  document.getElementById("lang-en").classList.toggle("active", lang === 'en');
+  const deBtn = document.getElementById("lang-de");
+  const enBtn = document.getElementById("lang-en");
+  if (deBtn) deBtn.classList.toggle("active", lang === 'de');
+  if (enBtn) enBtn.classList.toggle("active", lang === 'en');
   
   // Translate static data-i18n elements
   document.querySelectorAll("[data-i18n]").forEach(element => {

@@ -419,7 +419,7 @@
       </div>
 
       <!-- Grid of static programs -->
-      <div class="grid-3" style="margin-bottom: 5rem; align-items: stretch;">
+      <div class="grid-2" style="margin-bottom: 5rem; align-items: stretch;">
         <!-- 1-day Shenzhen program -->
         <div class="card" style="display: flex; flex-direction: column;">
           <div class="card-img-wrapper" style="height: 280px;">
@@ -462,26 +462,89 @@
             </div>
           </div>
         </div>
-        
-        <!-- Endometriose program card -->
-        <div class="card" style="display: flex; flex-direction: column;">
-          <div class="card-img-wrapper" style="height: 280px; background-color: #fcecdd; display: flex; align-items: center; justify-content: center;">
-            <img src="images/endo_cartoon.jpg" alt="Endometriosis Pathway" class="card-img" style="object-fit: contain; width: 100%; height: 100%;">
-          </div>
-          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <span class="subtitle-serif" style="font-size: 1rem;" data-i18n="treatment-1-title">Endometriose & Frauengesundheit</span>
-              <h3 class="title-small" style="margin: 0.5rem 0;" data-i18n="endo-program-title">Endometriose-Programm</h3>
-              <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="endo-program-desc">
-                Ein spezialisiertes, individuell anpassbares Gesundheitspflege-Programm für Frauen. Enthält Kräuterrezepturen, Womb-Massagen, Sound Healing, Ernährungsanalyse und Begleitung.
-              </p>
+      </div>
+
+      <!-- Endometriosis Healing Program Simulator -->
+      <div class="endo-card">
+        <div class="grid-2">
+          <div>
+            <div class="card-img-wrapper" style="border-radius: var(--border-radius); overflow: hidden; margin-bottom: 1.5rem; height: 350px; background-color: #fcecdd; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-subtle);">
+              <img src="images/mountain_herbs_womb.jpg" alt="Traditional Herbal Foraging for Women's Health & Womb Care" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div style="margin-top: 2rem; display: flex; gap: 0.5rem; justify-content: space-between; align-items: center; flex-wrap: wrap; width: 100%;">
-              <span style="font-weight: 600; color: var(--terracotta);" data-i18n="endo-price">Kostenbeitrag auf Anfrage</span>
-              <div style="display: flex; gap: 0.5rem;">
-                <a href="endometriosis.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem; border-color: var(--terracotta); color: var(--terracotta);" data-i18n="endo-details-link">Details ansehen</a>
-                <a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Jetzt bewerben</a>
+            <span class="subtitle-serif" style="font-size: 1rem;" data-i18n="treatment-1-title">Endometriose & Frauengesundheit</span>
+            <h3 class="title-medium" style="font-size: 2.2rem; line-height: 1.2;" data-i18n="endo-program-title">Endometriose-Programm</h3>
+            <p style="color: var(--text-muted); margin: 1.5rem 0; font-size: 0.95rem;" data-i18n="endo-program-desc">
+              Ein spezialisiertes, 1-4 wöchiges Heilprogramm für Frauen, individuell anpassbar. Enthält Kräutermedizin (als Pulver oder Paste zum Mitnehmen), Womb-Massagen, Sound Healing, Ernährungsanalyse und langfristige Begleitung.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+              <a href="endometriosis.html" class="btn btn-outline" style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.6rem 1.2rem; border-color: var(--terracotta); color: var(--terracotta);">
+                📖 <span data-i18n="endo-read-approach">Behandlungsansatz & Fallbeispiele</span>
+              </a>
+            </div>
+            
+            <p style="font-weight: 600; margin-bottom: 0.8rem;" data-i18n="endo-select-duration">Programmdauer wählen:</p>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+              <button id="dur-1w" class="btn btn-outline" style="padding: 0.5rem 1.2rem;" data-i18n="duration-1w">1 Woche</button>
+              <button id="dur-2w" class="btn btn-outline active" style="padding: 0.5rem 1.2rem;" data-i18n="duration-2w">2 Wochen</button>
+              <button id="dur-4w" class="btn btn-outline" style="padding: 0.5rem 1.2rem;" data-i18n="duration-4w">4 Wochen</button>
+            </div>
+
+            <div class="pricing-toggle-container" style="margin: 0; max-width: 100%;">
+              <button id="tier-basic" class="pricing-toggle-btn" data-i18n="package-basic">Ohne Unterkunft (Ambulant)</button>
+              <button id="tier-premium" class="pricing-toggle-btn active" data-i18n="package-premium">Premium (Mit Hotel & Küche)</button>
+            </div>
+          </div>
+
+          <div style="background-color: var(--bg-cream-light); border-radius: var(--border-radius); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h4 style="font-weight: 600; color: var(--text-dark);" data-i18n="endo-included-title">Inklusive Leistungen:</h4>
+              <ul id="endo-features-list" class="feature-list" style="font-size: 0.9rem; color: var(--text-muted);">
+                <!-- Dynamically generated in JS -->
+              </ul>
+            </div>
+            
+            <div>
+              <div class="price-display">
+                <span id="endo-price-amount" class="price-amount">€3500,-</span>
+                <div id="endo-price-period" class="price-period" data-i18n="duration-2w">2 Wochen Programm</div>
               </div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-bottom: 1rem;" data-i18n="endo-price-note">
+                *Hinweis: Alle Preise beinhalten keine individuell verschreibungspflichtige Kräutermedizin.
+              </p>
+              <a href="#contact" class="btn btn-terracotta apply-trigger" style="width: 100%; text-align: center;" data-i18n="nav-apply">Jetzt bewerben</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Yunnan Partner Hotel Experience -->
+  <section id="retreat" class="blue-bg" style="background-color: var(--hellblau-sky); padding: 8rem 5%;">
+    <div class="container">
+      <div class="yunnan-showcase">
+        <div class="yunnan-grid">
+          <div class="yunnan-images">
+            <img src="images/yunnan_hotel1.png" alt="Partner Hotel Pool" class="yunnan-img">
+            <img src="images/yunnan_hotel2.png" alt="Yunnan Mountain View" class="yunnan-img">
+            <img src="images/wudang_guesthouse.jpg" alt="Traditional Wudang Guesthouse operated by Master Yin Chen Zi" class="yunnan-img">
+            <img src="images/wuyishan_landscape.png" alt="Breathtaking Wuyi Shan and Yunnan Mountain Landscape" class="yunnan-img">
+          </div>
+          <div class="yunnan-details">
+            <span class="subtitle-serif" style="color: var(--hellblau-dark);">Spiritual Nature Extension</span>
+            <h2 class="title-medium" style="font-size: 2.4rem;" data-i18n="yunnan-title">3-tägiges Yunnan Natur-Retreat</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;" data-i18n="yunnan-desc-1">
+              Erweitern Sie Ihre Behandlung mit einem 3-tägigen Naturaufenthalt. Nach den ersten 3-4 Tagen Diagnose und Therapie in der Shenzhen-Klinik reisen Sie direkt in das malerische Yunnan.
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="yunnan-desc-2">
+              Erleben Sie Gemeinschaft beim Pilze sammeln, entdecken Sie Teekultur und Minderheitenbräuche. Sie wohnen in einem luxuriösen Berghotel mit Pool, naturnah gelegen, mit exzellenter traditioneller chinesischer Küche.
+            </p>
+            <div style="background-color: var(--bg-cream-light); border-left: 3px solid var(--hellblau-dark); padding: 1rem; border-radius: 4px; font-size: 0.85rem; color: var(--text-muted);" data-i18n="yunnan-hotel-info">
+              Partnerhotel: Yunnan Horizon Sanctuary - Luxuriöses Öko-Resort mit atemberaubendem Pool und traditioneller Holzbauweise inmitten der Berge.
+            </div>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a>
+              <a href="documents/道蕈溯源——生命原力的唤醒与转化静修营.pdf" download class="btn btn-outline" style="border-color: var(--hellblau-dark); color: var(--hellblau-dark);" data-i18n="download-brochure-btn">Broschüre herunterladen (PDF)</a>
             </div>
           </div>
         </div>
