@@ -82,7 +82,7 @@ const translations = {
     "retreat-10day-date": "October 10th - October 20th, 2026",
     "retreat-10day-desc": "A complete immersion in TCM theory and health maintenance. 5 days of clinical observation in Shenzhen under Master Xu, followed by 5 days of Daoist lifestyle integration in the Wudang Mountains. Limited to 12 participants.",
     "retreat-10day-price": "€3,900 Cost Contribution (Early Bird)",
-    "retreat-10day-wix-link": "Wix Details",
+    "retreat-10day-wix-link": "Details ansehen",
     
     "retreat-1day-title": "1-3-5 Day TCM Clinical Training (Shenzhen)",
     "retreat-1day-desc": "Focused clinical training and masterclasses in Shenzhen. Ideal for practitioners and health enthusiasts wishing to experience direct clinical practice observation, pulse diagnosis introduction, and professional decoction preparation. Flexible attendance from 1 to 5 days.",
@@ -254,13 +254,13 @@ const translations = {
     "hero-cta-more": "Programme entdecken",
 
     // Introduction / Philosophy
-    "intro-title": "Alte Rezepturen als Fundament, Technologie als Flügel",
-    "intro-desc": "<p style=\"margin-bottom: 1rem;\">Die Hong Dao Klinik wurde von einem Team renommierter Experten der SHANGHANLUN 伤寒论 Lehre des aufgestiegenen Meisters ZHANG Zhongjings 张仲景 sowie Doktoranden der Fudan University gegründet und verbindet klassische chinesische Kräuterrezepturen mit moderner Technologie und Diagnostikverfahren.</p><p style=\"margin-bottom: 1rem;\">Unter dem Leitgedanken \u201eAlte Rezepturen als Fundament, Technologie als Flügel\u201c vereint die Klinik Forschung und Lehre in einem integrativen Konzept und dient Menschen weltweit.</p><p>Wir bieten individuell maßgeschneiderte Begleitung und Therapiepläne für Patient:innen an, die unter komplexen Erkrankungen wie Autoimmungeschehen, Stoffwechselerkrankungen wie Diabetes, Endometriose, hormonellen Störungen, Erschöpfungssyndrom, Krebs und Unfruchtbarkeit leiden.</p>",
+    "intro-title": "Klassische Rezepturen als Fundament, Technologie als Flügel",
+    "intro-desc": "<p style=\"margin-bottom: 1rem;\">Die Hong Dao Klinik wurde von einem Team renommierter Experten der SHANGHANLUN 伤寒论 Lehre des aufgestiegenen Meisters ZHANG Zhongjings 张仲景 sowie Doktoranden der Fudan University gegründet und verbindet klassische chinesische Kräuterrezepturen mit moderner Technologie und Diagnostikverfahren.</p><p style=\"margin-bottom: 1rem;\">Unter dem Leitgedanken „Klassische Rezepturen als Fundament, Technologie als Flügel“ vereint die Klinik Forschung und Lehre in einem integrativen Konzept und dient Menschen weltweit.</p><p>Wir bieten individuell maßgeschneiderte Begleitung und Therapiepläne für Patient:innen an, die unter komplexen Erkrankungen wie Autoimmungeschehen, Stoffwechselerkrankungen wie Diabetes, Endometriose, hormonellen Störungen, Erschöpfungssyndrom, Krebs und Unfruchtbarkeit leiden.</p>",
 
     // Masters & Team
-    "team-tag": "Traditionslinie",
-    "team-title": "Klassische Wurzeln & Ganzheitliche Zuwendung",
-    "team-subtitle": "Lernen Sie unser engagiertes Team kennen, das Brücken zwischen klassischer Shanghanlun-Lehre und moderner Genesung schlägt.",
+    "team-tag": "Unser Ärzteteam",
+    "team-title": "Bewahrer des Wissens & Klinische Experten",
+    "team-subtitle": "Lernen Sie unser engagiertes Team kennen, das Brücken zwischen Tradition und moderner Genesung schlägt.",
     "master-xu-title": "Chefarzt & TCM-Professor",
     "master-xu-desc": "Professor Xu Ruqi verfügt über mehr als 40 Jahre Erfahrung in Pulsdiagnostik und klassischer Kräutermedizin. Als klinischer Experte an der Pekinger Universität für Chinesische Medizin ist er weltweit bekannt für die Behandlung schwerer chronischer Krankheiten, Tumoren und gynäkologischer Leiden.",
     "doctor-1-title": "Direktorin der Klinik & Stammzelltherapie",
@@ -277,7 +277,7 @@ const translations = {
     "visionary-deng-title": "Heilpraktikerin, Qi Gong & Klangbegleitung",
     "visionary-deng-desc": "Heilpraktikerin Deng Nanjing übersetzt die Konsultationen und Befunde von Professor Xu verlässlich ins Deutsche, Englische, Italienische, Spanische und Mandarin. Begleitend leitet sie Qi Gong, die 6 heilenden Klänge, Klangsitzungen und Teezeremonien und unterstützt Sie bei allen organisatorischen Anliegen während Ihres Aufenthaltes.",
     "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Klangbegleitung & Patientenbetreuung. 5 Sprachen.",
-    "team-grid-title": "Bewahrer des Wissens & Klinische Experten",
+    "team-grid-title": "Unser spezialisiertes Team",
     "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistenzarzt",
     "doctor-3-spec": "Assistenzarzt, spezialisiert auf Akupunktur und klinische Unterstützung unter Anleitung von Professor Xu.",
     "doctor-sound-name": "Cheung Mingli",
@@ -309,9 +309,9 @@ const translations = {
     
     "retreat-10day-title": "10-tägiges TCM-Training & Retreat",
     "retreat-10day-date": "10. Oktober - 20. Oktober 2026",
-    "retreat-10day-desc": "Komplette Immersion in TCM-Theorie & Gesundheitspflege. 5 Tage Hospitation in Shenzhen unter Meister Xu, gefolgt von 5 Tagen taoistischer Lebensführung in den Wudang-Bergen. Maximal 12 Teilnehmer.",
+    "retreat-10day-desc": "Komplette Immersion in TCM-Theorie & Praxis. 5 Tage klinische Hospitation in Shenzhen unter Meister Xu, gefolgt von 5 Tagen taoistischer Lebensführung in den Wudang-Bergen. Ein 3-monatiger Online-Vorbereitungskurs ist inklusive! Maximal 12 Teilnehmer.",
     "retreat-10day-price": "€3.900,- Kostenbeitrag (Frühbucher)",
-    "retreat-10day-wix-link": "Details auf Wix",
+    "retreat-10day-wix-link": "Details ansehen",
     
     "retreat-1day-title": "1- bis 5-tägiges klinisches TCM-Training (Shenzhen)",
     "retreat-1day-desc": "Lokale Tageskurse vor Ort. Ideal für Therapeuten und Interessierte zur Hospitation, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.",
