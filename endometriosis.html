@@ -210,6 +210,45 @@
             <p>Während der gesamten Reise begleiten wir die Kräutertherapie weiter und beobachten gemeinsam die Veränderungen auf körperlicher, emotionaler und energetischer Ebene. Du wirst von einem erfahrenen Team getragen und unterstützt.</p>
           </div>
           
+          
+          <!-- Pricing Calculator (Copied from index.html) -->
+          <div style="margin-top: 3rem; margin-bottom: 3rem;">
+            <div class="grid-2">
+              <div>
+                <p style="font-weight: 600; margin-bottom: 0.8rem;" data-i18n="endo-select-duration">Programmdauer wählen:</p>
+                <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                  <button id="dur-1w" class="btn btn-outline" style="padding: 0.5rem 1.2rem;" data-i18n="duration-1w">1 Woche</button>
+                  <button id="dur-2w" class="btn btn-outline active" style="padding: 0.5rem 1.2rem;" data-i18n="duration-2w">2 Wochen</button>
+                  <button id="dur-4w" class="btn btn-outline" style="padding: 0.5rem 1.2rem;" data-i18n="duration-4w">4 Wochen</button>
+                </div>
+
+                <div class="pricing-toggle-container" style="margin: 0; max-width: 100%;">
+                  <button id="tier-basic" class="pricing-toggle-btn" data-i18n="package-basic">Ohne Unterkunft (Ambulant)</button>
+                  <button id="tier-premium" class="pricing-toggle-btn active" data-i18n="package-premium">Premium (Mit Hotel & Küche)</button>
+                </div>
+              </div>
+
+              <div style="background-color: var(--bg-cream-light); border-radius: var(--border-radius); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <h4 style="font-weight: 600; color: var(--text-dark);" data-i18n="endo-included-title">Inklusive Leistungen:</h4>
+                  <ul id="endo-features-list" class="feature-list" style="font-size: 0.9rem; color: var(--text-muted);">
+                    <!-- Dynamically generated in JS -->
+                  </ul>
+                </div>
+                
+                <div style="margin-top: 1.5rem;">
+                  <div class="price-display">
+                    <span id="endo-price-amount" class="price-amount">€3500,-</span>
+                    <div id="endo-price-period" class="price-period" data-i18n="duration-2w">2 Wochen Programm</div>
+                  </div>
+                  <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-bottom: 1rem;" data-i18n="endo-price-note">
+                    *Hinweis: Alle Preise beinhalten keine individuell verschreibungspflichtige Kräutermedizin.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="endo-cta-box">
             <div class="endo-cta-text" data-i18n="endo-page-cta-text">
               Diese Reise ist kein Versprechen auf Heilung.<br>

@@ -51,7 +51,7 @@ const translations = {
     "team-grid-title": "Our Specialized Team",
     "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistant Physician",
     "doctor-3-spec": "Assistant Physician, specializing in acupuncture and clinical support under Professor Xu's guidance.",
-    "doctor-sound-name": "Cheung Mingli",
+    "doctor-sound-name": "Cheung Mingli (张明丽)",
     "doctor-sound-spec": "Nomad, yoga teacher for children and adults, fan dance therapist & sound worker with 10+ years of international experience.",
 
     // Specialized Treatments
@@ -308,7 +308,7 @@ const translations = {
     "team-grid-title": "Unser spezialisiertes Team",
     "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistenzarzt",
     "doctor-3-spec": "Assistenzarzt, spezialisiert auf Akupunktur und klinische Unterstützung unter Anleitung von Professor Xu.",
-    "doctor-sound-name": "Cheung Mingli",
+    "doctor-sound-name": "Cheung Mingli (张明丽)",
     "doctor-sound-spec": "Nomadin, Yogalehrerin für Kinder und Erwachsene, Fächer-Tanz-Therapeutin & Klangarbeiterin mit 10+ Jahren internationaler Erfahrung.",
 
     // Specialized Treatments
@@ -1784,9 +1784,9 @@ const articlesContent = {
   },
   cheung: {
     de: {
-      title: "Cheung Mingli – Nomadin, Yogalehrerin & Klangarbeiterin",
-      body: `
-        <p><strong>Cheung Mingli</strong> ist eine Nomadin und Weltenbummlerin mit über 10 Jahren internationaler Erfahrung. Sie integriert Klangtherapie, Bewegung, Atemarbeit und rituelle Praktiken, um die Regulierung des Nervensystems und das ganzheitliche Wohlbefinden in verschiedenen Gemeinschaften weltweit zu unterstützen.</p>
+      title: "Cheung Mingli (张明丽) – Nomadin, Yogalehrerin & Klangarbeiterin",
+      content: `
+        <p><strong>Cheung Mingli (张明丽)</strong> ist eine Nomadin und Weltenbummlerin mit über 10 Jahren internationaler Erfahrung. Sie integriert Klangtherapie, Bewegung, Atemarbeit und rituelle Praktiken, um die Regulierung des Nervensystems und das ganzheitliche Wohlbefinden in verschiedenen Gemeinschaften weltweit zu unterstützen.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Methoden</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
