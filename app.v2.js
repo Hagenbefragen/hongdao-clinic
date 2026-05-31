@@ -610,7 +610,7 @@ const endometriosisPricing = {
         "Kulturprogramm mit ethnischen Minderheiten",
         "Tägliche Mahlzeiten aus der TCM-Heilküche in der Klinik",
         "Integration & Beratung zu Stammzellentherapie",
-        "Herstellung der Kräuterarznei + 6 Monate ärztliche Begleitung"
+        "Herstellung der Kräuterarznei + 6 Monate ääärztliche Begleitung"
       ]
     }
   }
@@ -2628,7 +2628,59 @@ document.addEventListener("DOMContentLoaded", () => {
   bindArticleButtons();
 
   // Gallery More Button Logic
+  const galleryGrid = document.querySelector(".gallery-grid");
+  const galleryItems = document.querySelectorAll(".gallery-item");
   const galleryMoreBtn = document.getElementById("gallery-more-btn");
+
+  if (galleryGrid && galleryItems.length > 0) {
+    // Determine how many items fit in the first row
+    let firstRowY = galleryItems[0].offsetTop;
+    let itemsInFirstRow = 0;
+    
+    galleryItems.forEach(item => {
+      // Temporarily remove hidden-item to measure correctly
+      item.style.display = "block";
+      if (item.offsetTop === firstRowY) {
+        itemsInFirstRow++;
+      }
+    });
+
+    // Hide everything that is not in the first row
+    galleryItems.forEach((item, index) => {
+      if (index >= itemsInFirstRow) {
+        item.style.display = "none";
+        item.classList.add("hidden-item");
+      } else {
+        item.classList.remove("hidden-item");
+      }
+    });
+
+    // Handle Window Resize to Recalculate
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (galleryMoreBtn && galleryMoreBtn.style.display === "none") return; // Already expanded
+        
+        let newFirstRowY = galleryItems[0].offsetTop;
+        let newItemsInFirstRow = 0;
+        galleryItems.forEach(item => {
+          item.style.display = "block"; // reset to measure
+          if (item.offsetTop === newFirstRowY) newItemsInFirstRow++;
+        });
+
+        galleryItems.forEach((item, index) => {
+          if (index >= newItemsInFirstRow) {
+            item.style.display = "none";
+            item.classList.add("hidden-item");
+          } else {
+            item.classList.remove("hidden-item");
+          }
+        });
+      }, 200);
+    });
+  }
+
   if (galleryMoreBtn) {
     galleryMoreBtn.addEventListener("click", (e) => {
       e.preventDefault();
