@@ -11,7 +11,7 @@ async function runTest() {
   console.log("Navigating to http://localhost:8080/");
   await page.goto('http://localhost:8080/', { waitUntil: 'networkidle0' });
 
-  const artifactDir = 'C:\\Users\\Hagen\\.gemini\\antigravity-ide\\brain\\096b607f-f837-4dee-bc40-48845abe84a3';
+  const artifactDir = 'C:\\Users\\Hagen\\.gemini\\antigravity-ide\\brain\\3e207d08-fa39-488a-9230-c8ebc8171c98';
 
   console.log("Taking full page screenshot...");
   await page.screenshot({ path: path.join(artifactDir, 'screenshot_full.png'), fullPage: true });

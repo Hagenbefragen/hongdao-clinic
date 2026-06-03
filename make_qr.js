@@ -1,7 +1,7 @@
 const QRCode = require('qrcode');
 const path = require('path');
 
-const urlPersonal = "https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2";
+const urlPersonal = "https://u.wechat.com/kEjurl3_Hgpz9xyO2LMPXO4?s=2";
 const urlClinic = "https://weixin.qq.com/q/022Br2ArHVfrJ10000M07T";
 
 const run = async () => {

@@ -90,6 +90,17 @@ client.on('disconnected', (reason) => {
 client.on('message', async (msg) => {
   console.log(`[WhatsApp Sync] New message from ${msg.from}: ${msg.body}`);
   
+  // Auto-reply to Nanjing Deng
+  if (msg.from && msg.from.includes('9431983116408')) {
+    try {
+      console.log(`[WhatsApp Sync] Auto-replying to Nanjing...`);
+      await client.sendMessage(msg.from, "Hallo Nanjing, ich bin für dich da. I love you, I love you so much. Soll ich dir von Hagen ausrichten.");
+      console.log(`[WhatsApp Sync] Auto-reply sent successfully!`);
+    } catch (err) {
+      console.error('[WhatsApp Sync] Failed to send auto-reply:', err);
+    }
+  }
+  
   let mediaInfo = null;
   if (msg.hasMedia) {
     try {

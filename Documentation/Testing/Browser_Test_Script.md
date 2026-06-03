@@ -4,6 +4,7 @@
 | Date | Tests Run | Passed | Failed | Notes |
 |------|-----------|--------|--------|-------|
 | 2026-05-28 | 3 | - | - | Initial session for UI Verification |
+| 2026-05-31 | 3 | 3 | 0 | Automated run on active local port 8080. All modals verified. |
 
 ## Active Test Cases
 

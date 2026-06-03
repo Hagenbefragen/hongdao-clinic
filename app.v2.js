@@ -79,7 +79,7 @@ const translations = {
     "visionary-deng-desc": "Heilpraktikerin Deng Nanjing translates Professor Xu's consultations into German, English, Italian, Spanish, and Mandarin. She also leads Qi Gong sessions, 6 Healing Sounds practice, sound therapy, tea ceremonies, and supports guests with all organizational needs during their stay.",
     "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Sound Therapy & Patient Support. 5 Languages.",
     "team-grid-title": "Our Specialized Team",
-    "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistant Physician",
+    "doctor-3-name": "Dr. Chen Kainan (陈恺楠) — Assistant Physician",
     "doctor-3-spec": "Assistant Physician, specializing in acupuncture and clinical support under Professor Xu's guidance.",
     "doctor-sound-name": "Cheung Mingli (张明丽)",
     "doctor-sound-spec": "Nomad, yoga teacher for children and adults, fan dance therapist & sound worker with 10+ years of international experience.",
@@ -326,6 +326,7 @@ const translations = {
 
     // Navigation
     "nav-home": "Startseite",
+    "nav.reise": "Die Reise",
     "nav-about": "Über uns & Meister",
     "nav-treatments": "Gesundheitspflege",
     "nav-devices": "Medizintechnik",
@@ -366,7 +367,7 @@ const translations = {
     "visionary-deng-desc": "Heilpraktikerin Deng Nanjing übersetzt die Konsultationen und Befunde von Professor Xu verlässlich ins Deutsche, Englische, Italienische, Spanische und Mandarin. Begleitend leitet sie Qi Gong, die 6 heilenden Klänge, Klangsitzungen und Teezeremonien und unterstützt Sie bei allen organisatorischen Anliegen während Ihres Aufenthaltes.",
     "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Klangbegleitung & Patientenbetreuung. 5 Sprachen.",
     "team-grid-title": "Unser spezialisiertes Team",
-    "doctor-3-name": "Dr. Chen Kainan (陈凯南) — Assistenzarzt",
+    "doctor-3-name": "Dr. Chen Kainan (陈恺楠) — Assistenzarzt",
     "doctor-3-spec": "Assistenzarzt, spezialisiert auf Akupunktur und klinische Unterstützung unter Anleitung von Professor Xu.",
     "doctor-sound-name": "Cheung Mingli (张明丽)",
     "doctor-sound-spec": "Nomadin, Yogalehrerin für Kinder und Erwachsene, Fächer-Tanz-Therapeutin & Klangarbeiterin mit 10+ Jahren internationaler Erfahrung.",
@@ -623,6 +624,8 @@ const endometriosisPricing = {
         "Evening Meditation sessions",
         "Cultural program with ethnic minorities (from week 2)",
         "Daily TCM-based herbal soups at clinic",
+        "10 nights in a premium hotel and 3 warm meals per day",
+        "Transfer from Shenzhen to Yunnan",
         "Take-home medicine instruction + 3 months follow-up support"
       ],
       de: [
@@ -636,6 +639,8 @@ const endometriosisPricing = {
         "Abendmeditation",
         "Kulturprogramm mit ethnischen Minderheiten (ab Woche 2)",
         "Tägliche TCM-Kräutersuppen in der Klinik",
+        "10 Übernachtungen im Premium Hotel und 3 warme Mahlzeiten am Tag",
+        "Transfer von Shenzhen nach Yunnan",
         "Einweisung für Kräuter sowie 3 Monate Begleitung"
       ]
     }
@@ -698,10 +703,16 @@ document.addEventListener("DOMContentLoaded", () => {
 function initLanguage() {
   const deBtn = document.getElementById("lang-de");
   const enBtn = document.getElementById("lang-en");
+  const deMobileBtn = document.getElementById("lang-de-mobile");
+  const enMobileBtn = document.getElementById("lang-en-mobile");
   
   if (deBtn && enBtn) {
     deBtn.addEventListener("click", () => setLanguage('de'));
     enBtn.addEventListener("click", () => setLanguage('en'));
+  }
+  if (deMobileBtn && enMobileBtn) {
+    deMobileBtn.addEventListener("click", () => setLanguage('de'));
+    enMobileBtn.addEventListener("click", () => setLanguage('en'));
   }
   
   // Set initial language
@@ -715,8 +726,12 @@ function setLanguage(lang) {
   // Update toggle buttons active class
   const deBtn = document.getElementById("lang-de");
   const enBtn = document.getElementById("lang-en");
+  const deMobileBtn = document.getElementById("lang-de-mobile");
+  const enMobileBtn = document.getElementById("lang-en-mobile");
   if (deBtn) deBtn.classList.toggle("active", lang === 'de');
   if (enBtn) enBtn.classList.toggle("active", lang === 'en');
+  if (deMobileBtn) deMobileBtn.classList.toggle("active", lang === 'de');
+  if (enMobileBtn) enMobileBtn.classList.toggle("active", lang === 'en');
   
   // Translate static data-i18n elements
   document.querySelectorAll("[data-i18n]").forEach(element => {
@@ -953,7 +968,7 @@ function initBookingSlots() {
       }
 
       const encodedText = encodeURIComponent(waText);
-      const waUrl = `https://wa.me/5219841408335?text=${encodedText}`;
+      const waUrl = `https://wa.me/529841408335?text=${encodedText}`;
       window.open(waUrl, '_blank');
 
       // Show success toast on screen
@@ -1425,7 +1440,7 @@ const articlesContent = {
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Kontakt</h4>
         <p>
           E-Mail: <a href="mailto:nanjing.deng18@gmail.com" style="color: var(--terracotta); text-decoration: underline;">nanjing.deng18@gmail.com</a><br>
-          Telefon/WhatsApp: +52 1 984 140 8335 (Deng Nanjing)
+          Telefon/WhatsApp: +52 984 140 8335 (Deng Nanjing)
         </p>
 
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Haftungsausschluss</h4>
@@ -1448,7 +1463,7 @@ const articlesContent = {
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Contact Information</h4>
         <p>
           Email: <a href="mailto:nanjing.deng18@gmail.com" style="color: var(--terracotta); text-decoration: underline;">nanjing.deng18@gmail.com</a><br>
-          Phone/WhatsApp: +52 1 984 140 8335 (Deng Nanjing)
+          Phone/WhatsApp: +52 984 140 8335 (Deng Nanjing)
         </p>
 
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Disclaimer</h4>
@@ -1526,11 +1541,11 @@ const articlesContent = {
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; min-height: 48px;">
               Persönlicher Kontakt für allgemeine Fragen, Beratung und Retreat-Vorbereitungen.
             </p>
-            <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
+            <a href="https://u.wechat.com/kEjurl3_Hgpz9xyO2LMPXO4?s=2" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
               <img src="images/wechat_personal.png" alt="WeChat Personal Contact QR Code" style="width: 180px; height: 180px; display: block;">
             </a>
             <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
-              <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
+              <a href="https://u.wechat.com/kEjurl3_Hgpz9xyO2LMPXO4?s=2" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
                 Link direkt öffnen
               </a>
             </p>
@@ -1570,11 +1585,11 @@ const articlesContent = {
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; min-height: 48px;">
               Personal contact for general inquiries, consultation and retreat preparations.
             </p>
-            <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
+            <a href="https://u.wechat.com/kEjurl3_Hgpz9xyO2LMPXO4?s=2" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s ease;">
               <img src="images/wechat_personal.png" alt="WeChat Personal Contact QR Code" style="width: 180px; height: 180px; display: block;">
             </a>
             <p style="font-size: 0.9rem; margin-top: 1rem; font-weight: 500;">
-              <a href="https://u.wechat.com/EKrXuMndtBkOgA4VDjFYiuY?s=2" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
+              <a href="https://u.wechat.com/kEjurl3_Hgpz9xyO2LMPXO4?s=2" target="_blank" style="color: var(--terracotta); text-decoration: underline;">
                 Open Link Directly
               </a>
             </p>
@@ -1770,7 +1785,7 @@ const articlesContent = {
     de: {
       title: "Dr. Chen Kainan – Assistenzarzt",
       body: `
-        <p><strong>Dr. Chen Kainan (陈凯南)</strong> ist Assistenzarzt an der Hong Dao Klinik und unterstützt Professor Xu bei der täglichen klinischen Arbeit.</p>
+        <p><strong>Dr. Chen Kainan (陈恺楠)</strong> ist Assistenzarzt an der Hong Dao Klinik und unterstützt Professor Xu bei der täglichen klinischen Arbeit.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Schwerpunkte</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1788,7 +1803,7 @@ const articlesContent = {
     en: {
       title: "Dr. Chen Kainan – Assistant Physician",
       body: `
-        <p><strong>Dr. Chen Kainan (陈凯南)</strong> is an assistant physician at the Hong Dao Clinic, supporting Professor Xu in daily clinical operations.</p>
+        <p><strong>Dr. Chen Kainan (陈恺楠)</strong> is an assistant physician at the Hong Dao Clinic, supporting Professor Xu in daily clinical operations.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Focus Areas</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1866,9 +1881,9 @@ const articlesContent = {
       `
     },
     en: {
-      title: "Cheung Mingli – Nomad, Yoga Teacher & Sound Worker",
+      title: "Cheung Mingli (张明丽) – Nomad, Yoga Teacher & Sound Worker",
       body: `
-        <p><strong>Cheung Mingli</strong> is a nomad and world traveler with over 10 years of international experience. Mingli integrates sound therapy, movement, breathwork and ritual practices to support nervous system regulation and holistic wellbeing across diverse communities worldwide.</p>
+        <p><strong>Cheung Mingli (张明丽)</strong> is a nomad and world traveler with over 10 years of international experience. Mingli integrates sound therapy, movement, breathwork and ritual practices to support nervous system regulation and holistic wellbeing across diverse communities worldwide.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Modalities</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -2069,11 +2084,37 @@ const articlesContent = {
         <p>Die Kinder malen mit selbst hergestellten Pigmenten aus traditionellen Heilkräutern (wie Indigo für Blau, Kurkuma für Gelb, Färberdistel für Rot). Dies vermittelt einen spielerischen, sensorischen Zugang zur Naturapotheke.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Kurs-Details</h4>
-        <ul class="feature-list">
-          
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
           <li><strong>Zielgruppe</strong>: Kinder (3-10 Jahre) mit ihren Eltern</li>
           <li><strong>Gruppengröße</strong>: Maximal 7 Familien pro Kurs</li>
           <li><strong>Gebühr</strong>: 199 RMB (~25 €) inkl. aller Malutensilien und gesunder Kräutersnacks</li>
+          <li><strong>Kursleitung</strong>:
+            <ul>
+              <li>Deng Nanjing (Internationale Klangtherapeutin, Gründerin der Lebensfluss TCM-Klinik in Deutschland)</li>
+              <li>Dr. Jingwen Qiao (Lizenzierte TCM-Ärztin, promoviert an der Fudan-Universität)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Chinesische Originalversion / 中文版</h4>
+        <p style="font-weight: 600; color: var(--terracotta); margin-top: 1rem;">活动地点：深圳市南山区招商街道沿山社区南海大道1019号南山医疗器械产业园B108号深圳弘道中医诊所<br>活动时间：4月18日 10:00 AM / 4月19日 15:00 PM</p>
+        <p>我们相信，比知识更早萌芽的，是一个孩子感知世界的能力、安顿情绪的力量、自由表达的勇气。</p>
+        <p>“五音小精灵”正为此而来——这是一场中医艺术体验活动，用声音开启感官，用本草连接自然，用中医智慧贯穿始终。在德国音疗师与执业中医师的共同陪伴下，孩子的专注力、感知力、创造力，将在声音与色彩中悄悄生长。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">01 音乐·音声疗愈：</h5>
+        <p>孩子们将亲手体验来自世界各地的疗愈乐器：德国的音锣、尼泊尔的颂钵、法国的音叉、印度的手碟、南美的双音笛、墨西哥的音鼓等。德国音疗师带来国际前沿的音声疗愈方法，全程中英文双语引导。专业中医师用孩子们听得懂的语言，传递“五音入五脏”的千年智慧，讲述住在肝心脾肺肾里的“角徵宫商羽”五位小精灵的故事。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">02 绘画·本草力量：</h5>
+        <p>中医师带领孩子们认识常见中药材，观察形状、触摸纹理、嗅闻气味。孩子们用画笔描绘属于自己的“本草图鉴”，释放自由的表达。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">03 活动信息：</h5>
+        <ul class="feature-list">
+          <li>适合人群：3-10岁儿童（可一名家长陪同）</li>
+          <li>形式：小班精品，每场限7组家庭</li>
+          <li>活动体验价：199元</li>
+          <li>讲师介绍：
+            <ul>
+              <li>国际音声疗愈师 邓楠景 (Deng Nanjing)，德国Lebensfluss中医诊所创办人</li>
+              <li>执业中医师 乔靖文 (Qiao Jingwen)，复旦大学博士</li>
+            </ul>
+          </li>
         </ul>
       `
     },
@@ -2089,11 +2130,38 @@ const articlesContent = {
         <p>Children create artwork using pigments extracted directly from raw TCM herbs (such as Indigo for blue, Turmeric for yellow, and Safflower for red), creating a sensory connection with nature's healing elements.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Event Schedule & Cost</h4>
-        <ul class="feature-list">
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
           <li><strong>Schedule</strong>: April 18th at 10:00 AM & April 19th at 3:00 PM</li>
           <li><strong>Target Group</strong>: Children (3-10 years) accompanied by parents</li>
           <li><strong>Capacity</strong>: Limited to 7 families per session</li>
           <li><strong>Fee</strong>: 199 RMB (~$25 USD) including art materials and organic herbal snacks</li>
+          <li><strong>Facilitators</strong>:
+            <ul>
+              <li>Deng Nanjing (International Sound Therapist, founder of Lebensfluss TCM Clinic in Germany)</li>
+              <li>Dr. Jingwen Qiao (Licensed TCM Physician, Doctor from Fudan University)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Chinese Original Version / 中文版</h4>
+        <p style="font-weight: 600; color: var(--terracotta); margin-top: 1rem;">活动地点：深圳市南山区招商街道沿山社区南海大道1019号南山医疗器械产业园B108号深圳弘道中医诊所<br>活动时间：4月18日 10:00 AM / 4月19日 15:00 PM</p>
+        <p>我们相信，比知识更早萌芽的，是一个孩子感知世界的能力、安顿情绪的力量、自由表达的勇气。</p>
+        <p>“五音小精灵”正为此而来——这是一场中医艺术体验活动，用声音开启感官，用本草连接自然，用中医智慧贯穿始终。在德国音疗师与执业中医师的共同陪伴下，孩子的专注力、感知力、创造力，将在声音与色彩中悄悄生长。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">01 音乐·音声疗愈：</h5>
+        <p>孩子们将亲手体验来自世界各地的疗愈乐器：德国的音锣、尼泊尔的颂钵、法国的音叉、印度的手碟、南美的双音笛、墨西哥的音鼓等。德国音疗师带来国际前沿 of 音声疗愈方法，全程中英文双语引导。专业中医师用孩子们听得懂的语言，传递“五音入五脏”的千年智慧，讲述住在肝心脾肺肾里的“角徵宫商羽”五位小精灵的故事。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">02 绘画·本草力量：</h5>
+        <p>中医师带领孩子们认识常见中药材，观察形状、触摸纹理、嗅闻气味。孩子们用画笔描绘属于自己的“本草图鉴”，释放自由的表达。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">03 活动信息：</h5>
+        <ul class="feature-list">
+          <li>适合人群：3-10岁儿童（可一名家长陪同）</li>
+          <li>形式：小班精品，每场限7组家庭</li>
+          <li>活动体验价：199元</li>
+          <li>讲师介绍：
+            <ul>
+              <li>国际音声疗愈师 邓楠景 (Deng Nanjing)，德国Lebensfluss中医诊所创办人</li>
+              <li>执业中医师 乔靖文 (Qiao Jingwen)，复旦大学博士</li>
+            </ul>
+          </li>
         </ul>
       `
     }
@@ -2102,35 +2170,77 @@ const articlesContent = {
     de: {
       title: "Die Weisheit der Pilzheilkunde: Das Wood Wide Web in unserem Körper",
       body: `
-        <p>Unter der Erde erstreckt sich ein feines, weitreichendes Geflecht – das Myzel. Es verbindet Bäume, reguliert Nährstoffe und dient als neuronales Immunsystem des Waldes (bekannt als das „Wood Wide Web“). In der TCM arbeiten Vitalpilze ganz ähnlich in unserem Körper.</p>
+        <p>In der tiefen Schatzkammer der Traditionellen Chinesischen Medizin (TCM) gibt es eine besondere Klasse von „Einsiedlern“ – sie sind weder hohe Bäume noch üppige Kräuter, sondern Pilze, die im Stillen an dunklen, feuchten Orten wachsen.</p>
+        <p>Die Pilzheilkunde der TCM, als Schnittpunkt von Pilzreich und chinesischer Medizin, spielt seit der Antike eine unersetzliche Rolle bei der Stärkung der Lebensenergie, der Ausleitung pathogener Faktoren und der Regulierung der inneren Organe aufgrund ihrer einzigartigen Wachstumsgewohnheiten, milden Eigenschaften und bemerkenswerten Heilwirkungen.</p>
+        <p>Aus Sicht der modernen Wissenschaft sind Heilpilze reich an Wirkstoffen wie Polysacchariden, Triterpenen und Polypeptiden, die eine starke immunmodulatorische und tumorhemmende Wirkung zeigen. Sie entfalten zudem eine milde, durch die moderne Medizin unersetzliche Kraft in der Gynäkologie, insbesondere bei Endometriose.</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Vegetative Regulation & Knotenabbau</h4>
-        <p>Heilpilze (wie Reishi, Poria, Cordyceps) dringen tief in unsere feinen Membrangewebe (膜络 - Mo Luo) und Faszien ein. Sie wirken stark feuchtigkeitsausleitend, entzündungshemmend und harmonisieren das vegetative Nervensystem. In unserer Praxis setzen wir die Mykotherapie gezielt ein, um Gewebeverhärtungen (wie Zysten, Myome sowie Schilddrüsen- und Brustknoten) aufzulösen.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Häufige Heilpilze in der TCM:</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>茯苓 (Poria cocos)</strong>: Entwässert Feuchtigkeit, stärkt die Milz und beruhigt den Geist (Shen).</li>
+          <li><strong>猪苓 (Polyporus umbellatus)</strong>: Fördert das Wasserlassen und leitet Feuchtigkeit aus, ideal bei Lymphstau.</li>
+          <li><strong>灵芝 (Ganoderma lucidum / Reishi)</strong>: Nährt das Herz-Qi, beruhigt den Geist und stärkt das Immunsystem.</li>
+        </ul>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Fallstudien</h4>
         <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem;">
-          <p><strong>Fall 1 (Schilddrüsenknoten, 2.1cm)</strong>: Eine 48-jährige Patientin mit tastbaren Schilddrüsenknoten und Schluckbeschwerden. Nach 3 Monaten gezielter Therapie mit Poria (Fuling) und Reishi (Lingzhi) bildete sich der Knoten auf 0.9cm zurück, die Beschwerden verschwanden vollständig.</p>
+          <p><strong>Fall 1 (Schilddrüsenknoten, 2.1cm - Prof. Xu Ruqi)</strong>: Eine 48-jährige Patientin mit tastbaren Schilddrüsenknoten und Schluckbeschwerden. Nach 3 Monaten gezielter Therapie mit Poria (Fuling) und Reishi (Lingzhi) zur Schleim- und Stauungsauflösung bildete sich der Knoten auf 0.9cm zurück, die Beschwerden verschwanden vollständig.</p>
         </div>
-        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px;">
-          <p><strong>Fall 2 (Brustdrüsen-Hyperplasie & Angst)</strong>: Eine 38-jährige Patientin mit schmerzhaften Brustknoten (1.6cm) sowie ausgeprägter Unruhe und Schlaflosigkeit. Durch vegetative Regulation mit Pilzextrakten lösten sich die Knoten auf, das Herzklopfen verschwand und die Schlafqualität besserte sich dauerhaft.</p>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 2rem;">
+          <p><strong>Fall 2 (Brustdrüsen-Hyperplasie & Angst - Dr. Qiao Jingwen)</strong>: Eine 38-jährige Patientin mit schmerzhaften Brustknoten (1.6cm) sowie ausgeprägter Unruhe und Schlaflosigkeit. Durch vegetative Regulation mit Pilzextrakten in Kombination mit beruhigenden Kräutern lösten sich die Knoten auf, das Herzklopfen verschwand und die Schlafqualität besserte sich dauerhaft.</p>
         </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Chinesische Originalversion / 中文版</h4>
+        <p>在博大精深的中药宝库中，有一类特殊的“隐士”——它们既非高大的乔木，亦非繁茂的草本，而是默默生长于阴暗潮湿处的真菌。</p>
+        <p>菌类中药（Fungal Traditional Chinese Medicine）作为真菌界与中医药学交汇的结晶，自古以来便以其独特的生长习性、温和的药性以及显著的疗效，在扶正祛邪、调理脏腑中扮演着不可替代的角色。</p>
+        <p>从现代科学视角来看，菌类中药不仅富含多糖、三萜类、多肽等活性成分，展现出强大的免疫调节和抗肿瘤活性，更在妇科尤其是子宫内膜异位症（Endometriosis）的调理中，发挥着现代医学无法替代的温和力量。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">常用菌类中药介绍：</h5>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li>1. 茯苓 (Poria cocos)</li>
+          <li>2. 猪苓 (Polyporus umbellatus)</li>
+          <li>3. 灵芝 (Ganoderma lucidum)</li>
+        </ul>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">经典案例1 (徐汝奇 教授)：</h5>
+        <p>一甲状腺多发结节患者，伴有严重焦虑情绪。徐汝奇教授接诊后，辨证为肝郁气滞、痰瘀互结。以茯苓、猪苓等菌类中药为主药，辅以柴胡、郁金等疏肝解郁之品。治疗3个月后复查，结节明显缩小，焦虑情绪大幅改善。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">经典案例2 (乔靖文 博士)：</h5>
+        <p>一乳腺增生合并严重失眠与焦虑障碍患者，乔靖文博士以灵芝、茯苓等菌类中药配伍酸枣仁、百合等，发挥菌类中药的双向调节作用。服药2周后睡眠显著改善，1个月后乳房胀痛消失，焦虑状态评定呈轻度，生活质量提升。</p>
       `
     },
     en: {
       title: "The Wisdom of Fungal Medicine: Connecting the Wood Wide Web",
       body: `
-        <p>Beneath the forest floor lies a vast mycelial network connecting plant life, distributing nutrients, and acting as the Earth's neural immune system. In Traditional Chinese Medicine, medicinal mushrooms perform a similar biological role inside the human body.</p>
+        <p>In the profound treasury of Traditional Chinese Medicine (TCM), there is a special class of "hermits"—they are neither tall trees nor lush herbs, but fungi that grow quietly in dark, damp places.</p>
+        <p>Fungal Traditional Chinese Medicine, as the crystallization of the intersection of the fungal kingdom and Chinese medicine, has played an irreplaceable role in strengthening vital energy, expelling pathogenic factors, and regulating viscera since ancient times due to its unique growth habits, mild properties, and significant curative effects.</p>
+        <p>From the perspective of modern science, fungal Chinese medicine is not only rich in active ingredients such as polysaccharides, triterpenes, and polypeptides, showing strong immunomodulatory and anti-tumor activities, but also exerts a gentle power irreplaceable by modern medicine in the regulation of gynecology, especially endometriosis.</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Vegetative Regulation & Nodule Resolution</h4>
-        <p>Medicinal mushrooms (like Reishi, Poria, and Cordyceps) target the body's membrane network (膜络 - Mo Luo), which corresponds to the fascial and lymphatic systems. They clear chronic dampness, regulate immune responses, and calm the autonomic nervous system. We utilize clinical mycology to systematically disperse benign nodules, cysts, fibroids, and breast/thyroid hyperplasia.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Common Fungal TCM Herbs:</h4>
+        <ul class="feature-list" style="margin-bottom: 1.5rem;">
+          <li><strong>Poria (茯苓 - Poria cocos)</strong>: Drains dampness, strengthens the spleen, and calms the spirit.</li>
+          <li><strong>Polyporus (猪苓 - Polyporus umbellatus)</strong>: Promotes urination and drains dampness, ideal for lymphatic flow.</li>
+          <li><strong>Ganoderma (灵芝 - Ganoderma lucidum / Reishi)</strong>: Nourishes Heart Qi, calms the mind, and modulates immunity.</li>
+        </ul>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Case Studies</h4>
         <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem;">
-          <p><strong>Case 1 (Thyroid Nodule Regression)</strong>: A 48-year-old female presenting with a 2.1cm thyroid nodule and throat tightness. After a 3-month course of customized Poria & Ganoderma therapy, the nodule shrank to 0.9cm, resolving all clinical symptoms.</p>
+          <p><strong>Case 1 (Thyroid Nodule Regression - Prof. Xu Ruqi)</strong>: A patient presenting with multiple thyroid nodules accompanied by severe anxiety. Professor Xu Ruqi diagnosed it as Liver Qi stagnation with phlegm-blood stasis. He prescribed a formula focusing on fungal medicines such as Poria and Polyporus, supplemented by Radix Bupleuri and Radix Curcumae. After 3 months, nodules significantly shrank and anxiety subsided.</p>
         </div>
-        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px;">
-          <p><strong>Case 2 (Breast Hyperplasia & Insomnia)</strong>: A 38-year-old female presenting with painful breast nodules (1.6cm), palpitations, and anxiety-induced insomnia. Mycological regulation successfully dissolved the nodules and restored deep, restful sleep.</p>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 2rem;">
+          <p><strong>Case 2 (Breast Hyperplasia & Insomnia - Dr. Jingwen Qiao)</strong>: A patient presenting with breast hyperplasia combined with severe insomnia and anxiety. Dr. Jingwen Qiao formulated a prescription combining Ganoderma and Poria with Semen Ziziphi Spinosae and Bulbus Lilii. After 2 weeks, sleep improved; after 1 month, breast pain disappeared, and anxiety became mild.</p>
         </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Chinese Original Version / 中文版</h4>
+        <p>在博大精深的中药宝库中，有一类特殊的“隐士”——它们既非高大的乔木，亦非繁茂的草本，而是默默生长于阴暗潮湿处的真菌。</p>
+        <p>菌类中药（Fungal Traditional Chinese Medicine）作为真菌界与中医药学交汇的结晶，自古以来便以其独特的生长习性、温和的药性以及显著的疗效，在扶正祛邪、调理脏腑中扮演着不可替代的角色。</p>
+        <p>从现代科学视角来看，菌类中药不仅富含多糖、三萜类、多肽等活性成分，展现出强大的免疫调节和抗肿瘤活性，更在妇科尤其是子宫内膜异位症（Endometriosis）的调理中，发挥着现代医学无法替代 of 温和力量。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">常用菌类中药介绍：</h5>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li>1. 茯苓 (Poria cocos)</li>
+          <li>2. 猪苓 (Polyporus umbellatus)</li>
+          <li>3. 灵芝 (Ganoderma lucidum)</li>
+        </ul>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">经典案例1 (徐汝奇 教授)：</h5>
+        <p>一甲状腺多发结节患者，伴有严重焦虑情绪。徐汝奇教授接诊后，辨证为肝郁气滞、痰瘀互结。以茯苓、猪苓等菌类中药为主药，辅以柴胡、郁金等疏肝解郁之品。治疗3个月后复查，结节明显缩小，焦虑情绪大幅改善。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">经典案例2 (乔靖文 博士)：</h5>
+        <p>一乳腺增生合并严重失眠与焦虑障碍患者，乔靖文博士以灵芝、茯苓等菌类中药配伍酸枣仁、百合等，发挥菌类中药的双向调节作用。服药2周后睡眠显著改善，1个月后乳房胀痛消失，焦虑状态评定呈轻度，生活质量提升。</p>
       `
     }
   },
@@ -2147,8 +2257,30 @@ const articlesContent = {
           <li><strong>Neuromodulation & Vagus-Nerv</strong>: Die Vibrationen stimulieren den Vagus-Nerv, senken die Herzfrequenz und aktivieren den Parasympathikus (Ruhe- und Verdauungssystem).</li>
         </ul>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TCM-Prinzip: Nieren-Essenz und Klang</h4>
-        <p>Nach der TCM „steuern die Nieren das Wasser und öffnen sich in den Ohren“. Klangtherapie nährt die Nieren-Essenz (Jing), beruhigt das Herz (Shen) und bringt das Wasser-Element des Körpers wieder zum Fließen. Dies führt zu einer tiefen, lang anhaltenden Erleichterung bei Burnout und chronischem Stress.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Weitere wissenschaftliche Vertiefungen</h4>
+        <p><strong>Wasser als resonanter Leiter:</strong> Schall breitet sich in Wasser mit 1500 m/s aus (4-mal schneller als in der Luft). Dadurch können sich die Wellen augenblicklich im gesamten Körperwasser ausbreiten und die Zellmembranen massieren.</p>
+        <p><strong>TCM-Prinzip: Nieren-Essenz und Klang:</strong> Nach der TCM „steuern die Nieren das Wasser und öffnen sich in den Ohren“. Klangtherapie nährt die Nieren-Essenz (Jing), beruhigt das Herz (Shen) und bringt das Wasser-Element des Körpers wieder zum Fließen.</p>
+        <p><strong>Schumann-Resonanz:</strong> Die elektromagnetische Hintergrundfrequenz der Erde (7,83 Hz) liegt genau an der Grenze zwischen Alpha- und Theta-Wellen. Die Klangtherapie nutzt Instrumente wie nepalesische Klangschalen, um mit diesem natürlichen Grundton in Resonanz zu treten.</p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Chinesische Originalversion / 中文版</h4>
+        <p>人体即宇宙，声音是良方。健康是和谐共振，疾病是跑调失序。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第一章 身体的振动节律</h5>
+        <p>生命能量的本质是节律性的振动：<br>
+        - 宏观节律：心脏跳动（1-1.3 Hz）、呼吸律动（0.2-0.3 Hz）、肌纤维微小收缩（8-12 Hz）。<br>
+        - 微观振动：细胞膜在 kHz 至 MHz 频率持续振动以交换物质。<br>
+        - 脑电波：常态为 α波（8-12 Hz），深度放松和冥想时进入 θ波（4-8 Hz）。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第二章 声音疗愈的三条科学通路</h5>
+        <p>1. 物理共振：声波直接对器官、经络和细胞进行物理微按摩。<br>
+        2. 脑波同步：通过双耳节拍等声波引导脑电波进入放松频段。<br>
+        3. 神经调控：激活副交感神经，降低皮质醇，提高血清素，缓解焦虑。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第三章 水的共振密码</h5>
+        <p>人体约70%由水组成。声波在水中的传播速度为 1500 m/s，是空气 of 4倍。声波能迅速穿透全身，通过水分子集体同频共振来调节细胞代谢。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第四章 中医五音与六字诀</h5>
+        <p>- 五音对应五脏：《黄帝内经》记载角（肝）、徵（心）、宫（脾）、商（肺）、羽（肾）五音频率对应。<br>
+        - 六字诀呼吸法：“嘘”（肝）、“呵”（心）、“呼”（脾）、“呬”（肺）、“吹”（肾）、“嘻”（三焦）通过口型共振调节内脏。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第五章 舒曼共振 (Schumann Resonance)</h5>
+        <p>地球的电磁心跳基频为 7.83 Hz，正好处于脑电波的 α 和 θ 波交界，是生命的生物基准频率。声音疗愈利用颂钵等翻译并传递此频率。</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">研发团队：乔靖文 博士、邓榕 硕士、邓楠景 音疗师</p>
       `
     },
     en: {
@@ -2163,8 +2295,30 @@ const articlesContent = {
           <li><strong>Vagal Stimulation</strong>: Acoustic vibrations stimulate the vagus nerve, immediately shifting the nervous system from a sympathetic (fight-or-flight) state into parasympathetic recovery.</li>
         </ul>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TCM Principle: Kidney Jing & Water Element</h4>
-        <p>In TCM, the "Kidneys rule water and open to the ears." Sound healing directly nourishes Kidney Jing (vital essence), anchors the Heart Shen (spirit), and harmonizes the flow of fluids in the body, providing relief from chronic fatigue.</p>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Further Scientific Insights</h4>
+        <p><strong>Water as the Resonant Conduit:</strong> The human body is ~70% water. Sound travels at 1500 m/s in water (4x faster than air), allowing waves to propagate throughout the bodily fluids instantly and massage cell membranes.</p>
+        <p><strong>TCM Principle: Kidney Jing & Water Element:</strong> In TCM, the "Kidneys rule water and open to the ears." Sound healing directly nourishes Kidney Jing (vital essence), anchors the Heart Shen (spirit), and harmonizes the flow of fluids.</p>
+        <p><strong>Schumann Resonance:</strong> The Earth's background electromagnetic frequency (7.83 Hz) matches the Alpha/Theta brainwave border. Sound therapy uses instruments like Nepalese singing bowls to resonate with this natural baseline.</p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Chinese Original Version / 中文版</h4>
+        <p>人体即宇宙，声音是良方。健康是和谐共振，疾病是跑调失序。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第一章 身体的振动节律</h5>
+        <p>生命能量的本质是节律性的振动：<br>
+        - 宏观节律：心脏跳动（1-1.3 Hz）、呼吸律动（0.2-0.3 Hz）、肌纤维微小收缩（8-12 Hz）。<br>
+        - 微观振动：细胞膜在 kHz 至 MHz 频率持续振动以交换物质。<br>
+        - 脑电波：常态为 α波（8-12 Hz），深度放松和冥想时进入 θ波（4-8 Hz）。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第二章 声音疗愈的三条科学通路</h5>
+        <p>1. 物理共振：声波直接对器官、经络和细胞进行物理微按摩。<br>
+        2. 脑波同步：通过双耳节拍等声波引导脑电波进入放松频段。<br>
+        3. 神经调控：激活副交感神经，降低皮质醇，提高血清素，缓解焦虑。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第三章 水的共振密码</h5>
+        <p>人体约70%由水组成。声波在水中的传播速度为 1500 m/s，是空气的4倍。声波能迅速穿透全身，通过水分子集体同频共振来调节细胞代谢。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第四章 中医五音与六字诀</h5>
+        <p>- 五音对应五脏：《黄帝内经》记载角（肝）、徵（心）、宫（脾）、商（肺）、羽（肾）五音频率对应。<br>
+        - 六字诀呼吸法：“嘘”（肝）、“呵”（心）、“呼”（脾）、“呬”（肺）、“吹”（肾）、“嘻”（三焦）通过口型共振调节内脏。</p>
+        <h5 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">第五章 舒曼共振 (Schumann Resonance)</h5>
+        <p>地球的电磁心跳基频为 7.83 Hz，正好处于脑电波的 α 和 θ 波交界， is 生命的生物基准频率。声音疗愈利用颂钵等翻译并传递此频率。</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">研发团队：乔靖文 博士、邓榕 硕士、邓楠景 音疗师</p>
       `
     }
   },
