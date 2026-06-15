@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="yunnan-meta-title">Hong Dao TCM Clinic | Yunnan Tee-, Pilz- und Kräuter-Kulturreise</title>
+  <meta name="description" content="Intensive Natur-, Heil- und Kulturerfahrung in den Bergen Yunnans. Entdecken Sie alte Teewälder, Heilpilze, TCM und das Leben der Minderheitenvölker." data-i18n="yunnan-meta-desc">
+  <meta name="keywords" content="TCM Heilungsreise, Chinese Medicine Retreat, Qi Gong, Sound Healing, Yunnan Retreat, Tee Kulturreise, Heilpilze sammeln, TCM China, TCM travel China, Qigong retreat Yunnan">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  
+  <!-- Fonts & Stylesheet -->
+  <link rel="stylesheet" href="style.v2.css?v=2.0.3">
+
+  <style>
+    .yunnan-section {
+      padding: 6rem 5%;
+    }
+    .transform-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .transform-card {
+      background: var(--card-bg, #fff);
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: var(--border-radius, 8px);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-subtle);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .transform-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+    .experience-list-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    .experience-card {
+      background: var(--card-bg, #fff);
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: var(--border-radius, 8px);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-subtle);
+    }
+    .experience-card h3 {
+      font-size: 1.25rem;
+      color: var(--terracotta);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .showcase-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .showcase-gallery img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: var(--border-radius, 8px);
+      box-shadow: var(--shadow-subtle);
+      transition: transform 0.3s ease;
+    }
+    .showcase-gallery img:hover {
+      transform: scale(1.02);
+    }
+    .cta-box {
+      margin-top: 5rem;
+      padding: 3.5rem;
+      background-color: var(--terracotta);
+      color: white;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow-subtle);
+    }
+    .cta-text {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+    @media(max-width: 992px) {
+      .transform-grid {
+        grid-template-columns: 1fr;
+      }
+      .experience-list-grid {
+        grid-template-columns: 1fr;
+      }
+      .showcase-gallery {
+        grid-template-columns: 1fr;
+      }
+      .showcase-gallery img {
+        height: 250px;
+      }
+    }
+    .showcase-gallery img.hidden-item {
+      display: none !important;
+    }
+  </style>
+
+  <!-- Schema.org Event/Trip Structured Data for SEO & AI Search Agents -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "6-Tage Yunnan Tee-, Pilz- und Kräuter-Kulturreise (TCM Heilungsreise & Chinese Medicine Retreat)",
+    "description": "Erleben Sie eine transformative TCM Heilungsreise / Chinese Medicine Retreat mit Qi Gong, Sound Healing und Heilpilz-Suche in den Teewäldern Yunnans, China.",
+    "startDate": "2026-11-23",
+    "endDate": "2026-11-28",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Yunnan Horizon Sanctuary & Nan Nuo Shan",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Xishuangbanna, Yunnan",
+        "addressCountry": "CN"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "2200",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2026-06-11",
+      "url": "https://hongdao-tcm.clinic/yunnan-retreat.html"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Hong Dao TCM Clinic",
+      "url": "https://hongdao-tcm.clinic"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- App Layout Wrapper -->
+  <div class="app-layout">
+
+    <!-- Mobile Header (Visible only on small screens) -->
+    <div class="mobile-header">
+      <a href="index.html" class="logo-mobile">
+        <img src="images/logo_web.png" alt="Hong Dao TCM Clinic" class="logo-img">
+      </a>
+      <div class="lang-switcher" style="margin-left: auto; margin-right: 1rem;">
+        <button id="lang-de-mobile" class="lang-btn active">DE</button>
+        <button id="lang-en-mobile" class="lang-btn">EN</button>
+      </div>
+      <button class="hamburger-menu" id="hamburger-btn" aria-label="Menü öffnen/schließen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation (Desktop) / Fullscreen Menu (Mobile) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <a href="index.html" class="logo">
+          <img src="images/logo_web.png" alt="弘道中医 Hong Dao Yi Logo" class="logo-img">
+          <div class="logo-text">
+            Hong Dao
+            <span class="logo-sub">TCM CLINIC · 弘道中医</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#home" class="nav-link" data-i18n="nav-home">Startseite</a></li>
+          <li><a href="index.html#about" class="nav-link" data-i18n="nav-about">Über uns & Meister</a></li>
+          <li><a href="index.html#treatments" class="nav-link" data-i18n="nav-treatments">Behandlungen</a></li>
+          <li><a href="index.html#devices" class="nav-link" data-i18n="nav-devices">Medizintechnik</a></li>
+          <li><a href="index.html#programs" class="nav-link" data-i18n="nav-programs">Programme</a></li>
+          <li><a href="yunnan-retreat.html" class="nav-link active" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
+          <li><a href="reise.html" class="nav-link" data-i18n="nav.reise">Die Reise</a></li>
+          <li><a href="index.html#info" class="nav-link" data-i18n="nav-info">Klinik-Info</a></li>
+        </ul>
+        <div class="nav-controls">
+          <a href="index.html#devices" id="tech-modal-btn" class="nav-tech-pill" data-i18n="nav-tech-btn" title="Medizintechnik-Übersicht">⚕ TCM-Technologie</a>
+          <div class="lang-switcher">
+            <button id="lang-de" class="lang-btn active">DE</button>
+            <button id="lang-en" class="lang-btn">EN</button>
+          </div>
+          <a href="index.html#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Hero Section -->
+      <section id="yunnan-hero" class="hero" style="background-image: url('images/yunnan_hotel2.png'); min-height: 55vh; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div class="hero-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+        <div class="container hero-content" style="position: relative; z-index: 2; text-align: center; color: white;">
+          <span class="hero-tag animate-fade-in" data-i18n="yunnan-page-hero-tag" style="display: block; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 2px; font-weight: 500;">6-tägige Yunnan Kulturreise & Retreat</span>
+          <h1 class="title-large animate-fade-in" data-i18n="yunnan-page-hero-title" style="color: white; font-size: 3.5rem; margin-bottom: 1rem;">YUNNAN RETREAT</h1>
+          <p class="subtitle-serif animate-fade-in" data-i18n="yunnan-page-hero-subtitle" style="font-size: 1.5rem; font-style: italic; color: #f2e3d5;">6-tägige Tee-, Pilz- und Kräuter-Kulturreise mit den Minderheitenvölkern</p>
+        </div>
+      </section>
+
+      <!-- Intro Section -->
+      <section class="cream-bg philosophy-section yunnan-section">
+        <div class="container">
+          <div class="grid-2 philosophy-grid" style="align-items: center; gap: 5rem;">
+            <div class="philosophy-visual">
+              <img data-img-key="yunnan-intro-img" src="images/wuyishan_landscape.png" alt="Yunnan Mountain Landscape" style="border-radius: var(--border-radius); width: 100%; max-width: 480px; height: auto; box-shadow: var(--shadow-subtle); display: block; margin: 0 auto; object-fit: cover;">
+            </div>
+            <div>
+              <span class="subtitle-serif" style="color: var(--terracotta); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;" data-i18n="yunnan-page-subheader">Eine transformative Reise in die unberührte Natur Chinas</span>
+              <h2 class="title-medium" data-i18n="yunnan-page-header" style="margin-bottom: 1.5rem; font-size: 2.3rem; line-height: 1.2;">Das Erwecken der Lebenskraft</h2>
+              <div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted);" data-i18n="yunnan-page-intro">
+                Diese Reise ist eine intensive Natur-, Heil- und Kulturerfahrung in den Bergen Yunnans. Sie verbindet die Weisheit des Daoismus, Traditionelle Chinesische Medizin (TCM), Heilpilze, alte Teekulturen und das Leben der Hani-Minderheit und anderer Bergvölker zu einer tiefen Regenerations- und Selbsterfahrungsreise.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Core Idea & Three Stages -->
+      <section class="cream-dark-bg yunnan-section" style="border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container" style="max-width: 1000px; margin: 0 auto;">
+          <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 class="title-medium" data-i18n="yunnan-page-core-idea-title">Die Grundidee</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; max-width: 800px; margin: 1.5rem auto 0 auto;" data-i18n="yunnan-page-core-idea-desc">
+              Im Zentrum steht die Wiedererweckung der „Lebenskraft“ (生命原力) – jener natürlichen Energie, die laut daoistischer und chinesischer Medizin Gesundheit, Kreativität, Vitalität und innere Klarheit nährt.
+            </p>
+          </div>
+
+          <h3 class="subtitle-serif" style="color: var(--terracotta); font-size: 1.25rem; text-align: center; margin-top: 3rem;" data-i18n="yunnan-page-transform-title">Der dreistufige Transformationsprozess:</h3>
+          
+          <div class="transform-grid">
+            <div class="transform-card">
+              <span style="font-size: 2rem; color: var(--terracotta); font-weight: 700; display: block; margin-bottom: 1rem;">01</span>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="yunnan-page-transform-1">
+                <strong>1. Jing (Essenz) – Fundament schaffen:</strong> Körperliche Regeneration, Aufbau von Energie und Ressourcen, Ernährung, Heilkräuter und Heilpilze.
+              </p>
+            </div>
+            <div class="transform-card">
+              <span style="font-size: 2rem; color: var(--terracotta); font-weight: 700; display: block; margin-bottom: 1rem;">02</span>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="yunnan-page-transform-2">
+                <strong>2. Qi (Lebensenergie) – Aktivieren und Verwandeln:</strong> Atemarbeit, Daoistische Übungen, Bewegung und Energiearbeit, Öffnung und Harmonisierung der Meridiane.
+              </p>
+            </div>
+            <div class="transform-card">
+              <span style="font-size: 2rem; color: var(--terracotta); font-weight: 700; display: block; margin-bottom: 1rem;">03</span>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="yunnan-page-transform-3">
+                <strong>3. Shen (Geist) – Verfeinerung und Bewusstsein:</strong> Meditation, Klangheilung, Innere Klarheit und emotionale Balance, Verbindung mit dem eigenen Wesenskern.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expert Guidance -->
+      <section class="cream-bg philosophy-section yunnan-section" style="border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container">
+          <div class="grid-2 philosophy-grid" style="align-items: center; gap: 5rem; direction: rtl;">
+            <div class="philosophy-visual" style="direction: ltr;">
+              <img data-img-key="wudang-guesthouse-img" src="images/wudang_guesthouse.jpg" alt="Daoist Master Guesthouse" style="border-radius: var(--border-radius); width: 100%; max-width: 480px; height: auto; box-shadow: var(--shadow-subtle); display: block; margin: 0 auto; object-fit: cover;">
+            </div>
+            <div style="direction: ltr;">
+              <span class="subtitle-serif" style="color: var(--terracotta); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;" data-i18n="yunnan-page-experts-title">Begleitung durch Experten</span>
+              <h2 class="title-medium" data-i18n="yunnan-page-experts-desc" style="margin-bottom: 1.5rem; font-size: 2.3rem; line-height: 1.2;">Während der gesamten Reise begleiten die Gruppe:</h2>
+              <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; color: var(--text-muted); font-size: 1.05rem;">
+                <li data-i18n="yunnan-page-expert-1">Ein renommierter TCM-Meister für Puls- und Zungendiagnose</li>
+                <li data-i18n="yunnan-page-expert-2">Ein TCM-Arzt und Gesundheitscoach</li>
+                <li data-i18n="yunnan-page-expert-3">Ein international zertifizierter Klangtherapeut</li>
+                <li data-i18n="yunnan-page-expert-4">Lokale Pilzexperten der Hani-Minderheit</li>
+                <li data-i18n="yunnan-page-expert-5">Teebauern und Kräuterkundige aus den Bergen Yunnans</li>
+              </ul>
+              <div style="background-color: var(--bg-cream-dark); border-left: 3px solid var(--terracotta); padding: 1.2rem; border-radius: 4px; font-size: 0.95rem; color: var(--text-muted); font-style: italic; margin-top: 1.5rem;" data-i18n="yunnan-page-experts-note">
+                Jeder Teilnehmer erhält eine individuelle TCM-Diagnose mit persönlichen Empfehlungen zu Kräutern, Ernährung und Lebensstil.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiences Grid -->
+      <section class="cream-dark-bg yunnan-section" style="border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 3rem;">
+            <span class="subtitle-serif" style="color: var(--terracotta); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;">Erlebnisse &amp; Praxis</span>
+            <h2 class="title-medium" data-i18n="yunnan-page-experience-title">Was die Teilnehmer erleben</h2>
+          </div>
+
+          <div class="experience-list-grid">
+            
+            <div class="experience-card">
+              <h3 data-i18n="yunnan-page-exp-nervous-title">Ankommen &amp; Nervensystem regulieren</h3>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="yunnan-page-exp-nervous-desc">
+                Die Reise beginnt mit einer feierlichen Eröffnungszeremonie, Atemarbeit, Klangheilung, gemeinsamer Resonanzarbeit, einer Blauen-Lotus-Teezeremonie und Intention Setting. Ziel ist es, das Nervensystem aus dem Stressmodus in den Regenerationsmodus zu bringen.
+              </p>
+            </div>
+
+            <div class="experience-card">
+              <h3 data-i18n="yunnan-page-exp-forest-title">Alte Teewälder &amp; Heilpilze entdecken</h3>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="yunnan-page-exp-forest-desc">
+                Ein Höhepunkt ist die Wanderung durch die uralten Teewälder des Nan Nuo Shan, einem der ältesten Pu-Erh-Tee-Gebiete Yunnans. Dort erleben die Teilnehmer bis zu 800 Jahre alte Teebäume, wild wachsende Heilkräuter, traditionelle Kräuterkunde und Heilpilzsuche mit Hani-Guides. Gesammelt und erklärt werden unter anderem: <strong>Reishi (Lingzhi), Poria (Fu Ling), Roter Heilpilz (Da Hong Jun), Puffball-Pilze (Ma Bo), Dendrobium, Polygonatum, Angelika-Wurzel</strong> und weitere Bergkräuter. Die Teilnehmer lernen nicht nur ihre Wirkung kennen, sondern legen eigene Heilpilz- und Kräuterkarten an.
+              </p>
+            </div>
+
+            <div class="experience-card">
+              <h3 data-i18n="yunnan-page-exp-ethnicity-title">Leben mit den Ethnien Yunnans</h3>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="yunnan-page-exp-ethnicity-desc">
+                Ein besonderer Aspekt der Reise ist der direkte kontakt mit den lokalen Ethnien Yunnans. Die Teilnehmer erfahren traditionelle Pilzsammlung, Teeherstellung, lokale Heilmethoden, traditionelle Ernährung und die spirituelle Naturverbundenheit der Bergvölker. Dadurch entsteht ein authentischer Einblick in eine Lebensweise, die seit Jahrhunderten eng mit Wald, Bergen und den Jahreszeiten verbunden ist.
+              </p>
+            </div>
+
+            <div class="experience-card">
+              <h3 data-i18n="yunnan-page-exp-daoist-title">Daoistische Praxis &amp; Lebenspflege</h3>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="yunnan-page-exp-daoist-desc">
+                Täglich finden Qi Gong, daoistische Atemtechniken, Meditation, Körperwahrnehmungsübungen, Energiearbeit und Übungen zur Hormon- und Emotionsregulation statt. Diese Praktiken sollen Stress reduzieren, den Vagusnerv aktivieren, die Schlafqualität verbessern, das Hormonsystem harmonisieren und die Selbstheilungskräfte stärken.
+              </p>
+            </div>
+
+            <div class="experience-card" style="grid-column: 1 / -1;">
+              <h3 data-i18n="yunnan-page-exp-sound-title">Klangheilung &amp; innere Transformation</h3>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="yunnan-page-exp-sound-desc">
+                Ein weiterer Schwerpunkt sind tiefe Klang- und Frequenzreisen: Stimmarbeit, Mantra-Meditation, Heilfrequenzen, Trance- und Hypnoseelemente sowie „Tree of Life“-Klangreisen. Die Arbeit mit Klang soll Herzrhythmus, Atmung und Gehirnwellen synchronisieren und tiefe Entspannung ermöglichen.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Target Audience -->
+      <section class="cream-bg yunnan-section" style="border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <h2 class="title-medium" data-i18n="yunnan-page-target-title" style="margin-bottom: 1.5rem;">Für wen die Reise gedacht ist</h2>
+          <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;" data-i18n="yunnan-page-target-desc">
+            Ideal für Menschen, die unter chronischem Stress stehen, Erschöpfung oder Burnout vorbeugen möchten, ihre Gesundheit ganzheitlich stärken wollen, sich für TCM, Heilpilze und Teekultur interessieren, eine tiefere Verbindung zur Natur suchen oder daoistische Lebenskunst erleben möchten.
+          </p>
+        </div>
+      </section>
+
+      <!-- Picture Gallery Showcase -->
+      <section id="yunnan-gallery" class="cream-dark-bg yunnan-section" style="border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="subtitle-serif" style="color: var(--terracotta); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;">Resort &amp; Natur Impressionen</span>
+            <h2 class="title-medium">Yunnan Horizon Sanctuary &amp; Umgebung</h2>
+          </div>
+
+          <div class="showcase-gallery">
+            <img data-img-key="yunnan-gallery-img-1" src="images/yunnan_hotel1.png" alt="Luxurious Resort Swimming Pool with Mountain View">
+            <img data-img-key="yunnan-gallery-img-2" src="images/yunnan_hotel2.png" alt="Terracotta Organic Wooden Architecture at Sunset">
+            <img data-img-key="yunnan-gallery-img-3" src="images/yunnan_hotel3.png" alt="Comfortable Rooms with Panoramic Mountain Views">
+            <img data-img-key="yunnan-gallery-img-4" src="images/yunnan_hotel4.png" alt="Traditional Bamboo Tea Tasting Room in Yunnan Forest">
+            
+            <!-- New batch of Yunnan images -->
+            <img data-img-key="yunnan-gallery-img-5" src="images/whatsapp_imports/wa_1781335383_nmvej.jpeg" alt="Yunnan Retreat Impression 1">
+            <img data-img-key="yunnan-gallery-img-6" src="images/whatsapp_imports/wa_1781335384_f7558.jpeg" alt="Yunnan Retreat Impression 2">
+            <img data-img-key="yunnan-gallery-img-7" src="images/whatsapp_imports/wa_1781335384_s1k8k.jpeg" alt="Yunnan Retreat Impression 3">
+            <img data-img-key="yunnan-gallery-img-8" src="images/whatsapp_imports/wa_1781335384_z24u4.jpeg" alt="Yunnan Retreat Impression 4">
+            
+            <!-- Hidden items to be loaded on button click -->
+            <img data-img-key="yunnan-gallery-img-9" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335385_0m902.jpeg" alt="Yunnan Retreat Impression 5">
+            <img data-img-key="yunnan-gallery-img-10" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335385_4y3p1.jpeg" alt="Yunnan Retreat Impression 6">
+            <img data-img-key="yunnan-gallery-img-11" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335385_jfnx0.jpeg" alt="Yunnan Retreat Impression 7">
+            <img data-img-key="yunnan-gallery-img-12" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335386_dqwv9.jpeg" alt="Yunnan Retreat Impression 8">
+            <img data-img-key="yunnan-gallery-img-13" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335386_ooku3.jpeg" alt="Yunnan Retreat Impression 9">
+            <img data-img-key="yunnan-gallery-img-14" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335386_ziu5d.jpeg" alt="Yunnan Retreat Impression 10">
+            <img data-img-key="yunnan-gallery-img-15" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335387_ue55e.jpeg" alt="Yunnan Retreat Impression 11">
+            <img data-img-key="yunnan-gallery-img-16" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335387_w6lyg.jpeg" alt="Yunnan Retreat Impression 12">
+            <img data-img-key="yunnan-gallery-img-17" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335388_d3gtf.jpeg" alt="Yunnan Retreat Impression 13">
+            <img data-img-key="yunnan-gallery-img-18" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335389_hbops.jpeg" alt="Yunnan Retreat Impression 14">
+            <img data-img-key="yunnan-gallery-img-19" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335389_qqvf3.jpeg" alt="Yunnan Retreat Impression 15">
+            <img data-img-key="yunnan-gallery-img-20" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335390_79wm1.jpeg" alt="Yunnan Retreat Impression 16">
+            <img data-img-key="yunnan-gallery-img-21" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335390_9gpe6.jpeg" alt="Yunnan Retreat Impression 17">
+            <img data-img-key="yunnan-gallery-img-22" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335390_nh66e.jpeg" alt="Yunnan Retreat Impression 18">
+            <img data-img-key="yunnan-gallery-img-23" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335391_eywaf.jpeg" alt="Yunnan Retreat Impression 19">
+            <img data-img-key="yunnan-gallery-img-24" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335391_lkte8.jpeg" alt="Yunnan Retreat Impression 20">
+            <img data-img-key="yunnan-gallery-img-25" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335391_t5743.jpeg" alt="Yunnan Retreat Impression 21">
+            <img data-img-key="yunnan-gallery-img-26" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335392_6o8j9.jpeg" alt="Yunnan Retreat Impression 22">
+            <img data-img-key="yunnan-gallery-img-27" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335393_29b3u.jpeg" alt="Yunnan Retreat Impression 23">
+            <img data-img-key="yunnan-gallery-img-28" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335393_50wf4.jpeg" alt="Yunnan Retreat Impression 24">
+            <img data-img-key="yunnan-gallery-img-29" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335393_ahs6i.jpeg" alt="Yunnan Retreat Impression 25">
+            <img data-img-key="yunnan-gallery-img-30" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335394_4600y.jpeg" alt="Yunnan Retreat Impression 26">
+            <img data-img-key="yunnan-gallery-img-31" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335394_gc32o.jpeg" alt="Yunnan Retreat Impression 27">
+            <img data-img-key="yunnan-gallery-img-32" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335394_lqq0x.jpeg" alt="Yunnan Retreat Impression 28">
+            <img data-img-key="yunnan-gallery-img-33" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335395_131an.jpeg" alt="Yunnan Retreat Impression 29">
+            <img data-img-key="yunnan-gallery-img-34" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335395_u82rq.jpeg" alt="Yunnan Retreat Impression 30">
+            <img data-img-key="yunnan-gallery-img-35" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335396_037kn.jpeg" alt="Yunnan Retreat Impression 31">
+            <img data-img-key="yunnan-gallery-img-36" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335396_29ryi.jpeg" alt="Yunnan Retreat Impression 32">
+            <img data-img-key="yunnan-gallery-img-37" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335396_ybokn.jpeg" alt="Yunnan Retreat Impression 33">
+            <img data-img-key="yunnan-gallery-img-38" class="hidden-item" style="display: none;" src="images/whatsapp_imports/wa_1781335397_drvmq.jpeg" alt="Yunnan Retreat Impression 34">
+          </div>
+          <div style="text-align: center; margin-top: 2rem;">
+            <button id="retreat-gallery-more-btn" class="btn btn-outline" style="border-color: var(--terracotta); color: var(--terracotta);" data-i18n="gallery-more-btn">Mehr Bilder</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Poetic CTA / Essence Section -->
+      <section class="cream-bg yunnan-section" style="border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+          <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 class="title-medium" data-i18n="yunnan-page-essence-title" style="margin-bottom: 1.5rem;">Essenz der Reise</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; font-style: italic;" data-i18n="yunnan-page-essence-desc">
+              Diese Reise ist weit mehr als ein Retreat. Sie ist eine Begegnung mit den uralten Teewäldern Yunnans, den Heilpilzen des Bergwaldes, dem Wissen der Minderheitenvölker und den daoistischen Wegen zur Kultivierung von Körper, Energie und Geist. Man lernt nicht nur über Tee, Pilze und Kräuter – man erlebt unmittelbar, wie Natur, traditionelle Heilkunst und innere Praxis zusammenwirken können, um Vitalität, Ruhe und Lebensfreude neu zu entdecken.
+            </p>
+          </div>
+
+          <div class="cta-box">
+            <div class="cta-text" data-i18n="endo-page-cta-text">
+              Diese Reise ist kein Versprechen auf Heilung.<br>
+              Sie ist eine Einladung.<br>
+              Eine Einladung, einen anderen Weg kennenzulernen.<br>
+              Einen Weg, der nicht auf Unterdrückung basiert, sondern auf Verständnis.<br>
+              Nicht auf Kampf, sondern auf Kooperation.<br>
+              Nicht auf Trennung, sondern auf Rückverbindung.
+            </div>
+            <a href="index.html#contact" class="btn btn-outline" style="border-color: white; color: white;" data-i18n="endo-page-cta-btn">Beratungsgespräch vereinbaren</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.v2.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const moreBtn = document.getElementById("retreat-gallery-more-btn");
+      if (moreBtn) {
+        moreBtn.addEventListener("click", () => {
+          const hiddenImages = document.querySelectorAll(".showcase-gallery img.hidden-item");
+          hiddenImages.forEach(img => {
+            img.classList.remove("hidden-item");
+            img.style.display = "block";
+          });
+          moreBtn.style.display = "none";
+        });
+      }
+    });
+  </script>
+</body>
+</html>
