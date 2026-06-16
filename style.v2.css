@@ -2164,3 +2164,20 @@ img {
     transform: translateY(0);
   }
 }
+
+/* Custom aspect ratios to show entire image content without cropping */
+.program-10day-img-wrapper {
+  aspect-ratio: 4 / 3;
+  height: auto !important;
+}
+
+.program-1day-img-wrapper {
+  aspect-ratio: 1 / 1;
+  height: auto !important;
+}
+
+#team .card-img-wrapper {
+  aspect-ratio: 4 / 5;
+  height: auto !important;
+}
+
