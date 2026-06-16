@@ -1,0 +1,76 @@
+# Hong Dao TCM Clinic & Healing Center
+
+[Hong Dao TCM Clinic](https://hongdao-tcm.clinic) is an integrative Traditional Chinese Medicine (TCM) clinic in Shenzhen, China. It combines classical Shanghanlun (伤寒论) herbal medicine with modern clinical diagnostics and medical technology.
+
+## Core Keywords & Targets
+- **TCM-Reise** / **TCM-Retreat China**
+- **TCM Healing Center** / **Health Resort**
+- **TCM Endometriose-Programm**
+- **Sound Healing / Audio-Frequenz-Therapie**
+- **Meister Xu Ruqi & Pulsdiagnostik**
+
+---
+
+## 1. TCM Travel & Retreat Packages (TCM-Reisen)
+
+Detailed itineraries and booking details for China retreats.
+- **Main Travel Page**: [TCM-Reise Details](https://hongdao-tcm.clinic/reise.html)
+
+### A. 10-Day TCM Training & Wudang Retreat
+- **Dates**: October 10th - October 20th, 2026
+- **Price**: Starting from €3,900 (Early Bird)
+- **Itinerary**:
+  - **Days 1–5 (Shenzhen)**: Clinical internship and Pulsdiagnose (pulse diagnostics) training directly at Hong Dao Clinic under Chief Physician Professor Xu Ruqi. Includes ready-to-drink herbal decoction manfacture observation.
+  - **Days 6–10 (Wudang Mountains)**: Taoist martial arts, Qi Gong, meditation, and healthy nutrition led by Master Yin Chen Zi in Wudang.
+- **Capacity**: Maximum 12 participants.
+
+### B. Yunnan Tea, Mushroom & Herb Culture Retreat
+- **Purpose**: Spiritual integration, tea culture, and nature experience.
+- **Activities**: Wild mushroom foraging, ancient tea forest trekking, minority culture experience.
+- **Accommodation**: Luxury eco-resort with pool (Yunnan Horizon Sanctuary) featuring traditional wooden architecture and organic Chinese healing cuisine.
+- **Details**: [Yunnan-Retreat Details](https://hongdao-tcm.clinic/yunnan-retreat.html)
+
+---
+
+## 2. Specialized Healing Programs
+
+- **Main Program Page**: [Heilungsprogramme Overview](https://hongdao-tcm.clinic#programs)
+
+### A. Endometriosis & Women's Health
+- **Overview**: Specialized 1-4 week program to resolve blood stagnation and relieve pelvic pain natively.
+- **Treatments**: Customized herbal formulas, womb massage, spectral metabolic cabins, and acupuncture.
+- **Clinical Details**: [TCM Endometriose-Behandlung](https://hongdao-tcm.clinic/endometriosis.html)
+- **Pricing**:
+  - **1-Week Program**: €2,200 (Ambulant) / €2,850 (Premium with hotel/kitchen)
+  - **2-Week Program**: €2,900 (Ambulant) / €3,500 (Premium with hotel/kitchen)
+  - **4-Week Program**: €4,300 (Ambulant) / €5,200 (Premium with hotel/kitchen)
+- **Direct Checkout**: Integrated with Stripe payment buttons.
+
+### B. Sound Healing & Audio Regulation
+- **Concept**: Five notes corresponding to five internal organs (Jue, Zhi, Gong, Shang, Yu) based on Huangdi Neijing (黄帝内经).
+- **Practice**: Incorporates Tibetan singing bowls, gongs, and vocal resonance (Liu Zi Jue / 六字诀) to physically vibrate organ membranes.
+
+---
+
+## 3. Integrated TCM Technologies
+
+Modern medical devices used to complement pulse and tongue diagnostics:
+- **Infrared Body Scan (Thermografie)**: HD thermal imaging mapping cellular inflammation and meridian blockages.
+- **Bian-Hu Bioelectric Therapy**: Combines heated Bian stone massage with mid-frequency current regulation for spinal, ovarian, and digestive stagnation.
+- **Pu Jiu Moxibustion**: Large-area spine moxibustion heating system using organic mugwort.
+- **Thermal Spektral-Kabine**: Far-infrared Spektralkabine with negative ions for cell detox and recovery.
+
+---
+
+## 4. Master Doctors & Specialists
+
+- **Professor Xu Ruqi (徐汝奇)**: Chief Physician with 40+ years experience in pulse diagnosis and classical herbal medicine. Clinic researcher at Beijing University of Chinese Medicine.
+- **Dr. Qiao Jingwen (乔靖文)**: Clinic Director, Fudan University PhD, specialist in stem cell therapy and cellular longevity.
+- **Deng Nanjing (邓楠景)**: Licensed sound healer, translation director (fluent in 5 languages), and Qi Gong instructor.
+
+---
+
+## 5. Contact & Clinical Inquiries
+- **Location**: Shenzhen Hongdao TCM Clinic, B108, Nanshan Medical Device Industry Park, 1019 Nanhai Blvd, Nanshan District, Shenzhen, China.
+- **Booking / Application**: Prospective patients must submit an application form due to high demand and limited capacity.
+- **Inquire Online**: [Jetzt Bewerben Form](https://hongdao-tcm.clinic#contact)

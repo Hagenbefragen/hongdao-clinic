@@ -3,48 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Die Reise | Hong Dao TCM Clinic</title>
-  <meta name="description" content="Hong Dao TCM Clinic in Shenzhen combines traditional Chinese medicine with modern medical diagnostics. Explore our Wudang training, specialized endometriosis program, and voice/sound healing.">
+  <title data-i18n="reise.hero_title">Die Reise | Hong Dao TCM Clinic</title>
+  <meta name="description" content="TCM-Intensivausbildung & Daoistisches Retreat in China. Erleben Sie 10 Tage tiefe Praxis in Shenzhen und den Wudang-Bergen.">
   
   <!-- Fonts & Stylesheet -->
-  <link rel="stylesheet" href="style.v2.css">
-  <style>
-    /* Ensure the main content takes full height without padding for the iframe */
-    html, body {
-      height: 100%;
-      margin: 0;
-      overflow: hidden; /* Prevent double scrollbars on the outer document */
-    }
-    
-    .app-layout {
-      height: 100vh;
-      display: flex;
-    }
-    
-    .main-content-iframe {
-      flex: 1;
-      height: 100vh;
-      padding: 0;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .main-content-iframe iframe {
-      flex: 1;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    
-    /* On mobile, adjust the header offset */
-    @media (max-width: 768px) {
-      .main-content-iframe {
-        padding-top: 60px; /* Account for the mobile header */
-        height: calc(100vh - 60px);
+  <link rel="stylesheet" href="style.v2.css?v=2.0.3">
+
+  <!-- Schema.org Event/Trip Structured Data for SEO & AI Search Agents -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "10-Tage TCM-Training & Wudang-Retreat",
+    "description": "Klinische TCM-Hospitation in Shenzhen unter Prof. Xu Ruqi und taoistisches Qi Gong, Meditation & Ernährung in den Wudang-Bergen.",
+    "startDate": "2026-10-10",
+    "endDate": "2026-10-20",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Shenzhen Clinic & Wudang Mountains",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Shenzhen & Wudang",
+        "addressCountry": "CN"
       }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "3900",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2026-06-11",
+      "url": "https://hongdao-tcm.clinic/reise.html"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Hong Dao TCM Clinic",
+      "url": "https://hongdao-tcm.clinic"
     }
-  </style>
+  }
+  </script>
 </head>
 <body>
 
@@ -56,6 +55,10 @@
       <a href="index.html" class="logo-mobile">
         <img src="images/logo_web.png" alt="Hong Dao TCM Clinic" class="logo-img">
       </a>
+      <div class="lang-switcher" style="margin-left: auto; margin-right: 1rem;">
+        <button id="lang-de-mobile" class="lang-btn active">DE</button>
+        <button id="lang-en-mobile" class="lang-btn">EN</button>
+      </div>
       <button class="hamburger-menu" id="hamburger-btn" aria-label="Menü öffnen/schließen">
         <span></span>
         <span></span>
@@ -67,7 +70,7 @@
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-inner">
         <a href="index.html" class="logo">
-          <img src="images/logo_web.png" alt="弘道中医 Hong Dao Zhong Yi Logo" class="logo-img">
+          <img src="images/logo_web.png" alt="弘道中医 Hong Dao Yi Logo" class="logo-img">
           <div class="logo-text">
             Hong Dao
             <span class="logo-sub">TCM CLINIC · 弘道中医</span>
@@ -77,48 +80,193 @@
           <li><a href="index.html#home" class="nav-link" data-i18n="nav-home">Startseite</a></li>
           <li><a href="index.html#about" class="nav-link" data-i18n="nav-about">Über uns & Meister</a></li>
           <li><a href="index.html#treatments" class="nav-link" data-i18n="nav-treatments">Behandlungen</a></li>
+          <li><a href="index.html#devices" class="nav-link" data-i18n="nav-devices">Medizintechnik</a></li>
           <li><a href="index.html#programs" class="nav-link" data-i18n="nav-programs">Programme</a></li>
-          <li><a href="reise.html" class="nav-link" data-i18n="nav.reise">Die Reise</a></li>
+          <li><a href="yunnan-retreat.html" class="nav-link" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
+          <li><a href="reise.html" class="nav-link active" data-i18n="nav.reise">Die Reise</a></li>
           <li><a href="index.html#info" class="nav-link" data-i18n="nav-info">Klinik-Info</a></li>
         </ul>
         <div class="nav-controls">
+          <a href="index.html#devices" id="tech-modal-btn" class="nav-tech-pill" data-i18n="nav-tech-btn" title="Medizintechnik-Übersicht">⚕ TCM-Technologie</a>
           <div class="lang-switcher">
             <button id="lang-de" class="lang-btn active">DE</button>
             <button id="lang-en" class="lang-btn">EN</button>
           </div>
+          <a href="index.html#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a>
         </div>
       </div>
     </aside>
 
-    <!-- Main Content Area: iFrame for 1:1 Wix Embed -->
-    <main class="main-content-iframe">
-        <iframe src="wix_reise_embed.html" title="Original Wix Reise Page"></iframe>
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Hero Section -->
+      <section id="reise-hero" class="hero" style="background-image: url('images/hero_bg.png'); min-height: 55vh; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div class="hero-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+        <div class="container hero-content" style="position: relative; z-index: 2; text-align: center; color: white;">
+          <span class="hero-tag animate-fade-in" data-i18n="reise.hero_dates" style="display: block; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 2px; font-weight: 500;">10. – 20. Oktober 2026 | 10 Tage, 10 Nächte</span>
+          <h1 class="title-large animate-fade-in" data-i18n="reise.hero_title" style="color: white; font-size: 3.5rem; margin-bottom: 1rem;">DIE REISE</h1>
+          <p class="subtitle-serif animate-fade-in" data-i18n="reise.hero_subtitle" style="font-size: 1.5rem; font-style: italic; color: #f2e3d5;">TCM-Intensivausbildung & Daoistisches Retreat in China</p>
+        </div>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="cream-bg philosophy-section" style="padding: 6rem 5%;">
+        <div class="container">
+          <div class="grid-2 philosophy-grid" style="align-items: center; gap: 5rem;">
+            <div class="philosophy-visual">
+              <img data-img-key="tcm-training-overview-img" src="images/whatsapp_imports/wa_1781172376651_1h73y.jpeg" alt="TCM Training Shenzhen" style="border-radius: var(--border-radius); width: 100%; max-width: 480px; height: auto; box-shadow: var(--shadow-subtle); display: block; margin: 0 auto; object-fit: cover;">
+            </div>
+            <div>
+              <span class="subtitle-serif" style="color: var(--terracotta); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;">Teil 1</span>
+              <h2 class="title-medium" data-i18n="reise.overview_title" style="margin-bottom: 1.5rem; font-size: 2.3rem; line-height: 1.2;">Teil 1: TCM-Intensivausbildung in Shenzhen</h2>
+              <div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted);" data-i18n="reise.overview_desc">
+                In diesen fünf Tagen werden Meister Xu Ruqi und sein Team uns durch eine Balance aus TCM-Theorie und Praxis führen. Sie lernen die Prinzipien der TCM aus einer kulturellen, medizinischen und historischen spirituellen Perspektive kennen und beobachten gleichzeitig Live-Patientenbehandlungen in seinem neu eröffneten Krankenhaus im Herzen der Stadt.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wudang Section -->
+      <section class="cream-dark-bg philosophy-section" style="padding: 6rem 5%; border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container">
+          <div class="grid-2 philosophy-grid" style="align-items: center; gap: 5rem; direction: rtl;">
+            <div class="philosophy-visual" style="direction: ltr;">
+              <img src="images/wudang_guesthouse.jpg" alt="Wudang Guesthouse" style="border-radius: var(--border-radius); width: 100%; max-width: 480px; height: auto; box-shadow: var(--shadow-subtle); display: block; margin: 0 auto;">
+            </div>
+            <div style="direction: ltr;">
+              <span class="subtitle-serif" style="color: var(--terracotta); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;">Teil 2</span>
+              <h2 class="title-medium" data-i18n="reise.wudang_title" style="margin-bottom: 1.5rem; font-size: 2.3rem; line-height: 1.2;">Teil 2: Integration in das heilige Landleben Chinas</h2>
+              <div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted);" data-i18n="reise.wudang_desc">
+                Am 15. Oktober reisen wir in die Wudang-Berge, eine legendäre daoistische Landschaft, in der sich die Spiralen von Yin und Yang treffen sollen. Wir wohnen in der ländlichen Privatresidenz des daoistischen Priesters Yin Chen Zi und seiner Frau Li Xin, teilen biologische, hausgemachte Mahlzeiten und das tägliche Leben in enger Verbundenheit mit dem Land. In diesem intimen Rahmen vertiefen wir unsere Praxis durch traditionelle Methoden.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Itinerary Section -->
+      <section class="cream-bg" style="padding: 6rem 5%; border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container">
+          <div class="flex-center" style="flex-direction: column; text-align: center; margin-bottom: 4rem;">
+            <span class="subtitle-serif" style="color: var(--terracotta); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;">Programm</span>
+            <h2 class="title-medium" data-i18n="reise.itinerary_title">Der Reiseablauf</h2>
+          </div>
+
+          <div class="grid-2" style="gap: 3rem;">
+            <!-- Card 1 -->
+            <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-subtle);">
+              <div>
+                <h3 class="title-small" data-i18n="reise.day_arrival" style="color: var(--terracotta); font-size: 1.25rem;">09. Oktober | Ankunftstag</h3>
+                <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.6; font-size: 0.95rem;" data-i18n="reise.day_arrival_desc">
+                  Ankunft in Shenzhen & Check-in im Hotel Qianhai Gongyu. Einzelzimmer für jeden Teilnehmer. Gemeinsames Abendessen.
+                </p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-subtle);">
+              <div>
+                <h3 class="title-small" data-i18n="reise.day_prep" style="color: var(--terracotta); font-size: 1.25rem;">10. Oktober | Willkommen & Vorbereitung</h3>
+                <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.6; font-size: 0.95rem;" data-i18n="reise.day_prep_desc">
+                  Orientierung & Gruppen-Einführung. Eröffnungsmeditation und Klangsession. Individuelle Pulsdiagnose durch Meister Xu für jeden Teilnehmer mit personalisierten Kräuterrezepturen.
+                </p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-subtle);">
+              <div>
+                <h3 class="title-small" data-i18n="reise.day_tcm" style="color: var(--terracotta); font-size: 1.25rem;">10. – 14. Oktober | TCM-Intensivtraining</h3>
+                <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.6; font-size: 0.95rem;" data-i18n="reise.day_tcm_desc">
+                  4 Tage intensives Lernen & Üben. Kernthemen: Historische Einblicke, Puls- & Zungendiagnostik, Yin-Yang-Theorie sowie Live-Beobachtungen von Patientenbehandlungen.
+                </p>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-subtle);">
+              <div>
+                <h3 class="title-small" data-i18n="reise.day_wudang" style="color: var(--terracotta); font-size: 1.25rem;">15. – 20. Oktober | Integration in den Wudang-Bergen</h3>
+                <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.6; font-size: 0.95rem;" data-i18n="reise.day_wudang_desc">
+                  Reise nach Wudang. Leben an der ursprünglichen Quelle des Qi. Ausflüge zu kulturellen Stätten, daoistischen Tempeln, Teezeremonien und optionale Behandlungen (Moxa, Schröpfen, Gua Sha).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="cream-dark-bg" style="padding: 6rem 5%; border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container">
+          <div class="flex-center" style="flex-direction: column; text-align: center; margin-bottom: 4rem;">
+            <span class="subtitle-serif" data-i18n="reise.pricing_subtitle">Wähle den passenden Plan für deine Reise</span>
+            <h2 class="title-medium" data-i18n="reise.pricing_title">Preise & Zahlungspläne</h2>
+          </div>
+
+          <div class="grid-3" style="gap: 2rem; align-items: stretch; margin-bottom: 3rem;">
+            <!-- Early Bird -->
+            <div class="card" style="padding: 3rem 2rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-subtle);">
+              <div>
+                <span class="subtitle-serif" data-i18n="reise.price_earlybird">Frühbucher</span>
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--terracotta); margin: 1.5rem 0;">€3.900,-</div>
+                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;" data-i18n="reise.price_earlybird_desc">Gültig bis 31. Mai</p>
+              </div>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%; margin-top: 2rem; border-color: var(--terracotta); color: var(--terracotta);" data-i18n="booking.contact_us">Jetzt Kontakt aufnehmen</a>
+            </div>
+            <!-- Standard -->
+            <div class="card" style="padding: 3rem 2rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; border: 2px solid var(--terracotta); box-shadow: var(--shadow-subtle); position: relative; background: var(--card-bg);">
+              <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--terracotta); color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;" data-i18n="booking.popular">Am beliebtesten</div>
+              <div>
+                <span class="subtitle-serif" data-i18n="reise.price_standard">Standard-Preis</span>
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--terracotta); margin: 1.5rem 0;">€4.200,-</div>
+                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;" data-i18n="reise.price_standard_desc">Regulärer Buchungstarif</p>
+              </div>
+              <a href="index.html#contact" class="btn btn-terracotta apply-trigger" style="width: 100%; margin-top: 2rem;" data-i18n="booking.contact_us">Jetzt Kontakt aufnehmen</a>
+            </div>
+            <!-- Couple -->
+            <div class="card" style="padding: 3rem 2rem; text-align: center; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-subtle);">
+              <div>
+                <span class="subtitle-serif" data-i18n="reise.price_couple">Paar-Angebot</span>
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--terracotta); margin: 1.5rem 0;">€7.400,-</div>
+                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;" data-i18n="reise.price_couple_desc">Für zwei Teilnehmer</p>
+              </div>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%; margin-top: 2rem; border-color: var(--terracotta); color: var(--terracotta);" data-i18n="booking.contact_us">Jetzt Kontakt aufnehmen</a>
+            </div>
+          </div>
+          <div style="text-align: center; font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-top: 3rem;" data-i18n="reise.inclusions">
+            Inklusive: Unterkunft, Verpflegung, Unterricht, Inlandszug nach Wudang. <br>Exklusive: Internationale Flüge & Visum.
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section (optimized for AI/Search direct answers) -->
+      <section class="cream-bg" style="padding: 6rem 5%; border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+          <div class="flex-center" style="flex-direction: column; text-align: center; margin-bottom: 4rem;">
+            <span class="subtitle-serif">FAQ</span>
+            <h2 class="title-medium" data-i18n="faq-title">Häufig gestellte Fragen (FAQ)</h2>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+            <div style="border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 1.5rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);" data-i18n="faq-q4">Brauche ich ein Visum für China?</h3>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="faq-a4">Die meisten EU-Bürger (inkl. Deutschland, Österreich, Schweiz) können seit 2024 visumfrei für bis zu 30 Tage nach China einreisen. Bitte prüfen Sie die aktuellen Einreisebestimmungen Ihres Landes vor Abreise.</p>
+            </div>
+            <div style="border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 1.5rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);" data-i18n="faq-q5">Welche Apps brauche ich in China?</h3>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="faq-a5"><strong>Vor Abreise installieren:</strong><br>&#8226; <strong>WeChat</strong> &#8211; Kommunikation<br>&#8226; <strong>Alipay</strong> &#8211; Bezahlen<br>&#8226; <strong>Didi</strong> &#8211; Taxi bestellen<br>&#8226; <strong>AMap</strong> &#8211; Karten-Navi<br>&#8226; <strong>VPN</strong> &#8211; z.B. Jamjams</p>
+            </div>
+            <div style="border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 1.5rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark);" data-i18n="faq-q6">Wie funktioniert das Bezahlen vor Ort?</h3>
+              <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="faq-a6">In China wird fast ausschließlich bargeldlos bezahlt. Laden Sie Alipay herunter und verknüpfen Sie Ihre Kreditkarte (Visa/Mastercard). Damit können Sie überall bezahlen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
   </div>
 
+  <script src="content.js"></script>
   <script src="app.v2.js"></script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.getElementById('hamburger-btn');
-      const sidebar = document.getElementById('sidebar');
-      
-      if (hamburger && sidebar) {
-        hamburger.addEventListener('click', (e) => {
-          e.stopPropagation();
-          sidebar.classList.toggle('active');
-          hamburger.classList.toggle('active');
-        });
-        
-        document.addEventListener('click', (e) => {
-          if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
-            sidebar.classList.remove('active');
-            hamburger.classList.remove('active');
-          }
-        });
-      }
-    });
-  </script>
 </body>
 </html>

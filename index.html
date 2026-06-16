@@ -11,7 +11,78 @@
   <meta name="author" content="Hong Dao TCM Clinic">
   
   <!-- Fonts & Stylesheet -->
-  <link rel="stylesheet" href="style.v2.css">
+  <link rel="stylesheet" href="style.v2.css?v=2.0.3">
+
+  <!-- Schema.org Structured Data for SEO & AI Search Agents -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": "https://hongdao-tcm.clinic/#clinic",
+    "name": "Hong Dao TCM Clinic",
+    "alternateName": "Hong Dao TCM Healing Center",
+    "image": "https://hongdao-tcm.clinic/images/logo_web.png",
+    "url": "https://hongdao-tcm.clinic",
+    "logo": "https://hongdao-tcm.clinic/images/logo_web.png",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nanshan Medical Device Industry Park, B108, 1019 Nanhai Blvd",
+      "addressLocality": "Shenzhen",
+      "addressRegion": "Nanshan District",
+      "postalCode": "518067",
+      "addressCountry": "CN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "22.5029",
+      "longitude": "113.9298"
+    },
+    "medicalSpecialty": [
+      "Acupuncture",
+      "Gynaecology",
+      "HerbalMedicine",
+      "SoundHealing"
+    ],
+    "knowsAbout": [
+      "Endometriosis",
+      "TCM Pulsdiagnose",
+      "Womb-Massage",
+      "Bioresonanz",
+      "Qi Gong",
+      "Sound Healing"
+    ],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Professor Xu Ruqi",
+        "jobTitle": "Chief Physician & TCM Master"
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Qiao Jingwen",
+        "jobTitle": "Clinic Director & Stem Cell Specialist"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Hong Dao TCM Clinic",
+    "url": "https://hongdao-tcm.clinic",
+    "description": "Hong Dao TCM Clinic in Shenzhen combines traditional Chinese medicine with modern medical diagnostics.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hong Dao TCM Clinic",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hongdao-tcm.clinic/images/logo_web.png"
+      }
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -50,7 +121,8 @@
           <li><a href="#treatments" class="nav-link" data-i18n="nav-treatments">Behandlungen</a></li>
           <li><a href="#devices" class="nav-link" data-i18n="nav-devices">Medizintechnik</a></li>
           <li><a href="#programs" class="nav-link" data-i18n="nav-programs">Programme</a></li>
-          <li><a href="#retreat" class="nav-link" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
+          <li><a href="yunnan-retreat.html" class="nav-link" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
+          <li><a href="reise.html" class="nav-link" data-i18n="nav.reise">Die Reise</a></li>
           <li><a href="#info" class="nav-link" data-i18n="nav-info">Klinik-Info</a></li>
         </ul>
         <div class="nav-controls">
@@ -86,12 +158,12 @@
     <div class="container">
       <div class="grid-2 philosophy-grid" style="align-items: center; gap: 5rem;">
         <div class="philosophy-visual">
-          <img src="images/hongdao_storefront.jpg" alt="Hong Dao TCM Clinic Storefront" style="border-radius: var(--border-radius); width: 100%; max-width: 380px; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.08); display: block; margin: 0 auto;">
+          <img src="images/hongdao_storefront_cropped.png" alt="Hong Dao TCM Clinic Storefront" style="border-radius: var(--border-radius); width: 100%; max-width: 380px; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.08); display: block; margin: 0 auto;">
         </div>
         <div>
           <span class="subtitle-serif">Philosophy</span>
           <h2 class="title-medium" data-i18n="intro-title" style="margin-bottom: 1.5rem; font-size: 2.5rem; line-height: 1.2;">Klassische Rezepturen als Fundament, Technologie als Flügel</h2>
-          <div class="text-italic" style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted);" data-i18n="intro-desc">
+          <div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted);" data-i18n="intro-desc">
             <p style="margin-bottom: 1rem;">Die Hong Dao Klinik wurde von einem Team renommierter Experten der SHANGHANLUN 伤寒论 Lehre des aufgestiegenen Meisters ZHANG Zhongjings 张仲景 sowie Doktoranden der Fudan University gegründet und verbindet klassische chinesische Kräuterrezepturen mit moderner Technologie und Diagnostikverfahren.</p>
             <p style="margin-bottom: 1rem;">Unter dem Leitgedanken &bdquo;Klassische Rezepturen als Fundament, Technologie als Flügel&ldquo; vereint die Klinik Forschung und Lehre in einem integrativen Konzept und dient Menschen weltweit.</p>
             <p>Wir bieten individuell maßgeschneiderte Begleitung und Therapiepläne für Patient:innen an, die unter komplexen Erkrankungen wie Autoimmungeschehen, Stoffwechselerkrankungen wie Diabetes, Endometriose, hormonellen Störungen, Erschöpfungssyndrom, Krebs und Unfruchtbarkeit leiden.</p>
@@ -130,7 +202,7 @@
               <img src="images/dr_jingwen.jpg" alt="Dr. Qiao Jingwen" style="object-position: center 10%;">
             </div>
             <span class="subtitle-serif" style="color: var(--hellblau-dark);" data-i18n="doctor-1-title">Direktorin der Klinik & Stammzelltherapie</span>
-            <h3 class="title-small" data-i18n="doctor-1-name">Dr. Qiao Jingwen (乔靖文)</h3>
+            <h3 class="title-small" data-i18n="doctor-1-name">Dr. Qiao Jingwen <span style="white-space: nowrap;">(乔靖文)</span></h3>
             <p style="color: var(--text-muted); margin-top: 1rem;" data-i18n="doctor-1-desc">
               Dr. Qiao Jingwen ist Direktorin der Hong Dao Klinik und kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.
             </p>
@@ -315,9 +387,11 @@
       <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); justify-content: center; align-items: stretch; gap: 2.5rem;">
         
         <!-- Device 1: Infrared Body Scan -->
-        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
-          <div class="device-icon-wrapper" style="margin-top: 2.5rem;">🌡️</div>
-          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; padding-top: 1rem;">
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%; border: 1px solid rgba(0,0,0,0.06); padding: 0;">
+          <div class="card-img-wrapper" style="height: 240px; overflow: hidden; border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+            <img src="images/device_infrared.png" alt="Infrarot-Körperscan" class="card-img" style="object-fit: cover; width: 100%; height: 100%;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; text-align: center;">
             <div>
               <h3 class="title-small" data-i18n="device-1-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Infrarot-Körperscan</h3>
               <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-1-desc">
@@ -327,14 +401,16 @@
                 Primäre Anwendung: Lenden- und Halswirbelsäule, Durchblutung, Entzündungsscreening, Stoffwechsel.
               </p>
             </div>
-            <button class="btn btn-outline read-article-btn" data-article="infrared" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+            <button class="btn btn-outline read-article-btn" data-article="infrared" style="margin-top: 1.5rem; align-self: center; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
           </div>
         </div>
 
         <!-- Device 2: Bian Hu Bioelectric Therapy -->
-        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
-          <div class="device-icon-wrapper" style="margin-top: 2.5rem;">🪨⚡</div>
-          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; padding-top: 1rem;">
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%; border: 1px solid rgba(0,0,0,0.06); padding: 0;">
+          <div class="card-img-wrapper" style="height: 240px; overflow: hidden; border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+            <img src="images/tech_bioresonance_1779274403035.png" alt="Bian-Hu Bioelektrizitäts-Therapie" class="card-img" style="object-fit: cover; width: 100%; height: 100%;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; text-align: center;">
             <div>
               <h3 class="title-small" data-i18n="device-2-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Bian-Hu Bioelektrizitäts-Therapie</h3>
               <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-2-desc">
@@ -344,14 +420,16 @@
                 Primäre Anwendung: Schulterschmerzen, HWS-Syndrom, Bandscheibenvorfall, Magen-Darm-Störungen, Endometriose (PCOS/PMOS).
               </p>
             </div>
-            <button class="btn btn-outline read-article-btn" data-article="bianstone" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+            <button class="btn btn-outline read-article-btn" data-article="bianstone" style="margin-top: 1.5rem; align-self: center; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
           </div>
         </div>
 
         <!-- Device 3: Herbal Thermal Moxibustion -->
-        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
-          <div class="device-icon-wrapper" style="margin-top: 2.5rem;">🔥</div>
-          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; padding-top: 1rem;">
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%; border: 1px solid rgba(0,0,0,0.06); padding: 0;">
+          <div class="card-img-wrapper" style="height: 240px; overflow: hidden; border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+            <img src="images/device_pujiu.png" alt="Kräuter-Wärme-Moxibustion" class="card-img" style="object-fit: cover; width: 100%; height: 100%;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; text-align: center;">
             <div>
               <h3 class="title-small" data-i18n="device-3-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Kräuter-Wärme-Moxibustion</h3>
               <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-3-desc">
@@ -361,14 +439,16 @@
                 Primäre Anwendung: Regelschmerzen & kalte Gebärmutter, Lenden- & Knieschmerz, Unterleibsentzündungen, Wirbelsäule.
               </p>
             </div>
-            <button class="btn btn-outline read-article-btn" data-article="pujiu" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+            <button class="btn btn-outline read-article-btn" data-article="pujiu" style="margin-top: 1.5rem; align-self: center; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
           </div>
         </div>
 
         <!-- Device 4: Thermal Metabolic Cabin -->
-        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
-          <div class="device-icon-wrapper" style="margin-top: 2.5rem;">🧖‍♀️</div>
-          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; padding-top: 1rem;">
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%; border: 1px solid rgba(0,0,0,0.06); padding: 0;">
+          <div class="card-img-wrapper" style="height: 240px; overflow: hidden; border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+            <img src="images/device_metabolic_cabin.png" alt="Thermo-Stoffwechselkabine" class="card-img" style="object-fit: cover; width: 100%; height: 100%;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; text-align: center;">
             <div>
               <h3 class="title-small" data-i18n="device-4-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Thermo-Stoffwechselkabine</h3>
               <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-4-desc">
@@ -378,14 +458,16 @@
                 Primäre Anwendung: Sportliche Regeneration, Fortpflanzungsgesundheit, chronische Leiden, metabolische Entgiftung.
               </p>
             </div>
-            <button class="btn btn-outline read-article-btn" data-article="spectrumcabin" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+            <button class="btn btn-outline read-article-btn" data-article="spectrumcabin" style="margin-top: 1.5rem; align-self: center; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
           </div>
         </div>
 
         <!-- Device 5: Micro-Photon Moxibustion -->
-        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
-          <div class="device-icon-wrapper" style="margin-top: 2.5rem;">🔆</div>
-          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; padding-top: 1rem;">
+        <div class="card device-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%; border: 1px solid rgba(0,0,0,0.06); padding: 0;">
+          <div class="card-img-wrapper" style="height: 240px; overflow: hidden; border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+            <img src="images/device_red_light.png" alt="Mikro-Photonen-Moxibustion" class="card-img" style="object-fit: cover; width: 100%; height: 100%;">
+          </div>
+          <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; text-align: center;">
             <div>
               <h3 class="title-small" data-i18n="device-5-name" style="font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Mikro-Photonen-Moxibustion</h3>
               <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="device-5-desc">
@@ -395,7 +477,7 @@
                 Primäre Anwendung: Entzündungen & Schmerz, Gelenkschmerz, Hautregeneration, kosmetische Zwecke, Arthritis, Sportverletzungen.
               </p>
             </div>
-            <button class="btn btn-outline read-article-btn" data-article="spectrumradiator" style="margin-top: 1.5rem; align-self: flex-start; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
+            <button class="btn btn-outline read-article-btn" data-article="spectrumradiator" style="margin-top: 1.5rem; align-self: center; padding: 0.4rem 1.2rem; font-size: 0.85rem;" data-i18n="btn-read-article">Details ansehen</button>
           </div>
         </div>
 
@@ -417,7 +499,7 @@
         <!-- 10-day training -->
         <div class="card" style="display: flex; flex-direction: column;">
           <div class="card-img-wrapper" style="height: 280px;">
-            <img src="images/tcm_training_vibe.jpg" alt="TCM Training Retreat Vibe" class="card-img" style="object-fit: contain; background-color: var(--bg-cream-light);">
+            <img data-img-key="tcm-training-card-img" src="images/whatsapp_imports/wa_1781172376651_1h73y.jpeg" alt="TCM Training Retreat Vibe" class="card-img" style="object-fit: cover; background-color: var(--bg-cream-light);">
           </div>
           <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
@@ -440,19 +522,27 @@
         <!-- 1-day Shenzhen program -->
         <div class="card" style="display: flex; flex-direction: column;">
           <div class="card-img-wrapper" style="height: 280px;">
-            <img src="images/shenzhen_skyline.jpg" alt="Shenzhen City Skyline" class="card-img" style="object-fit: contain; background-color: var(--bg-cream-light);">
+            <img data-img-key="wellness-tour-card-img" src="images/whatsapp_imports/wa_1781172001701_hkvkg.jpeg" alt="1-Day TCM Wellness Tour" class="card-img" style="object-fit: cover; background-color: var(--bg-cream-light);">
           </div>
           <div class="card-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-              <span class="subtitle-serif" style="font-size: 1rem;">Local Shenzhen Daily</span>
               <h3 class="title-small" style="margin: 0.5rem 0;" data-i18n="retreat-1day-title">1-tägige Programme (Shenzhen)</h3>
               <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="retreat-1day-desc">
-                Lokale Tageskurse vor Ort. Ideal für Praktizierende für klinische Hospitationen, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.
+                Fokussiertes klinisches Training in Shenzhen. Ideal für Therapeuten und Heilpraktiker: Pulsdiagnose, Kräuterzubereitung, Hospitation. Flexibel 1-5 Tage.
               </p>
+              <div style="margin-top: 1rem;">
+                <label for="card-1day-start-date" style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark); display: block; margin-bottom: 0.3rem;" data-i18n="card-select-start-date">Starttermin wählen:</label>
+                <select id="card-1day-start-date" class="form-control card-start-date-select" style="font-size: 0.85rem; padding: 0.4rem; border-radius: 4px; width: 100%; border: 1px solid rgba(0,0,0,0.15);">
+                  <!-- Dynamically populated in JS -->
+                </select>
+              </div>
             </div>
-            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <div style="margin-top: 2rem; display: flex; gap: 0.5rem; justify-content: space-between; align-items: center; flex-wrap: wrap; width: 100%;">
               <span style="font-weight: 600; color: var(--terracotta);" data-i18n="retreat-1day-price">€250,- pro Tag</span>
-              <a href="#contact" class="btn btn-outline apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a>
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="btn btn-outline read-article-btn" data-article="shenzhen_tour" style="padding: 0.5rem 1rem; font-size: 0.85rem; border-color: var(--terracotta); color: var(--terracotta);" data-i18n="btn-read-details">Details ansehen</button>
+                <a href="#contact" class="btn btn-terracotta card-apply-trigger" data-program="program1day" data-date-select="card-1day-start-date" data-i18n="nav-apply" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Jetzt bewerben</a>
+              </div>
             </div>
           </div>
         </div>
@@ -463,7 +553,7 @@
         <div class="grid-2">
           <div>
             <div class="card-img-wrapper" style="border-radius: var(--border-radius); overflow: hidden; margin-bottom: 1.5rem; height: 350px; background-color: #fcecdd; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-subtle);">
-              <img src="images/endometriosis_uterus.png" alt="Uterus with Cysts TCM Illustration" style="width: 100%; height: 100%; object-fit: contain; background-color: var(--bg-cream-light);">
+              <img data-img-key="endo-card-img" src="images/whatsapp_imports/wa_1781171825958_67ott.jpeg" alt="Qi Gong Meditation" style="width: 100%; height: 100%; object-fit: cover; background-color: var(--bg-cream-light);">
             </div>
             <span class="subtitle-serif" style="font-size: 1rem;" data-i18n="treatment-1-title">Endometriose & Frauengesundheit</span>
             <h3 class="title-medium" style="font-size: 2.2rem; line-height: 1.2;" data-i18n="endo-program-title">Endometriose-Programm</h3>
@@ -487,6 +577,13 @@
               <button id="tier-basic" class="pricing-toggle-btn" data-i18n="package-basic">Ohne Unterkunft (Ambulant)</button>
               <button id="tier-premium" class="pricing-toggle-btn active" data-i18n="package-premium">Premium (Mit Hotel & Küche)</button>
             </div>
+
+            <div style="margin-top: 1rem; margin-bottom: 1.5rem;">
+              <label for="card-endo-start-date" style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark); display: block; margin-bottom: 0.3rem;" data-i18n="card-select-start-date">Starttermin wählen:</label>
+              <select id="card-endo-start-date" class="form-control card-start-date-select" style="font-size: 0.85rem; padding: 0.4rem; border-radius: 4px; width: 100%; border: 1px solid rgba(0,0,0,0.15);">
+                <!-- Dynamically populated in JS -->
+              </select>
+            </div>
           </div>
 
           <div style="background-color: var(--bg-cream-light); border-radius: var(--border-radius); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
@@ -505,7 +602,8 @@
               <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-bottom: 1rem;" data-i18n="endo-price-note">
                 *Hinweis: Alle Preise beinhalten keine individuell verschreibungspflichtige Kräutermedizin.
               </p>
-              <a href="#contact" class="btn btn-terracotta apply-trigger" style="width: 100%; text-align: center;" data-i18n="nav-apply">Jetzt bewerben</a>
+              <a id="endo-stripe-link" href="https://buy.stripe.com/7sY3cw9HWgl3afg1VGbo403" target="_blank" class="btn btn-terracotta" style="width: 100%; text-align: center; margin-bottom: 0.5rem; display: block;" data-i18n="endo-btn-book">Direkt buchen &amp; bezahlen (Stripe)</a>
+              <a href="#contact" class="btn btn-outline card-apply-trigger" data-program="endometriosis" data-date-select="card-endo-start-date" style="width: 100%; text-align: center; display: block;" data-i18n="endo-btn-inquire">Jetzt bewerben / Anfragen</a>
             </div>
           </div>
         </div>
@@ -521,8 +619,8 @@
           <div class="yunnan-images">
             <img src="images/yunnan_hotel1.png" alt="Partner Hotel Pool" class="yunnan-img">
             <img src="images/yunnan_hotel2.png" alt="Yunnan Mountain View" class="yunnan-img">
-            <img src="images/wudang_guesthouse.jpg" alt="Traditional Wudang Guesthouse operated by Master Yin Chen Zi" class="yunnan-img">
-            <img src="images/wuyishan_landscape.png" alt="Breathtaking Wuyi Shan and Yunnan Mountain Landscape" class="yunnan-img">
+            <img src="images/yunnan_hotel3.png" alt="Luxurious Partner Hotel eco-resort wooden architecture" class="yunnan-img">
+            <img src="images/yunnan_hotel4.png" alt="Traditional bamboo tea tasting room in Yunnan" class="yunnan-img">
           </div>
           <div class="yunnan-details">
             <span class="subtitle-serif" style="color: var(--hellblau-dark);">Spiritual Nature Extension</span>
@@ -538,7 +636,7 @@
             </div>
             <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
               <a href="#contact" class="btn btn-terracotta apply-trigger" data-i18n="nav-apply">Jetzt bewerben</a>
-              <a href="documents/道蕈溯源——生命原力的唤醒与转化静修营.pdf" download class="btn btn-outline" style="border-color: var(--hellblau-dark); color: var(--hellblau-dark);" data-i18n="download-brochure-btn">Broschüre herunterladen (PDF)</a>
+              <a href="yunnan-retreat.html" class="btn btn-outline" style="border-color: var(--hellblau-dark); color: var(--hellblau-dark);" data-i18n="read-details-btn">Details lesen</a>
             </div>
           </div>
         </div>
@@ -624,8 +722,8 @@
             <h4 class="gallery-item-title" data-i18n="gallery-item-lecture-title">Pulsdiagnose</h4>
           </div>
         </div>
-        <div class="gallery-item" data-img="images/whatsapp_imports/nanjing/1779966395.jpeg">
-            <img src="images/whatsapp_imports/nanjing/1779966395.jpeg" alt="Retreat Image 2">
+        <div class="gallery-item" data-img="images/whatsapp_imports/wa_1780809490_u0asu.jpeg">
+            <img src="images/whatsapp_imports/wa_1780809490_u0asu.jpeg" alt="Retreat Image 2">
             <div class="gallery-item-overlay">
               <span class="gallery-item-subtitle">Nanjing Retreat</span>
               <h4 class="gallery-item-title">Impression 2</h4>
@@ -1006,90 +1104,118 @@
           </div>
         </div>
 
-        <!-- Contact/Application Form -->
-        <div class="card" style="padding: 3rem;">
-          <form id="consultation-form">
-            <div class="form-group">
-              <label for="consult-name" data-i18n="contact-label-name">Name</label>
-              <input type="text" id="consult-name" class="form-control" required placeholder="Ihr vollständiger Name">
-            </div>
+        <!-- Contact/Application Tab Container -->
+        <div class="card contact-card-tabs" style="padding: 3rem; display: flex; flex-direction: column;">
+          <!-- Tabs Navigation -->
+          <div class="contact-tabs-nav" style="display: flex; gap: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.08); padding-bottom: 1rem; margin-bottom: 2rem;">
+            <button type="button" class="contact-tab-btn active" data-tab="calendly" style="background: none; border: none; font-size: 1.1rem; font-weight: 600; padding: 0.5rem 0; cursor: pointer; color: var(--terracotta); border-bottom: 2px solid var(--terracotta); transition: all 0.3s;" data-i18n="contact-tab-calendly">
+              📅 Termin online buchen
+            </button>
+            <button type="button" class="contact-tab-btn" data-tab="form" style="background: none; border: none; font-size: 1.1rem; font-weight: 600; padding: 0.5rem 0; cursor: pointer; color: var(--text-muted); border-bottom: 2px solid transparent; transition: all 0.3s;" data-i18n="contact-tab-form">
+              ✉️ Bewerbungsformular
+            </button>
+          </div>
 
-            <div class="form-row">
+          <!-- Tab Content 1: Calendly Inline Widget -->
+          <div id="tab-content-calendly" class="contact-tab-content active" style="display: block;">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/nanjing-deng18?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:650px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+          </div>
+
+          <!-- Tab Content 2: Application Form -->
+          <div id="tab-content-form" class="contact-tab-content" style="display: none;">
+            <form id="consultation-form">
               <div class="form-group">
-                <label for="consult-email" data-i18n="contact-label-email">E-Mail-Adresse</label>
-                <input type="email" id="consult-email" class="form-control" required placeholder="name@email.com">
+                <label for="consult-name" data-i18n="contact-label-name">Name</label>
+                <input type="text" id="consult-name" class="form-control" required placeholder="Ihr vollständiger Name">
               </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="consult-email" data-i18n="contact-label-email">E-Mail-Adresse</label>
+                  <input type="email" id="consult-email" class="form-control" required placeholder="name@email.com">
+                </div>
+                <div class="form-group">
+                  <label for="consult-phone" data-i18n="contact-label-phone">Telefonnummer</label>
+                  <input type="tel" id="consult-phone" class="form-control" placeholder="+49 123 456789">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="consult-age" data-i18n="contact-label-age">Alter</label>
+                  <input type="number" id="consult-age" class="form-control" placeholder="z.B. 35" min="1" max="120">
+                </div>
+                <div class="form-group">
+                  <label for="consult-country" data-i18n="contact-label-country">Herkunftsland</label>
+                  <input type="text" id="consult-country" class="form-control" placeholder="z.B. Deutschland">
+                </div>
+              </div>
+
               <div class="form-group">
-                <label for="consult-phone" data-i18n="contact-label-phone">Telefonnummer</label>
-                <input type="tel" id="consult-phone" class="form-control" placeholder="+49 123 456789">
+                <label for="consult-interest" data-i18n="contact-label-interest">Was interessiert Sie?</label>
+                <textarea id="consult-interest" class="form-control" rows="2" placeholder="Welches Angebot oder Programm spricht Sie an?"></textarea>
               </div>
-            </div>
 
-            <div class="form-row">
               <div class="form-group">
-                <label for="consult-age" data-i18n="contact-label-age">Alter</label>
-                <input type="number" id="consult-age" class="form-control" placeholder="z.B. 35" min="1" max="120">
+                <label for="consult-intention" data-i18n="contact-label-intention">Was ist Ihre Intention?</label>
+                <textarea id="consult-intention" class="form-control" rows="2" placeholder="Was m&ouml;chten Sie durch die Teilnahme erreichen?"></textarea>
               </div>
+
               <div class="form-group">
-                <label for="consult-country" data-i18n="contact-label-country">Herkunftsland</label>
-                <input type="text" id="consult-country" class="form-control" placeholder="z.B. Deutschland">
+                <label for="consult-enrichment" data-i18n="contact-label-enrichment">Wie w&uuml;rden Sie die Gruppe bereichern? (bei Gruppenprogrammen)</label>
+                <textarea id="consult-enrichment" class="form-control" rows="2" placeholder="Was bringen Sie mit? Welche Erfahrungen oder Talente?"></textarea>
               </div>
-            </div>
 
-            <div class="form-group">
-              <label for="consult-interest" data-i18n="contact-label-interest">Was interessiert Sie?</label>
-              <textarea id="consult-interest" class="form-control" rows="2" placeholder="Welches Angebot oder Programm spricht Sie an?"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="consult-intention" data-i18n="contact-label-intention">Was ist Ihre Intention?</label>
-              <textarea id="consult-intention" class="form-control" rows="2" placeholder="Was m&ouml;chten Sie durch die Teilnahme erreichen?"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="consult-enrichment" data-i18n="contact-label-enrichment">Wie w&uuml;rden Sie die Gruppe bereichern? (bei Gruppenprogrammen)</label>
-              <textarea id="consult-enrichment" class="form-control" rows="2" placeholder="Was bringen Sie mit? Welche Erfahrungen oder Talente?"></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="consult-conditions" data-i18n="contact-label-conditions">Welche diagnostizierten k&ouml;rperlichen oder psychischen Beschwerden haben Sie?</label>
-              <textarea id="consult-conditions" class="form-control" rows="3" placeholder="Bitte beschreiben Sie Ihre bestehenden Diagnosen oder Beschwerden..."></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="consult-program" data-i18n="contact-label-program">Gewünschtes Programm</label>
-              <select id="consult-program" class="form-control">
-                <option value="endometriosis">Endometriose Heilprogramm (1-4 Wochen)</option>
-                <option value="retreat10">10-tägiges TCM-Training & Retreat (Oktober)</option>
-                <option value="program1day">1-tägige Programme (Shenzhen)</option>
-                
-                <option value="general">Allgemeine TCM-Therapie / Beratung</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="consultation-date" data-i18n="contact-label-date">Datum des Beratungsgesprächs (Mittwoch / Samstag)</label>
-              <input type="date" id="consultation-date" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-              <label data-i18n="contact-label-slot">Uhrzeit wählen (Pekinger Ortszeit 14:00 - 20:00 Uhr)</label>
-              <div id="slots-container" class="slot-grid">
-                <!-- Dynamically generated after date select -->
+              <div class="form-group">
+                <label for="consult-conditions" data-i18n="contact-label-conditions">Welche diagnostizierten k&ouml;rperlichen oder psychischen Beschwerden haben Sie?</label>
+                <textarea id="consult-conditions" class="form-control" rows="3" placeholder="Bitte beschreiben Sie Ihre bestehenden Diagnosen oder Beschwerden..."></textarea>
               </div>
-            </div>
 
-            <div class="form-group">
-              <label for="consult-message" data-i18n="contact-label-message">Kurze Anmerkung zu Ihren Beschwerden</label>
-              <textarea id="consult-message" class="form-control" rows="4" placeholder="Schreiben Sie uns kurz worum es geht..."></textarea>
-            </div>
+              <div class="form-group">
+                <label for="consult-program" data-i18n="contact-label-program">Gewünschtes Programm</label>
+                <select id="consult-program" class="form-control">
+                  <option value="endometriosis">Endometriose Heilprogramm (1-4 Wochen)</option>
+                  <option value="retreat10">10-tägiges TCM-Training & Retreat (Oktober)</option>
+                  <option value="program1day">1-tägige Programme (Shenzhen)</option>
+                  
+                  <option value="general">Allgemeine TCM-Therapie / Beratung</option>
+                </select>
+              </div>
 
-            <div class="submit-buttons-container" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-              <button type="button" id="submit-email-btn" class="btn btn-terracotta" style="flex: 1; min-width: 180px; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                ✉️ <span data-i18n="contact-submit-email">Per E-Mail bewerben</span>
-              </button>
-            </div>
-          </form>
+              <div id="program-start-date-container" class="form-group" style="display: none; margin-bottom: 1.5rem;">
+                <label for="program-start-date" data-i18n="contact-label-start-date">Gewünschter Starttermin des Programms</label>
+                <select id="program-start-date" class="form-control">
+                  <!-- Dynamically populated in JS -->
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="consultation-date" data-i18n="contact-label-date">Datum des Beratungsgesprächs (Mittwoch / Samstag)</label>
+                <input type="date" id="consultation-date" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label data-i18n="contact-label-slot">Uhrzeit wählen (Pekinger Ortszeit 14:00 - 20:00 Uhr)</label>
+                <div id="slots-container" class="slot-grid">
+                  <!-- Dynamically generated after date select -->
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="consult-message" data-i18n="contact-label-message">Kurze Anmerkung zu Ihren Beschwerden</label>
+                <textarea id="consult-message" class="form-control" rows="4" placeholder="Schreiben Sie uns kurz worum es geht..."></textarea>
+              </div>
+
+              <div class="submit-buttons-container" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <button type="button" id="submit-email-btn" class="btn btn-terracotta" style="flex: 1; min-width: 180px; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                  ✉️ <span data-i18n="contact-submit-email">Per E-Mail bewerben</span>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -1167,23 +1293,20 @@
 
   <!-- Interactive Booking Form Modal (For Trigger Buttons) -->
   <div id="booking-modal-overlay" class="modal-overlay">
-    <div class="modal-window">
+    <div class="modal-window" style="max-width: 750px; width: 95%;">
       <div class="modal-header">
         <h3 data-i18n="contact-free-consult">15-minütiges kostenloses Beratungsgespräch buchen</h3>
         <button id="booking-modal-close" class="modal-close">&times;</button>
       </div>
-      <div class="modal-body">
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;" data-i18n="contact-free-desc">
+      <div class="modal-body" style="padding: 1.5rem 1rem 1rem 1rem;">
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; text-align: center;" data-i18n="contact-free-desc">
           Sprechen Sie direkt mit Nanjing Deng, um Ihre Beschwerden zu besprechen und das passende Programm zu finden.
         </p>
         
-        <!-- Nested form in modal mimicking the page form -->
-        <form onsubmit="event.preventDefault(); document.getElementById('consultation-form').dispatchEvent(new Event('submit'));">
-          <!-- We trigger the same submit logic as the page form for simplicity -->
-          <button type="button" class="btn btn-terracotta" style="width: 100%;" onclick="document.querySelector('#contact').scrollIntoView(); closeModal();" data-i18n="hero-cta-apply">
-            Ausfüllen auf Website
-          </button>
-        </form>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/nanjing-deng18?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:650px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
       </div>
     </div>
   </div>
@@ -1203,7 +1326,7 @@
           <!-- Device 1: Thermography -->
           <div class="tech-device-row">
             <div style="border-radius: var(--border-radius); overflow: hidden; height: 180px; box-shadow: var(--shadow-subtle);">
-              <img src="images/tech_thermography_1779274387990.png" alt="Infrarot-Thermografie" style="width: 100%; height: 100%; object-fit: contain; background-color: var(--bg-cream-light);">
+              <img src="images/device_infrared.png" alt="Infrarot-Thermografie" style="width: 100%; height: 100%; object-fit: contain; background-color: var(--bg-cream-light);">
             </div>
             <div>
               <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-1-name">Infrarot-Thermografie</h4>
@@ -1231,7 +1354,7 @@
           <!-- Device 3: Moxibustion (Pu Jiu) -->
           <div class="tech-device-row">
             <div style="border-radius: var(--border-radius); overflow: hidden; height: 180px; box-shadow: var(--shadow-subtle);">
-              <img src="images/tech_moxibustion_1779274453495.png" alt="Großflächen-Moxibustion" style="width: 100%; height: 100%; object-fit: contain; background-color: var(--bg-cream-light);">
+              <img src="images/device_pujiu.png" alt="Großflächen-Moxibustion" style="width: 100%; height: 100%; object-fit: contain; background-color: var(--bg-cream-light);">
             </div>
             <div>
               <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-3-name">Großflächen-Moxibustion (铺灸 - Pu Jiu)</h4>
@@ -1245,7 +1368,7 @@
           <!-- Device 4: Spectrum Thermal Cabin -->
           <div class="tech-device-row">
             <div style="border-radius: var(--border-radius); overflow: hidden; height: 180px; box-shadow: var(--shadow-subtle);">
-              <img src="images/tech_spectrum_1779274437024.png" alt="Spektral-Wärmekabine" style="width: 100%; height: 100%; object-fit: contain; background-color: var(--bg-cream-light);">
+              <img src="images/device_metabolic_cabin.png" alt="Spektral-Wärmekabine" style="width: 100%; height: 100%; object-fit: contain; background-color: var(--bg-cream-light);">
             </div>
             <div>
               <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-4-name">Ganzkörper-Spektralkabine</h4>
@@ -1259,7 +1382,7 @@
           <!-- Device 5: Spectrum treatment radiator -->
           <div class="tech-device-row">
             <div style="border-radius: var(--border-radius); overflow: hidden; height: 180px; box-shadow: var(--shadow-subtle);">
-              <img src="images/tech_electroacupuncture_1779274420298.png" alt="Spektral-Bestrahlungsgerät" style="width: 100%; height: 100%; object-fit: contain; background-color: var(--bg-cream-light);">
+              <img src="images/device_red_light.png" alt="Spektral-Bestrahlungsgerät" style="width: 100%; height: 100%; object-fit: contain; background-color: var(--bg-cream-light);">
             </div>
             <div>
               <h4 style="font-size: 1.4rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;" data-i18n="device-5-name">Lokalisiertes Spektral-Bestrahlungsgerät</h4>
@@ -1302,39 +1425,10 @@
     </div>
   </div>
 
+  <script src="content.js"></script>
   <script src="app.v2.js"></script>
 
-  <!-- Mobile Navigation Toggle Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.getElementById('hamburger-btn');
-      const sidebar = document.getElementById('sidebar');
-      
-      if (hamburger && sidebar) {
-        hamburger.addEventListener('click', (e) => {
-          e.stopPropagation();
-          sidebar.classList.toggle('active');
-          hamburger.classList.toggle('active');
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-          if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
-            sidebar.classList.remove('active');
-            hamburger.classList.remove('active');
-          }
-        });
-        
-        // Close menu when link is clicked
-        sidebar.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-            sidebar.classList.remove('active');
-            hamburger.classList.remove('active');
-          });
-        });
-      }
-    });
-  </script>
+
 
 </body>
 </html>

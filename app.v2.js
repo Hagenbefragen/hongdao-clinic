@@ -5,603 +5,25 @@
 // ==========================================
 
 // Translation Dictionary (German & English)
-const translations = {
-  en: {
-        "nav.reise": "The Journey",
-
-        "reise.hero_title": "THE JOURNEY",
-        "reise.hero_subtitle": "Deep TCM Immersion & Daoist Retreat in China",
-        "reise.hero_dates": "October 10 – 20, 2026 | 10 Days, 10 Nights",
-        "reise.overview_title": "Part 1: TCM Intensive Training in Shenzhen",
-        "reise.overview_desc": "Over these five days, Master Xu Ruqi and his team will lead us through a balance of both TCM theory and practice. You will learn principles of TCM from a cultural, medical, and historical spiritual lens, whilst also witnessing live patient treatments. This will all take place in his newly opened hospital and school in the heart of the city.",
-        "reise.wudang_title": "Part 2: Integration into Sacred Rural Life in China",
-        "reise.wudang_desc": "On October 15th, we travel to the Wudang Mountains, a legendary Daoist landscape where the spirals of yin and yang are said to meet. We will stay at the private rural residence of Daoist Priest Yin Chen Zi and his wife Li Xin, sharing organic, home-cooked meals and daily life in close connection with the land. Within this intimate setting, we deepen our practice through traditional methods.",
-        "reise.itinerary_title": "The Itinerary",
-        "reise.day_arrival": "October 09 | Arrival Day",
-        "reise.day_arrival_desc": "Arrive in Shenzhen & Check-in at Hotel Qianhai Gongyu. Private room for each participant. Dinner in the evening together.",
-        "reise.day_prep": "October 10 | Welcome & Preparation",
-        "reise.day_prep_desc": "Orientation & group introduction. Opening meditation, hypnosis, and sound session. Master Xu's individual diagnosis for each participant and personalized herbal medicine prescriptions.",
-        "reise.day_tcm": "October 10 – 14 | TCM Intensive Training",
-        "reise.day_tcm_desc": "4 days of immersive learning & practice. Core topics include Historical Insights, Pulse & Tongue Diagnosis, Yin-Yang Theory, and live patient treatment observations.",
-        "reise.day_wudang": "October 15 – 20 | Wudang Mountains Integration",
-        "reise.day_wudang_desc": "Travel to Wudang. Living in the sanctuary of the original source of Qi. Excursions to cultural sites, Daoist temples, traditional tea ceremonies, and optional treatments (Moxibustion, Cupping, Gua Sha).",
-        "reise.pricing_title": "Pricing & Payment Plans",
-        "reise.pricing_subtitle": "Choose the right plan for your journey",
-        "reise.price_earlybird": "Early Bird",
-        "reise.price_earlybird_desc": "Valid till May 31st",
-        "booking.popular": "Most Popular",
-        "reise.price_standard": "Standard Price",
-        "reise.price_standard_desc": "Regular booking rate",
-        "reise.price_couple": "Couple Deal",
-        "reise.price_couple_desc": "For two participants",
-        "booking.contact_us": "Contact Us to Book",
-        "reise.inclusions": "Includes: Accommodation, meals, classes, domestic train to Wudang. <br>Excludes: International flights & Visa.",
-
-    // Navigation
-    "nav-home": "Home",
-    "nav-about": "About & Masters",
-    "nav-treatments": "Health Maintenance",
-    "nav-devices": "Technology",
-    "nav-programs": "Programs",
-    "nav-retreat": "Yunnan Retreat",
-    "nav-info": "Clinic Info",
-    "nav-apply": "Register",
-
-    // Hero Section
-    "hero-tag": "Traditional Chinese Medicine meets Modern Medical Technology",
-    "hero-title": "Traditional Chinese Medicine & Clinical Diagnostics",
-    "hero-desc": "Experience deep physical and spiritual transformation through the 40-year TCM expertise of Professor Xu Ruqi, individualized herbal therapies, cutting-edge diagnostic devices, and healing sound ceremonies.",
-    "hero-cta-apply": "Register Now",
-    "hero-cta-more": "Explore Programs",
-
-    // Introduction / Philosophy
-    "intro-title": "Ancient Formulas as Foundation, Technology as Wings",
-    "intro-desc": "<p style=\"margin-bottom: 1rem;\">The Hong Dao Clinic was founded by a team of renowned experts of the SHANGHANLUN 伤寒论 tradition of the ascended Master ZHANG Zhongjing 张仲景 and doctoral graduates of Fudan University, combining classical Chinese herbal formulas with modern technology and diagnostic methods.</p><p style=\"margin-bottom: 1rem;\">Under the guiding principle \u201cAncient Formulas as Foundation, Technology as Wings\u201d, the clinic unites research and teaching in an integrative concept serving people worldwide.</p><p>We offer individually tailored care and treatment plans for patients suffering from complex conditions such as autoimmune disorders, metabolic diseases like diabetes, endometriosis, hormonal imbalances, chronic fatigue, cancer, and infertility.</p>",
-
-    // Masters & Team
-    "team-tag": "Medical Lineage",
-    "team-title": "Guardians of Ancient Wisdom & Specialized Clinicians",
-    "team-subtitle": "Meet our dedicated doctors and practitioners bridging classical Shanghanlun wisdom and modern recovery.",
-    "master-xu-title": "Chief Physician & TCM Professor",
-    "master-xu-desc": "Professor Xu Ruqi has spent over 40 years mastering pulse diagnosis and classical herbal medicine. A clinical expert at Beijing University of Chinese Medicine, he is globally renowned for treating severe chronic conditions, advanced tumors, and gynecological diseases.",
-    "doctor-1-title": "Clinic Director & Stem Cell Therapy",
-    "doctor-1-name": "Dr. Qiao Jingwen (乔靖文)",
-    "doctor-1-desc": "Dr. Qiao Jingwen is Director of the Hong Dao Clinic, combining cutting-edge stem cell therapy with TCM rejuvenation techniques for cellular health, fertility, and hormonal balance.",
-    "doctor-4-name": "Dr. Guan Weina (管蔚娜)",
-    "doctor-4-spec": "Licensed TCM Physician. Specialist in meridian detoxification, clinical acupuncture, and therapeutic massages.",
-    "doctor-5-name": "Dr. Zhang Hailin (张海林)",
-    "doctor-5-spec": "Head of Decoction Center. Expert in traditional herbal extraction and quality control.",
-    "btn-read-bio": "Read Profile",
-    "decoction-subtitle": "In-House Herbal Craftsmanship",
-    "decoction-title": "Modern Decoction Center & Dao Di Herbs",
-    "decoction-desc": "<p style=\"margin-bottom: 1.5rem;\">We source exclusively high-quality <strong>Dao Di Herbs (道地藥材)</strong> from certified organic cultivation and soil-specific farming methods, grown in regions that offer the optimal climatic and energetic conditions for each native plant.</p><p>In our in-house Decoction Center, under the direct supervision of Master Xu, these herbs are individually extracted, precisely processed, and portion-packed into <strong>Ready-to-Drink decoctions</strong> that you can easily take home.</p>",
-    "visionary-deng-title": "Heilpraktikerin, Qi Gong & Sound Therapy",
-    "visionary-deng-desc": "Heilpraktikerin Deng Nanjing translates Professor Xu's consultations into German, English, Italian, Spanish, and Mandarin. She also leads Qi Gong sessions, 6 Healing Sounds practice, sound therapy, tea ceremonies, and supports guests with all organizational needs during their stay.",
-    "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Sound Therapy & Patient Support. 5 Languages.",
-    "team-grid-title": "Our Specialized Team",
-    "doctor-3-name": "Dr. Chen Kainan (陈恺楠) — Assistant Physician",
-    "doctor-3-spec": "Assistant Physician, specializing in acupuncture and clinical support under Professor Xu's guidance.",
-    "doctor-sound-name": "Cheung Mingli (张明丽)",
-    "doctor-sound-spec": "Nomad, yoga teacher for children and adults, fan dance therapist & sound worker with 10+ years of international experience.",
-
-    // Specialized Treatments
-    "treatments-title": "Health Maintenance Fields",
-    "treatments-subtitle": "Tailored, highly focused strategies for targeted recovery.",
-    "treatment-1-title": "Endometriosis & Women's Health",
-    "treatment-1-desc": "Custom herbal pastes, womb massage, and acupressure to dissolve blood stagnation and relieve chronic pain.",
-    "treatment-2-title": "Stem Cell & Longevity",
-    "treatment-2-desc": "Dr. Adrianna Qiao integrates advanced cellular research with TCM health maintenance for cellular health.",
-    "treatment-3-title": "Stress & Burnout Recovery",
-    "treatment-3-desc": "Holistic relief for high-pressure lifestyles using pulse-guided acupuncture and relaxing sound frequencies.",
-    
-    // Modern Devices
-    "devices-title": "Advanced Health Maintenance Technology",
-    "devices-subtitle": "Traditional diagnostic wisdom validated by high-end modern devices.",
-    "device-1-name": "Infrared Body Scan",
-    "device-1-desc": "Visualizes inflammation, circulation blockages, and energy paths using 5th gen HD thermal imaging.",
-    "device-1-uses": "Primary uses: Spine & neck disorders, metabolic health, inflammation tracking, blood circulation.",
-    "device-2-name": "Bian Hu Bioelectric Therapy",
-    "device-2-desc": "Combines heated Bian stone pot massage with low & medium frequency bioelectric regulation.",
-    "device-2-uses": "Primary uses: Shoulder pain, cervical vertebra, intervertebral disc herniation, gastrointestinal conditioning, endometriosis (PCOS/PMOS).",
-    "device-3-name": "Herbal Thermal Moxibustion",
-    "device-3-desc": "Patented down-burning moxibustion box for large-scale spine warming with ginger and herbs.",
-    "device-3-uses": "Primary uses: Cold womb & dysmenorrhea, cold waist & knees, gynecological inflammation, spine disorders.",
-    "device-4-name": "Thermal Metabolic Cabin",
-    "device-4-desc": "Whole-body spectrum cabin using far-infrared, oxygen enrichment, and negative ions for cellular health.",
-    "device-4-uses": "Primary uses: Athletic recovery, reproductive health, chronic disease conditioning, metabolic detox.",
-    "device-5-name": "Micro-Photon Moxibustion",
-    "device-5-desc": "Cantilever spectrum radiator emitting 560-1400nm wavelengths to penetrate 7-10cm deep into tissue.",
-    "device-5-uses": "Primary uses: Anti-inflammatory & pain relief, joint pain, post-burn skin repair, cosmetic treatments, arthritis, sports injuries.",
-    "endo-details-link": "View Details",
-
-    // Programs & Endometriosis calculator
-    "programs-title": "Health Programs & Training",
-    "programs-subtitle": "From intensive training courses to customized personal health maintenance retreats.",
-    
-    "retreat-10day-title": "10-Day Teacher Training & Retreat",
-    "retreat-10day-date": "October 10th - October 20th, 2026",
-    "retreat-10day-desc": "A complete immersion in TCM theory and health maintenance. 5 days of clinical observation in Shenzhen under Master Xu, followed by 5 days of Daoist lifestyle integration in the Wudang Mountains. Limited to 12 participants.",
-    "retreat-10day-price": "€3,900 Cost Contribution (Early Bird)",
-    "retreat-10day-wix-link": "View Details",
-    
-    "retreat-1day-title": "1-3-5 Day TCM Clinical Training (Shenzhen)",
-    "retreat-1day-desc": "Focused clinical training and masterclasses in Shenzhen. Ideal for practitioners and health enthusiasts wishing to experience direct clinical practice observation, pulse diagnosis introduction, and professional decoction preparation. Flexible attendance from 1 to 5 days.",
-    "retreat-1day-price": "€250 first day, €200 each additional day",
-    
-    "endo-program-title": "Endometriosis Health Maintenance Program",
-    "endo-program-desc": "A dedicated, fully customizable program addressing uterine health, hormone balance, and pain relief. Features customized herbal formulas, womb massage, sound healing, and direct guidance.",
-    "endo-select-duration": "Select Program Duration:",
-    "duration-1w": "1 Week",
-    "duration-2w": "2 Weeks",
-    "duration-4w": "4 Weeks",
-    "endo-price": "Price on request",
-    "package-basic": "Outpatient (No Boarding)",
-    "package-premium": "Premium Retreat (With Partner Hotel & TCM Kitchen)",
-    "endo-included-title": "What's Included:",
-    "endo-price-note": "*Note: Cost contributions exclude individually prescribed customized herbal medicines.",
-
-    // Yunnan Retreat
-    "yunnan-title": "Mountain Retreats & Nature Extension",
-    "yunnan-subtitle": "A mystical transition from the city clinic into pristine mountain elements.",
-    "yunnan-desc-1": "Extend your clinical program with a nature retreat. Every treatment plan, training course, and retreat begins with intensive diagnosis and therapy at our Shenzhen clinic, after which you travel directly to China's pristine mountain sanctuaries.",
-    "yunnan-desc-2": "The second, immersive part always takes place in a beautiful location in the mountains of China. We have a traditional guesthouse operated by Daoist Master Yin Chen Zi and his wife in the Wudang Mountains, as well as accommodations in Wuyi Shan and Yunnan (Xishuangbanna).",
-    "yunnan-hotel-info": "Accommodations include: Traditional wood guesthouse in Wudang (Master Yin Chen Zi), scenic mountain lodging in Wuyi Shan, and the high-end luxury Yunnan Horizon Sanctuary eco-resort.",
-
-    // Child Space
-    "child-title": "Hong Dao Child Space",
-    "child-desc": "We believe family healing involves the youngest. Our clinic hosts a beautiful internal Children's Space, providing peaceful activities, kids TCM nutrition guidance, and regular public and internal events for families to connect.",
-
-    // Clinic Info & FAQ
-    "info-title": "Practical Clinic Information",
-    "info-location-label": "Location & Access",
-    "info-location-desc": "Hong Dao TCM Clinic, Shenzhen Nanshan District. Easily reachable via metro and highway.",
-    "info-hours-label": "Opening Hours",
-    "info-hours-desc": "Monday - Saturday: 09:00 - 18:00 (Appointments Required)",
-    "info-payment-label": "Registration & Cost Contribution Policy",
-    "info-payment-desc": "Online registration is available. Please note your registration is officially confirmed only upon receipt of your personalized confirmation email. All contributions go directly toward covering the costs of the clinic's health programs.",
-    
-    "faq-title": "Frequently Asked Questions",
-    "faq-q1": "Are customized herbal medicines included in the cost contribution?",
-    "faq-a1": "No. Individually prepared herbal formulas for home use are provided separately to compensate for the direct preparation costs according to diagnostic needs.",
-    "faq-q2": "How is the Yunnan travel organized?",
-    "faq-a2": "Our team coordinates transfer assistance. The program covers the local partner hotel stay, guidance, and specified activities.",
-    "faq-q3": "Can I bring my family?",
-    "faq-a3": "Yes. Our Hong Dao Child Space offers family-friendly support and special weekend activities for children while parents undergo therapies.",
-    "faq-q4": "Do I need a visa for China?",
-    "faq-a4": "Most EU citizens (incl. Germany, Austria, Switzerland) can enter China visa-free for up to 30 days since 2024. Please verify the current entry requirements for your country before departure.",
-    "faq-q5": "Which apps do I need in China?",
-    "faq-a5": "<strong>Install before departure:</strong><br>&#8226; <strong>WeChat</strong> &#8211; Communication (China's WhatsApp)<br>&#8226; <strong>Alipay</strong> &#8211; Payment (link your credit card!)<br>&#8226; <strong>Didi</strong> &#8211; Taxi booking<br>&#8226; <strong>AMap</strong> &#8211; Navigation<br>&#8226; <strong>VPN</strong> &#8211; e.g. Jamjams or Potatso Lite",
-    "faq-q6": "How does payment work on site?",
-    "faq-a6": "China is almost entirely cashless. Download <strong>Alipay</strong> and link your credit card (Visa/Mastercard). You can pay everywhere with it.",
-    "faq-q7": "What can I expect from a TCM treatment?",
-    "faq-a7": "Professor Xu creates an individual diagnosis via pulse diagnostics and tongue analysis. Treatment typically includes herbal formulas, acupuncture, and moxibustion. Initial improvements often appear after 1-2 weeks, sustainable changes after 4+ weeks.",
-
-    // Contact
-    "contact-title": "Begin Your Healing Journey",
-    "contact-subtitle": "Contact us or register directly for your customized program.",
-    "contact-free-consult": "Request a Free 15-Min Consultation",
-    "contact-free-desc": "Speak directly with Nanjing Deng to discuss your symptoms and select the ideal health maintenance path.",
-    "contact-label-name": "Full Name",
-    "contact-label-email": "Email Address",
-    "contact-label-phone": "Phone Number",
-    "contact-label-program": "Program of Interest",
-    "contact-label-date": "Select Consultation Date (Wed & Sat)",
-    "contact-label-slot": "Select Time Slot (Chinese Time 14:00 - 20:00)",
-    "contact-label-message": "Brief Medical History / Notes",
-    "contact-submit-btn": "Register Now",
-    "contact-submit-email": "Register via Email",
-    "contact-submit-whatsapp": "Register via WhatsApp",
-    "contact-social-text": "Connect with us on Social Media for daily health tips, sound circles and tea recipes:",
-    "whatsapp-text": "Chat on WhatsApp",
-    "instagram-text": "Instagram: nanjing_tea.sound",
-
-    // Interactive Booking Toast/Confirm
-    "booking-success-toast": "Registration submitted! Check your email inbox for confirmation.",
-    
-    // Marketing Popup
-    "popup-title": "Welcome Offer",
-    "popup-desc": "Register today for our Endometriosis Programs or the Wudang Retreat and receive a 10% reduction on the cost contribution for your initial consultation.",
-    "popup-code-label": "Your Registration Code:",
-    "popup-cta": "Register with Code",
-
-    // Fungal Medicine & Resources
-    "treatment-4-badge": "Mycology",
-    "treatment-4-title": "Fungal Medicine & Mycelial Regulation",
-    "treatment-4-desc": "Unblocking membranous pathways (膜络) using medical macrofungi (Poria, Reishi, Cordyceps). Supports regression of breast and thyroid nodules and regulates the vegetative nervous system.",
-    "nav-resources": "Resources",
-    "resources-tag": "Knowledge & Downloads",
-    "resources-title": "Clinic Manuals & Science",
-    "resources-subtitle": "Download official manuals of our clinical devices and deepen your understanding of our treatment systems.",
-    "wisdom-tag": "WeChat Wisdom & Clinical Practice",
-    "wisdom-title": "The Wisdom of Fungal Medicine: From Soil to Membrane",
-    "wisdom-text": "<p style=\"margin-bottom: 1rem;\">Beneath the earth lies a neural network – the 'Wood Wide Web'. Just like this planetary immune system, mushrooms work in our bodies through symbiosis and regulation. They connect with our '膜络' (membranous collaterals) to clear blockages, transform dampness, and resolve nodules (cysts, fibroids, thyroid nodules).</p><p>In our clinical practice, we combine these natural laws with modern care. Read the full scientific report by Dr. Zhang Hailing and Dr. Chen Kainan.</p>",
-    "wisdom-link": "Read Original Article (WeChat)",
-    "cases-title": "Clinical Case Studies",
-    "case-1": "<strong>Case 1 (Thyroid Nodules, 2.1cm):</strong> Complete symptom relief and nodule regression to 0.9cm after 3 months of Poria & Ganoderma therapy.",
-    "case-2": "<strong>Case 2 (Breast Hyperplasia & Anxiety):</strong> Dispersal of breast nodules (1.6cm) and relief of palpitations/insomnia through mycelial regulation.",
-    "download-program-brochure": "Download Retreat Book (PDF)",
-    "manuals-grid-title": "Medical Device Manuals & Brochures",
-    "pdf-1-title": "Spectrum Treatment Device 2.0",
-    "pdf-1-desc": "Detailed clinical manual on thermal spectrum light therapy for cellular rejuvenation and meridian warming.",
-    "pdf-2-title": "Pian-Stone Medium-Frequency Pot 2.0",
-    "pdf-2-desc": "Operation manual and applications of the warm Pian-stone electrotherapy device for meridian massage.",
-    "pdf-3-title": "Infrared Thermal Imaging 4.0",
-    "pdf-3-desc": "Guide to infrared thermographic diagnostics for visualizing inflammation and microcirculation patterns.",
-    "pdf-4-title": "铺灸 / Pu Jiu Moxibustion Manual 3.1",
-    "pdf-4-desc": "Clinical protocols for spine moxibustion (Pu Jiu) to expel deep body cold and nourish Yang vitality.",
-    "pdf-5-title": "Frequency Hyperthermia Cabin 3.5",
-    "pdf-5-desc": "Therapeutic manual for the clinical hyperthermia cabin, optimizing cellular detox and metabolic fire.",
-    "pdf-6-title": "Dao-Pilz-Retreat Program Guide",
-    "pdf-6-desc": "Full program details and daily schedules for the Daoist Mushroom Retreat in the Wudang Mountains.",
-    "pdf-download-btn": "Download PDF",
-    "treatment-1-badge": "Gynecology",
-    "treatment-2-badge": "Cell Therapy",
-    "treatment-3-badge": "Neurology",
-    "nav-tech-btn": "TCM Technology",
-    "tech-modal-title": "Clinical Technology & Therapy Methods",
-    "tech-download-manual": "Download Manual (PDF)",
-    "tech-device-2-title": "Bian Stone Electro-Frequency Therapy",
-    "tech-device-2-long-desc": "Combines Bian stone physical properties with target electrical frequencies to stimulate cellular metabolism and relieve muscle-skeletal tension.",
-    "tech-device-3-title": "Large-Scale Moxibustion (Pu Jiu)",
-    "tech-device-3-long-desc": "A thermal therapy applied over large body zones (such as the back) burning mugwort to warm the meridians, boost Yang energy, and regulate immunological response.",
-    "tech-device-4-title": "Whole-Body Spectrum Cabin",
-    "tech-device-4-long-desc": "Utilizes a broad electromagnetic wavelength spectrum to warm body tissues. Promotes peripheral microcirculation, supports cellular drainage, and alleviates chronic muscle stiffness.",
-    "tech-device-5-title": "Localized Spectrum treatment radiator",
-    "tech-device-5-long-desc": "Targeted spectrum radiation simulating natural body emission frequencies to stimulate tissue regeneration, local metabolism, and complement classical acupuncture treatments.",
-    "download-brochure-btn": "Download Brochure (PDF)",
-    "gallery-title": "Impressions from our last Retreat 2025",
-    "gallery-more-btn": "More Photos",
-    "gallery-subtitle": "Photos and moments of group training, meditations, and nature experiences.",
-    "gallery-item-group-badge": "Group",
-    "gallery-item-group-title": "Retreat Group 2025",
-    "gallery-item-meditation-badge": "Meditation",
-    "gallery-item-meditation-title": "Sound Meditation",
-    "gallery-item-qigong-badge": "Qi Gong",
-    "gallery-item-qigong-title": "Morning Qi Gong",
-    "gallery-item-tea-badge": "Ceremony",
-    "gallery-item-tea-title": "Tea Ceremony",
-    "gallery-item-lecture-badge": "Lecture",
-    "gallery-item-lecture-title": "Pulse Diagnosis",
-    "gallery-item-nature-badge": "Nature",
-    "gallery-item-nature-title": "Hiking & Herbs",
-    "gallery-item-practice-badge": "Practice",
-    "gallery-item-practice-title": "Moxa Training",
-    "gallery-item-kitchen-badge": "Nutrition",
-    "gallery-item-kitchen-title": "Healing Kitchen",
-    "gallery-item-soundbath-badge": "Sound Bath",
-    "gallery-item-soundbath-title": "Nature Sound Bath",
-    "btn-read-article": "Read Article",
-    "endo-read-approach": "Treatment Approach & Case Studies",
-    "footer-impressum": "Impressum / Legal Notice",
-    "footer-privacy": "Privacy Policy",
-    "contact-wechat-wrapper": "<strong>WeChat:</strong> <a href=\"#\" class=\"read-article-btn\" data-article=\"wechat\" style=\"color: var(--terracotta); text-decoration: underline; font-weight: 500;\">Show QR Codes</a>",
-    "endo-meta-title": "Hong Dao TCM Clinic | Endometriosis Program",
-    "endo-page-hero-tag": "Endometriosis Program",
-    "endo-page-title": "A Journey Back to Your Origin",
-    "endo-page-subtitle": "Holistic Support for Women with Endometriosis in China",
-    "endo-page-header": "Your body is not fighting against you.<br><span style=\"font-size: 1.5rem; color: var(--text-dark);\">Perhaps it is time to stop fighting against it.</span>",
-    "endo-page-intro": "<p>Come with us to China.</p><p>To the roots of a medicine that has understood the language of the female body for millennia.</p><p>To the misty mountains of Yunnan.</p><p>To peace, acceptance, sisterhood, and new hope.</p><p>And perhaps a step closer to your feminine essence.</p>",
-    "endo-page-body-1": "<p>Perhaps you have already come a long way.</p><p>Perhaps your pain has been suppressed with hormones, perhaps you have already undergone surgeries, or you have been told that further interventions are inevitable. Many women with endometriosis live for years between symptom management, uncertainty, and the feeling that their body is working against them.</p><p><strong>But what if your body is not your opponent?</strong></p><p>What if the pain, exhaustion, inflammation, and cycle complaints speak a language that wants to be understood?</p><p>In Traditional Chinese Medicine, we do not view endometriosis as an isolated disease, but as an expression of a deeper imbalance. Instead of suppressing symptoms, we ask: Why has the body fallen out of balance? What does it want to tell us? And how can we support it to return to its natural order?</p>",
-    "endo-page-quote": "<p style=\"margin-bottom: 1rem;\">In a time when more and more women are looking for natural and holistic paths, China opens the door to thousands of years of knowledge that does not view the female body as a problem/object, but as an intelligent system striving for balance.</p><p style=\"font-weight: 600;\">Where modern medicine often asks, \"What do we need to remove?\", Chinese Medicine asks, \"What do we need to nourish so that the body finds its way back to its natural order?\"</p>",
-    "endo-week1-title": "Week 1: The Shenzhen Clinic",
-    "endo-week1-desc": "<p>Our journey begins in Shenzhen, where we spend the first week in our experienced TCM clinic. Through comprehensive diagnostics, we create an individual treatment plan tailored to your personal history, complaints, and constitution.</p><p>We look not only at physical symptoms but also at nutrition, lifestyle, stress, emotional strain, and the deeper patterns that may have contributed to the condition. Together we develop a sustainable path that will continue to support you even after the journey.</p><p>During this first week, we already begin your individual herbal therapy. In addition, we utilize modern biomedical methods such as the BianHu Bio-Electric Resonance Massage and other supportive technologies that can help stimulate blood circulation, tissue nourishment, and the body's natural regulatory processes.</p>",
-    "endo-page-poetic": "<p>Chinese medicine speaks of 血海 (Xuè Hǎi) – the Sea of Blood, of 衝脈 (Chōng Mài) – the Sea of Femininity and Fertility, of 子宮 (Zǐ Gōng) – the Palace of the Child. The language alone shows a deeply rooted reverence for the female body.</p><div class=\"endo-poetic-highlight\"><p>The womb is not an organ to be fought against.<br><strong>It is a palace.</strong></p><p style=\"margin-top: 1rem;\">The cycle is not a problem.<br><strong>It is a rhythm.</strong></p><p style=\"margin-top: 1rem;\">Menstruation is not a tedious side effect.<br><strong>It is a message.</strong></p></div>",
-    "endo-week2-title": "Week 2: Deep Transformation in Yunnan",
-    "endo-week2-desc-1": "<p>After the first week, we travel together into the magical nature of Yunnan. Surrounded by misty mountains, ancient forests, and the peace of rural China, we spend our time in a beautiful 5-star hotel, far from the noise and hectic pace of everyday life.</p><p>Here begins the deeper healing journey.</p><p>In China, we experience not only the medicine but also the wisdom of a culture that is increasingly turning back to its traditional roots. Back to nature. Back to cycles. Back to the connection between human and earth.</p>",
-    "endo-week2-poetic": "This second phase of the journey is dedicated to Yin.<br>To nourishing.<br>To receiving.<br>To letting go.<br>To remembering.",
-    "endo-week2-desc-2": "<p>Many women with endometriosis have learned over years to fight, endure, and function. Here you can experience what it feels like to stop working against your body, and instead work with it.</p><p>Through sufficient sleep, deep relaxation, nourishing food, gentle movement, Qi Gong, breathwork, meditation, and plenty of time in nature, we create the conditions where recovery becomes possible in the first place.</p><p>We relearn what it means as a woman to live with the natural rhythms of life – with ebb and flow, activity and rest, Yang and Yin.</p><p>Throughout the entire journey, we continue the herbal therapy and observe together the changes on physical, emotional, and energetic levels. You will be carried and supported by an experienced team.</p>",
-    "endo-page-cta-text": "This journey is not a promise of healing.<br>It is an invitation.<br>An invitation to discover a different path.<br>A path based not on suppression, but on understanding.<br>Not on fighting, but on cooperation.<br>Not on separation, but on reconnection.<br><br>A journey back to your body.<br>Back to your femininity.<br>Back to your origin.",
-    "endo-page-cta-btn": "Schedule a Consultation"
-  },
-  de: {
-        "nav.reise": "Die Reise",
-
-        "reise.hero_title": "DIE REISE",
-        "reise.hero_subtitle": "TCM-Intensivausbildung & Daoistisches Retreat in China",
-        "reise.hero_dates": "10. – 20. Oktober 2026 | 10 Tage, 10 Nächte",
-        "reise.overview_title": "Teil 1: TCM-Intensivausbildung in Shenzhen",
-        "reise.overview_desc": "In diesen fünf Tagen werden Meister Xu Ruqi und sein Team uns durch eine Balance aus TCM-Theorie und Praxis führen. Sie lernen die Prinzipien der TCM aus einer kulturellen, medizinischen und historischen spirituellen Perspektive kennen und beobachten gleichzeitig Live-Patientenbehandlungen in seinem neu eröffneten Krankenhaus im Herzen der Stadt.",
-        "reise.wudang_title": "Teil 2: Integration in das heilige Landleben Chinas",
-        "reise.wudang_desc": "Am 15. Oktober reisen wir in die Wudang-Berge, eine legendäre daoistische Landschaft. Wir wohnen in der ländlichen Privatresidenz des daoistischen Priesters Yin Chen Zi und seiner Frau Li Xin, teilen biologische, hausgemachte Mahlzeiten und das tägliche Leben in enger Verbundenheit mit dem Land.",
-        "reise.itinerary_title": "Der Reiseablauf",
-        "reise.day_arrival": "09. Oktober | Ankunftstag",
-        "reise.day_arrival_desc": "Ankunft in Shenzhen & Check-in im Hotel Qianhai Gongyu. Einzelzimmer für jeden Teilnehmer. Gemeinsames Abendessen.",
-        "reise.day_prep": "10. Oktober | Willkommen & Vorbereitung",
-        "reise.day_prep_desc": "Orientierung & Gruppen-Einführung. Eröffnungsmeditation und Klangsession. Individuelle Pulsdiagnose durch Meister Xu für jeden Teilnehmer mit personalisierten Kräuterrezepturen.",
-        "reise.day_tcm": "10. – 14. Oktober | TCM-Intensivtraining",
-        "reise.day_tcm_desc": "4 Tage intensives Lernen & Üben. Kernthemen: Historische Einblicke, Puls- & Zungendiagnostik, Yin-Yang-Theorie sowie Live-Beobachtungen von Patientenbehandlungen.",
-        "reise.day_wudang": "15. – 20. Oktober | Integration in den Wudang-Bergen",
-        "reise.day_wudang_desc": "Reise nach Wudang. Leben an der ursprünglichen Quelle des Qi. Ausflüge zu kulturellen Stätten, daoistischen Tempeln, Teezeremonien und optionale Behandlungen (Moxa, Schröpfen, Gua Sha).",
-        "reise.pricing_title": "Preise & Zahlungspläne",
-        "reise.pricing_subtitle": "Wähle den passenden Plan für deine Reise",
-        "reise.price_earlybird": "Frühbucher",
-        "reise.price_earlybird_desc": "Gültig bis 31. Mai",
-        "booking.popular": "Am beliebtesten",
-        "reise.price_standard": "Standard-Preis",
-        "reise.price_standard_desc": "Regulärer Buchungstarif",
-        "reise.price_couple": "Paar-Angebot",
-        "reise.price_couple_desc": "Für zwei Teilnehmer",
-        "booking.contact_us": "Jetzt Kontakt aufnehmen",
-        "reise.inclusions": "Inklusive: Unterkunft, Verpflegung, Unterricht, Inlandszug nach Wudang. <br>Exklusive: Internationale Flüge & Visum.",
-
-    // Navigation
-    "nav-home": "Startseite",
-    "nav.reise": "Die Reise",
-    "nav-about": "Über uns & Meister",
-    "nav-treatments": "Gesundheitspflege",
-    "nav-devices": "Medizintechnik",
-    "nav-programs": "Programme",
-    "nav-retreat": "Yunnan-Retreat",
-    "nav-info": "Klinik-Info",
-    "nav-apply": "Anmelden",
-
-    // Hero Section
-    "hero-tag": "Traditionelle Chinesische Medizin trifft moderne Medizintechnik",
-    "hero-title": "Traditionelle Chinesische Medizin & Klinische Diagnostik",
-    "hero-desc": "Erleben Sie tiefe körperliche und spirituelle Transformation durch die 40-jährige TCM-Erfahrung von Professor Xu Ruqi, individuelle Kräutertherapien, modernste Diagnosegeräte und heilsame Klangzeremonien.",
-    "hero-cta-apply": "Jetzt anmelden",
-    "hero-cta-more": "Programme entdecken",
-
-    // Introduction / Philosophy
-    "intro-title": "Klassische Rezepturen als Fundament, Technologie als Flügel",
-    "intro-desc": "<p style=\"margin-bottom: 1rem;\">Die Hong Dao Klinik wurde von einem Team renommierter Experten der SHANGHANLUN 伤寒论 Lehre des aufgestiegenen Meisters ZHANG Zhongjings 张仲景 sowie Doktoranden der Fudan University gegründet und verbindet klassische chinesische Kräuterrezepturen mit moderner Technologie und Diagnostikverfahren.</p><p style=\"margin-bottom: 1rem;\">Unter dem Leitgedanken „Klassische Rezepturen als Fundament, Technologie als Flügel“ vereint die Klinik Forschung und Lehre in einem integrativen Konzept und dient Menschen weltweit.</p><p>Wir bieten individuell maßgeschneiderte Begleitung und Therapiepläne für Patient:innen an, die unter komplexen Erkrankungen wie Autoimmungeschehen, Stoffwechselerkrankungen wie Diabetes, Endometriose, hormonellen Störungen, Erschöpfungssyndrom, Krebs und Unfruchtbarkeit leiden.</p>",
-
-    // Masters & Team
-    "team-tag": "Unser Ärzteteam",
-    "team-title": "Bewahrer des Wissens & Klinische Experten",
-    "team-subtitle": "Lernen Sie unser engagiertes Team kennen, das Brücken zwischen Tradition und moderner Genesung schlägt.",
-    "master-xu-title": "Chefarzt & TCM-Professor",
-    "master-xu-desc": "Professor Xu Ruqi verfügt über mehr als 40 Jahre Erfahrung in Pulsdiagnostik und klassischer Kräutermedizin. Als klinischer Experte an der Pekinger Universität für Chinesische Medizin ist er weltweit bekannt für die Behandlung schwerer chronischer Krankheiten, Tumoren und gynäkologischer Leiden.",
-    "doctor-1-title": "Direktorin der Klinik & Stammzelltherapie",
-    "doctor-1-name": "Dr. Qiao Jingwen (乔靖文)",
-    "doctor-1-desc": "Dr. Qiao Jingwen ist Direktorin der Hong Dao Klinik und kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Gesundheit, Fruchtbarkeit und hormonelle Balance.",
-    "doctor-4-name": "Dr. Guan Weina (管蔚娜)",
-    "doctor-4-spec": "Staatlich lizenzierte TCM-Ärztin. Spezialistin für Meridian-Entgiftung, Akupunktur und therapeutische Massagen.",
-    "doctor-5-name": "Dr. Zhang Hailin (张海林)",
-    "doctor-5-spec": "Leiterin des Dekokt-Zentrums. Expertin für traditionelle Kräuterzubereitung und Qualitätskontrolle.",
-    "btn-read-bio": "Profil lesen",
-    "decoction-subtitle": "Hauseigene Kräuter-Manufaktur",
-    "decoction-title": "Modernes Dekokt-Zentrum & Dao Di Kräuter",
-    "decoction-desc": "<p style=\"margin-bottom: 1.5rem;\">Wir beziehen ausschließlich hochwertige <strong>Dao Di Kräuter (道地藥材)</strong> aus kontrolliert biologischem Anbau und Soil-Technik aus den Herkunftsregionen, die für die jeweilige Pflanze die optimalen klimatischen und energetischen Bedingungen bieten.</p><p>In unserem hauseigenen Dekokt-Zentrum werden die Heilkräuter unter Aufsicht von Meister Xu individuell für Sie extrahiert, präzise verarbeitet und portioniert als <strong>gebrauchsfertige Kräuterdekokte (Ready-to-Drink)</strong> abgepackt, die Sie unkompliziert mit nach Hause nehmen können.</p>",
-    "visionary-deng-title": "Heilpraktikerin, Qi Gong & Klangbegleitung",
-    "visionary-deng-desc": "Heilpraktikerin Deng Nanjing übersetzt die Konsultationen und Befunde von Professor Xu verlässlich ins Deutsche, Englische, Italienische, Spanische und Mandarin. Begleitend leitet sie Qi Gong, die 6 heilenden Klänge, Klangsitzungen und Teezeremonien und unterstützt Sie bei allen organisatorischen Anliegen während Ihres Aufenthaltes.",
-    "visionary-deng-spec": "Heilpraktikerin, Qi Gong, Klangbegleitung & Patientenbetreuung. 5 Sprachen.",
-    "team-grid-title": "Unser spezialisiertes Team",
-    "doctor-3-name": "Dr. Chen Kainan (陈恺楠) — Assistenzarzt",
-    "doctor-3-spec": "Assistenzarzt, spezialisiert auf Akupunktur und klinische Unterstützung unter Anleitung von Professor Xu.",
-    "doctor-sound-name": "Cheung Mingli (张明丽)",
-    "doctor-sound-spec": "Nomadin, Yogalehrerin für Kinder und Erwachsene, Fächer-Tanz-Therapeutin & Klangarbeiterin mit 10+ Jahren internationaler Erfahrung.",
-
-    // Specialized Treatments
-    "treatments-title": "Fachbereiche der Gesundheitspflege",
-    "treatments-subtitle": "Maßgeschneiderte Begleitung für Ihre gezielte Regeneration.",
-    "treatment-1-title": "Endometriose & Frauengesundheit",
-    "treatment-1-desc": "Individuelle Kräuterpasten, Womb-Massage (Gebärmutter-Massage) und Akupressur zur Lösung von Stagnationen und Schmerzlinderung.",
-    "treatment-2-title": "Stammzellen & Langlebigkeit",
-    "treatment-2-desc": "Dr. Adrianna Qiao kombiniert modernste Stammzelltherapie mit TCM-Rejuvenationstechniken für zelluläre Erneuerung.",
-    "treatment-3-title": "Stress & Burnout-Prävention",
-    "treatment-3-desc": "Ganzheitliche Begleitung bei Belastungszuständen durch pulsgeführte Akupunktur und begleitende Klangtherapie.",
-
-    // Modern Devices
-    "devices-title": "Technologie zur Gesundheitspflege",
-    "devices-subtitle": "Traditionelle TCM-Diagnostik, präzisiert durch modernste klinische Geräte.",
-    "device-1-name": "Infrarot-Körperscan",
-    "device-1-desc": "Visualisiert Entzündungen, Durchblutungsverstörungen und energetische Meridianblockaden mittels HD-Thermografie.",
-    "device-1-uses": "Primäre Anwendung: Lenden- und Halswirbelsäule, Durchblutung, Entzündungsscreening, Stoffwechsel.",
-    "device-2-name": "Bian-Hu Bioelektrizitäts-Therapie",
-    "device-2-desc": "Verbindet erwärmten Bian-Stein-Massage-Kopf mit bioelektrischer Mittelfrequenz-Regulation.",
-    "device-2-uses": "Primäre Anwendung: Schulterschmerzen, HWS-Syndrom, Bandscheibenvorfall, Magen-Darm-Störungen, Endometriose (PCOS/PMOS).",
-    "device-3-name": "Kräuter-Wärme-Moxibustion",
-    "device-3-desc": "Patentiertes, raucharmes Großflächen-Wärme-Moxibustion-System (Pu Jiu) für Wirbelsäule und Gelenke.",
-    "device-3-uses": "Primäre Anwendung: Regelschmerzen & kalte Gebärmutter, Lenden- & Knieschmerz, Unterleibsentzündungen, Wirbelsäule.",
-    "device-4-name": "Thermo-Stoffwechselkabine",
-    "device-4-desc": "Ganzkörper-Spektralkabine mit Farbinfrarot, Sauerstoffanreicherung und negativen Ionen zur Zellreinigung.",
-    "device-4-uses": "Primäre Anwendung: Sportliche Regeneration, Fortpflanzungsgesundheit, chronische Leiden, metabolische Entgiftung.",
-    "device-5-name": "Mikro-Photonen-Moxibustion",
-    "device-5-desc": "Lokalisiertes Spektral-Bestrahlungsgerät (560-1400 nm) zur tiefenwirksamen Entzündungshemmung (7-10 cm).",
-    "device-5-uses": "Primäre Anwendung: Entzündungen & Schmerz, Gelenkschmerz, Hautregeneration, kosmetische Zwecke, Arthritis, Sportverletzungen.",
-    "endo-details-link": "Details ansehen",
-
-    // Programs & Endometriosis calculator
-    "programs-title": "Gesundheitsprogramme & Kurse",
-    "programs-subtitle": "Vom intensiven Ausbildungskurs bis zum maßgeschneiderten Gesundheitspflege-Programm.",
-    
-    "retreat-10day-title": "10-tägiges TCM-Training & Retreat",
-    "retreat-10day-date": "10. Oktober - 20. Oktober 2026",
-    "retreat-10day-desc": "Komplette Immersion in TCM-Theorie & Praxis. 5 Tage klinische Hospitation in Shenzhen unter Meister Xu, gefolgt von 5 Tagen taoistischer Lebensführung in den Wudang-Bergen. Ein 3-monatiger Online-Vorbereitungskurs ist inklusive! Maximal 12 Teilnehmer.",
-    "retreat-10day-price": "€3.900,- Kostenbeitrag (Frühbucher)",
-    "retreat-10day-wix-link": "Details ansehen",
-    
-    "retreat-1day-title": "1- bis 5-tägiges klinisches TCM-Training (Shenzhen)",
-    "retreat-1day-desc": "Lokale Tageskurse vor Ort. Ideal für Therapeuten und Interessierte zur Hospitation, Pulsdiagnose-Einführung und Kräuterküchen-Zubereitung.",
-    "retreat-1day-price": "€250,- Kostenbeitrag pro Tag",
-    
-    "endo-program-title": "Endometriose-Gesundheitspflegeprogramm",
-    "endo-program-desc": "Ein spezialisiertes, individuell anpassbares Gesundheitspflege-Programm für Frauen. Enthält Kräuterrezepturen, Womb-Massagen, Sound Healing, Ernährungsanalyse und Begleitung.",
-    "endo-select-duration": "Programmdauer wählen:",
-    "duration-1w": "1 Woche",
-    "duration-2w": "2 Wochen",
-    "duration-4w": "4 Wochen",
-    "endo-price": "Kostenbeitrag auf Anfrage",
-    "package-basic": "Ambulant (ohne Unterkunft)",
-    "package-premium": "Premium (inkl. Partnerhotel & TCM-Küche)",
-    "endo-included-title": "Inklusive Leistungen:",
-    "endo-price-note": "*Hinweis: Die Kostenbeiträge beinhalten keine individuelle Kräutermedizin.",
-
-    // Yunnan Retreat
-    "yunnan-title": "Berg-Retreats & Natur-Verlängerung",
-    "yunnan-subtitle": "Ein heilsamer Übergang von der Stadtklinik in die unberührte Natur.",
-    "yunnan-desc-1": "Erweitern Sie Ihr klinisches Programm mit einem Natur-Retreat. Jedes Behandlungsprogramm, jede Ausbildung und jedes Retreat beginnt mit intensiver Diagnose und Therapie in der Shenzhen-Klinik, bevor Sie direkt zu Chinas unberührten Bergheiligtümern reisen.",
-    "yunnan-desc-2": "Der zweite und vertiefende Teil findet immer an einem wunderschönen Ort in den Bergen Chinas statt. Wir nutzen ein traditionelles Gästehaus, betrieben vom taoistischen Meister Yin Chen Zi und seiner Frau in den Wudang-Bergen, sowie Unterkünfte in Wuyi Shan und Yunnan (Xishuangbanna).",
-    "yunnan-hotel-info": "Unterkünfte beinhalten: Traditionelles Gästehaus aus Holz in Wudang (Meister Yin Chen Zi), malerische Herbergen in Wuyi Shan sowie das luxuriöse Yunnan Horizon Sanctuary Öko-Resort.",
-
-    // Child Space
-    "child-title": "Hong Dao Kinderbereich",
-    "child-desc": "Heilung betrifft die ganze Familie. Unsere Klinik bietet einen hauseigenen Kinderbereich (Child Space) mit kindgerechten Beschäftigungen, TCM-Ernährungsberatung und regelmäßigen öffentlichen & internen Events.",
-
-    // Clinic Info & FAQ
-    "info-title": "Klinikinformationen & Buchungsrichtlinien",
-    "info-location-label": "Standort & Anfahrt",
-    "info-location-desc": "Hong Dao TCM-Klinik, Nanshan District, Shenzhen. Gut angebunden an Metro und Autobahn.",
-    "info-hours-label": "Öffnungszeiten",
-    "info-hours-desc": "Montag - Samstag: 09:00 - 18:00 Uhr (Nur nach Terminvereinbarung)",
-    "info-payment-label": "Anmeldung & Kostenbeitrag",
-    "info-payment-desc": "Die Online-Anmeldung ist möglich. Die Anmeldung gilt erst nach Erhalt der Bestätigungs-E-Mail als offiziell bestätigt. Alle Kostenbeiträge fließen direkt in die Deckung der Aufwände für die Gesundheitspflege-Programme der Klinik.",
-    
-    "faq-title": "Häufig gestellte Fragen (FAQ)",
-    "faq-q1": "Sind die verschriebenen Kräuter im Kostenbeitrag inbegriffen?",
-    "faq-a1": "Nein. Individuell verschriebene Kräuterarzneien (die als Pulver oder Paste mit nach Hause genommen werden können) werden je nach individuellem Aufwand und Bedarf separat bereitgestellt.",
-    "faq-q2": "Wie läuft der Transfer nach Yunnan ab?",
-    "faq-a2": "Unser Klinikteam organisiert den Transfer per Bahn/Flug. Unterkunft im Partnerhotel sowie Aktivitäten vor Ort sind im Kostenbeitrag des Retreats enthalten.",
-    "faq-q3": "Gibt es eine Kinderbetreuung vor Ort?",
-    "faq-a3": "Ja. Unser hauseigener Kinderbereich bietet altersgerechte Programme und veranstaltet regelmäßige Familien-Events.",
-    "faq-q4": "Brauche ich ein Visum für China?",
-    "faq-a4": "Die meisten EU-Bürger (inkl. Deutschland, Österreich, Schweiz) können seit 2024 visumfrei für bis zu 30 Tage nach China einreisen. Bitte prüfen Sie die aktuellen Einreisebestimmungen Ihres Landes vor Abreise.",
-    "faq-q5": "Welche Apps brauche ich in China?",
-    "faq-a5": "<strong>Vor Abreise installieren:</strong><br>&#8226; <strong>WeChat</strong> &#8211; Kommunikation (Chinas WhatsApp)<br>&#8226; <strong>Alipay</strong> &#8211; Bezahlen (Kreditkarte verknüpfen!)<br>&#8226; <strong>Didi</strong> &#8211; Taxi bestellen<br>&#8226; <strong>AMap</strong> &#8211; Navigation<br>&#8226; <strong>VPN</strong> &#8211; z.B. Jamjams oder Potatso Lite",
-    "faq-q6": "Wie funktioniert das Bezahlen vor Ort?",
-    "faq-a6": "In China wird fast ausschließlich bargeldlos bezahlt. Laden Sie <strong>Alipay</strong> herunter und verknüpfen Sie Ihre Kreditkarte (Visa/Mastercard). Damit können Sie überall bezahlen.",
-    "faq-q7": "Was kann ich von einer TCM-Behandlung erwarten?",
-    "faq-a7": "Professor Xu erstellt eine individuelle Diagnose über Pulsdiagnostik und Zungenanalyse. Die Behandlung umfasst Kräuterrezepturen, Akupunktur und Moxibustion. Erste Verbesserungen zeigen sich oft nach 1-2 Wochen, nachhaltige Veränderungen nach 4+ Wochen.",
-
-    // Contact
-    "contact-title": "Beginnen Sie Ihren Weg zur Heilung",
-    "contact-subtitle": "Kontaktieren Sie uns oder bewerben Sie sich direkt für Ihr individuelles Heilprogramm.",
-    "contact-free-consult": "Kostenloses 15-minütiges Gespräch anfragen",
-    "contact-free-desc": "Sprechen Sie direkt mit Nanjing Deng, um Ihre Beschwerden zu besprechen und das passende Programm zu finden.",
-    "contact-label-name": "Name",
-    "contact-label-email": "E-Mail-Adresse",
-    "contact-label-phone": "Telefonnummer",
-    "contact-label-program": "Gewünschtes Programm",
-    "contact-label-date": "Datum des Beratungsgesprächs (Mittwoch / Samstag)",
-    "contact-label-slot": "Uhrzeit wählen (Pekinger Ortszeit 14:00 - 20:00 Uhr)",
-    "contact-label-message": "Kurze Anmerkung zu Ihren Beschwerden",
-    "contact-submit-btn": "Jetzt anmelden",
-    "contact-submit-email": "Per E-Mail anmelden",
-    "contact-submit-whatsapp": "Per WhatsApp anmelden",
-    "contact-social-text": "Folgen Sie uns in den sozialen Medien für Gesundheitstipps, Klangzirkel und Tee-Rituale:",
-    "whatsapp-text": "Über WhatsApp chatten",
-    "instagram-text": "Instagram: nanjing_tea.sound",
-
-    // Interactive Booking Toast/Confirm
-    "booking-success-toast": "Registrierung erfolgreich gesendet! Eine Bestätigung wird an Ihre E-Mail gesendet.",
-    
-    // Marketing Popup
-    "popup-title": "Willkommensangebot",
-    "popup-desc": "Registrieren Sie sich heute für die Endometriose-Programme oder das Wudang-Retreat und erhalten Sie 10% Ermäßigung auf den Kostenbeitrag der Erstkonsultation.",
-    "popup-code-label": "Ihr Registrierungscode:",
-    "popup-cta": "Mit Code registrieren",
-
-    // Fungal Medicine & Resources
-    "treatment-4-badge": "Pilzheilkunde",
-    "treatment-4-title": "Pilzheilkunde & Myzel-Regulation",
-    "treatment-4-desc": "Lösung von Blockaden in den Membranen (膜络) durch medizinale Großpilze (Poria, Reishi, Cordyceps) zur sanften Schrumpfung von Gewebeknoten und Regulation des Nervensystems.",
-    "nav-resources": "Handbücher",
-    "resources-tag": "Wissenschaft & Downloads",
-    "resources-title": "Klinik-Handbücher & Forschung",
-    "resources-subtitle": "Laden Sie offizielle Handbücher unserer Medizintechnik herunter und vertiefen Sie Ihr Wissen über unsere Behandlungssysteme.",
-    "wisdom-tag": "WeChat-Wissenschaft & Klinische Praxis",
-    "wisdom-title": "Die Weisheit der Pilzmedizin: Vom Erdboden zu den Membranen",
-    "wisdom-text": "<p style=\"margin-bottom: 1rem;\">Unter der Erde erstreckt sich ein neuronales Netzwerk – das „Wood Wide Web“. Genau wie dieses planetare Immunsystem arbeiten Pilze in unserem Körper durch Symbiose und Regulation. Sie verbinden sich mit unseren „膜络“ (membranösen Kollateralen), um Blockaden zu lösen, Feuchtigkeit zu transformieren und Knoten (Zysten, Myome, Schilddrüsenknoten) aufzulösen.</p><p>In unserer klinischen Praxis verbinden wir diese Naturgesetze mit moderner Begleitung. Lesen Sie die vollständige wissenschaftliche Ausarbeitung von Dr. Zhang Hailing und Dr. Chen Kainan.</p>",
-    "wisdom-link": "Original-Artikel lesen (WeChat)",
-    "cases-title": "Klinische Fallstudien",
-    "case-1": "<strong>Fall 1 (Schilddrüsenknoten, 2.1cm):</strong> Vollständige Symptomlinderung und Knotenschrumpfung auf 0.9cm nach 3 Monaten Therapie mit Poria & Reishi.",
-    "case-2": "<strong>Fall 2 (Brustdrüsen-Hyperplasie & Angst):</strong> Auflösung von Brustknoten (1.6cm) und Linderung von Herzklopfen/Schlaflosigkeit durch Myzel-Regulation.",
-    "download-program-brochure": "Retreat-Programmbuch herunterladen (PDF)",
-    "manuals-grid-title": "Medizinische Geräte-Handbücher & Broschüren",
-    "pdf-1-title": "Spektrum-Therapiegerät 2.0",
-    "pdf-1-desc": "Detailliertes Handbuch zur thermischen Spektrallicht-Therapie zur Entgiftung und Meridianstärkung.",
-    "pdf-2-title": "Pian-Stein Mittelfrequenz-Therapie",
-    "pdf-2-desc": "Bedienungsanleitung und Anwendungsbereiche des warmen Pian-Stein-Behälters zur Meridian-Massage.",
-    "pdf-3-title": "Infrarot-Thermografie 4.0",
-    "pdf-3-desc": "Broschüre zur thermischen Bildgebung und Diagnostik von Durchblutung und Entzündungsherden.",
-    "pdf-4-title": "铺灸 / Pu Jiu Handbuch 3.1",
-    "pdf-4-desc": "Klinische Richtlinien zur Rücken-Moxibustion zur Beseitigung tiefer Kälte und Stärkung des Yang.",
-    "pdf-5-title": "Frequenz-Hyperthermie-Kabine 3.5",
-    "pdf-5-desc": "Bedienung und therapeutischer Nutzen der Ganzkörper-Wärmekabine zur Entgiftung und Immun-Aktivierung.",
-    "pdf-6-title": "Dao-Pilz-Retreat Programm",
-    "pdf-6-desc": "Exklusive Broschüre zum Retreat „Awakening and Transforming the Life Force“ in den Wudang-Bergen.",
-    "pdf-download-btn": "PDF herunterladen",
-    "treatment-1-badge": "Gynäkologie",
-    "treatment-2-badge": "Zelltherapie",
-    "treatment-3-badge": "Neurologie",
-    "nav-tech-btn": "TCM-Technologie",
-    "tech-modal-title": "Klinische Medizintechnik & Therapieverfahren",
-    "tech-download-manual": "Handbuch herunterladen (PDF)",
-    "tech-device-2-title": "Bian-Stein Mittelfrequenz-Elektrotherapie",
-    "tech-device-2-long-desc": "Verbindet Akupressur-Punkte mit gezielten Frequenzen zur Anregung des Zellstoffwechsels und zur Entlastung des Muskel-Skelett-Systems. Stimuliert blockierte Leitbahnen (Meridiane) mittels biologischer Frequenzen.",
-    "tech-device-3-title": "Großflächen-Moxibustion (铺灸 - Pu Jiu)",
-    "tech-device-3-long-desc": "Eine Wärmetherapie auf großen Körperflächen (wie dem Rücken), bei der Beifußkraut gezielt verbrannt wird, um Kälte aus den Leitbahnen zu vertreiben, die Yang-Energie zu stärken und das Immunsystem zu regulieren.",
-    "tech-device-4-title": "Ganzkörper-Spektralkabine",
-    "tech-device-4-long-desc": "Nutzt ein breites elektromagnetisches Frequenzspektrum zur Erwärmung des Gewebes. Fördert die periphere Mikrozirkulation, unterstützt die zelluläre Ausleitung und lindert chronische Muskelverspannungen.",
-    "tech-device-5-title": "Lokalisiertes Spektral-Bestrahlungsgerät",
-    "tech-device-5-long-desc": "Gezielter Spektralstrahler zur lokalen Bestrahlung. Fördert die Geweberegeneration, regt lokale Stoffwechselprozesse an und wird komplementär zu Akupunktur- und Moxa-Sitzungen eingesetzt.",
-    "download-brochure-btn": "Broschüre herunterladen (PDF)",
-    "gallery-title": "Impressionen aus unserem letzten Retreat 2025",
-    "gallery-more-btn": "Mehr Bilder",
-    "gallery-subtitle": "Bilder und Momente des gemeinsamen Trainings, der Meditationen und Naturerfahrungen.",
-    "gallery-item-group-badge": "Gruppe",
-    "gallery-item-group-title": "Retreatgruppe 2025",
-    "gallery-item-meditation-badge": "Meditation",
-    "gallery-item-meditation-title": "Klangmeditation",
-    "gallery-item-qigong-badge": "Qi Gong",
-    "gallery-item-qigong-title": "Morgen Qi Gong",
-    "gallery-item-tea-badge": "Zeremonie",
-    "gallery-item-tea-title": "Tee-Zeremonie",
-    "gallery-item-lecture-badge": "Theorie",
-    "gallery-item-lecture-title": "Pulsdiagnose",
-    "gallery-item-nature-badge": "Natur",
-    "gallery-item-nature-title": "Wandern & Kräuter",
-    "gallery-item-practice-badge": "Praxis",
-    "gallery-item-practice-title": "Moxa-Training",
-    "gallery-item-kitchen-badge": "Ernährung",
-    "gallery-item-kitchen-title": "Heilküche",
-    "gallery-item-soundbath-badge": "Klangbad",
-    "gallery-item-soundbath-title": "Klangbad in Natur",
-    "btn-read-article": "Artikel lesen",
-    "endo-read-approach": "Behandlungsansatz & Fallbeispiele",
-    "footer-impressum": "Impressum",
-    "footer-privacy": "Datenschutz",
-    "contact-wechat-wrapper": "<strong>WeChat:</strong> <a href=\"#\" class=\"read-article-btn\" data-article=\"wechat\" style=\"color: var(--terracotta); text-decoration: underline; font-weight: 500;\">QR-Codes anzeigen</a>",
-    "endo-meta-title": "Hong Dao TCM Clinic | Endometriose Programm",
-    "endo-page-hero-tag": "Endometriose Programm",
-    "endo-page-title": "Eine Reise zurück zu deinem Ursprung",
-    "endo-page-subtitle": "Ganzheitliche Begleitung für Frauen mit Endometriose in China",
-    "endo-page-header": "Dein Körper kämpft nicht gegen dich.<br><span style=\"font-size: 1.5rem; color: var(--text-dark);\">Vielleicht ist es an der Zeit, aufzuhören gegen ihn zu kämpfen.</span>",
-    "endo-page-intro": "<p>Komm mit uns nach China.</p><p>Zu den Wurzeln einer Medizin, die seit Jahrtausenden die Sprache des weiblichen Körpers versteht.</p><p>Zu den Nebelbergen Yunnans.</p><p>Zu Ruhe, Akzeptanz, Gemeinschaft als Frauen und neuer Hoffnung.</p><p>Und vielleicht ein Stück näher zu deiner weiblichen Essenz</p>",
-    "endo-page-body-1": "<p>Vielleicht hast du bereits einen langen Weg hinter dir.</p><p>Vielleicht wurden deine Schmerzen mit Hormonen unterdrückt, vielleicht hast du bereits Operationen hinter dir oder dir wurde gesagt, dass weitere Eingriffe unvermeidbar sind. Viele Frauen mit Endometriose leben jahrelang zwischen Symptombehandlung, Unsicherheit und dem Gefühl, dass ihr Körper gegen sie arbeitet.</p><p><strong>Doch was wäre, wenn dein Körper nicht dein Gegner ist?</strong></p><p>Was wäre, wenn die Schmerzen, Erschöpfung, Entzündungen und Zyklusbeschwerden eine Sprache sprechen, die verstanden werden möchte?</p><p>In der Traditionellen Chinesischen Medizin betrachten wir Endometriose nicht als isolierte Erkrankung, sondern als Ausdruck eines tieferen Ungleichgewichts. Statt Symptome zu unterdrücken, fragen wir: Warum ist der Körper aus seiner Balance geraten? Was möchte er uns mitteilen? Und wie können wir ihn dabei unterstützen, zu seiner natürlichen Ordnung zurückzufinden?</p>",
-    "endo-page-quote": "<p style=\"margin-bottom: 1rem;\">In einer Zeit, in der immer mehr Frauen nach natürlichen und ganzheitlichen Wegen suchen, öffnet uns China die Tür zu einem jahrtausendealten Wissen, das den weiblichen Körper nicht als Problem/Objekt betrachtet, sondern als intelligentes System, das nach Balance strebt.</p><p style=\"font-weight: 600;\">Wo die moderne Medizin oft fragt: „Was müssen wir entfernen?“, fragt die Chinesische Medizin: „Was müssen wir nähren, damit der Körper wieder in seine natürliche Ordnung findet?“</p>",
-    "endo-week1-title": "Woche 1: Die Klinik in Shenzhen",
-    "endo-week1-desc": "<p>Unsere Reise beginnt in Shenzhen, wo wir die erste Woche in einer erfahrenen TCM-Klinik verbringen. Durch eine umfassende Diagnostik erstellen wir einen individuellen Therapieplan, der auf deine persönliche Geschichte, deine Beschwerden und deine Konstitution abgestimmt ist.</p><p>Wir betrachten nicht nur die körperlichen Symptome, sondern auch Ernährung, Lebensstil, Stress, emotionale Belastungen und die tieferen Muster, die zu der Erkrankung beigetragen haben könnten. Gemeinsam entwickeln wir einen nachhaltigen Weg, der dich auch nach der Reise weiter begleiten kann.</p><p>Bereits in dieser ersten Woche beginnen wir mit deiner individuellen Kräutertherapie. Ergänzend nutzen wir moderne biomedizinische Verfahren wie die BianHu Bio-Medizinische Resonanz-Massage sowie weitere unterstützende Technologien, die dabei helfen können, Durchblutung, Gewebeversorgung und die natürlichen Regulationsprozesse des Körpers anzuregen.</p>",
-    "endo-page-poetic": "<p>Die Chinesische Medizin spricht von 血海 (Xuè Hǎi) – dem Meer des Blutes, von 衝脈 (Chōng Mài) – dem Meer der Weiblichkeit und Fruchtbarkeit, von 子宮 (Zǐ Gōng) – dem Palast des Kindes. Allein die Sprache zeigt eine tief verwurzelte Ehrfurcht vor dem weiblichen Körper.</p><div class=\"endo-poetic-highlight\"><p>Die Gebärmutter ist kein Organ, das bekämpft werden muss.<br><strong>Sie ist ein Palast.</strong></p><p style=\"margin-top: 1rem;\">Der Zyklus ist kein Problem.<br><strong>Er ist ein Rhythmus.</strong></p><p style=\"margin-top: 1rem;\">Die Menstruation ist kein lästiger Nebeneffekt.<br><strong>Sie ist eine Botschaft.</strong></p></div>",
-    "endo-week2-title": "Woche 2: Tiefe Transformation in Yunnan",
-    "endo-week2-desc-1": "<p>Nach der ersten Woche reisen wir gemeinsam in die magische Natur Yunnans. Umgeben von den Nebelbergen, uralten Wäldern und der Ruhe des ländlichen Chinas verbringen wir unsere Zeit in einem wunderschönen 5-Sterne-Hotel, fernab vom Lärm und der Hektik des Alltags.</p><p>Hier beginnt die tiefere Heilungsreise.</p><p>In China erleben wir nicht nur die Medizin, sondern auch die Weisheit einer Kultur, die sich zunehmend wieder auf ihre traditionellen Wurzeln besinnt. Zurück zur Natur. Zurück zu den Zyklen. Zurück zur Verbindung zwischen Mensch und Erde.</p>",
-    "endo-week2-poetic": "Diese zweite Phase der Reise ist dem Yin gewidmet.<br>Dem Nähren.<br>Dem Empfangen.<br>Dem Loslassen.<br>Dem Erinnern.",
-    "endo-week2-desc-2": "<p>Viele Frauen mit Endometriose haben über Jahre gelernt zu kämpfen, durchzuhalten und zu funktionieren. Hier darfst du erfahren, wie es sich anfühlt, nicht mehr gegen deinen Körper zu arbeiten, sondern mit ihm.</p><p>Durch ausreichend Schlaf, tiefgehende Entspannung, nährendes Essen, sanfte Bewegung, Qi Gong, Atemarbeit, Meditation und viel Zeit in der Natur schaffen wir die Bedingungen, in denen Regeneration überhaupt erst möglich wird.</p><p>Wir lernen wieder, was es bedeutet, als Frau mit den natürlichen Rhythmen des Lebens zu leben – mit Ebbe und Flut, Aktivität und Ruhe, Yang und Yin.</p><p>Während der gesamten Reise begleiten wir die Kräutertherapie weiter und beobachten gemeinsam die Veränderungen auf körperlicher, emotionaler und energetischer Ebene. Du wirst von einem erfahrenen Team getragen und unterstützt.</p>",
-    "endo-page-cta-text": "Diese Reise ist kein Versprechen auf Heilung.<br>Sie ist eine Einladung.<br>Eine Einladung, einen anderen Weg kennenzulernen.<br>Einen Weg, der nicht auf Unterdrückung basiert, sondern auf Verständnis.<br>Nicht auf Kampf, sondern auf Kooperation.<br>Nicht auf Trennung, sondern auf Rückverbindung.<br><br>Eine Reise zurück zu deinem Körper.<br>Zurück zu deiner Weiblichkeit.<br>Zurück zu deinem Ursprung.",
-    "endo-page-cta-btn": "Beratungsgespräch vereinbaren"
-  }
-};
+const translations = pageContent.translations;
 
 // Endometriosis Program Pricing Data Matrix
 const endometriosisPricing = {
   "1w": {
-    basic: 1750,
-    premium: 2500,
+    basic: 950,
+    premium: 1950,
     features: {
       en: [
-        "Initial pulse & tongue diagnosis with Professor Xu",
-        "3 Acupuncture sessions",
-        "3 Moxibustion (Pu Jiu) sessions",
+        "Initial pulse & tongue diagnosis with Master Xu",
+        "3 Acupuncture & moxibustion sessions",
         "1 Specialized Womb-Massage session",
         "1 Group Sound Healing & sound ceremony",
         "TCM nutrition guideline and kitchen introduction",
         "Take-home medicine instruction (powders/pastes)"
       ],
       de: [
-        "Erstdiagnose (Puls & Zunge) mit Professor Xu",
-        "3 Akupunktur-Sitzungen",
-        "3 Moxibustions-Sitzungen (Pu Jiu)",
+        "Erstdiagnose (Puls & Zunge) mit Meister Xu",
+        "3 Akupunktur- & Moxibustions-Sitzungen",
         "1 Spezialisierte Womb-Massage (Gebärmutter-Massage)",
         "1 Gruppen-Sound-Healing & Klangzeremonie",
         "TCM-Ernährungsleitfaden & Küchen-Einführung",
@@ -610,84 +32,730 @@ const endometriosisPricing = {
     }
   },
   "2w": {
-    basic: 3500,
-    premium: 5000,
+    basic: 1750,
+    premium: 3500,
     features: {
       en: [
-        "Initial & mid-program checkup with Professor Xu",
-        "6 Acupuncture sessions",
-        "6 Moxibustion (Pu Jiu) sessions",
+        "Initial & mid-program checkup with Master Xu",
+        "6 Acupuncture & moxibustion sessions",
         "2 Specialized Womb-Massage sessions",
-        "2 Group Sound Healing sessions",
-        "Daily Morning Qi Gong",
-        "1 Tea Ceremony",
-        "Evening Meditation sessions",
-        "Cultural program with ethnic minorities (from week 2)",
+        "2 Group Sound Healing sessions & private alignment",
         "Daily TCM-based herbal soups at clinic",
-        "10 nights in a premium hotel and 3 warm meals per day",
-        "Transfer from Shenzhen to Yunnan",
         "Take-home medicine instruction + 3 months follow-up support"
       ],
       de: [
-        "Erst- & Zwischen-Diagnose durch Professor Xu",
-        "6 Akupunktur-Sitzungen",
-        "6 Moxibustions-Sitzungen (Pu Jiu)",
+        "Erst- & Zwischen-Diagnose durch Meister Xu",
+        "6 Akupunktur- & Moxibustions-Sitzungen",
         "2 Spezialisierte Womb-Massagen (Gebärmutter-Massagen)",
-        "2 Gruppen-Sound-Healings",
-        "Tägliches Morgen-Qi Gong",
-        "1 Teezeremonie",
-        "Abendmeditation",
-        "Kulturprogramm mit ethnischen Minderheiten (ab Woche 2)",
+        "2 Gruppen-Sound-Healings & private Klangsitzung",
         "Tägliche TCM-Kräutersuppen in der Klinik",
-        "10 Übernachtungen im Premium Hotel und 3 warme Mahlzeiten am Tag",
-        "Transfer von Shenzhen nach Yunnan",
         "Einweisung für Kräuter sowie 3 Monate Begleitung"
       ]
     }
   },
   "4w": {
-    basic: 6200,
-    premium: 9000,
+    basic: 3200,
+    premium: 6400,
     features: {
       en: [
-        "Weekly diagnostic checkups with Professor Xu",
-        "12 Acupuncture sessions",
-        "12 Moxibustion (Pu Jiu) sessions",
+        "Weekly diagnostic checkups with Master Xu",
+        "12 Acupuncture & moxibustion sessions",
         "4 Specialized Womb-Massage sessions",
         "4 Sound Healing & meditation ceremonies",
-        "Daily Morning Qi Gong",
-        "2 Tea Ceremonies",
-        "Daily Evening Meditation",
-        "Cultural program with ethnic minorities",
         "Daily TCM-based herbal kitchen meals at clinic",
         "Comprehensive stem-cell therapy consultation integration",
         "Take-home customized medicine preparation + 6 months follow-up support"
       ],
       de: [
-        "Wöchentliche Diagnostik und Anpassung durch Professor Xu",
-        "12 Akupunktur-Sitzungen",
-        "12 Moxibustions-Sitzungen (Pu Jiu)",
+        "Wöchentliche Diagnostik und Anpassung durch Meister Xu",
+        "12 Akupunktur- & Moxibustions-Sitzungen",
         "4 Spezialisierte Womb-Massagen",
         "4 Sound-Healing- & Meditationszeremonien",
-        "Tägliches Morgen-Qi Gong",
-        "2 Teezeremonien",
-        "Tägliche Abendmeditation",
-        "Kulturprogramm mit ethnischen Minderheiten",
         "Tägliche Mahlzeiten aus der TCM-Heilküche in der Klinik",
         "Integration & Beratung zu Stammzellentherapie",
-        "Herstellung der Kräuterarznei + 6 Monate ääärztliche Begleitung"
+        "Herstellung der Kräuterarznei + 6 Monate ärztliche Begleitung"
       ]
     }
   }
 };
+
+// Dynamic Image Loading
+function initImages() {
+  const isEditMode = localStorage.getItem("ohm_edit_token") !== null;
+  if (typeof pageContent !== 'undefined' && pageContent.images) {
+    document.querySelectorAll('[data-img-key]').forEach(el => {
+      const key = el.getAttribute('data-img-key');
+      const val = pageContent.images[key];
+      const customWidth = pageContent.images[key + "_width"];
+
+      if (val === "deleted") {
+        if (isEditMode) {
+          el.style.display = "inline-block";
+          el.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23111' stroke='%23333' stroke-width='2' stroke-dasharray='5,5'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23666' font-size='10' font-family='sans-serif'>[ Deleted Image ]</text></svg>";
+          el.style.opacity = "0.5";
+        } else {
+          el.style.display = "none";
+        }
+      } else if (val) {
+        el.src = val;
+        el.style.display = "";
+        el.style.opacity = "";
+      }
+
+      if (customWidth) {
+        el.style.width = customWidth;
+        el.style.maxWidth = "100%";
+      } else {
+        el.style.width = ""; // reset to default CSS
+      }
+    });
+  }
+}
+
+// In-place Editor Mode
+let pendingImageChanges = {};
+let isNavigateMode = false;
+
+function initEditorToolbar() {
+  if (document.getElementById("editor-toolbar")) return;
+
+  const toolbar = document.createElement("div");
+  toolbar.id = "editor-toolbar";
+  toolbar.style.position = "fixed";
+  toolbar.style.bottom = "20px";
+  toolbar.style.left = "50%";
+  toolbar.style.transform = "translateX(-50%)";
+  toolbar.style.background = "rgba(18, 18, 18, 0.85)";
+  toolbar.style.backdropFilter = "blur(12px)";
+  toolbar.style.border = "1px solid rgba(255, 255, 255, 0.1)";
+  toolbar.style.borderRadius = "50px";
+  toolbar.style.padding = "10px 24px";
+  toolbar.style.display = "flex";
+  toolbar.style.alignItems = "center";
+  toolbar.style.gap = "16px";
+  toolbar.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.5)";
+  toolbar.style.zIndex = "999999";
+  toolbar.style.color = "#fff";
+  toolbar.style.fontFamily = "var(--font-serif), serif";
+
+  const statusDot = document.createElement("span");
+  statusDot.style.width = "8px";
+  statusDot.style.height = "8px";
+  statusDot.style.borderRadius = "50%";
+  statusDot.style.background = "#4caf50";
+  statusDot.style.display = "inline-block";
+
+  const statusText = document.createElement("span");
+  statusText.innerText = "Editor Mode: Nanjing Deng";
+  statusText.style.fontSize = "0.9rem";
+  statusText.style.fontWeight = "600";
+  statusText.style.marginRight = "8px";
+
+  const modeToggle = document.createElement("button");
+  modeToggle.id = "editor-mode-toggle";
+  modeToggle.innerText = "Mode: Edit ✏️";
+  modeToggle.style.background = "rgba(255, 255, 255, 0.1)";
+  modeToggle.style.color = "#fff";
+  modeToggle.style.border = "1px solid rgba(255, 255, 255, 0.15)";
+  modeToggle.style.borderRadius = "20px";
+  modeToggle.style.padding = "8px 16px";
+  modeToggle.style.cursor = "pointer";
+  modeToggle.style.fontWeight = "600";
+  modeToggle.style.fontSize = "0.85rem";
+  modeToggle.style.marginRight = "8px";
+  modeToggle.style.transition = "transform 0.2s, background 0.2s";
+  modeToggle.addEventListener("mouseenter", () => modeToggle.style.transform = "scale(1.05)");
+  modeToggle.addEventListener("mouseleave", () => modeToggle.style.transform = "scale(1)");
+  
+  modeToggle.addEventListener("click", () => {
+    isNavigateMode = !isNavigateMode;
+    if (isNavigateMode) {
+      modeToggle.innerText = "Mode: Navigate 🧭";
+      modeToggle.style.background = "#2196f3"; // light blue
+      disableEditMode();
+    } else {
+      modeToggle.innerText = "Mode: Edit ✏️";
+      modeToggle.style.background = "rgba(255, 255, 255, 0.1)";
+      enableEditMode();
+    }
+  });
+
+  const publishBtn = document.createElement("button");
+  publishBtn.innerText = "Publish Changes";
+  publishBtn.style.background = "var(--terracotta, #c86446)";
+  publishBtn.style.color = "#fff";
+  publishBtn.style.border = "none";
+  publishBtn.style.borderRadius = "20px";
+  publishBtn.style.padding = "8px 16px";
+  publishBtn.style.cursor = "pointer";
+  publishBtn.style.fontWeight = "600";
+  publishBtn.style.fontSize = "0.85rem";
+  publishBtn.style.transition = "transform 0.2s, background 0.2s";
+  publishBtn.addEventListener("mouseenter", () => publishBtn.style.transform = "scale(1.05)");
+  publishBtn.addEventListener("mouseleave", () => publishBtn.style.transform = "scale(1)");
+  publishBtn.addEventListener("click", publishChanges);
+
+  const cancelBtn = document.createElement("button");
+  cancelBtn.innerText = "Cancel";
+  cancelBtn.style.background = "transparent";
+  cancelBtn.style.color = "#ccc";
+  cancelBtn.style.border = "1px solid #444";
+  cancelBtn.style.borderRadius = "20px";
+  cancelBtn.style.padding = "8px 16px";
+  cancelBtn.style.cursor = "pointer";
+  cancelBtn.style.fontWeight = "600";
+  cancelBtn.style.fontSize = "0.85rem";
+  cancelBtn.addEventListener("click", () => {
+    if (confirm("Discard all unsaved edits?")) {
+      window.location.reload();
+    }
+  });
+
+  const logoutBtn = document.createElement("button");
+  logoutBtn.innerText = "Logout";
+  logoutBtn.style.background = "transparent";
+  logoutBtn.style.color = "#ff4a4a";
+  logoutBtn.style.border = "none";
+  logoutBtn.style.cursor = "pointer";
+  logoutBtn.style.fontWeight = "600";
+  logoutBtn.style.fontSize = "0.85rem";
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("ohm_edit_token");
+    window.location.href = window.location.pathname;
+  });
+
+  toolbar.appendChild(statusDot);
+  toolbar.appendChild(statusText);
+  toolbar.appendChild(modeToggle);
+  toolbar.appendChild(publishBtn);
+  toolbar.appendChild(cancelBtn);
+  toolbar.appendChild(logoutBtn);
+  document.body.appendChild(toolbar);
+}
+
+function publishChanges() {
+  const token = localStorage.getItem("ohm_edit_token");
+  if (!token) {
+    alert("Not logged in or session expired.");
+    return;
+  }
+
+  const publishBtn = document.querySelector("#editor-toolbar button");
+  const originalText = publishBtn.innerText;
+  publishBtn.innerText = "Publishing...";
+  publishBtn.disabled = true;
+
+  const payload = {
+    token: token,
+    translations: pageContent.translations,
+    images: pageContent.images,
+    imageChanges: pendingImageChanges
+  };
+
+  fetch("/api/edit/publish", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(res => {
+    if (res.ok) {
+      return res.json();
+    }
+    return res.json().then(data => {
+      throw new Error(data.error || "Publish failed");
+    });
+  })
+  .then(data => {
+    alert("Changes published successfully!");
+    pendingImageChanges = {};
+    window.location.reload();
+  })
+  .catch(err => {
+    alert("Error publishing changes: " + err.message);
+    publishBtn.innerText = originalText;
+    publishBtn.disabled = false;
+  });
+}
+
+function makeElementsEditable() {
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    if (element.tagName !== "INPUT" && element.tagName !== "TEXTAREA" && element.tagName !== "SELECT") {
+      element.setAttribute("contenteditable", "true");
+      element.style.outline = "1px dashed rgba(220, 100, 50, 0.3)";
+      element.style.padding = "2px";
+      element.style.borderRadius = "2px";
+      
+      if (element.getAttribute("data-editable-wired")) return;
+      element.setAttribute("data-editable-wired", "true");
+
+      element.addEventListener("mouseenter", () => {
+        if (isNavigateMode) return;
+        element.style.outline = "2px dashed var(--terracotta)";
+      });
+      element.addEventListener("mouseleave", () => {
+        if (isNavigateMode) return;
+        element.style.outline = "1px dashed rgba(220, 100, 50, 0.3)";
+      });
+
+      element.addEventListener("blur", () => {
+        if (isNavigateMode) return;
+        const key = element.getAttribute("data-i18n");
+        if (key && pageContent.translations[currentLang]) {
+          pageContent.translations[currentLang][key] = element.innerHTML;
+        }
+      });
+    }
+  });
+  
+  document.querySelectorAll("[data-img-key]").forEach(img => {
+    img.style.cursor = "pointer";
+    img.style.outline = "2px dashed rgba(220, 100, 50, 0.5)";
+    
+    if (img.getAttribute("data-img-wired")) return;
+    img.setAttribute("data-img-wired", "true");
+
+    img.addEventListener("mouseenter", () => {
+      if (isNavigateMode) return;
+      img.style.outline = "3px dashed var(--terracotta)";
+    });
+    img.addEventListener("mouseleave", () => {
+      if (isNavigateMode) return;
+      img.style.outline = "2px dashed rgba(220, 100, 50, 0.5)";
+    });
+
+    img.addEventListener("click", (e) => {
+      if (isNavigateMode) return;
+      e.stopPropagation();
+      e.preventDefault();
+      showImageEditorMenu(img);
+    });
+  });
+}
+
+function enableEditMode() {
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    if (element.tagName !== "INPUT" && element.tagName !== "TEXTAREA" && element.tagName !== "SELECT") {
+      element.setAttribute("contenteditable", "true");
+      element.style.outline = "1px dashed rgba(220, 100, 50, 0.3)";
+      element.style.padding = "2px";
+      element.style.borderRadius = "2px";
+    }
+  });
+  
+  document.querySelectorAll("[data-img-key]").forEach(img => {
+    img.style.cursor = "pointer";
+    img.style.outline = "2px dashed rgba(220, 100, 50, 0.5)";
+  });
+}
+
+function disableEditMode() {
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    element.removeAttribute("contenteditable");
+    element.style.outline = "";
+    element.style.padding = "";
+    element.style.borderRadius = "";
+  });
+
+  document.querySelectorAll("[data-img-key]").forEach(img => {
+    img.style.cursor = "";
+    img.style.outline = "";
+  });
+
+  document.querySelectorAll("a[href]").forEach(link => {
+    let href = link.getAttribute("href");
+    if (href && !href.startsWith("http") && !href.startsWith("mailto") && !href.startsWith("tel") && !href.startsWith("#")) {
+      const urlParts = href.split("?");
+      const pathPart = urlParts[0];
+      const searchPart = urlParts[1] ? "?" + urlParts[1] : "";
+      
+      const params = new URLSearchParams(searchPart);
+      params.set("edit", "true");
+      
+      link.setAttribute("href", pathPart + "?" + params.toString());
+    }
+  });
+}
+
+function showImageEditorMenu(img) {
+  const existingMenu = document.getElementById("image-editor-menu");
+  if (existingMenu) existingMenu.remove();
+
+  const key = img.getAttribute("data-img-key");
+
+  const menu = document.createElement("div");
+  menu.id = "image-editor-menu";
+  menu.style.position = "absolute";
+  menu.style.background = "rgba(20, 20, 20, 0.95)";
+  menu.style.backdropFilter = "blur(10px)";
+  menu.style.border = "1px solid rgba(255, 255, 255, 0.15)";
+  menu.style.borderRadius = "12px";
+  menu.style.padding = "8px";
+  menu.style.display = "flex";
+  menu.style.flexDirection = "column";
+  menu.style.gap = "4px";
+  menu.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.5)";
+  menu.style.zIndex = "1000001";
+  menu.style.fontFamily = "sans-serif";
+  menu.style.minWidth = "160px";
+
+  const rect = img.getBoundingClientRect();
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  menu.style.top = `${rect.top + scrollTop + 10}px`;
+  menu.style.left = `${rect.left + scrollLeft + 10}px`;
+
+  const title = document.createElement("div");
+  title.innerText = `Image: ${key}`;
+  title.style.fontSize = "0.75rem";
+  title.style.color = "#888";
+  title.style.padding = "4px 8px";
+  title.style.borderBottom = "1px solid rgba(255, 255, 255, 0.1)";
+  title.style.marginBottom = "4px";
+  menu.appendChild(title);
+
+  const changeBtn = document.createElement("button");
+  changeBtn.innerText = "📷 Change Photo";
+  styleMenuButton(changeBtn);
+  changeBtn.addEventListener("click", () => {
+    menu.remove();
+    triggerImageUpload(img);
+  });
+  menu.appendChild(changeBtn);
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.innerText = "🗑️ Delete Photo";
+  styleMenuButton(deleteBtn);
+  deleteBtn.style.color = "#ff4d4d";
+  deleteBtn.addEventListener("click", () => {
+    if (confirm("Are you sure you want to delete this photo from the layout?")) {
+      pageContent.images[key] = "deleted";
+      delete pendingImageChanges[key];
+      initImages();
+      menu.remove();
+    }
+  });
+  menu.appendChild(deleteBtn);
+
+  const sizeHeader = document.createElement("div");
+  sizeHeader.innerText = "Size / Width:";
+  sizeHeader.style.fontSize = "0.7rem";
+  sizeHeader.style.color = "#888";
+  sizeHeader.style.padding = "4px 8px 2px 8px";
+  menu.appendChild(sizeHeader);
+
+  const sizeRow = document.createElement("div");
+  sizeRow.style.display = "flex";
+  sizeRow.style.gap = "4px";
+  sizeRow.style.padding = "0 8px 8px 8px";
+
+  const sizes = ["25%", "50%", "75%", "100%", "Default"];
+  sizes.forEach(size => {
+    const sizeBtn = document.createElement("button");
+    sizeBtn.innerText = size;
+    sizeBtn.style.background = "rgba(255, 255, 255, 0.08)";
+    sizeBtn.style.border = "none";
+    sizeBtn.style.color = "#fff";
+    sizeBtn.style.fontSize = "0.7rem";
+    sizeBtn.style.padding = "3px 6px";
+    sizeBtn.style.borderRadius = "4px";
+    sizeBtn.style.cursor = "pointer";
+    sizeBtn.addEventListener("click", () => {
+      const widthVal = size === "Default" ? "" : size;
+      pageContent.images[key + "_width"] = widthVal;
+      initImages();
+      menu.remove();
+    });
+    sizeRow.appendChild(sizeBtn);
+  });
+  menu.appendChild(sizeRow);
+
+  setTimeout(() => {
+    const clickOutsideHandler = (event) => {
+      if (!menu.contains(event.target)) {
+        menu.remove();
+        document.removeEventListener("click", clickOutsideHandler);
+      }
+    };
+    document.addEventListener("click", clickOutsideHandler);
+  }, 100);
+
+  document.body.appendChild(menu);
+}
+
+function styleMenuButton(btn) {
+  btn.style.background = "transparent";
+  btn.style.border = "none";
+  btn.style.color = "#fff";
+  btn.style.padding = "6px 8px";
+  btn.style.textAlign = "left";
+  btn.style.borderRadius = "6px";
+  btn.style.cursor = "pointer";
+  btn.style.fontSize = "0.85rem";
+  btn.style.transition = "background 0.2s";
+  btn.addEventListener("mouseenter", () => btn.style.background = "rgba(255, 255, 255, 0.1)");
+  btn.addEventListener("mouseleave", () => btn.style.background = "transparent");
+}
+
+function triggerImageUpload(img) {
+  const fileInput = document.createElement("input");
+  fileInput.type = "file";
+  fileInput.accept = "image/jpeg, image/png, image/webp";
+  
+  fileInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
+        alert("Only JPG, PNG, and WebP images are allowed.");
+        return;
+      }
+      if (file.size > 5 * 1024 * 1024) {
+        alert("File size exceeds 5MB limit.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const base64Data = event.target.result;
+        img.src = base64Data;
+        
+        const key = img.getAttribute("data-img-key");
+        pageContent.images[key] = base64Data;
+        
+        pendingImageChanges[key] = {
+          name: file.name,
+          type: file.type,
+          data: base64Data
+        };
+        initImages();
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+  fileInput.click();
+}
+
+
+function checkEditorMode() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const tokenParam = urlParams.get("access_token");
+  
+  if (tokenParam) {
+    localStorage.setItem("ohm_edit_token", tokenParam);
+    urlParams.delete("access_token");
+    let newSearch = urlParams.toString();
+    newSearch = newSearch ? "?" + newSearch : "";
+    window.history.replaceState({}, "", window.location.pathname + newSearch + window.location.hash);
+  }
+
+  const isEdit = urlParams.get("edit") === "true" || window.location.hash === "#edit";
+  if (!isEdit) return;
+
+  const token = localStorage.getItem("ohm_edit_token");
+  if (!token) {
+    showLoginModal();
+  } else {
+    makeElementsEditable();
+    initEditorToolbar();
+  }
+}
+
+function injectEditorLoginLinks() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const isEdit = urlParams.get("edit") === "true" || window.location.hash === "#edit";
+  if (isEdit) return;
+
+  // 1. Sidebar/Mobile Navigation
+  document.querySelectorAll(".nav-links").forEach(nav => {
+    if (nav.querySelector(".editor-nav-link")) return;
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = window.location.pathname + "?edit=true";
+    a.className = "nav-link editor-nav-link";
+    a.style.opacity = "0.5";
+    a.style.fontSize = "0.85rem";
+    a.style.borderTop = "1px solid rgba(255, 255, 255, 0.08)";
+    a.style.marginTop = "15px";
+    a.style.paddingTop = "10px";
+    a.innerText = "✎ Editor Login";
+    li.appendChild(a);
+    nav.appendChild(li);
+  });
+
+  // 2. Footer Bottom Links
+  const footerLinks = document.querySelector(".footer-bottom-links");
+  if (footerLinks && !footerLinks.querySelector(".editor-login-link")) {
+    const editLink = document.createElement("a");
+    editLink.href = window.location.pathname + "?edit=true";
+    editLink.className = "editor-login-link";
+    editLink.style.marginLeft = "15px";
+    editLink.style.opacity = "0.5";
+    editLink.innerText = "Editor Login";
+    footerLinks.appendChild(editLink);
+  }
+}
+
+function showLoginModal() {
+  const modalOverlay = document.createElement("div");
+  modalOverlay.id = "editor-login-overlay";
+  modalOverlay.style.position = "fixed";
+  modalOverlay.style.top = "0";
+  modalOverlay.style.left = "0";
+  modalOverlay.style.width = "100%";
+  modalOverlay.style.height = "100%";
+  modalOverlay.style.background = "rgba(0,0,0,0.8)";
+  modalOverlay.style.display = "flex";
+  modalOverlay.style.alignItems = "center";
+  modalOverlay.style.justify = "center";
+  modalOverlay.style.zIndex = "1000000";
+  modalOverlay.style.backdropFilter = "blur(8px)";
+
+  const card = document.createElement("div");
+  card.style.background = "#1a1a1a";
+  card.style.border = "1px solid rgba(255, 255, 255, 0.1)";
+  card.style.borderRadius = "16px";
+  card.style.padding = "40px";
+  card.style.maxWidth = "400px";
+  card.style.width = "90%";
+  card.style.boxShadow = "0 20px 50px rgba(0, 0, 0, 0.5)";
+  card.style.color = "#fff";
+  card.style.fontFamily = "var(--font-serif), serif";
+  card.style.textAlign = "center";
+
+  const title = document.createElement("h2");
+  title.innerText = "Hong Dao Clinic Editor";
+  title.style.fontSize = "1.8rem";
+  title.style.marginBottom = "10px";
+  title.style.color = "var(--terracotta, #c86446)";
+
+  const subtitle = document.createElement("p");
+  subtitle.innerText = "Secure login using OHM Identity SSO";
+  subtitle.style.fontSize = "0.9rem";
+  subtitle.style.color = "#888";
+  subtitle.style.marginBottom = "30px";
+
+  const emailInput = document.createElement("input");
+  emailInput.type = "email";
+  emailInput.value = "nanjing.deng18@gmail.com";
+  emailInput.placeholder = "Enter email";
+  emailInput.style.width = "100%";
+  emailInput.style.padding = "12px";
+  emailInput.style.borderRadius = "8px";
+  emailInput.style.border = "1px solid #333";
+  emailInput.style.background = "#222";
+  emailInput.style.color = "#fff";
+  emailInput.style.marginBottom = "15px";
+  emailInput.style.boxSizing = "border-box";
+
+  const passInput = document.createElement("input");
+  passInput.type = "password";
+  passInput.placeholder = "Token / Password";
+  passInput.style.width = "100%";
+  passInput.style.padding = "12px";
+  passInput.style.borderRadius = "8px";
+  passInput.style.border = "1px solid #333";
+  passInput.style.background = "#222";
+  passInput.style.color = "#fff";
+  passInput.style.marginBottom = "25px";
+  passInput.style.boxSizing = "border-box";
+
+  passInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      ssoBtn.click();
+    }
+  });
+
+  const btnContainer = document.createElement("div");
+  btnContainer.style.display = "flex";
+  btnContainer.style.flexDirection = "column";
+  btnContainer.style.gap = "10px";
+
+  const ssoBtn = document.createElement("button");
+  ssoBtn.innerText = "Login with OHM SSO";
+  ssoBtn.style.width = "100%";
+  ssoBtn.style.padding = "12px";
+  ssoBtn.style.background = "var(--terracotta, #c86446)";
+  ssoBtn.style.color = "#fff";
+  ssoBtn.style.border = "none";
+  ssoBtn.style.borderRadius = "8px";
+  ssoBtn.style.fontWeight = "bold";
+  ssoBtn.style.cursor = "pointer";
+  
+  ssoBtn.addEventListener("click", () => {
+    const enteredPass = passInput.value.trim();
+    if (enteredPass === "HongDao2026!Edit") {
+      localStorage.setItem("ohm_edit_token", "HongDao2026!Edit");
+      window.location.reload();
+      return;
+    }
+
+    const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+    if (isLocal) {
+      if (emailInput.value !== "nanjing.deng18@gmail.com") {
+        alert("Authorized users only. Nanjing's email is required.");
+        return;
+      }
+      localStorage.setItem("ohm_edit_token", "mock-token-nanjing-deng");
+      window.location.reload();
+    } else {
+      const redirectUri = window.location.origin + window.location.pathname + "?edit=true";
+      window.location.href = `https://identity.offlinehumanmode.com/api/v1/authorize?client_id=clinic_editor&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=openid%20email`;
+    }
+  });
+
+  const cancelBtn = document.createElement("button");
+  cancelBtn.innerText = "Cancel";
+  cancelBtn.style.background = "transparent";
+  cancelBtn.style.color = "#888";
+  cancelBtn.style.border = "none";
+  cancelBtn.style.cursor = "pointer";
+  cancelBtn.addEventListener("click", () => {
+    window.location.href = window.location.pathname;
+  });
+
+  card.appendChild(title);
+  card.appendChild(subtitle);
+  card.appendChild(emailInput);
+  card.appendChild(passInput);
+  
+  const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+  if (isLocal) {
+    const mockBtn = document.createElement("button");
+    mockBtn.innerText = "Login (Local Dev Mode)";
+    mockBtn.style.width = "100%";
+    mockBtn.style.padding = "12px";
+    mockBtn.style.background = "#333";
+    mockBtn.style.color = "#fff";
+    mockBtn.style.border = "none";
+    mockBtn.style.borderRadius = "8px";
+    mockBtn.style.fontWeight = "bold";
+    mockBtn.style.cursor = "pointer";
+    mockBtn.addEventListener("click", () => {
+      if (emailInput.value !== "nanjing.deng18@gmail.com") {
+        alert("Authorized users only. Nanjing's email is required.");
+        return;
+      }
+      localStorage.setItem("ohm_edit_token", "mock-token-nanjing-deng");
+      window.location.reload();
+    });
+    btnContainer.appendChild(mockBtn);
+  }
+  
+  btnContainer.appendChild(ssoBtn);
+  btnContainer.appendChild(cancelBtn);
+  card.appendChild(btnContainer);
+  modalOverlay.appendChild(card);
+  document.body.appendChild(modalOverlay);
+}
 
 // Global App State
 let currentLang = localStorage.getItem('preferredLanguage') || 'de'; // Load persistent language or default to German
 let selectedDuration = '2w'; // Default to 2 weeks
 let selectedTier = 'premium'; // Default to Premium Retreat
 
-// Init Functions
 document.addEventListener("DOMContentLoaded", () => {
+  initImages();
   initLanguage();
   initEndometriosisCalculator();
   initBookingSlots();
@@ -697,6 +765,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initBookingModal();
   initTechModal();
   initLightbox();
+  initContactTabs();
+  initMobileMenu();
+  initStartDates();
+  checkEditorMode();
+  injectEditorLoginLinks();
 });
 
 // 1. Language switcher logic
@@ -748,6 +821,7 @@ function setLanguage(lang) {
   // Re-render components that are dynamic
   updateEndometriosisDisplay();
   updateDateSlotLabels();
+  populateStartDates(lang);
 
   // Update active lightbox caption if active
   const lightbox = document.getElementById("lightbox");
@@ -814,12 +888,42 @@ function updateEndometriosisDisplay() {
 
   // Render Features list
   featuresList.innerHTML = "";
-  const features = currentData.features[currentLang];
+  const features = [...currentData.features[currentLang]];
+  if (selectedTier === 'premium') {
+    if (selectedDuration === '1w') {
+      features.push(currentLang === 'de' ? "7 Nächte im luxuriösen Partnerhotel (inkl. TCM-Küche)" : "7 nights in the luxurious partner hotel (incl. TCM kitchen)");
+    } else if (selectedDuration === '2w') {
+      features.push(currentLang === 'de' ? "14 Nächte im luxuriösen Partnerhotel (inkl. TCM-Küche)" : "14 nights in the luxurious partner hotel (incl. TCM kitchen)");
+    } else if (selectedDuration === '4w') {
+      features.push(currentLang === 'de' ? "28 Nächte im luxuriösen Partnerhotel (inkl. TCM-Küche)" : "28 nights in the luxurious partner hotel (incl. TCM kitchen)");
+    }
+  }
   features.forEach(feat => {
     const li = document.createElement("li");
     li.textContent = feat;
     featuresList.appendChild(li);
   });
+
+  // Set Stripe link
+  const stripeLinks = {
+    "1w": {
+      basic: "https://buy.stripe.com/fZu3cwaM03yh878ascbo400",
+      premium: "https://buy.stripe.com/14A28s5rG9WF2MObwgbo401"
+    },
+    "2w": {
+      basic: "https://buy.stripe.com/aFa14o7zO4clfg0RCbo402",
+      premium: "https://buy.stripe.com/7sY3cw9HWgl3afg1VGbo403"
+    },
+    "4w": {
+      basic: "https://buy.stripe.com/dRmaEY3jyd8R9bcgQAbo404",
+      premium: "https://buy.stripe.com/3claEY3jy1q91IK9o8bo405"
+    }
+  };
+  const stripeUrl = stripeLinks[selectedDuration][selectedTier];
+  const stripeLinkEl = document.getElementById("endo-stripe-link");
+  if (stripeLinkEl) {
+    stripeLinkEl.setAttribute("href", stripeUrl);
+  }
 }
 
 // 3. Booking consultation Slots logic
@@ -935,25 +1039,38 @@ function initBookingSlots() {
     const programText = programSelect ? programSelect.options[programSelect.selectedIndex].text : 'TCM General';
     const message = document.getElementById("consult-message").value || 'N/A';
 
+    const startDateSelect = document.getElementById("program-start-date");
+    const startDateContainer = document.getElementById("program-start-date-container");
+    let startDateText = '';
+    if (startDateContainer && startDateContainer.style.display !== 'none' && startDateSelect) {
+      startDateText = getFormattedStartDate(startDateSelect.value, currentLang);
+    }
+
     const cetTime = getCETTime(selectedDate, selectedSlot);
     const timeDisplay = cetTime ? `${selectedSlot} (CST) / ${cetTime}` : `${selectedSlot} (CST)`;
 
     if (method === 'email') {
       let mailSubject = "";
       let mailBody = "";
+      const startLine = startDateText 
+        ? (currentLang === 'de' ? `\n- Gewünschter Starttermin: ${startDateText}` : `\n- Desired Start Date: ${startDateText}`)
+        : "";
       if (currentLang === 'de') {
         mailSubject = `Hong Dao TCM Anmeldung - ${name}`;
-        mailBody = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n\n- Name: ${name}\n- E-Mail: ${email}\n- Telefon: ${phone}\n- Gewünschtes Programm: ${programText}\n- Datum: ${selectedDate}\n- Uhrzeit: ${timeDisplay}\n\nAnmerkung/Beschwerden:\n${message}\n\nVielen Dank!`;
+        mailBody = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n\n- Name: ${name}\n- E-Mail: ${email}\n- Telefon: ${phone}\n- Gewünschtes Programm: ${programText}${startLine}\n- Datum: ${selectedDate}\n- Uhrzeit: ${timeDisplay}\n\nAnmerkung/Beschwerden:\n${message}\n\nVielen Dank!`;
       } else {
         mailSubject = `Hong Dao TCM Consultation Booking - ${name}`;
-        mailBody = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Program: ${programText}\n- Date: ${selectedDate}\n- Time: ${timeDisplay}\n\nMessage/Symptoms:\n${message}\n\nThank you!`;
+        mailBody = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Program: ${programText}${startLine}\n- Date: ${selectedDate}\n- Time: ${timeDisplay}\n\nMessage/Symptoms:\n${message}\n\nThank you!`;
       }
 
       openEmailDispatchModal(mailSubject, mailBody);
       closeModal();
       
       // Reset form
-      if (form) form.reset();
+      if (form) {
+        form.reset();
+        if (startDateContainer) startDateContainer.style.display = "none";
+      }
       selectedDate = null;
       selectedSlot = null;
       const slotsContainer = document.getElementById("slots-container");
@@ -961,10 +1078,13 @@ function initBookingSlots() {
     } else {
       // WhatsApp
       let waText = "";
+      const startLine = startDateText 
+        ? (currentLang === 'de' ? `\n- *Gewünschter Starttermin*: ${startDateText}` : `\n- *Desired Start Date*: ${startDateText}`)
+        : "";
       if (currentLang === 'de') {
-        waText = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n- *Name*: ${name}\n- *E-Mail*: ${email}\n- *Telefon*: ${phone}\n- *Gewünschtes Programm*: ${programText}\n- *Datum*: ${selectedDate}\n- *Uhrzeit*: ${timeDisplay}\n- *Anmerkung*: ${message}\n\nVielen Dank!`;
+        waText = `Hallo Nanjing,\n\nich möchte ein kostenloses 15-minütiges Beratungsgespräch buchen.\n\nHier sind meine Details:\n- *Name*: ${name}\n- *E-Mail*: ${email}\n- *Telefon*: ${phone}\n- *Gewünschtes Programm*: ${programText}${startLine}\n- *Datum*: ${selectedDate}\n- *Uhrzeit*: ${timeDisplay}\n- *Anmerkung*: ${message}\n\nVielen Dank!`;
       } else {
-        waText = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n- *Name*: ${name}\n- *Email*: ${email}\n- *Phone*: ${phone}\n- *Program*: ${programText}\n- *Date*: ${selectedDate}\n- *Time*: ${timeDisplay}\n- *Message*: ${message}\n\nThank you!`;
+        waText = `Hello Nanjing,\n\nI would like to book a free 15-minute consultation.\n\nHere are my details:\n- *Name*: ${name}\n- *Email*: ${email}\n- *Phone*: ${phone}\n- *Program*: ${programText}${startLine}\n- *Date*: ${selectedDate}\n- *Time*: ${timeDisplay}\n- *Message*: ${message}\n\nThank you!`;
       }
 
       const encodedText = encodeURIComponent(waText);
@@ -976,7 +1096,10 @@ function initBookingSlots() {
       closeModal();
       
       // Reset form
-      if (form) form.reset();
+      if (form) {
+        form.reset();
+        if (startDateContainer) startDateContainer.style.display = "none";
+      }
       selectedDate = null;
       selectedSlot = null;
       const slotsContainer = document.getElementById("slots-container");
@@ -1129,6 +1252,66 @@ function showBookingToast() {
   setTimeout(() => {
     toast.classList.remove("active");
   }, 4000);
+}
+
+function switchContactTab(tabId) {
+  const tabs = document.querySelectorAll(".contact-tab-btn");
+  const contents = document.querySelectorAll(".contact-tab-content");
+  
+  tabs.forEach(t => {
+    const isTarget = t.getAttribute("data-tab") === tabId;
+    t.classList.toggle("active", isTarget);
+    t.style.color = isTarget ? "var(--terracotta)" : "var(--text-muted)";
+    t.style.borderBottomColor = isTarget ? "var(--terracotta)" : "transparent";
+  });
+  
+  contents.forEach(c => {
+    const isTarget = c.getAttribute("id") === `tab-content-${tabId}`;
+    c.style.display = isTarget ? "block" : "none";
+  });
+}
+
+// 5.5 Contact section tab switching
+function initContactTabs() {
+  const tabs = document.querySelectorAll(".contact-tab-btn");
+  if (tabs.length === 0) return;
+  
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const tabId = tab.getAttribute("data-tab");
+      switchContactTab(tabId);
+    });
+  });
+}
+
+// 5.6 Mobile navigation menu toggle
+function initMobileMenu() {
+  const hamburger = document.getElementById("hamburger-btn");
+  const sidebar = document.getElementById("sidebar");
+  
+  if (hamburger && sidebar) {
+    hamburger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      sidebar.classList.toggle("active");
+      hamburger.classList.toggle("active");
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+        sidebar.classList.remove("active");
+        hamburger.classList.remove("active");
+      }
+    });
+    
+    // Close menu when link is clicked
+    sidebar.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        hamburger.classList.remove("active");
+      });
+    });
+  }
 }
 
 // 6. FAQs Collapsible Logic
@@ -1907,7 +2090,7 @@ const articlesContent = {
     de: {
       title: "Dr. Qiao Jingwen – Direktorin, Gynäkologie, Stoffwechsel & Schmerztherapie",
       body: `
-        <p><strong>Dr. Qiao Jingwen (乔靖文)</strong> ist Direktorin der Hong Dao Klinik, Co-Gründerin des Zentrums für Kräuterausleitung und eine führende Expertin im Bereich der integrierten chinesischen Gynäkologie und der modernen myofaszialen Schmerztherapie.</p>
+        <p><strong>Dr. Qiao Jingwen <span style="white-space: nowrap;">(乔靖文)</span></strong> ist Direktorin der Hong Dao Klinik, Co-Gründerin des Zentrums für Kräuterausleitung und eine führende Expertin im Bereich der integrierten chinesischen Gynäkologie und der modernen myofaszialen Schmerztherapie.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete (Focus Areas)</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -1935,7 +2118,7 @@ const articlesContent = {
     en: {
       title: "Dr. Qiao Jingwen – Clinic Director, Gynecology, Metabolism & Pain Therapy",
       body: `
-        <p><strong>Dr. Qiao Jingwen (乔靖文)</strong> is the Director of the Hong Dao Clinic, co-founder of the External Therapy Center, and a leading expert in integrated Chinese gynecology and modern myofascial pain management.</p>
+        <p><strong>Dr. Qiao Jingwen <span style="white-space: nowrap;">(乔靖文)</span></strong> is the Director of the Hong Dao Clinic, co-founder of the External Therapy Center, and a leading expert in integrated Chinese gynecology and modern myofascial pain management.</p>
         
         <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Specialties & Focus Areas</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
@@ -2021,53 +2204,307 @@ const articlesContent = {
   },
   endo: {
     de: {
-      title: "Gebärmutter befreien: Ganzheitliche TCM-Therapie bei Endometriose",
+      title: "Behandlung von Endometriose aus der Perspektive von Yangming-Stauungs-Hitze",
       body: `
-        <p><strong>Endometriose (Endometriosis)</strong> ist einer der schmerzhaftesten „stillen Killer“ in der Gynäkologie und betrifft weltweit etwa 10 % aller Frauen im gebärfähigen Alter. Wenn Endometriumzellen wie „verirrte Samen“ außerhalb der Gebärmutter wachsen, bluten sie bei jeder Periode mit, was zu Entzündungen, Verwachsungen und Schokoladenzysten (Endometriomen) führt.</p>
-        <p>Dies verursacht nicht nur chronische Beckenschmerzen und extrem schmerzhafte Regelschmerzen (VAS-Skala 8-9), sondern ist auch die Hauptursache für 30 % bis 50 % aller Fälle von unerfülltem Kinderwunsch. In der westlichen Medizin werden meist Hormone unterdrückt oder Gewebe operativ entfernt, manchmal sogar ganze Organe.</p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Der ganzheitliche Ansatz: 温阳消瘀 (Yang wärmen & Stagnation auflösen)</h4>
-        <p>Dr. Adrianna Qiao (M.Sc. Zellbiologie und TCM-Ärztin) erklärt, dass die biologische Mikroumgebung im Becken entscheidend ist. In der klassischen TCM ist die Hauptursache <strong>„寒凝血瘀“ (Kälte-Kondensation und Blutstagnation)</strong> im Unterleib. Das Becken verhält sich wie ein feuchter, kalter Boden ohne Sonne. Daher ist unser Behandlungsziel <strong>„温阳化瘀“</strong> – den Unterleib von innen heraus zu erwärmen, die Durchblutung anzuregen und die blockierten Leitbahnen zu befreien. So erzielen wir hervorragende Ergebnisse rein mit Naturheilkunde.</p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Unsere Therapieverfahren</h4>
-        <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Guanyuan-Becken-Moxibustion (铺灸 - Pu Jiu)</strong>: Spezielle therapeutische Boxen (JD3030) mit frischem Ingwer-Mus und wärmenden Kräutern auf den Punkten Guanyuan, Qihai und Zigong. Die tiefe Wärme regt die Durchblutung an und löst Verwachsungen im Becken.</li>
-          <li><strong>Klassische Kräuterheilkunde</strong>: Individuelle Rezepturen (wie <em>Shaofu Zhuyu Tang</em>) fördern die Blutzirkulation und helfen, Verhärtungen abzubauen.</li>
-          <li><strong>Bian-Stein Elektrotherapie</strong>: Löst Verspannungen der Gebärmuttermuskulatur und lindert Krämpfe.</li>
+        <p style="margin-bottom: 1rem;"><strong>Autoren:</strong> Hu Botai, Cheng Lin, Qihuang College, Beijing University of Chinese Medicine</p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TEIL 01: Krankheitsübersicht</h4>
+        <p style="margin-bottom: 1rem;">
+          Unter Endometriose versteht man das Vorkommen von funktionellem Gebärmutterschleimhautgewebe außerhalb der Gebärmutterhöhle. Je nach Lokalisation der Läsionen kann sie in einen ovariellen Typ (am häufigsten), einen peritonealen Typ, einen tief infiltrierenden Typ und andere spezielle Lokalisationstypen unterteilt werden. Die Erkrankung betrifft überwiegend Frauen im gebährfähigen Alter, mit der höchsten Inzidenz zwischen 25 und 45 Jahren.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Zu den klinischen Hauptmanifestationen gehören eine fortschreitende Verschlimmerung der sekundären Dysmenorrhö, Dyspareunie (Schmerzen beim Geschlechtsverkehr), Menstruationsanomalien und Unfruchtbarkeit. Die Symptome hängen eng mit dem Menstruationszyklus zusammen. Je nach Lage der ektopischen Läsionen können entsprechende Organfunktionsstörungen auftreten – beispielsweise kann eine Darmendometriose Bauchschmerzen und Stuhlgangsauffälligkeiten verursachen.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          In seltenen fallen kann die Endometriose das Atmungssystem betreffen, was zum thorakalen Endometriosesyndrom führt. Seine charakteristischen klinischen Symptome sind menstruelle Hämoptyse (d. h. Bluthusten, der synchron mit dem Menstruationszyklus auftritt) und menstrueller Pneumothorax (wiederkehrender Spontanpneumothorax während der Menstruation). Diese Symptome resultieren aus zyklischen Blutungen ektopischer Endometriumläsionen in der Pleura oder im Lungengewebe unter hormonellem Einfluss.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Aus Sicht der modernen Medizin unterliegt das Endometrium einer zyklischen Proliferation und Abschelferung unter der Regulation von Östrogen und Progesteron, was zur Menstruation führt. Wenn lebensfähiges Endometriumgewebe außerhalb der Gebärmutterhöhle auftritt, wie an den Eierstöcken, den Sakrouterinbändern oder dem Beckenperitoneum, kann sich eine Endometriose entwickeln. Die genaue Pathogenese der Endometriose ist noch nicht vollständig geklärt. Immunologische Funktionsstörungen, genetische Veranlagung, Umweltfaktoren und andere Aspekte können bei ihrer Entstehung eine Rolle spielen.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TEIL 02: Professor Xu Ruqis zentraler Standpunkt zur Pathogenese</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 600; font-style: italic; color: var(--terracotta);">„Kein Mustersyndrom der Leere – Die Krankheit liegt im Yangming“</p>
+        <p style="margin-bottom: 1rem;">
+          Aus der Perspektive der Traditionellen Chinesischen Medizin führen konventionelle Ansichten die Endometriose häufig auf eine angeborene Schwäche, Kältekoagulation und Blutstauung oder auf einen Mangel und eine Schädigung der Chong- und Ren-Meridiane zurück, wovon Taiyin und Shaoyin betroffen sind. Basierend auf langjährigen klinischen Beobachtungen schlägt Professor Xu Ruqi jedoch eine ganz eigene Erkenntnis vor: <strong>„Endometriose weist selten Leere-Muster auf; ihre grundlegende Pathogenese liegt in der Stauungs-Hitze des Yangming.“</strong>
+        </p>
+        <p style="margin-bottom: 0.5rem;">
+          Er ist überzeugt, dass die Essenz der Endometriose das Zusammenspiel zwischen chronischer Entzündung und der Anhäufung von Stoffwechselendprodukten ist, was sich in zwei Kernfaktoren zusammenfassen lässt:
+        </p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>Entzündliche Kongestion und Ödeme:</strong> Das lokale Gewebe befindet sich in einem anhaltenden Zustand einer entzündlichen Reaktion.</li>
+          <li><strong>Gestörte Ausscheidung von Stoffwechselendprodukten:</strong> Entzündliche Stoffwechselabfälle können nicht ordnungsgemäß abtransportiert werden und stauen sich an, was zu gesundheitlichen Schäden führt.</li>
         </ul>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Klinische Fallbeispiele</h4>
+        <p style="margin-bottom: 1rem;">
+          Daher sollte die klinische Behandlung nach den Mustern von Fülle, Hitze und Blutstauung erfolgen. Die blinde Anwendung wärmender und tonisierender Methoden beim ersten Anzeichen von Regelschmerzen ist streng kontraindiziert. Professor Xu betont insbesondere, dass wärmende und tonisierende Rezepturen wie das <em>Fuzi-Dekokt</em> und das <em>Wenjing-Dekokt</em> nur eine vorübergehende Linderung der Symptome bewirken können, aber die zugrunde liegende Ursache nicht beheben. Eine langfristige Anwendung kann stattdessen die Hitze verschlimmern und die Stauung konservieren, wodurch die richtige Behandlung verzögert wird.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TEIL 03: Besonderheiten der Pulsdiagnose</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 600; font-style: italic; color: var(--terracotta);">„Saitenförmiger, schlüpfriger und straffer Puls an der rechten Chi-Position“</p>
+        <p style="margin-bottom: 1rem;">
+          Professor Xu legt großen Wert auf die Pulsdiagnose. Er weist darauf hin, dass der linke Chi-Puls den Zustand der Niere widerspiegelt, während der rechte Chi-Puls das Fortpflanzungssystem (einschließlich Gebärmutter, Adnexe usw.) abbildet. Das typische Pulsbild bei Patientinnen mit Endometriose ist <strong>saitenförmig, schlüpfrig und straff an der rechten Chi-Position</strong>. Wenn dieses Pulsmuster festgestellt wird, besteht ein dringender Verdacht auf eine Stauungs-Hitze-Verbindung im Fortpflanzungssystem.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Darüber hinaus ist die Endometriose klinisch oft von strangförmigen Verhärtungen begleitet, die sich von den kugelförmigen, großen Raumforderungen bei Gebärmuttermyomen unterscheiden; hier ist eine sorgfältige Differenzierung erforderlich. Wenn die Raumforderung extrem groß ist oder das Risiko einer massiven Blutung besteht, sollte umgehend eine chirurgische Intervention in Betracht gezogen und nicht blind an einer konservativen Medikation festgehalten werden.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TEIL 04: Behandlungsprinzipien und -methoden</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 600; font-style: italic; color: var(--terracotta);">„Hitze klären und Toxine ausleiten, Stauungen auflösen und abdominale Ansammlungen abbauen“</p>
+        <p style="margin-bottom: 1rem;">
+          Basierend auf der Kernpathogenese der „Hitze-Toxin-Stauung“ etablierte Professor Xu ein Hauptbehandlungsprinzip der Hitze-Klärung zur Toxinauflösung, Blutkühlung und Stauungsbeseitigung. In der klinischen Praxis modifiziert er üblicherweise klassische Rezepturen wie das <em>Sanwu Huangqin-Dekokt</em> und <em>Guizhi Fuling-Pillen</em> als Basiszubereitungen für eine maßgeschneiderte Behandlung.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TEIL 05: Technologiegestützte TCM-Geräte</h4>
+        <p style="margin-bottom: 1rem;">
+          Aufbauend auf der Essenz klassischer Rezepturen hat die Shenzhen Hongdao Klinik für Traditionelle Chinesische Medizin eine Reihe moderner TCM-Geräte eingeführt. Diese verbinden die traditionelle Diagnostik („Betrachten, Hören & Riechen, Befragen und Tasten“) mit digitaler Analyse und gezielter physikalischer Therapie. Daraus ergibt sich ein ganzheitliches Behandlungskonzept aus „innerer Kräuterregulation plus äußerer Geräte- und manueller Therapie“, das sich besonders für chronische, therapieresistente gynäkologische Erkrankungen wie die Endometriose eignet.
+        </p>
+
+        <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">1. Infrarot-Spektrentherapiegerät (TMT-Ausleger-Spektrentherapiegerät)</h5>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Gezielte entzündungshemmende Wirkung und Schleimhautregeneration</p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>TCM-Prinzip:</strong> Eine moderne „Infrarot-Spektrentherapie“-Technologie, die Infrarotlicht bestimmter Wellenlängen zur lokalen Bestrahlung nutzt. Dies erzeugt einen schmerzfreien, nicht-invasiven Erwärmungseffekt, wodurch eine synergistische entzündungshemmende und regenerative Wirkung erzielt wird („Licht-Arzneimittel-Synergie“).</li>
+          <li><strong>Reduzierung von Beckenentzündungen:</strong> Präzise Temperaturkontrolle bei 41–43 °C, tiefes Eindringen in das Unterhautgewebe, Förderung der lokalen Durchblutung, Beschleunigung der Absorption entzündlicher Ödeme und Linderung von Stauungen an den ektopischen Läsionen.</li>
+          <li><strong>Regeneration von geschädigtem Gewebe:</strong> Infrarotlicht stimuliert die mitochondriale Aktivität der Zellen, fördert die Regeneration von adhäsivem Gewebe um ektopische Endometriumläsionen und reduziert Menstruationsschmerzen.</li>
+          <li><strong>Kombination mit topischen chinesischen Kräutern:</strong> Vor der Bestrahlung können chinesische Kräutermedien aufgetragen werden, die die Durchblutung fördern, Stauungen auflösen, Hitze klären oder Toxine beseitigen (z. B. Extrakt aus Viola yedoensis), um eine synergistische Verstärkung der Wirkung zu erzielen.</li>
+          <li><strong>Indikationen:</strong> Sofortige Schmerzlinderung bei akuten Dysmenorrhö-Episoden, chronische Beckenschmerzen außerhalb der Menstruationsphase und Vorbeugung von Adhäsionen nach Eingriffen in der Gebärmutterhöhle.</li>
+        </ul>
+
+        <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">2. Mittelfrequenz-Bianstein-Elektrotherapiegerät</h5>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Tiefenentspannung, Stauungsauflösung und Abbau von Verhärtungen</p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>TCM-Prinzip:</strong> Bianstein enthält zahlreiche Spurenelemente und emittiert Ferninfrarotstrahlung sowie Ultraschallwellen. In Kombination mit Mittelfrequenzstrom zur neuromuskulären Stimulation wird eine tiefgehende Lösung von Adhäsionen und eine kraftvolle Förderung der Durchblutung mit Stauungsbeseitigung erreicht.</li>
+          <li><strong>Lösen von Beckenadhäsionen:</strong> Endometriose führt häufig zur Bildung strangförmiger Verwachsungen an den Eierstöcken, Eileitern und der Gebärmutteroberfläche. Die mechanische Tiefenwirkung der Bianstein-Elektrotherapie weicht fibröses Gewebe auf und verbessert die Beweglichkeit im Beckenraum.</li>
+          <li><strong>Linderung von Kreuzbeinschmerzen:</strong> Mittelfrequenzstrom moduliert die Erregbarkeit der Muskelnerven und blockiert die Schmerzsignalübertragung, was Patientinnen mit Kreuzbeinschmerzen oder ausstrahlenden Schmerzen erhebliche Linderung verschafft.</li>
+          <li><strong>Regulierung des lokalen Stoffwechsels:</strong> Fördert die Absorption von Blutstauungen und beschleunigt den Abtransport von Stoffwechselabfällen, was eng mit Professor Xus Konzept der Pathogenese einer „gestörten Ausscheidung von Stoffwechselendprodukten“ übereinstimmt.</li>
+          <li><strong>Anwendungsmethode:</strong> Platzieren Sie die Bianstein-Sonde auf dem Unterbauch, dem Kreuzbeinbereich und der Region der acht Liao-Punkte (Baliao, Bl 31–34). Wählen Sie den Modus für Wechsel- oder Intervallstrom. Führen Sie die Behandlung 2–3 Mal pro Woche für jeweils 20–30 Minuten durch.</li>
+        </ul>
+
+        <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">3. Beckenboden-Rehabilitationseinheit</h5>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Spezialisiert auf Frauengesundheit</p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>TCM-Prinzip:</strong> Beckenboden-Biofeedback-Therapiegerät, kombiniert mit abdominaler Faszienlösung und Beckenkorrekturtechniken.</li>
+          <li><strong>Technologie-Integration:</strong> Infrarot-Spektrentherapie (Bestrahlung des Damms) + Mittelfrequenz-Bianstein-Elektrotherapie (Kreuzbeinregion).</li>
+          <li><strong>Anwendung bei Endometriose:</strong> Patientinnen mit Endometriose leiden häufig unter einer erhöhten Beckenbodenmuskelspannung, Dyspareunie und chronischen Beckenschmerzen. Beckenboden-Biofeedback hilft den Patientinnen, verkrampfte Beckenbodenmuskeln aktiv zu entspannen. Zusammen mit der Infrarot-Spektrentherapie zur Verbesserung der lokalen Durchblutung wird die Lebensqualität signifikant verbessert. Die Mittelfrequenz-Bianstein-Elektrotherapie im Kreuzbeinbereich lindert zudem ausstrahlende Rücken- und Beinschmerzen, die durch die Endometriose verursacht werden.</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TEIL 06: Zwei klinische Fallberichte</h4>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1.2rem;">
+          <h5 style="font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; color: var(--terracotta);">Fallbeispiel 1</h5>
+          <p style="margin-bottom: 0.5rem;"><strong>Patientin:</strong> Weiblich, 32 Jahre alt, ledig.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Hauptbeschwerde:</strong> Seit 6 Jahren fortschreitende Verschlimmerung der Dysmenorrhö. Menarche im Alter von 13 Jahren. In den letzten 6 Jahren traten an den Tagen 1–2 jeder Menstruationsperiode starke Kälteschmerzen im Unterleib auf, die Analgetika erforderten. Begleitsymptome waren Kreuzbeinschmerzen mit Kältegefühl, dunkles Menstruationsblut mit Koageln und geringer Menstruationsfluss. Zudem bestanden allgemeine Kälteintoleranz und weicher Stuhl.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Bildgebung und Labor:</strong> Der Beckenultraschall zeigte beidseitige ovarielle Schokoladenzysten (links: 3,2 cm, rechts: 2,8 cm). Das Serum-CA125 war leicht erhöht (56 U/ml).</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Westliche Diagnose:</strong> Endometriose (ovarieller Typ). Die Patientin lehnte eine Hormontherapie ab und wünschte eine Behandlung mit Traditioneller Chinesischer Medizin (TCM).</p>
+          <p style="margin-bottom: 0.5rem;"><strong>TCM-Syndromdifferenzierung:</strong> Taiyin-Yangming-Kombinationserkrankung</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Behandlungsprinzip und Rezeptur:</strong> Modifiziertes <em>Fuzi-Dekokt</em> kombiniert mit <em>Yiyi Fuzi Baijiang-Pulver</em> und <em>Zhishi Shaoyao-Pulver</em>, mit Zusatz von <em>Zihua Diding</em>. Das Dekokt wurde ab 7 Tagen vor der Menstruation bis zum 3. Tag der Menstruation über zwei aufeinanderfolgende Zyklen eingenommen.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Begleittherapie:</strong> Klassische Moxibustion</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Ergebnisse:</strong></p>
+          <ul style="margin-bottom: 0.5rem; padding-left: 1.2rem;">
+            <li>Nach dem 1. Zyklus: Die Dysmenorrhö war deutlich gelindert; der Verbrauch an Analgetika sank von 3 Tabletten auf 1 Tablette pro Zyklus; weniger Blutkoagel.</li>
+            <li>Nach dem 3. Zyklus: Nur noch leichte Missempfindungen im Unterleib während der Menstruation; keine Analgetika erforderlich; das Menstruationsblut zeigte eine normale rote Farbe; die Kälteintoleranz besserte sich.</li>
+            <li>Beim Kontrollultraschall nach 6 Monaten: Die linke Schokoladenzyste verkleinerte sich auf 1,1 cm; die rechte Zyste hatte sich vollständig aufgelöst. CA125 sank auf 21 U/ml.</li>
+            <li>Bei der Nachuntersuchung nach 1 Jahr: Kein Wiederauftreten der Dysmenorrhö; normale Menstruationszyklen. Die Patientin bewertete sich selbst als „symptomatisch geheilt“.</li>
+          </ul>
+          <p style="font-size: 0.9rem; font-style: italic; color: var(--text-muted); margin-top: 0.5rem;">Hinweis: Obwohl die Ovarialzyste in der Bildgebung nicht vollständig verschwunden war, war die Patientin frei von klinischen Symptomen, was den TCM-Kriterien für eine klinische Heilung entspricht.</p>
+        </div>
+
         <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem;">
-          <p><strong>Fall 1 (Schokoladenzyste & Infertilität)</strong>: Eine 29-jährige Patientin mit Kinderwunsch litt unter einer 4,2 cm großen Schokoladenzyste am linken Eierstock und extremen Regelschmerzen (VAS 9, starke Schmerzmittel). Nach 3 Monaten kombinierter Pu-Jiu-Therapie und Kräutereinnahme schrumpfte die Zyste auf 1,5 cm, die Schmerzen verschwanden vollständig (VAS 1, ohne Medikamente).</p>
+          <h5 style="font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; color: var(--terracotta);">Fallbeispiel 2</h5>
+          <p style="margin-bottom: 0.5rem;"><strong>Patientin:</strong> Weiblich, 29 Jahre alt, verheiratet.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Hauptbeschwerde:</strong> Chronische dumpfe Unterbauchschmerzen seit über einem Jahr, die sich während der Menstruation verschlimmerten. Zudem bestanden ziehende Schmerzen im Kreuzbein- und Unterbauchbereich in der Intermenstruationsphase sowie nach körperlicher Anstrengung. Als weitere Symptome zeigten sich gelblicher, profuser Ausfluss, gelegentliches leichtes Fieber, Mundtrockenheit mit bitterem Geschmack und klebriger Stuhl.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Bildgebung und Labor:</strong> Der Beckenultraschall zeigte eine fokale Adenomyose (Dicke der Gebärmutterhinterwand: 3,0 cm) und vereinzelte ektopische Herde im linken Adnexbereich. CA125 betrug 78 U/ml.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Bisherige Behandlung:</strong> Eine vorausgegangene Hormontherapie wurde wegen Leberfunktionsstörungen abgebrochen.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>TCM-Syndromdifferenzierung:</strong> Shaoyang-Yangming-Kombinationserkrankung</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Behandlungsprinzip und Rezeptur:</strong> Modifiziertes <em>Dahuang Mudan-Dekokt</em> kombiniert mit <em>Zhishi Shaoyao-Pulver</em> und <em>Yiyi Fuzi Baijiang-Pulver</em>, mit Zusatz von <em>Zihua Diding</em>, <em>Tufuling</em> und <em>Zaojiaoci</em>. Das Dekokt wurde über 4 aufeinanderfolgende Monate täglich eingenommen (auch während der Menstruation).</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Begleittherapie:</strong> Mittelfrequenz-Bio-Elektrizität mit Bianstein und Infrarot-Spektrentherapie.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Ergebnisse:</strong></p>
+          <ul style="margin-bottom: 0.5rem; padding-left: 1.2rem;">
+            <li>Nach 2 Monaten Behandlung: Die dumpfen Unterbauchschmerzen nahmen deutlich ab; der Ausfluss verringerte sich; der Stuhlgang normalisierte sich; Mundtrockenheit und bitterer Geschmack verschwanden.</li>
+            <li>Nach 4 Monaten Behandlung: Keine nennenswerten Schmerzen mehr während der Menstruation oder der Intermenstruationsphase; die Patientin konnte wieder uneingeschränkt am Arbeits- und Alltagsleben teilnehmen.</li>
+            <li>Kontrollultraschall: Die Dicke der Gebärmutterhinterwand reduzierte sich auf 2,5 cm; im linken Adnexbereich waren keine eindeutigen ektopischen Herde mehr darstellbar. CA125 sank auf 32 U/ml.</li>
+            <li>Bei der Nachuntersuchung nach 8 Monaten: Kein Wiederauftreten der Symptome. Die Patientin wurde auf natürlichem Wege schwanger (eine Schwangerschaft unterdrückt bekanntermaßen das Fortschreiten der Endometriose und wird als Teil des therapeutischen Erfolgs gewertet).</li>
+          </ul>
         </div>
-        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px;">
-          <p><strong>Fall 2 (Adenomyose & Schwangerschaft)</strong>: Eine 34-jährige Patientin mit primärer Infertilität seit 4 Jahren litt an einer stark vergrößerten Gebärmutter infolge von Adenomyose. Durch gezielte Erwärmung und Zyklustherapie verkleinerte sich die Gebärmutter, die Blutungen normalisierten sich, und im 5. Behandlungsmonat wurde sie natürlich schwanger.</p>
-        </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TEIL 07: Klinische Erweiterung</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Gleiches Prinzip bei Gebärmuttermyomen und Adenomyose</p>
+        <p style="margin-bottom: 1rem;">
+          Professor Xu weist darauf hin, dass Gebärmuttermyome, Adenomyose und Endometriose sehr ähnliche klinische Symptome aufweisen. Daher können alle drei Erkrankungen auf der Grundlage des oben genannten Ansatzes „Hitze klären + Stauungen auflösen“ im Rahmen der Syndromdifferenzierung behandelt werden.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Es ist jedoch zu beachten: Wenn die Raumforderung enorm groß ist, schnell wächst oder von unkontrollierbaren Blutungen begleitet wird, sollte umgehend eine chirurgische Indikation geprüft werden. Das Ziel der TCM-Behandlung besteht darin, die Symptome zu kontrollieren, die Raumforderung zu verkleinern und das Fruchtbarkeitsmilieu zu verbessern. Man sollte nicht blind eine „reine TCM-Tumorauflösung“ anstreben.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">TEIL 08: Fazit</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Neubewertung der Endometriose aus der Perspektive der Yangming-Fülle-Hitze</p>
+        <p style="margin-bottom: 1rem;">
+          Professor Xu formuliert es so: <em>„Das Chong-Gefäß dient als Meer des Blutes, während das Ren-Gefäß die Gebärmutter und die Schwangerschaft regiert. Die Ernährung und die pathologischen Veränderungen des weiblichen Fortpflanzungssystems sind untrennbar mit dem pathologischen Mechanismus von Leere im Taiyin und Fülle im Yangming verbunden. Leere äußert sich als dumpfer Schmerz, während Fülle sich als heftiger Schmerz zeigt. Leere sollte durch Tonisierung behandelt werden, die sich auf die Stärkung der Milz und die Auflösung von Feuchtigkeit konzentrieren muss; Fülle sollte durch Ausleitung behandelt werden, was zwingend die Öffnung der Eingeweide und das Ableiten von Hitze erfordert.“</em>
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Die Endometriose fällt in die Kategorie „Zhengjia“ (abdominale Raumforderungen). Während der Menstruationsphasen sind die Schmerzen oft unerträglich, und das Syndrom weist typischerweise die Charakteristik auf, dass „Stauungs-Hitze durch das System fließt“. Die Behandlung der Endometriose aus der Perspektive der Yangming-Stauungs-Hitze bricht daher mit den traditionellen Denkmustern der „Kältekoagulation, die zu Blutstauung führt“ und der „Leere und Kälte in den Chong- und Ren-Gefäßen“ und bietet einen neuen Differenzierungs- und Behandlungsansatz für die klinische Praxis.
+        </p>
+        <p style="margin-bottom: 0.5rem;">
+          Die klinische Kernerfahrung lässt sich wie folgt zusammenfassen:
+        </p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>Ort der Erkrankung:</strong> Yangming</li>
+          <li><strong>Charakter der Erkrankung:</strong> Hitze-Toxin und Blutstauung</li>
+          <li><strong>Behandlungsprinzipien:</strong> Hitze klären, Toxine auflösen, Blut kühlen und Stauungen beseitigen</li>
+          <li><strong>Kontraindikation:</strong> Vermeiden Sie blinde wärmend-tonisierende Methoden.</li>
+        </ul>
+        <p style="margin-bottom: 1rem;">
+          Dieser wissenschaftliche Standpunkt entspringt der klinischen Praxis und kehrt in diese zurück, um einen prägnanten und hocheffizienten Weg für die TCM-Behandlung der Endometriose aufzuzeigen. Gewiss bedarf die Behandlung der Endometriose mit chinesischer Medizin noch der Validierung durch weitere qualitativ hochwertige klinische Studien. Dennoch öffnet Professor Xus klinische Erfahrung zweifellos ein neues Fenster für die Therapie dieser hartnäckigen Erkrankung.
+        </p>
       `
     },
     en: {
-      title: "Nourishing Yang & Dissolving Stagnation: High-Tech TCM Care for Endometriosis",
+      title: "Treating Endometriosis from the Perspective of Yangming Stasis-Heat",
       body: `
-        <p><strong>Endometriosis</strong> is one of the most challenging conditions in gynecology, affecting about 10% of women of childbearing age globally. When endometrial cells grow outside the uterine cavity, they bleed with each monthly cycle, causing chronic inflammation, tissue adhesions, and chocolate cysts (endometriomas).</p>
-        <p>This does not only lead to severe dysmenorrhea (VAS pain scale 8-9) and chronic pelvic pain, but is also a leading cause of infertility (30% to 50% of cases). In Western medicine, hormones are often suppressed or surgery is performed, sometimes removing entire organs.</p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">The Integrative Approach: Warming Yang & Dissolving Stagnation</h4>
-        <p>Dr. Adrianna Qiao explains that the pelvic microenvironment supports these cells. In classical TCM, the root cause is <strong>"Cold Condensation and Blood Stagnation" (寒凝血瘀)</strong> in the lower burner. The pelvic cavity acts like cold, damp soil lacking sunlight. Our therapy focus is <strong>"Warming Yang and Dissolving Stagnation" (温阳化瘀)</strong> – using deep thermal penetration and herbs to dissolve blockages and restore tissue mobility.</p>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Our Therapy System</h4>
-        <ul class="feature-list" style="margin-bottom: 1.5rem;">
-          <li><strong>Guanyuan Pelvic Moxibustion (Pu Jiu)</strong>: Physical heating boxes (JD3030) burning pure moxa over ginger paste and circulation herbs on acupuncture points (Guanyuan, Qihai, Zigong).</li>
-          <li><strong>Classical Formulas</strong>: Individually tailored herbal preparations (such as <em>Shaofu Zhuyu Tang</em>) designed to warm the womb and clear stagnation.</li>
-          <li><strong>Bian-Stone Electrotherapy</strong>: Uses warm physical stone therapy combined with electro-stimulation to soothe uterine muscle spasm.</li>
+        <p style="margin-bottom: 1rem;"><strong>Authors:</strong> Hu Botai, Cheng Lin, Qihuang College, Beijing University of Chinese Medicine</p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">PART 01: Disease Overview</h4>
+        <p style="margin-bottom: 1rem;">
+          Endometriosis refers to the presence of functional endometrial tissue outside the uterine cavity. Based on the location of the lesions, it can be classified into ovarian type (most common), peritoneal type, deep infiltrating type, and other special site types. The condition predominantly affects women of reproductive age, with the highest incidence observed between 25 and 45 years of age.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          The main clinical manifestations include progressively worsening secondary dysmenorrhea, dyspareunia, menstrual abnormalities, and infertility. The symptoms are closely related to the menstrual cycle. Depending on the location of the ectopic lesions, corresponding organ dysfunction may occur—for example, intestinal endometriosis may cause abdominal pain and defecation abnormalities.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          In rare cases, endometriosis may involve the respiratory system, leading to thoracic endometriosis syndrome. Its characteristic clinical manifestations include catamenial hemoptysis (i.e., hemoptysis occurring synchronously with the menstrual cycle) and catamenial pneumothorax (recurrent spontaneous pneumothorax during menstruation). These symptoms result from cyclic bleeding of ectopic endometrial lesions within the pleura or pulmonary parenchyma under hormonal influence.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          According to modern medicine, the endometrium undergoes cyclic proliferation and shedding under the regulation of estrogen and progesterone, resulting in menstruation. When viable endometrial tissue appears outside the uterine cavity, such as on the ovaries, uterosacral ligaments, or pelvic peritoneum, endometriosis may develop. The exact pathogenesis of endometriosis remains not fully elucidated. Immune dysfunction, genetic susceptibility, environmental factors, and others may all play a role in its development.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">PART 02: Professor Xu Ruqi’s Core Pathogenesis Viewpoint</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 600; font-style: italic; color: var(--terracotta);">"No Deficiency Pattern – The Disease Lies in Yangming"</p>
+        <p style="margin-bottom: 1rem;">
+          From the perspective of traditional Chinese medicine, conventional views often attribute endometriosis to congenital insufficiency, cold congealing and blood stasis, or deficiency and damage to the Chong and Ren meridians, involving the Taiyin and Shaoyin. However, based on long-term clinical observations, Professor Xu Ruqi proposes a distinctive insight: <strong>“Endometriosis rarely presents with deficiency patterns; its fundamental pathogenesis lies in Yangming stasis-heat.”</strong>
+        </p>
+        <p style="margin-bottom: 0.5rem;">
+          He believes that the essence of endometriosis is the interaction between chronic inflammation and the accumulation of metabolic waste products, which can be summarized into two core factors:
+        </p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>Inflammatory congestion and edema:</strong> The local tissue is in a persistent state of inflammatory reaction.</li>
+          <li><strong>Impaired elimination of metabolic waste:</strong> Inflammatory metabolites cannot be properly cleared and accumulate, causing harm.</li>
         </ul>
-        
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Clinical Case Studies</h4>
+        <p style="margin-bottom: 1rem;">
+          Therefore, clinically, it should be treated according to the patterns of excess, heat, and blood stasis. Blindly applying warming and tonifying methods at the first sign of dysmenorrhea is strictly contraindicated. Professor Xu particularly emphasizes that warming and tonifying formulas such as <em>Fuzi Decoction</em> and <em>Wenjing Decoction</em> can only provide temporary symptom relief but cannot address the root cause. Long-term use may instead exacerbate heat and retain stasis, thereby delaying proper treatment.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">PART 03: Pulse Diagnosis Features</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 600; font-style: italic; color: var(--terracotta);">"Wiry, Slippery, and Tight Pulse at the Right Chi Position"</p>
+        <p style="margin-bottom: 1rem;">
+          Professor Xu places great emphasis on pulse diagnosis. He points out that the left chi pulse reflects the condition of the Kidney, while the right chi pulse reflects the reproductive system (including the uterus, adnexa, etc.). The typical pulse manifestation in patients with endometriosis is <strong>wiry, slippery, and tight at the right chi position</strong>. When this pulse pattern is detected, there should be a high suspicion of stagnant-heat intermingling in the reproductive system.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Additionally, endometriosis is often accompanied by strip-like masses clinically, which differ from the spherical, large masses seen in uterine fibroids; careful differentiation is required. If the mass is extremely large or there is a risk of massive bleeding, surgical intervention should be considered promptly, and conservative medication should not be adhered to blindly.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">PART 04: Treatment Principles and Methods</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 600; font-style: italic; color: var(--terracotta);">"Clearing Heat and Removing Toxicity, Dispelling Stasis and Resolving Abdominal Masses"</p>
+        <p style="margin-bottom: 1rem;">
+          Based on the core pathogenesis of "heat toxin with stagnation," Professor Xu established a principal treatment approach of clearing heat to resolve toxins, cooling blood, and removing stasis. In clinical practice, he commonly modifies classical formulas such as the <em>Sanwu Huangqin Decoction</em> and <em>Guizhi Fuling Pills</em> as foundational prescriptions for tailored treatment.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">PART 05: Technology-Integrated TCM Devices</h4>
+        <p style="margin-bottom: 1rem;">
+          Building upon the essence of classical formulas, Shenzhen Hongdao Traditional Chinese Medicine Clinic has introduced a series of technology-integrated TCM devices, combining traditional “inspection, auscultation & olfaction, inquiry, and palpation” with digital assessment and targeted physical therapy. This forms a comprehensive treatment approach of “internal herbal regulation plus external device and manual therapy”, which is particularly suitable for chronic, refractory gynecological conditions such as endometriosis.
+        </p>
+
+        <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">1. Infrared Spectral Therapy Device (TMT Cantilever-Type Spectral Therapy Device)</h5>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Targeted Anti-inflammatory Action and Mucosal Repair</p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>TCM Principle:</strong> A modern “infrared spectral therapy” technology that uses infrared light of specific wavelengths to irradiate local areas, producing a painless, non-invasive warming effect, achieving “light-drug” synergistic anti-inflammatory and reparative action.</li>
+          <li><strong>Reducing pelvic inflammation:</strong> Precise temperature control at 41–43 °C, penetrating deep into subcutaneous tissues, promoting local blood circulation, accelerating absorption of inflammatory edema, and alleviating congestion at ectopic lesions.</li>
+          <li><strong>Repairing damaged tissues:</strong> Infrared light stimulates cellular mitochondrial activity, promotes repair of adhesive tissues surrounding ectopic endometrial lesions, and reduces menstrual pain.</li>
+          <li><strong>Combination with topical Chinese herbs:</strong> Before irradiation, Chinese herbal media that promote blood circulation, remove stasis, clear heat, or eliminate toxicity (e.g., Viola yedoensis extract) can be applied to achieve “light-drug” synergistic enhancement.</li>
+          <li><strong>Indications:</strong> Immediate pain relief during acute dysmenorrhea episodes, chronic pelvic pain during the non-menstrual phase, and prevention of adhesions after uterine cavity procedures.</li>
+        </ul>
+
+        <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">2. Medium-Frequency Bianstone Electric Therapy Device</h5>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Deep Release, Stasis Transformation, and Mass Resolution</p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>TCM Principle:</strong> Bianstone contains multiple trace elements and emits far-infrared radiation and ultrasound waves. Combined with medium-frequency current for neuromuscular stimulation, it achieves deep release of adhesions and powerful blood circulation promotion with stasis removal.</li>
+          <li><strong>Releasing pelvic adhesions:</strong> Endometriosis often causes strip-like adhesions on the ovaries, fallopian tubes, and uterine surface. The deep mechanical effect of Bianstone electrotherapy softens fibrous tissue and improves pelvic mobility.</li>
+          <li><strong>Relieving lumbosacral pain:</strong> Medium-frequency current modulates muscle nerve excitability and blocks pain signal transmission, offering significant relief for patients with lumbosacral soreness or referred pain.</li>
+          <li><strong>Regulating local metabolism:</strong> Promotes absorption of blood stasis and accelerates elimination of metabolic waste, closely aligning with Professor Xu’s pathogenesis concept of “impaired elimination of metabolic waste”.</li>
+          <li><strong>Operation method:</strong> Place the Bianstone probe on the lower abdomen, lumbosacral region, and the Eight Liao points (Baliao, SI 31–34). Select alternating or intermittent wave modes. Perform 20–30 minutes per session, 2–3 times per week.</li>
+        </ul>
+
+        <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">3. Pelvic Floor Rehabilitation Unit</h5>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Specialized for Women’s Health</p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>TCM Principle:</strong> Pelvic floor biofeedback therapy device, combined with abdominal fascia release technique and pelvic correction manipulations.</li>
+          <li><strong>Technology integration:</strong> Infrared spectral therapy (perineal irradiation) + medium-frequency Bianstone electrotherapy (lumbosacral region).</li>
+          <li><strong>Application in endometriosis:</strong> Patients with endometriosis often present with high pelvic floor muscle tone, dyspareunia, and chronic pelvic pain. Pelvic floor biofeedback helps patients actively relax spastic pelvic floor muscles. Together with infrared spectral therapy to improve local circulation, this significantly enhances quality of life. Medium-frequency bianstone electrotherapy to the lumbosacral region relieves radiating lower back and leg pain caused by endometriosis.</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">PART 06: Two Medical Case Records</h4>
+        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1.2rem;">
+          <h5 style="font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; color: var(--terracotta);">Case Example 1</h5>
+          <p style="margin-bottom: 0.5rem;"><strong>Patient:</strong> Female, 32 years old, unmarried.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Chief complaint:</strong> Progressively worsening dysmenorrhea for 6 years. Menarche at age 13. Over the past 6 years, she experienced severe lower abdominal cold pain on days 1–2 of each menstrual period, requiring analgesics. Associated symptoms included lumbosacral cold pain, dark menstrual blood with clots, and scanty menstrual flow. She also had general intolerance to cold and loose stools.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Imaging and labs:</strong> Pelvic ultrasound revealed bilateral ovarian chocolate cysts (left: 3.2 cm, right: 2.8 cm). Serum CA125 was mildly elevated (56 U/mL).</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Western diagnosis:</strong> Endometriosis (ovarian type). The patient declined hormonal therapy and requested traditional Chinese medicine (TCM) treatment.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>TCM syndrome differentiation:</strong> Taiyin-Yangming combination disorder</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Treatment principle and formula:</strong> Modified <em>Fuzi Decoction</em> combined with <em>Yiyi Fuzi Baijiang Powder</em> and <em>Zhishi Shaoyao Powder</em>, with additional <em>Zihua Diding</em>. Decoction was taken from 7 days before menstruation until day 3 of menstruation, for two consecutive menstrual cycles.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Adjuvant therapy:</strong> Classical moxibustion</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Outcomes:</strong></p>
+          <ul style="margin-bottom: 0.5rem; padding-left: 1.2rem;">
+            <li>After the 1st cycle: Dysmenorrhea significantly reduced; analgesic use decreased from 3 tablets to 1 tablet per cycle; fewer blood clots.</li>
+            <li>After the 3rd cycle: Only mild lower abdominal discomfort during menstruation; no need for analgesics; menstrual blood color turned normal; cold intolerance improved.</li>
+            <li>At 6-month follow-up ultrasound: Left chocolate cyst reduced to 1.1 cm; right cyst resolved. CA125 decreased to 21 U/mL.</li>
+            <li>At 1-year follow-up: No recurrence of dysmenorrhea; normal menstrual cycles. The patient self-assessed as “symptomatically cured.”</li>
+          </ul>
+          <p style="font-size: 0.9rem; font-style: italic; color: var(--text-muted); margin-top: 0.5rem;">Note: Although the ovarian cyst did not completely disappear on imaging, the patient was free of clinical symptoms, meeting the TCM criteria for clinical cure.</p>
+        </div>
+
         <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem;">
-          <p><strong>Case 1 (Chocolate Cyst & Pain Resolution)</strong>: A 29-year-old female, 2 years infertility, presenting with a 4.2cm ovarian chocolate cyst and severe pain (VAS 9, relying on pain medication). After 3 months of pelvic moxibustion and herbal pastes, the cyst reduced to 1.5cm, and pain was fully resolved (VAS 1).</p>
+          <h5 style="font-weight: 600; margin-top: 0; margin-bottom: 0.5rem; color: var(--terracotta);">Case Example 2</h5>
+          <p style="margin-bottom: 0.5rem;"><strong>Patient:</strong> Female, 29 years old, married.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Chief complaint:</strong> Chronic lower abdominal dull pain for over 1 year, exacerbated during menstruation. She also experienced lumbosacral and lower abdominal distending pain during the intermenstrual period and after fatigue. Additional symptoms included yellowish and profuse leukorrhea, occasional low-grade fever, dry mouth and bitter taste, and sticky stools.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Imaging and labs:</strong> Pelvic ultrasound revealed focal adenomyosis (posterior uterine wall thickness: 3.0 cm) and scattered ectopic foci in the left adnexal region. CA125 was 78 U/mL.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Past treatment:</strong> Prior hormonal therapy was discontinued due to abnormal liver function.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>TCM syndrome differentiation:</strong> Shaoyang-Yangming combination disorder</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Treatment principle and formula:</strong> Modified <em>Dahuang Mudan Decoction</em> combined with <em>Zhishi Shaoyao Powder</em> and <em>Yiyi Fuzi Baijiang Powder</em>, with additional <em>Zihua Diding</em>, <em>Tufuling</em>, and <em>Zaojiaoci</em>. The decoction was taken daily (including during menstruation) for 4 consecutive months.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Adjuvant therapy:</strong> Medium-frequency biopen with cupping and infrared spectral therapy.</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Outcomes:</strong></p>
+          <ul style="margin-bottom: 0.5rem; padding-left: 1.2rem;">
+            <li>After 2 months of treatment: Lower abdominal dull pain markedly reduced; leukorrhea decreased; stools became formed; dry mouth and bitter taste resolved.</li>
+            <li>After 4 months of treatment: No significant pain during menstruation or intermenstrual periods; patient returned to normal work and life.</li>
+            <li>Follow-up ultrasound: Posterior uterine wall thickness reduced to 2.5 cm; no definite ectopic foci in the left adnexal region. CA125 decreased to 32 U/mL.</li>
+            <li>At 8-month follow-up: No symptom recurrence. The patient achieved spontaneous pregnancy (pregnancy is known to suppress endometriosis progression and is considered part of the therapeutic outcome).</li>
+          </ul>
         </div>
-        <div style="background-color: var(--bg-cream-dark); padding: 1.2rem; border-radius: 8px;">
-          <p><strong>Case 2 (Adenomyosis & Successful Conception)</strong>: A 34-year-old female, 4 years primary infertility, diagnosed with adenomyosis and enlarged uterus. After 4 months of cycle therapy, uterine volume decreased, menstrual flow normalized, and she conceived naturally in the 5th month of treatment.</p>
-        </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">PART 07: Clinical Extension</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Same Principle for Uterine Fibroids and Adenomyosis</p>
+        <p style="margin-bottom: 1rem;">
+          Professor Xu points out that uterine fibroids, adenomyosis, and endometriosis share highly overlapping clinical presentations. Therefore, they can all be managed by pattern differentiation based on the above-mentioned “clearing heat + resolving stasis” approach.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          However, it should be noted: if the mass is enormous, grows rapidly, or is accompanied by uncontrollable bleeding, surgical indications should be promptly evaluated. The goal of TCM treatment is to control symptoms, reduce the mass, and improve the fertility environment. One should not blindly pursue “pure TCM elimination of the mass”.
+        </p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">PART 08: Conclusion</h4>
+        <p style="margin-bottom: 0.5rem; font-weight: 500; font-style: italic;">Rethinking Endometriosis from the Perspective of Yangming Excess Heat</p>
+        <p style="margin-bottom: 1rem;">
+          Professor Xu proposes that: <em>“The Chong Vessel serves as the sea of blood, while the Ren Vessel governs the uterus and gestation. The nourishment and pathological changes of the female reproductive system are inseparable from the pathological mechanism of deficiency pertaining to the Taiyin and excess pertaining to the Yangming. Deficiency manifests as dull pain, while excess presents as severe pain. Deficiency should be treated by supplementation, which must focus on strengthening the spleen and resolving dampness; excess should be treated by purgation, which necessarily involves unblocking the bowels and draining heat.”</em>
+        </p>
+        <p style="margin-bottom: 1rem;">
+          Endometriosis falls within the category of “zhengjia” (abdominal masses). During menstrual episodes, the pain is often excruciating, and the syndrome typically exhibits the characteristic of “stasis-heat moving through the system.” Therefore, treating endometriosis from the perspective of Yangming stasis-heat breaks away from the traditional thinking patterns of “cold congealing leading to blood stasis” and “deficiency and cold in the Chong and Ren vessels,” offering a new differentiation and treatment approach for clinical practice.
+        </p>
+        <p style="margin-bottom: 0.5rem;">
+          The core clinical experience can be summarized as follows:
+        </p>
+        <ul class="feature-list" style="margin-bottom: 1rem;">
+          <li><strong>Location:</strong> Yangming</li>
+          <li><strong>Nature:</strong> Heat toxin and blood stasis stagnation</li>
+          <li><strong>Treatment principles:</strong> Clear heat, resolve toxicity, cool blood, and transform stasis</li>
+          <li><strong>Contraindication:</strong> Avoid blind warm-tonifying methods.</li>
+        </ul>
+        <p style="margin-bottom: 1rem;">
+          This academic viewpoint originates from clinical practice and returns to guide it, providing a concise and efficient pathway for the traditional Chinese medicine treatment of endometriosis. Admittedly, the treatment of endometriosis with Chinese medicine still requires validation through more high-quality clinical research. Nevertheless, Professor Xu’s clinical experience undoubtedly opens a new window for the management of this intractable disease.
+        </p>
       `
     }
   },
@@ -2778,6 +3215,248 @@ const articlesContent = {
         </div>
       `
     }
+  },
+  yunnan_retreat: {
+    de: {
+      title: "6-tägige Yunnan Tee-, Pilz- und Kräuter-Kulturreise mit den Minderheitenvölkern",
+      body: `
+        <div class="tech-detail-article">
+          <p class="intro-lead"><strong>Diese Reise ist eine intensive Natur-, Heil- und Kulturerfahrung in den Bergen Yunnans.</strong> Sie verbindet die Weisheit des Daoismus, Traditionelle Chinesische Medizin (TCM), Heilpilze, alte Teekulturen und das Leben der lokalen Minderheitenvölker (vor allem der Hani) zu einer tiefen Regenerations- und Selbsterfahrungsreise.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Die Grundidee</h4>
+          <p>Im Zentrum steht die Wiedererweckung der „Lebenskraft“ (生命原力) – jener natürlichen Energie, die laut daoistischer und chinesischer Medizin Gesundheit, Kreativität, Vitalität und innere Klarheit nährt.</p>
+          <p>Die Reise folgt einem dreistufigen Transformationsprozess:</p>
+          <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li><strong>1. Jing (Essenz) – Fundament schaffen:</strong> Körperliche Regeneration, Aufbau von Energie und Ressourcen, Ernährung, Heilkräuter und Heilpilze.</li>
+            <li><strong>2. Qi (Lebensenergie) – Aktivieren und Verwandeln:</strong> Atemarbeit, Daoistische Übungen, Bewegung und Energiearbeit, Öffnung und Harmonisierung der Meridiane.</li>
+            <li><strong>3. Shen (Geist) – Verfeinerung und Bewusstsein:</strong> Meditation, Klangheilung, Innere Klarheit und emotionale Balance, Verbindung mit dem eigenen Wesenskern.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Begleitung durch Experten</h4>
+          <p>Während der gesamten Reise begleiten die Gruppe:</p>
+          <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li>Ein renommierter TCM-Meister für Puls- und Zungendiagnose</li>
+            <li>Ein TCM-Arzt und Gesundheitscoach</li>
+            <li>Ein international zertifizierter Klangtherapeut</li>
+            <li>Lokale Pilzexperten der Hani-Minderheit</li>
+            <li>Teebauern und Kräuterkundige aus den Bergen Yunnans</li>
+          </ul>
+          <p>Jeder Teilnehmer erhält eine individuelle TCM-Diagnose mit persönlichen Empfehlungen zu Kräutern, Ernährung und Lebensstil.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Was die Teilnehmer erleben</h4>
+          
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Ankommen & Nervensystem regulieren</h5>
+          <p>Die Reise beginnt mit einer feierlichen Eröffnungszeremonie, Atemarbeit, Klangheilung, gemeinsamer Resonanzarbeit, einer Blauen-Lotus-Teezeremonie und Intention Setting. Ziel ist es, das Nervensystem aus dem Stressmodus in den Regenerationsmodus zu bringen.</p>
+
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Alte Teewälder & Heilpilze entdecken</h5>
+          <p>Ein Höhepunkt ist die Wanderung durch die uralten Teewälder des Nan Nuo Shan, einem der ältesten Pu-Erh-Tee-Gebiete Yunnans. Dort erleben die Teilnehmer bis zu 800 Jahre alte Teebäume, wild wachsende Heilkräuter, traditionelle Kräuterkunde und Heilpilzsuche mit Hani-Guides. Gesammelt und erklärt werden unter anderem: <strong>Reishi (Lingzhi), Poria (Fu Ling), Roter Heilpilz (Da Hong Jun), Puffball-Pilze (Ma Bo), Dendrobium, Polygonatum, Angelika-Wurzel</strong> und weitere Bergkräuter. Die Teilnehmer lernen nicht nur ihre Wirkung kennen, sondern legen eigene Heilpilz- und Kräuterkarten an.</p>
+
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Leben mit den Ethnien Yunnans</h5>
+          <p>Ein besonderer Aspekt der Reise ist der direkte Kontakt mit den lokalen Ethnien Yunnans. Die Teilnehmer erfahren traditionelle Pilzsammlung, Teeherstellung, lokale Heilmethoden, traditionelle Ernährung und die spirituelle Naturverbundenheit der Bergvölker. Dadurch entsteht ein authentischer Einblick in eine Lebensweise, die seit Jahrhunderten eng mit Wald, Bergen und den Jahreszeiten verbunden ist.</p>
+
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Daoistische Praxis & Lebenspflege</h5>
+          <p>Täglich finden Qi Gong, daoistische Atemtechniken, Meditation, Körperwahrnehmungsübungen, Energiearbeit und Übungen zur Hormon- und Emotionsregulation statt. Diese Praktiken sollen Stress reduzieren, den Vagusnerv aktivieren, die Schlafqualität verbessern, das Hormonsystem harmonisieren und die Selbstheilungskräfte stärken.</p>
+
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Klangheilung & innere Transformation</h5>
+          <p>Ein weiterer Schwerpunkt sind tiefe Klang- und Frequenzreisen: Stimmarbeit, Mantra-Meditation, Heilfrequenzen, Trance- und Hypnoseelemente sowie „Tree of Life“-Klangreisen. Die Arbeit mit Klang soll Herzrhythmus, Atmung und Gehirnwellen synchronisieren und tiefe Entspannung ermöglichen.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Für wen die Reise gedacht ist</h4>
+          <p>Ideal für Menschen, die unter chronischem Stress stehen, Erschöpfung oder Burnout vorbeugen möchten, ihre Gesundheit ganzheitlich stärken wollen, sich für TCM, Heilpilze und Teekultur interessieren, eine tiefere Verbindung zur Natur suchen oder daoistische Lebenskunst erleben möchten.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Essenz der Reise</h4>
+          <p>Diese Reise ist weit mehr als ein Retreat. Sie ist eine Begegnung mit den uralten Teewäldern Yunnans, den Heilpilzen des Bergwaldes, dem Wissen der Minderheitenvölker und den daoistischen Wegen zur Kultivierung von Körper, Energie und Geist.</p>
+          <p>Man lernt nicht nur über Tee, Pilze und Kräuter – man erlebt unmittelbar, wie Natur, traditionelle Heilkunst und innere Praxis zusammenwirken können, um Vitalität, Ruhe und Lebensfreude neu zu entdecken.</p>
+        </div>
+      `
+    },
+    en: {
+      title: "6-Day Yunnan Tea, Mushroom & Herb Culture Journey with Ethnic Minorities",
+      body: `
+        <div class="tech-detail-article">
+          <p class="intro-lead"><strong>This journey is an intensive nature, healing, and cultural experience in the mountains of Yunnan.</strong> It connects the wisdom of Taoism, Traditional Chinese Medicine (TCM), medicinal mushrooms, ancient tea cultures, and the life of local minority groups (primarily the Hani) into a deep path of regeneration and self-discovery.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">The Core Idea</h4>
+          <p>At the center lies the reawakening of the \"Life Force\" (生命原力) – that natural energy which, according to Taoist and Chinese medicine, nourishes health, creativity, vitality, and inner clarity.</p>
+          <p>The journey follows a three-stage transformation process:</p>
+          <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li><strong>1. Jing (Essence) – Creating the Foundation:</strong> Physical regeneration, building energy and resources, nutrition, medicinal herbs, and healing mushrooms.</li>
+            <li><strong>2. Qi (Life Energy) – Activating & Transforming:</strong> Breathwork, Taoist practices, movement and energy work, opening and harmonizing the meridians.</li>
+            <li><strong>3. Shen (Spirit) – Refinement & Awareness:</strong> Meditation, sound healing, inner clarity and emotional balance, connection with one's inner core.</li>
+          </ul>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Expert Guidance</h4>
+          <p>During the entire trip, the group is accompanied by:</p>
+          <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li>A renowned TCM Master for pulse and tongue diagnosis</li>
+            <li>A TCM Physician and health coach</li>
+            <li>An internationally certified Sound Therapist</li>
+            <li>Local mushroom experts from the Hani minority</li>
+            <li>Tea farmers and herbalists from the mountains of Yunnan</li>
+          </ul>
+          <p>Every participant receives an individual TCM diagnosis with personalized recommendations for herbs, nutrition, and lifestyle.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">What Participants Experience</h4>
+          
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Arriving & Regulating the Nervous System</h5>
+          <p>The journey begins with a festive opening ceremony, breathwork, sound healing, group resonance work, a Blue Lotus tea ceremony, and intention setting. The goal is to shift the nervous system from stress mode into regeneration mode.</p>
+
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Discovering Ancient Tea Forests & Medicinal Mushrooms</h5>
+          <p>A highlight is the trek through the ancient tea forests of Nan Nuo Shan, one of Yunnan's oldest Pu-erh tea regions. There, participants encounter tea trees up to 800 years old, wild medicinal herbs, traditional herbal lore, and medicinal mushroom hunting with Hani guides. Mushrooms and herbs collected and explained include: <strong>Reishi (Lingzhi), Poria (Fu Ling), Red Wild Mushroom (Da Hong Jun), Puffball Mushrooms (Ma Bo), Dendrobium, Polygonatum, Angelica Root</strong>, and other mountain herbs. Participants not only learn about their therapeutic benefits but also create their own medicinal mushroom and herb identification cards.</p>
+
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Living with the Yunnan Minority Tribes</h5>
+          <p>A unique aspect of this journey is direct contact with local ethnic communities. Participants learn traditional mushroom harvesting, tea processing, local healing practices, traditional diets, and the deep spiritual nature-connectedness of the mountain peoples. This offers an authentic glimpse into a way of life that has been intimately connected to the forest, mountains, and seasons for centuries.</p>
+
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Taoist Practice & Nourishing Life (Yang Sheng)</h5>
+          <p>Daily sessions include Qi Gong, Taoist breathing techniques, meditation, body awareness exercises, energy work, and techniques for hormonal and emotional regulation. These practices are designed to reduce stress, activate the vagus nerve, improve sleep quality, harmonize the endocrine system, and stimulate self-healing capacities.</p>
+
+          <h5 style="font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.4rem; color: var(--terracotta);">Sound Healing & Inner Transformation</h5>
+          <p>Another focal area consists of deep sound and frequency journeys: vocal work, mantra meditation, healing frequencies, elements of trance and hypnosis, and "Tree of Life" sound journeys. The work with sound is intended to synchronize heart rate, breathing, and brain waves, facilitating profound relaxation.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Who This Journey is For</h4>
+          <p>Ideal for individuals who are under chronic stress, wish to prevent fatigue or burnout, want to strengthen their health holistically, are interested in TCM, medicinal mushrooms, and tea culture, seek a deeper connection to nature, or wish to experience Taoist lifestyle arts.</p>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Essence of the Journey</h4>
+          <p>This journey is far more than a retreat. It is an encounter with the ancient tea forests of Yunnan, the medicinal mushrooms of the mountain woods, the wisdom of minority peoples, and the Taoist paths for cultivating body, energy, and mind.</p>
+          <p>You do not just learn about tea, mushrooms, and herbs – you experience directly how nature, traditional healing arts, and inner practice work together to re-ignite vitality, peace, and the joy of living.</p>
+        </div>
+      `
+    }
+  },
+  shenzhen_tour: {
+    de: {
+      title: "1-tägiges klinisches TCM-Programm (Shenzhen Daily Tour)",
+      body: `
+        <div class="tech-detail-article">
+          <p class="intro-lead"><strong>Der Inbegriff integrativer Ganzheitsmedizin.</strong> Unser 1-tägiges klinisches TCM-Programm (TCM Experience Process) an der Shenzhen Hongdao-Klinik verbindet traditionelle Diagnostik, hochentwickelte physikalische Therapieverfahren und tiefe energetische Selbsterfahrung zu einem harmonisch abgestimmten, heilsamen Tagesablauf.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Der Tagesablauf im Überblick</h4>
+          <div class="tcm-timeline" style="position: relative; margin: 2rem 0; padding-left: 2rem; border-left: 2px solid var(--jade-green);">
+            
+            <div class="timeline-item" style="position: relative; margin-bottom: 2rem;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">10:00 - 11:30</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">Praxisrundgang &amp; Diagnostik / 参观诊所与诊断</h5>
+              <ul style="list-style-type: none; padding-left: 0; margin: 0; color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Klinikführung:</strong> Kennenlernen der Räumlichkeiten und der hauseigenen Kräutermanufaktur.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>HD-Infrarot-Körperscan:</strong> Thermografische Analyse zur Erkennung von Entzündungen und Blockaden.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Puls- und Zungendiagnose beim Meister:</strong> Persönliche Konsultation und Diagnose durch Professor Xu Ruqi.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item" style="position: relative; margin-bottom: 2rem;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">11:30 - 13:30</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">TCM-Kocherfahrung &amp; Mittagessen / 中医烹饪与药膳餐</h5>
+              <ul style="list-style-type: none; padding-left: 0; margin: 0; color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Kräuter-Kochworkshop:</strong> Einführung in die Zubereitung stärkender Suppen und Heilkräutergerichte.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Gemeinsames Kräutermenü:</strong> Schmackhafte Yao-Shan-Speisen zur gezielten inneren Stärkung und Nährstoffzufuhr.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item" style="position: relative; margin-bottom: 2rem;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">13:30 - 14:00</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">Ruhepause / 休息</h5>
+              <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span>Zeit zur freien Verfügung und Entspannung im gemütlichen Ruhebereich der Klinik.</p>
+            </div>
+
+            <div class="timeline-item" style="position: relative; margin-bottom: 2rem;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">14:00 - 14:45</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">Individuelle Therapiewahl / 治疗体验 (Wahl aus einer Option)</h5>
+              <p style="margin: 0 0 0.5rem 0; color: var(--text-muted); font-size: 0.95rem; padding-left: 1.2rem;">Basierend auf Ihrer Zungen- und Pulsdiagnose wählen Sie eine der folgenden Therapien:</p>
+              <ul style="list-style-type: none; padding-left: 0; margin: 0; color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.4rem; padding-left: 1.2rem;">
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--terracotta);">→</span><strong>Akupunktur + Lichttherapie (针灸与光疗):</strong> Gezielte Nadelreizung mit photonischer Tiefenwirkung zur Entzündungshemmung.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--terracotta);">→</span><strong>Großflächen-Moxibustion (艾灸):</strong> Kräuter-Wärmetherapie mit Beifuß zur Vertreibung tiefer Kälte-Stagnationen.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--terracotta);">→</span><strong>Klassische Tuina-Massage (推拿):</strong> Manuelle Meridian- und Gewebetherapie zur Regulierung von Blockaden.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--terracotta);">→</span><strong>Bian-Hu Bioelektrizitäts-Therapie (中频砭壶):</strong> Kombination aus biologischem Strom und warmen Bian-Stein-Köpfen.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item" style="position: relative; margin-bottom: 0;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">15:00 - 16:00</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">Teezeremonie, Meditation &amp; Klangheilung / 茶饮、冥想与声音疗愈</h5>
+              <ul style="list-style-type: none; padding-left: 0; margin: 0; color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Teeverkostung:</strong> Auswahl hochwertiger medizinischer Kräutertees und gereiften Pu-Erh-Tees.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Klangmeditation:</strong> Entspannung und Harmonisierung durch planetare Klanggongs und nepalesische Klangschalen.</li>
+              </ul>
+            </div>
+
+          </div>
+          
+          <h4 style="margin-top: 2rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Host &amp; Begleitung</h4>
+          <p>Dieses Tagesprogramm wird von <strong>Dr. Qiao Jingwen</strong> (medizinische Leitung &amp; Diagnostik) und der Heilpraktikerin <strong>Deng Nanjing</strong> (Klangtherapie, Qi Gong &amp; Übersetzung) persönlich geleitet. Durch die exklusive Eins-zu-eins-Betreuung erleben Sie traditionelle chinesische Heilkunst auf höchstem Niveau.</p>
+        </div>
+      `
+    },
+    en: {
+      title: "1-Day Clinical TCM Program (Shenzhen Daily Tour)",
+      body: `
+        <div class="tech-detail-article">
+          <p class="intro-lead"><strong>The epitome of integrative holistic medicine.</strong> Our 1-Day Clinical TCM Experience Process at the Shenzhen Hongdao Clinic combines classical diagnostics, highly advanced physical device therapies, and deep energetic sound healing into a harmoniously balanced healing program.</p>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">The Schedule at a Glance</h4>
+          <div class="tcm-timeline" style="position: relative; margin: 2rem 0; padding-left: 2rem; border-left: 2px solid var(--jade-green);">
+            
+            <div class="timeline-item" style="position: relative; margin-bottom: 2rem;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">10:00 AM - 11:30 AM</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">Clinic Tour &amp; Diagnostics / 参观诊所与诊断</h5>
+              <ul style="list-style-type: none; padding-left: 0; margin: 0; color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Clinic Tour:</strong> Introduction to the clinic spaces and the in-house pharmacy center.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Infrared Body Scan:</strong> Thermographic screening to detect deep tissues inflammation and microcirculation blocks.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Pulse &amp; Tongue Diagnosis:</strong> Face-to-face consultation and diagnostic assessment by Master Xu Ruqi.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item" style="position: relative; margin-bottom: 2rem;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">11:30 AM - 01:30 PM</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">TCM Cooking Experience &amp; Lunch / 中医烹饪与药膳餐</h5>
+              <ul style="list-style-type: none; padding-left: 0; margin: 0; color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Herbal Cooking:</strong> Introduction to preparing nourishing herbal soups and medicinal recipes.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Medicinal Lunch:</strong> A delicious, customized Yao Shan meal aligned with the Five Elements to nourish organ essence.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item" style="position: relative; margin-bottom: 2rem;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">01:30 PM - 02:00 PM</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">Break &amp; Integration / 休息</h5>
+              <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span>Free time to rest and integrate in the clinic's comfortable lounge area.</p>
+            </div>
+
+            <div class="timeline-item" style="position: relative; margin-bottom: 2rem;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">02:00 PM - 02:45 PM</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">Individualized Therapy Session / 治疗体验 (Choose one option)</h5>
+              <p style="margin: 0 0 0.5rem 0; color: var(--text-muted); font-size: 0.95rem; padding-left: 1.2rem;">Based on your diagnosis, select one of the following customized therapies:</p>
+              <ul style="list-style-type: none; padding-left: 0; margin: 0; color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.4rem; padding-left: 1.2rem;">
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--terracotta);">→</span><strong>Acupuncture + Light Therapy (针灸与光疗):</strong> Fine needling combined with targeted red light photon irradiation.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--terracotta);">→</span><strong>Large-Scale Moxibustion (艾灸):</strong> Thermal herbal treatment using mugwort to dispel cold and dampness.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--terracotta);">→</span><strong>Classical Tuina Massage (推拿):</strong> Manual meridian therapy to regulate Qi flow and relieve musculoskeletal blocks.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--terracotta);">→</span><strong>Bian-Hu Bioelectric Therapy (中频砭壶):</strong> Synergy of medium-frequency currents and heated Bian stone tools.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item" style="position: relative; margin-bottom: 0;">
+              <div class="timeline-badge" style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--terracotta); border: 2px solid white;"></div>
+              <div style="font-weight: 700; color: var(--terracotta); margin-bottom: 0.3rem; font-size: 0.9rem;">03:00 PM - 04:00 PM</div>
+              <h5 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark);">Tea, Meditation &amp; Sound Healing / 茶饮、冥想与声音疗愈</h5>
+              <ul style="list-style-type: none; padding-left: 0; margin: 0; color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Tea Ceremony:</strong> Guided tasting of premium organic herbal infusions and aged medicinal Pu-Erh tea.</li>
+                <li style="position: relative; padding-left: 1.2rem;"><span style="position: absolute; left: 0; color: var(--jade-green);">✓</span><strong>Sound Bath &amp; Meditation:</strong> Calming of the nervous system with Nepalese singing bowls and planetary gongs led by Deng Nanjing.</li>
+              </ul>
+            </div>
+
+          </div>
+          
+          <h4 style="margin-top: 2rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Hosts &amp; Support</h4>
+          <p>This clinical daily experience is personally guided by <strong>Dr. Qiao Jingwen</strong> (medical director &amp; diagnostics) and Heilpraktikerin <strong>Deng Nanjing</strong> (sound therapist, Qi Gong &amp; translation). With high-fidelity, one-on-one attention, you will experience traditional Chinese medicine at its highest degree of quality.</p>
+        </div>
+      `
+    }
   }
 };
 
@@ -2919,7 +3598,144 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(bindArticleButtons, 50);
     };
   }
+
+  // Mobile Navigation Hamburger Toggle (Global)
+  const hamburger = document.getElementById('hamburger-btn');
+  const sidebar = document.getElementById('sidebar');
+  
+  if (hamburger && sidebar) {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sidebar.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+        sidebar.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+    
+    // Close menu when link is clicked
+    sidebar.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  }
 });
 
 window.openArticleModal = openArticleModal;
 window.closeArticleModal = closeArticleModal;
+
+function getFormattedStartDate(val, lang) {
+  const dates = {
+    "2026-08-01": { de: "1. August 2026", en: "August 1, 2026" },
+    "2026-10-01": { de: "1. Oktober 2026", en: "October 1, 2026" },
+    "2026-12-01": { de: "1. Dezember 2026", en: "December 1, 2026" },
+    "2027-02-01": { de: "1. Februar 2027", en: "February 1, 2027" },
+    "2027-04-01": { de: "1. April 2027", en: "April 1, 2027" },
+    "2027-06-01": { de: "1. Juni 2027", en: "June 1, 2027" }
+  };
+  return dates[val] ? (lang === "de" ? dates[val].de : dates[val].en) : val;
+}
+
+function populateStartDates(lang) {
+  const dates = [
+    { value: "2026-08-01", de: "1. August 2026", en: "August 1, 2026" },
+    { value: "2026-10-01", de: "1. Oktober 2026", en: "October 1, 2026" },
+    { value: "2026-12-01", de: "1. Dezember 2026", en: "December 1, 2026" },
+    { value: "2027-02-01", de: "1. Februar 2027", en: "February 1, 2027" },
+    { value: "2027-04-01", de: "1. April 2027", en: "April 1, 2027" },
+    { value: "2027-06-01", de: "1. Juni 2027", en: "June 1, 2027" }
+  ];
+
+  const selects = [
+    document.getElementById("card-endo-start-date"),
+    document.getElementById("card-1day-start-date"),
+    document.getElementById("program-start-date")
+  ];
+
+  selects.forEach(select => {
+    if (!select) return;
+    const currentVal = select.value;
+    select.innerHTML = "";
+    dates.forEach(d => {
+      const option = document.createElement("option");
+      option.value = d.value;
+      option.textContent = lang === "de" ? d.de : d.en;
+      select.appendChild(option);
+    });
+    if (currentVal) {
+      select.value = currentVal;
+    }
+  });
+}
+
+function initCardApplyTriggers() {
+  document.querySelectorAll(".card-apply-trigger").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      
+      const programId = btn.getAttribute("data-program");
+      const dateSelectId = btn.getAttribute("data-date-select");
+      
+      // Select the program in the form
+      const programSelect = document.getElementById("consult-program");
+      if (programSelect) {
+        programSelect.value = programId;
+        // Trigger show/hide of the start date container
+        const startDateContainer = document.getElementById("program-start-date-container");
+        if (startDateContainer) {
+          if (programId === "endometriosis" || programId === "program1day") {
+            startDateContainer.style.display = "block";
+          } else {
+            startDateContainer.style.display = "none";
+          }
+        }
+      }
+      
+      // Copy start date
+      if (dateSelectId) {
+        const cardSelect = document.getElementById(dateSelectId);
+        const formSelect = document.getElementById("program-start-date");
+        if (cardSelect && formSelect) {
+          formSelect.value = cardSelect.value;
+        }
+      }
+      
+      // Switch tab to form
+      switchContactTab("form");
+      
+      // Scroll to contact section
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+}
+
+function initStartDates() {
+  const programSelect = document.getElementById("consult-program");
+  const startDateContainer = document.getElementById("program-start-date-container");
+  if (programSelect && startDateContainer) {
+    programSelect.addEventListener("change", () => {
+      const val = programSelect.value;
+      if (val === "endometriosis" || val === "program1day") {
+        startDateContainer.style.display = "block";
+      } else {
+        startDateContainer.style.display = "none";
+      }
+    });
+  }
+  
+  // Populate initially
+  populateStartDates(currentLang);
+  
+  // Initialize card apply triggers
+  initCardApplyTriggers();
+}
