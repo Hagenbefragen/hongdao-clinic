@@ -9,7 +9,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   
   <!-- Fonts & Stylesheet -->
-  <link rel="stylesheet" href="style.v2.css?v=2.0.3">
+  <link rel="stylesheet" href="style.v2.css?v=2.1.0">
 
   <style>
     .yunnan-section {
@@ -96,6 +96,61 @@
       }
       .showcase-gallery img {
         height: 250px;
+      }
+    }
+    @media(max-width: 768px) {
+      .yunnan-section {
+        padding: 4rem 4%;
+      }
+      .transform-card {
+        padding: 1.8rem;
+      }
+      .experience-card {
+        padding: 1.8rem;
+      }
+      .showcase-gallery img {
+        height: auto;
+        max-height: 300px;
+        aspect-ratio: 4 / 3;
+      }
+      .cta-box {
+        margin-top: 3rem;
+        padding: 2.5rem 1.5rem;
+      }
+      .cta-text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+    }
+    @media(max-width: 480px) {
+      .yunnan-section {
+        padding: 3rem 3.5%;
+      }
+      .transform-card {
+        padding: 1.5rem;
+      }
+      .experience-card {
+        padding: 1.5rem;
+      }
+      .experience-card h3 {
+        font-size: 1.1rem;
+      }
+      .showcase-gallery {
+        gap: 0.8rem;
+      }
+      .showcase-gallery img {
+        height: auto;
+        max-height: 250px;
+        aspect-ratio: 3 / 2;
+        border-radius: 8px;
+      }
+      .cta-box {
+        margin-top: 2.5rem;
+        padding: 2rem 1.2rem;
+        border-radius: 10px;
+      }
+      .cta-text {
+        font-size: 1rem;
       }
     }
     .showcase-gallery img.hidden-item {
