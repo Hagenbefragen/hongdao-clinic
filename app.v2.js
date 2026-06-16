@@ -2042,47 +2042,79 @@ const articlesContent = {
   },
   cheung: {
     de: {
-      title: "Cheung Mingli (张明丽) – Nomadin, Yogalehrerin & Klangarbeiterin",
-      content: `
-        <p><strong>Cheung Mingli (张明丽)</strong> ist eine Nomadin und Weltenbummlerin mit über 10 Jahren internationaler Erfahrung. Sie integriert Klangtherapie, Bewegung, Atemarbeit und rituelle Praktiken, um die Regulierung des Nervensystems und das ganzheitliche Wohlbefinden in verschiedenen Gemeinschaften weltweit zu unterstützen.</p>
+      title: "Cheung Mingli (张明丽) – Gründerin von Voice Alchemy, internationale Klangheilerin & Begleiterin für Stimmaktivierung",
+      body: `
+        <p><strong>Cheung Mingli (张明丽)</strong> ist eine internationale Yogalehrerin, Klangtherapeutin und Wegbegleiterin für Stimmaktivierung mit über einem Jahrzehnt Erfahrung in der Leitung transformativer Wellness-Erlebnisse in Asien, Südamerika und Europa. Ihre Arbeit verbindet die Weisheit der Traditionellen Chinesischen Medizin, Mantra, Atemarbeit, somatisches Bewusstsein und Schwingungsheilung, um emotionales Wohlbefinden, die Regulierung des Nervensystems und authentischen Selbstausdruck zu unterstützen.</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Methoden</h4>
+        <p>Ausgehend von jahrelangem Studium, Reisen und der Begleitung in Retreat-Zentren, Wellness-Resorts und bewussten Gemeinschaften weltweit hat Mingli einen einzigartigen Ansatz namens Voice Alchemy entwickelt – eine Praxis, die Atem, Körper und Stimme als Wege zur Heilung, Ermächtigung und inneren Transformation kombiniert.</p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Spezialgebiete (Focus Areas)</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
           <li style="margin-bottom: 1.2rem;">
-            <strong>Yoga für Kinder & Erwachsene</strong>
-            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Individuelle und Gruppensitzungen zur Körperwahrnehmung und inneren Balance.</span>
+            <strong>Voice Alchemy &amp; authentischer Ausdruck</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Begleitung von Einzelpersonen bei der Rückverbindung mit ihrer natürlichen Stimme durch Atem, Schwingung, Mantra und intuitiven Klang. Unterstützung beim Lösen von emotionaler Unterdrückung, Selbstzweifeln und Ausdrucksangst, während Vertrauen, Kreativität und verkörperte Präsenz kultiviert werden.</span>
           </li>
           <li style="margin-bottom: 1.2rem;">
-            <strong>Fächer-Tanz-Therapie</strong>
-            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Bewegungstherapie mit traditionellen Fächern zur emotionalen Entlastung und kreativen Selbstentfaltung.</span>
+            <strong>Klangheilung &amp; Schwingungstherapie</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Gestaltung von immersiven Klangreisen mit Kristallklangschalen, tibetischen Klangschalen, Stimme und therapeutischen Instrumenten zur Förderung von tiefer Entspannung, emotionaler Befreiung und Wiederherstellung des Nervensystems.</span>
           </li>
           <li style="margin-bottom: 1.2rem;">
-            <strong>Klangarbeit</strong>
-            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Klangschalen-Sitzungen und Gong-Bäder zur tiefen Entspannung und energetischen Harmonisierung.</span>
+            <strong>Mantra, hingebungsvolle Musik &amp; heiliger Klang</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Vermittlung von Mantras als meditative und transformative Praxis. Durch Harmonium, Shruti Box und gemeinsames Chanten sind die Teilnehmer eingeladen, die heilende Kraft von Wiederholung, Resonanz und Gemeinschaft zu erfahren.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Atemarbeit &amp; somatische Integration</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Kombination von bewusstem Atmen, Körperbewusstsein und Klang zur Unterstützung der emotionalen Regulierung, Stressreduktion und einer tieferen Verbindung zwischen Geist, Körper und Seele.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Retreats, Zeremonien &amp; Gruppenbegleitung</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Erfahren in der Konzeption und Leitung von Retreats, Workshops, Zeremonien und privaten Einzelsitzungen für ein vielseitiges internationales Publikum. Schaffung sicherer und transformativer Räume für Heilung, Selbsterforschung und kollektive Verbindung.</span>
           </li>
         </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Hintergrund &amp; Erfahrung</h4>
+        <p style="margin-bottom: 1rem;">Mingli hat über zehn Jahre lang ganzheitliche Wellness-Praktiken auf mehreren Kontinenten studiert und gelehrt. Ihre Reise hat sie mit verschiedenen Heiltraditionen, hingebungsvollen Praktiken und indigenem Weisheitswissen in Kontakt gebracht, was ihren Begleitungsstil prägt, der sowohl geerdet als auch intuitiv ist.</p>
+        <p style="margin-bottom: 1rem;">Sie hat Yogalehrerausbildungen, Klangheilungs-Immersions, Mantra-Kreise, Wellness-Retreats und private Mentoring-Erfahrungen in Luxusresorts, Retreat-Zentren, ganzheitlichen Kliniken und Gemeinschaftsräumen auf der ganzen Welt geleitet.</p>
+        <p style="margin-bottom: 1rem;">Ihre Arbeit ist dafür bekannt, die Brücke zwischen alter Heilweisheit und modernen Ansätzen für emotionales Wohlbefinden zu schlagen und den Teilnehmern praktische Werkzeuge zur Selbstheilung, inneren Verbindung und zum authentischen Ausdruck an die Hand zu geben.</p>
+        <p style="margin-bottom: 1rem;">Mit jedem Angebot lädt Mingli die Menschen dazu ein, sich daran zu erinnern, dass ihre Stimme nicht nur ein Mittel zur Kommunikation ist, sondern ein kraftvolles Instrument zur Heilung, Transformation und zum Heimkommen zu sich selbst.</p>
       `
     },
     en: {
-      title: "Cheung Mingli (张明丽) – Nomad, Yoga Teacher & Sound Worker",
+      title: "Cheung Mingli (张明丽) – Founder of Voice Alchemy, International Sound Healing & Voice Activation Facilitator",
       body: `
-        <p><strong>Cheung Mingli (张明丽)</strong> is a nomad and world traveler with over 10 years of international experience. Mingli integrates sound therapy, movement, breathwork and ritual practices to support nervous system regulation and holistic wellbeing across diverse communities worldwide.</p>
+        <p><strong>Cheung Mingli (张明丽)</strong> is an international yoga teacher, sound healing practitioner, and voice activation facilitator with over a decade of experience leading transformative wellness experiences across Asia, South America, and Europe. Her work integrates the wisdom of Traditional Chinese Medicine, mantra, breathwork, somatic awareness, and vibrational healing to support emotional well-being, nervous system regulation, and authentic self-expression.</p>
         
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Modalities</h4>
+        <p>Drawing from years of study, travel, and facilitation within retreat centers, wellness resorts, and conscious communities worldwide, Mingli has developed a unique approach known as Voice Alchemy — a practice that combines breath, body, and voice as pathways for healing, empowerment, and inner transformation.</p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Areas of Expertise</h4>
         <ul class="feature-list" style="margin-bottom: 1.5rem;">
           <li style="margin-bottom: 1.2rem;">
-            <strong>Yoga for Children & Adults</strong>
-            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Individual and group sessions for body awareness and inner balance.</span>
+            <strong>Voice Alchemy &amp; Authentic Expression</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Guiding individuals to reconnect with their natural voice through breath, vibration, mantra, and intuitive sound. Supporting the release of emotional suppression, self-doubt, and fear of expression while cultivating confidence, creativity, and embodied presence.</span>
           </li>
           <li style="margin-bottom: 1.2rem;">
-            <strong>Fan Dance Therapy</strong>
-            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Movement therapy with traditional fans for emotional release and creative self-expression.</span>
+            <strong>Sound Healing &amp; Vibrational Therapy</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Facilitating immersive sound journeys using crystal singing bowls, Tibetan bowls, voice, and therapeutic instruments to promote deep relaxation, emotional release, and nervous system restoration.</span>
           </li>
           <li style="margin-bottom: 1.2rem;">
-            <strong>Sound Work</strong>
-            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Singing bowl sessions and gong baths for deep relaxation and energetic harmonization.</span>
+            <strong>Mantra, Devotional Music &amp; Sacred Sound</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Teaching mantra as a meditative and transformative practice. Through harmonium, shruti box, and collective chanting, participants are invited to experience the healing power of repetition, resonance, and community.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Breathwork &amp; Somatic Integration</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Combining conscious breathing, body awareness, and sound to support emotional regulation, stress reduction, and greater connection between mind, body, and spirit.</span>
+          </li>
+          <li style="margin-bottom: 1.2rem;">
+            <strong>Retreats, Ceremonies &amp; Group Facilitation</strong>
+            <span style="display: block; margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">Experienced in designing and leading retreats, workshops, ceremonies, and private sessions for diverse international audiences, creating safe and transformative spaces for healing, self-inquiry, and collective connection.</span>
           </li>
         </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--terracotta);">Background &amp; Experience</h4>
+        <p style="margin-bottom: 1rem;">Mingli has spent over ten years studying and teaching holistic wellness practices across multiple continents. Her journey has brought her into contact with diverse healing traditions, devotional practices, and indigenous wisdom teachings, informing a facilitation style that is both grounded and intuitive.</p>
+        <p style="margin-bottom: 1rem;">She has led yoga trainings, sound healing immersions, mantra circles, wellness retreats, and private mentoring experiences in luxury resorts, retreat centers, holistic clinics, and community spaces around the world.</p>
+        <p style="margin-bottom: 1rem;">Her work is recognized for its ability to bridge ancient healing wisdom with modern approaches to emotional well-being, offering participants practical tools for self-healing, inner connection, and authentic expression.</p>
+        <p style="margin-bottom: 1rem;">Through every offering, Mingli invites people to remember that their voice is not merely a means of communication, but a powerful instrument for healing, transformation, and coming home to themselves.</p>
       `
     }
   },
