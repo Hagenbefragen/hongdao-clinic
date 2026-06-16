@@ -9,7 +9,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   
   <!-- Fonts & Stylesheet -->
-  <link rel="stylesheet" href="style.v2.css?v=2.1.0">
+  <link rel="stylesheet" href="style.v2.css?v=20260616">
 
   <style>
     .yunnan-section {
@@ -101,6 +101,11 @@
     @media(max-width: 768px) {
       .yunnan-section {
         padding: 4rem 4%;
+      }
+      .yunnan-section .philosophy-grid,
+      .yunnan-section .yunnan-experts-grid {
+        gap: 2rem !important;
+        direction: ltr !important;
       }
       .transform-card {
         padding: 1.8rem;
@@ -254,21 +259,21 @@
         <div class="hero-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
         <div class="container hero-content" style="position: relative; z-index: 2; text-align: center; color: white;">
           <span class="hero-tag animate-fade-in" data-i18n="yunnan-page-hero-tag" style="display: block; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 2px; font-weight: 500;">6-tägige Yunnan Kulturreise & Retreat</span>
-          <h1 class="title-large animate-fade-in" data-i18n="yunnan-page-hero-title" style="color: white; font-size: 3.5rem; margin-bottom: 1rem;">YUNNAN RETREAT</h1>
-          <p class="subtitle-serif animate-fade-in" data-i18n="yunnan-page-hero-subtitle" style="font-size: 1.5rem; font-style: italic; color: #f2e3d5;">6-tägige Tee-, Pilz- und Kräuter-Kulturreise mit den Minderheitenvölkern</p>
+          <h1 class="title-large animate-fade-in" data-i18n="yunnan-page-hero-title" style="color: white; margin-bottom: 1rem;">YUNNAN RETREAT</h1>
+          <p class="subtitle-serif animate-fade-in" data-i18n="yunnan-page-hero-subtitle" style="font-style: italic; color: #f2e3d5;">6-tägige Tee-, Pilz- und Kräuter-Kulturreise mit den Minderheitenvölkern</p>
         </div>
       </section>
 
       <!-- Intro Section -->
       <section class="cream-bg philosophy-section yunnan-section">
         <div class="container">
-          <div class="grid-2 philosophy-grid" style="align-items: center; gap: 5rem;">
+          <div class="grid-2 philosophy-grid" style="align-items: center; gap: 3rem;">
             <div class="philosophy-visual">
               <img data-img-key="yunnan-intro-img" src="images/wuyishan_landscape.png" alt="Yunnan Mountain Landscape" style="border-radius: var(--border-radius); width: 100%; max-width: 480px; height: auto; box-shadow: var(--shadow-subtle); display: block; margin: 0 auto; object-fit: cover;">
             </div>
             <div>
               <span class="subtitle-serif" style="color: var(--terracotta); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;" data-i18n="yunnan-page-subheader">Eine transformative Reise in die unberührte Natur Chinas</span>
-              <h2 class="title-medium" data-i18n="yunnan-page-header" style="margin-bottom: 1.5rem; font-size: 2.3rem; line-height: 1.2;">Das Erwecken der Lebenskraft</h2>
+              <h2 class="title-medium" data-i18n="yunnan-page-header" style="margin-bottom: 1.5rem; line-height: 1.2;">Das Erwecken der Lebenskraft</h2>
               <div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted);" data-i18n="yunnan-page-intro">
                 Diese Reise ist eine intensive Natur-, Heil- und Kulturerfahrung in den Bergen Yunnans. Sie verbindet die Weisheit des Daoismus, Traditionelle Chinesische Medizin (TCM), Heilpilze, alte Teekulturen und das Leben der Hani-Minderheit und anderer Bergvölker zu einer tiefen Regenerations- und Selbsterfahrungsreise.
               </div>
@@ -315,13 +320,13 @@
       <!-- Expert Guidance -->
       <section class="cream-bg philosophy-section yunnan-section" style="border-top: 1px solid rgba(0,0,0,0.05);">
         <div class="container">
-          <div class="grid-2 philosophy-grid" style="align-items: center; gap: 5rem; direction: rtl;">
+          <div class="grid-2 philosophy-grid yunnan-experts-grid" style="align-items: center; gap: 3rem; direction: rtl;">
             <div class="philosophy-visual" style="direction: ltr;">
               <img data-img-key="wudang-guesthouse-img" src="images/wudang_guesthouse.jpg" alt="Daoist Master Guesthouse" style="border-radius: var(--border-radius); width: 100%; max-width: 480px; height: auto; box-shadow: var(--shadow-subtle); display: block; margin: 0 auto; object-fit: cover;">
             </div>
             <div style="direction: ltr;">
               <span class="subtitle-serif" style="color: var(--terracotta); font-size: 1.1rem; display: block; margin-bottom: 0.5rem;" data-i18n="yunnan-page-experts-title">Begleitung durch Experten</span>
-              <h2 class="title-medium" data-i18n="yunnan-page-experts-desc" style="margin-bottom: 1.5rem; font-size: 2.3rem; line-height: 1.2;">Während der gesamten Reise begleiten die Gruppe:</h2>
+              <h2 class="title-medium" data-i18n="yunnan-page-experts-desc" style="margin-bottom: 1.5rem; line-height: 1.2;">Während der gesamten Reise begleiten die Gruppe:</h2>
               <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; color: var(--text-muted); font-size: 1.05rem;">
                 <li data-i18n="yunnan-page-expert-1">Ein renommierter TCM-Meister für Puls- und Zungendiagnose</li>
                 <li data-i18n="yunnan-page-expert-2">Ein TCM-Arzt und Gesundheitscoach</li>
