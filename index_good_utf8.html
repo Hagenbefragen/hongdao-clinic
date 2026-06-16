@@ -11,7 +11,7 @@
   <meta name="author" content="Hong Dao TCM Clinic">
   
   <!-- Fonts & Stylesheet -->
-  <link rel="stylesheet" href="style.v2.css">
+  <link rel="stylesheet" href="style.v2.css?v=20260616_1355">
 </head>
 <body>
 
@@ -51,6 +51,7 @@
           <li><a href="#devices" class="nav-link" data-i18n="nav-devices">Medizintechnik</a></li>
           <li><a href="#programs" class="nav-link" data-i18n="nav-programs">Programme</a></li>
           <li><a href="#retreat" class="nav-link" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
+          <li><a href="reise.html" class="nav-link" data-i18n="nav.reise">Die Reise</a></li>
           <li><a href="#info" class="nav-link" data-i18n="nav-info">Klinik-Info</a></li>
         </ul>
         <div class="nav-controls">
@@ -213,7 +214,7 @@
         <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0 0 1.5rem 0;">
           <div>
             <div class="card-img-wrapper">
-              <img src="images/mingli_cheung.jpg" alt="Cheung Mingli" class="card-img" style="object-position: center 20%;">
+              <img src="images/mingli_cheung.png" alt="Cheung Mingli" class="card-img" style="object-position: center 20%;">
             </div>
             <div class="card-content" style="padding: 1.5rem 1.5rem 0 1.5rem;">
               <h4 style="font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem;" data-i18n="doctor-sound-name">Cheung Mingli</h4>
@@ -441,8 +442,8 @@
             <span class="gallery-item-subtitle" data-i18n="gallery-item-lecture-badge">Theorie / Lecture</span>
             <h4 class="gallery-item-title" data-i18n="gallery-item-lecture-title">Pulsdiagnose</h4>
           </div>
-        <div class="gallery-item hidden-item" style="display: none;" data-img="images/whatsapp_imports/nanjing/1779966395.jpeg">
-            <img src="images/whatsapp_imports/nanjing/1779966395.jpeg" alt="Retreat Image 2">
+        <div class="gallery-item hidden-item" style="display: none;" data-img="images/whatsapp_imports/wa_1780809490_pzd9g.jpeg">
+            <img src="images/whatsapp_imports/wa_1780809490_pzd9g.jpeg" alt="Retreat Image 2">
             <div class="gallery-item-overlay">
               <span class="gallery-item-subtitle">Nanjing Retreat</span>
               <h4 class="gallery-item-title">Impression 2</h4>
@@ -984,23 +985,20 @@
 
   <!-- Interactive Booking Form Modal (For Trigger Buttons) -->
   <div id="booking-modal-overlay" class="modal-overlay">
-    <div class="modal-window">
+    <div class="modal-window" style="max-width: 750px; width: 95%;">
       <div class="modal-header">
         <h3 data-i18n="contact-free-consult">15-min├╝tiges kostenloses Beratungsgespr├ñch buchen</h3>
         <button id="booking-modal-close" class="modal-close">&times;</button>
       </div>
-      <div class="modal-body">
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;" data-i18n="contact-free-desc">
+      <div class="modal-body" style="padding: 1.5rem 1rem 1rem 1rem;">
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; text-align: center;" data-i18n="contact-free-desc">
           Sprechen Sie direkt mit Nanjing Deng, um Ihre Beschwerden zu besprechen und das passende Programm zu finden.
         </p>
         
-        <!-- Nested form in modal mimicking the page form -->
-        <form onsubmit="event.preventDefault(); document.getElementById('consultation-form').dispatchEvent(new Event('submit'));">
-          <!-- We trigger the same submit logic as the page form for simplicity -->
-          <button type="button" class="btn btn-terracotta" style="width: 100%;" onclick="document.querySelector('#contact').scrollIntoView(); closeModal();" data-i18n="hero-cta-apply">
-            Ausf├╝llen auf Website
-          </button>
-        </form>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/nanjing-deng18?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:650px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
       </div>
     </div>
   </div>
@@ -1119,7 +1117,7 @@
     </div>
   </div>
 
-  <script src="app.v2.js"></script>
+  <script src="app.v2.js?v=20260616_1355"></script>
 
   <!-- Mobile Navigation Toggle Script -->
   <script>

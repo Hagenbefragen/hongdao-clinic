@@ -6,7 +6,7 @@ const htmlContent = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="endo-meta-title">Hong Dao TCM Clinic | Endometriose Programm</title>
-  <meta name="description" content="Eine Reise zurück zu deinem Ursprung – Ganzheitliche Begleitung für Frauen mit Endometriose. 10-tägiges Retreat in China.">
+  <meta name="description" content="Eine Reise zurück zu deinem Ursprung – Ganzheitliche Begleitung für Frauen mit Endometriose. Individuell anpassbares Heilprogramm (1-4 Wochen) in China.">
   <link rel="stylesheet" href="style.v2.css">
   <style>
     .endo-section {
@@ -116,6 +116,7 @@ const htmlContent = `<!DOCTYPE html>
           <li><a href="index.html#devices" class="nav-link" data-i18n="nav-devices">Medizintechnik</a></li>
           <li><a href="index.html#programs" class="nav-link" data-i18n="nav-programs">Programme</a></li>
           <li><a href="index.html#retreat" class="nav-link" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
+          <li><a href="reise.html" class="nav-link" data-i18n="nav.reise">Die Reise</a></li>
           <li><a href="index.html#info" class="nav-link" data-i18n="nav-info">Klinik-Info</a></li>
         </ul>
         <div class="nav-controls">
@@ -192,7 +193,7 @@ const htmlContent = `<!DOCTYPE html>
           </div>
           
           <div class="endo-gallery">
-             <img src="images/whatsapp_imports/nanjing/1779966395.jpeg" alt="Yunnan Natur">
+             <img src="images/whatsapp_imports/wa_1780809490_u0asu.jpeg" alt="Yunnan Natur">
              <img src="images/whatsapp_imports/nanjing/1779966396.jpeg" alt="Yunnan Retreat">
              <img src="images/whatsapp_imports/nanjing/1779966397.jpeg" alt="Yunnan Umgebung">
           </div>
@@ -233,7 +234,7 @@ const htmlContent = `<!DOCTYPE html>
   </div>
   <script src="app.v2.js"></script>
 </body>
-</html>\`;
+</html>`;
 
 fs.writeFileSync('c:\\\\Clinic\\\\endometriosis.html', htmlContent);
 console.log('endometriosis.html written.');

@@ -15,24 +15,70 @@ const client = new Client({
   authStrategy: new LocalAuth({
     dataPath: authPath
   }),
+  webVersionCache: {
+    type: 'remote',
+    remotePath: 'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/{version}.html',
+    strict: false
+  },
   puppeteer: {
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox'
+    ]
   }
+});
+
+const qrcode = require('qrcode');
+const qrterm = require('qrcode-terminal');
+const PNG = 'C:/Users/Hagen/.gemini/antigravity-ide/brain/675a9de7-5353-46f0-8dac-af34d5a79cbd/wa_repair_qr.png';
+
+client.on('qr', (qr) => {
+  console.log('QR Code received, session not paired. Please scan:');
+  qrcode.toFile(PNG, qr, { width: 420, margin: 2 }, (e) => {
+    if (e) console.error('PNG error: ' + e.message);
+    else console.log('QR written -> ' + PNG + ' (open & scan; refreshes ~20s)');
+  });
+  qrterm.generate(qr, { small: true });
+});
+
+client.on('authenticated', () => console.log('Authenticated successfully!'));
+client.on('auth_failure', (msg) => {
+  console.error('Authentication failure:', msg);
+  process.exit(1);
 });
 
 client.on('ready', async () => {
   console.log('Client is ready!');
   try {
-    const chats = await client.getChats();
-    const chat = chats.find(c => c.name && c.name.toLowerCase().includes('nanjing'));
+    let chat = null;
+    const knownIds = ['9431983116408@lid', '5219841408335@c.us', '525585562805@c.us'];
+    for (const id of knownIds) {
+      try {
+        console.log(`Trying to get chat by ID: ${id}...`);
+        chat = await client.getChatById(id);
+        if (chat) {
+          console.log(`Found chat by ID: ${id}`);
+          break;
+        }
+      } catch (e) {
+        console.log(`Could not get chat by ID ${id}: ${e.message}`);
+      }
+    }
+    
+    if (!chat) {
+      console.log('Falling back to client.getChats()...');
+      const chats = await client.getChats();
+      chat = chats.find(c => c.name && c.name.toLowerCase().includes('nanjing'));
+    }
     
     if (!chat) {
       console.error('Nanjing chat not found!');
       process.exit(1);
     }
     
-    console.log(`Found chat: ${chat.name} (${chat.id.user}). Fetching last 150 messages...`);
+    console.log(`Found chat: ${chat.name || 'Nanjing'} (${chat.id.user}). Fetching last 150 messages...`);
     const messages = await chat.fetchMessages({ limit: 150 });
     console.log(`Fetched ${messages.length} messages. Processing...`);
     
