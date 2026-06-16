@@ -115,8 +115,7 @@ const htmlContent = `<!DOCTYPE html>
           <li><a href="index.html#treatments" class="nav-link" data-i18n="nav-treatments">Behandlungen</a></li>
           <li><a href="index.html#devices" class="nav-link" data-i18n="nav-devices">Medizintechnik</a></li>
           <li><a href="index.html#programs" class="nav-link" data-i18n="nav-programs">Programme</a></li>
-          <li><a href="index.html#retreat" class="nav-link" data-i18n="nav-retreat">Yunnan-Retreat</a></li>
-          <li><a href="reise.html" class="nav-link" data-i18n="nav.reise">Die Reise</a></li>
+          <li><a href="https://retreat.hongdao-tcm.clinic" class="nav-link" data-i18n="nav-retreat">Retreat</a></li>
           <li><a href="index.html#info" class="nav-link" data-i18n="nav-info">Klinik-Info</a></li>
         </ul>
         <div class="nav-controls">
